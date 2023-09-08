@@ -7,44 +7,65 @@
     <meta name='Content' content='Homepage'>
     <link rel="icon" href="webpage.ico" type="image/x-icon">
     <title>Home Page for Jason Kangning Cui</title>
+    <!-- Include a Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Use the Google font for the whole page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            background-color: #f3f4f6; /* Light grayish background for a more premium feel */
+            color: #333; /* Dark text color for better readability */
+        }
+
         a:link,
         a:visited {
             text-decoration: none;
-            color: blue;
+            color: #007BFF; /* Using a modern blue color for links */
+            transition: color 0.3s; /* Smooth transition for hover effects */
         }
 
         a:hover,
         a:active {
+            color: #0056b3; /* Darker blue for hover state */
             text-decoration: underline;
-        }
-
-        body {
-            line-height: 1.5;
         }
 
         h2 {
             margin-bottom: 20px;
+            font-weight: 700; /* Making headings bold */
+            font-size: 24px; /* Slightly larger font size for headings */
         }
 
         #toc {
             position: fixed;
             left: 0;
             top: 0;
-            padding: 10px;
-            background-color: #f9f9f9;
+            padding: 20px; /* Increased padding for more spacing */
+            background-color: #ffffff; /* White background for the table of contents */
             border-right: 1px solid #ddd;
             width: 250px;
             height: 100%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
         }
 
         #content {
-            margin-left: 300px;
+            margin-left: 300px; /* Adjusted for the increased width of the table of contents */
+            padding: 20px; /* Padding for the content for spacing */
+            background-color: #ffffff; /* White background for content */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
+            border-radius: 10px; /* Rounded corners for the content box */
         }
 
         ol {
             list-style-type: decimal;
+            padding-left: 20px; /* Spacing for ordered lists */
         }
+
+        ul {
+            padding-left: 20px; /* Spacing for unordered lists */
+        }
+
     </style>
 </head>
 
