@@ -39,7 +39,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            width: 250px;
+            width: 250px; /* Same as the width of the table of contents */
             text-align: center;
             padding: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -55,7 +55,7 @@
             padding: 20px;
             background-color: #ffffff;
             border-right: 1px solid #ddd;
-            width: 250px;
+            width: 250px; /* Same as the width of the profile picture block */
             height: calc(100% - 200px); /* Adjust the height based on the profile picture */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 0 10px 10px 0;
@@ -113,7 +113,7 @@
 <body>
 
     <div id="profile-picture">
-        <img src="IMG-7608.JPG" style="height: 150px; width: auto; border-radius: 50%;">
+        <img src="IMG-7608.jpg" style="height: 150px; width: auto; border-radius: 50%; max-width: 100%;">
     </div>
 
     <div id="toc">
