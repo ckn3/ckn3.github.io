@@ -273,6 +273,8 @@
 
         function performSearch() {
 
+            clearHighlight();
+
             var searchText = document.getElementById('searchInput').value;
             if (searchText) {
                 var contentBlocks = document.querySelectorAll('.content');
@@ -298,6 +300,18 @@
             }
         }
 
+        function clearHighlight() {
+            var contentBlocks = document.querySelectorAll('.content');
+            contentBlocks.forEach(function(contentBlock) {
+                contentBlock.querySelectorAll('.highlight').forEach(function(highlight) {
+                    contentBlock.innerHTML = contentBlock.innerHTML.replace(highlight.outerHTML, highlight.textContent);
+                });
+            });
+
+            highlights = [];
+            highlightIndex = -1;
+        }
+        
         function clearHighlights() {
             var contentBlocks = document.querySelectorAll('.content');
             contentBlocks.forEach(function(contentBlock) {
