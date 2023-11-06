@@ -185,7 +185,7 @@
         <!-- Search Box -->
         <div id="search-box">
             <form id="searchForm">
-                <input type="text" placeholder="Search this site..." id="searchInput" style="width: 100%; box-sizing: border-box;">
+                <input type="text" placeholder="Search this page..." id="searchInput" style="width: 100%; box-sizing: border-box;">
                 <div class="button-row">
                     <input type="submit" value="Search">
                     <button type="button" onclick="highlightPrevious()">Previous</button>
@@ -234,85 +234,11 @@
     <div id="searchResults"></div>
 
     <script>
-        // This is your search functionality and other related functions
-        var pagesData = []; // This should eventually hold your JSON data
-
-        function loadSearchData() {
-            // Fetch the search data from your JSON file
-            fetch('search_index.json')
-                .then(response => response.json())
-                .then(data => {
-                    pagesData = data; // Store the data for later use
-                    console.log('Search data loaded:', pagesData); // Debugging line
-                })
-                .catch(error => console.error('Error loading search data:', error)); // Error handling
-        }
-
-        // Call the loadSearchData function when the page loads
-        window.addEventListener('DOMContentLoaded', (event) => {
-            console.log('DOM fully loaded and parsed');
-            loadSearchData();
-        });
-
-        function performSearch() {
-            console.log("Search triggered"); // This should appear in your console when search is triggered
-            var searchText = document.getElementById('searchInput').value.toLowerCase();
-            console.log("Searching for: " + searchText); // This should show you the search term
-            var searchText = document.getElementById('searchInput').value.toLowerCase();
-            var searchResultsElement = document.getElementById('searchResults');
-            searchResultsElement.innerHTML = ''; // Clear previous results
-
-            // Use the pagesData to perform search
-            pagesData.forEach(function(page) {
-                if (page.content.toLowerCase().includes(searchText)) {
-                    // If a match is found, display it in searchResultsElement
-                    searchResultsElement.innerHTML += `<div><a href="${page.url}">${page.title}</a></div>`;
-                }
-            });
-
-            // If no results found
-            if (searchResultsElement.innerHTML === '') {
-                searchResultsElement.innerHTML = 'No results found.';
-            }
-        }
+        // This script block will handle searching and highlighting text within the current page.
+        var highlightIndex = -1;
+        var highlights = [];
     
-        function clearHighlights() {
-            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
-                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
-            });
-        }
-    
-        function highlightNext() {
-            if (highlights.length > 0) {
-                // Remove current highlight if any
-                if (highlightIndex >= 0) {
-                    highlights[highlightIndex].classList.remove('current-highlight');
-                }
-                // Move to the next index
-                highlightIndex = (highlightIndex + 1) % highlights.length;
-                // Add new highlight and scroll into view
-                highlights[highlightIndex].classList.add('current-highlight');
-                highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-    
-        function highlightPrevious() {
-            if (highlights.length > 0) {
-                // Remove current highlight if any
-                if (highlightIndex >= 0) {
-                    highlights[highlightIndex].classList.remove('current-highlight');
-                }
-                // Move to the previous index
-                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
-                // Add new highlight and scroll into view
-                highlights[highlightIndex].classList.add('current-highlight');
-                highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-        // Event listener for the search form
         document.addEventListener('DOMContentLoaded', function() {
-            loadSearchData(); // Load the search data when the DOM is ready
-        
             var searchForm = document.getElementById('searchForm');
             if (searchForm) {
                 searchForm.addEventListener('submit', function(event) {
@@ -321,7 +247,65 @@
                 });
             }
         });
+    
+        function performSearch() {
+            // Clear previous highlights
+            clearHighlights();
+    
+            var searchText = document.getElementById('searchInput').value;
+            if (!searchText) {
+                return; // Exit if search box is empty
+            }
+    
+            var contentDiv = document.getElementById('content');
+            var content = contentDiv.innerHTML;
+            var searchRegEx = new RegExp(searchText, "gi");
+            var matches = content.match(searchRegEx);
+    
+            if (matches && matches.length > 0) {
+                // Replace the found text with highlighted text
+                contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
+                // Store all highlights
+                highlights = document.querySelectorAll('.highlight');
+                highlightNext(); // Automatically highlight the first match
+            } else {
+                alert('Search term not found.');
+            }
+        }
+    
+        function clearHighlights() {
+            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
+                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
+            });
+            highlights = []; // Clear the highlights array
+            highlightIndex = -1; // Reset the current highlight index
+        }
+    
+        function highlightNext() {
+            if (highlights.length > 0) {
+                highlightIndex = (highlightIndex + 1) % highlights.length;
+                scrollHighlightIntoView();
+            }
+        }
+    
+        function highlightPrevious() {
+            if (highlights.length > 0) {
+                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
+                scrollHighlightIntoView();
+            }
+        }
+    
+        function scrollHighlightIntoView() {
+            // Remove current highlight if any
+            document.querySelectorAll('.current-highlight').forEach(function(highlighted) {
+                highlighted.classList.remove('current-highlight');
+            });
+            // Add new highlight and scroll into view
+            highlights[highlightIndex].classList.add('current-highlight');
+            highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     </script>
+    
     <style>
         .highlight {
             background-color: yellow;
