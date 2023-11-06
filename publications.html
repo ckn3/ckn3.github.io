@@ -190,12 +190,13 @@
             background-color: yellow;
         }
         
-        .current-highlight {
-            background-color: orange;
+        /* Styles for the search highlight */
+        .highlight {
+            background-color: yellow;
         }
         
-        .contact-information {
-            text-align: center;
+        .current-highlight {
+            background-color: orange;
         }
     </style>
 </head>
@@ -229,7 +230,7 @@
         
         <!-- Search Box -->
         <div id="search-box">
-            <input type="text" placeholder="Search this page..." id="searchInput">
+            <input type="text" placeholder="Search the title..." id="searchInput">
             <div class="button-row">
                 <button type="button" onclick="performSearch()">Search</button>
                 <button type="button" onclick="highlightPrevious()">Previous</button>
@@ -269,72 +270,70 @@
         var highlights = [];
 
         function performSearch() {
-            clearHighlights(); // Clear previous highlights
+            clearHighlights();
+
             var searchText = document.getElementById('searchInput').value;
-            if (!searchText) {
-                return; // Exit if the search box is empty
-            }
+            if (searchText) {
+                var contentBlocks = document.querySelectorAll('.content');
+                contentBlocks.forEach(function(contentBlock) {
+                    var blockHtml = contentBlock.innerHTML;
+                    var matchRegExp = new RegExp(searchText, 'gi');
+                    var matches = blockHtml.match(matchRegExp);
 
-            var contentBlocks = document.querySelectorAll('.content');
-            var foundMatches = false;
+                    if (matches) {
+                        contentBlock.innerHTML = blockHtml.replace(matchRegExp, function(match) {
+                            return '<span class="highlight">' + match + '</span>';
+                        });
+                    }
+                });
 
-            contentBlocks.forEach(function(contentDiv) {
-                var content = contentDiv.innerHTML;
-                var searchRegEx = new RegExp(searchText, "gi");
-                var matches = content.match(searchRegEx);
-
-                if (matches && matches.length > 0) {
-                    contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
-                    foundMatches = true;
-                }
-            });
-
-            if (foundMatches) {
                 highlights = document.querySelectorAll('.highlight');
-                highlightNext(); // Automatically highlight the first match
-            } else {
-                alert('Search term not found.');
+                if (highlights.length) {
+                    highlightIndex = 0;
+                    jumpToHighlight();
+                } else {
+                    alert("No matches found.");
+                }
             }
         }
 
         function clearHighlights() {
-            document.querySelectorAll('.highlight').forEach(function(highlighted) {
-                var parent = highlighted.parentNode;
-                parent.replaceChild(document.createTextNode(highlighted.textContent), highlighted);
-                parent.normalize(); // This merges adjacent text nodes
+            var contentBlocks = document.querySelectorAll('.content');
+            contentBlocks.forEach(function(contentBlock) {
+                contentBlock.querySelectorAll('.highlight').forEach(function(highlight) {
+                    contentBlock.innerHTML = contentBlock.innerHTML.replace(highlight.outerHTML, highlight.textContent);
+                });
             });
 
             highlights = [];
             highlightIndex = -1;
-            document.getElementById('searchInput').value = ''; // Clear the search box
         }
 
         function highlightNext() {
-            if (highlights.length > 0) {
-                removeCurrentHighlight();
+            if (highlights.length) {
                 highlightIndex = (highlightIndex + 1) % highlights.length;
-                addCurrentHighlight();
+                jumpToHighlight();
             }
         }
 
         function highlightPrevious() {
-            if (highlights.length > 0) {
-                removeCurrentHighlight();
+            if (highlights.length) {
                 highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
-                addCurrentHighlight();
+                jumpToHighlight();
             }
         }
 
-        function addCurrentHighlight() {
-            highlights[highlightIndex].classList.add('current-highlight');
-            highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        function jumpToHighlight() {
+            removeCurrentHighlight();
+            var current = highlights[highlightIndex];
+            current.classList.add('current-highlight');
+            current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         function removeCurrentHighlight() {
-            var currentHighlight = document.querySelector('.current-highlight');
-            if (currentHighlight) {
-                currentHighlight.classList.remove('current-highlight');
-            }
+            document.querySelectorAll('.current-highlight').forEach(function(highlight) {
+                highlight.classList.remove('current-highlight');
+            });
         }
     </script>
     
