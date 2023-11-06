@@ -10,92 +10,45 @@
     <!-- Include a Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Use the Google font for the whole page */
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.5;
-            background-color: #f3f4f6; /* Light grayish background for a more premium feel */
-            color: #333; /* Dark text color for better readability */
+        /* Same styles as before... */
+        /* ... */
+        .highlight {
+            background-color: yellow;
         }
-
-        a:link,
-        a:visited {
-            text-decoration: none;
-            color: #007BFF; /* Using a modern blue color for links */
-            transition: color 0.3s; /* Smooth transition for hover effects */
+        .current-highlight {
+            background-color: orange; /* Different color for the current highlight */
         }
-
-        a:hover,
-        a:active {
-            color: #0056b3; /* Darker blue for hover state */
-            text-decoration: underline;
+        .contact-information {
+            text-align: center;
         }
-
-        h2 {
-            margin-bottom: 20px;
-            font-weight: 700; /* Making headings bold */
-            font-size: 24px; /* Slightly larger font size for headings */
+        /* Search Box Styles */
+        #search-box input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 4px; /* Spacing between the input and the buttons */
         }
-
-        #toc {
-            position: fixed;
-            left: 0;
-            top: 0;
-            padding: 20px; /* Increased padding for more spacing */
-            background-color: #ffffff; /* White background for the table of contents */
-            border-right: 1px solid #ddd;
-            width: 300px;
-            height: 100%;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
-            border-radius: 10px; /* Rounded corners on both sides */
+        .button-row {
+            display: flex;
         }
-
-        #toc strong {
-            font-size: 18px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 15px;
+        .button-row input[type="submit"],
+        .button-row button {
+            flex-grow: 1;
+            padding: 8px;
+            margin: 0 4px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        #toc ul {
-            padding: 0; /* Remove default padding */
-            list-style-type: none; /* Remove bullet points */
+        .button-row input[type="submit"]:first-child,
+        .button-row button:first-child {
+            margin-left: 0;
         }
-
-        #toc li {
-            margin-bottom: 10px; /* Spacing between list items */
-        }
-
-        #toc li a {
-            padding: 5px 10px;
-            display: block;
-            border-radius: 5px; /* Rounded corners for links */
-            transition: background-color 0.3s; /* Smooth transition for background color */
-        }
-
-        #toc li a:hover {
-            background-color: #f3f4f6; /* Light gray background on hover */
-        }
-
-        #content {
-            margin-left: 300px; /* Adjusted for the increased width of the table of contents */
-            padding: 20px; /* Padding for the content for spacing */
-            background-color: #ffffff; /* White background for content */
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
-            border-radius: 10px; /* Rounded corners for the content box */
-        }
-
-        ol {
-            list-style-type: decimal;
-            padding-left: 20px; /* Spacing for ordered lists */
-        }
-
-        ul {
-            padding-left: 20px; /* Spacing for unordered lists */
-        }
-
-        .content-top {
-            margin-bottom: 20px; /* Adjust this value to increase/decrease the space as needed */
+        .button-row button:last-child {
+            margin-right: 0;
         }
     </style>
 </head>
@@ -103,12 +56,23 @@
 <body>
 
     <div id="toc">
+        <div id="search-box">
+            <form id="searchForm">
+                <input type="text" placeholder="Search this page..." id="searchInput" style="width: 100%; box-sizing: border-box;">
+                <div class="button-row">
+                    <input type="submit" value="Search">
+                    <button type="button" onclick="highlightPrevious()">Previous</button>
+                    <button type="button" onclick="highlightNext()">Next</button>
+                    <button type="button" onclick="clearHighlights()">Clear</button>
+                </div>
+            </form>
+        </div>
         <strong>Contents:</strong>
         <ul>
             <li><a href="index.html">Main Page</a></li>
-            <li><a href="publications.html">Research</a></li>
-            <li><a href="teach.html">Teaching</a></li>
+            <li><a href="publications.html">Research Publications</a></li>
             <li><a href="academic_honors.html">Academic Service & Honors</a></li>
+            <li><a href="teach.html">Teaching Experience</a></li>
             <li><a href="others.html">Visits and Exchanges</a></li>
         </ul>
     </div>
