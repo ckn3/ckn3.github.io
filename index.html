@@ -231,13 +231,25 @@
     <div id="searchResults"></div>
 
     <script>
-        // Global variable to store your pages data
-        var pagesData = [];
+        // This is your search functionality and other related functions
+        var pagesData = []; // This should eventually hold your JSON data
 
-        // Fetch the search index data on page load
-        fetch('search_index.json')
-            .then(response => response.json())
-            .then(data => pagesData = data);
+        function loadSearchData() {
+            // Fetch the search data from your JSON file
+            fetch('search_index.json')
+                .then(response => response.json())
+                .then(data => {
+                    pagesData = data; // Store the data for later use
+                    console.log('Search data loaded:', pagesData); // Debugging line
+                })
+                .catch(error => console.error('Error loading search data:', error)); // Error handling
+        }
+
+        // Call the loadSearchData function when the page loads
+        window.addEventListener('DOMContentLoaded', (event) => {
+            console.log('DOM fully loaded and parsed');
+            loadSearchData();
+        });
 
         function performSearch() {
             var searchText = document.getElementById('searchInput').value.toLowerCase();
@@ -291,6 +303,18 @@
                 highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
+        // Event listener for the search form
+        document.addEventListener('DOMContentLoaded', function() {
+            var searchForm = document.getElementById('searchForm'); // Ensure you have an ID for your form
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting the traditional way
+                    performSearch(); // Call the performSearch function
+                });
+            } else {
+                console.log('Search form not found.'); // Debugging line
+            }
+        });
     </script>
     <style>
         .highlight {
