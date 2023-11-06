@@ -179,17 +179,19 @@
 
     <div id="sidebar">
         <div id="profile-picture">
-            <img src="IMG-7608.jpg" alt="Kangning Cui" style="max-height: 200; width: auto; border-radius: 50%;">
+            <img src="IMG-7608.jpg" alt="Kangning Cui" style="max-height: 150px; width: auto; border-radius: 50%;">
         </div>
         <div id="name">Kangning Cui (Jason)</div>
         <div id="search-box">
-            <input type="text" placeholder="Search this site..." id="searchInput">
-            <div class="button-row">
-                <input type="submit" value="Search" onclick="performSearch()">
-                <button onclick="highlightPrevious()">Previous</button>
-                <button onclick="highlightNext()">Next</button>
-                <button onclick="clearHighlights()">Clear</button>
-            </div>
+            <form id="searchForm">
+                <input type="text" placeholder="Search this site..." id="searchInput">
+                <div class="button-row">
+                    <input type="submit" value="Search">
+                    <button type="button" onclick="highlightPrevious()">Previous</button>
+                    <button type="button" onclick="highlightNext()">Next</button>
+                    <button type="button" onclick="clearHighlights()">Clear</button>
+                </div>
+            </form>
         </div>
     
         <!-- Contact information -->
@@ -305,14 +307,14 @@
         }
         // Event listener for the search form
         document.addEventListener('DOMContentLoaded', function() {
-            var searchForm = document.getElementById('searchForm'); // Ensure you have an ID for your form
+            loadSearchData(); // Load the search data when the DOM is ready
+        
+            var searchForm = document.getElementById('searchForm');
             if (searchForm) {
                 searchForm.addEventListener('submit', function(event) {
                     event.preventDefault(); // Prevent the form from submitting the traditional way
                     performSearch(); // Call the performSearch function
                 });
-            } else {
-                console.log('Search form not found.'); // Debugging line
             }
         });
     </script>
