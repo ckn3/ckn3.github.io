@@ -272,7 +272,6 @@
         var highlights = [];
 
         function performSearch() {
-            clearHighlights();
 
             var searchText = document.getElementById('searchInput').value;
             if (searchText) {
@@ -297,6 +296,7 @@
                     alert("No matches found.");
                 }
             }
+            clearHighlights();
         }
 
         function clearHighlights() {
@@ -338,7 +338,6 @@
                 highlight.classList.remove('current-highlight');
             });
         }
-        
     </script>
     
 </body>
