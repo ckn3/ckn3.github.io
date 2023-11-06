@@ -121,14 +121,29 @@
             <p><i>City University of Hong Kong</i></p>
             <!-- Additional contact info if needed -->
         </div>
-        <strong>Contents:</strong>
-        <ul>
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="publications.html">Research</a></li>
-            <li><a href="teach.html">Teaching</a></li>
-            <li><a href="academic_honors.html">Academic Service & Honors</a></li>
-            <li><a href="others.html">Visits and Exchanges</a></li>
-        </ul>
+        <!-- Search Box -->
+        <div id="search-box">
+            <form id="searchForm">
+                <input type="text" placeholder="Search this page..." id="searchInput" style="width: 100%; box-sizing: border-box;">
+                <div class="button-row">
+                    <input type="submit" value="Search">
+                    <button type="button" onclick="highlightPrevious()">Previous</button>
+                    <button type="button" onclick="highlightNext()">Next</button>
+                    <button type="button" onclick="clearHighlights()">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="toc">
+            <strong>Contents:</strong>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="publications.html">Research Publications</a></li>
+                <li><a href="academic_honors.html">Academic Service & Honors</a></li>
+                <li><a href="teach.html">Teaching Experience</a></li>
+                <li><a href="others.html">Visits and Exchanges</a></li>
+            </ul>
+        </div>
     </div>
 
     <div id="content" class="content-top">
