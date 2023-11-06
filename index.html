@@ -61,20 +61,23 @@
         #search-box {
             margin-bottom: 10px;
             display: flex;
-            align-items: center;
-            gap: 4px;
+            flex-direction: column;
         }
 
         #search-box input[type="text"] {
-            flex-grow: 1;
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            box-sizing: border-box;
+            margin-bottom: 4px; /* Spacing between the input and the buttons */
         }
 
-        #search-box input[type="submit"],
-        #search-box button {
+        .button-row {
+            display: flex;
+            gap: 4px;
+        }
+
+        .button-row input[type="submit"],
+        .button-row button {
             padding: 8px;
             border: none;
             border-radius: 4px;
@@ -84,11 +87,11 @@
             transition: background-color 0.3s;
         }
 
-        #search-box input[type="submit"]:hover,
-        #search-box button:hover {
+        .button-row input[type="submit"]:hover,
+        .button-row button:hover {
             background-color: #0056b3;
         }
-
+        
         #toc {
             border-top: 1px solid #ddd;
             padding-top: 20px;
@@ -182,11 +185,13 @@
             <img src="IMG-7608.jpg" alt="Kangning Cui" style="max-height: 200px; width: auto; border-radius: 50%;">
         </div>
         <div id="search-box">
-            <input type="text" placeholder="Search this site..." name="search" id="searchInput">
-            <input type="submit" value="Search" onclick="performSearch()">
-            <button onclick="highlightPrevious()">Prev</button>
-            <button onclick="highlightNext()">Next</button>
-            <button onclick="clearHighlights()">Clear</button>
+            <input type="text" placeholder="Search this site..." id="searchInput">
+            <div class="button-row">
+                <input type="submit" value="Search" onclick="performSearch()">
+                <button onclick="highlightPrevious()">Prev</button>
+                <button onclick="highlightNext()">Next</button>
+                <button onclick="clearHighlights()">Clear</button>
+            </div>
         </div>
     
         <!-- Contact information -->
