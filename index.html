@@ -255,6 +255,9 @@
         });
 
         function performSearch() {
+            console.log("Search triggered"); // This should appear in your console when search is triggered
+            var searchText = document.getElementById('searchInput').value.toLowerCase();
+            console.log("Searching for: " + searchText); // This should show you the search term
             var searchText = document.getElementById('searchInput').value.toLowerCase();
             var searchResultsElement = document.getElementById('searchResults');
             searchResultsElement.innerHTML = ''; // Clear previous results
