@@ -204,21 +204,33 @@
         function performSearch() {
             // Clear previous highlights
             clearHighlights();
-    
+        
             var searchText = document.getElementById('searchInput').value;
             if (!searchText) {
                 return; // Exit if search box is empty
             }
-    
-            var contentDiv = document.getElementById('content');
-            var content = contentDiv.innerHTML;
-            var searchRegEx = new RegExp(searchText, "gi");
-            var matches = content.match(searchRegEx);
-    
-            if (matches && matches.length > 0) {
-                // Replace the found text with highlighted text
-                contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
-                // Store all highlights
+        
+            // Select all content blocks
+            var contentBlocks = document.querySelectorAll('.content');
+        
+            // Initialize a flag to check if matches are found
+            var foundMatches = false;
+        
+            // Iterate over each content block and perform the search
+            contentBlocks.forEach(function(contentDiv) {
+                var content = contentDiv.innerHTML;
+                var searchRegEx = new RegExp(searchText, "gi");
+                var matches = content.match(searchRegEx);
+        
+                if (matches && matches.length > 0) {
+                    // Replace the found text with highlighted text
+                    contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
+                    foundMatches = true;
+                }
+            });
+        
+            // If matches are found, store all highlights and highlight the first match
+            if (foundMatches) {
                 highlights = document.querySelectorAll('.highlight');
                 highlightNext(); // Automatically highlight the first match
             } else {
@@ -227,11 +239,19 @@
         }
     
         function clearHighlights() {
-            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
-                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
+            // Query all highlighted elements within any .content block and clear them
+            document.querySelectorAll('.content .highlight').forEach(function(highlighted) {
+                // Replace the highlighted element with its innerHTML
+                var parent = highlighted.parentNode;
+                parent.replaceChild(document.createTextNode(highlighted.textContent), highlighted);
             });
-            highlights = []; // Clear the highlights array
-            highlightIndex = -1; // Reset the current highlight index
+        
+            // Clear the highlights array and reset the current highlight index
+            highlights = [];
+            highlightIndex = -1;
+        
+            // Clear the search input box
+            document.getElementById('searchInput').value = '';
         }
     
         function highlightNext() {
