@@ -30,7 +30,7 @@
             text-decoration: underline;
         }
 
-        h2 {
+        h1, h2 {
             margin-bottom: 20px;
             font-weight: 700;
             font-size: 24px;
@@ -40,12 +40,12 @@
             position: fixed;
             left: 0;
             top: 0;
-            width: 300px;
+            width: 300px; /* Matched with other pages */
             background-color: #ffffff;
             height: 100%;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            padding: 20px;
+            padding: 20px; /* Increased padding */
             box-sizing: border-box;
         }
 
@@ -56,11 +56,54 @@
 
         #profile-picture img {
             border-radius: 50%;
-            width: 100px;
+            width: 100px; /* Adjusted size */
         }
 
-        .contact-information {
-            text-align: center;
+        /* Styling for the search bar and buttons */
+        #search-box {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #search-box input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 4px; /* Spacing between the input and the buttons */
+        }
+
+        /* Updated styles for button row to accommodate changes */
+        .button-row {
+            display: flex;
+        }
+        
+        .button-row input[type="submit"],
+        .button-row button {
+            flex-grow: 1;  /* This makes each button grow to fill the container */
+            padding: 8px;
+            margin: 0 4px; /* This sets the margin between the buttons; adjust as needed */
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        /* This targets the first and last buttons to remove the margin at the ends */
+        .button-row input[type="submit"]:first-child,
+        .button-row button:first-child {
+            margin-left: 0;
+        }
+        
+        .button-row button:last-child {
+            margin-right: 0;
+        }
+        
+        #toc {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
         }
 
         #toc strong {
@@ -71,8 +114,9 @@
         }
 
         #toc ul {
-            padding: 0;
             list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
         #toc li a {
@@ -107,45 +151,39 @@
             margin-bottom: 20px;
         }
 
-        #search-box {
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
+        .icon-link {
+            display: inline-block;
+            margin-right: 5px;
         }
-    
-        #search-box input[type="text"] {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 4px; /* Spacing between the input and the buttons */
+
+        .icon-link img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
         }
-    
-        /* Updated styles for button row to accommodate changes */
-        .button-row {
-            display: flex;
+
+        .contact-info {
+            margin-bottom: 20px;
+            font-size: 14px;
         }
-        
-        .button-row input[type="submit"],
-        .button-row button {
-            flex-grow: 1;  /* This makes each button grow to fill the container */
-            padding: 8px;
-            margin: 0 4px; /* This sets the margin between the buttons; adjust as needed */
-            border: none;
-            border-radius: 4px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
+
+        .contact-info b {
+            display: block;
+            margin-bottom: 5px;
         }
-        
-        /* This targets the first and last buttons to remove the margin at the ends */
-        .button-row input[type="submit"]:first-child,
-        .button-row button:first-child {
-            margin-left: 0;
+
+        .contact-info p {
+            margin: 5px 0;
         }
-        
-        .button-row button:last-child {
-            margin-right: 0;
+
+        #name {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 10px 0;
+        }
+
+        #name span {
+            display: block;
         }
     </style>
 </head>
@@ -156,6 +194,7 @@
         <div id="profile-picture">
             <img src="IMG-7608.jpg" alt="Kangning Cui">
         </div>
+        <div id = 'name'>Kangning Cui (Jason)</div>
         <div class="contact-information">
             <p><i>Ph.D. candidate</i></p>
             <p><i>Department of Mathematics</i></p>
