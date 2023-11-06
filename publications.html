@@ -269,29 +269,26 @@
         var highlights = [];
 
         function performSearch() {
-            console.log('performSearch called'); // Debugging log
-            clearHighlights();
-        
+            clearHighlights(); // Clear previous highlights
             var searchText = document.getElementById('searchInput').value;
             if (!searchText) {
-                console.log('No search text'); // Debugging log
                 return; // Exit if the search box is empty
             }
-        
+
             var contentBlocks = document.querySelectorAll('.content');
             var foundMatches = false;
-        
+
             contentBlocks.forEach(function(contentDiv) {
                 var content = contentDiv.innerHTML;
                 var searchRegEx = new RegExp(searchText, "gi");
                 var matches = content.match(searchRegEx);
-        
+
                 if (matches && matches.length > 0) {
                     contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
                     foundMatches = true;
                 }
             });
-        
+
             if (foundMatches) {
                 highlights = document.querySelectorAll('.highlight');
                 highlightNext(); // Automatically highlight the first match
@@ -299,19 +296,17 @@
                 alert('Search term not found.');
             }
         }
-        
+
         function clearHighlights() {
-            console.log('clearHighlights called'); // Debugging log
             document.querySelectorAll('.highlight').forEach(function(highlighted) {
                 var parent = highlighted.parentNode;
                 parent.replaceChild(document.createTextNode(highlighted.textContent), highlighted);
                 parent.normalize(); // This merges adjacent text nodes
             });
-        
+
             highlights = [];
             highlightIndex = -1;
-            
-            document.getElementById('searchInput').value = '';
+            document.getElementById('searchInput').value = ''; // Clear the search box
         }
 
         function highlightNext() {
