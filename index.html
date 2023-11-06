@@ -173,6 +173,7 @@
             display: block;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
 <body>
 
@@ -226,42 +227,33 @@
         <p>Coming soon...</p>
     </div>
 
+    <div id="searchResults"></div>
+
     <script>
-        // Global variables to keep track of the highlights and current index
-        var highlightIndex = 0;
-        var highlights = [];
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            // Event listener for the search form
-            document.querySelector('#search-box form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent normal form submission
-                performSearch(); // Call the performSearch function
-            });
-        });
-    
+        // Global variable to store your pages data
+        var pagesData = [];
+
+        // Fetch the search index data on page load
+        fetch('search_index.json')
+            .then(response => response.json())
+            .then(data => pagesData = data);
+
         function performSearch() {
-            // Clear previous highlights
-            clearHighlights();
-    
-            var searchText = document.querySelector('#search-box input[type="text"]').value;
-            if (!searchText) {
-                return; // Exit if search box is empty
-            }
-    
-            var contentDiv = document.querySelector('#content');
-            var content = contentDiv.innerHTML;
-            var searchRegEx = new RegExp(searchText, "gi");
-            var matches = content.match(searchRegEx);
-    
-            if (matches && matches.length > 0) {
-                // Replace the found text with highlighted text
-                contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
-                // Store all highlights
-                highlights = document.querySelectorAll('.highlight');
-                highlightIndex = -1;
-                highlightNext(); // Automatically highlight the first match
-            } else {
-                alert('Search term not found.');
+            var searchText = document.getElementById('searchInput').value.toLowerCase();
+            var searchResultsElement = document.getElementById('searchResults');
+            searchResultsElement.innerHTML = ''; // Clear previous results
+
+            // Use the pagesData to perform search
+            pagesData.forEach(function(page) {
+                if (page.content.toLowerCase().includes(searchText)) {
+                    // If a match is found, display it in searchResultsElement
+                    searchResultsElement.innerHTML += `<div><a href="${page.url}">${page.title}</a></div>`;
+                }
+            });
+
+            // If no results found
+            if (searchResultsElement.innerHTML === '') {
+                searchResultsElement.innerHTML = 'No results found.';
             }
         }
     
