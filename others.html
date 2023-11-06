@@ -125,5 +125,92 @@
             <li>Researched at <strong>Wake Forest University</strong> as a short-term scholar, Winston-Salem, North Carolina, United States, summer 2023.</li>
         </ul>
     </div>
+    
+    <script>
+        // This script block will handle searching and highlighting text within the current page.
+        var highlightIndex = -1;
+        var highlights = [];
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            var searchForm = document.getElementById('searchForm');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting the traditional way
+                    performSearch(); // Call the performSearch function
+                });
+            }
+        });
+    
+        function performSearch() {
+            // Clear previous highlights
+            clearHighlights();
+    
+            var searchText = document.getElementById('searchInput').value;
+            if (!searchText) {
+                return; // Exit if search box is empty
+            }
+    
+            var contentDiv = document.getElementById('content');
+            var content = contentDiv.innerHTML;
+            var searchRegEx = new RegExp(searchText, "gi");
+            var matches = content.match(searchRegEx);
+    
+            if (matches && matches.length > 0) {
+                // Replace the found text with highlighted text
+                contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
+                // Store all highlights
+                highlights = document.querySelectorAll('.highlight');
+                highlightNext(); // Automatically highlight the first match
+            } else {
+                alert('Search term not found.');
+            }
+        }
+    
+        function clearHighlights() {
+            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
+                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
+            });
+            highlights = []; // Clear the highlights array
+            highlightIndex = -1; // Reset the current highlight index
+        }
+    
+        function highlightNext() {
+            if (highlights.length > 0) {
+                highlightIndex = (highlightIndex + 1) % highlights.length;
+                scrollHighlightIntoView();
+            }
+        }
+    
+        function highlightPrevious() {
+            if (highlights.length > 0) {
+                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
+                scrollHighlightIntoView();
+            }
+        }
+    
+        function scrollHighlightIntoView() {
+            // Remove current highlight if any
+            document.querySelectorAll('.current-highlight').forEach(function(highlighted) {
+                highlighted.classList.remove('current-highlight');
+            });
+            // Add new highlight and scroll into view
+            highlights[highlightIndex].classList.add('current-highlight');
+            highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+    
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .current-highlight {
+            background-color: orange; /* Different color for the current highlight */
+        }
+        .contact-information {
+            text-align: center;
+        }
+    </style>
+
+    
 </body>
 </HTML>
