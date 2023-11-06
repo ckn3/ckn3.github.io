@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<HTML>
+<html>
 
 <head>
     <meta charset="UTF-8" />
@@ -10,44 +10,57 @@
     <!-- Include a Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Use the Google font for the whole page */
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.5;
-            background-color: #f3f4f6; /* Light grayish background for a more premium feel */
-            color: #333; /* Dark text color for better readability */
+            background-color: #f3f4f6;
+            color: #333;
         }
 
         a:link,
         a:visited {
             text-decoration: none;
-            color: #007BFF; /* Using a modern blue color for links */
-            transition: color 0.3s; /* Smooth transition for hover effects */
+            color: #007BFF;
+            transition: color 0.3s;
         }
 
         a:hover,
         a:active {
-            color: #0056b3; /* Darker blue for hover state */
+            color: #0056b3;
             text-decoration: underline;
         }
 
         h2 {
             margin-bottom: 20px;
-            font-weight: 700; /* Making headings bold */
-            font-size: 24px; /* Slightly larger font size for headings */
+            font-weight: 700;
+            font-size: 24px;
         }
 
-        #toc {
+        #sidebar {
             position: fixed;
             left: 0;
             top: 0;
-            padding: 20px; /* Increased padding for more spacing */
-            background-color: #ffffff; /* White background for the table of contents */
-            border-right: 1px solid #ddd;
-            width: 250px;
+            width: 300px;
+            background-color: #ffffff;
             height: 100%;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
-            border-radius: 10px; /* Rounded corners on both sides */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #profile-picture {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        #profile-picture img {
+            border-radius: 50%;
+            width: 100px;
+        }
+
+        .contact-information {
+            text-align: center;
         }
 
         #toc strong {
@@ -58,51 +71,56 @@
         }
 
         #toc ul {
-            padding: 0; /* Remove default padding */
-            list-style-type: none; /* Remove bullet points */
-        }
-
-        #toc li {
-            margin-bottom: 10px; /* Spacing between list items */
+            padding: 0;
+            list-style-type: none;
         }
 
         #toc li a {
             padding: 5px 10px;
             display: block;
-            border-radius: 5px; /* Rounded corners for links */
-            transition: background-color 0.3s; /* Smooth transition for background color */
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         #toc li a:hover {
-            background-color: #f3f4f6; /* Light gray background on hover */
+            background-color: #f3f4f6;
         }
 
         #content {
-            margin-left: 300px; /* Adjusted for the increased width of the table of contents */
-            padding: 20px; /* Padding for the content for spacing */
-            background-color: #ffffff; /* White background for content */
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
-            border-radius: 10px; /* Rounded corners for the content box */
+            margin-left: 320px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         ol {
             list-style-type: decimal;
-            padding-left: 20px; /* Spacing for ordered lists */
+            padding-left: 20px;
         }
 
         ul {
-            padding-left: 20px; /* Spacing for unordered lists */
+            padding-left: 20px;
         }
 
         .content-top {
-            margin-bottom: 20px; /* Adjust this value to increase/decrease the space as needed */
+            margin-bottom: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="toc">
+    <div id="sidebar">
+        <div id="profile-picture">
+            <img src="IMG-7608.jpg" alt="Kangning Cui">
+        </div>
+        <div class="contact-information">
+            <p><i>Ph.D. candidate</i></p>
+            <p><i>Department of Mathematics</i></p>
+            <p><i>City University of Hong Kong</i></p>
+            <!-- Additional contact info if needed -->
+        </div>
         <strong>Contents:</strong>
         <ul>
             <li><a href="index.html">Main Page</a></li>
@@ -137,5 +155,5 @@
         <p><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
     </div>
 </body>
-</HTML>
+</html>
  
