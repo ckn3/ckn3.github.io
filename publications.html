@@ -264,11 +264,16 @@
         }
     
         function clearHighlights() {
-            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
-                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
+            // Query all highlighted elements within any .content block and clear them
+            document.querySelectorAll('.content .highlight').forEach(function(highlighted) {
+                // Replace the highlighted element with its innerHTML
+                var parent = highlighted.parentNode;
+                parent.replaceChild(document.createTextNode(highlighted.textContent), highlighted);
             });
-            highlights = []; // Clear the highlights array
-            highlightIndex = -1; // Reset the current highlight index
+        
+            // Clear the highlights array and reset the current highlight index
+            highlights = [];
+            highlightIndex = -1;
         }
     
         function highlightNext() {
