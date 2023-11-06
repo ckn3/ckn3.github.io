@@ -105,6 +105,13 @@
         .content-top {
             margin-bottom: 20px;
         }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -113,30 +120,11 @@
         <div id="profile-picture">
             <img src="IMG-7608.jpg" style="max-height: 150px; width: auto; border-radius: 50%; max-width: 100%;">
         </div>
-        <div id="search-box">
-            <input type="text" placeholder="Search this site..." id="searchInput">
-            <button type="button" onclick="performSearch()">Search</button>
-            <div id="searchResults"></div>
-        </div>
         <div>
             <h1>Kangning Cui (Jason) 崔康寧</h1>
-            <b>Ph.D. candidate</b><br>
-            <b>Department of Mathematics</b><br>
-            <b>City University of Hong Kong</b><br>
-            <p>📧 : <a href="mailto:kangnicui2-c@my.cityu.edu.hk">kangnicui2-c@my.cityu.edu.hk</a></p>
-            <p>📞 : <a href="tel:+852-51622985">+852-51622985</a></p>
-            <p>
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
-                    <img src="icons8-google-scholar.svg" alt="Google Scholar" width="20" height="20">
-                </a>:
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
-            </p>
-            <p>
-                <a href="https://github.com/ckn3" target="_blank">
-                    <img src="github.svg" alt="GitHub" width="20" height="20">
-                </a>:
-                <a href="https://github.com/ckn3" target="_blank">github.com/ckn3</a>
-            </p>
+            <input type="text" id="searchInput" placeholder="Search this site..." style="margin-bottom: 10px;">
+            <button type="button" onclick="performSearch()">Search</button>
+            <div id="searchResults"></div>
         </div>
         <div id="toc">
             <strong>Contents:</strong>
@@ -151,31 +139,38 @@
     </div>
 
     <div id="content" class="content-top">
-        <!-- Content for the "Recent News" section -->
+        <h2 id="positions">POSITIONS HELD</h2>
+        <p>[09/2022-present]
+            <b><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Society for Industrial and Applied Mathematics</a></b> <br />
+            <div style="margin-left: 60px;"><i>Founding President of SIAM Student Chapter at City University of Hong Kong</i></div>
+        </p>
+        <p>[05/2020-present]
+            <b><a href="https://irsc-wfu.github.io/" target="_blank">Wake Forest University</a></b> <br />
+            <div style="margin-left: 60px;"><i>Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</i></div>
+        </p>
         <h2>Recent News</h2>
         <p>Coming soon...</p>
     </div>
 
     <script>
-    function performSearch() {
-        var searchText = document.getElementById('searchInput').value.toLowerCase();
-        var content = document.getElementById('content').innerText.toLowerCase();
-        var searchResults = document.getElementById('searchResults');
+        function performSearch() {
+            var searchText = document.getElementById('searchInput').value.toLowerCase();
+            var content = document.getElementById('content').innerText.toLowerCase();
+            var searchResults = document.getElementById('searchResults');
 
-        if (!searchText) {
-            searchResults.innerHTML = '';
-            return;
-        }
+            if (!searchText) {
+                searchResults.innerHTML = '';
+                return;
+            }
 
-        if (content.includes(searchText)) {
-            searchResults.innerHTML = 'Search term found!';
-            // More sophisticated content highlighting or navigation can be added here
-        } else {
-            searchResults.innerHTML = 'Search term not found.';
+            if (content.includes(searchText)) {
+                searchResults.innerHTML = 'Search term found!';
+                // More sophisticated content highlighting or navigation can be added here
+            } else {
+                searchResults.innerHTML = 'Search term not found.';
+            }
         }
-    }
     </script>
 
 </body>
 </html>
-
