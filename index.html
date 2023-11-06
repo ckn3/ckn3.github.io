@@ -28,7 +28,7 @@
             text-decoration: underline;
         }
 
-        h2 {
+        h1, h2 {
             margin-bottom: 20px;
             font-weight: 700;
             font-size: 24px;
@@ -50,6 +50,11 @@
         #profile-picture {
             text-align: center;
             padding-bottom: 20px;
+        }
+
+        #profile-picture img {
+            border-radius: 50%;
+            width: 200px; /* Adjusted size */
         }
 
         #search-box {
@@ -106,11 +111,35 @@
             margin-bottom: 20px;
         }
 
-        .social-icons img {
+        .icon-link {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .icon-link img {
             width: 20px;
             height: 20px;
             vertical-align: middle;
-            margin-right: 5px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info b {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        #name {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -120,13 +149,35 @@
         <div id="profile-picture">
             <img src="IMG-7608.jpg" alt="Kangning Cui">
         </div>
-        <div id="name">Kangning Cui (Jason)</div>
-        <div id="name">崔康寧</div>
+        <div id="name">Kangning Cui (Jason) 崔康寧</div>
         <div id="search-box">
             <form action="#" method="get">
                 <input type="text" placeholder="Search this site..." name="search">
                 <input type="submit" value="Search">
             </form>
+        </div>
+        <div class="contact-info">
+            <b>Ph.D. candidate</b>
+            <b>Department of Mathematics</b>
+            <b>City University of Hong Kong</b>
+            <p>
+                <a href="mailto:kangnicui2-c@my.cityu.edu.hk">📧 kangnicui2-c@my.cityu.edu.hk</a>
+            </p>
+            <p>
+                <a href="tel:+852-51622985">📞 +852-51622985</a>
+            </p>
+            <p>
+                <a class="icon-link" href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
+                    <img src="icons8-google-scholar.svg" alt="Google Scholar">
+                </a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </p>
+            <p>
+                <a class="icon-link" href="https://github.com/ckn3" target="_blank">
+                    <img src="github.svg" alt="GitHub">
+                </a>
+                <a href="https://github.com/ckn3" target="_blank">github.com/ckn3</a>
+            </p>
         </div>
         <div id="toc">
             <strong>Contents:</strong>
@@ -143,11 +194,11 @@
     <div id="content" class="content-top">
         <h2 id="positions">POSITIONS HELD</h2>
         <p>[09/2022-present]
-            <b><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Society for Industrial and Applied Mathematics</a></b> <br />
+            <b><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Society for Industrial and Applied Mathematics</a></b><br>
             <div style="margin-left: 60px;"><i>Founding President of SIAM Student Chapter at City University of Hong Kong</i></div>
         </p>
         <p>[05/2020-present]
-            <b><a href="https://irsc-wfu.github.io/" target="_blank">Wake Forest University</a></b> <br />
+            <b><a href="https://irsc-wfu.github.io/" target="_blank">Wake Forest University</a></b><br>
             <div style="margin-left: 60px;"><i>Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</i></div>
         </p>
         <h2>Recent News</h2>
