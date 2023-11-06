@@ -185,6 +185,10 @@
                 <input type="submit" value="Search">
             </form>
         </div>
+        <div id="search-navigation">
+            <button onclick="highlightPrevious()">Previous</button>
+            <button onclick="highlightNext()">Next</button>
+        </div>
         <div class="contact-info">
             <b>Ph.D. candidate</b>
             <b>Department of Mathematics</b>
@@ -231,24 +235,87 @@
     </div>
 
     <script>
+        // Global variables to keep track of the highlights and current index
+        var highlightIndex = 0;
+        var highlights = [];
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listener for the search form
+            document.querySelector('#search-box form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent normal form submission
+                performSearch(); // Call the performSearch function
+            });
+        });
+    
         function performSearch() {
-            var searchText = document.getElementById('searchInput').value.toLowerCase();
-            var content = document.getElementById('content').innerText.toLowerCase();
-            var searchResults = document.getElementById('searchResults');
-
+            // Clear previous highlights
+            clearHighlights();
+    
+            var searchText = document.querySelector('#search-box input[type="text"]').value;
             if (!searchText) {
-                searchResults.innerHTML = '';
-                return;
+                return; // Exit if search box is empty
             }
-
-            if (content.includes(searchText)) {
-                searchResults.innerHTML = 'Search term found!';
-                // More sophisticated content highlighting or navigation can be added here
+    
+            var contentDiv = document.querySelector('#content');
+            var content = contentDiv.innerHTML;
+            var searchRegEx = new RegExp(searchText, "gi");
+            var matches = content.match(searchRegEx);
+    
+            if (matches && matches.length > 0) {
+                // Replace the found text with highlighted text
+                contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
+                // Store all highlights
+                highlights = document.querySelectorAll('.highlight');
+                highlightIndex = -1;
+                highlightNext(); // Automatically highlight the first match
             } else {
-                searchResults.innerHTML = 'Search term not found.';
+                alert('Search term not found.');
+            }
+        }
+    
+        function clearHighlights() {
+            document.querySelectorAll('#content .highlight').forEach(function(highlighted) {
+                highlighted.outerHTML = highlighted.innerHTML; // Remove the <mark> tags
+            });
+        }
+    
+        function highlightNext() {
+            if (highlights.length > 0) {
+                // Remove current highlight if any
+                if (highlightIndex >= 0) {
+                    highlights[highlightIndex].classList.remove('current-highlight');
+                }
+                // Move to the next index
+                highlightIndex = (highlightIndex + 1) % highlights.length;
+                // Add new highlight and scroll into view
+                highlights[highlightIndex].classList.add('current-highlight');
+                highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    
+        function highlightPrevious() {
+            if (highlights.length > 0) {
+                // Remove current highlight if any
+                if (highlightIndex >= 0) {
+                    highlights[highlightIndex].classList.remove('current-highlight');
+                }
+                // Move to the previous index
+                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
+                // Add new highlight and scroll into view
+                highlights[highlightIndex].classList.add('current-highlight');
+                highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
     </script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .current-highlight {
+            background-color: orange; /* Different color for the current highlight */
+        }
+    </style>
+
 
 </body>
 </html>
