@@ -10,45 +10,101 @@
     <!-- Include a Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Same styles as before... */
-        /* ... */
-        .highlight {
-            background-color: yellow;
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            background-color: #f3f4f6;
+            color: #333;
         }
-        .current-highlight {
-            background-color: orange; /* Different color for the current highlight */
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s;
         }
+
+        a:hover,
+        a:active {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            background-color: #ffffff;
+            height: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #profile-picture {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        #profile-picture img {
+            border-radius: 50%;
+            width: 100px;
+        }
+
         .contact-information {
             text-align: center;
         }
-        /* Search Box Styles */
-        #search-box input[type="text"] {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 4px; /* Spacing between the input and the buttons */
+
+        #toc strong {
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
         }
-        .button-row {
-            display: flex;
+
+        #toc ul {
+            padding: 0;
+            list-style-type: none;
         }
-        .button-row input[type="submit"],
-        .button-row button {
-            flex-grow: 1;
-            padding: 8px;
-            margin: 0 4px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
+
+        #toc li a {
+            padding: 5px 10px;
+            display: block;
+            border-radius: 5px;
             transition: background-color 0.3s;
         }
-        .button-row input[type="submit"]:first-child,
-        .button-row button:first-child {
-            margin-left: 0;
+
+        #toc li a:hover {
+            background-color: #f3f4f6;
         }
-        .button-row button:last-child {
-            margin-right: 0;
+
+        #content {
+            margin-left: 320px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .content-top {
+            margin-bottom: 20px;
         }
     </style>
 </head>
