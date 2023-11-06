@@ -57,21 +57,24 @@
             width: 200px; /* Adjusted size */
         }
 
-        /* Style for the search box and buttons */
+        /* Styling for the search bar and buttons */
         #search-box {
+            display: flex; /* Use flexbox for inline arrangement */
+            align-items: center; /* Align items vertically */
+            gap: 4px; /* Spacing between elements */
             margin-bottom: 20px;
         }
         
         #search-box input[type="text"] {
+            flex-grow: 1; /* Allow the input to grow and fill space */
             padding: 8px;
-            margin-right: 4px; /* Adjust spacing between input and button */
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
         }
         
         #search-box input[type="submit"],
-        #search-navigation button {
+        #search-box button {
             padding: 8px;
             border: none;
             border-radius: 4px;
@@ -82,17 +85,29 @@
         }
         
         #search-box input[type="submit"]:hover,
-        #search-navigation button:hover {
+        #search-box button:hover {
             background-color: #0056b3;
         }
         
-        /* Additional styles for search navigation buttons */
-        #search-navigation {
-            margin-top: 10px; /* Space between search box and navigation buttons */
+        /* Contact information styles */
+        .contact-info {
+            background-color: #f8f9fa; /* Light background color */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px; /* Spacing between contact info and TOC */
         }
         
-        #search-navigation button {
-            margin-right: 4px; /* Space between buttons */
+        .contact-info a {
+            display: block;
+            color: #007BFF;
+            margin: 5px 0; /* Spacing between links */
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: none;
+            color: #0056b3;
         }
 
         #toc {
@@ -191,34 +206,24 @@
             <span>Kangning Cui (Jason)</span>
             <span>崔康寧</span>
         </div>
+        <!-- Search box with inline buttons -->
         <div id="search-box">
-            <form action="#" method="get">
-                <input type="text" placeholder="Search this site..." name="search">
-                <input type="submit" value="Search">
-            </form>
-            <div id="search-navigation">
-                <button onclick="highlightPrevious()">Previous</button>
-                <button onclick="highlightNext()">Next</button>
-            </div>
+            <input type="text" placeholder="Search this site..." id="searchInput">
+            <button onclick="performSearch()">Go</button>
+            <button onclick="highlightPrevious()">Prev</button>
+            <button onclick="highlightNext()">Next</button>
         </div>
+    
+        <!-- Contact information -->
         <div class="contact-info">
-            <b>Ph.D. candidate</b>
-            <b>Department of Mathematics</b>
-            <b>City University of Hong Kong</b>
-            <p>📧 : <a href="mailto:kangnicui2-c@my.cityu.edu.hk">kangnicui2-c@my.cityu.edu.hk</a></p>
-            <p>📞 : <a href="tel:+852-51622985">+852-51622985</a></p>
-            <p>
-                <a class="icon-link" href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
-                    <img src="icons8-google-scholar.svg" alt="Google Scholar">
-                </a>
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
-            </p>
-            <p>
-                <a class="icon-link" href="https://github.com/ckn3" target="_blank">
-                    <img src="github.svg" alt="GitHub">
-                </a>
-                <a href="https://github.com/ckn3" target="_blank">github.com/ckn3</a>
-            </p>
+            <a href="mailto:kangnicui2-c@my.cityu.edu.hk">📧 kangnicui2-c@my.cityu.edu.hk</a>
+            <a href="tel:+852-51622985">📞 +852-51622985</a>
+            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
+                <img src="icons8-google-scholar.svg" alt="Google Scholar" style="vertical-align: middle;"> Google Scholar
+            </a>
+            <a href="https://github.com/ckn3" target="_blank">
+                <img src="github.svg" alt="GitHub" style="vertical-align: middle;"> github.com/ckn3
+            </a>
         </div>
         <div id="toc">
             <strong>Contents:</strong>
