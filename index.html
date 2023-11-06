@@ -60,12 +60,14 @@
         /* Styling for the search bar and buttons */
         #search-box {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         #search-box input[type="text"] {
-            width: 100%;
+            flex-grow: 1;
             padding: 8px;
-            margin-bottom: 5px; /* Add a little space between input and buttons */
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
@@ -80,7 +82,6 @@
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-right: 4px; /* Spacing between buttons */
         }
 
         #search-box input[type="submit"]:hover,
@@ -181,10 +182,8 @@
             <img src="IMG-7608.jpg" alt="Kangning Cui" style="max-height: 200px; width: auto; border-radius: 50%;">
         </div>
         <div id="search-box">
-            <form action="#" method="get">
-                <input type="text" placeholder="Search this site..." name="search" id="searchInput">
-                <input type="submit" value="Search">
-            </form>
+            <input type="text" placeholder="Search this site..." name="search" id="searchInput">
+            <input type="submit" value="Search" onclick="performSearch()">
             <button onclick="highlightPrevious()">Prev</button>
             <button onclick="highlightNext()">Next</button>
             <button onclick="clearHighlights()">Clear</button>
