@@ -57,30 +57,42 @@
             width: 200px; /* Adjusted size */
         }
 
+        /* Style for the search box and buttons */
         #search-box {
             margin-bottom: 20px;
         }
-
+        
         #search-box input[type="text"] {
-            width: calc(100% - 90px); /* Adjusted to shorten the input field */
-            padding: 5px;
-            margin-right: 5px;
-            border-radius: 5px;
+            padding: 8px;
+            margin-right: 4px; /* Adjust spacing between input and button */
             border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-
-        #search-box input[type="submit"] {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
+        
+        #search-box input[type="submit"],
+        #search-navigation button {
+            padding: 8px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
-        #search-box input[type="submit"]:hover {
+        
+        #search-box input[type="submit"]:hover,
+        #search-navigation button:hover {
             background-color: #0056b3;
+        }
+        
+        /* Additional styles for search navigation buttons */
+        #search-navigation {
+            margin-top: 10px; /* Space between search box and navigation buttons */
+        }
+        
+        #search-navigation button {
+            margin-right: 4px; /* Space between buttons */
         }
 
         #toc {
@@ -184,10 +196,10 @@
                 <input type="text" placeholder="Search this site..." name="search">
                 <input type="submit" value="Search">
             </form>
-        </div>
-        <div id="search-navigation">
-            <button onclick="highlightPrevious()">Previous</button>
-            <button onclick="highlightNext()">Next</button>
+            <div id="search-navigation">
+                <button onclick="highlightPrevious()">Previous</button>
+                <button onclick="highlightNext()">Next</button>
+            </div>
         </div>
         <div class="contact-info">
             <b>Ph.D. candidate</b>
