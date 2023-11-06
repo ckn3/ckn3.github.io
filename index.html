@@ -6,7 +6,6 @@
     <meta name='description' content='Homepage'>
     <link rel="icon" href="webpage.ico" type="image/x-icon">
     <title>Home Page for Jason Kangning Cui</title>
-    <!-- Include a Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -14,7 +13,6 @@
             line-height: 1.5;
             background-color: #f3f4f6;
             color: #333;
-            margin: 0;
         }
 
         a:link,
@@ -44,57 +42,30 @@
             background-color: #ffffff;
             height: 100%;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
             box-sizing: border-box;
-            padding: 20px;
-            border-radius: 0 10px 10px 0;
         }
 
         #profile-picture {
-            width: 100%;
             text-align: center;
-            padding: 10px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-        }
-
-        #profile-picture img {
-            max-height: 150px;
-            width: auto;
-            border-radius: 50%;
-            max-width: 100%;
-        }
-
-        #name {
-            text-align: center;
-            font-weight: bold;
-            margin: 20px 0;
+            padding-bottom: 20px;
         }
 
         #search-box {
-            text-align: center;
             margin-bottom: 20px;
         }
 
-        #search-box input[type="text"] {
-            width: calc(100% - 40px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        #toc {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
         }
 
-        #search-box input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #007BFF;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #search-box input[type="submit"]:hover {
-            background-color: #0056b3;
+        #toc strong {
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
         }
 
         #toc ul {
@@ -115,7 +86,7 @@
         }
 
         #content {
-            margin-left: 320px;
+            margin-left: 330px;
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -140,14 +111,32 @@
 
     <div id="sidebar">
         <div id="profile-picture">
-            <img src="IMG-7608.jpg" alt="Kangning Cui">
+            <img src="IMG-7608.jpg" style="max-height: 150px; width: auto; border-radius: 50%; max-width: 100%;">
         </div>
-        <div id="name">Kangning Cui</div>
         <div id="search-box">
-            <form action="#" method="get">
-                <input type="text" placeholder="Search this site..." name="search">
-                <input type="submit" value="Search">
-            </form>
+            <input type="text" placeholder="Search this site..." id="searchInput">
+            <button type="button" onclick="performSearch()">Search</button>
+            <div id="searchResults"></div>
+        </div>
+        <div>
+            <h1>Kangning Cui (Jason) 崔康寧</h1>
+            <b>Ph.D. candidate</b><br>
+            <b>Department of Mathematics</b><br>
+            <b>City University of Hong Kong</b><br>
+            <p>📧 : <a href="mailto:kangnicui2-c@my.cityu.edu.hk">kangnicui2-c@my.cityu.edu.hk</a></p>
+            <p>📞 : <a href="tel:+852-51622985">+852-51622985</a></p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
+                    <img src="icons8-google-scholar.svg" alt="Google Scholar" width="20" height="20">
+                </a>:
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </p>
+            <p>
+                <a href="https://github.com/ckn3" target="_blank">
+                    <img src="github.svg" alt="GitHub" width="20" height="20">
+                </a>:
+                <a href="https://github.com/ckn3" target="_blank">github.com/ckn3</a>
+            </p>
         </div>
         <div id="toc">
             <strong>Contents:</strong>
@@ -162,55 +151,31 @@
     </div>
 
     <div id="content" class="content-top">
-        <table cellspacing="10">
-            <tbody>
-                <tr>
-                    <td>
-                        <h1>Kangning Cui (Jason) 崔康寧</h1>
-                        <b>Ph.D. candidate</b>
-                        <br>
-                        <b>Department of Mathematics</b>
-                        <br>
-                        <b>City University of Hong Kong</b>
-                        <p>📧  : <a href="mailto:kangnicui2-c@my.cityu.edu.hk">kangnicui2-c@my.cityu.edu.hk</a></p>
-                        <p>📞  : <a href="tel:+852-51622985">+852-51622985</a></p>
-                        <p>
-                            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">
-                                <img src="icons8-google-scholar.svg" alt="Google Scholar" width="20" height="20">
-                            </a>:
-                            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/ckn3" target="_blank">
-                                <img src="github.svg" alt="GitHub" width="20" height="20">
-                            </a>:
-                            <a href="https://github.com/ckn3" target="_blank">github.com/ckn3</a>
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Content for the "Recent News" section -->
+        <h2>Recent News</h2>
+        <p>Coming soon...</p>
     </div>
 
-    <div id="content">
-        <h2 id="education">EDUCATION</h2>
-        <p>[2017-2025]
-            <b>City University of Hong Kong</b> <br />
-            <div style="margin-left: 60px;"> <i>Ph.D. in Mathematics, funded by Hong Kong Centre for Cerebro-cardiovascular Health Engineering</i></div>
-            <div style="margin-left: 60px;"> <i>Bachelor's Degree in Computing Mathematics</i></div>
-        </p>
+    <script>
+    function performSearch() {
+        var searchText = document.getElementById('searchInput').value.toLowerCase();
+        var content = document.getElementById('content').innerText.toLowerCase();
+        var searchResults = document.getElementById('searchResults');
 
-        <h2 id="positions">POSITIONS HELD</h2>
-        <p>[09/2022-present]
-            <b><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Society for Industrial and Applied Mathematics</a></b> <br />
-            <div style="margin-left: 60px;"> <i>Founding President of SIAM Student Chapter at City University of Hong Kong</i></div>
-        </p>
-        <p>[05/2020-present]
-            <b><a href="https://irsc-wfu.github.io/" target="_blank">Wake Forest University</a></b>
-            <div style="margin-left: 60px;"> <i>Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</i></div>
-        </p>
-    </div>
+        if (!searchText) {
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        if (content.includes(searchText)) {
+            searchResults.innerHTML = 'Search term found!';
+            // More sophisticated content highlighting or navigation can be added here
+        } else {
+            searchResults.innerHTML = 'Search term not found.';
+        }
+    }
+    </script>
 
 </body>
+</html>
 
-</HTML>
