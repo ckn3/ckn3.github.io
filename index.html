@@ -39,10 +39,10 @@
             position: fixed;
             left: 0;
             top: 0;
-            width: 250px; /* Same as the width of the table of contents */
+            width: 250px; /* Match the table of contents width */
             text-align: center;
             padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Include padding in the element's total width and height */
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
             border-radius: 10px 10px 0 0;
@@ -51,14 +51,15 @@
         #toc {
             position: fixed;
             left: 0;
-            top: 200px; /* Adjust this value based on the actual height of your profile picture */
+            top: 180px; /* Adjust this value based on the actual height of your profile picture */
             padding: 20px;
             background-color: #ffffff;
             border-right: 1px solid #ddd;
             width: 250px; /* Same as the width of the profile picture block */
-            height: calc(100% - 200px); /* Adjust the height based on the profile picture */
+            height: calc(100% - 180px); /* Adjust the height based on the profile picture */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0 10px 10px 10px; /* Rounded corners on the right bottom and left bottom */
+            border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
         }
 
         #toc strong {
@@ -69,12 +70,9 @@
         }
 
         #toc ul {
+            list-style-type: none; /* No bullets */
             padding: 0;
-            list-style-type: none;
-        }
-
-        #toc li {
-            margin-bottom: 10px;
+            margin: 0;
         }
 
         #toc li a {
@@ -113,7 +111,7 @@
 <body>
 
     <div id="profile-picture">
-        <img src="IMG-7608.JPG" style="height: 150px; width: auto; border-radius: 50%; max-width: 100%;">
+        <img src="IMG-7608.jpg" style="max-height: 150px; width: auto; border-radius: 50%; max-width: 100%;">
     </div>
 
     <div id="toc">
