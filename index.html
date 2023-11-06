@@ -71,9 +71,10 @@
             margin-bottom: 4px; /* Spacing between the input and the buttons */
         }
 
+        /* Updated styles for button row to accommodate changes */
         .button-row {
             display: flex;
-            gap: 4px;
+            justify-content: space-between; /* This will distribute space evenly between the buttons */
         }
 
         .button-row input[type="submit"],
@@ -85,11 +86,7 @@
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
-        }
-
-        .button-row input[type="submit"]:hover,
-        .button-row button:hover {
-            background-color: #0056b3;
+            flex-grow: 1; /* This will make the buttons grow to fill the space */
         }
         
         #toc {
@@ -188,7 +185,7 @@
             <input type="text" placeholder="Search this site..." id="searchInput">
             <div class="button-row">
                 <input type="submit" value="Search" onclick="performSearch()">
-                <button onclick="highlightPrevious()">Prev</button>
+                <button onclick="highlightPrevious()">Previous</button>
                 <button onclick="highlightNext()">Next</button>
                 <button onclick="clearHighlights()">Clear</button>
             </div>
