@@ -106,6 +106,47 @@
         .content-top {
             margin-bottom: 20px;
         }
+
+        #search-box {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #search-box input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 4px; /* Spacing between the input and the buttons */
+        }
+    
+        /* Updated styles for button row to accommodate changes */
+        .button-row {
+            display: flex;
+        }
+        
+        .button-row input[type="submit"],
+        .button-row button {
+            flex-grow: 1;  /* This makes each button grow to fill the container */
+            padding: 8px;
+            margin: 0 4px; /* This sets the margin between the buttons; adjust as needed */
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        /* This targets the first and last buttons to remove the margin at the ends */
+        .button-row input[type="submit"]:first-child,
+        .button-row button:first-child {
+            margin-left: 0;
+        }
+        
+        .button-row button:last-child {
+            margin-right: 0;
+        }
     </style>
 </head>
 
