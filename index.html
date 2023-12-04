@@ -184,6 +184,23 @@
         #name span {
             display: block;
         }
+        .record-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .record-text {
+            flex: 1;
+            padding-right: 20px; /* Adjust spacing between text and image */
+        }
+        
+        .record-image img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 5px; /* Optional for rounded corners */
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
@@ -228,30 +245,57 @@
     <div class="content content-top">
         
         <h2 id="positions">POSITIONS HELD</h2>
-        <p>[09/2022-present]
-            <b>Society for Industrial and Applied Mathematics</b><br>
-            <div style="margin-left: 60px;"><i><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Founding President of SIAM Student Chapter at City University of Hong Kong</a></i></div>
-        </p>
-        <p>[05/2020-present]
-            <b>Wake Forest University</b><br>
-            <div style="margin-left: 60px;"><i><a href="https://irsc-wfu.github.io/" target="_blank">Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</a></i></div>
-        </p>
+        <div class="record-container">
+            <div class="record-text">
+                <p>[09/2022-present]
+                    <b>Society for Industrial and Applied Mathematics</b><br>
+                    <div style="margin-left: 20px;"><i><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Founding President of SIAM Student Chapter at City University of Hong Kong</a></i></div>
+                </p>
+            </div>
+            <div class="record-image">
+                <img src="figures/main/siam.jpeg" alt="SIAM">
+            </div>
+        </div>
+
+        <div class="record-container">
+            <div class="record-text">
+                <p>[05/2020-present]
+                    <b>Wake Forest University</b><br>
+                    <i><a href="https://irsc-wfu.github.io/" target="_blank">Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</a></i>
+                </p>
+            </div>
+            <div class="record-image">
+                <img src="path-to-wfu-image.jpg" alt="Wake Forest University">
+            </div>
+        </div>
 
         <h2 id="education">EDUCATION</h2>
-        <p>[09/2021-present]
-            <b>Ph.D. in Mathematics</b><br>
-            <div style="margin-left: 60px;">
-                <i>City University of Hong Kong &amp; Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</i>
-                <div>Research focuses on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</div>
+        <div class="record-container">
+            <div class="record-text">
+                <p>[09/2021-present]
+                    <b>Ph.D. in Mathematics</b><br>
+                    <i>City University of Hong Kong &amp; Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</i>
+                    <div>Research focuses on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</div>
+                </p>
             </div>
-        </p>
-        <p>[09/2017-07/2021]
-            <b>B.S. in Computing Mathematics</b><br>
-            <div style="margin-left: 60px;">
-                <i>City University of Hong Kong</i>
-                <div>First Class Honours, with a minor in Computer Science.</div>
+            <div class="record-image">
+                <img src="path-to-phd-image.jpg" alt="Ph.D. in Mathematics">
             </div>
-        </p>
+        </div>
+        
+        <div class="record-container">
+            <div class="record-text">
+                <p>[09/2017-07/2021]
+                    <b>B.S. in Computing Mathematics</b><br>
+                    <i>City University of Hong Kong</i>
+                    <div>First Class Honours, with a minor in Computer Science.</div>
+                </p>
+            </div>
+            <div class="record-image">
+                <img src="path-to-bs-image.jpg" alt="B.S. in Computing Mathematics">
+            </div>
+        </div>
+        
     </div>
     
     <div class="content">
