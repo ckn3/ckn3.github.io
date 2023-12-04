@@ -186,21 +186,27 @@
         }
         .record-container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            align-items: center; /* Align items vertically */
+            margin-bottom: 20px; /* Space between entries */
         }
         
         .record-text {
-            flex: 1;
-            padding-right: 20px; /* Adjust spacing between text and image */
+            flex: 1; /* Takes the remaining space, allowing the image to fit */
+            margin-right: 20px; /* Space between text and image */
+        }
+        
+        .record-image {
+            flex: 0 0 100px; /* Fixed width for the image */
+            display: flex; /* Ensures the image container itself is flex */
+            align-items: center; /* Center the image vertically */
         }
         
         .record-image img {
-            width: 100px; /* Adjust size as needed */
+            width: 100%; /* Make the image fill the container */
             height: auto;
-            border-radius: 5px; /* Optional for rounded corners */
+            border-radius: 5px; /* Optional, for rounded corners */
         }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
