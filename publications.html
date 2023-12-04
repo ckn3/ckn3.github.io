@@ -456,17 +456,6 @@
             }
         });
 
-        var modal = document.getElementById('modal1');
-
-        // Listen for a click on the modal
-        modal.addEventListener('click', function(event) {
-            // Check if the click was on the modal content (e.g., image) or outside it
-            if (event.target.className === "modal") {
-                // If outside the modal content, hide the modal
-                modal.classList.remove('show');
-            }
-        });
-
         function openModal(imageElement) {
             var modal = document.getElementById("modal");
             var modalImg = document.getElementById("modal-img");
@@ -481,12 +470,6 @@
             span.onclick = function() { 
                 modal.style.display = "none";
             }
-        }
-        
-        // For the close button
-        var closeButton = document.getElementsByClassName('close')[0];
-        closeButton.onclick = function() {
-            modal.classList.remove('show');
         }
 
     </script>
