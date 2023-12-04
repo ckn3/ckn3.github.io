@@ -304,7 +304,7 @@
         <!-- Publication Entry -->
         <div class="publication-entry">
             <div class="publication-figure">
-                <a href="#modal1"><img src="figures/publications/pan2024dual.jpg" alt="Figure for Pan el al., 2024"></a>
+                <img src="figures/publications/pan2024dual.jpg" alt="Figure for Pan el al., 2024" onclick="openModal(this)">
             </div>
             <div class="publication-text">
                 <p>Fei Pan, Yutong Wu, <strong>Kangning Cui</strong>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun, <a href="https://arxiv.org/abs/2301.11499" target="_blank">"Dual-View Selective Instance Segmentation Network for Unstained Live Adherent Cells in Differential Interference Contrast Images"</a>, submitted to <i>Comput. Biol. Med.</i>, Elsevier, 2023.</p>
@@ -314,7 +314,7 @@
         <!-- Publication Entry -->
         <div class="publication-entry">
             <div class="publication-figure">
-                <a href="#modal1"><img src="figures/publications/polk2023unsupervised.png" alt="Figure for Polk et al., 2023">
+                <img src="figures/publications/polk2023unsupervised.png" alt="Figure for Polk et al., 2023" onclick="openModal(this)">
             </div>
             <div class="publication-text">
                 <p>Sam L. Polk, <strong>Kangning Cui</strong>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy, <a href="https://www.mdpi.com/2072-4292/15/4/1053" target="_blank">"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</a>, in <i>Remote Sens.</i>, MDPI, 2023.</p>
@@ -324,17 +324,18 @@
         <!-- Publication Entry -->
         <div class="publication-entry">
             <div class="publication-figure">
-                <a href="#modal1"><img src="figures/publications/camalan2022change.png" alt="Figure for Camalan et al., 2022">
+                <img src="figures/publications/camalan2022change.png" alt="Figure for Camalan et al., 2022" onclick="openModal(this)">
             </div>
             <div class="publication-text">
                 <p>Seda Camalan, <strong>Kangning Cui</strong>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz, <a href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank">"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</a>, in <i>Remote Sens.</i>, MDPI, 2022.</p>
             </div>
         </div>
         
-        <div id="modal1" class="modal">
+        <!-- Single Modal Structure -->
+        <div id="modal" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="img1">
-            <div id="caption1"></div>
+            <img class="modal-content" id="modal-img">
+            <div id="caption"></div>
         </div>
         
     </div>
@@ -447,22 +448,22 @@
             }
         });
 
-        var modal = document.getElementById("modal1");
-        var img = document.querySelector('.publication-figure a');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
+        function openModal(imageElement) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            var captionText = document.getElementById("caption");
         
-        img.onclick = function(){
             modal.style.display = "block";
-            modalImg.src = this.querySelector('img').src;
-            captionText.innerHTML = this.querySelector('img').alt;
+            modalImg.src = imageElement.src;
+            captionText.innerHTML = imageElement.alt;
+        
+            // Close button
+            var span = modal.getElementsByClassName("close")[0];
+            span.onclick = function() { 
+                modal.style.display = "none";
+            }
         }
 
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-        
     </script>
     
 </body>
