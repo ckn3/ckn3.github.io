@@ -235,6 +235,14 @@
             overflow: auto;
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.9);
+            display: none; /* Hidden by default */
+            transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+            opacity: 0; /* Start with an opacity of 0 */
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
         }
         
         .modal-content {
@@ -448,6 +456,17 @@
             }
         });
 
+        var modal = document.getElementById('modal1');
+
+        // Listen for a click on the modal
+        modal.addEventListener('click', function(event) {
+            // Check if the click was on the modal content (e.g., image) or outside it
+            if (event.target.className === "modal") {
+                // If outside the modal content, hide the modal
+                modal.classList.remove('show');
+            }
+        });
+
         function openModal(imageElement) {
             var modal = document.getElementById("modal");
             var modalImg = document.getElementById("modal-img");
@@ -462,6 +481,12 @@
             span.onclick = function() { 
                 modal.style.display = "none";
             }
+        }
+        
+        // For the close button
+        var closeButton = document.getElementsByClassName('close')[0];
+        closeButton.onclick = function() {
+            modal.classList.remove('show');
         }
 
     </script>
