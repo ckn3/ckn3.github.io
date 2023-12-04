@@ -203,6 +203,26 @@
         .contact-information {
             text-align: center;
         }
+        .publication-entry {
+            display: flex;
+            align-items: center; /* Aligns items vertically */
+            margin-bottom: 20px; /* Space between entries */
+        }
+    
+        .publication-figure {
+            flex: 0 0 100px; /* Adjust width as needed */
+            margin-right: 20px; /* Space between figure and text */
+        }
+    
+        .publication-figure img {
+            width: 100%; /* Make the image fill the container */
+            height: auto;
+            border-radius: 5px; /* Optional, for rounded corners */
+        }
+    
+        .publication-text {
+            flex: 1; /* Takes the remaining space */
+        }
     </style>
 </head>
 
@@ -250,11 +270,35 @@
 
     <div class="content content-top">
         <h2 id="journal-publications">JOURNAL PUBLICATIONS</h2>
-        <ol>
-            <li>Fei Pan, Yutong Wu, <strong>Kangning Cui</strong>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun, <a href="https://arxiv.org/abs/2301.11499" target="_blank">"Dual-View Selective Instance Segmentation Network for Unstained Live Adherent Cells in Differential Interference Contrast Images"</a>, submitted to <i>Comput. Biol. Med.</i>, Elsevier, 2023.</li>
-            <li>Sam L. Polk, <strong>Kangning Cui</strong>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy, <a href="https://www.mdpi.com/2072-4292/15/4/1053" target="_blank">"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</a>, in <i>Remote Sens.</i>, MDPI, 2023.</li>
-            <li>Seda Camalan, <strong>Kangning Cui</strong>, Victor P. Pauca,Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz, <a href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank">"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</a>, in <i>Remote Sens.</i>, MDPI, 2022.</li>
-        </ol>
+        <!-- Publication Entry -->
+        <div class="publication-entry">
+            <div class="publication-figure">
+                <img src="path_to_figure_1.jpg" alt="Figure for Paper 1">
+            </div>
+            <div class="publication-text">
+                <p>1. Fei Pan, Yutong Wu, <strong>Kangning Cui</strong>, et al., <a href="https://arxiv.org/abs/2301.11499" target="_blank">"Dual-View Selective Instance Segmentation Network for Unstained Live Adherent Cells in Differential Interference Contrast Images"</a>, in <i>ArXiv</i>, 2023.</p>
+            </div>
+        </div>
+    
+        <!-- Publication Entry -->
+        <div class="publication-entry">
+            <div class="publication-figure">
+                <img src="path_to_figure_2.jpg" alt="Figure for Paper 2">
+            </div>
+            <div class="publication-text">
+                <p>2. Sam L. Polk, <strong>Kangning Cui</strong>, Aland H. Y. Chan, et al., <a href="https://www.mdpi.com/2072-4292/15/4/1053" target="_blank">"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</a>, in <i>Remote Sens.</i>, MDPI, 2023.</p>
+            </div>
+        </div>
+    
+        <!-- Publication Entry -->
+        <div class="publication-entry">
+            <div class="publication-figure">
+                <img src="figures/publications/camalan2022change.png" alt="Figure for Camalan et al., 2022">
+            </div>
+            <div class="publication-text">
+                <p>3. Seda Camalan, <strong>Kangning Cui</strong>, Victor P. Pauca, et al., <a href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank">"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</a>, in <i>Remote Sens.</i>, MDPI, 2022.</p>
+            </div>
+        </div>
     </div>
     
     <div class="content">
