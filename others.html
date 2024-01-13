@@ -186,14 +186,12 @@
         }
 
         .visit-entry {
-            text-align: center;
+            /* styles for the container, if any */
             margin-bottom: 20px; /* Space between entries */
         }
         
-        .visit-image {
-            max-width: 100%; /* ensures image is not wider than its container */
-            max-height: 150px; /* sets the maximum height for the images */
-            width: auto; /* maintains the aspect ratio */
+        .visit-image img {
+            width: 60%; /* sets the image width to be 60% of the container */
             height: auto; /* maintains the aspect ratio */
             display: block; /* centers the image in the container if it's not as wide */
             margin: 10px auto; /* adds some space around the image and centers it horizontally */
