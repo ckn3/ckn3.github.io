@@ -186,15 +186,18 @@
         }
 
         .visit-entry {
-            text-align: center; /* Centers the content */
+            text-align: center;
             margin-bottom: 20px; /* Space between entries */
         }
-
-        .visit-image img {
-            display: block; /* Makes image a block to apply margin */
-            margin: 10px auto; /* Centers the image */
-            max-width: 100%; /* Ensures image is not bigger than its container */
-            height: auto;
+        
+        .visit-image {
+            max-width: 100%; /* ensures image is not wider than its container */
+            max-height: 150px; /* sets the maximum height for the images */
+            width: auto; /* maintains the aspect ratio */
+            height: auto; /* maintains the aspect ratio */
+            display: block; /* centers the image in the container if it's not as wide */
+            margin: 10px auto; /* adds some space around the image and centers it horizontally */
+            border-radius: 5px; /* optional: rounds the corners of the image */
         }
     </style>
 </head>
