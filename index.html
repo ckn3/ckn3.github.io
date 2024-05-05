@@ -201,32 +201,49 @@
             gap: 20px;
             align-items: center;
             justify-content: center;
+            margin-bottom: 40px; /* Adds spacing between this section and others */
         }
-
+        
         .collaborator {
             text-align: center;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+        
         .collaborator img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center; /* Ensure center crop */
+            margin-bottom: 5px; /* Space between image and name */
         }
-
+        
         .collaborator a {
             display: block;
             color: #007BFF;
             text-decoration: none;
             transition: color 0.3s;
+            white-space: nowrap; /* Prevents the text from wrapping */
         }
-
+        
         .collaborator a:hover {
             color: #0056b3;
             text-decoration: underline;
         }
+        
+        .collaborator .name {
+            text-align: center;
+            display: inline-block;
+            width: 100%; /* Full width to ensure alignment */
+        }
+        
+        .collaborator .name span {
+            display: block; /* Each part of the name on a new line */
+        }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
