@@ -243,6 +243,19 @@
         .collaborator .name span {
             display: block; /* Each part of the name on a new line */
         }
+        .imaging-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Spacing between images */
+        }
+        
+        .imaging-group img {
+            width: 50%; /* Adjust based on your preference */
+            max-width: 300px; /* Maximum size of each image */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for styling */
+        }
 
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
@@ -466,6 +479,14 @@
                 </a>
             </div>
             <!-- Add more collaborators as needed -->
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>IMAGING GROUP @ CITYU</h2>
+        <div class="imaging-group">
+            <img src="figures/main/group1.JPG" alt="First Group Image">
+            <img src="figures/main/group2.JPG" alt="Second Group Image">
         </div>
     </div>
 
