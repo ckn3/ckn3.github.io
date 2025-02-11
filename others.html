@@ -237,6 +237,83 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .visits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .visit-entry {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .visit-entry:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .visit-image {
+            position: relative;
+            width: 100%;
+            padding-top: 66.67%; /* 3:2 aspect ratio */
+            overflow: hidden;
+        }
+
+        .visit-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .visit-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .visit-content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .visit-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .visit-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* 调整内容区域的样式 */
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+            background-color: #f3f4f6;
+        }
+
+        @media (max-width: 768px) {
+            .visits-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
     </style>
 </head>
 
@@ -269,61 +346,111 @@
 
     <div class="content content-top">
         <h2 id="additional">VISITS & EXCHANGES</h2>
-        <div class="visit-entry">
-            <p>Exchanged to <strong>University of Oxford</strong> as a visiting DPhil student, Oxfordshire, England, United Kindom, September 2024 to March 2025.</p>
-            <div class="visit-image">
-                <img src="figures/visits/oxford.JPG" 
-                     alt="University of Oxford" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+        <div class="visits-grid">
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/oxford.JPG" 
+                         alt="University of Oxford" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">University of Oxford</div>
+                    <div class="visit-description">
+                        Visiting DPhil student, Oxfordshire, England, United Kingdom
+                        <br>September 2024 - March 2025
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="visit-entry">
-            <p>Researched at <strong>Wake Forest University</strong> as a short-term scholar, Winston-Salem, North Carolina, United States, summer 2023.</p>
-            <div class="visit-image">
-                <img src="figures/visits/WakeForest2023.jpg" 
-                     alt="Wake Forest University Research" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/WakeForest2023.jpg" 
+                         alt="Wake Forest University Research" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">Wake Forest University</div>
+                    <div class="visit-description">
+                        Short-term scholar, Winston-Salem, North Carolina, United States
+                        <br>Summer 2023
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="visit-entry">
-            <p>Enrolled in <a href="http://www.mat.uniroma2.it/~tvmsscho/Rome-Moscow_School/2020/pages/participants.php" target="_blank"><strong>Rome-Moscow School</strong></a>, remote mode, summer 2020.</p>
-        </div>
-        <div class="visit-entry">
-            <p>Exchanged to <strong>Delft University of Technology</strong>, Delft, Netherlands, spring term 2020.</p>
-            <div class="visit-image">
-                <img src="figures/visits/Delft2020.jpg" 
-                     alt="Delft University of Technology Exchange" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+
+            <div class="visit-entry">
+                <div class="visit-content">
+                    <div class="visit-title">Rome-Moscow School</div>
+                    <div class="visit-description">
+                        Remote mode
+                        <br>Summer 2020
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="visit-entry">
-            <p>Exchanged to <strong>Peking University</strong>, Beijing, China, summer 2019.</p>
-            <div class="visit-image">
-                <img src="figures/visits/Beijing2019.jpg" 
-                     alt="Peking University Exchange" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/Delft2020.jpg" 
+                         alt="Delft University of Technology Exchange" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">Delft University of Technology</div>
+                    <div class="visit-description">
+                        Exchange student, Delft, Netherlands
+                        <br>Spring term 2020
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="visit-entry">
-            <p>Exchanged to <strong>Middlesex University</strong>, London, England, United Kindom, summer 2018.</p>
-            <div class="visit-image">
-                <img src="figures/visits/London2018.JPG" 
-                     alt="Middlesex University Exchange" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/Beijing2019.jpg" 
+                         alt="Peking University Exchange" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">Peking University</div>
+                    <div class="visit-description">
+                        Exchange student, Beijing, China
+                        <br>Summer 2019
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="visit-entry">
-            <p>Visited <strong>Yau Mathematical Sciences Center, Tsinghua University</strong>, Beijing, China, summer 2018 and summer 2019.</p>
-            <div class="visit-image">
-                <img src="figures/visits/Beijing2018.jpg" 
-                     alt="Tsinghua University Visit" 
-                     onclick="openModal(this)"
-                     title="Click to enlarge">
+
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/London2018.JPG" 
+                         alt="Middlesex University Exchange" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">Middlesex University</div>
+                    <div class="visit-description">
+                        Exchange student, London, England, United Kingdom
+                        <br>Summer 2018
+                    </div>
+                </div>
+            </div>
+
+            <div class="visit-entry">
+                <div class="visit-image">
+                    <img src="figures/visits/Beijing2018.jpg" 
+                         alt="Tsinghua University Visit" 
+                         onclick="openModal(this)"
+                         title="Click to enlarge">
+                </div>
+                <div class="visit-content">
+                    <div class="visit-title">Yau Mathematical Sciences Center, Tsinghua University</div>
+                    <div class="visit-description">
+                        Visiting student, Beijing, China
+                        <br>Summer 2018 and Summer 2019
+                    </div>
+                </div>
             </div>
         </div>
     </div>
