@@ -60,48 +60,6 @@
             width: 100px; /* Adjusted size */
         }
 
-        /* Styling for the search bar and buttons */
-        #search-box {
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #search-box input[type="text"] {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 4px; /* Spacing between the input and the buttons */
-        }
-
-        /* Updated styles for button row to accommodate changes */
-        .button-row {
-            display: flex;
-        }
-        
-        .button-row input[type="submit"],
-        .button-row button {
-            flex-grow: 1;  /* This makes each button grow to fill the container */
-            padding: 8px;
-            margin: 0 4px; /* This sets the margin between the buttons; adjust as needed */
-            border: none;
-            border-radius: 4px;
-            background-color: #007BFF;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        /* This targets the first and last buttons to remove the margin at the ends */
-        .button-row input[type="submit"]:first-child,
-        .button-row button:first-child {
-            margin-left: 0;
-        }
-        
-        .button-row button:last-child {
-            margin-right: 0;
-        }
-        
         #toc {
             border-top: 1px solid #ddd;
             padding-top: 20px;
@@ -188,19 +146,6 @@
             display: block;
         }
         
-        .highlight {
-            background-color: yellow;
-        }
-        
-        /* Styles for the search highlight */
-        .highlight {
-            background-color: yellow;
-        }
-        
-        .current-highlight {
-            background-color: orange;
-        }
-        
         .contact-information {
             text-align: center;
         }
@@ -225,37 +170,6 @@
         .publication-text {
             flex: 1; /* Takes the remaining space */
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.9);
-        }
-        
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-        
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
     </style>
 </head>
 
@@ -270,7 +184,6 @@
             <p><i>Ph.D. candidate</i></p>
             <p><i>Department of Mathematics</i></p>
             <p><i>City University of Hong Kong</i></p>
-            <!-- Additional contact info if needed -->
         </div>
 
         <div id="toc">
@@ -283,22 +196,6 @@
                 <li><a href="others.html">Visits and Exchanges</a></li>
             </ul>
         </div>
-
-        <hr>
-        <div style="height: 10px;"></div>
-        
-        <!-- Search Box -->
-        <div id="search-box">
-            <input type="text" placeholder="Search the title..." id="searchInput">
-            <div style="height: 10px;"></div>
-            <div class="button-row">
-                <button type="button" onclick="performSearch()">Search</button>
-                <button type="button" onclick="highlightPrevious()">Previous</button>
-                <button type="button" onclick="highlightNext()">Next</button>
-                <button type="button" onclick="clearHighlights()">Clear</button>
-            </div>
-        </div>
-        
     </div>
 
     <div class="content content-top">
@@ -489,116 +386,5 @@
         <p><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
     </div>
 
-    <script>
-        var highlightIndex = -1;
-        var highlights = [];
-
-        function performSearch() {
-
-            clearHighlight();
-
-            var searchText = document.getElementById('searchInput').value;
-            if (searchText) {
-                var contentBlocks = document.querySelectorAll('.content');
-                contentBlocks.forEach(function(contentBlock) {
-                    var blockHtml = contentBlock.innerHTML;
-                    var matchRegExp = new RegExp(searchText, 'gi');
-                    var matches = blockHtml.match(matchRegExp);
-
-                    if (matches) {
-                        contentBlock.innerHTML = blockHtml.replace(matchRegExp, function(match) {
-                            return '<span class="highlight">' + match + '</span>';
-                        });
-                    }
-                });
-
-                highlights = document.querySelectorAll('.highlight');
-                if (highlights.length) {
-                    highlightIndex = 0;
-                    jumpToHighlight();
-                } else {
-                    alert("No matches found.");
-                }
-            }
-        }
-
-        function clearHighlight() {
-            var contentBlocks = document.querySelectorAll('.content');
-            contentBlocks.forEach(function(contentBlock) {
-                contentBlock.querySelectorAll('.highlight').forEach(function(highlight) {
-                    contentBlock.innerHTML = contentBlock.innerHTML.replace(highlight.outerHTML, highlight.textContent);
-                });
-            });
-
-            highlights = [];
-            highlightIndex = -1;
-        }
-        
-        function clearHighlights() {
-            var contentBlocks = document.querySelectorAll('.content');
-            contentBlocks.forEach(function(contentBlock) {
-                contentBlock.querySelectorAll('.highlight').forEach(function(highlight) {
-                    contentBlock.innerHTML = contentBlock.innerHTML.replace(highlight.outerHTML, highlight.textContent);
-                });
-            });
-
-            highlights = [];
-            highlightIndex = -1;
-            document.getElementById('searchInput').value = ''; // Clear the search box
-        }
-
-        function highlightNext() {
-            if (highlights.length) {
-                highlightIndex = (highlightIndex + 1) % highlights.length;
-                jumpToHighlight();
-            }
-        }
-
-        function highlightPrevious() {
-            if (highlights.length) {
-                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
-                jumpToHighlight();
-            }
-        }
-
-        function jumpToHighlight() {
-            removeCurrentHighlight();
-            var current = highlights[highlightIndex];
-            current.classList.add('current-highlight');
-            current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function removeCurrentHighlight() {
-            document.querySelectorAll('.current-highlight').forEach(function(highlight) {
-                highlight.classList.remove('current-highlight');
-            });
-        }
-        
-        // Event listener for the 'Enter' key
-        document.getElementById('searchInput').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();
-                performSearch();
-            }
-        });
-
-        function openModal(imageElement) {
-            var modal = document.getElementById("modal");
-            var modalImg = document.getElementById("modal-img");
-            var captionText = document.getElementById("caption");
-        
-            modal.style.display = "block";
-            modalImg.src = imageElement.src;
-            captionText.innerHTML = imageElement.alt;
-        
-            // Close button
-            var span = modal.getElementsByClassName("close")[0];
-            span.onclick = function() { 
-                modal.style.display = "none";
-            }
-        }
-
-    </script>
-    
 </body>
 </html>
