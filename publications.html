@@ -151,74 +151,27 @@
         }
         .publication-entry {
             display: flex;
-            align-items: center; /* Aligns items vertically */
-            margin-bottom: 20px; /* Space between entries */
-        }
-    
-        .publication-figure {
-            flex: 0 0 100px; /* Adjust width as needed */
-            margin-right: 20px; /* Space between figure and text */
-        }
-    
-        .publication-figure img {
-            width: 100%; /* Make the image fill the container */
-            height: auto;
-            border-radius: 5px; /* Optional, for rounded corners */
-            cursor: pointer;
-        }
-    
-        .publication-text {
-            flex: 1; /* Takes the remaining space */
-        }
-
-        .publications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
-        }
-
-        .publication-entry {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .publication-entry:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .publication-figure {
-            position: relative;
-            width: 100%;
-            padding-top: 66.67%; /* 3:2 aspect ratio */
-            overflow: hidden;
-        }
-
-        .publication-figure img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .publication-figure img:hover {
-            transform: scale(1.05);
-        }
-
-        .publication-text {
+            background: #fff;
             padding: 15px;
-            flex-grow: 1;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    
+        .publication-figure {
+            flex: 0 0 200px; /* 固定宽度 */
+        }
+    
+        .publication-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        .publication-text {
+            flex: 1;  /* 自适应剩余宽度 */
+            min-width: 0; /* 防止文本溢出 */
         }
 
         .publication-text .title {
@@ -229,17 +182,29 @@
         .publication-text .authors {
             font-size: 0.9em;
             margin-bottom: 8px;
-            color: #666;  /* gray for other authors */
+            color: #666;
         }
         
         .publication-text .authors .main-author {
-            color: #000;  /* black for Kangning Cui */
+            color: #000;
             font-weight: normal;
         }
         
         .publication-text .venue {
             font-size: 0.9em;
             margin-bottom: 8px;
+        }
+
+        .publication-text .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .publications-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         @media (max-width: 768px) {
@@ -322,11 +287,13 @@
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Wei Tang, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman
                     </p>
                     <p class="venue"><i>ArXiv</i>, 2024</p>
-                    <a href="https://arxiv.org/abs/2410.11124"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                    <a href="https://zenodo.org/records/13822508"><img src="https://img.shields.io/badge/Palm-Detection-orange?logo=zenodo"></a>
-                    <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/static/v1?label=ckn3&message=palm-ds-sp&color=blue&logo=github"></a>
-                    <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/stars/ckn3/palm-ds-sp?style=social"></a>
-                    <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/forks/ckn3/palm-ds-sp?style=social"></a>
+                    <div class="badges">
+                        <a href="https://arxiv.org/abs/2410.11124"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                        <a href="https://zenodo.org/records/13822508"><img src="https://img.shields.io/badge/Palm-Detection-orange?logo=zenodo"></a>
+                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/static/v1?label=ckn3&message=palm-ds-sp&color=blue&logo=github"></a>
+                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/stars/ckn3/palm-ds-sp?style=social"></a>
+                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/forks/ckn3/palm-ds-sp?style=social"></a>
+                    </div>
                 </div>
             </div>
             
@@ -344,9 +311,11 @@
                         Fei Pan, Yutong Wu, <span class="main-author">Kangning Cui</span>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun
                     </p>
                     <p class="venue"><i>Comput. Biol. Med.</i>, Elsevier, 2024</p>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0010482524012368"><img src="https://img.shields.io/badge/Elsevier-Comput._Biol._Med.-important?logo=elsevier"></a>
-                    <a href="https://arxiv.org/abs/2301.11499"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                    <a href="https://scholars.cityu.edu.hk/en/publications/publication(825c2829-b5d5-4ab6-a14f-e320db21ffb1).html"><img src="https://img.shields.io/badge/US-Patent-orange?logo=patent"></a>
+                    <div class="badges">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0010482524012368"><img src="https://img.shields.io/badge/Elsevier-Comput._Biol._Med.-important?logo=elsevier"></a>
+                        <a href="https://arxiv.org/abs/2301.11499"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                        <a href="https://scholars.cityu.edu.hk/en/publications/publication(825c2829-b5d5-4ab6-a14f-e320db21ffb1).html"><img src="https://img.shields.io/badge/US-Patent-orange?logo=patent"></a>
+                    </div>
                 </div>
             </div>
 
@@ -364,11 +333,13 @@
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
                     </p>
                     <p class="venue"><i>Trans. Geosci. Remote Sens.</i>, IEEE, 2024</p>
-                    <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=Trans&message=Geosci.+Remote+Sens.&color=%2300629B&logo=IEEE"></a>
-                    <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/static/v1?label=ckn3&message=S2DL&color=blue&logo=github"></a>
-                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/stars/ckn3/S2DL?style=social"></a>
-                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/forks/ckn3/S2DL?style=social"></a>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=Trans&message=Geosci.+Remote+Sens.&color=%2300629B&logo=IEEE"></a>
+                        <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/static/v1?label=ckn3&message=S2DL&color=blue&logo=github"></a>
+                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/stars/ckn3/S2DL?style=social"></a>
+                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/forks/ckn3/S2DL?style=social"></a>
+                    </div>
                 </div>
             </div>
         
@@ -386,11 +357,13 @@
                         Sam L. Polk, <span class="main-author">Kangning Cui</span>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy
                     </p>
                     <p class="venue"><i>Remote Sens.</i>, MDPI, 2023</p>
-                    <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
-                    <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github"></a>
-                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social"></a>
-                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social"></a>
+                    <div class="badges">
+                        <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
+                        <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social"></a>
+                    </div>
                 </div>
             </div>
         
@@ -408,8 +381,10 @@
                         Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
                     </p>
                     <p class="venue"><i>Remote Sens.</i>, MDPI, 2022</p>
-                    <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
-                    <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/ASGM-Change_Detection-orange?logo=zenodo"></a>
+                    <div class="badges">
+                        <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
+                        <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/ASGM-Change_Detection-orange?logo=zenodo"></a>
+                    </div>
                 </div>
             </div>
         </div>
