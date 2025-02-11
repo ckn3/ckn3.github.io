@@ -221,6 +221,27 @@
             flex-grow: 1;
         }
 
+        .publication-text .title {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        .publication-text .authors {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: #666;  /* gray for other authors */
+        }
+        
+        .publication-text .authors .main-author {
+            color: #000;  /* black for Kangning Cui */
+            font-weight: normal;
+        }
+        
+        .publication-text .venue {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
         @media (max-width: 768px) {
             .publications-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -296,18 +317,16 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p><strong>"Real-Time Localization and Bimodal Point Pattern Analysis of Palms Using UAV Imagery"</strong>
-                    <br><br>
-                    <strong>Kangning Cui</strong><sup>†,‡</sup>, Wei Tang, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman
-                    <br><br>
-                    <i>ArXiv</i>, 2024
-                    <br>
+                    <p class="title"><strong>"Real-Time Localization and Bimodal Point Pattern Analysis of Palms Using UAV Imagery"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Wei Tang, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman
+                    </p>
+                    <p class="venue"><i>ArXiv</i>, 2024</p>
                     <a href="https://arxiv.org/abs/2410.11124"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
                     <a href="https://zenodo.org/records/13822508"><img src="https://img.shields.io/badge/Palm-Detection-orange?logo=zenodo"></a>
                     <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/static/v1?label=ckn3&message=palm-ds-sp&color=blue&logo=github"></a>
                     <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/stars/ckn3/palm-ds-sp?style=social"></a>
                     <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/forks/ckn3/palm-ds-sp?style=social"></a>
-                    </p>
                 </div>
             </div>
             
@@ -320,16 +339,14 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong>
-                    <br><br>
-                    Fei Pan, Yutong Wu, <strong>Kangning Cui</strong>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun
-                    <br><br>
-                    <i>Comput. Biol. Med.</i>, Elsevier, 2024
-                    <br>
+                    <p class="title"><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong></p>
+                    <p class="authors">
+                        Fei Pan, Yutong Wu, <span class="main-author">Kangning Cui</span>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun
+                    </p>
+                    <p class="venue"><i>Comput. Biol. Med.</i>, Elsevier, 2024</p>
                     <a href="https://www.sciencedirect.com/science/article/pii/S0010482524012368"><img src="https://img.shields.io/badge/Elsevier-Comput._Biol._Med.-important?logo=elsevier"></a>
                     <a href="https://arxiv.org/abs/2301.11499"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
                     <a href="https://scholars.cityu.edu.hk/en/publications/publication(825c2829-b5d5-4ab6-a14f-e320db21ffb1).html"><img src="https://img.shields.io/badge/US-Patent-orange?logo=patent"></a>
-                    </p>
                 </div>
             </div>
 
@@ -342,18 +359,16 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p><strong>"Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering"</strong>
-                    <br><br>
-                    <strong>Kangning Cui</strong><sup>†,‡</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
-                    <br><br>
-                    <i>Trans. Geosci. Remote Sens.</i>, IEEE, 2024
-                    <br>
-                    <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=Trans&message=Geosci.+Remote+Sens.&color=%2300629B&logo=IEEE" alt="Trans - Geosci. Remote Sens."></a>
-                    <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    <a href="https://github.com/ckn3/S2DL" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=ckn3&message=S2DL&color=blue&logo=github" alt="ckn3 - S2DL"></a>
-                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/stars/ckn3/S2DL?style=social" alt="stars - S2DL"></a>
-                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/forks/ckn3/S2DL?style=social" alt="forks - S2DL"></a>
+                    <p class="title"><strong>"Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
                     </p>
+                    <p class="venue"><i>Trans. Geosci. Remote Sens.</i>, IEEE, 2024</p>
+                    <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=Trans&message=Geosci.+Remote+Sens.&color=%2300629B&logo=IEEE"></a>
+                    <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/static/v1?label=ckn3&message=S2DL&color=blue&logo=github"></a>
+                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/stars/ckn3/S2DL?style=social"></a>
+                    <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/forks/ckn3/S2DL?style=social"></a>
                 </div>
             </div>
         
@@ -366,18 +381,16 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p><strong>"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</strong>
-                    <br><br>
-                    Sam L. Polk, <strong>Kangning Cui</strong>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy
-                    <br><br>
-                    <i>Remote Sens.</i>, MDPI, 2023
-                    <br>
-                    <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b" alt="MDPI - Remote Sens."></a>
-                    <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    <a href="https://github.com/sampolk/D-VIC" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github" alt="sampolk - D-VIC"></a>
-                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social" alt="stars - D-VIC"></a>
-                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social" alt="forks - D-VIC"></a>
+                    <p class="title"><strong>"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</strong></p>
+                    <p class="authors">
+                        Sam L. Polk, <span class="main-author">Kangning Cui</span>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy
                     </p>
+                    <p class="venue"><i>Remote Sens.</i>, MDPI, 2023</p>
+                    <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
+                    <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
+                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github"></a>
+                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social"></a>
+                    <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social"></a>
                 </div>
             </div>
         
@@ -390,15 +403,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p><strong>"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</strong>
-                    <br><br>
-                    Seda Camalan, <strong>Kangning Cui</strong>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
-                    <br><br>
-                    <i>Remote Sens.</i>, MDPI, 2022
-                    <br>
-                    <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b" alt="MDPI - Remote Sens."></a>
-                    <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/ASGM-Change_Detection-orange?logo=zenodo" alt="ASGM - Change Detection"></a>
+                    <p class="title"><strong>"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</strong></p>
+                    <p class="authors">
+                        Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
                     </p>
+                    <p class="venue"><i>Remote Sens.</i>, MDPI, 2022</p>
+                    <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
+                    <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/ASGM-Change_Detection-orange?logo=zenodo"></a>
                 </div>
             </div>
         </div>
