@@ -185,6 +185,43 @@
         #name span {
             display: block;
         }
+
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .teaching-entry {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .teaching-entry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .teaching-entry strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .teaching-entry a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .teaching-entry a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -217,11 +254,31 @@
 
     <div class="content content-top">
         <h2 id="teaching">At City University of Hong Kong</h2>
-        <ul>
-            <li><strong>MA1006 Tutorials -- Calculus and Linear Algebra for Business</strong>, City University of Hong Kong, Fall 2022, Spring 2023, and Spring 2024. <a href="https://www.cityu.edu.hk/catalogue/ug/current/course/MA1006.htm" target="_blank">Course Link</a></li>
-            <li><strong>MA2158 Tutorials -- Linear Algebra and Calculus</strong>, City University of Hong Kong, Fall 2023. <a href="https://www.cityu.edu.hk/catalogue/ug/current/course/MA2158.htm" target="_blank">Course Link</a></li>
-            <li><strong>MA2177 Tutorials -- Engineering Mathematics & Statistics</strong>, City University of Hong Kong, Fall 2023. <a href="https://www.cityu.edu.hk/catalogue/ug/202223/course/MA2177.htm" target="_blank">Course Link</a></li>
-        </ul>
+        <div class="teaching-grid">
+            <div class="teaching-entry">
+                <strong>MA1006 Tutorials</strong>
+                <p>Calculus and Linear Algebra for Business</p>
+                <p>City University of Hong Kong</p>
+                <p>Fall 2022, Spring 2023, and Spring 2024</p>
+                <a href="https://www.cityu.edu.hk/catalogue/ug/current/course/MA1006.htm" target="_blank">Course Link</a>
+            </div>
+
+            <div class="teaching-entry">
+                <strong>MA2158 Tutorials</strong>
+                <p>Linear Algebra and Calculus</p>
+                <p>City University of Hong Kong</p>
+                <p>Fall 2023</p>
+                <a href="https://www.cityu.edu.hk/catalogue/ug/current/course/MA2158.htm" target="_blank">Course Link</a>
+            </div>
+
+            <div class="teaching-entry">
+                <strong>MA2177 Tutorials</strong>
+                <p>Engineering Mathematics & Statistics</p>
+                <p>City University of Hong Kong</p>
+                <p>Fall 2023</p>
+                <a href="https://www.cityu.edu.hk/catalogue/ug/202223/course/MA2177.htm" target="_blank">Course Link</a>
+            </div>
+        </div>
     </div>
 
     <!-- <div class="content">
