@@ -259,6 +259,87 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for styling */
         }
 
+        .news-container {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .news-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 5px;
+            scrollbar-width: thin;
+            scrollbar-color: #007BFF #f0f0f0;
+        }
+
+        .news-slider::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .news-slider::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+
+        .news-slider::-webkit-scrollbar-thumb {
+            background: #007BFF;
+            border-radius: 3px;
+        }
+
+        .news-card {
+            flex: 0 0 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .news-date {
+            color: #007BFF;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .news-content {
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .news-content i {
+            color: #666;
+        }
+
+        .scroll-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .scroll-btn {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .scroll-btn:hover {
+            background: #0056b3;
+        }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
@@ -387,11 +468,48 @@
 
     <div class="content">
         <h2 id="news">RECENT NEWS</h2>
-        <p>[01/2025] The paper "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis" was accepted by <i>ISBI</i>, IEEE.</p>
-        <p>[09/2024] The paper "Accurate detection and instance segmentation of unstained living adherent cells in differential interference contrast images" was accepted by <i>Comput. Biol. Med.</i>, Elsevier.</p>
-        <p>[05/2024] Presented the work "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" at <i>International Conference on Applied Mathematics 2024</i>, City University of Hong Kong.</p>
-        <p>[04/2024] The paper "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" was accepted by <i>Trans. Geosci. Remote Sens.</i>, IEEE.</p>
-        <p>[03/2024] The paper "PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning" was accepted by <i>ACMSE</i>, ACM.</p>
+        <div class="news-container">
+            <div class="news-slider">
+                <div class="news-card">
+                    <div class="news-date">[01/2025]</div>
+                    <div class="news-content">
+                        The paper "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis" was accepted by <i>ISBI</i>, IEEE.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">[09/2024]</div>
+                    <div class="news-content">
+                        The paper "Accurate detection and instance segmentation of unstained living adherent cells in differential interference contrast images" was accepted by <i>Comput. Biol. Med.</i>, Elsevier.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">[05/2024]</div>
+                    <div class="news-content">
+                        Presented the work "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" at <i>International Conference on Applied Mathematics 2024</i>, City University of Hong Kong.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">[04/2024]</div>
+                    <div class="news-content">
+                        The paper "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" was accepted by <i>Trans. Geosci. Remote Sens.</i>, IEEE.
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">[03/2024]</div>
+                    <div class="news-content">
+                        The paper "PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning" was accepted by <i>ACMSE</i>, ACM.
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-buttons">
+                <button class="scroll-btn" onclick="scrollNews('left')">←</button>
+                <button class="scroll-btn" onclick="scrollNews('right')">→</button>
+            </div>
+        </div>
     </div>
 
 <!--     <div class="content">
@@ -676,6 +794,16 @@
             // Add new highlight and scroll into view
             highlights[highlightIndex].classList.add('current-highlight');
             highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function scrollNews(direction) {
+            const slider = document.querySelector('.news-slider');
+            const cardWidth = 320; // card width + gap
+            const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+            slider.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
         }
     </script>
     
