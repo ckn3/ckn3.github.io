@@ -249,9 +249,9 @@
         }
 
         .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
             padding: 15px 0;
         }
 
@@ -265,6 +265,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            width: 100%;
         }
 
         .review-card:hover {
@@ -289,6 +290,11 @@
         .springer-icon { background: #00A98F; }
         .mdpi-icon { background: #00A0E3; }
         .acm-icon { background: #0085CA; }
+        .iclr-icon { 
+            background: #4b0082;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
 
         .review-info {
             flex: 1;
@@ -298,6 +304,7 @@
             font-weight: 500;
             color: #2c3e50;
             margin-bottom: 4px;
+            font-style: italic;
         }
 
         .publisher-name {
@@ -362,7 +369,7 @@
                 <div class="review-card">
                     <div class="publisher-icon ieee-icon">IEEE</div>
                     <div class="review-info">
-                        <div class="journal-name">Transactions on Circuits and Systems for Video Technology</div>
+                        <div class="journal-name"><i>Transactions on Circuits and Systems for Video Technology</i></div>
                         <div class="publisher-name">IEEE</div>
                     </div>
                 </div>
@@ -370,7 +377,7 @@
                 <div class="review-card">
                     <div class="publisher-icon elsevier-icon">ELS</div>
                     <div class="review-info">
-                        <div class="journal-name">ISPRS Journal of Photogrammetry and Remote Sensing</div>
+                        <div class="journal-name"><i>ISPRS Journal of Photogrammetry and Remote Sensing</i></div>
                         <div class="publisher-name">Elsevier</div>
                     </div>
                 </div>
@@ -378,7 +385,7 @@
                 <div class="review-card">
                     <div class="publisher-icon elsevier-icon">ELS</div>
                     <div class="review-info">
-                        <div class="journal-name">Remote Sensing Applications: Society and Environment</div>
+                        <div class="journal-name"><i>Remote Sensing Applications: Society and Environment</i></div>
                         <div class="publisher-name">Elsevier</div>
                     </div>
                 </div>
@@ -386,16 +393,15 @@
                 <div class="review-card">
                     <div class="publisher-icon springer-icon">SN</div>
                     <div class="review-info">
-                        <div class="journal-name">Applied Intelligence</div>
+                        <div class="journal-name"><i>Applied Intelligence</i></div>
                         <div class="publisher-name">Springer Nature</div>
                     </div>
                 </div>
 
-                <!-- MDPI Journals -->
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">AgriEngineering</div>
+                        <div class="journal-name"><i>AgriEngineering</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -403,7 +409,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Electronics</div>
+                        <div class="journal-name"><i>Electronics</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -411,7 +417,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Geomatics</div>
+                        <div class="journal-name"><i>Geomatics</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -419,7 +425,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Information</div>
+                        <div class="journal-name"><i>Information</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -427,7 +433,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Remote Sensing</div>
+                        <div class="journal-name"><i>Remote Sensing</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -435,7 +441,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Sensors</div>
+                        <div class="journal-name"><i>Sensors</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -443,7 +449,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Sustainability</div>
+                        <div class="journal-name"><i>Sustainability</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -451,7 +457,7 @@
                 <div class="review-card">
                     <div class="publisher-icon mdpi-icon">MDPI</div>
                     <div class="review-info">
-                        <div class="journal-name">Urban Science</div>
+                        <div class="journal-name"><i>Urban Science</i></div>
                         <div class="publisher-name">MDPI</div>
                     </div>
                 </div>
@@ -462,7 +468,7 @@
                 <div class="review-card">
                     <div class="publisher-icon iclr-icon">ICLR</div>
                     <div class="review-info">
-                        <div class="journal-name">International Conference on Learning Representations</div>
+                        <div class="journal-name"><i>International Conference on Learning Representations</i></div>
                         <div class="review-years">2025</div>
                     </div>
                 </div>
@@ -470,7 +476,7 @@
                 <div class="review-card">
                     <div class="publisher-icon ieee-icon">IEEE</div>
                     <div class="review-info">
-                        <div class="journal-name">International Joint Conference on Neural Networks</div>
+                        <div class="journal-name"><i>International Joint Conference on Neural Networks</i></div>
                         <div class="publisher-name">IJCNN</div>
                         <div class="review-years">2025</div>
                     </div>
@@ -479,7 +485,7 @@
                 <div class="review-card">
                     <div class="publisher-icon ieee-icon">IEEE</div>
                     <div class="review-info">
-                        <div class="journal-name">International Symposium on Biomedical Imaging</div>
+                        <div class="journal-name"><i>International Symposium on Biomedical Imaging</i></div>
                         <div class="publisher-name">ISBI</div>
                         <div class="review-years">2025</div>
                     </div>
@@ -488,7 +494,7 @@
                 <div class="review-card">
                     <div class="publisher-icon acm-icon">ACM</div>
                     <div class="review-info">
-                        <div class="journal-name">ACM Southeast Conference</div>
+                        <div class="journal-name"><i>ACM Southeast Conference</i></div>
                         <div class="publisher-name">ACMSE</div>
                         <div class="review-years">2024-2025</div>
                     </div>
@@ -497,7 +503,7 @@
                 <div class="review-card">
                     <div class="publisher-icon ieee-icon">IEEE</div>
                     <div class="review-info">
-                        <div class="journal-name">International Geoscience and Remote Sensing Symposium</div>
+                        <div class="journal-name"><i>International Geoscience and Remote Sensing Symposium</i></div>
                         <div class="publisher-name">IGARSS</div>
                         <div class="review-years">2023-2025</div>
                     </div>
