@@ -197,52 +197,55 @@
         /* Collaborators Grid */
         .collaborators {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 20px;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px; /* Adds spacing between this section and others */
+            padding: 20px;
         }
         
         .collaborator {
-            text-align: center;
+            background: #fff;
             padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        
+        .collaborator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
         .collaborator img {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center; /* Ensure center crop */
-            margin-bottom: 5px; /* Space between image and name */
+            margin-bottom: 8px;
+            transition: transform 0.2s;
         }
         
-        .collaborator a {
-            display: block;
-            color: #007BFF;
+        .collaborator img:hover {
+            transform: scale(1.05);
+        }
+        
+        .collaborator .name {
+            color: #333;
             text-decoration: none;
-            transition: color 0.3s;
-            white-space: nowrap; /* Prevents the text from wrapping */
+            font-size: 0.9em;
+            display: block;
+        }
+        
+        .collaborator .name span {
+            display: block;
+            line-height: 1.2;
         }
         
         .collaborator a:hover {
             color: #0056b3;
-            text-decoration: underline;
+            text-decoration: none;
         }
         
-        .collaborator .name {
-            text-align: center;
-            display: inline-block;
-            width: 100%; /* Full width to ensure alignment */
-        }
-        
-        .collaborator .name span {
-            display: block; /* Each part of the name on a new line */
-        }
         .imaging-group {
             display: flex;
             justify-content: center;
@@ -404,63 +407,63 @@
         <div class="collaborators">
             <div class="collaborator">
                 <img src="https://alqahtas.sites.wfu.edu/wp-content/uploads/2020/06/20190806sarra1337-Edit-1-2048x1536.jpg" alt="Sarra Alqahtani">
-                <a href="https://alqahtas.sites.wfu.edu/"  class="name">
+                <a href="https://alqahtas.sites.wfu.edu/" class="name">
                     <span>Sarra</span>
                     <span>Alqahtani</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=DjKRWjsAAAAJ&citpid=1" alt="Seda Çamalan">
-                <a href="https://scholar.google.com/citations?user=DjKRWjsAAAAJ&hl=en"  class="name">
+                <a href="https://scholar.google.com/citations?user=DjKRWjsAAAAJ&hl=en" class="name">
                     <span>Seda</span>
                     <span>Çamalan</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://www.plantsci.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/aland_chan_by_himself_250s.jpg?itok=Jy5upgKr" alt="Aland H.Y. Chan">
-                <a href="https://www.plantsci.cam.ac.uk/directory/hei-yeung-chan"  class="name">
+                <a href="https://www.plantsci.cam.ac.uk/directory/hei-yeung-chan" class="name">
                     <span>Aland H.Y.</span>
                     <span>Chan</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://www.math.cuhk.edu.hk/~rchan/gifs/Raymond_Chan.jpg" alt="Raymond H. Chan">
-                <a href="https://raymondhonfu.github.io/"  class="name">
+                <a href="https://raymondhonfu.github.io/" class="name">
                     <span>Raymond H.</span>
                     <span>Chan</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=QP_BDK0AAAAJ&citpid=3" alt="Chu Chen">
-                <a href="https://scholar.google.com/citations?hl=en&user=QP_BDK0AAAAJ"  class="name">
+                <a href="https://scholar.google.com/citations?hl=en&user=QP_BDK0AAAAJ" class="name">
                     <span>Chu</span>
                     <span>Chen</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://www.plantsci.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/coomes-david_1.jpg?itok=xU6t2iMP" alt="David Coomes">
-                <a href="https://www.plantsci.cam.ac.uk/research/groups/forest-ecology-and-conservation"  class="name">
+                <a href="https://www.plantsci.cam.ac.uk/research/groups/forest-ecology-and-conservation" class="name">
                     <span>David A.</span>
                     <span>Coomes</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=CwhGeP0AAAAJ&citpid=1" alt="Evan N. Dethier">
-                <a href="https://scholar.google.com/citations?user=CwhGeP0AAAAJ&hl=en"  class="name">
+                <a href="https://scholar.google.com/citations?user=CwhGeP0AAAAJ&hl=en" class="name">
                     <span>Evan N.</span>
                     <span>Dethier</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=xavh00sAAAAJ&citpid=3" alt="Luis E. Fernandez">
-                <a href="https://cincia.wfu.edu/en/team/luis-fernandez-2/"  class="name">
+                <a href="https://cincia.wfu.edu/en/team/luis-fernandez-2/" class="name">
                     <span>Luis E.</span>
                     <span>Fernandez</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=I9kU-8cAAAAJ&citpid=2" alt="Netzahualcoyotl Hernandez-Cruz">
-                <a href="https://scholar.google.com/citations?hl=en&user=I9kU-8cAAAAJ"  class="name">
+                <a href="https://scholar.google.com/citations?hl=en&user=I9kU-8cAAAAJ" class="name">
                     <span>Netzahualcoyotl</span>
                     <span>Hernandez-Cruz</span>
                 </a>
@@ -495,14 +498,14 @@
             </div>
             <div class="collaborator">
                 <img src="https://www.cityu.edu.hk/stfprofile/jeamorel_STF.jpg" alt="Jean-Michel Morel">
-                <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/"  class="name">
+                <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/" class="name">
                     <span>Jean-Michel</span>
                     <span>Morel</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://jmurphy.math.tufts.edu/Headshot2017.jpg" alt="James M. Murphy">
-                <a href="https://jmurphy.math.tufts.edu/"  class="name">
+                <a href="https://jmurphy.math.tufts.edu/" class="name">
                     <span>James M.</span>
                     <span>Murphy</span>
                 </a>
@@ -530,49 +533,49 @@
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ZhtVbxsAAAAJ&citpid=2" alt="Sam L. Polk">
-                <a href="https://scholar.google.com/citations?user=ZhtVbxsAAAAJ&hl=en"  class="name">
+                <a href="https://scholar.google.com/citations?user=ZhtVbxsAAAAJ&hl=en" class="name">
                     <span>Sam L.</span>
                     <span>Polk</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://cincia.wfu.edu/en/wp-content/uploads/Miles.jpg" alt="Miles R. Silman">
-                <a href="https://biology.wfu.edu/faculty-research/miles-silman/"  class="name">
+                <a href="https://biology.wfu.edu/faculty-research/miles-silman/" class="name">
                     <span>Miles R.</span>
                     <span>Silman</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png" alt="Wei Tang">
-                <a href="https://scholar.google.com/citations?user=BQgfBPQAAAAJ&hl=en"  class="name">
+                <a href="https://scholar.google.com/citations?user=BQgfBPQAAAAJ&hl=en" class="name">
                     <span>Wei</span>
                     <span>Tang</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://media.licdn.com/dms/image/v2/D4E03AQFndVkzgkoZ2g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728349512638?e=1744848000&v=beta&t=rEizsijXkw1VjjYvPKXkf0DgM8buJEt5reHS7zRnbYY" alt="Manqi Wang">
-                <a href="https://www.linkedin.com/in/manqi-wang-3b06a4292/"  class="name">
+                <a href="https://www.linkedin.com/in/manqi-wang-3b06a4292/" class="name">
                     <span>Manqi</span>
                     <span>Wang</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=RXFeW-8AAAAJ&citpid=6" alt="Fan Yang">
-                <a href="https://yangfan.sites.wfu.edu/"  class="name">
+                <a href="https://yangfan.sites.wfu.edu/" class="name">
                     <span>Fan</span>
                     <span>Yang</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png" alt="Qianye Yang">
-                <a href="https://scholar.google.com/citations?hl=en&user=Se8eLJQAAAAJ"  class="name">
+                <a href="https://scholar.google.com/citations?hl=en&user=Se8eLJQAAAAJ" class="name">
                     <span>Qianye</span>
                     <span>Yang</span>
                 </a>
             </div>
             <div class="collaborator">
                 <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=D-IHI1kAAAAJ&citpid=1" alt="Rongkun Zhu">
-                <a href="https://scholar.google.com/citations?hl=en&user=D-IHI1kAAAAJ"  class="name">
+                <a href="https://scholar.google.com/citations?hl=en&user=D-IHI1kAAAAJ" class="name">
                     <span>Rongkun</span>
                     <span>Zhu</span>
                 </a>
