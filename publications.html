@@ -242,6 +242,52 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .conference-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .conference-entry {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .conference-entry:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .conference-text .title {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .conference-text .authors {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .conference-text .authors .main-author {
+            color: #000;
+            font-weight: normal;
+        }
+
+        .conference-text .venue {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .conference-text .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 
@@ -398,92 +444,162 @@
 
     <div class="content">
         <h2 id="conference-publications">CONFERENCE PUBLICATIONS AND POSTERS</h2>
-        <ol>
-            <li>
-                Wei Tang, <strong>Kangning Cui</strong><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel,<br>
-                "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis", accepted by <i>ISBI</i>, 2025. 
-                <br>
-                <a href="https://arxiv.org/abs/2411.08819v1"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-            </li>
-            <li>
-                <strong>Kangning Cui</strong><sup>†,‡</sup>, Zishan Shao, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, David Segurado, João Pinheiro, Manqi Wang, David A. Lutz, Robert J. Plemmons, and Miles Silman,<br>
-                "PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning", in <i>Proc ACMSE</i>, ACM, 2024.
-                <br>
-                <a href="https://dl.acm.org/doi/10.1145/3603287.3651220"><img src="https://img.shields.io/static/v1?label=Proc&message=ACM+SE+'24&color=%232C4674&logo=acm" alt="Proc - ACM SE '24"></a>
-                <a href="https://arxiv.org/abs/2403.03161"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-            </li>
-            <li>
-                Wei Tang, <strong>Kangning Cui</strong><sup>‡</sup>, and Raymond H. Chan,<br>
-                "Optimized Hard Exudate Detection with Supervised Contrastive Learning", in <i>Proc ISBI</i>, IEEE, 2024. 
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/10635760"><img src="https://img.shields.io/static/v1?label=Proc&message=ISBI+'24&color=%2300629B&logo=IEEE" alt="Proc - ISBI '24"></a>
-                <a href="https://arxiv.org/abs/2302.11517"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                <a href="https://github.com/wetang7/HECL" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=wetang7&message=HECL&color=blue&logo=github" alt="wetang7 - HECL"></a>
-                <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/stars/wetang7/HECL?style=social" alt="stars - HECL"></a>
-                <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/forks/wetang7/HECL?style=social" alt="forks - HECL"></a>
-            </li>
-            <li>
-                Seda Camalan, <strong>Kangning Cui</strong>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz,<br>
-                "Detecting Change due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning", in <i>Fall Meeting</i>, AGU, 2022.
-                <br>
-                <a href="https://drive.google.com/file/d/1xtIAjWIZWNDRK3ZNZGEgmAfoU4ggA2Y7/view?usp=sharing"><img src="https://img.shields.io/static/v1?label=Google&message=Drive&color=%234285f4&logo=google+drive" alt="Google - Drive"></a>
-            </li>
-            <li>
-                <strong>Kangning Cui</strong><sup>†</sup>, Ruoning Li, Sam L. Polk, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan,<br>
-                "Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry", in <i>Proc WHISPERS</i>, IEEE, 2022. 
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9955069"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'22&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '22"></a>
-                <a href="https://arxiv.org/abs/2204.13497"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                <a href="https://github.com/ckn3/SA-Recon" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=ckn3&message=SA-Recon&color=blue&logo=github" alt="ckn3 - SA-Recon"></a>
-                <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/stars/ckn3/SA-Recon?style=social" alt="stars - SA-Recon"></a>
-                <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/forks/ckn3/SA-Recon?style=social" alt="forks - SA-Recon"></a>
-            </li>
-            <li>
-                <strong>Kangning Cui</strong><sup>†</sup>, Seda Camalan, Ruoning Li, Victor P. Pauca, Sarra Alqahtani, Robert J. Plemmons, Miles Silman, Evan N. Dethier, David A. Lutz, and Raymond H. Chan,<br>
-                "Semi-supervised Change Detection of Small Water Bodies Using RGB and Multispectral Images in Peruvian Rainforests", in <i>Proc WHISPERS</i>, IEEE, 2022. 
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9955140/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'22&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '22"></a>
-                <a href="https://arxiv.org/abs/2206.09365"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                <a href="https://github.com/ckn3/SVM-Change-Detection" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=ckn3&message=SVM-Change-Detection&color=blue&logo=github" alt="ckn3 - SVM-Change-Detection"></a>
-                <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/stars/ckn3/SVM-Change-Detection?style=social" alt="stars - SVM-Change-Detection"></a>
-                <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/forks/ckn3/SVM-Change-Detection?style=social" alt="forks - SVM-Change-Detection"></a>
-            <li>
-                Sam L. Polk, <strong>Kangning Cui</strong>, Robert J. Plemmons, and James M. Murphy,<br>
-                "Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images", in <i>Proc IGARSS</i>, IEEE, 2022. 
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9883894/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                <a href="https://arxiv.org/abs/2204.06298"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                <a href="https://github.com/sampolk/D-VIC" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github" alt="sampolk - D-VIC"></a>
-                <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social" alt="stars - D-VIC"></a>
-                <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social" alt="forks - D-VIC"></a>
-            </li>
-            <li>
-                Sam L. Polk, Aland H. Y. Chan, <strong>Kangning Cui</strong>, Robert J. Plemmons, David A. Coomes, and James M. Murphy,<br>
-                "Unsupervised Detection of Ash Dieback Disease (<em>Hymenoscyphus Fraxineus</em>) Using Diffusion-based Hyperspectral Image Clustering", in <i>Proc IGARSS</i>, IEEE, 2022.
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9883429/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                <a href="https://arxiv.org/abs/2204.09041"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-            </li>
-            <li>
-                Ruoning Li, <strong>Kangning Cui</strong>, Raymond H. Chan, and Robert J. Plemmons,<br>
-                "Classification of Hyperspectral Images Using SVM with Shape-adaptive Reconstruction and Smoothed Total Variation", in <i>Proc IGARSS</i>, IEEE, 2022. 
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9883961/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                <a href="https://arxiv.org/abs/2203.15619"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                <a href="https://github.com/ckn3/SA-Recon" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=ckn3&message=SA-Recon&color=blue&logo=github" alt="ckn3 - SA-Recon"></a>
-                <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/stars/ckn3/SA-Recon?style=social" alt="stars - SA-Recon"></a>
-                <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/forks/ckn3/SA-Recon?style=social" alt="forks - SA-Recon"></a>
-            </li>
-            <li>
-                <strong>Kangning Cui</strong><sup>†,‡</sup> and Robert J. Plemmons,<br>
-                "Unsupervised Classification of AVIRIS-NG Hyperspectral Images", in <i>Proc WHISPERS</i>, IEEE, 2021.
-                <br>
-                <a href="https://ieeexplore.ieee.org/document/9484006/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'21&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '21"></a>
-                <a href="https://github.com/ckn3/UnsupAVIRISNG" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=ckn3&message=UnsupAVIRISNG&color=blue&logo=github" alt="ckn3 - UnsupAVIRISNG"></a>
-                <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/stars/ckn3/UnsupAVIRISNG?style=social" alt="stars - UnsupAVIRISNG"></a>
-                <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/forks/ckn3/UnsupAVIRISNG?style=social" alt="forks - UnsupAVIRISNG"></a>
-            </li>
-        </ol>
+        <div class="conference-grid">
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis"</strong></p>
+                    <p class="authors">
+                        Wei Tang, <span class="main-author">Kangning Cui</span><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel
+                    </p>
+                    <p class="venue">accepted by <i>ISBI</i>, 2025</p>
+                    <div class="badges">
+                        <a href="https://arxiv.org/abs/2411.08819v1"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Zishan Shao, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, David Segurado, João Pinheiro, Manqi Wang, David A. Lutz, Robert J. Plemmons, and Miles Silman
+                    </p>
+                    <p class="venue">in <i>Proc ACMSE</i>, ACM, 2024</p>
+                    <div class="badges">
+                        <a href="https://dl.acm.org/doi/10.1145/3603287.3651220"><img src="https://img.shields.io/static/v1?label=Proc&message=ACM+SE+'24&color=%232C4674&logo=acm" alt="Proc - ACM SE '24"></a>
+                        <a href="https://arxiv.org/abs/2403.03161"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Optimized Hard Exudate Detection with Supervised Contrastive Learning"</strong></p>
+                    <p class="authors">
+                        Wei Tang, <span class="main-author">Kangning Cui</span><sup>‡</sup>, and Raymond H. Chan
+                    </p>
+                    <p class="venue">in <i>Proc ISBI</i>, IEEE, 2024</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/10635760"><img src="https://img.shields.io/static/v1?label=Proc&message=ISBI+'24&color=%2300629B&logo=IEEE" alt="Proc - ISBI '24"></a>
+                        <a href="https://arxiv.org/abs/2302.11517"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/static/v1?label=wetang7&message=HECL&color=blue&logo=github" alt="wetang7 - HECL"></a>
+                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/stars/wetang7/HECL?style=social" alt="stars - HECL"></a>
+                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/forks/wetang7/HECL?style=social" alt="forks - HECL"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Detecting Change due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning"</strong></p>
+                    <p class="authors">
+                        Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
+                    </p>
+                    <p class="venue">in <i>Fall Meeting</i>, AGU, 2022</p>
+                    <div class="badges">
+                        <a href="https://drive.google.com/file/d/1xtIAjWIZWNDRK3ZNZGEgmAfoU4ggA2Y7/view?usp=sharing"><img src="https://img.shields.io/static/v1?label=Google&message=Drive&color=%234285f4&logo=google+drive" alt="Google - Drive"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†</sup>, Ruoning Li, Sam L. Polk, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
+                    </p>
+                    <p class="venue">in <i>Proc WHISPERS</i>, IEEE, 2022</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9955069"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'22&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '22"></a>
+                        <a href="https://arxiv.org/abs/2204.13497"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/static/v1?label=ckn3&message=SA-Recon&color=blue&logo=github" alt="ckn3 - SA-Recon"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/stars/ckn3/SA-Recon?style=social" alt="stars - SA-Recon"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/forks/ckn3/SA-Recon?style=social" alt="forks - SA-Recon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Semi-supervised Change Detection of Small Water Bodies Using RGB and Multispectral Images in Peruvian Rainforests"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†</sup>, Seda Camalan, Ruoning Li, Victor P. Pauca, Sarra Alqahtani, Robert J. Plemmons, Miles Silman, Evan N. Dethier, David A. Lutz, and Raymond H. Chan
+                    </p>
+                    <p class="venue">in <i>Proc WHISPERS</i>, IEEE, 2022</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9955140/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'22&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '22"></a>
+                        <a href="https://arxiv.org/abs/2206.09365"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/static/v1?label=ckn3&message=SVM-Change-Detection&color=blue&logo=github" alt="ckn3 - SVM-Change-Detection"></a>
+                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/stars/ckn3/SVM-Change-Detection?style=social" alt="stars - SVM-Change-Detection"></a>
+                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/forks/ckn3/SVM-Change-Detection?style=social" alt="forks - SVM-Change-Detection"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images"</strong></p>
+                    <p class="authors">
+                        Sam L. Polk, <span class="main-author">Kangning Cui</span>, Robert J. Plemmons, and James M. Murphy
+                    </p>
+                    <p class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9883894/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
+                        <a href="https://arxiv.org/abs/2204.06298"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github" alt="sampolk - D-VIC"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social" alt="stars - D-VIC"></a>
+                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social" alt="forks - D-VIC"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Unsupervised Detection of Ash Dieback Disease (<em>Hymenoscyphus Fraxineus</em>) Using Diffusion-based Hyperspectral Image Clustering"</strong></p>
+                    <p class="authors">
+                        Sam L. Polk, Aland H. Y. Chan, <span class="main-author">Kangning Cui</span>, Robert J. Plemmons, David A. Coomes, and James M. Murphy
+                    </p>
+                    <p class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9883429/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
+                        <a href="https://arxiv.org/abs/2204.09041"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Classification of Hyperspectral Images Using SVM with Shape-adaptive Reconstruction and Smoothed Total Variation"</strong></p>
+                    <p class="authors">
+                        Ruoning Li, <span class="main-author">Kangning Cui</span>, Raymond H. Chan, and Robert J. Plemmons
+                    </p>
+                    <p class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9883961/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
+                        <a href="https://arxiv.org/abs/2203.15619"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/static/v1?label=ckn3&message=SA-Recon&color=blue&logo=github" alt="ckn3 - SA-Recon"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/stars/ckn3/SA-Recon?style=social" alt="stars - SA-Recon"></a>
+                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/forks/ckn3/SA-Recon?style=social" alt="forks - SA-Recon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-entry">
+                <div class="conference-text">
+                    <p class="title"><strong>"Unsupervised Classification of AVIRIS-NG Hyperspectral Images"</strong></p>
+                    <p class="authors">
+                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup> and Robert J. Plemmons
+                    </p>
+                    <p class="venue">in <i>Proc WHISPERS</i>, IEEE, 2021</p>
+                    <div class="badges">
+                        <a href="https://ieeexplore.ieee.org/document/9484006/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'21&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '21"></a>
+                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/static/v1?label=ckn3&message=UnsupAVIRISNG&color=blue&logo=github" alt="ckn3 - UnsupAVIRISNG"></a>
+                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/stars/ckn3/UnsupAVIRISNG?style=social" alt="stars - UnsupAVIRISNG"></a>
+                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/forks/ckn3/UnsupAVIRISNG?style=social" alt="forks - UnsupAVIRISNG"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <p><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
     </div>
 
