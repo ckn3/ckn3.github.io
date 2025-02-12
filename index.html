@@ -179,19 +179,74 @@
         }
         .record-container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-items: center;
+        }
+        
+        .record-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
         .record-text {
             flex: 1;
         }
         
+        .record-text p {
+            margin: 0;
+        }
+        
+        .record-text b {
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .record-text i {
+            color: #666;
+        }
+        
+        .record-text div {
+            margin-top: 8px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .record-image {
+            flex: 0 0 100px;
+        }
+        
         .record-image img {
-            width: 100px; /* Adjust size as needed */
+            width: 100px;
             height: auto;
-            border-radius: 5px; /* Optional for rounded corners */
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .record-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .record-date {
+            color: #007BFF;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .record-link {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .record-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
         }
         
         /* Collaborators Grid */
@@ -411,10 +466,9 @@
 
         <div class="record-container">
             <div class="record-text">
-                <p>[05/2020-present]
-                    <b>Wake Forest University</b><br>
-                    <div style="margin-left: 20px;"><i><a href="https://irsc-wfu.github.io/" target="_blank">Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</a></i></div>
-                </p>
+                <div class="record-date">[05/2020-present]</div>
+                <b>Wake Forest University</b>
+                <div><i><a href="https://irsc-wfu.github.io/" target="_blank" class="record-link">Research scholar in Intelligent Remote Sensing in Conservation & Discovery Group</a></i></div>
             </div>
             <div class="record-image">
                 <img src="figures/main/wfu.jpg" alt="Wake Forest University">
@@ -423,10 +477,9 @@
         
         <div class="record-container">
             <div class="record-text">
-                <p>[09/2022-08/2024]
-                    <b>Society for Industrial and Applied Mathematics</b><br>
-                    <div style="margin-left: 20px;"><i><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank">Founding President of SIAM Student Chapter at City University of Hong Kong</a></i></div>
-                </p>
+                <div class="record-date">[09/2022-08/2024]</div>
+                <b>Society for Industrial and Applied Mathematics</b>
+                <div><i><a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank" class="record-link">Founding President of SIAM Student Chapter at City University of Hong Kong</a></i></div>
             </div>
             <div class="record-image">
                 <img src="figures/main/siam.jpeg" alt="SIAM">
@@ -436,11 +489,10 @@
         <h2 id="education">EDUCATION</h2>
         <div class="record-container">
             <div class="record-text">
-                <p>[09/2021-present]
-                    <b>Ph.D. in Mathematics</b><br>
-                    <div style="margin-left: 20px;"><i>City University of Hong Kong &amp; Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</i></div>
-                    <div style="margin-left: 20px;"><div>Research focuses on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</div></div>
-                </p>
+                <div class="record-date">[09/2021-present]</div>
+                <b>Ph.D. in Mathematics</b>
+                <div><i>City University of Hong Kong & Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</i></div>
+                <div>Research focuses on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</div>
             </div>
             <div class="record-image">
                 <img src="figures/main/cityu.png" alt="Ph.D. in Mathematics">
@@ -449,11 +501,10 @@
 
         <div class="record-container">
             <div class="record-text">
-                <p>[09/2024-02/2025]
-                    <b>Visiting DPhil Student in Biomedical Engineering</b><br>
-                    <div style="margin-left: 20px;"><i>University of Oxford</i></div>
-                    <div style="margin-left: 20px;"><div>Research focuses on deep learning-based ultrasound video analysis.</div></div>
-                </p>
+                <div class="record-date">[09/2024-02/2025]</div>
+                <b>Visiting DPhil Student in Biomedical Engineering</b>
+                <div><i>University of Oxford</i></div>
+                <div>Research focuses on deep learning-based ultrasound video analysis.</div>
             </div>
             <div class="record-image">
                 <img src="https://cdn.worldvectorlogo.com/logos/university-of-oxford-logo-1.svg" alt="Ph.D. in Mathematics">
@@ -462,11 +513,10 @@
         
         <div class="record-container">
             <div class="record-text">
-                <p>[09/2017-07/2021]
-                    <b>B.S. in Computing Mathematics</b><br>
-                    <div style="margin-left: 20px;"><i>City University of Hong Kong</i></div>
-                    <div style="margin-left: 20px;"><div>First Class Honours, with a minor in Computer Science.</div></div>
-                </p>
+                <div class="record-date">[09/2017-07/2021]</div>
+                <b>B.S. in Computing Mathematics</b>
+                <div><i>City University of Hong Kong</i></div>
+                <div>First Class Honours, with a minor in Computer Science.</div>
             </div>
             <div class="record-image">
                 <img src="figures/main/cityu.png" alt="B.S. in Computing Mathematics">
@@ -475,11 +525,10 @@
         
         <div class="record-container">
             <div class="record-text">
-                <p>[02/2020-07/2020]
-                    <b>Visiting B.S. in Applied Mathematics</b><br>
-                    <div style="margin-left: 20px;"><i>Delft University of Technology</i></div>
-                    <div style="margin-left: 20px;"><div>Study in Applied Mathematics.</div></div>
-                </p>
+                <div class="record-date">[02/2020-07/2020]</div>
+                <b>Visiting B.S. in Applied Mathematics</b>
+                <div><i>Delft University of Technology</i></div>
+                <div>Study in Applied Mathematics.</div>
             </div>
             <div class="record-image">
                 <img src="https://filelist.tudelft.nl/_processed_/6/8/csm_Logo%20TU%20Delft_20247b4dc0.png" alt="Visiting B.S. in Applied Mathematics">
