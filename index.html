@@ -195,62 +195,68 @@
         }
         
         /* Collaborators Grid */
-        .collaborators-container {
-            position: relative;
-            height: 450px; /* 显示三行，每行150px */
-            overflow: hidden;
-        }
-        
         .collaborators {
-            height: 100%;
-            overflow-y: auto;
-            padding-right: 10px;
-            scrollbar-width: thin;
-            scrollbar-color: #007BFF #f0f0f0;
-            scroll-behavior: smooth;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
         
-        .collaborators::-webkit-scrollbar {
-            width: 6px;
+        .collaborator {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
         }
         
-        .collaborators::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 3px;
+        .collaborator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
-        .collaborators::-webkit-scrollbar-thumb {
-            background: #007BFF;
-            border-radius: 3px;
+        .collaborator img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            transition: transform 0.2s;
         }
         
-        .scroll-indicator {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 40px;
-            background: linear-gradient(transparent, rgba(255,255,255,0.9));
-            pointer-events: none;
+        .collaborator img:hover {
+            transform: scale(1.05);
+        }
+        
+        .collaborator .name {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: block;
+        }
+        
+        .collaborator .name span {
+            display: block;
+            line-height: 1.2;
+        }
+        
+        .collaborator a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        
+        .imaging-group {
             display: flex;
             justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 10px;
+            align-items: center;
+            gap: 30px; /* Spacing between images */
         }
         
-        .scroll-down-btn {
-            background: #007BFF;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-bottom: 10px;
-        }
-        
-        .scroll-down-btn:hover {
-            background: #0056b3;
+        .imaging-group img {
+            width: 40%; /* Adjust based on your preference */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for styling */
         }
 
         .news-container {
@@ -332,6 +338,28 @@
 
         .scroll-btn:hover {
             background: #0056b3;
+        }
+
+        .collaborators-wrapper {
+            max-height: 480px; /* 约显示三行，每行160px */
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #007BFF #f0f0f0;
+            scroll-behavior: smooth;
+        }
+
+        .collaborators-wrapper::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .collaborators-wrapper::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+
+        .collaborators-wrapper::-webkit-scrollbar-thumb {
+            background: #007BFF;
+            border-radius: 3px;
         }
 
     </style>
@@ -516,7 +544,7 @@
 
     <div class="content">
         <h2>COLLABORATORS</h2>
-        <div class="collaborators-container">
+        <div class="collaborators-wrapper">
             <div class="collaborators">
                 <div class="collaborator">
                     <img src="https://alqahtas.sites.wfu.edu/wp-content/uploads/2020/06/20190806sarra1337-Edit-1-2048x1536.jpg" alt="Sarra Alqahtani">
@@ -702,9 +730,6 @@
                 </div>
                 <!-- Add more collaborators as needed -->
             </div>
-            <div class="scroll-indicator">
-                <button class="scroll-down-btn" onclick="scrollCollaborators()">↓</button>
-            </div>
         </div>
     </div>
 
@@ -808,15 +833,6 @@
             const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
             slider.scrollBy({
                 left: scrollAmount,
-                behavior: 'smooth'
-            });
-        }
-
-        function scrollCollaborators() {
-            const container = document.querySelector('.collaborators');
-            const scrollAmount = 150; // 一行的高度
-            container.scrollBy({
-                top: scrollAmount,
                 behavior: 'smooth'
             });
         }
