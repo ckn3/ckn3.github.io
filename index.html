@@ -784,12 +784,13 @@
 
     <div class="content">
         <h2>SITE VISITORS</h2>
-        <div class="visitor-stats" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin: 20px auto; width: 45%;">
+        <div class="visitor-stats" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin: 20px auto; width: 45%; position: relative;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000;"></div>
+            
             <div class="map" style="flex: 3;">
                 <img src='//clustrmaps.com/map_v2.png?cl=080808&w=500&t=tt&d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU&co=ffffff&ct=808080' style="width: 100%; height: auto;" alt="Visitor Map"/>
             </div>
-            <div class="globe" style="flex: 1; position: relative;">
-                <div style="position: absolute; width: 100%; height: 100%; z-index: 1000;"></div>
+            <div class="globe" style="flex: 1;">
                 <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU"></script>
             </div>
         </div>
