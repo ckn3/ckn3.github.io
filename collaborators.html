@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name='Author' content='Kangning Cui'>
+    <meta name='Content' content='Homepage'>
+    <link rel="icon" href="webpage.ico" type="image/x-icon">
+    <title>Research Collaborators - Jason Kangning Cui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 复制原有的基础样式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            background-color: #ffffff;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* 协作者网格样式 */
+        .collaborators {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .collaborator {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        
+        .collaborator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .collaborator img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .collaborator img:hover {
+            transform: scale(1.05);
+        }
+        
+        .collaborator .name {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: block;
+        }
+        
+        .collaborator .name span {
+            display: block;
+            line-height: 1.2;
+        }
+        
+        .collaborator a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        /* 其他必要样式... */
+        [其他样式保持不变]
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <div id="profile-picture">
+            <img src="IMG-7608.jpeg" alt="Kangning Cui">
+        </div>
+        <div id="name">Kangning Cui (Jason)</div>
+        <div class="contact-information">
+            <p><i>Ph.D. candidate</i></p>
+            <p><i>Department of Mathematics</i></p>
+            <p><i>City University of Hong Kong</i></p>
+        </div>
+
+        <div id="toc">
+            <strong>Contents:</strong>
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="publications.html">Research Publications</a></li>
+                <li><a href="collaborators.html">Collaborators</a></li>
+                <li><a href="academic_honors.html">Academic Service & Honors</a></li>
+                <li><a href="teach.html">Teaching Experience</a></li>
+                <li><a href="others.html">Visits and Exchanges</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>RESEARCH COLLABORATORS</h2>
+        <div class="collaborators">
+            <!-- 从index.html复制所有collaborator条目 -->
+            [所有协作者条目]
+        </div>
+    </div>
+</body>
+</html> 
