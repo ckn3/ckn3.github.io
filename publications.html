@@ -188,6 +188,21 @@
         .publication-text .title {
             font-size: 1em;
             margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .publication-text .title .paper-title {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .publication-text .title .venue {
+            white-space: nowrap;
+            font-size: 0.9em;
+            color: #666;
         }
         
         .publication-text .authors {
@@ -201,12 +216,44 @@
             font-weight: normal;
         }
         
-        .publication-text .venue {
-            font-size: 0.9em;
-            margin-bottom: 8px;
+        .publication-text .badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
-        .publication-text .badges {
+        .conference-text .title {
+            font-size: 1em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .conference-text .title .paper-title {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .conference-text .title .venue {
+            white-space: nowrap;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .conference-text .authors {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        
+        .conference-text .authors .main-author {
+            color: #000;
+            font-weight: normal;
+        }
+        
+        .conference-text .badges {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
@@ -340,11 +387,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p class="title"><strong>"Real-Time Localization and Bimodal Point Pattern Analysis of Palms Using UAV Imagery"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Real-Time Localization and Bimodal Point Pattern Analysis of Palms Using UAV Imagery"</strong></span>
+                        <span class="venue"><i>ArXiv</i>, 2024</span>
+                    </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Wei Tang<sup>†</sup>, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman
                     </p>
-                    <p class="venue"><i>ArXiv</i>, 2024</p>
                     <div class="badges">
                         <a href="https://arxiv.org/abs/2410.11124"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
                         <a href="https://zenodo.org/records/13822508"><img src="https://img.shields.io/badge/Ecuador-Palm_Detection_Dataset-orange?logo=zenodo"></a>
@@ -364,11 +413,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p class="title"><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong></span>
+                        <span class="venue"><i>Comput. Biol. Med.</i>, Elsevier, 2024</span>
+                    </p>
                     <p class="authors">
                         Fei Pan<sup>†</sup>, Yutong Wu<sup>†</sup>, <span class="main-author">Kangning Cui</span>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun
                     </p>
-                    <p class="venue"><i>Comput. Biol. Med.</i>, Elsevier, 2024</p>
                     <div class="badges">
                         <a href="https://www.sciencedirect.com/science/article/pii/S0010482524012368"><img src="https://img.shields.io/badge/Elsevier-Comput._Biol._Med.-important?logo=elsevier"></a>
                         <a href="https://arxiv.org/abs/2301.11499"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
@@ -386,11 +437,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p class="title"><strong>"Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering"</strong></span>
+                        <span class="venue"><i>Trans. Geosci. Remote Sens.</i>, IEEE, 2024</span>
+                    </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
                     </p>
-                    <p class="venue"><i>Trans. Geosci. Remote Sens.</i>, IEEE, 2024</p>
                     <div class="badges">
                         <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=Trans&message=Geosci.+Remote+Sens.&color=%2300629B&logo=IEEE"></a>
                         <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
@@ -410,11 +463,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p class="title"><strong>"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</strong></span>
+                        <span class="venue"><i>Remote Sens.</i>, MDPI, 2023</span>
+                    </p>
                     <p class="authors">
                         Sam L. Polk, <span class="main-author">Kangning Cui</span>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy
                     </p>
-                    <p class="venue"><i>Remote Sens.</i>, MDPI, 2023</p>
                     <div class="badges">
                         <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
                         <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
@@ -434,11 +489,13 @@
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
-                    <p class="title"><strong>"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</strong></span>
+                        <span class="venue"><i>Remote Sens.</i>, MDPI, 2022</span>
+                    </p>
                     <p class="authors">
                         Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
                     </p>
-                    <p class="venue"><i>Remote Sens.</i>, MDPI, 2022</p>
                     <div class="badges">
                         <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
                         <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/Amazon-ASGM_Detection_Dataset-orange?logo=zenodo"></a>
@@ -460,11 +517,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos"</strong></span>
+                        <span class="venue">accepted by <i>MICCAI 2025</i></span>
+                    </p>
                     <p class="authors">
                         Yingyu Yang, Qianye Yang, <span class="main-author">Kangning Cui</span>, Can Peng, Elena D'Alberti, Netzahualcoyotl Hernandez-Cruz, Olga Patey, Aris Papageorghiou, and Alison Noble
                     </p>
-                    <p class="venue">accepted by <i>MICCAI 2025</i></p>
                     <div class="badges">
                         <a href="https://arxiv.org/"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
                     </div>
@@ -473,11 +532,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Blind Restoration of High-Resolution Ultrasound Video"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Blind Restoration of High-Resolution Ultrasound Video"</strong></span>
+                        <span class="venue">accepted by <i>MICCAI 2025</i></span>
+                    </p>
                     <p class="authors">
                         Chu Chen, <span class="main-author">Kangning Cui</span>, Pasquale Cascarano, Wei Tang, Elena L. Piccolomini, and Raymond H. Chan
                     </p>
-                    <p class="venue">accepted by <i>MICCAI 2025</i></p>
                     <div class="badges">
                         <a href="https://arxiv.org/abs/2505.13915"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
                     </div>
@@ -486,11 +547,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms"</strong></span>
+                        <span class="venue">accepted by <i>IJCAI</i>, 2025</span>
+                    </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman
                     </p>
-                    <p class="venue">accepted by <i>IJCAI</i>, 2025</p>
                     <div class="badges">
                         <a href="https://arxiv.org/abs/2502.13023"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
                         <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/static/v1?label=Zippppo&message=PRISM&color=blue&logo=github" alt="Zippppo - PRISM"></a>
@@ -502,11 +565,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced CHD Detection"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced CHD Detection"</strong></span>
+                        <span class="venue">accepted by <i>FIMH</i>, 2025</span>
+                    </p>
                     <p class="authors">
                         Qianye Yang, <span class="main-author">Kangning Cui</span>, Yipeng Hu, Can Peng, Netzahualcoyotl Hernandez-Cruz, Rahul Ahuja, Elena D'Alberti, Raymond H. Chan, Olga Patey, Aris Papageorghiou, and Alison Noble
                     </p>
-                    <p class="venue">accepted by <i>FIMH</i>, 2025</p>
                     <div class="badges">
                         <a href="https://link.springer.com/"><img src="https://img.shields.io/static/v1?label=Springer&message=FIMH+'25&color=%23006400&logo=springer" alt="Springer - FIMH '25"></a>
                     </div>
@@ -515,11 +580,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis"</strong></span>
+                        <span class="venue">accepted by <i>ISBI</i>, 2025</span>
+                    </p>
                     <p class="authors">
                         Wei Tang<sup>†</sup>, <span class="main-author">Kangning Cui</span><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel<sup>‡</sup>
                     </p>
-                    <p class="venue">accepted by <i>ISBI</i>, 2025</p>
                     <div class="badges">
                         <a href="https://ieeexplore.ieee.org/document/10980912"><img src="https://img.shields.io/static/v1?label=Proc&message=ISBI+'25&color=%2300629B&logo=IEEE" alt="Proc - ISBI '25"></a>
                         <a href="https://arxiv.org/abs/2411.08819v1"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
@@ -529,11 +596,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning"</strong></span>
+                        <span class="venue">in <i>Proc ACMSE</i>, ACM, 2024</span>
+                    </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Zishan Shao, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, David Segurado, João Pinheiro, Manqi Wang, David A. Lutz, Robert J. Plemmons, and Miles Silman
                     </p>
-                    <p class="venue">in <i>Proc ACMSE</i>, ACM, 2024</p>
                     <div class="badges">
                         <a href="https://dl.acm.org/doi/10.1145/3603287.3651220"><img src="https://img.shields.io/static/v1?label=Proc&message=ACM+SE+'24&color=%232C4674&logo=acm" alt="Proc - ACM SE '24"></a>
                         <a href="https://arxiv.org/abs/2403.03161"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
@@ -543,11 +612,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Optimized Hard Exudate Detection with Supervised Contrastive Learning"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Optimized Hard Exudate Detection with Supervised Contrastive Learning"</strong></span>
+                        <span class="venue">in <i>Proc ISBI</i>, IEEE, 2024</span>
+                    </p>
                     <p class="authors">
                         Wei Tang, <span class="main-author">Kangning Cui</span><sup>‡</sup>, and Raymond H. Chan
                     </p>
-                    <p class="venue">in <i>Proc ISBI</i>, IEEE, 2024</p>
                     <div class="badges">
                         <a href="https://ieeexplore.ieee.org/document/10635760"><img src="https://img.shields.io/static/v1?label=Proc&message=ISBI+'24&color=%2300629B&logo=IEEE" alt="Proc - ISBI '24"></a>
                         <a href="https://arxiv.org/abs/2302.11517"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
@@ -560,11 +631,13 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
-                    <p class="title"><strong>"Detecting Change due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning"</strong></p>
+                    <p class="title">
+                        <span class="paper-title"><strong>"Detecting Change due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning"</strong></span>
+                        <span class="venue">in <i>Fall Meeting</i>, AGU, 2022</span>
+                    </p>
                     <p class="authors">
                         Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
                     </p>
-                    <p class="venue">in <i>Fall Meeting</i>, AGU, 2022</p>
                     <div class="badges">
                         <a href="https://drive.google.com/file/d/1xtIAjWIZWNDRK3ZNZGEgmAfoU4ggA2Y7/view?usp=sharing"><img src="https://img.shields.io/static/v1?label=Google&message=Drive&color=%234285f4&logo=google+drive" alt="Google - Drive"></a>
                     </div>
@@ -573,6 +646,7 @@
 
             <div class="conference-entry">
                 <div class="conference-text">
+                    <p class="title">
                     <p class="title"><strong>"Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry"</strong></p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†</sup>, Ruoning Li, Sam L. Polk, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
