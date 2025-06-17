@@ -104,15 +104,16 @@
         
         .collaborator {
             background: #fff;
-            padding: 10px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.2s, box-shadow 0.2s;
             text-align: center;
+            border: 1px solid #f0f0f0;
         }
         
         .collaborator:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
@@ -155,6 +156,52 @@
         .contact-information {
             text-align: center;
         }
+
+        /* 字母索引样式 */
+        .alphabet-index {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .alphabet-index a {
+            color: #9E7E38;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+            min-width: 30px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .alphabet-index a:hover {
+            background-color: #9E7E38;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        .collaborator {
+            scroll-margin-top: 80px;
+        }
     </style>
 </head>
 
@@ -185,6 +232,27 @@
 
     <div class="content">
         <h2>COLLABORATORS</h2>
+        <div class="alphabet-index">
+            <a href="#A">A</a>
+            <a href="#C">C</a>
+            <a href="#D">D</a>
+            <a href="#E">E</a>
+            <a href="#F">F</a>
+            <a href="#G">G</a>
+            <a href="#H">H</a>
+            <a href="#L">L</a>
+            <a href="#M">M</a>
+            <a href="#N">N</a>
+            <a href="#O">O</a>
+            <a href="#P">P</a>
+            <a href="#R">R</a>
+            <a href="#S">S</a>
+            <a href="#T">T</a>
+            <a href="#V">V</a>
+            <a href="#W">W</a>
+            <a href="#Y">Y</a>
+            <a href="#Z">Z</a>
+        </div>
         <div class="collaborators-wrapper">
             <div class="collaborators">
                 <div class="collaborator">
@@ -373,6 +441,13 @@
                     <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png" alt="Qianye Yang">
                     <a href="https://scholar.google.com/citations?hl=en&user=Se8eLJQAAAAJ" class="name">
                         <span>Qianye</span>
+                        <span>Yang</span>
+                    </a>
+                </div>
+                <div class="collaborator">
+                    <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=GO6S-2oAAAAJ&citpid=5" alt="Yingyu Yang">
+                    <a href="https://scholar.google.com/citations?hl=en&user=GO6S-2oAAAAJ" class="name">
+                        <span>Yingyu</span>
                         <span>Yang</span>
                     </a>
                 </div>
