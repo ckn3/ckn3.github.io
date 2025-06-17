@@ -169,8 +169,12 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             position: sticky;
-            top: 20px;
+            top: 0;
             z-index: 100;
+            background-color: rgba(248, 249, 250, 0.95);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            margin-bottom: 40px;
         }
 
         .alphabet-index a {
@@ -184,6 +188,7 @@
             min-width: 30px;
             text-align: center;
             border: 1px solid #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .alphabet-index a:hover {
@@ -196,11 +201,11 @@
         /* 平滑滚动 */
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px;
+            scroll-padding-top: 0;
         }
 
         .collaborator {
-            scroll-margin-top: 80px;
+            scroll-margin-top: 0;
         }
     </style>
 </head>
@@ -346,28 +351,28 @@
                         <span>Lutz</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="M">
                     <img src="https://www.cityu.edu.hk/stfprofile/jeamorel_STF.jpg" alt="Jean-Michel Morel">
                     <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/" class="name">
                         <span>Jean-Michel</span>
                         <span>Morel</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="M">
                     <img src="https://jmurphy.math.tufts.edu/Headshot2017.jpg" alt="James M. Murphy">
                     <a href="https://jmurphy.math.tufts.edu/" class="name">
                         <span>James M.</span>
                         <span>Murphy</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="N">
                     <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=b0tmmYMAAAAJ&citpid=2" alt="Alison Noble">
                     <a href="https://scholar.google.com/citations?hl=en&user=b0tmmYMAAAAJ" class="name">
                         <span>Alison</span>
                         <span>Noble</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="O">
                     <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Ss_HBpcAAAAJ&citpid=12" alt="Cheng Ouyang">
                     <a href="https://cheng-01037.github.io/" class="name">
                         <span>Cheng</span>
@@ -381,7 +386,7 @@
                         <span>Pauca</span>
                     </a>
                 </div>
-                <div class="collaborator" id="P">
+                <div class="collaborator" id="R">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Robert_Plemmons.jpg" alt="Robert J. Plemmons">
                     <a href="https://faculty.sites.wfu.edu/plemmons/" class="name">
                         <span>Robert J.</span>
@@ -395,21 +400,21 @@
                         <span>Polk</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="S">
                     <img src="https://zishan-shao.github.io/me.jpeg" alt="Zishan Shao">
                     <a href="https://zishan-shao.github.io/" class="name">
                         <span>Zishan</span>
                         <span>Shao</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="S">
                     <img src="https://cincia.wfu.edu/en/wp-content/uploads/Miles.jpg" alt="Miles R. Silman">
                     <a href="https://biology.wfu.edu/faculty-research/miles-silman/" class="name">
                         <span>Miles R.</span>
                         <span>Silman</span>
                     </a>
                 </div>
-                <div class="collaborator">
+                <div class="collaborator" id="T">
                     <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png" alt="Wei Tang">
                     <a href="https://scholar.google.com/citations?user=BQgfBPQAAAAJ&hl=en" class="name">
                         <span>Wei</span>
