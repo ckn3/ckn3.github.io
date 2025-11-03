@@ -2,6 +2,7 @@
 
 import re
 import sys
+import time
 from pathlib import Path
 from bs4 import BeautifulSoup
 import requests
@@ -12,13 +13,37 @@ SCHOLAR_URL = f'https://scholar.google.com/citations?user={SCHOLAR_USER_ID}&hl=e
 def get_citations():
     """Get citation count from Google Scholar page"""
     try:
+        session = requests.Session()
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1',
+            'Cache-Control': 'max-age=0',
         }
         
-        response = requests.get(SCHOLAR_URL, headers=headers, timeout=15)
+        # Try direct access first
+        response = session.get(SCHOLAR_URL, headers=headers, timeout=15, allow_redirects=True)
+        
+        # If 403, try accessing main page first to establish session
+        if response.status_code == 403:
+            print("403 Forbidden detected, trying to establish session...")
+            session.get('https://scholar.google.com', headers=headers, timeout=15)
+            time.sleep(2)
+            response = session.get(SCHOLAR_URL, headers=headers, timeout=15, allow_redirects=True)
+        
+        if response.status_code == 403:
+            print("Error: 403 Forbidden - Google Scholar is blocking automated requests")
+            print("This is common with GitHub Actions due to IP-based restrictions")
+            return None
+            
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
         
@@ -115,8 +140,10 @@ def main():
     citations = get_citations()
     
     if citations is None:
-        print("Failed to fetch citations")
-        sys.exit(1)
+        print("Warning: Failed to fetch citations from Google Scholar")
+        print("This may happen if Google Scholar is blocking automated requests")
+        print("The script will exit without updating to preserve the existing badge")
+        sys.exit(0)  # Exit with 0 to not fail the workflow
     
     print(f"Found {citations} citations")
     success = update_html(citations)
