@@ -460,7 +460,7 @@
             <a href="mailto:kangnicui2@gmail.com"><img src="https://img.shields.io/badge/kangnicui2-inactive?logo=gmail" alt="Contact - Me"></a>
             <a href="https://github.com/ckn3/"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a>
             <a href="https://www.linkedin.com/in/kangning-cui-57662b177/"><img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin" alt="LinkedIn"></a>
-            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" id="scholar-citations-link"><img src="https://img.shields.io/badge/Google_Scholar-Loading...-blue?logo=google+scholar" alt="Google Scholar" id="scholar-citations-badge"></a>
+            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-330_Citations-blue?logo=google+scholar" alt="Google Scholar" id="scholar-citations-badge"></a>
         </div>
         
         <h2 id="positions">POSITIONS HELD</h2>
@@ -751,65 +751,7 @@
         }
     </style>
 
-    <script>
-        // 获取 Google Scholar 引用次数
-        // 注意：由于 Google Scholar 没有公开 API，这里提供几种方案
-        async function fetchScholarCitations() {
-            const userId = 'vzCZaIwAAAAJ';
-            const badgeImg = document.getElementById('scholar-citations-badge');
-            
-            // 方案1: 尝试使用公开的 API 服务
-            // 如果这些服务不可用，可以使用方案2（手动更新）
-            const apiServices = [
-                `https://scholar-badge.vercel.app/api/scholar?user=${userId}`,
-            ];
-            
-            for (const apiUrl of apiServices) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'application/json',
-                        },
-                    });
-                    
-                    if (response.ok) {
-                        const data = await response.json();
-                        const citations = data.citations || data.count || data.totalCitations || data.citation_count;
-                        
-                        if (citations && citations !== 'N/A') {
-                            // 格式化数字（添加千位分隔符）
-                            const formattedCitations = typeof citations === 'number' 
-                                ? citations.toLocaleString() 
-                                : citations;
-                            badgeImg.src = `https://img.shields.io/badge/Google_Scholar-${formattedCitations}_Citations-blue?logo=google+scholar`;
-                            badgeImg.alt = `Google Scholar: ${formattedCitations} Citations`;
-                            return;
-                        }
-                    }
-                } catch (e) {
-                    // API 不可用，继续尝试其他方案
-                    console.log('API service unavailable, trying alternative...');
-                }
-            }
-            
-            // 方案2: 如果 API 不可用，可以使用静态徽章
-            // 你可以手动更新下面的数字，或者使用 GitHub Actions 定期更新
-            // 格式: https://img.shields.io/badge/Google_Scholar-你的引用次数_Citations-blue?logo=google+scholar
-            // 例如: badgeImg.src = 'https://img.shields.io/badge/Google_Scholar-123_Citations-blue?logo=google+scholar';
-            
-            // 临时显示提示（如果没有可用 API，显示默认徽章）
-            badgeImg.src = `https://img.shields.io/badge/Google_Scholar-Click_to_view-blue?logo=google+scholar`;
-            badgeImg.alt = 'Google Scholar - Click to view';
-        }
-        
-        // 页面加载完成后获取引用次数
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', fetchScholarCitations);
-        } else {
-            fetchScholarCitations();
-        }
-    </script>
+    <!-- updates -->
 
 </body>
 </html>

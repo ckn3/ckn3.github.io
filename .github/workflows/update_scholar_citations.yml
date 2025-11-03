@@ -1,0 +1,50 @@
+name: Update Google Scholar Citations
+
+on:
+  schedule:
+    # 每天 UTC 时间 12:00（可以根据需要调整）
+    - cron: '0 12 * * *'
+  workflow_dispatch: # 允许手动触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'update_citations.py'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: Run citation updater
+        run: python update_citations.py
+
+      - name: Commit and push changes
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.html
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-update Google Scholar citations [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
