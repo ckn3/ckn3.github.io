@@ -15,6 +15,9 @@ ENV/
 scholar_page_debug.html
 *.log
 
+# Logs
+logs/
+
 # IDE
 .vscode/
 .idea/
