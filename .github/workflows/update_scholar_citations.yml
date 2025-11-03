@@ -2,9 +2,9 @@ name: Update Google Scholar Citations
 
 on:
   schedule:
-    # 每天 UTC 时间 12:00（可以根据需要调整）
+    # Run daily at 12:00 UTC (adjust as needed)
     - cron: '0 12 * * *'
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch: # Allow manual trigger
   push:
     branches:
       - main
