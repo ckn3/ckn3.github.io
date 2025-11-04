@@ -37,6 +37,20 @@
             font-size: 24px;
         }
 
+        h3 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        h4 {
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
         #sidebar {
             position: fixed;
             left: 0;
@@ -296,20 +310,20 @@
         }
 
         .review-section {
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .review-grid {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 6px;
         }
 
         .review-card {
             background: #fff;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             align-items: center;
@@ -352,21 +366,27 @@
             font-weight: 500;
             color: #2c3e50;
             font-style: italic;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .journal-name:not(:last-child)::after {
+            content: '';
         }
 
         .publisher-name {
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #666;
-            margin-left: 8px;
+            margin-left: 6px;
         }
 
         .review-years {
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #666;
             background: #f8f9fa;
-            padding: 2px 8px;
-            border-radius: 4px;
-            min-width: 60px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            min-width: 50px;
             text-align: center;
         }
 
@@ -436,7 +456,15 @@
 
             .review-card, .record-container {
                 flex-direction: column;
-                padding: 10px;
+                padding: 8px;
+            }
+            
+            .review-grid {
+                gap: 5px;
+            }
+            
+            .review-section {
+                margin: 10px 0;
             }
         }
     </style>
@@ -552,120 +580,50 @@
             <div class="review-grid">
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="journal-name">Biomedical Signal Processing and Control</span>
-                        <span class="publisher-name">Elsevier</span>
+                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">Elsevier</span>
+                        <div style="margin-top: 4px; line-height: 1.5;">
+                            <span class="journal-name">Biomedical Signal Processing and Control</span>,
+                            <span class="journal-name">Computer Vision and Image Understanding</span>,
+                            <span class="journal-name">ISPRS Journal of Photogrammetry and Remote Sensing</span>,
+                            <span class="journal-name">Remote Sensing Applications: Society and Environment</span>,
+                            <span class="journal-name">Signal Processing: Image Communication</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="journal-name">Computer Vision and Image Understanding</span>
-                        <span class="publisher-name">Elsevier</span>
+                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">IEEE</span>
+                        <div style="margin-top: 4px; line-height: 1.5;">
+                            <span class="journal-name">IEEE Transactions on Circuits and Systems for Video Technology</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="journal-name">ISPRS Journal of Photogrammetry and Remote Sensing</span>
-                        <span class="publisher-name">Elsevier</span>
+                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">MDPI</span>
+                        <div style="margin-top: 4px; line-height: 1.5;">
+                            <span class="journal-name">AgriEngineering</span>,
+                            <span class="journal-name">Electronics</span>,
+                            <span class="journal-name">Geomatics</span>,
+                            <span class="journal-name">Information</span>,
+                            <span class="journal-name">Remote Sensing</span>,
+                            <span class="journal-name">Sensors</span>,
+                            <span class="journal-name">Sustainability</span>,
+                            <span class="journal-name">Urban Science</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="journal-name">Remote Sensing Applications: Society and Environment</span>
-                        <span class="publisher-name">Elsevier</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Signal Processing: Image Communication</span>
-                        <span class="publisher-name">Elsevier</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">IEEE Transactions on Circuits and Systems for Video Technology</span>
-                        <span class="publisher-name">IEEE</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Applied Intelligence</span>
-                        <span class="publisher-name">Springer Nature</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Earth Science Informatics</span>
-                        <span class="publisher-name">Springer Nature</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Scientific Reports</span>
-                        <span class="publisher-name">Springer Nature</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">AgriEngineering</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Electronics</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Geomatics</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Information</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Remote Sensing</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Sensors</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Sustainability</span>
-                        <span class="publisher-name">MDPI</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Urban Science</span>
-                        <span class="publisher-name">MDPI</span>
+                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">Springer Nature</span>
+                        <div style="margin-top: 4px; line-height: 1.5;">
+                            <span class="journal-name">Applied Intelligence</span>,
+                            <span class="journal-name">Earth Science Informatics</span>,
+                            <span class="journal-name">Scientific Reports</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -734,6 +692,24 @@
                             </a>
                             <span style="margin: 0 8px;">|</span>
                             <a href="docs/slides/Talk.pdf" target="_blank" style="color: #9E7E38; text-decoration: none;">
+                                Slides
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-info">
+                        <div>
+                            <span class="journal-name">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</span>
+                            <span class="publisher-name">(Oral)</span>
+                            <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 10px;">August 2025</span>
+                        </div>
+                        <div style="font-size: 0.9em; color: #666; margin-top: 4px;">
+                            <a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" style="color: #9E7E38; text-decoration: none;">
+                                IJCAI 2025
+                            </a>
+                            <span style="margin: 0 8px;">|</span>
+                            <a href="docs/slides/cui2025ijcai.pdf" target="_blank" style="color: #9E7E38; text-decoration: none;">
                                 Slides
                             </a>
                         </div>
