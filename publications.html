@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='Author' content='Kangning Cui'>
     <meta name='Content' content='Homepage'>
     <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
@@ -400,10 +401,99 @@
             gap: 8px;
             flex-wrap: wrap;
         }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: #9E7E38;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .mobile-menu-btn:hover {
+            background: #7D632C;
+        }
+
+        /* Responsive Design for Mobile */
+        @media screen and (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+                width: 280px;
+            }
+
+            #sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content, .content-top {
+                margin-left: 0;
+                padding: 10px;
+                margin-top: 60px;
+            }
+
+            #profile-picture img {
+                width: 80px;
+            }
+
+            #name {
+                font-size: 1.2em;
+            }
+
+            h1, h2 {
+                font-size: 20px;
+            }
+
+            .publication-entry, .conference-entry {
+                flex-direction: column;
+            }
+
+            .publication-figure {
+                flex: 0 0 auto;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .publication-figure img {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .publication-text, .conference-text {
+                width: 100%;
+            }
+
+            .badges {
+                flex-wrap: wrap;
+            }
+
+            .badges img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
 
     <div id="sidebar">
         <div id="profile-picture">
@@ -750,6 +840,8 @@
                     <div class="badges">
                         <a href="https://www.ijcai.org/proceedings/2025/1067"><img src="https://img.shields.io/static/v1?label=IJCAI&message=IJCAI+'25&color=%2300629B&logo=IJCAI" alt="IJCAI - IJCAI'25"></a>
                         <a href="https://arxiv.org/abs/2502.13023"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a href="docs/posters/cui2025ijcai.pdf"><img src="https://img.shields.io/static/v1?label=Poster&message=View&color=%236A1B9A" alt="Poster"></a>
+                        <a href="docs/slides/cui2025ijcai.pdf"><img src="https://img.shields.io/static/v1?label=Slides&message=View&color=%23008B8B" alt="Slides"></a>
                         <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/static/v1?label=Zippppo&message=PRISM&color=blue&logo=github" alt="Zippppo - PRISM"></a>
                         <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/github/stars/Zippppo/PRISM?style=social" alt="stars - PRISM"></a>
                         <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/github/forks/Zippppo/PRISM?style=social" alt="forks - PRISM"></a>
@@ -999,6 +1091,22 @@
                     modal.style.display = "none";
                 }
             });
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
         });
     </script>
 

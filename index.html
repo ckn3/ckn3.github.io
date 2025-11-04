@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='author' content='Kangning Cui'>
     <meta name='description' content='Homepage'>
     <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
@@ -417,12 +418,113 @@
             border-radius: 3px;
         }
 
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: #9E7E38;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .mobile-menu-btn:hover {
+            background: #7D632C;
+        }
+
+        /* Responsive Design for Mobile */
+        @media screen and (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+                width: 280px;
+            }
+
+            #sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content, .content-top {
+                margin-left: 0;
+                padding: 10px;
+                margin-top: 60px;
+            }
+
+            #profile-picture img {
+                width: 80px;
+            }
+
+            #name {
+                font-size: 1.2em;
+            }
+
+            h1, h2 {
+                font-size: 20px;
+            }
+
+            .record-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .record-image {
+                flex: 0 0 auto;
+                margin-top: 10px;
+            }
+
+            .record-image img {
+                width: 150px;
+            }
+
+            .collaborators {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .collaborator img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .news-card {
+                flex: 0 0 280px;
+            }
+
+            .visitor-stats {
+                flex-direction: column;
+                width: 100% !important;
+            }
+
+            .imaging-group {
+                flex-direction: column;
+            }
+
+            .imaging-group img {
+                width: 100%;
+            }
+        }
+
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
 
 
 <body>
+
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
 
     <div id="sidebar">
         <div id="profile-picture">
@@ -737,6 +839,22 @@
                 behavior: 'smooth'
             });
         }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
+        });
     </script>
     
     <style>
