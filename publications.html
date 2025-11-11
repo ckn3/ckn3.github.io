@@ -249,7 +249,7 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
-
+ 
         .publication-figure {
             flex: 0 0 150px;
             display: flex;
@@ -412,6 +412,18 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
+        .publication-entry.highlight-entry,
+        .conference-entry.highlight-entry {
+            background: linear-gradient(135deg, rgba(158, 126, 56, 0.18), rgba(248, 243, 231, 0.95));
+            border: 1px solid rgba(158, 126, 56, 0.45);
+            box-shadow: 0 3px 10px rgba(158, 126, 56, 0.25);
+        }
+
+        .publication-entry.highlight-entry:hover,
+        .conference-entry.highlight-entry:hover {
+            box-shadow: 0 6px 16px rgba(158, 126, 56, 0.35);
+        }
+ 
         .conference-text {
             flex: 1;
             min-width: 0;
@@ -567,7 +579,7 @@
                 <strong>Complete Publication List:</strong> For my full publication record, please visit my 
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" style="color: #9E7E38; text-decoration: none; font-weight: bold;">Google Scholar profile</a>.
                 <br><br>
-                <strong>Featured Work:</strong> Selected publications of my work in machine learning, computer vision, with applications in sustainability and healthcare.
+                <strong>Featured Work:</strong> Selected publications of my work in machine learning, computer vision, with applications in sustainability and healthcare. Entries with the highlighted background mark my representative works.
             </p>
         </div>
         
@@ -575,7 +587,7 @@
         <div class="publications-grid">
 
             <!-- Publication Entry -->
-            <div class="publication-entry">
+            <div class="publication-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025efficient.png" 
                          alt="Figure for Cui et al., 2025" 
@@ -602,75 +614,7 @@
             </div>
 
             <!-- Publication Entry -->
-            <!-- <div class="publication-entry">
-                <div class="publication-figure">
-                    <img src="figures/publications/wang2025resource.png" 
-                         alt="Figure for Wang et al., 2025" 
-                         onclick="openModal(this.src)"
-                         title="Click to enlarge">
-                </div>
-                <div class="publication-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification"</strong></span>
-                        <span class="venue"><i>Plants</i>, 2025</span>
-                    </p>
-                    <p class="authors">
-                        Zhengle Wang, Heng-Wei Zhang, Ying-Qiang Dai, <span class="main-author">Kangning Cui</span>, Haihua Wang<sup>‡</sup>, Peng W. Chee<sup>‡</sup>, and Rui-Feng Wang<sup>‡</sup>
-                    </p>
-                    <div class="badges">
-                        <a href="https://www.mdpi.com/2223-7747/14/13/2082"><img src="https://img.shields.io/static/v1?label=MDPI&message=Plants&color=%233f7d3b"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Publication Entry -->
-            <!-- <div class="publication-entry">
-                <div class="publication-figure">
-                    <img src="figures/publications/ding2025toward.png" 
-                         alt="Figure for Ding et al., 2025" 
-                         onclick="openModal(this.src)"
-                         title="Click to enlarge">
-                </div>
-                <div class="publication-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Toward Efficient UAV-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion"</strong></span>
-                        <span class="venue"><i>Remote Sens.</i>, 2025</span>
-                    </p>
-                    <p class="authors">
-                        Xingyu Di, <span class="main-author">Kangning Cui</span>, and Rui-Feng Wang<sup>‡</sup>
-                    </p>
-                    <div class="badges">
-                        <a href="https://www.mdpi.com/2072-4292/17/13/2235"><img src="https://img.shields.io/static/v1?label=MDPI&message=Remote+Sens.&color=%233f7d3b"></a>
-                    </div>
-                </div>
-            </div> -->
-            
-            <!-- Publication Entry -->
-            <!-- <div class="publication-entry">
-                <div class="publication-figure">
-                    <img src="figures/publications/pan2024dual.jpg" 
-                         alt="Figure for Pan el al., 2024" 
-                         onclick="openModal(this.src)"
-                         title="Click to enlarge">
-                </div>
-                <div class="publication-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong></span>
-                        <span class="venue"><i>Comput. Biol. Med.</i>, 2024</span>
-                    </p>
-                    <p class="authors">
-                        Fei Pan<sup>†</sup>, Yutong Wu<sup>†</sup>, <span class="main-author">Kangning Cui</span>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond H. Chan, and Dong Sun<sup>‡</sup>
-                    </p>
-                    <div class="badges">
-                        <a href="https://www.sciencedirect.com/science/article/pii/S0010482524012368"><img src="https://img.shields.io/badge/Elsevier-Comput._Biol._Med.-important?logo=elsevier"></a>
-                        <a href="https://arxiv.org/abs/2301.11499"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                        <a href="https://scholars.cityu.edu.hk/en/publications/publication(825c2829-b5d5-4ab6-a14f-e320db21ffb1).html"><img src="https://img.shields.io/badge/US-Patent-orange?logo=patent"></a>
-                    </div>
-                </div> -->
-            </div>
-
-            <!-- Publication Entry -->
-            <div class="publication-entry">
+            <div class="publication-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2024superpixel.png" 
                          alt="Figure for Cui et al., 2023" 
@@ -756,52 +700,6 @@
         <h2 id="conference-publications">CONFERENCE PUBLICATIONS AND POSTERS</h2>
         <div class="conference-grid">
 
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization"</strong></span>
-                        <span class="venue">submitted to <i>ArXiv</i></span>
-                    </p>
-                    <p class="authors">
-                        Rongkun Zhu<sup>†</sup>, <span class="main-author">Kangning Cui<sup>†,‡</sup></span>, Wei Tang, Rui-Feng Wang, Sarra Alqahtani, David Lutz, Fan Yang, Paul Fine, Jordan Karubian, Robert Plemmons, Jean-Michel Morel, Victor Pauca, Miles Silman
-                    </p>
-                    <div class="badges">
-                        <a href="https://arxiv.org/abs/2509.12400"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions"</strong></span>
-                        <span class="venue">submitted to <i>ArXiv</i></span>
-                    </p>
-                    <p class="authors">
-                        Rui-Feng Wang, Mingrui Xu, Matthew C Bauer, Iago Beffart Schardong, Xiaowen Ma, <span class="main-author">Kangning Cui<sup>‡</sup></span>
-                    </p>
-                    <div class="badges">
-                        <a href="https://arxiv.org/abs/2509.12442"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/SweefongWong/Cott-ADNet"><img src="https://img.shields.io/static/v1?label=Code&message=GitHub&color=blue&logo=github" alt="SweefongWong - Cott-ADNet"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing"</strong></span>
-                        <span class="venue">submitted to <i>ArXiv</i></span>
-                    </p>
-                    <p class="authors">
-                        Debashis Gupta, Aditi Golder, Rongkun Zhu, <span class="main-author">Kangning Cui</span>, Wei Tang, Fan Yang, Ovidiu Csillik, Sarra Alaqahtani, Victor P. Pauca
-                    </p>
-                    <div class="badges">
-                        <a href="https://arxiv.org/abs/2507.08683"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    </div>
-                </div>
-            </div> -->
-
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/yang2025miccai.png" 
@@ -849,22 +747,7 @@
                 </div>
             </div>
 
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"A Local Perspective-based Model for Overlapping Community Detection"</strong></span>
-                        <span class="venue">accepted by <i>IEEE SMC 2025</i></span>
-                    </p>
-                    <p class="authors">
-                        Gaofeng Zhou<sup>†</sup>, Rui-Feng Wang<sup>†,‡</sup>, and <span class="main-author">Kangning Cui</span>
-                    </p>
-                    <div class="badges">
-                        <a href="https://arxiv.org/abs/2503.21558"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="conference-entry">
+            <div class="conference-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025ijcai.png" 
                          alt="Figure for Cui et al., 2025" 
@@ -931,22 +814,6 @@
                 </div>
             </div>
 
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning"</strong></span>
-                        <span class="venue">in <i>Proc ACMSE</i>, ACM, 2024</span>
-                    </p>
-                    <p class="authors">
-                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Zishan Shao, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, David Segurado, João Pinheiro, Manqi Wang, David A. Lutz, Robert J. Plemmons, and Miles Silman
-                    </p>
-                    <div class="badges">
-                        <a href="https://dl.acm.org/doi/10.1145/3603287.3651220"><img src="https://img.shields.io/static/v1?label=Proc&message=ACM+SE+'24&color=%232C4674&logo=acm" alt="Proc - ACM SE '24"></a>
-                        <a href="https://arxiv.org/abs/2403.03161"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    </div>
-                </div>
-            </div> -->
-
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/tang2024isbi.png" 
@@ -972,21 +839,6 @@
                 </div>
             </div>
 
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Detecting Change due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning"</strong></span>
-                        <span class="venue">in <i>Fall Meeting</i>, AGU, 2022</span>
-                    </p>
-                    <p class="authors">
-                        Seda Camalan, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
-                    </p>
-                    <div class="badges">
-                        <a href="https://drive.google.com/file/d/1xtIAjWIZWNDRK3ZNZGEgmAfoU4ggA2Y7/view?usp=sharing"><img src="https://img.shields.io/static/v1?label=Google&message=Drive&color=%234285f4&logo=google+drive" alt="Google - Drive"></a>
-                    </div>
-                </div>
-            </div> -->
-
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2022whispers.png" 
@@ -1011,97 +863,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Semi-supervised Change Detection of Small Water Bodies Using RGB and Multispectral Images in Peruvian Rainforests"</strong></span>
-                        <span class="venue">in <i>Proc WHISPERS</i>, IEEE, 2022</span>
-                    </p>
-                    <p class="authors">
-                        <span class="main-author">Kangning Cui</span><sup>†</sup>, Seda Camalan, Ruoning Li, Victor P. Pauca, Sarra Alqahtani, Robert J. Plemmons, Miles Silman, Evan N. Dethier, David A. Lutz, and Raymond H. Chan
-                    </p>
-                    <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/9955140/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'22&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '22"></a>
-                        <a href="https://arxiv.org/abs/2206.09365"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/static/v1?label=ckn3&message=SVM-Change-Detection&color=blue&logo=github" alt="ckn3 - SVM-Change-Detection"></a>
-                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/stars/ckn3/SVM-Change-Detection?style=social" alt="stars - SVM-Change-Detection"></a>
-                        <a href="https://github.com/ckn3/SVM-Change-Detection"><img src="https://img.shields.io/github/forks/ckn3/SVM-Change-Detection?style=social" alt="forks - SVM-Change-Detection"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images"</strong></span>
-                        <span class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</span>
-                    </p>
-                    <p class="authors">
-                        Sam L. Polk, <span class="main-author">Kangning Cui</span>, Robert J. Plemmons, and James M. Murphy
-                    </p>
-                    <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/9883894/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                        <a href="https://arxiv.org/abs/2204.06298"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github" alt="sampolk - D-VIC"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social" alt="stars - D-VIC"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social" alt="forks - D-VIC"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Unsupervised Detection of Ash Dieback Disease (<em>Hymenoscyphus Fraxineus</em>) Using Diffusion-based Hyperspectral Image Clustering"</strong></span>
-                        <span class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</span>
-                    </p>
-                    <p class="authors">
-                        Sam L. Polk, Aland H. Y. Chan, <span class="main-author">Kangning Cui</span>, Robert J. Plemmons, David A. Coomes, and James M. Murphy
-                    </p>
-                    <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/9883429/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                        <a href="https://arxiv.org/abs/2204.09041"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Classification of Hyperspectral Images Using SVM with Shape-adaptive Reconstruction and Smoothed Total Variation"</strong></span>
-                        <span class="venue">in <i>Proc IGARSS</i>, IEEE, 2022</span>
-                    </p>
-                    <p class="authors">
-                        Ruoning Li, <span class="main-author">Kangning Cui</span>, Raymond H. Chan, and Robert J. Plemmons
-                    </p>
-                    <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/9883961/"><img src="https://img.shields.io/static/v1?label=Proc&message=IGARSS+'22&color=%2300629B&logo=IEEE" alt="Proc - IGARSS '22"></a>
-                        <a href="https://arxiv.org/abs/2203.15619"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/static/v1?label=ckn3&message=SA-Recon&color=blue&logo=github" alt="ckn3 - SA-Recon"></a>
-                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/stars/ckn3/SA-Recon?style=social" alt="stars - SA-Recon"></a>
-                        <a href="https://github.com/ckn3/SA-Recon"><img src="https://img.shields.io/github/forks/ckn3/SA-Recon?style=social" alt="forks - SA-Recon"></a>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="conference-entry">
-                <div class="conference-text">
-                    <p class="title">
-                        <span class="paper-title"><strong>"Unsupervised Classification of AVIRIS-NG Hyperspectral Images"</strong></span>
-                        <span class="venue">in <i>Proc WHISPERS</i>, IEEE, 2021</span>
-                    </p>
-                    <p class="authors">
-                        <span class="main-author">Kangning Cui</span><sup>†,‡</sup> and Robert J. Plemmons
-                    </p>
-                    <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/9484006/"><img src="https://img.shields.io/static/v1?label=Proc&message=WHISPERS+'21&color=%2300629B&logo=IEEE" alt="Proc - WHISPERS '21"></a>
-                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/static/v1?label=ckn3&message=UnsupAVIRISNG&color=blue&logo=github" alt="ckn3 - UnsupAVIRISNG"></a>
-                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/stars/ckn3/UnsupAVIRISNG?style=social" alt="stars - UnsupAVIRISNG"></a>
-                        <a href="https://github.com/ckn3/UnsupAVIRISNG"><img src="https://img.shields.io/github/forks/ckn3/UnsupAVIRISNG?style=social" alt="forks - UnsupAVIRISNG"></a>
-                    </div>
-                </div>
-            </div> -->
+            
         </div>
         <p><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
     </div>
