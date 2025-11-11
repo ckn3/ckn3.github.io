@@ -134,9 +134,10 @@
         
         .collaborators-layout {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 0;
+            gap: 20px;
         }
 
         .student-section {
@@ -297,6 +298,7 @@
             top: 20px;
             height: fit-content;
             margin-left: 20px;
+            flex-shrink: 0;
         }
 
         .alphabet-index a {
@@ -374,7 +376,7 @@
 
             .content, .content-top {
                 margin-left: 0;
-                padding: 10px 70px 10px 10px;
+                padding: 10px;
                 margin-top: 60px;
             }
 
@@ -393,24 +395,7 @@
             }
 
             .alphabet-index {
-                position: fixed;
-                right: 8px;
-                top: 88px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 4px;
-                padding: 8px 6px;
-                border-radius: 14px;
-                background: rgba(255, 255, 255, 0.82);
-                border: 1px solid rgba(158, 126, 56, 0.2);
-                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-                z-index: 1002;
-            }
-
-            .alphabet-index a {
-                padding: 3px 5px;
-                font-size: 0.8em;
+                display: none;
             }
 
             .collaborators {
@@ -729,34 +714,34 @@
                     </div>
                     <!-- Add more collaborators as needed -->
                 </div>
-                <div class="alphabet-index">
-                    <a href="#A">A</a>
-                    <a href="#B">B</a>
-                    <a href="#C">C</a>
-                    <a href="#D">D</a>
-                    <a href="#E">E</a>
-                    <a href="#F">F</a>
-                    <a href="#G">G</a>
-                    <a href="#H">H</a>
-                    <a href="#I">I</a>
-                    <a href="#J">J</a>
-                    <a href="#K">K</a>
-                    <a href="#L">L</a>
-                    <a href="#M">M</a>
-                    <a href="#N">N</a>
-                    <a href="#O">O</a>
-                    <a href="#P">P</a>
-                    <a href="#Q">Q</a>
-                    <a href="#R">R</a>
-                    <a href="#S">S</a>
-                    <a href="#T">T</a>
-                    <a href="#U">U</a>
-                    <a href="#V">V</a>
-                    <a href="#W">W</a>
-                    <a href="#X">X</a>
-                    <a href="#Y">Y</a>
-                    <a href="#Z">Z</a>
-                </div>
+            </div>
+            <div class="alphabet-index">
+                <a href="#A">A</a>
+                <a href="#B">B</a>
+                <a href="#C">C</a>
+                <a href="#D">D</a>
+                <a href="#E">E</a>
+                <a href="#F">F</a>
+                <a href="#G">G</a>
+                <a href="#H">H</a>
+                <a href="#I">I</a>
+                <a href="#J">J</a>
+                <a href="#K">K</a>
+                <a href="#L">L</a>
+                <a href="#M">M</a>
+                <a href="#N">N</a>
+                <a href="#O">O</a>
+                <a href="#P">P</a>
+                <a href="#Q">Q</a>
+                <a href="#R">R</a>
+                <a href="#S">S</a>
+                <a href="#T">T</a>
+                <a href="#U">U</a>
+                <a href="#V">V</a>
+                <a href="#W">W</a>
+                <a href="#X">X</a>
+                <a href="#Y">Y</a>
+                <a href="#Z">Z</a>
             </div>
         </div>
         <div class="student-section">
