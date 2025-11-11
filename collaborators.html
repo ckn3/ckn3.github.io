@@ -164,20 +164,20 @@
         }
  
          .student-card {
-             background: linear-gradient(140deg, rgba(248, 243, 231, 0.9), rgba(255, 255, 255, 0.95));
-             border-radius: 10px;
-             padding: 16px;
-             border: 1px solid rgba(158, 126, 56, 0.2);
-             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-             transition: transform 0.2s ease, box-shadow 0.2s ease;
-             display: flex;
-             flex-direction: column;
-             gap: 6px;
-         }
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid #f0f0f0;
+            box-shadow: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
  
          .student-card:hover {
-             transform: translateY(-3px);
-             box-shadow: 0 6px 14px rgba(158, 126, 56, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
          }
  
          .student-card-header {
@@ -192,6 +192,11 @@
             color: #2c3e50;
             font-size: 1.05em;
             line-height: 1.2;
+            text-decoration: none;
+        }
+
+        .student-name:hover {
+            color: #7D632C;
         }
 
         .student-period {
@@ -763,21 +768,21 @@
             <div class="student-grid">
                 <div class="student-card">
                     <div class="student-card-header">
-                        <span class="student-name">Aditi Golder</span>
+                        <a class="student-name" href="https://scholar.google.com/citations?hl=en&user=_ksO_SgAAAAJ" target="_blank">Aditi Golder</a>
                         <span class="student-period">Aug 2025 – Present</span>
                     </div>
                     <p class="student-detail">Working on ecological object detection pipelines and evaluation.</p>
                 </div>
                 <div class="student-card">
                     <div class="student-card-header">
-                        <span class="student-name">Suraj Prasai</span>
+                        <a class="student-name" href="https://spygaurad.github.io/" target="_blank">Suraj Prasai</a>
                         <span class="student-period">Aug 2025 – Present</span>
                     </div>
                     <p class="student-detail">Working on auto-labeling workflows and human-in-the-loop machine learning UI.</p>
                 </div>
                 <div class="student-card">
                     <div class="student-card-header">
-                        <span class="student-name">Rongkun Zhu</span>
+                        <a class="student-name" href="https://scholar.google.com/citations?hl=en&user=D-IHI1kAAAAJ" target="_blank">Rongkun Zhu</a>
                         <span class="student-period">Feb 2024 – Aug 2025</span>
                     </div>
                     <p class="student-detail">Worked on large-scale palm localization and ecological monitoring efforts.</p>
@@ -785,7 +790,7 @@
                 </div>
                 <div class="student-card">
                     <div class="student-card-header">
-                        <span class="student-name">Zishan Shao</span>
+                        <a class="student-name" href="https://zishan-shao.github.io/" target="_blank">Zishan Shao</a>
                         <span class="student-period">Jun 2023 – May 2024</span>
                     </div>
                     <p class="student-detail">Worked on transfer-learning strategies for tropical forest image classification.</p>
