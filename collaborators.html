@@ -132,6 +132,83 @@
             padding: 20px;
         }
         
+        .student-section {
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid rgba(158, 126, 56, 0.35);
+        }
+
+        .student-section h3 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 20px;
+            color: #2c3e50;
+            letter-spacing: 0.5px;
+        }
+
+        .student-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+ 
+         .student-card {
+             background: linear-gradient(140deg, rgba(248, 243, 231, 0.9), rgba(255, 255, 255, 0.95));
+             border-radius: 10px;
+             padding: 16px;
+             border: 1px solid rgba(158, 126, 56, 0.2);
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+             transition: transform 0.2s ease, box-shadow 0.2s ease;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+         }
+ 
+         .student-card:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 6px 14px rgba(158, 126, 56, 0.25);
+         }
+ 
+         .student-card-header {
+             display: flex;
+             justify-content: space-between;
+             align-items: flex-start;
+             gap: 12px;
+         }
+
+        .student-name {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.05em;
+            line-height: 1.2;
+        }
+
+        .student-period {
+            color: #7D632C;
+            font-weight: 500;
+            font-size: 0.9em;
+            text-align: right;
+            line-height: 1.2;
+        }
+
+        .student-detail {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.35;
+        }
+
+        .student-next-position {
+            margin-top: 2px;
+            font-size: 0.9em;
+            color: #2c3e50;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        
         .collaborator {
             background: #fff;
             padding: 15px;
@@ -318,6 +395,18 @@
                 padding: 10px;
             }
 
+            .student-section {
+                padding: 15px;
+            }
+
+            .student-grid {
+                gap: 12px;
+            }
+
+            .student-card {
+                padding: 12px;
+            }
+
             .collaborator {
                 padding: 8px;
             }
@@ -373,6 +462,7 @@
     </div>
 
     <div class="content">
+        
         <h2>COLLABORATORS</h2>
         <div style="display: flex; justify-content: space-between;">
             <div class="collaborators-wrapper" style="flex: 1;">
@@ -640,8 +730,43 @@
                 <a href="#Z">Z</a>
             </div>
         </div>
-        
-        <!-- CityU Imaging Group Section -->
+        <div class="student-section">
+            <h3>Student Collaborators</h3>
+            <div class="student-grid">
+                <div class="student-card">
+                    <div class="student-card-header">
+                        <span class="student-name">Aditi Golder</span>
+                        <span class="student-period">Aug 2025 – Present</span>
+                    </div>
+                    <p class="student-detail">Working on ecological object detection pipelines and evaluation.</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-card-header">
+                        <span class="student-name">Suraj Prasai</span>
+                        <span class="student-period">Aug 2025 – Present</span>
+                    </div>
+                    <p class="student-detail">Working on auto-labeling workflows and human-in-the-loop machine learning UI.</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-card-header">
+                        <span class="student-name">Rongkun Zhu</span>
+                        <span class="student-period">Feb 2024 – Aug 2025</span>
+                    </div>
+                    <p class="student-detail">Worked on large-scale palm localization and ecological monitoring efforts.</p>
+                    <span class="student-next-position">Next Position: PhD Student at Hong Kong Baptist University</span>
+                </div>
+                <div class="student-card">
+                    <div class="student-card-header">
+                        <span class="student-name">Zishan Shao</span>
+                        <span class="student-period">Jun 2023 – May 2024</span>
+                    </div>
+                    <p class="student-detail">Worked on transfer-learning strategies for tropical forest image classification.</p>
+                    <span class="student-next-position">Next Position: PhD Student at Duke University</span>
+                </div>
+            </div>
+        </div>
+ 
+         <!-- CityU Imaging Group Section -->
         <div style="margin-top: 40px;">
             <h2>CITYU IMAGING GROUP, 2023</h2>
             <div class="imaging-group" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
