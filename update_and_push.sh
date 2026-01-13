@@ -14,22 +14,39 @@ echo "Python path: $(which python3)"
 echo "Activating virtual environment..."
 source venv/bin/activate
 
-echo "Running citation update script..."
-python3 update_citations.py
+MAX_RETRIES=5
+SLEEP_SECONDS=600
+attempt=1
+success=0
 
-if [ $? -eq 0 ]; then
-    # Check if index.html was modified
-    if git diff --quiet index.html; then
-        echo "No changes to citations. Everything is up to date."
-    else
-        echo "Citations updated! Committing and pushing..."
-        git add index.html
-        git commit -m "Updates"
-        git push origin main
-        echo "Done! Changes pushed to GitHub (origin/main)."
+while [ $attempt -le $MAX_RETRIES ]; do
+    echo "Running citation update script (attempt $attempt/$MAX_RETRIES)..."
+    python3 update_citations.py
+    status=$?
+    if [ $status -eq 0 ]; then
+        success=1
+        break
     fi
-else
-    echo "Script failed. Check the error messages above."
+
+    if [ $attempt -lt $MAX_RETRIES ]; then
+        echo "Attempt $attempt failed. Retrying in $SLEEP_SECONDS seconds..."
+        sleep $SLEEP_SECONDS
+    fi
+    attempt=$((attempt + 1))
+done
+
+if [ $success -ne 1 ]; then
+    echo "All $MAX_RETRIES attempts failed. Please check the logs."
     exit 1
 fi
 
+# Check if index.html was modified
+if git diff --quiet index.html; then
+    echo "No changes to citations. Everything is up to date."
+else
+    echo "Citations updated! Committing and pushing..."
+    git add index.html
+    git commit -m "Updates"
+    git push origin main
+    echo "Done! Changes pushed to GitHub (origin/main)."
+fi
