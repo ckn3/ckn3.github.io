@@ -170,6 +170,28 @@
             line-height: 1.5;
         }
 
+        .imaging-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .imaging-gallery img {
+            width: 48%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .imaging-gallery img:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+        }
+
         .student-grid {
             grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
         }
@@ -474,11 +496,11 @@
                 font-size: 0.88em;
             }
 
-            .imaging-group {
+            .imaging-gallery {
                 gap: 12px !important;
             }
 
-            .imaging-group img {
+            .imaging-gallery img {
                 width: 100% !important;
             }
         }
@@ -884,12 +906,12 @@
                 </div>
             </div>
         </div>
-        <!-- CityU Imaging Group Section -->
-        <div style="margin-top: 40px;">
-            <h2>CITYU IMAGING GROUP, 2023</h2>
-            <div class="imaging-group" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
-                <img src="figures/main/group1.JPG" alt="First Group Image" style="width: 48%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <img src="figures/main/group2.JPG" alt="Second Group Image" style="width: 48%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="team-section">
+            <h3>CityU Imaging Group, 2023</h3>
+            <p class="section-intro">A glimpse of the group and the people I had the pleasure to work with at City University of Hong Kong.</p>
+            <div class="imaging-gallery">
+                <img src="figures/main/group1.JPG" alt="CityU Imaging Group photo 1">
+                <img src="figures/main/group2.JPG" alt="CityU Imaging Group photo 2">
             </div>
         </div>
     </div>
