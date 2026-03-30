@@ -147,6 +147,7 @@
             font-size: 0.95em;
             border-left: 3px solid transparent;
             background-color: rgba(158, 126, 56, 0.05);
+            text-align: center;
         }
 
         #toc li a:hover {
@@ -209,12 +210,29 @@
 
         #name {
             text-align: center;
-            font-size: 1.5em;
-            padding: 10px 0;
+            font-size: 1.4em;
+            font-weight: 700;
+            padding: 15px 0;
+            color: #2c3e50;
+            margin-bottom: 10px;
         }
 
         #name span {
             display: block;
+        }
+
+        .contact-information {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(158, 126, 56, 0.15);
+        }
+
+        .contact-information p {
+            margin: 6px 0;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
         }
 
         .teaching-grid {
@@ -279,6 +297,10 @@
         @media screen and (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
+                top: 12px;
+                left: 12px;
+                padding: 10px 14px;
+                border-radius: 999px;
             }
 
             #sidebar {
@@ -294,8 +316,10 @@
 
             .content, .content-top {
                 margin-left: 0;
-                padding: 10px;
-                margin-top: 60px;
+                margin-top: 64px;
+                padding: 14px;
+                border-radius: 0;
+                box-shadow: none;
             }
 
             #profile-picture img {
@@ -328,7 +352,7 @@
         <div id="profile-picture">
             <img src="figures/main/profile.jpeg" alt="Kangning Cui">
         </div>
-        <div id = 'name'>Kangning Cui (Jason)</div>
+        <div id="name">Kangning Cui (Jason)</div>
         <div class="contact-information">
             <p><i>Research Assistant Professor</i></p>
             <p><i>Department of Computer Science</i></p>
@@ -338,12 +362,12 @@
         <div id="toc">
             <strong>Contents:</strong>
             <ul>
-                <li><a href="index.html">Main Page</a></li>
-                <li><a href="publications.html">Research Publications</a></li>
-                <li><a href="collaborators.html">Collaborators</a></li>
-                <li><a href="academic_honors.html">Academic Service & Honors</a></li>
-                <li><a href="teach.html">Teaching Experience</a></li>
-                <li><a href="others.html">Visits and Gallery</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Research</a></li>
+                <li><a href="teach.html">Teaching</a></li>
+                <li><a href="academic_honors.html">Services</a></li>
+                <li><a href="collaborators.html">Team</a></li>
+                <li><a href="others.html">Gallery</a></li>
             </ul>
         </div>
         
