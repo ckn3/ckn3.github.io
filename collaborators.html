@@ -434,7 +434,7 @@
             }
 
             .collaborators {
-                grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
                 padding: 0;
             }
@@ -447,6 +447,10 @@
             .collaborators-wrapper {
                 flex: 1;
                 min-width: 0;
+            }
+
+            .collaborators-wrapper .collaborators {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .team-section {
@@ -531,8 +535,12 @@
             }
 
             .collaborators {
-                grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 8px;
+            }
+
+            .collaborators-wrapper .collaborators {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .student-grid {
