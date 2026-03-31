@@ -7,56 +7,71 @@
     <meta name='Author' content='Kangning Cui'>
     <meta name='Content' content='Homepage'>
     <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
-    <title>Home Page for Jason Kangning Cui</title>
-    <!-- Include a Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Research | Kangning Cui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <style>
+        :root {
+            --accent: #9E7E38;
+            --accent-deep: #7D632C;
+            --ink: #1f2933;
+            --muted: #5b6672;
+            --paper: rgba(255, 255, 255, 0.92);
+            --line: rgba(158, 126, 56, 0.14);
+            --line-strong: rgba(158, 126, 56, 0.24);
+            --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+            --shadow-soft: 0 12px 28px rgba(31, 41, 51, 0.07);
+            --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         body {
-            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
             line-height: 1.5;
-            background-color: #f3f4f6;
-            color: #333;
+            background:
+                radial-gradient(circle at top right, rgba(158, 126, 56, 0.08), transparent 24%),
+                linear-gradient(180deg, #f6f4ef 0%, #eef2f1 38%, #f4f5f7 100%);
+            color: var(--ink);
         }
 
         a:link,
         a:visited {
             text-decoration: none;
-            color: #9E7E38;  /* Wake Forest Old Gold */
-            transition: color 0.3s;
+            color: var(--accent);
+            transition: color 0.22s var(--ease-smooth);
         }
 
         a:hover,
         a:active {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
+            color: var(--accent-deep);
             text-decoration: underline;
         }
 
         .record-link {
-            color: #9E7E38;  /* Wake Forest Old Gold */
+            color: var(--accent);
             text-decoration: none;
-            transition: color 0.2s;
+            transition: color 0.22s var(--ease-smooth);
         }
         
         .record-link:hover {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
+            color: var(--accent-deep);
             text-decoration: underline;
         }
 
         .news-date {
-            color: #9E7E38;  /* Wake Forest Old Gold */
+            color: var(--accent);
             font-weight: 500;
             margin-bottom: 5px;
             font-size: 0.9em;
         }
 
         .record-date {
-            color: #9E7E38;  /* Wake Forest Old Gold */
+            color: var(--accent);
             font-weight: 500;
             margin-bottom: 3px;
         }
 
         .collaborator a:hover {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
+            color: var(--accent-deep);
             text-decoration: none;
         }
 
@@ -75,9 +90,11 @@
         }
 
         h1, h2 {
-            margin-bottom: 20px;
+            margin: 0 0 20px;
             font-weight: 700;
             font-size: 24px;
+            font-family: 'Fraunces', serif;
+            letter-spacing: -0.02em;
         }
 
         #sidebar {
@@ -107,16 +124,20 @@
             height: 120px;
             object-fit: cover;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border: 3px solid #9E7E38;
-            transition: transform 0.3s ease;
+            border: 3px solid var(--accent);
+            transition: transform 0.22s var(--ease-smooth);
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #profile-picture img:hover {
-            transform: scale(1.05);
+            transform: translateZ(0) scale(1.035);
         }
 
         #toc {
             padding-top: 10px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(158, 126, 56, 0.15);
         }
 
         #toc strong {
@@ -143,20 +164,22 @@
             padding: 12px 15px;
             display: block;
             border-radius: 8px;
-            transition: all 0.3s ease;
+            transition: background-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             color: #555;
             font-size: 0.95em;
             border-left: 3px solid transparent;
             background-color: rgba(158, 126, 56, 0.05);
             text-align: center;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #toc li a:hover {
             background-color: rgba(158, 126, 56, 0.15);
-            border-left-color: #9E7E38;
-            color: #9E7E38;
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(158, 126, 56, 0.2);
+            border-left-color: var(--accent);
+            color: var(--accent);
+            transform: translate3d(3px, 0, 0);
+            box-shadow: 0 4px 12px rgba(158, 126, 56, 0.16);
         }
 
         #toc li a:active {
@@ -164,11 +187,13 @@
         }
 
         .content {
-            margin-left: 300px; /* Adjusted to match other pages */
+            margin-left: 300px;
             padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            background-color: var(--paper);
+            box-shadow: var(--shadow);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            margin-bottom: 18px;
         }
 
         ol {
@@ -182,7 +207,7 @@
         }
 
         .content-top {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .icon-link {
@@ -236,23 +261,85 @@
             color: #555;
             line-height: 1.6;
         }
-        .publication-entry {
+
+        .page-header {
+            padding: 28px 30px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(248, 243, 231, 0.88)),
+                linear-gradient(180deg, rgba(158, 126, 56, 0.08), transparent);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .page-header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .page-intro {
+            margin: 0;
+            font-size: 1.08rem;
+            color: var(--ink);
+            max-width: 920px;
+        }
+
+        .page-note {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .section-header {
             display: flex;
-            gap: 20px;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section-header h2 {
+            margin: 0;
+        }
+
+        .section-meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .publication-entry {
+            display: grid;
+            grid-template-columns: 184px minmax(0, 1fr);
+            align-items: start;
+            gap: 22px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
+            cursor: pointer;
         }
     
         .publication-entry:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
+            border-color: var(--line-strong);
+        }
+
+        .publication-entry:focus-visible,
+        .conference-entry:focus-visible {
+            outline: 2px solid rgba(158, 126, 56, 0.5);
+            outline-offset: 3px;
         }
 
         .publication-figure {
-            flex: 0 0 150px;
+            width: 100%;
+            align-self: stretch;
             display: flex;
             align-items: center;
         }
@@ -260,13 +347,15 @@
         .publication-figure img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 14px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth);
+            border: 1px solid rgba(31, 41, 51, 0.08);
+            box-shadow: 0 12px 24px rgba(31, 41, 51, 0.12);
         }
     
         .publication-figure img:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
     
         .publication-text {
@@ -274,155 +363,247 @@
             min-width: 0;
         }
 
-        .publication-text p.title {
-            font-size: 1em;
-            margin-bottom: 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .publication-text p.title .paper-title {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .publication-text p.title .venue {
-            white-space: nowrap;
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        .publication-text p.authors {
-            font-size: 0.9em;
-            margin-bottom: 8px;
-            color: #666;
-            margin-top: 0;
-        }
-        
-        .publication-text p.authors .main-author {
-            color: #000;
-            font-weight: normal;
-        }
-        
-        .publication-text .badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
+        .publication-text p.title,
         .conference-text p.title {
-            font-size: 1em;
-            margin-bottom: 0;
+            font-size: 1.08rem;
+            line-height: 1.4;
+            margin: 0 0 8px;
             display: flex;
-            align-items: center;
-            gap: 15px;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
             flex-wrap: wrap;
         }
         
+        .publication-text p.title .paper-title,
         .conference-text p.title .paper-title {
             flex: 1;
-            min-width: 300px;
+            min-width: 0;
         }
         
+        .publication-text p.title .venue,
         .conference-text p.title .venue {
             white-space: nowrap;
-            font-size: 0.9em;
-            color: #666;
+            font-size: 0.92rem;
+            color: var(--muted);
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(158, 126, 56, 0.08);
+            border: 1px solid rgba(158, 126, 56, 0.12);
         }
         
+        .publication-text p.authors,
         .conference-text p.authors {
-            font-size: 0.9em;
-            margin-bottom: 8px;
-            color: #666;
+            font-size: 0.97rem;
+            margin: 0 0 12px;
+            color: var(--muted);
             margin-top: 0;
         }
         
+        .publication-text p.authors .main-author,
         .conference-text p.authors .main-author {
             color: #000;
             font-weight: normal;
         }
         
+        .publication-text .badges,
         .conference-text .badges {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
 
-        .publications-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        .badges a {
+            display: inline-flex;
+            transition: transform 0.16s var(--ease-smooth);
         }
 
-        @media (max-width: 768px) {
-            .publications-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
+        .badges a:hover {
+            transform: translateY(-1px);
+        }
+
+        .publications-grid {
+            display: grid;
+            gap: 18px;
         }
 
         /* Modal styles */
         .modal {
-            display: none;
             position: fixed;
             z-index: 1000;
-            padding-top: 50px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 36px;
+            box-sizing: border-box;
+            background: rgba(15, 19, 24, 0.82);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.22s var(--ease-smooth), visibility 0.22s var(--ease-smooth);
+        }
+
+        .modal.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .modal-panel {
+            width: min(920px, 100%);
+            max-height: calc(100vh - 72px);
+            overflow: hidden;
+            border-radius: 24px;
+            background: rgba(251, 249, 244, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 28px 72px rgba(0, 0, 0, 0.36);
+            transform: translateY(20px) scale(0.97);
+            opacity: 0;
+            transition: transform 0.26s var(--ease-smooth), opacity 0.22s var(--ease-smooth);
+        }
+
+        .modal.is-open .modal-panel {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        .modal-media {
+            padding: 22px 22px 0;
         }
 
         .modal-content {
-            margin: auto;
             display: block;
-            max-width: 90%;
-            max-height: 90vh;
+            width: 100%;
+            max-height: min(52vh, 520px);
+            object-fit: contain;
+            border-radius: 18px;
+            border: 1px solid rgba(31, 41, 51, 0.08);
+            background: linear-gradient(180deg, rgba(246, 244, 239, 0.92), rgba(255, 255, 255, 0.98));
+        }
+
+        .modal-body {
+            padding: 20px 24px 24px;
+        }
+
+        .modal-venue {
+            display: inline-flex;
+            margin-bottom: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(158, 126, 56, 0.1);
+            border: 1px solid rgba(158, 126, 56, 0.14);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .modal-title {
+            margin: 0 0 10px;
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.45rem, 2vw, 2rem);
+            line-height: 1.2;
+            color: #17202a;
+        }
+
+        .modal-authors {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .modal-abstract-block {
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+        }
+
+        .modal-abstract-label {
+            margin-bottom: 10px;
+            color: var(--accent-deep);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .modal-abstract {
+            margin: 0;
+            color: var(--ink);
+            font-size: 1rem;
+            line-height: 1.72;
+            max-height: 28vh;
+            overflow-y: auto;
+            padding-right: 4px;
         }
 
         .close {
             position: absolute;
-            right: 35px;
-            top: 15px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 400;
             cursor: pointer;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(6px);
+            transition: background-color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth);
+        }
+
+        .close:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: scale(1.04);
+        }
+
+        body.modal-open {
+            overflow: hidden;
         }
 
         .conference-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            gap: 18px;
         }
 
         .conference-entry {
-            display: flex;
-            gap: 20px;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            display: grid;
+            grid-template-columns: 184px minmax(0, 1fr);
+            align-items: start;
+            gap: 22px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
+            cursor: pointer;
         }
 
         .conference-entry:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
+            border-color: var(--line-strong);
         }
 
         .publication-entry.highlight-entry,
         .conference-entry.highlight-entry {
-            background: linear-gradient(135deg, rgba(158, 126, 56, 0.18), rgba(248, 243, 231, 0.95));
-            border: 1px solid rgba(158, 126, 56, 0.45);
-            box-shadow: 0 3px 10px rgba(158, 126, 56, 0.25);
+            background: linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(248, 243, 231, 0.96));
+            border: 1px solid rgba(158, 126, 56, 0.36);
+            box-shadow: 0 14px 28px rgba(158, 126, 56, 0.16);
         }
 
         .publication-entry.highlight-entry:hover,
         .conference-entry.highlight-entry:hover {
-            box-shadow: 0 6px 16px rgba(158, 126, 56, 0.35);
+            box-shadow: 0 18px 34px rgba(158, 126, 56, 0.22);
         }
  
         .conference-text {
@@ -430,67 +611,42 @@
             min-width: 0;
         }
 
-        .conference-text .title {
-            font-size: 1em;
-            margin-bottom: 2px;
-        }
-
-        .conference-text .authors {
-            font-size: 0.9em;
-            margin-bottom: 8px;
-            color: #666;
-        }
-
-        .conference-text .authors .main-author {
-            color: #000;
-            font-weight: normal;
-        }
-
-        .conference-text .venue {
-            font-size: 0.9em;
-            margin-bottom: 8px;
-        }
-
-        .conference-text .badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+        .publication-footnote {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 0.94rem;
         }
 
         /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             position: fixed;
-            top: 15px;
-            left: 15px;
+            top: 12px;
+            left: 12px;
             z-index: 1001;
-            background: #9E7E38;
+            background: var(--accent);
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 10px 14px;
+            border-radius: 999px;
             cursor: pointer;
             font-size: 18px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .mobile-menu-btn:hover {
-            background: #7D632C;
+            background: var(--accent-deep);
         }
 
         /* Responsive Design for Mobile */
         @media screen and (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
-                top: 12px;
-                left: 12px;
-                padding: 10px 14px;
-                border-radius: 999px;
             }
 
             #sidebar {
                 transform: translateX(-100%);
-                transition: transform 0.3s ease;
+                transition: transform 0.22s var(--ease-smooth);
                 z-index: 1000;
                 width: 280px;
             }
@@ -505,6 +661,7 @@
                 padding: 14px;
                 border-radius: 0;
                 box-shadow: none;
+                border: none;
             }
 
             #profile-picture img {
@@ -517,18 +674,37 @@
                 font-size: 1.2em;
             }
 
+            .page-header {
+                padding: 22px 18px;
+                margin-bottom: 22px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
             h1, h2 {
                 font-size: 20px;
             }
 
-            .publication-entry, .conference-entry {
+            .section-header {
                 flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .section-meta {
+                white-space: normal;
+            }
+
+            .publication-entry, .conference-entry {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 16px;
+                padding: 16px;
             }
 
             .publication-figure {
-                flex: 0 0 auto;
                 width: 100%;
-                margin-bottom: 10px;
             }
 
             .publication-figure img {
@@ -540,6 +716,18 @@
                 width: 100%;
             }
 
+            .publication-text p.title,
+            .conference-text p.title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .publication-text p.title .venue,
+            .conference-text p.title .venue {
+                white-space: normal;
+            }
+
             .badges {
                 flex-wrap: wrap;
             }
@@ -547,6 +735,40 @@
             .badges img {
                 max-width: 100%;
                 height: auto;
+            }
+
+            .modal {
+                padding: 18px;
+            }
+
+            .modal-panel {
+                max-height: calc(100vh - 36px);
+                border-radius: 20px;
+            }
+
+            .modal-media {
+                padding: 16px 16px 0;
+            }
+
+            .modal-content {
+                max-height: 36vh;
+                border-radius: 14px;
+            }
+
+            .modal-body {
+                padding: 16px 18px 18px;
+            }
+
+            .modal-abstract {
+                max-height: 32vh;
+            }
+
+            .close {
+                top: 12px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 26px;
             }
         }
     </style>
@@ -581,16 +803,15 @@
     </div>
 
     <div class="content content-top">
-        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 4px solid #9E7E38;">
-            <p style="margin: 0; font-size: 1.1em; line-height: 1.6;">
-                <strong>Complete Publication List:</strong> For my full publication record, please visit my 
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" style="color: #9E7E38; text-decoration: none; font-weight: bold;">Google Scholar profile</a>.
-                <br><br>
-                <strong>Featured Work:</strong> Selected publications of my work in machine learning, computer vision, with applications in sustainability and healthcare. Entries with the highlighted background mark my representative works.
-            </p>
+        <div class="page-header">
+            <h1>Research</h1>
+            <p class="page-intro">Selected publications in machine learning, image and signal processing, remote sensing, and healthcare applications.</p>
+            <p class="page-note">Complete publication record is available on <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>. Highlighted entries indicate representative works.</p>
         </div>
         
-        <h2 id="journal-publications">JOURNAL PUBLICATIONS</h2>
+        <div class="section-header">
+            <h2 id="journal-publications">Journal Publications</h2>
+        </div>
         <div class="publications-grid">
 
             <!-- Publication Entry -->
@@ -748,12 +969,27 @@
     
     <!-- 将模态框移到页面最外层 -->
     <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <span class="close" aria-label="Close preview">&times;</span>
+            <div class="modal-media">
+                <img class="modal-content" id="modal-img" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="modal-venue" id="modal-venue"></div>
+                <h3 class="modal-title" id="modal-title"></h3>
+                <p class="modal-authors" id="modal-authors"></p>
+                <div class="modal-abstract-block">
+                    <div class="modal-abstract-label">Abstract</div>
+                    <p class="modal-abstract" id="modal-abstract"></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="content">
-        <h2 id="conference-publications">CONFERENCE PUBLICATIONS AND POSTERS</h2>
+        <div class="section-header">
+            <h2 id="conference-publications">Conference Publications</h2>
+        </div>
         <div class="conference-grid">
 
             <div class="conference-entry">
@@ -766,7 +1002,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos"</strong></span>
-                        <span class="venue">in <i>Proc MICCAI</i>, Springer, 2025</span>
+                        <span class="venue"><i>MICCAI</i>, 2025</span>
                     </p>
                     <p class="authors">
                         Yingyu Yang, Qianye Yang, <span class="main-author">Kangning Cui</span>, Can Peng, Elena D'Alberti, Netzahualcoyotl Hernandez-Cruz, Olga Patey, Aris Papageorghiou, and Alison Noble
@@ -791,7 +1027,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Blind Restoration of High-Resolution Ultrasound Video"</strong></span>
-                        <span class="venue">in <i>Proc MICCAI</i>, Springer, 2025</span>
+                        <span class="venue"><i>MICCAI</i>, 2025</span>
                     </p>
                     <p class="authors">
                         Chu Chen<sup>‡</sup>, <span class="main-author">Kangning Cui</span>, Pasquale Cascarano, Wei Tang, Elena L. Piccolomini, and Raymond H. Chan
@@ -813,7 +1049,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms"</strong></span>
-                        <span class="venue">in <i>Proc IJCAI</i>, 2025</span>
+                        <span class="venue"><i>IJCAI</i>, 2025</span>
                     </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman
@@ -834,7 +1070,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced CHD Detection"</strong></span>
-                        <span class="venue">in <i>Proc FIMH</i>, Springer, 2025</span>
+                        <span class="venue"><i>FIMH</i>, 2025</span>
                     </p>
                     <p class="authors">
                         Qianye Yang<sup>‡</sup>, <span class="main-author">Kangning Cui</span>, Yipeng Hu, Can Peng, Netzahualcoyotl Hernandez-Cruz, Rahul Ahuja, Elena D'Alberti, Raymond H. Chan, Olga Patey, Aris Papageorghiou, and Alison Noble
@@ -858,7 +1094,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis"</strong></span>
-                        <span class="venue">in <i>Proc ISBI</i>, IEEE, 2025</span>
+                        <span class="venue"><i>ISBI</i>, 2025</span>
                     </p>
                     <p class="authors">
                         Wei Tang<sup>†</sup>, <span class="main-author">Kangning Cui</span><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel<sup>‡</sup>
@@ -880,7 +1116,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Optimized Hard Exudate Detection with Supervised Contrastive Learning"</strong></span>
-                        <span class="venue">in <i>Proc ISBI</i>, IEEE, 2024</span>
+                        <span class="venue"><i>ISBI</i>, 2024</span>
                     </p>
                     <p class="authors">
                         Wei Tang, <span class="main-author">Kangning Cui</span><sup>‡</sup>, and Raymond H. Chan
@@ -905,7 +1141,7 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry"</strong></span>
-                        <span class="venue">in <i>Proc WHISPERS</i>, IEEE, 2022</span>
+                        <span class="venue"><i>WHISPERS</i>, 2022</span>
                     </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†</sup>, Ruoning Li, Sam L. Polk, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
@@ -921,34 +1157,107 @@
             </div>
 
         </div>
-        <p><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
+        <p class="publication-footnote"><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
     </div>
+
+    <script id="publication-abstracts" type="application/json">
+{
+  "Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images": "The hyperspectral image (HSI) clustering has recently attracted remarkable attention. However, only a few HSI clustering methods focus on designing methods using multi-view data, where each feature type can be regarded as a specific view of data. Moreover, they typically focus on small HSIs; the applicability to large HSIs is underexplored. In this article, we propose Superpixel-level Hypergraph Regularized Multi-view Clustering (SHRMC), which contains three main stages. First, we segment an HSI into several superpixels and extract the superpixel-level feature for each feature type. Second, to fully explore the complex geometric structure, the superpixel-level hypergraph on each feature type is constructed by building the shared hyperedge between each superpixel and its neighborhoods. Third, with the resulting superpixel-level features and hypergraphs on multi-feature data, we propose a novel superpixel-based and hypergraph regularized multi-view clustering model for large HSIs, which can fully explore the geometric structure and capture the intra-view and inter-view relationships. We conducted comprehensive experiments to validate the superiority of our proposed SHRMC method on four datasets, including Indian Pines, Salinas, Pavia University, and WHU-Hi-LongKou. Notably, the performance of our proposed method is significantly better than that of the second-best method, i.e., improving the overall accuracy by around 4.29%-9.94% on the four datasets.",
+  "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images": "Compared with natural images, remote sensing images (RSIs) have the unique characteristic, i.e., larger intraclass variance, which makes semantic segmentation for remote sensing images more challenging. Moreover, existing semantic segmentation models for remote sensing images usually employ a vanilla softmax classifier, which has three drawbacks: (1) non-direct supervision for the pixel representations during training; (2) inadequate modeling ability of parametric softmax classifiers under large intraclass variance; and (3) opaque process of classification decision. In this paper, we propose a novel classifier (called CenterSeg) customized for RSI semantic segmentation, which solves the abovementioned problems with multiple prototypes, direct supervision under Grassmann manifold, and interpretability strategy. Specifically, for each class, our CenterSeg obtains local class centers by aggregating corresponding pixel features based on ground-truth masks, and generates multiple prototypes through hard attention assignment and momentum updating. In addition, we introduce the Grassmann manifold and constrain the joint embedding space of pixel features and prototypes based on two additional regularization terms. Especially, during the inference, CenterSeg can further provide interpretability to the model by restricting the prototype as a sample of the training set. Experimental results on three remote sensing segmentation datasets validate the effectiveness of the model. Besides the superior performance, CenterSeg has the advantages of simplicity, lightweight, compatibility, and interpretability.",
+  "Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery": "Understanding the spatial distribution of palms in tropical forests is essential for ecological monitoring, conservation strategies, and the sustainable integration of natural forest products into local and global supply chains. However, the analysis of remotely sensed data are challenged by overlapping palm and tree crowns, uneven shading across the canopy surface, and the heterogeneous nature of the forest landscapes, which often affect the performance of palm detection and segmentation algorithms. To overcome these issues, we introduce PalmDSNet, a deep learning framework for efficient detection, segmentation, and counting of canopy palms. To model spatial patterns, we introduce a bimodal reproduction algorithm that simulates palm propagation based on PalmDSNet outputs. We used UAV-captured imagery to create orthomosaics from 21 sites across western Ecuadorian tropical forests, covering a gradient from the everwet Choco forests near Colombia to the drier forests of southwestern Ecuador. Expert annotations were used to create a comprehensive dataset, including 7,356 bounding boxes on image patches and 7,603 palm centers across five orthomosaics, encompassing a total area of 449 hectares. By integrating detection and spatial modeling, we effectively simulate the spatial distribution of palms in diverse and dense tropical environments, validating its utility for advanced applications in tropical forest monitoring and remote sensing analysis. The dataset can be accessed at 10.5281/zenodo.13822508, and the code to replicate the study is available at github.com/ckn3/palm-ds-sp.",
+  "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering": "Hyperspectral images (HSIs) provide exceptional spatial and spectral resolution of a scene, crucial for various remote sensing applications. However, the high dimensionality, presence of noise and outliers, and the need for precise labels of HSIs present significant challenges to the analysis of HSIs, motivating the development of performant HSI clustering algorithms. This paper introduces a novel unsupervised HSI clustering algorithm, Superpixel-based and Spatially-regularized Diffusion Learning (S2DL), which addresses these challenges by incorporating rich spatial information encoded in HSIs into diffusion geometry-based clustering. S2DL employs the Entropy Rate Superpixel (ERS) segmentation technique to partition an image into superpixels, then constructs a spatially-regularized diffusion graph using the most representative high-density pixels. This approach reduces computational burden while preserving accuracy. Cluster modes, serving as exemplars for underlying cluster structure, are identified as the highest-density pixels farthest in diffusion distance from other highest-density pixels. These modes guide the labeling of the remaining representative pixels from ERS superpixels. Finally, majority voting is applied to the labels assigned within each superpixel to propagate labels to the rest of the image. This spatial-spectral approach simultaneously simplifies graph construction, reduces computational cost, and improves clustering performance. S2DL’s performance is illustrated with extensive experiments on four publicly available, real-world HSIs: Indian Pines, Salinas, Salinas A, and WHU-Hi. Additionally, we apply S2DL to landscape-scale, unsupervised mangrove species mapping in the Mai Po Nature Reserve, Hong Kong, using a Gaofen-5 HSI. The success of S2DL in these diverse numerical experiments indicates its efficacy on a wide range of important unsupervised remote sensing analysis tasks.",
+  "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images": "Hyperspectral images taken from aircraft or satellites contain information from hundreds of spectral bands, within which lie latent lower-dimensional structures that can be exploited for classifying vegetation and other materials. A disadvantage of working with hyperspectral images is that, due to an inherent trade-off between spectral and spatial resolution, they have a relatively coarse spatial scale, meaning that single pixels may correspond to spatial regions containing multiple materials. This article introduces the Diffusion and Volume maximization-based Image Clustering (D-VIC) algorithm for unsupervised material clustering to address this problem. By directly incorporating pixel purity into its labeling procedure, D-VIC gives greater weight to pixels corresponding to a spatial region containing just a single material. D-VIC is shown to outperform comparable state-of-the-art methods in extensive experiments on a range of hyperspectral images, including land-use maps and highly mixed forest health surveys (in the context of ash dieback disease), implying that it is well-equipped for unsupervised material clustering of spectrally-mixed hyperspectral datasets.",
+  "Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery": "Monitoring changes within the land surface and open water bodies is critical for natural resource management, conservation, and environmental policy. While the use of satellite imagery for these purposes is common, fine-scale change detection can be a technical challenge. Difficulties arise from variable atmospheric conditions and the problem of assigning pixels to individual objects. We examined the degree to which two machine learning approaches can better characterize change detection in the context of artisanal small-scale gold mining (ASGM). We obtained Sentinel-2 imagery and consulted with domain experts to construct an open-source labeled land-cover change dataset focused on the Madre de Dios region in Peru, a hotspot of ASGM activity, and also generated out-of-sample datasets from other countries. With these labeled data, we utilized supervised and semi-supervised approaches to study binary and multi-class change within mining ponds. We also tested how multiple channels, histogram matching, and La*b* color metrics improved performance and reduced atmospheric effects. Empirical results show that the supervised E-ReCNN method on 6-channel histogram-matched images generated the most accurate change detection both in the focal region and in out-of-sample regions, indicating strong scalability to other forms of land-use modification.",
+  "Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos": "The identification of cardiac phase is an essential step for analysis and diagnosis of cardiac function. Automatic methods, especially data-driven methods for cardiac phase detection, typically require extensive annotations, which is time-consuming and labour-intensive. In this paper, we present an unsupervised framework for end-diastole (ED) and end-systole (ES) detection through self-supervised learning of latent cardiac motion trajectories from 4-chamber-view echocardiography videos. Our method eliminates the need for manual annotations, including ED and ES indices, segmentation, or volumetric measurements, by training a reconstruction model to encode interpretable spatiotemporal motion patterns. Evaluated on the EchoNet-Dynamic benchmark, the approach achieves mean absolute error (MAE) of 3.0 frames (58.3 ms) for ED and 2.0 frames (38.8 ms) for ES detection, matching state-of-the-art supervised methods. Extended to fetal echocardiography, the model demonstrates robust performance with MAE 1.5 frames (20.7 ms) for ED and 1.7 frames (25.3 ms) for ES, despite the fact that the fetal heart model is built using non-standardized heart views due to fetal heart positioning variability. Our results demonstrate the potential of the proposed latent motion trajectory strategy for cardiac phase detection in adult and fetal echocardiography. This work advances unsupervised cardiac motion analysis, offering a scalable solution for clinical populations lacking annotated data. Code is released at https://github.com/YingyuYyy/CardiacPhase.",
+  "Blind Restoration of High-Resolution Ultrasound Video": "Ultrasound imaging is widely applied in clinical practice, yet ultrasound videos often suffer from low signal-to-noise ratios (SNR) and limited resolutions, posing challenges for diagnosis and analysis. Variations in equipment and acquisition settings can further exacerbate differences in data distribution and noise levels, reducing the generalizability of pre-trained models. This work presents a self-supervised ultrasound video super-resolution algorithm called Deep Ultrasound Prior (DUP). DUP employs a video-adaptive optimization process of a neural network that enhances the resolution of given ultrasound videos without requiring paired training data while simultaneously removing noise. Quantitative and visual evaluations demonstrate that DUP outperforms existing super-resolution algorithms, leading to substantial improvements for downstream applications.",
+  "Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms": "Palms are ecologically and economically indicators of tropical forest health, biodiversity, and human impact that support local economies and global forest product supply chains. While palm detection in plantations is well-studied, efforts to map naturally occurring palms in dense forests remain limited by overlapping crowns, uneven shading, and heterogeneous landscapes. We develop PRISM (Processing, Inference, Segmentation, and Mapping), a flexible pipeline for detecting and localizing palms in dense tropical forests using large orthomosaic images. Orthomosaics are created from thousands of aerial images and spanning several to hundreds of gigabytes. Our contributions are threefold. First, we construct a large UAV-derived orthomosaic dataset collected across 21 ecologically diverse sites in western Ecuador, annotated with 8,830 bounding boxes and 5,026 palm center points. Second, we evaluate multiple state-of-the-art object detectors based on efficiency and performance, integrating zero-shot SAM 2 as the segmentation backbone, and refining the results for precise geographic mapping. Third, we apply calibration methods to align confidence scores with IoU and explore saliency maps for feature explainability. Though optimized for palms, PRISM is adaptable for identifying other natural objects, such as eastern white pines. Future work will explore transfer learning for lower-resolution datasets (0.5–1m). Data and code can be found at github.com/Zippppo/PRISM.",
+  "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis": "Left Ventricular Hypertrophy (LVH) is a major cardiovascular risk factor, linked to heart failure, arrhythmia, and sudden cardiac death, often resulting from chronic stress like hypertension. Electrocardiography (ECG), while varying in sensitivity, is widely accessible and cost-effective for detecting LVH-related morphological changes. This work introduces a bilateral signal warping (BSW) approach to improve ECG-based LVH diagnosis. Our method creates a library of heartbeat prototypes from patients with consistent ECG patterns. After preprocessing to eliminate baseline wander and detect R peaks, we apply BSW to cluster heartbeats, generating prototypes for both normal and LVH classes. We compare each new record to these references to support diagnosis. Experimental results show promising potential for practical application in clinical settings.",
+  "Optimized Hard Exudate Detection with Supervised Contrastive Learning": "Diabetic retinopathy (DR) is a leading global cause of blindness. Early detection of hard exudates plays a crucial role in identifying DR, which aids in treating diabetes and preventing vision loss. However, the unique characteristics of hard exudates, ranging from their inconsistent shapes to indistinct boundaries, pose significant challenges to existing segmentation techniques. To address these issues, we present a novel supervised contrastive learning framework to optimize hard exudate segmentation. Specifically, we introduce a patch-wise density contrasting scheme to distinguish between areas with varying lesion concentrations, and therefore improve the model’s proficiency in segmenting small lesions. To handle the ambiguous boundaries, we develop a discriminative edge inspection module to dynamically analyze the pixels that lie around the boundaries and accurately delineate the exudates. Upon evaluation using the IDRiD dataset and comparison with state-of-the-art frameworks, our method exhibits its effectiveness and shows potential for computer-assisted hard exudate detection. The code to replicate experiments is available at github.com/wetang7/HECL/.",
+  "Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry": "Hyperspectral images, which store a hundred or more spectral bands of reflectance, have become an important data source in natural and social sciences. They are often generated in large quantities at a relatively coarse spatial resolution, motivating unsupervised machine learning algorithms that incorporate known structure in hyperspectral imagery. This work introduces the Spatial-Spectral Image Reconstruction and Clustering with Diffusion Geometry (DSIRC) algorithm for partitioning highly mixed hyperspectral images. DSIRC reduces measurement noise through a shape-adaptive reconstruction procedure that uses spectrally correlated pixels within a data-adaptive spatial neighborhood. It then locates high-density, high-purity pixels that are far in diffusion distance from one another and treats these as cluster exemplars. Non-modal pixels are assigned labels through diffusion-distance nearest-neighbor propagation. Strong numerical results indicate that incorporating spatial information through image reconstruction substantially improves pixel-wise clustering performance."
+}
+    </script>
 
     <!-- Add JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById("modal");
             var modalImg = document.getElementById("modal-img");
-            var span = document.getElementsByClassName("close")[0];
+            var modalTitle = document.getElementById("modal-title");
+            var modalVenue = document.getElementById("modal-venue");
+            var modalAuthors = document.getElementById("modal-authors");
+            var modalAbstract = document.getElementById("modal-abstract");
+            var closeBtn = document.getElementsByClassName("close")[0];
+            var abstracts = JSON.parse(document.getElementById("publication-abstracts").textContent);
 
-            window.openModal = function(imgSrc) {
-                modal.style.display = "block";
-                modalImg.src = imgSrc;
+            function normalizeTitle(text) {
+                return text.replace(/^["“”]+|["“”]+$/g, '').trim();
             }
 
-            span.onclick = function() {
-                modal.style.display = "none";
+            function closeModal() {
+                modal.classList.remove("is-open");
+                document.body.classList.remove("modal-open");
             }
+
+            function openDetailModal(entry) {
+                var image = entry.querySelector('.publication-figure img');
+                var title = normalizeTitle(entry.querySelector('.paper-title').textContent);
+                var venue = entry.querySelector('.venue').textContent.trim();
+                var authorsHtml = entry.querySelector('.authors').innerHTML.trim();
+
+                modalImg.src = image.src;
+                modalImg.alt = title;
+                modalTitle.textContent = title;
+                modalVenue.textContent = venue;
+                modalAuthors.innerHTML = authorsHtml;
+                modalAbstract.textContent = abstracts[title] || "Abstract will be added soon.";
+                modal.classList.add("is-open");
+                document.body.classList.add("modal-open");
+            }
+
+            window.openModal = function(source) {
+                if (typeof source === 'string') {
+                    modalImg.src = source;
+                    modalTitle.textContent = '';
+                    modalVenue.textContent = '';
+                    modalAuthors.innerHTML = '';
+                    modalAbstract.textContent = '';
+                    modal.classList.add("is-open");
+                    document.body.classList.add("modal-open");
+                }
+            };
+
+            document.querySelectorAll('.publication-figure img[onclick]').forEach(function(img) {
+                img.removeAttribute('onclick');
+            });
+
+            document.querySelectorAll('.publication-entry, .conference-entry').forEach(function(entry) {
+                entry.setAttribute('tabindex', '0');
+                entry.addEventListener('click', function(event) {
+                    if (event.target.closest('a')) {
+                        return;
+                    }
+                    openDetailModal(entry);
+                });
+
+                entry.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openDetailModal(entry);
+                    }
+                });
+            });
+
+            closeBtn.onclick = closeModal;
 
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                    closeModal();
                 }
             }
 
             document.addEventListener('keydown', function(event) {
                 if (event.key === "Escape") {
-                    modal.style.display = "none";
+                    closeModal();
                 }
             });
         });
