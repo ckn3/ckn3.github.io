@@ -7,13 +7,27 @@
     <meta name='description' content='Homepage'>
     <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
     <title>Home Page for Jason Kangning Cui</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --accent: #9E7E38;
+            --accent-deep: #7D632C;
+            --ink: #1f2933;
+            --muted: #5b6672;
+            --soft: #eef1ed;
+            --paper: #ffffff;
+            --line: rgba(158, 126, 56, 0.14);
+            --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+            --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Source Sans 3', sans-serif;
             line-height: 1.5;
-            background-color: #f3f4f6;
-            color: #333;
+            background:
+                radial-gradient(circle at top right, rgba(158, 126, 56, 0.08), transparent 22%),
+                linear-gradient(180deg, #f6f4ef 0%, #eef2f1 38%, #f4f5f7 100%);
+            color: var(--ink);
         }
 
         a:link,
@@ -33,6 +47,8 @@
             margin-bottom: 20px;
             font-weight: 700;
             font-size: 24px;
+            font-family: 'Fraunces', serif;
+            letter-spacing: -0.02em;
         }
 
         .welcome-note {
@@ -70,11 +86,13 @@
             object-fit: cover;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border: 3px solid #9E7E38;
-            transition: transform 0.3s ease;
+            transition: transform 0.22s var(--ease-smooth);
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #profile-picture img:hover {
-            transform: scale(1.05);
+            transform: translateZ(0) scale(1.035);
         }
 
         /* Styling for the search bar and buttons */
@@ -147,20 +165,22 @@
             padding: 12px 15px;
             display: block;
             border-radius: 8px;
-            transition: all 0.3s ease;
+            transition: background-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             color: #555;
             font-size: 0.95em;
             border-left: 3px solid transparent;
             background-color: rgba(158, 126, 56, 0.05);
             text-align: center;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #toc li a:hover {
             background-color: rgba(158, 126, 56, 0.15);
             border-left-color: #9E7E38;
             color: #9E7E38;
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(158, 126, 56, 0.2);
+            transform: translate3d(3px, 0, 0);
+            box-shadow: 0 4px 12px rgba(158, 126, 56, 0.16);
         }
 
         #toc li a:active {
@@ -170,11 +190,12 @@
         /* Content Styles */
         .content, .content-top {
             margin-left: 300px;
-            padding: 15px;
-            background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-bottom: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.92);
+            box-shadow: var(--shadow);
+            border-radius: 18px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         .content:last-child, .content-top:last-child {
@@ -232,162 +253,249 @@
             color: #555;
             line-height: 1.6;
         }
-        .record-container {
+        .hero-card {
+            overflow: hidden;
+        }
+
+        .hero-copy {
+            padding: 8px 4px 4px 4px;
+        }
+
+        .hero-kicker {
+            display: inline-block;
+            margin-bottom: 14px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(158, 126, 56, 0.12);
+            color: var(--accent-deep);
+            font-size: 0.88em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            margin: 0 0 14px 0;
+            font-size: clamp(2.2rem, 4vw, 3.8rem);
+            line-height: 1.04;
+            color: #17202a;
+        }
+
+        .hero-lead {
+            margin: 0 0 18px 0;
+            color: var(--muted);
+            font-size: 1.08em;
+            line-height: 1.65;
+        }
+
+        .hero-note {
+            margin: -2px 0 20px 0;
+            color: var(--accent-deep);
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-links {
             display: flex;
-            gap: 15px;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
         }
-        
-        .record-container:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+        .hero-links a img {
+            border-radius: 999px;
         }
-        
-        .record-text {
-            flex: 1;
-            order: 2;
-        }
-        
-        .record-text p {
-            margin: 0;
-        }
-        
-        .record-text b {
-            color: #2c3e50;
-            font-size: 1.1em;
-        }
-        
-        .record-text i {
-            color: #666;
-        }
-        
-        .record-text div {
-            margin-top: 5px;
-            color: #555;
-            line-height: 1.4;
-        }
-        
-        .record-image {
-            flex: 0 0 100px;
-            order: 1;
-        }
-        
-        .record-image img {
-            width: 100px;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        
-        .record-image img:hover {
-            transform: scale(1.05);
-        }
-        
-        .record-date {
-            color: #9E7E38;  /* Wake Forest Old Gold */
-            font-weight: 500;
-            margin-bottom: 3px;
-        }
-        
-        .record-link {
-            color: #9E7E38;  /* Wake Forest Old Gold */
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .record-link:hover {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
-            text-decoration: underline;
-        }
-        
-        /* Collaborators Grid */
-        .collaborators {
+
+        .home-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            padding: 15px;
+            grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+            gap: 18px;
+            align-items: stretch;
         }
-        
-        .collaborator {
-            background: #fff;
+
+        .section-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,248,0.98) 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 8px 20px rgba(31, 41, 51, 0.05);
+            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth);
+            will-change: transform;
+            transform: translateZ(0);
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .section-card:hover {
+            transform: translate3d(0, -2px, 0);
+            box-shadow: 0 12px 24px rgba(31, 41, 51, 0.08);
+            border-color: rgba(158, 126, 56, 0.22);
+        }
+
+        .section-heading {
+            margin-bottom: 18px;
+        }
+
+        .section-heading h2,
+        .section-heading h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: var(--ink);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 14px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 112px minmax(0, 1fr);
+            gap: 10px;
+            padding: 16px 0;
+            border-top: 1px solid rgba(31, 41, 51, 0.08);
+        }
+
+        .timeline-item:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .timeline-date {
+            color: var(--accent-deep);
+            font-weight: 700;
+            font-size: 0.92em;
+            letter-spacing: 0.02em;
+        }
+
+        .timeline-content strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--ink);
+            font-size: 1.03em;
+        }
+
+        .timeline-head {
+            display: grid;
+            grid-template-columns: 64px minmax(0, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .timeline-logo {
+            width: 64px;
+            height: 64px;
             padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-align: center;
-        }
-        
-        .collaborator:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        .collaborator img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 5px;
-            transition: transform 0.2s;
-        }
-        
-        .collaborator img:hover {
-            transform: scale(1.05);
-        }
-        
-        .collaborator .name {
-            color: #333;
-            text-decoration: none;
-            font-size: 0.9em;
-            display: block;
-        }
-        
-        .collaborator .name span {
-            display: block;
-            line-height: 1.2;
-        }
-        
-        .collaborator a:hover {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
-            text-decoration: none;
-        }
-        
-        .imaging-group {
+            border-radius: 14px;
+            background: rgba(255,255,255,0.96);
+            border: 1px solid rgba(31, 41, 51, 0.08);
+            box-shadow: 0 6px 14px rgba(31, 41, 51, 0.05);
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 20px;
+            justify-content: center;
+            align-self: start;
         }
-        
-        .imaging-group img {
-            width: 40%; /* Adjust based on your preference */
-            height: auto; /* Maintain aspect ratio */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for styling */
+
+        .timeline-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .timeline-scroll {
+            max-height: 440px;
+            overflow-y: auto;
+            padding-right: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) rgba(31, 41, 51, 0.08);
+        }
+
+        .timeline-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .timeline-scroll::-webkit-scrollbar-track {
+            background: rgba(31, 41, 51, 0.08);
+            border-radius: 999px;
+        }
+
+        .timeline-scroll::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 999px;
+        }
+
+        .timeline-content .meta {
+            margin-bottom: 6px;
+            color: #43505d;
+            font-style: italic;
+        }
+
+        .timeline-copy p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .quick-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .quick-link {
+            display: block;
+            padding: 16px 18px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(255,255,255,0.9);
+            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth), background-color 0.16s var(--ease-smooth);
+            text-decoration: none;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .quick-link:hover {
+            transform: translate3d(0, -2px, 0);
+            box-shadow: 0 10px 20px rgba(31, 41, 51, 0.08);
+            border-color: rgba(158, 126, 56, 0.28);
+            text-decoration: none;
+        }
+
+        .quick-link strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--ink);
+            font-size: 1em;
+        }
+
+        .quick-link span {
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        .news-shell {
+            overflow: hidden;
         }
 
         .news-container {
             position: relative;
-            padding: 20px 0;
+            padding: 0;
+            height: 100%;
         }
 
         .news-slider {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding: 8px 5px;
+            display: grid;
+            gap: 12px;
+            max-height: 440px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 4px 2px 2px 2px;
             scrollbar-width: thin;
-            scrollbar-color: #007BFF #f0f0f0;
+            scrollbar-color: var(--accent) #f0f0f0;
         }
 
         .news-slider::-webkit-scrollbar {
-            height: 6px;
+            width: 6px;
         }
 
         .news-slider::-webkit-scrollbar-track {
@@ -396,82 +504,79 @@
         }
 
         .news-slider::-webkit-scrollbar-thumb {
-            background: #007BFF;
+            background: var(--accent);
             border-radius: 3px;
         }
 
         .news-card {
-            flex: 0 0 300px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            display: grid;
+            grid-template-columns: 92px minmax(0, 1fr);
+            gap: 16px;
+            background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+            padding: 14px 16px;
+            border-radius: 16px;
+            box-shadow: 0 10px 24px rgba(31, 41, 51, 0.07);
+            border: 1px solid var(--line);
+            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth);
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .news-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translate3d(0, -2px, 0);
+            box-shadow: 0 12px 22px rgba(31, 41, 51, 0.08);
+            border-color: rgba(158, 126, 56, 0.24);
         }
 
         .news-date {
-            color: #9E7E38;  /* Wake Forest Old Gold */
-            font-weight: 500;
-            margin-bottom: 5px;
+            color: var(--accent-deep);
+            font-weight: 700;
             font-size: 0.9em;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            padding-top: 2px;
         }
 
         .news-content {
-            color: #333;
-            font-size: 0.95em;
-            line-height: 1.4;
+            color: var(--ink);
+            font-size: 0.98em;
+            line-height: 1.55;
         }
 
         .news-content i {
             color: #666;
         }
 
-        .scroll-buttons {
+        .visitor-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visitor-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            pointer-events: all;
+        }
+
+        .visitor-stats {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 22px;
+            margin: 10px auto 0 auto;
+            width: min(720px, 100%);
         }
 
-        .scroll-btn {
-            background: #9E7E38;  /* Wake Forest Old Gold */
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
+        .map {
+            flex: 3;
         }
 
-        .scroll-btn:hover {
-            background: #7D632C;  /* 深一点的金色用于悬停效果 */
-        }
-
-        .collaborators-wrapper {
-            max-height: 480px; /* 约显示三行，每行160px */
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #007BFF #f0f0f0;
-            scroll-behavior: smooth;
-        }
-
-        .collaborators-wrapper::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .collaborators-wrapper::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 3px;
-        }
-
-        .collaborators-wrapper::-webkit-scrollbar-thumb {
-            background: #007BFF;
-            border-radius: 3px;
+        .globe {
+            flex: 1;
         }
 
         /* Mobile Menu Button */
@@ -538,52 +643,137 @@
                 font-size: 20px;
             }
 
-            .record-container {
-                flex-direction: column;
-                text-align: center;
+            .home-grid {
+                grid-template-columns: 1fr;
             }
 
-            .record-text {
-                order: 2;
+            .hero-copy {
+                padding: 0;
             }
 
-            .record-image {
-                flex: 0 0 auto;
-                margin-bottom: 10px;
-                margin-top: 0;
-                order: 1;
+            .hero-title {
+                font-size: 2.45rem;
             }
 
-            .record-image img {
-                width: 150px;
+            .hero-lead {
+                font-size: 1em;
+                line-height: 1.6;
             }
 
-            .collaborators {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            .hero-note {
+                margin-bottom: 16px;
+                font-size: 0.96em;
+            }
+
+            .hero-links {
+                gap: 8px;
+            }
+
+            .hero-links a img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
                 gap: 10px;
-                padding: 10px;
+                padding: 14px 0;
             }
 
-            .collaborator img {
-                width: 80px;
-                height: 80px;
+            .timeline-date {
+                font-size: 0.84em;
+                line-height: 1.2;
+                white-space: nowrap;
+            }
+
+            .timeline-head {
+                grid-template-columns: 56px minmax(0, 1fr);
+                gap: 14px;
+                align-items: start;
+            }
+
+            .timeline-logo {
+                width: 56px;
+                height: 56px;
+                padding: 7px;
+                border-radius: 12px;
+            }
+
+            .timeline-content strong {
+                font-size: 1em;
+            }
+
+            .timeline-content .meta {
+                font-size: 0.93em;
+                line-height: 1.45;
+            }
+
+            .timeline-copy p {
+                font-size: 0.94em;
+                line-height: 1.55;
+            }
+
+            .timeline-scroll {
+                max-height: none;
+                overflow: visible;
+                padding-right: 0;
             }
 
             .news-card {
-                flex: 0 0 280px;
+                grid-template-columns: 1fr;
+                gap: 6px;
+                padding: 14px 14px 13px 14px;
+                border-radius: 14px;
+            }
+
+            .news-date {
+                padding-top: 0;
+                white-space: normal;
+            }
+
+            .news-slider {
+                max-height: none;
+                overflow: visible;
             }
 
             .visitor-stats {
                 flex-direction: column;
-                width: 100% !important;
-            }
-
-            .imaging-group {
-                flex-direction: column;
-            }
-
-            .imaging-group img {
+                gap: 14px;
                 width: 100%;
+            }
+
+            .map,
+            .globe {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            .content, .content-top {
+                padding: 12px;
+            }
+
+            .hero-title {
+                font-size: 2.15rem;
+            }
+
+            .section-card {
+                padding: 18px;
+            }
+
+            .timeline-head {
+                grid-template-columns: 48px minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .timeline-logo {
+                width: 48px;
+                height: 48px;
+                padding: 6px;
+            }
+
+            .timeline-date {
+                font-size: 0.8em;
             }
         }
 
@@ -625,101 +815,175 @@
     </div>
 
     <div class="content content-top">
+        <div class="hero-card">
+            <div class="hero-copy">
+                <span class="hero-kicker">Machine Learning • Image and Signal Processing • Remote Sensing • Healthcare Applications</span>
+                <h1 class="hero-title" id="welcome">Kangning Cui</h1>
+                <p class="hero-lead">I develop efficient machine learning and computer vision methods for real-world scientific problems, with current interests spanning remote sensing, ecological monitoring, medical imaging, and data-centric AI.</p>
+                <p class="hero-note">Feel free to contact me for collaborations.</p>
 
-        <h2 id="welcome">Welcome to Kangning's Homepage!</h2>
-        <p class="welcome-note">Feel free to reach out for collaboration.</p>
-
-        <div>
-            <a href="https://cs.wfu.edu/faculty/jason-cui/"><img src="https://img.shields.io/badge/WFU_Site-9D7A3F" alt="WFU Site"></a>
-            <a href="mailto:kangnicui2@gmail.com"><img src="https://img.shields.io/badge/kangnicui2-inactive?logo=gmail" alt="Contact - Me"></a>
-            <a href="https://github.com/ckn3/"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a>
-            <a href="https://www.linkedin.com/in/kangning-cui-57662b177/"><img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin" alt="LinkedIn"></a>
-            <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-446_Citations-blue?logo=google+scholar" alt="Google Scholar" id="scholar-citations-badge"></a>
-            <a href="https://orcid.org/0000-0002-1856-5064"><img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white" alt="ORCID"></a>
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865"><img src="https://img.shields.io/badge/Scopus-E9711C?logo=elsevier&logoColor=white" alt="Scopus"></a>
-            <a href="https://www.researchgate.net/profile/Kangning-Cui?ev=hdr_xprf"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
-        </div>
-        
-        <h2 id="positions">POSITIONS HELD</h2>
-
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[08/2025-present]</div>
-                <b>Wake Forest University</b>
-                <div><i>Research Assistant Professor, Department of Computer Science</i></div>
-                <div><i>Robert J. Plemmons Fellow, Andrew Sabin Family Center for Environment and Sustainability</i></div>
-            </div>
-            <div class="record-image">
-                <img src="figures/main/wfu.jpg" alt="Wake Forest University">
+                <div class="hero-links">
+                    <a href="https://cs.wfu.edu/faculty/jason-cui/"><img src="https://img.shields.io/badge/WFU_Site-9D7A3F" alt="WFU Site"></a>
+                    <a href="mailto:kangnicui2@gmail.com"><img src="https://img.shields.io/badge/Email-contact-D14836?logo=gmail&logoColor=white" alt="Email"></a>
+                    <a href="https://github.com/ckn3/"><img src="https://img.shields.io/badge/GitHub-111111?logo=github&logoColor=white" alt="Github"></a>
+                    <a href="https://www.linkedin.com/in/kangning-cui-57662b177/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+                    <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-446_Citations-2E77D0?logo=google+scholar&logoColor=white" alt="Google Scholar" id="scholar-citations-badge"></a>
+                    <a href="https://orcid.org/0000-0002-1856-5064"><img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white" alt="ORCID"></a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865"><img src="https://img.shields.io/badge/Scopus-E9711C?logo=elsevier&logoColor=white" alt="Scopus"></a>
+                    <a href="https://www.researchgate.net/profile/Kangning-Cui?ev=hdr_xprf"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+                </div>
             </div>
         </div>
-        
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[09/2022-07/2024]</div>
-                <b>Society for Industrial and Applied Mathematics</b>
-                <div><i>Founding President of <a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank" class="record-link">SIAM Student Chapter at City University of Hong Kong</a></i></div>
-            </div>
-            <div class="record-image">
-                <img src="figures/main/siam.jpeg" alt="SIAM">
-            </div>
-        </div>
-
-        <h2 id="education">EDUCATION</h2>
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[09/2021-07/2025]</div>
-                <b>Ph.D. in Mathematics</b>
-                <div><i>City University of Hong Kong & Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</i></div>
-                <div>Research focuses on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</div>
-            </div>
-            <div class="record-image">
-                <img src="figures/main/cityu.png" alt="Ph.D. in Mathematics">
-            </div>
-        </div>
-
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[09/2024-03/2025]</div>
-                <b>Visiting DPhil Student in Biomedical Engineering</b>
-                <div><i>University of Oxford</i></div>
-                <div>Research focuses on deep learning-based ultrasound video analysis.</div>
-            </div>
-            <div class="record-image">
-                <img src="https://cdn.worldvectorlogo.com/logos/university-of-oxford-logo-1.svg" alt="Ph.D. in Mathematics">
-            </div>
-        </div>
-        
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[09/2017-07/2021]</div>
-                <b>B.S. in Computing Mathematics</b>
-                <div><i>City University of Hong Kong</i></div>
-                <div>First Class Honours, with a minor in Computer Science.</div>
-            </div>
-            <div class="record-image">
-                <img src="figures/main/cityu.png" alt="B.S. in Computing Mathematics">
-            </div>
-        </div>
-        
-        <div class="record-container">
-            <div class="record-text">
-                <div class="record-date">[02/2020-07/2020]</div>
-                <b>Visiting B.S. in Applied Mathematics</b>
-                <div><i>Delft University of Technology</i></div>
-                <div>Study in Applied Mathematics.</div>
-            </div>
-            <div class="record-image">
-                <img src="https://filelist.tudelft.nl/_processed_/6/8/csm_Logo%20TU%20Delft_20247b4dc0.png" alt="Visiting B.S. in Applied Mathematics">
-            </div>
-        </div>
-        
     </div>
 
     <div class="content">
-        <h2 id="news">RECENT NEWS</h2>
-        <div class="news-container">
-            <div class="news-slider">
+        <div class="home-grid">
+            <section class="section-card">
+                <div class="section-heading">
+                    <h2 id="positions">Roles</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Starting<br>07/2026</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/cityudg.jpeg" alt="City University of Hong Kong (Dongguan)">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>City University of Hong Kong (Dongguan)</strong>
+                                    <div class="meta">Incoming Assistant Professor</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">08/2025–06/2026</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/wfu.jpg" alt="Wake Forest University">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Wake Forest University</strong>
+                                    <div class="meta">Research Assistant Professor, Department of Computer Science</div>
+                                    <p>Also serving as Robert J. Plemmons Fellow in the Andrew Sabin Family Center for Environment and Sustainability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09/2022–07/2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/siam.jpeg" alt="SIAM">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Society for Industrial and Applied Mathematics</strong>
+                                    <div class="meta">Founding President, <a href="https://www.cityu.edu.hk/ma/siam-cityu-student-chapter" target="_blank" class="record-link">SIAM Student Chapter at CityU</a></div>
+                                    <p>Led chapter formation and activities connecting applied mathematics, machine learning, and student research culture.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-heading">
+                    <h2 id="education">Education</h2>
+                </div>
+                <div class="timeline timeline-scroll">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021–2025</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/cityu.png" alt="City University of Hong Kong">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Ph.D. in Mathematics</strong>
+                                    <div class="meta">City University of Hong Kong & Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</div>
+                                    <p>Focused on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024–2025</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="https://cdn.worldvectorlogo.com/logos/university-of-oxford-logo-1.svg" alt="University of Oxford">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Visiting DPhil Student in Biomedical Engineering</strong>
+                                    <div class="meta">University of Oxford</div>
+                                    <p>Worked on deep learning-based ultrasound video analysis and medical imaging workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2017–2021</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/cityu.png" alt="City University of Hong Kong">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>B.S. in Computing Mathematics</strong>
+                                    <div class="meta">City University of Hong Kong</div>
+                                    <p>Graduated with First Class Honours and a minor in Computer Science.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="https://filelist.tudelft.nl/_processed_/6/8/csm_Logo%20TU%20Delft_20247b4dc0.png" alt="Delft University of Technology">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Visiting B.S. in Applied Mathematics</strong>
+                                    <div class="meta">Delft University of Technology</div>
+                                    <p>Studied applied mathematics during an exchange term in the Netherlands.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="home-grid">
+            <section class="section-card visitor-card">
+                <div class="section-heading">
+                    <h2>Visitors</h2>
+                </div>
+                <div class="visitor-overlay"></div>
+                <div class="visitor-stats">
+                    <div class="map">
+                        <img src='//clustrmaps.com/map_v2.png?cl=080808&w=500&t=tt&d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU&co=ffffff&ct=808080' style="width: 100%; height: auto;" alt="Visitor Map"/>
+                    </div>
+                    <div class="globe">
+                        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU"></script>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card news-shell">
+                <div class="section-heading">
+                    <h2 id="news">Recent News</h2>
+                </div>
+                <div class="news-container">
+                    <div class="news-slider">
 
                 <div class="news-card">
                     <div class="news-date">[03/2026]</div>
@@ -792,25 +1056,9 @@
                 </div>
 
 
-            </div>
-            <div class="scroll-buttons">
-                <button class="scroll-btn" onclick="scrollNews('left')">←</button>
-                <button class="scroll-btn" onclick="scrollNews('right')">→</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="content" style="position: relative;">
-        <h2>SITE VISITORS</h2>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; pointer-events: all;"></div>
-        
-        <div class="visitor-stats" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin: 20px auto; width: 45%;">
-            <div class="map" style="flex: 3;">
-                <img src='//clustrmaps.com/map_v2.png?cl=080808&w=500&t=tt&d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU&co=ffffff&ct=808080' style="width: 100%; height: auto;" alt="Visitor Map"/>
-            </div>
-            <div class="globe" style="flex: 1;">
-                <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU"></script>
-            </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
@@ -904,16 +1152,6 @@
             // Add new highlight and scroll into view
             highlights[highlightIndex].classList.add('current-highlight');
             highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function scrollNews(direction) {
-            const slider = document.querySelector('.news-slider');
-            const cardWidth = 320; // card width + gap
-            const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-            slider.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
         }
 
         function toggleSidebar() {
