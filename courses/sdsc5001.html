@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kangning Cui">
+    <meta name="content" content="Course Page">
+    <link rel="icon" href="../figures/main/profile.jpeg" type="image/x-icon">
+    <title>SDSC5001 | Statistical Machine Learning I</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #9E7E38;
+            --accent-deep: #7D632C;
+            --ink: #1f2933;
+            --muted: #5b6672;
+            --paper: rgba(255, 255, 255, 0.92);
+            --line: rgba(158, 126, 56, 0.14);
+            --line-strong: rgba(158, 126, 56, 0.24);
+            --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+            --shadow-soft: 0 12px 28px rgba(31, 41, 51, 0.07);
+            --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
+            line-height: 1.5;
+            background:
+                radial-gradient(circle at top right, rgba(158, 126, 56, 0.08), transparent 24%),
+                linear-gradient(180deg, #f6f4ef 0%, #eef2f1 38%, #f4f5f7 100%);
+            color: var(--ink);
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: var(--accent);
+            transition: color 0.22s var(--ease-smooth);
+        }
+
+        a:hover,
+        a:active {
+            color: var(--accent-deep);
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            margin: 0 0 20px;
+            font-weight: 700;
+            font-family: 'Fraunces', serif;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.08);
+            padding: 30px 20px;
+            box-sizing: border-box;
+            border-right: 1px solid rgba(158, 126, 56, 0.1);
+        }
+
+        #profile-picture {
+            text-align: center;
+            padding-bottom: 25px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(158, 126, 56, 0.15);
+        }
+
+        #profile-picture img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--accent);
+        }
+
+        #name {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: 700;
+            padding: 15px 0;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .contact-information {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(158, 126, 56, 0.15);
+        }
+
+        .contact-information p {
+            margin: 6px 0;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        #toc {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(158, 126, 56, 0.15);
+        }
+
+        #toc strong {
+            font-size: 16px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 18px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #toc ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #toc li {
+            margin-bottom: 8px;
+        }
+
+        #toc li a {
+            padding: 12px 15px;
+            display: block;
+            border-radius: 8px;
+            transition: background-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
+            color: #555;
+            font-size: 0.95em;
+            border-left: 3px solid transparent;
+            background-color: rgba(158, 126, 56, 0.05);
+            text-align: center;
+        }
+
+        #toc li a:hover {
+            background-color: rgba(158, 126, 56, 0.15);
+            border-left-color: var(--accent);
+            color: var(--accent);
+            transform: translate3d(3px, 0, 0);
+            box-shadow: 0 4px 12px rgba(158, 126, 56, 0.16);
+        }
+
+        .content,
+        .content-top {
+            margin-left: 300px;
+            padding: 20px;
+            background-color: var(--paper);
+            box-shadow: var(--shadow);
+            border-radius: 18px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .page-header {
+            padding: 28px 30px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(248, 243, 231, 0.88)),
+                linear-gradient(180deg, rgba(158, 126, 56, 0.08), transparent);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .course-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .summary-card {
+            padding: 14px 16px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.78);
+        }
+
+        .summary-label {
+            margin-bottom: 4px;
+            color: var(--muted);
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .summary-value {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .section-header {
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .section-header h2 {
+            margin: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        .info-card {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.94);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .info-card p,
+        .info-card ul {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .info-card ul {
+            padding-left: 18px;
+        }
+
+        .info-card li + li {
+            margin-top: 8px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 1001;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        @media screen and (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.22s var(--ease-smooth);
+                z-index: 1000;
+                width: 280px;
+            }
+
+            #sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content,
+            .content-top {
+                margin-left: 0;
+                margin-top: 64px;
+                padding: 14px;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+            }
+
+            .page-header {
+                padding: 22px 18px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+    <div id="sidebar">
+        <div id="profile-picture">
+            <img src="../figures/main/profile.jpeg" alt="Kangning Cui">
+        </div>
+        <div id="name">Kangning Cui (Jason)</div>
+        <div class="contact-information">
+            <p><i>Research Assistant Professor</i></p>
+            <p><i>Department of Computer Science</i></p>
+            <p><i>Wake Forest University</i></p>
+        </div>
+
+        <div id="toc">
+            <strong>Contents:</strong>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../publications.html">Research</a></li>
+                <li><a href="../teach.html">Teaching</a></li>
+                <li><a href="../academic_honors.html">Services</a></li>
+                <li><a href="../collaborators.html">Team</a></li>
+                <li><a href="../others.html">Gallery</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content content-top">
+        <div class="page-header">
+            <h1>SDSC5001: Statistical Machine Learning I</h1>
+            <p>This course page will be updated with syllabus, schedule, assignments, slides, announcements, and related materials.</p>
+            <div class="course-summary">
+                <div class="summary-card">
+                    <div class="summary-label">Institution</div>
+                    <div class="summary-value">City University of Hong Kong (Dongguan)</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Term</div>
+                    <div class="summary-value">Fall 2026</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Status</div>
+                    <div class="summary-value">Scheduled</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Course Page</div>
+                    <div class="summary-value"><a href="https://www.cityu.edu.hk/catalogue/pg/202526/course/SDSC5001.htm" target="_blank">CityU Course Page</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section-header">
+            <h2>Course Information</h2>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <p>Detailed course information will be posted here closer to the start of the semester.</p>
+            </div>
+            <div class="info-card">
+                <ul>
+                    <li>Syllabus: to be added</li>
+                    <li>Lecture schedule: to be added</li>
+                    <li>Assessment: to be added</li>
+                    <li>Office hours: to be added</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
