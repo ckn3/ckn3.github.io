@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<HTML>
+<html>
 
 <head>
     <meta charset="UTF-8" />
@@ -7,48 +7,65 @@
     <meta name='Author' content='Kangning Cui'>
     <meta name='Content' content='Homepage'>
     <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
-    <title>Home Page for Jason Kangning Cui</title>
-    <!-- Include a Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Services | Kangning Cui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <style>
+        :root {
+            --accent: #9E7E38;
+            --accent-deep: #7D632C;
+            --ink: #1f2933;
+            --muted: #5b6672;
+            --paper: rgba(255, 255, 255, 0.92);
+            --line: rgba(158, 126, 56, 0.14);
+            --line-strong: rgba(158, 126, 56, 0.24);
+            --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+            --shadow-soft: 0 12px 28px rgba(31, 41, 51, 0.07);
+            --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         body {
-            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
             line-height: 1.5;
-            background-color: #f3f4f6;
-            color: #333;
+            background:
+                radial-gradient(circle at top right, rgba(158, 126, 56, 0.08), transparent 24%),
+                linear-gradient(180deg, #f6f4ef 0%, #eef2f1 38%, #f4f5f7 100%);
+            color: var(--ink);
         }
 
         a:link,
         a:visited {
             text-decoration: none;
-            color: #9E7E38;  /* Wake Forest Old Gold */
-            transition: color 0.3s;
+            color: var(--accent);
+            transition: color 0.22s var(--ease-smooth);
         }
 
         a:hover,
         a:active {
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
+            color: var(--accent-deep);
             text-decoration: underline;
         }
 
-        h1, h2 {
-            margin-bottom: 20px;
+        h1, h2, h3, h4 {
+            margin: 0 0 20px;
             font-weight: 700;
+            font-family: 'Fraunces', serif;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
             font-size: 24px;
         }
 
         h3 {
-            margin-top: 15px;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
         }
 
         h4 {
-            margin-top: 12px;
-            margin-bottom: 6px;
-            font-size: 1em;
-            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--muted);
         }
 
         #sidebar {
@@ -78,56 +95,16 @@
             height: 120px;
             object-fit: cover;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            border: 3px solid #9E7E38;
-            transition: transform 0.3s ease;
+            border: 3px solid var(--accent);
+            transition: transform 0.22s var(--ease-smooth);
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #profile-picture img:hover {
-            transform: scale(1.05);
+            transform: translateZ(0) scale(1.035);
         }
 
-        /* Styling for the search bar and buttons */
-        #search-box {
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #search-box input[type="text"] {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 4px; /* Spacing between the input and the buttons */
-        }
-
-        /* Updated styles for button row to accommodate changes */
-        .button-row {
-            display: flex;
-        }
-        
-        .button-row input[type="submit"],
-        .button-row button {
-            flex-grow: 1;  /* This makes each button grow to fill the container */
-            padding: 8px;
-            margin: 0 4px; /* This sets the margin between the buttons; adjust as needed */
-            border: none;
-            border-radius: 4px;
-            background-color: #9E7E38;  /* Wake Forest Old Gold */
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        /* This targets the first and last buttons to remove the margin at the ends */
-        .button-row input[type="submit"]:first-child,
-        .button-row button:first-child {
-            margin-left: 0;
-        }
-        
-        .button-row button:last-child {
-            margin-right: 0;
-        }
-        
         #toc {
             padding-top: 10px;
             padding-bottom: 20px;
@@ -158,71 +135,37 @@
             padding: 12px 15px;
             display: block;
             border-radius: 8px;
-            transition: all 0.3s ease;
+            transition: background-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             color: #555;
             font-size: 0.95em;
             border-left: 3px solid transparent;
             background-color: rgba(158, 126, 56, 0.05);
             text-align: center;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         #toc li a:hover {
             background-color: rgba(158, 126, 56, 0.15);
-            border-left-color: #9E7E38;
-            color: #9E7E38;
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(158, 126, 56, 0.2);
+            border-left-color: var(--accent);
+            color: var(--accent);
+            transform: translate3d(3px, 0, 0);
+            box-shadow: 0 4px 12px rgba(158, 126, 56, 0.16);
         }
 
         #toc li a:active {
             background-color: rgba(158, 126, 56, 0.2);
         }
 
-        .content {
-            margin-left: 300px; /* Adjusted to match other pages */
+        .content,
+        .content-top {
+            margin-left: 300px;
             padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .content:last-child {
-            margin-bottom: 0;
-        }
-
-        ol {
-            list-style-type: decimal;
-            padding-left: 20px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .icon-link {
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-        .icon-link img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .contact-info b {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
+            background-color: var(--paper);
+            box-shadow: var(--shadow);
+            border-radius: 18px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         #name {
@@ -232,10 +175,6 @@
             padding: 15px 0;
             color: #2c3e50;
             margin-bottom: 10px;
-        }
-
-        #name span {
-            display: block;
         }
 
         .contact-information {
@@ -252,189 +191,183 @@
             line-height: 1.6;
         }
 
-        .honors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-            padding: 15px;
+        .page-header {
+            padding: 28px 30px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            border: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(248, 243, 231, 0.88)),
+                linear-gradient(180deg, rgba(158, 126, 56, 0.08), transparent);
+            box-shadow: var(--shadow-soft);
         }
 
-        .honor-card {
-            background: #fff;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            overflow: hidden;
+        .page-header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
         }
 
-        .honor-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        .page-intro {
+            margin: 0;
+            font-size: 1.08rem;
+            color: var(--ink);
+            max-width: 880px;
         }
 
-        .honor-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: #9E7E38;  /* 改为 Wake Forest Old Gold */
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
         }
 
-        .honor-title {
-            color: #2c3e50;
-            font-size: 1em;
-            font-weight: bold;
-            margin-bottom: 6px;
-            line-height: 1.3;
-        }
-
-        .honor-year {
-            color: #000000;  /* 改为黑色 */
-            font-size: 0.85em;
-            margin-top: 4px;
-            display: inline-block;
-            background: #f8f9fa;
-            padding: 2px 6px;
-            border-radius: 3px;
-        }
-
-        .honor-link {
-            margin-top: 6px;
-            display: inline-block;
-        }
-
-        .honor-link:hover {
-            text-decoration: none;
-            color: #7D632C;  /* 深一点的金色用于悬停效果 */
+        .section-header h2 {
+            margin: 0;
         }
 
         .review-section {
-            margin: 15px 0;
+            margin: 20px 0 0;
         }
 
         .review-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+            display: grid;
+            gap: 16px;
         }
 
         .review-card {
-            background: #fff;
-            padding: 8px 12px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.94);
+            padding: 18px 20px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--line);
+            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
         }
 
         .review-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        .publisher-icon {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-
-        .ieee-icon { background: #006699; }
-        .elsevier-icon { background: #FF6C00; }
-        .springer-icon { background: #00A98F; }
-        .mdpi-icon { background: #00A0E3; }
-        .acm-icon { background: #0085CA; }
-        .iclr-icon { 
-            background: #4b0082;
-            font-size: 0.9em;
-            letter-spacing: 0.5px;
+            box-shadow: 0 16px 30px rgba(31, 41, 51, 0.08);
+            border-color: var(--line-strong);
         }
 
         .review-info {
-            flex: 1;
+            line-height: 1.6;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .review-info > div + div {
+            margin-top: 10px;
         }
 
         .journal-name {
-            font-weight: 500;
-            color: #2c3e50;
+            font-weight: 400;
+            color: var(--ink);
             font-style: italic;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-        
-        .journal-name:not(:last-child)::after {
-            content: '';
+            font-size: 0.98rem;
         }
 
         .publisher-name {
-            font-size: 0.8em;
-            color: #666;
-            margin-left: 6px;
+            font-size: 0.92rem;
+            color: var(--muted);
         }
 
         .review-years {
-            font-size: 0.8em;
-            color: #666;
-            background: #f8f9fa;
-            padding: 2px 6px;
-            border-radius: 3px;
-            min-width: 50px;
-            text-align: center;
+            font-size: 0.86rem;
+            color: var(--muted);
+            background: rgba(31, 41, 51, 0.05);
+            padding: 3px 8px;
+            border-radius: 999px;
         }
 
-        /* 添加 ICLR 特定的图标样式 */
-        .iclr-icon {
-            background: #4b0082; /* 深紫色，代表 ICLR 的学术性质 */
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.9em;
-            letter-spacing: 0.5px;
+        .sep {
+            margin: 0 8px;
+            color: rgba(91, 102, 114, 0.72);
         }
 
-        /* Mobile Menu Button */
+        .publisher-label {
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .inline-list {
+            margin-top: 4px;
+            line-height: 1.6;
+        }
+
+        .tag-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(31, 41, 51, 0.05);
+            color: var(--muted);
+            font-size: 0.86rem;
+            margin-left: 8px;
+        }
+
+        .honor-title {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .honor-year {
+            color: var(--muted);
+            font-size: 0.86rem;
+            background: rgba(31, 41, 51, 0.05);
+            padding: 3px 8px;
+            border-radius: 999px;
+        }
+
+        .talk-title {
+            color: var(--ink);
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.45;
+        }
+
+        .talk-meta {
+            margin-top: 6px;
+            font-size: 0.94rem;
+            color: var(--muted);
+        }
+
+        .talk-links {
+            margin-top: 8px;
+            font-size: 0.94rem;
+        }
+
         .mobile-menu-btn {
             display: none;
             position: fixed;
-            top: 15px;
-            left: 15px;
+            top: 12px;
+            left: 12px;
             z-index: 1001;
-            background: #9E7E38;
+            background: var(--accent);
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 10px 14px;
+            border-radius: 999px;
             cursor: pointer;
             font-size: 18px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .mobile-menu-btn:hover {
-            background: #7D632C;
+            background: var(--accent-deep);
         }
 
-        /* Responsive Design for Mobile */
         @media screen and (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
-                top: 12px;
-                left: 12px;
-                padding: 10px 14px;
-                border-radius: 999px;
             }
 
             #sidebar {
                 transform: translateX(-100%);
-                transition: transform 0.3s ease;
+                transition: transform 0.22s var(--ease-smooth);
                 z-index: 1000;
                 width: 280px;
             }
@@ -443,58 +376,55 @@
                 transform: translateX(0);
             }
 
-            .content, .content-top {
+            .content,
+            .content-top {
                 margin-left: 0;
                 margin-top: 64px;
                 padding: 14px;
                 border-radius: 0;
                 box-shadow: none;
+                border: none;
             }
 
             #profile-picture img {
                 width: 80px;
                 height: 80px;
-                border-radius: 50%;
             }
 
             #name {
                 font-size: 1.2em;
             }
 
+            .page-header {
+                padding: 22px 18px;
+                margin-bottom: 22px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
             h1, h2 {
                 font-size: 20px;
             }
 
-            .review-card, .record-container {
-                flex-direction: column;
-                padding: 8px;
-                text-align: left;
-                align-items: flex-start;
-            }
-            
-            .review-grid {
-                gap: 5px;
-            }
-            
-            .review-section {
-                margin: 10px 0;
+            .review-card {
+                padding: 16px 16px;
             }
 
             .review-info {
-                text-align: left;
+                font-size: 0.96rem;
+                line-height: 1.7;
             }
 
-            .honor-card {
-                text-align: left;
+            .review-info > div + div {
+                margin-top: 12px;
             }
 
-            .honors-grid {
-                text-align: left;
+            .sep {
+                margin: 0 6px;
             }
 
-            .journal-name, .publisher-name {
-                text-align: left;
-            }
         }
     </style>
 </head>
@@ -512,7 +442,6 @@
             <p><i>Research Assistant Professor</i></p>
             <p><i>Department of Computer Science</i></p>
             <p><i>Wake Forest University</i></p>
-            <!-- Additional contact info if needed -->
         </div>
 
         <div id="toc">
@@ -526,11 +455,20 @@
                 <li><a href="others.html">Gallery</a></li>
             </ul>
         </div>
-        
+    </div>
+
+    <div class="content content-top">
+        <div class="page-header">
+            <h1>Services</h1>
+            <p class="page-intro">Editorial work, peer review, invited talks, presentations, and honors related to research, teaching, and academic community service.</p>
+        </div>
     </div>
 
     <div class="content">
-        <h2 id="academicservice">ACADEMIC SERVICE</h2>
+        <div class="section-header">
+            <h2 id="academicservice">Academic Service</h2>
+        </div>
+
         <div class="review-section">
             <h3>Editorial Experience</h3>
             <div class="review-grid">
@@ -538,108 +476,106 @@
                     <div class="review-info">
                         <span class="journal-name">Plants</span>
                         <span class="publisher-name">MDPI</span>
-                        <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 8px;">Guest Editor</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <a href="https://www.mdpi.com/journal/plants/special_issues/ZD3B6NI457" target="_blank" style="color: #9E7E38; text-decoration: none; font-size: 0.9em;">
-                            Advanced Remote Sensing and AI Techniques in Agriculture and Forestry
-                        </a>
+                        <span class="tag-chip">Guest Editor</span>
+                        <span class="sep">|</span>
+                        <a href="https://www.mdpi.com/journal/plants/special_issues/ZD3B6NI457" target="_blank">Advanced Remote Sensing and AI Techniques in Agriculture and Forestry</a>
                     </div>
                 </div>
                 <div class="review-card">
                     <div class="review-info">
                         <span class="journal-name">Remote Sensing</span>
                         <span class="publisher-name">MDPI</span>
-                        <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 8px;">Guest Editor</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <a href="https://www.mdpi.com/journal/remotesensing/special_issues/67641YNL65" target="_blank" style="color: #9E7E38; text-decoration: none; font-size: 0.9em;">
-                            Integrating UAV-Based and Multi-Source Remote Sensing With Artificial Intelligence for Better Crop Management
-                        </a>
+                        <span class="tag-chip">Guest Editor</span>
+                        <span class="sep">|</span>
+                        <a href="https://www.mdpi.com/journal/remotesensing/special_issues/67641YNL65" target="_blank">Integrating UAV-Based and Multi-Source Remote Sensing With Artificial Intelligence for Better Crop Management</a>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="review-section">
             <h3>Review Experience</h3>
-            
+
             <h4>Journals</h4>
             <div class="review-grid">
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">Elsevier</span>
-                        <div style="margin-top: 4px; line-height: 1.5;">
+                        <span class="publisher-name publisher-label">Elsevier</span>
+                        <div class="inline-list">
                             <span class="journal-name">Advances in Space Research</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Applied Soft Computing</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Biomedical Signal Processing and Control</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Computers and Electronics in Agriculture</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Computer Vision and Image Understanding</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">ISPRS Journal of Photogrammetry and Remote Sensing</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Remote Sensing Applications: Society and Environment</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Signal Processing: Image Communication</span>
-                </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">Frontiers</span>
-                        <div style="margin-top: 4px; line-height: 1.5;">
+                        <span class="publisher-name publisher-label">Frontiers</span>
+                        <div class="inline-list">
                             <span class="journal-name">Frontiers in Artificial Intelligence</span>
-                </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">IEEE</span>
-                        <div style="margin-top: 4px; line-height: 1.5;">
+                        <span class="publisher-name publisher-label">IEEE</span>
+                        <div class="inline-list">
                             <span class="journal-name">IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">IEEE Transactions on Circuits and Systems for Video Technology</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">IEEE Transactions on Geoscience and Remote Sensing</span>
-                </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">MDPI</span>
-                        <div style="margin-top: 4px; line-height: 1.5;">
+                        <span class="publisher-name publisher-label">MDPI</span>
+                        <div class="inline-list">
                             <span class="journal-name">AgriEngineering</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Electronics</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Geomatics</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Information</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Remote Sensing</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Sensors</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Sustainability</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Urban Science</span>
-                </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="publisher-name" style="font-weight: 600; font-size: 0.9em; color: #2c3e50;">Springer Nature</span>
-                        <div style="margin-top: 4px; line-height: 1.5;">
+                        <span class="publisher-name publisher-label">Springer Nature</span>
+                        <div class="inline-list">
                             <span class="journal-name">Applied Intelligence</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Earth Science Informatics</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Journal of Mathematical Imaging and Vision</span>
-                            <span style="margin: 0 8px;">|</span>
+                            <span class="sep">|</span>
                             <span class="journal-name">Scientific Reports</span>
                         </div>
                     </div>
@@ -650,32 +586,23 @@
             <div class="review-grid">
                 <div class="review-card">
                     <div class="review-info">
-                        <span class="journal-name">ACM International Conference on Multimedia Retrieval (ICMR)</span>,
-                        <span class="review-years">2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">ACM Southeast Conference (ACMSE)</span>,
-                        <span class="review-years">2024-2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">Conference on Neural Information Processing Systems (NeurIPS)</span>,
-                        <span class="review-years">2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Conference on Learning Representations (ICLR)</span>,
-                        <span class="review-years">2025</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Conference on Machine Learning (ICML)</span>,
-                        <span class="review-years">2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Geoscience and Remote Sensing Symposium (IGARSS)</span>,
-                        <span class="review-years">2023-2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Joint Conference on Artificial Intelligence (IJCAI)</span>,
-                        <span class="review-years">2025-2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Joint Conference on Neural Networks (IJCNN)</span>,
-                        <span class="review-years">2025-2026</span>
-                        <span style="margin: 0 12px;">|</span>
-                        <span class="journal-name">International Symposium on Biomedical Imaging (ISBI)</span>,
-                        <span class="review-years">2025-2026</span>
+                        <span class="journal-name">ACM International Conference on Multimedia Retrieval (ICMR)</span>, <span class="review-years">2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">ACM Southeast Conference (ACMSE)</span>, <span class="review-years">2024-2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">Conference on Neural Information Processing Systems (NeurIPS)</span>, <span class="review-years">2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Conference on Learning Representations (ICLR)</span>, <span class="review-years">2025</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Conference on Machine Learning (ICML)</span>, <span class="review-years">2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Geoscience and Remote Sensing Symposium (IGARSS)</span>, <span class="review-years">2023-2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Joint Conference on Artificial Intelligence (IJCAI)</span>, <span class="review-years">2025-2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Joint Conference on Neural Networks (IJCNN)</span>, <span class="review-years">2025-2026</span>
+                        <span class="sep">|</span>
+                        <span class="journal-name">International Symposium on Biomedical Imaging (ISBI)</span>, <span class="review-years">2025-2026</span>
                     </div>
                 </div>
             </div>
@@ -683,61 +610,43 @@
     </div>
 
     <div class="content">
-        <h2 id="invited-talks">PRESENTATIONS & INVITED TALKS</h2>
-        <div class="review-section">
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="review-info">
-                        <div>
-                            <span class="journal-name">Efficient Deep Learning and Spatial Modeling for Mapping Tropical Forest Canopies</span>
-                            <span class="publisher-name">(Seminar Talk)</span>
-                            <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 10px;">November 2025</span>
-                        </div>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 4px;">
-                            <a href="https://cs.wfu.edu/efficient-deep-learning-and-spatial-modeling-for-mapping-tropical-forest-canopies-by-dr-jason-cui/" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                Department of Computer Science, Wake Forest University
-                            </a>
-                            <span style="margin: 0 8px;">|</span>
-                            <a href="docs/slides/Talk.pdf" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                Slides
-                            </a>
-                        </div>
+        <div class="section-header">
+            <h2 id="invited-talks">Presentations &amp; Invited Talks</h2>
+        </div>
+
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-info">
+                    <div class="talk-title">Efficient Deep Learning and Spatial Modeling for Mapping Tropical Forest Canopies</div>
+                    <div class="talk-meta">Seminar Talk | November 2025</div>
+                    <div class="talk-links">
+                        <a href="https://cs.wfu.edu/efficient-deep-learning-and-spatial-modeling-for-mapping-tropical-forest-canopies-by-dr-jason-cui/" target="_blank">Department of Computer Science, Wake Forest University</a>
+                        <span class="sep">|</span>
+                        <a href="docs/slides/Talk.pdf" target="_blank">Slides</a>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-info">
-                        <div>
-                            <span class="journal-name">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</span>
-                            <span class="publisher-name">(Oral)</span>
-                            <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 10px;">August 2025</span>
-                        </div>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 4px;">
-                            <a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                IJCAI 2025
-                            </a>
-                            <span style="margin: 0 8px;">|</span>
-                            <a href="docs/slides/cui2025ijcai.pdf" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                Slides
-                            </a>
-                        </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-info">
+                    <div class="talk-title">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</div>
+                    <div class="talk-meta">Oral | August 2025</div>
+                    <div class="talk-links">
+                        <a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank">IJCAI 2025</a>
+                        <span class="sep">|</span>
+                        <a href="docs/slides/cui2025ijcai.pdf" target="_blank">Slides</a>
                     </div>
                 </div>
-                <div class="review-card">
-                    <div class="review-info">
-                        <div>
-                            <span class="journal-name">Detection and Segmentation for Optical Remote Sensing: From Satellites to UAVs</span>
-                            <span class="publisher-name">(PhD Defence)</span>
-                            <span style="font-size: 0.85em; color: #666; background: #f8f9fa; padding: 2px 8px; border-radius: 4px; margin-left: 10px;">July 2025</span>
-                        </div>
-                        <div style="font-size: 0.9em; color: #666; margin-top: 4px;">
-                            <a href="https://scholars.cityu.edu.hk/en/studentTheses/detection-and-segmentation-for-optical-remote-sensing-from-satell/" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                Department of Mathematics, City University of Hong Kong
-                            </a>
-                            <span style="margin: 0 8px;">|</span>
-                            <a href="docs/slides/Thesis.pdf" target="_blank" style="color: #9E7E38; text-decoration: none;">
-                                Slides
-                            </a>
-                        </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-info">
+                    <div class="talk-title">Detection and Segmentation for Optical Remote Sensing: From Satellites to UAVs</div>
+                    <div class="talk-meta">PhD Defence | July 2025</div>
+                    <div class="talk-links">
+                        <a href="https://scholars.cityu.edu.hk/en/studentTheses/detection-and-segmentation-for-optical-remote-sensing-from-satell/" target="_blank">Department of Mathematics, City University of Hong Kong</a>
+                        <span class="sep">|</span>
+                        <a href="docs/slides/Thesis.pdf" target="_blank">Slides</a>
                     </div>
                 </div>
             </div>
@@ -745,188 +654,24 @@
     </div>
 
     <div class="content">
-        <h2 id="honors">HONORS, AWARDS & SCHOLARSHIP</h2>
-        <div class="review-section">
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Outstanding Academic Performance Award</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2024</span>
-                    </div>
-                </div>
+        <div class="section-header">
+            <h2 id="honors">Honors, Awards &amp; Scholarship</h2>
+        </div>
 
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">SIAM Student Chapter Certificate of Recognition</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2023</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Institutional Research Tuition Scholarship</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2022-2023, 2024-2025</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Postgraduate Studentship & Institutional Research Tuition Grant</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2021-2025</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">CityU Scholarship</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2020/21</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">CityU Special Fund for Non-local Outbound Exchange Students</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2020</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">HKSAR Government Reaching Out Award</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2019</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Dean's List</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2017-2021 (Most semesters)</span>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-info">
-                        <span class="journal-name">Full Tuition Scholarship</span>
-                        <span style="margin: 0 8px;">|</span>
-                        <span class="review-years">2017-2021</span>
-                    </div>
-                </div>
+        <div class="review-card">
+            <div class="review-info">
+                <div><span class="honor-title">Outstanding Academic Performance Award</span><span class="sep">|</span><span class="honor-year">2024</span></div>
+                <div><span class="honor-title">SIAM Student Chapter Certificate of Recognition</span><span class="sep">|</span><span class="honor-year">2023</span></div>
+                <div><span class="honor-title">Institutional Research Tuition Scholarship</span><span class="sep">|</span><span class="honor-year">2022-2023, 2024-2025</span></div>
+                <div><span class="honor-title">Postgraduate Studentship &amp; Institutional Research Tuition Grant</span><span class="sep">|</span><span class="honor-year">2021-2025</span></div>
+                <div><span class="honor-title">CityU Scholarship</span><span class="sep">|</span><span class="honor-year">2020/21</span></div>
+                <div><span class="honor-title">CityU Special Fund for Non-local Outbound Exchange Students</span><span class="sep">|</span><span class="honor-year">2020</span></div>
+                <div><span class="honor-title">HKSAR Government Reaching Out Award</span><span class="sep">|</span><span class="honor-year">2019</span></div>
+                <div><span class="honor-title">Dean's List</span><span class="sep">|</span><span class="honor-year">2017-2021 (Most semesters)</span></div>
+                <div><span class="honor-title">Full Tuition Scholarship</span><span class="sep">|</span><span class="honor-year">2017-2021</span></div>
             </div>
         </div>
     </div>
-
-    <script>
-        // This script block will handle searching and highlighting text within the current page.
-        var highlightIndex = -1;
-        var highlights = [];
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            var searchForm = document.getElementById('searchForm');
-            if (searchForm) {
-                searchForm.addEventListener('submit', function(event) {
-                    event.preventDefault(); // Prevent the form from submitting the traditional way
-                    performSearch(); // Call the performSearch function
-                });
-            }
-        });
-    
-        function performSearch() {
-            // Clear previous highlights
-            clearHighlights();
-        
-            var searchText = document.getElementById('searchInput').value;
-            if (!searchText) {
-                return; // Exit if search box is empty
-            }
-        
-            // Select all content blocks
-            var contentBlocks = document.querySelectorAll('.content');
-        
-            // Initialize a flag to check if matches are found
-            var foundMatches = false;
-        
-            // Iterate over each content block and perform the search
-            contentBlocks.forEach(function(contentDiv) {
-                var content = contentDiv.innerHTML;
-                var searchRegEx = new RegExp(searchText, "gi");
-                var matches = content.match(searchRegEx);
-        
-                if (matches && matches.length > 0) {
-                    // Replace the found text with highlighted text
-                    contentDiv.innerHTML = content.replace(searchRegEx, '<mark class="highlight">$&</mark>');
-                    foundMatches = true;
-                }
-            });
-        
-            // If matches are found, store all highlights and highlight the first match
-            if (foundMatches) {
-                highlights = document.querySelectorAll('.highlight');
-                highlightNext(); // Automatically highlight the first match
-            } else {
-                alert('Search term not found.');
-            }
-        }
-    
-        function clearHighlights() {
-            // Query all highlighted elements within any .content block and clear them
-            document.querySelectorAll('.content .highlight').forEach(function(highlighted) {
-                // Replace the highlighted element with its innerHTML
-                var parent = highlighted.parentNode;
-                parent.replaceChild(document.createTextNode(highlighted.textContent), highlighted);
-            });
-        
-            // Clear the highlights array and reset the current highlight index
-            highlights = [];
-            highlightIndex = -1;
-        
-            // Clear the search input box
-            document.getElementById('searchInput').value = '';
-        }
-    
-        function highlightNext() {
-            if (highlights.length > 0) {
-                highlightIndex = (highlightIndex + 1) % highlights.length;
-                scrollHighlightIntoView();
-            }
-        }
-    
-        function highlightPrevious() {
-            if (highlights.length > 0) {
-                highlightIndex = (highlightIndex - 1 + highlights.length) % highlights.length;
-                scrollHighlightIntoView();
-            }
-        }
-    
-        function scrollHighlightIntoView() {
-            // Remove current highlight if any
-            document.querySelectorAll('.current-highlight').forEach(function(highlighted) {
-                highlighted.classList.remove('current-highlight');
-            });
-            // Add new highlight and scroll into view
-            highlights[highlightIndex].classList.add('current-highlight');
-            highlights[highlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    </script>
-    
-    <style>
-        .highlight {
-            background-color: yellow;
-        }
-        .current-highlight {
-            background-color: orange; /* Different color for the current highlight */
-        }
-        .contact-information {
-            text-align: center;
-        }
-    </style>
 
     <script>
         function toggleSidebar() {
@@ -934,7 +679,6 @@
             sidebar.classList.toggle('active');
         }
 
-        // Close sidebar when clicking outside on mobile
         document.addEventListener('click', function(event) {
             const sidebar = document.getElementById('sidebar');
             const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -945,6 +689,7 @@
             }
         });
     </script>
-    
+
 </body>
-</HTML>
+
+</html>
