@@ -309,7 +309,7 @@
 
         .home-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             gap: 18px;
             align-items: stretch;
         }
@@ -401,28 +401,6 @@
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-        }
-
-        .timeline-scroll {
-            max-height: 440px;
-            overflow-y: auto;
-            padding-right: 8px;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent) rgba(31, 41, 51, 0.08);
-        }
-
-        .timeline-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .timeline-scroll::-webkit-scrollbar-track {
-            background: rgba(31, 41, 51, 0.08);
-            border-radius: 999px;
-        }
-
-        .timeline-scroll::-webkit-scrollbar-thumb {
-            background: var(--accent);
-            border-radius: 999px;
         }
 
         .timeline-content .meta {
@@ -688,7 +666,7 @@
 
             .timeline-head {
                 grid-template-columns: 56px minmax(0, 1fr);
-                gap: 14px;
+                gap: 16px;
                 align-items: start;
             }
 
@@ -711,12 +689,6 @@
             .timeline-copy p {
                 font-size: 0.94em;
                 line-height: 1.55;
-            }
-
-            .timeline-scroll {
-                max-height: none;
-                overflow: visible;
-                padding-right: 0;
             }
 
             .news-card {
@@ -763,7 +735,7 @@
 
             .timeline-head {
                 grid-template-columns: 48px minmax(0, 1fr);
-                gap: 12px;
+                gap: 14px;
             }
 
             .timeline-logo {
@@ -859,7 +831,7 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">08/2025–06/2026</div>
+                        <div class="timeline-date">08/2025 - Present</div>
                         <div class="timeline-content">
                             <div class="timeline-head">
                                 <div class="timeline-logo">
@@ -868,7 +840,20 @@
                                 <div class="timeline-copy">
                                     <strong>Wake Forest University</strong>
                                     <div class="meta">Research Assistant Professor, Department of Computer Science</div>
-                                    <p>Also serving as Robert J. Plemmons Fellow in the Andrew Sabin Family Center for Environment and Sustainability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">08/2025 - Present</div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div class="timeline-logo">
+                                    <img src="figures/main/sabincenter.jpeg" alt="Andrew Sabin Family Center for Environment and Sustainability">
+                                </div>
+                                <div class="timeline-copy">
+                                    <strong>Andrew Sabin Family Center for Environment and Sustainability</strong>
+                                    <div class="meta">Robert J. Plemmons Fellow</div>
                                 </div>
                             </div>
                         </div>
@@ -895,7 +880,7 @@
                 <div class="section-heading">
                     <h2 id="education">Education</h2>
                 </div>
-                <div class="timeline timeline-scroll">
+                <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2021–2025</div>
                         <div class="timeline-content">
@@ -994,7 +979,7 @@
                 <div class="news-card">
                     <div class="news-date">[01/2026]</div>
                     <div class="news-content">
-                        The paper "Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions" was accepted by WACV HARVEST Workshop.
+                        The paper "Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions" was accepted by <i>WACV HARVEST Workshop</i>.
                     </div>
                 </div>
 
