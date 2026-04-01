@@ -402,8 +402,9 @@
         
         .publication-text p.authors .main-author,
         .conference-text p.authors .main-author {
-            color: #000;
-            font-weight: normal;
+            color: var(--ink);
+            font-weight: 700;
+            letter-spacing: 0.01em;
         }
         
         .publication-text .badges,
@@ -513,6 +514,12 @@
             color: var(--muted);
             font-size: 1rem;
             line-height: 1.6;
+        }
+
+        .modal-authors .main-author {
+            color: var(--ink);
+            font-weight: 700;
+            letter-spacing: 0.01em;
         }
 
         .modal-abstract-block {
@@ -1133,6 +1140,7 @@
                 </div>
             </div>
 
+            <!--
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2022whispers.png" 
@@ -1157,6 +1165,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
         </div>
         <p class="publication-footnote"><sup>†</sup> indicates the first authorship, <sup>‡</sup> indicates the correspondence.</p>
