@@ -147,6 +147,14 @@ h4 {
     margin-bottom: 0;
 }
 
+.content-top > .page-header {
+    margin-bottom: 22px;
+}
+
+.content-top > .page-header:last-child {
+    margin-bottom: 0;
+}
+
 .page-header {
     padding: 28px 30px;
     border-radius: 20px;
@@ -160,6 +168,23 @@ h4 {
 .page-header h1 {
     font-size: 2.6rem;
     margin-bottom: 0;
+}
+
+.page-header p {
+    margin: 12px 0 0;
+    max-width: 920px;
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.62;
+}
+
+.page-intro {
+    color: var(--ink) !important;
+    font-size: 1.08rem !important;
+}
+
+.page-note {
+    font-size: 0.98rem !important;
 }
 
 .section-header {
@@ -342,6 +367,12 @@ h4 {
 
     .page-header h1 {
         font-size: 2rem;
+    }
+
+    .page-header p {
+        max-width: none;
+        font-size: 0.98rem;
+        line-height: 1.58;
     }
 
     h1,
