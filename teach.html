@@ -218,14 +218,16 @@
 
         .teaching-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
             gap: 18px;
+            align-items: stretch;
             justify-content: start;
+            width: 100%;
         }
 
         .teaching-entry {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: auto auto auto 1fr auto;
             gap: 12px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.94);
@@ -279,6 +281,7 @@
             font-size: 1.35rem;
             line-height: 1.25;
             color: #17202a;
+            text-wrap: balance;
         }
 
         .course-meta {
@@ -382,6 +385,7 @@
             .teaching-grid {
                 grid-template-columns: minmax(0, 1fr);
                 gap: 16px;
+                width: 100%;
             }
 
             .teaching-entry {
@@ -432,7 +436,7 @@
         <div class="section-header">
             <h2>Current Teaching</h2>
         </div>
-        <div class="teaching-grid">
+        <div class="teaching-grid current-grid">
             <div class="teaching-entry">
                 <div class="teaching-top">
                     <span class="course-code">SDSC6001</span>
@@ -473,7 +477,7 @@
         <div class="section-header">
             <h2>Previous Teaching</h2>
         </div>
-        <div class="teaching-grid">
+        <div class="teaching-grid previous-grid">
             <div class="teaching-entry">
                 <div class="teaching-top">
                     <span class="course-code">CSC375/675</span>
