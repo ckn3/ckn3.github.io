@@ -334,7 +334,7 @@
 
             .hero-layout {
                 grid-template-columns: 1fr;
-                gap: 18px;
+                gap: 14px;
             }
 
             .hero-copy {
@@ -342,38 +342,73 @@
             }
 
             .hero-card {
-                padding: 22px 18px;
+                padding: 20px 16px;
             }
 
             .hero-spotlight {
-                justify-items: flex-start;
+                order: -1;
+                justify-items: center;
             }
 
             .hero-portrait {
-                width: min(220px, 100%);
+                width: min(170px, 100%);
+                border-radius: 24px;
+            }
+
+            .hero-kicker {
+                display: block;
+                margin-bottom: 10px;
+                padding: 0;
+                border: none;
+                background: none;
+                color: var(--accent-deep);
+                font-size: 0.78rem;
+                line-height: 1.45;
+                letter-spacing: 0.05em;
+                text-transform: none;
             }
 
             .hero-title {
-                font-size: 2.45rem;
+                font-size: 2.2rem;
+                line-height: 1.08;
+                margin-bottom: 10px;
             }
 
             .hero-lead {
-                font-size: 1em;
-                line-height: 1.6;
+                font-size: 0.98rem;
+                line-height: 1.58;
+                margin-bottom: 14px;
             }
 
             .hero-note {
-                margin-bottom: 16px;
-                font-size: 0.96em;
+                margin: 0 0 14px 0;
+                font-size: 0.93rem;
+                line-height: 1.55;
+            }
+
+            .hero-status {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 14px;
+            }
+
+            .hero-status span,
+            .hero-status a {
+                padding: 7px 11px;
+                font-size: 0.9rem;
             }
 
             .hero-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 8px;
             }
 
             .hero-links a {
                 padding: 8px 12px;
-                font-size: 0.92rem;
+                font-size: 0.9rem;
+                justify-content: flex-start;
             }
 
             .timeline-item {
@@ -439,8 +474,20 @@
         }
 
         @media screen and (max-width: 520px) {
+            .hero-card {
+                padding: 18px 14px;
+            }
+
             .hero-title {
-                font-size: 2.15rem;
+                font-size: 1.95rem;
+            }
+
+            .hero-kicker {
+                font-size: 0.74rem;
+            }
+
+            .hero-links {
+                grid-template-columns: 1fr;
             }
 
             .section-card {
