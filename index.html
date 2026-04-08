@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='author' content='Kangning Cui'>
-    <meta name='description' content='Homepage'>
-    <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Kangning Cui's academic homepage, featuring research, teaching, services, team members, and recent updates.">
+    <meta property="og:title" content="Home | Kangning Cui">
+    <meta property="og:description" content="Kangning Cui's academic homepage, featuring research, teaching, services, team members, and recent updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/">
+    <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Home | Kangning Cui</title>
     <style>
@@ -15,13 +29,42 @@
             border-radius: 20px;
             border: 1px solid var(--line);
             background:
-                linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(248, 243, 231, 0.88)),
+                linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 243, 231, 0.88)),
                 linear-gradient(180deg, rgba(158, 126, 56, 0.08), transparent);
             box-shadow: var(--shadow-soft);
         }
 
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.7fr);
+            gap: 28px;
+            align-items: center;
+        }
+
         .hero-copy {
             padding: 0;
+        }
+
+        .hero-spotlight {
+            display: grid;
+            justify-items: end;
+        }
+
+        .hero-portrait {
+            width: min(100%, 280px);
+            aspect-ratio: 1 / 1.08;
+            overflow: hidden;
+            border-radius: 28px;
+            border: 1px solid rgba(158, 126, 56, 0.16);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(246, 242, 232, 0.92));
+            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.12);
+        }
+
+        .hero-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
         }
 
         .hero-kicker {
@@ -29,8 +72,9 @@
             margin-bottom: 14px;
             padding: 6px 12px;
             border-radius: 999px;
-            background: rgba(158, 126, 56, 0.12);
-            color: var(--accent-deep);
+            background: linear-gradient(90deg, rgba(158, 126, 56, 0.12), rgba(255, 255, 255, 0.82));
+            color: var(--ink);
+            border: 1px solid rgba(158, 126, 56, 0.18);
             font-size: 0.88em;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -46,6 +90,7 @@
 
         .hero-lead {
             margin: 0 0 18px 0;
+            max-width: 760px;
             color: var(--muted);
             font-size: 1.08em;
             line-height: 1.65;
@@ -53,21 +98,75 @@
 
         .hero-note {
             margin: -2px 0 20px 0;
+            max-width: 640px;
             color: var(--accent-deep);
             font-size: 1em;
             font-weight: 600;
             letter-spacing: 0.01em;
         }
 
+        .hero-status {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0 0 18px 0;
+        }
+
+        .hero-status span,
+        .hero-status a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(23, 23, 28, 0.04);
+            border: 1px solid rgba(23, 23, 28, 0.08);
+            color: #343842;
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+
+        .hero-status span:last-child {
+            background: rgba(158, 126, 56, 0.1);
+            border-color: rgba(158, 126, 56, 0.16);
+            color: var(--accent-deep);
+        }
+
+        .hero-status a:hover {
+            text-decoration: none;
+            color: var(--accent-deep);
+            border-color: rgba(158, 126, 56, 0.22);
+            background: rgba(255, 255, 255, 0.92);
+        }
+
         .hero-links {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 22px;
+            margin-top: 18px;
         }
 
-        .hero-links a img {
+        .hero-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 14px;
             border-radius: 999px;
+            background: rgba(255, 255, 255, 0.76);
+            border: 1px solid rgba(23, 23, 28, 0.08);
+            color: #43505d;
+            font-weight: 600;
+            line-height: 1;
+            box-shadow: 0 8px 18px rgba(31, 41, 51, 0.06);
+            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), background-color 0.18s var(--ease-smooth);
+        }
+
+        .hero-links a:hover {
+            text-decoration: none;
+            color: var(--accent-deep);
+            background: rgba(255, 255, 255, 0.94);
+            border-color: rgba(158, 126, 56, 0.18);
+            box-shadow: 0 12px 22px rgba(31, 41, 51, 0.08);
+            transform: translateY(-1px);
         }
 
         .home-grid {
@@ -78,22 +177,10 @@
         }
 
         .section-card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,248,0.98) 100%);
-            border: 1px solid var(--line);
             border-radius: 18px;
             padding: 22px;
-            box-shadow: 0 8px 20px rgba(31, 41, 51, 0.05);
-            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth);
-            will-change: transform;
-            transform: translateZ(0);
             box-sizing: border-box;
             height: 100%;
-        }
-
-        .section-card:hover {
-            transform: translate3d(0, -2px, 0);
-            box-shadow: 0 12px 24px rgba(31, 41, 51, 0.08);
-            border-color: rgba(158, 126, 56, 0.22);
         }
 
         .section-heading {
@@ -178,42 +265,6 @@
             line-height: 1.55;
         }
 
-        .quick-links {
-            display: grid;
-            gap: 12px;
-        }
-
-        .quick-link {
-            display: block;
-            padding: 16px 18px;
-            border-radius: 16px;
-            border: 1px solid var(--line);
-            background: rgba(255,255,255,0.9);
-            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth), background-color 0.16s var(--ease-smooth);
-            text-decoration: none;
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
-        .quick-link:hover {
-            transform: translate3d(0, -2px, 0);
-            box-shadow: 0 10px 20px rgba(31, 41, 51, 0.08);
-            border-color: rgba(158, 126, 56, 0.28);
-            text-decoration: none;
-        }
-
-        .quick-link strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--ink);
-            font-size: 1em;
-        }
-
-        .quick-link span {
-            color: var(--muted);
-            line-height: 1.45;
-        }
-
         .news-shell {
             overflow: hidden;
         }
@@ -253,20 +304,8 @@
             display: grid;
             grid-template-columns: 92px minmax(0, 1fr);
             gap: 16px;
-            background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
             padding: 14px 16px;
             border-radius: 16px;
-            box-shadow: 0 10px 24px rgba(31, 41, 51, 0.07);
-            border: 1px solid var(--line);
-            transition: transform 0.16s var(--ease-smooth), box-shadow 0.16s var(--ease-smooth), border-color 0.16s var(--ease-smooth);
-            will-change: transform;
-            transform: translateZ(0);
-        }
-
-        .news-card:hover {
-            transform: translate3d(0, -2px, 0);
-            box-shadow: 0 12px 22px rgba(31, 41, 51, 0.08);
-            border-color: rgba(158, 126, 56, 0.24);
         }
 
         .news-date {
@@ -288,41 +327,14 @@
             color: #666;
         }
 
-        .visitor-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .visitor-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1000;
-            pointer-events: all;
-        }
-
-        .visitor-stats {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 22px;
-            margin: 10px auto 0 auto;
-            width: min(720px, 100%);
-        }
-
-        .map {
-            flex: 3;
-        }
-
-        .globe {
-            flex: 1;
-        }
-
         @media screen and (max-width: 768px) {
             .home-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 18px;
             }
 
             .hero-copy {
@@ -331,6 +343,14 @@
 
             .hero-card {
                 padding: 22px 18px;
+            }
+
+            .hero-spotlight {
+                justify-items: flex-start;
+            }
+
+            .hero-portrait {
+                width: min(220px, 100%);
             }
 
             .hero-title {
@@ -351,9 +371,9 @@
                 gap: 8px;
             }
 
-            .hero-links a img {
-                max-width: 100%;
-                height: auto;
+            .hero-links a {
+                padding: 8px 12px;
+                font-size: 0.92rem;
             }
 
             .timeline-item {
@@ -416,16 +436,6 @@
                 overflow: visible;
             }
 
-            .visitor-stats {
-                flex-direction: column;
-                gap: 14px;
-                width: 100%;
-            }
-
-            .map,
-            .globe {
-                width: 100%;
-            }
         }
 
         @media screen and (max-width: 520px) {
@@ -458,7 +468,6 @@
         }
 
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 </head>
 
 
@@ -472,7 +481,7 @@
                 <a href="teach.html">Teaching</a>
                 <a href="academic_honors.html">Services</a>
                 <a href="collaborators.html">Team</a>
-                <a href="others.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
             </nav>
         </div>
     </header>
@@ -481,21 +490,30 @@
 
     <div class="content content-top">
         <div class="hero-card">
-            <div class="hero-copy">
-                <span class="hero-kicker">Machine Learning • Image and Signal Processing • Remote Sensing • Healthcare Applications</span>
-                <h1 class="hero-title" id="welcome">Kangning Cui</h1>
-                <p class="hero-lead">I develop efficient machine learning and computer vision methods for real-world scientific problems, with current interests spanning remote sensing, ecological monitoring, medical imaging, and data-centric AI.</p>
-                <p class="hero-note">Feel free to contact me for collaborations.</p>
-
-                <div class="hero-links">
-                    <a href="https://cs.wfu.edu/faculty/jason-cui/"><img src="https://img.shields.io/badge/WFU_Site-9D7A3F" alt="WFU Site"></a>
-                    <a href="mailto:kangnicui2@gmail.com"><img src="https://img.shields.io/badge/Email-contact-D14836?logo=gmail&logoColor=white" alt="Email"></a>
-                    <a href="https://github.com/ckn3/"><img src="https://img.shields.io/badge/GitHub-111111?logo=github&logoColor=white" alt="Github"></a>
-                    <a href="https://www.linkedin.com/in/kangning-cui-57662b177/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-                    <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-456_Citations-2E77D0?logo=google+scholar&logoColor=white" alt="Google Scholar" id="scholar-citations-badge"></a>
-                    <a href="https://orcid.org/0000-0002-1856-5064"><img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white" alt="ORCID"></a>
-                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865"><img src="https://img.shields.io/badge/Scopus-E9711C?logo=elsevier&logoColor=white" alt="Scopus"></a>
-                    <a href="https://www.researchgate.net/profile/Kangning-Cui?ev=hdr_xprf"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <span class="hero-kicker">Computer Vision • Signal Processing • LLM • Geoscience • Healthcare</span>
+                    <h1 class="hero-title" id="welcome">Kangning Cui</h1>
+                    <p class="hero-lead">I develop efficient machine learning methods across computer vision, signal processing, large language models, geoscience, and healthcare.</p>
+                    <p class="hero-note">I would be delighted to connect about collaborations, ideas, and opportunities to work together.</p>
+                    <div class="hero-status">
+                        <a href="https://cs.wfu.edu/faculty/jason-cui/">Wake Forest University</a>
+                        <span>Incoming CityU Dongguan</span>
+                    </div>
+                    <div class="hero-links">
+                        <a href="mailto:kangnicui2@gmail.com">Email</a>
+                        <a href="https://github.com/ckn3/">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+                        <a href="https://www.researchgate.net/profile/Kangning-Cui?ev=hdr_xprf">ResearchGate</a>
+                    </div>
+                </div>
+                <div class="hero-spotlight">
+                    <div class="hero-portrait">
+                        <img src="figures/main/profile.jpeg" alt="Kangning Cui">
+                    </div>
                 </div>
             </div>
         </div>
@@ -509,7 +527,7 @@
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">Starting<br>07/2026</div>
+                        <div class="timeline-date">2026–</div>
                         <div class="timeline-content">
                             <div class="timeline-head">
                                 <div class="timeline-logo">
@@ -524,7 +542,7 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">08/2025 - Present</div>
+                        <div class="timeline-date">2025–Present</div>
                         <div class="timeline-content">
                             <div class="timeline-head">
                                 <div class="timeline-logo">
@@ -538,7 +556,7 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">08/2025 - Present</div>
+                        <div class="timeline-date">2025–Present</div>
                         <div class="timeline-content">
                             <div class="timeline-head">
                                 <div class="timeline-logo">
@@ -552,7 +570,7 @@
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-date">09/2022–07/2024</div>
+                        <div class="timeline-date">2022–2024</div>
                         <div class="timeline-content">
                             <div class="timeline-head">
                                 <div class="timeline-logo">
@@ -715,25 +733,20 @@
                     </div>
                 </div>
             </section>
-
-            <section class="section-card visitor-card">
-                <div class="section-heading">
-                    <h2>Visitors</h2>
-                </div>
-                <div class="visitor-overlay"></div>
-                <div class="visitor-stats">
-                    <div class="map">
-                        <img src='//clustrmaps.com/map_v2.png?cl=080808&w=500&t=tt&d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU&co=ffffff&ct=808080' style="width: 100%; height: auto;" alt="Visitor Map"/>
-                    </div>
-                    <div class="globe">
-                        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=yiMtVnrUIAvh3nYVrE_SkK3vszNweQ0FORJPzigR9mU"></script>
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
 
     </main>
-
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangnicui2@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank">GitHub</a>
+            </div>
+            <div class="site-footer-meta">Last updated: April 2026</div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='Author' content='Kangning Cui'>
-    <meta name='Content' content='Homepage'>
-    <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Teaching experience and current courses taught by Kangning Cui, including machine learning, deep learning, calculus, and engineering mathematics.">
+    <meta property="og:title" content="Teaching | Kangning Cui">
+    <meta property="og:description" content="Teaching experience and current courses taught by Kangning Cui, including machine learning, deep learning, calculus, and engineering mathematics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/teach.html">
+    <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Teaching | Kangning Cui</title>
     <style>
@@ -15,17 +29,21 @@
             grid-template-rows: auto auto auto 1fr auto;
             gap: 12px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.94);
             border-radius: 18px;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
         }
 
-        .teaching-entry:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
-            border-color: var(--line-strong);
+        .teaching-entry.cityu {
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 250, 248, 0.94)),
+                linear-gradient(115deg, rgba(158, 126, 56, 0.04), transparent 52%);
+            border-color: rgba(158, 126, 56, 0.12);
+        }
+
+        .teaching-entry.wfu {
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(251, 247, 239, 0.94)),
+                linear-gradient(115deg, rgba(158, 126, 56, 0.08), transparent 52%);
+            border-color: rgba(158, 126, 56, 0.16);
         }
 
         .teaching-top {
@@ -35,17 +53,39 @@
             gap: 12px;
         }
 
+        .site-nav a:hover {
+            color: var(--accent) !important;
+            border-color: rgba(158, 126, 56, 0.3);
+        }
+
+        .site-nav a[aria-current="page"] {
+            color: var(--ink) !important;
+            border-color: rgba(158, 126, 56, 0.5);
+        }
+
         .course-code {
             display: inline-flex;
             align-items: center;
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(158, 126, 56, 0.1);
-            border: 1px solid rgba(158, 126, 56, 0.16);
-            color: var(--accent-deep);
+            background: rgba(23, 23, 28, 0.05);
+            border: 1px solid rgba(23, 23, 28, 0.08);
+            color: var(--ink);
             font-size: 0.9rem;
             font-weight: 700;
             letter-spacing: 0.03em;
+        }
+
+        .teaching-entry.cityu .course-code {
+            background: rgba(23, 23, 28, 0.05);
+            border-color: rgba(23, 23, 28, 0.08);
+            color: var(--ink);
+        }
+
+        .teaching-entry.wfu .course-code {
+            background: linear-gradient(90deg, rgba(158, 126, 56, 0.14), rgba(255, 255, 255, 0.82));
+            border-color: rgba(158, 126, 56, 0.18);
+            color: var(--accent-deep);
         }
 
         .status-chip {
@@ -53,11 +93,24 @@
             align-items: center;
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(31, 41, 51, 0.06);
+            background: rgba(23, 23, 28, 0.05);
+            border: 1px solid rgba(23, 23, 28, 0.08);
             color: var(--muted);
             font-size: 0.86rem;
             font-weight: 600;
             white-space: nowrap;
+        }
+
+        .teaching-entry.cityu .status-chip {
+            background: rgba(23, 23, 28, 0.05);
+            border-color: rgba(23, 23, 28, 0.08);
+            color: var(--muted);
+        }
+
+        .teaching-entry.wfu .status-chip {
+            background: rgba(158, 126, 56, 0.1);
+            border-color: rgba(158, 126, 56, 0.16);
+            color: var(--accent-deep);
         }
 
         .course-title {
@@ -89,6 +142,22 @@
             font-weight: 600;
         }
 
+        .teaching-entry.cityu .course-links a {
+            color: var(--accent-deep);
+        }
+
+        .teaching-entry.cityu .course-links a:hover {
+            color: var(--accent);
+        }
+
+        .teaching-entry.wfu .course-links a {
+            color: var(--accent-deep);
+        }
+
+        .teaching-entry.wfu .course-links a:hover {
+            color: var(--accent);
+        }
+
         .link-divider {
             color: rgba(31, 41, 51, 0.35);
         }
@@ -116,7 +185,7 @@
                 <a href="teach.html" aria-current="page">Teaching</a>
                 <a href="academic_honors.html">Services</a>
                 <a href="collaborators.html">Team</a>
-                <a href="others.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
             </nav>
         </div>
     </header>
@@ -134,24 +203,7 @@
             <h2>Current Teaching</h2>
         </div>
         <div class="teaching-grid card-grid">
-            <div class="teaching-entry">
-                <div class="teaching-top">
-                    <span class="course-code">SDSC6001</span>
-                    <span class="status-chip">Scheduled</span>
-                </div>
-                <h3 class="course-title">Statistical Machine Learning II</h3>
-                <div class="course-meta">
-                    <div>City University of Hong Kong (Dongguan)</div>
-                    <div>Spring 2027</div>
-                </div>
-                <div class="course-links">
-                    <a href="courses/sdsc6001.html">Course Page</a>
-                    <span class="link-divider">|</span>
-                    <a href="https://www.cityu.edu.hk/catalogue/pg/202526/course/SDSC6001.htm" target="_blank">Syllabus</a>
-                </div>
-            </div>
-
-            <div class="teaching-entry">
+            <div class="teaching-entry cityu">
                 <div class="teaching-top">
                     <span class="course-code">SDSC5001</span>
                     <span class="status-chip">Scheduled</span>
@@ -167,6 +219,23 @@
                     <a href="https://www.cityu.edu.hk/catalogue/pg/202526/course/SDSC5001.htm" target="_blank">Syllabus</a>
                 </div>
             </div>
+
+            <div class="teaching-entry cityu">
+                <div class="teaching-top">
+                    <span class="course-code">SDSC6001</span>
+                    <span class="status-chip">Scheduled</span>
+                </div>
+                <h3 class="course-title">Statistical Machine Learning II</h3>
+                <div class="course-meta">
+                    <div>City University of Hong Kong (Dongguan)</div>
+                    <div>Spring 2027</div>
+                </div>
+                <div class="course-links">
+                    <a href="courses/sdsc6001.html">Course Page</a>
+                    <span class="link-divider">|</span>
+                    <a href="https://www.cityu.edu.hk/catalogue/pg/202526/course/SDSC6001.htm" target="_blank">Syllabus</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -175,7 +244,7 @@
             <h2>Previous Teaching</h2>
         </div>
         <div class="teaching-grid card-grid">
-            <div class="teaching-entry">
+            <div class="teaching-entry wfu">
                 <div class="teaching-top">
                     <span class="course-code">CSC375/675</span>
                     <span class="status-chip">Guest Lecturer</span>
@@ -192,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="teaching-entry">
+            <div class="teaching-entry cityu">
                 <div class="teaching-top">
                     <span class="course-code">MA1006</span>
                     <span class="status-chip">Tutorials</span>
@@ -207,7 +276,7 @@
                 </div>
             </div>
 
-            <div class="teaching-entry">
+            <div class="teaching-entry cityu">
                 <div class="teaching-top">
                     <span class="course-code">MA2158</span>
                     <span class="status-chip">Tutorials</span>
@@ -222,7 +291,7 @@
                 </div>
             </div>
 
-            <div class="teaching-entry">
+            <div class="teaching-entry cityu">
                 <div class="teaching-top">
                     <span class="course-code">MA2177</span>
                     <span class="status-chip">Tutorials</span>
@@ -240,7 +309,17 @@
     </div>
 
     </main>
-
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangnicui2@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank">GitHub</a>
+            </div>
+            <div class="site-footer-meta">Last updated: April 2026</div>
+        </div>
+    </footer>
 </body>
 
 </html>

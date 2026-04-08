@@ -4,25 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='Author' content='Kangning Cui'>
-    <meta name='Content' content='Homepage'>
-    <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Gallery page with academic visits and personal snapshots from Kangning Cui's homepage.">
+    <meta property="og:title" content="Gallery | Kangning Cui">
+    <meta property="og:description" content="Gallery page with academic visits and personal snapshots from Kangning Cui's homepage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/gallery.html">
+    <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Gallery | Kangning Cui</title>
     <style>
         .gallery-card {
-            background: rgba(255, 255, 255, 0.94);
             border-radius: 18px;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow-soft);
             overflow: hidden;
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
-            border-color: var(--line-strong);
         }
 
         .gallery-image {
@@ -77,7 +81,7 @@
                 <a href="teach.html">Teaching</a>
                 <a href="academic_honors.html">Services</a>
                 <a href="collaborators.html">Team</a>
-                <a href="others.html" aria-current="page">Gallery</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
             </nav>
         </div>
     </header>
@@ -283,7 +287,17 @@
     </script>
 
     </main>
-
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangnicui2@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank">GitHub</a>
+            </div>
+            <div class="site-footer-meta">Last updated: April 2026</div>
+        </div>
+    </footer>
 </body>
 
 </html>

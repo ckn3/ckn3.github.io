@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='Author' content='Kangning Cui'>
-    <meta name='Content' content='Homepage'>
-    <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Selected journal and conference publications by Kangning Cui in machine learning, image and signal processing, remote sensing, and healthcare applications.">
+    <meta property="og:title" content="Research | Kangning Cui">
+    <meta property="og:description" content="Selected journal and conference publications by Kangning Cui in machine learning, image and signal processing, remote sensing, and healthcare applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/publications.html">
+    <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Research | Kangning Cui</title>
     <style>
@@ -52,18 +66,8 @@
             align-items: start;
             gap: 22px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.94);
             border-radius: 18px;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             cursor: pointer;
-        }
-    
-        .publication-entry:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
-            border-color: var(--line-strong);
         }
 
         .publication-entry:focus-visible,
@@ -77,16 +81,21 @@
             align-self: stretch;
             display: flex;
             align-items: center;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            border-radius: 14px;
+            background: rgba(158, 126, 56, 0.04);
         }
     
         .publication-figure img {
             width: 100%;
-            height: auto;
-            border-radius: 14px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
             cursor: pointer;
             transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth);
-            border: 1px solid rgba(31, 41, 51, 0.08);
-            box-shadow: 0 12px 24px rgba(31, 41, 51, 0.12);
+            border: none;
+            box-shadow: none;
         }
     
         .publication-figure img:hover {
@@ -100,39 +109,41 @@
 
         .publication-text p.title,
         .conference-text p.title {
-            font-size: 1.08rem;
-            line-height: 1.4;
             margin: 0 0 8px;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             gap: 16px;
-            flex-wrap: wrap;
         }
         
         .publication-text p.title .paper-title,
         .conference-text p.title .paper-title {
+            display: block;
             flex: 1;
             min-width: 0;
+            color: var(--ink);
+            font-size: 1.08rem;
+            line-height: 1.42;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
         
         .publication-text p.title .venue,
         .conference-text p.title .venue {
-            white-space: nowrap;
-            font-size: 0.92rem;
+            display: inline-flex;
+            flex-shrink: 0;
+            font-size: 0.93rem;
             color: var(--muted);
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(158, 126, 56, 0.08);
-            border: 1px solid rgba(158, 126, 56, 0.12);
+            letter-spacing: 0.01em;
+            text-align: right;
         }
         
         .publication-text p.authors,
         .conference-text p.authors {
-            font-size: 0.97rem;
-            margin: 0 0 12px;
+            font-size: 0.96rem;
+            line-height: 1.58;
+            margin: 0 0 14px;
             color: var(--muted);
-            margin-top: 0;
         }
         
         .publication-text p.authors .main-author,
@@ -147,6 +158,7 @@
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .badges a {
@@ -156,6 +168,26 @@
 
         .badges a:hover {
             transform: translateY(-1px);
+        }
+
+        .badge-chip {
+            align-items: center;
+            justify-content: center;
+            padding: 6px 11px;
+            border-radius: 999px;
+            border: 1px solid rgba(23, 23, 28, 0.08);
+            background: rgba(255, 255, 255, 0.82);
+            color: #43505d !important;
+            font-size: 0.88rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .badge-chip:hover {
+            text-decoration: none;
+            color: var(--accent-deep) !important;
+            border-color: rgba(158, 126, 56, 0.22);
+            background: rgba(255, 255, 255, 0.94);
         }
 
         .publications-grid {
@@ -226,14 +258,11 @@
         }
 
         .modal-venue {
-            display: inline-flex;
-            margin-bottom: 12px;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(158, 126, 56, 0.1);
-            border: 1px solid rgba(158, 126, 56, 0.14);
+            display: block;
+            margin-bottom: 10px;
             color: var(--muted);
-            font-size: 0.92rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
         }
 
         .modal-title {
@@ -321,30 +350,22 @@
             align-items: start;
             gap: 22px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.94);
             border-radius: 18px;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             cursor: pointer;
-        }
-
-        .conference-entry:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.1);
-            border-color: var(--line-strong);
         }
 
         .publication-entry.highlight-entry,
         .conference-entry.highlight-entry {
-            background: linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(248, 243, 231, 0.96));
-            border: 1px solid rgba(158, 126, 56, 0.36);
-            box-shadow: 0 14px 28px rgba(158, 126, 56, 0.16);
+            background:
+                linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(248, 243, 231, 0.96)),
+                linear-gradient(115deg, rgba(158, 126, 56, 0.08), transparent 50%);
+            border: 1px solid rgba(158, 126, 56, 0.2);
+            box-shadow: 0 12px 24px rgba(158, 126, 56, 0.08);
         }
 
         .publication-entry.highlight-entry:hover,
         .conference-entry.highlight-entry:hover {
-            box-shadow: 0 18px 34px rgba(158, 126, 56, 0.22);
+            box-shadow: 0 16px 28px rgba(158, 126, 56, 0.1);
         }
  
         .conference-text {
@@ -384,23 +405,19 @@
 
             .publication-text p.title,
             .conference-text p.title {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                margin-bottom: 8px;
+                display: block;
             }
 
             .publication-text p.title .venue,
             .conference-text p.title .venue {
-                white-space: normal;
+                display: block;
+                margin-top: 6px;
+                text-align: left;
             }
 
             .badges {
                 flex-wrap: wrap;
-            }
-
-            .badges img {
-                max-width: 100%;
-                height: auto;
             }
 
             .modal {
@@ -452,7 +469,7 @@
                 <a href="teach.html">Teaching</a>
                 <a href="academic_honors.html">Services</a>
                 <a href="collaborators.html">Team</a>
-                <a href="others.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
             </nav>
         </div>
     </header>
@@ -463,7 +480,7 @@
         <div class="page-header">
             <h1>Research</h1>
             <p class="page-intro">Selected publications in machine learning, image and signal processing, remote sensing, and healthcare applications.</p>
-            <p class="page-note">Complete publication record is available on <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>. Highlighted entries indicate representative works.</p>
+            <p class="page-note">Full publication list on <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>. † indicates first authorship, and ‡ indicates corresponding authorship.</p>
         </div>
     </div>
 
@@ -476,6 +493,10 @@
             <div class="publication-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/yang2026superpixel.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Superpixel-level Hypergraph Multi-view Clustering" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -483,13 +504,13 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images"</strong></span>
-                        <span class="venue"><i>IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens.</i> 2026</span>
+                        <span class="venue">[JSTARS'26]</span>
                     </p>
                     <p class="authors">
                         Shujun Yang, <span class="main-author">Kangning Cui</span>, Yuheng Jia, Yao Ding, Renxiang Guan, and Yun Ding
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/11433595"><img src="https://img.shields.io/static/v1?label=IEEE&message=JSTARS&color=%2300629B&logo=IEEE"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/11433595">Paper</a>
                     </div>
                 </div>
             </div>
@@ -497,6 +518,10 @@
             <div class="publication-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/zhang2026center.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for CenterSeg" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -504,17 +529,15 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Center-guided Classifier for Semantic Segmentation of Remote Sensing Images"</strong></span>
-                        <span class="venue"><i>IEEE Trans. Geosci. Remote Sens.</i> 2026</span>
+                        <span class="venue">[TGRS'26]</span>
                     </p>
                     <p class="authors">
                         Wei Zhang, Qin Huang, Mengting Ma, Yizhen Jiang, Yun Chen, Zhenhua Huang, Wangyu Wu, <span class="main-author">Kangning Cui</span>, Rongrong Lian, Zhenkai Wu, and Xiaowen Ma<sup>‡</sup>
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/11364332"><img src="https://img.shields.io/static/v1?label=IEEE&message=TGRS&color=%2300629B&logo=IEEE"></a>
-                        <a href="https://arxiv.org/abs/2503.16963"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                        <a href="https://github.com/xwmaxwma/rssegmentation"><img src="https://img.shields.io/static/v1?label=xwmaxwma&message=rssegmentation&color=blue&logo=github"></a>
-                        <a href="https://github.com/xwmaxwma/rssegmentation"><img src="https://img.shields.io/github/stars/xwmaxwma/rssegmentation?style=social"></a>
-                        <a href="https://github.com/xwmaxwma/rssegmentation"><img src="https://img.shields.io/github/forks/xwmaxwma/rssegmentation?style=social"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/11364332">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2503.16963">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/xwmaxwma/rssegmentation">Code</a>
                     </div>
                 </div>
             </div>
@@ -522,6 +545,10 @@
             <div class="publication-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025efficient.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Cui et al., 2025" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -529,18 +556,16 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery"</strong></span>
-                        <span class="venue"><i>IEEE Trans. Geosci. Remote Sens.</i> 2025</span>
+                        <span class="venue">[TGRS'25]</span>
                     </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Wei Tang<sup>†</sup>, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/11059236"><img src="https://img.shields.io/static/v1?label=IEEE&message=TGRS&color=%2300629B&logo=IEEE"></a>
-                        <a href="https://arxiv.org/abs/2410.11124"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                        <a href="https://zenodo.org/records/13822508"><img src="https://img.shields.io/badge/Ecuador-Palm_Detection_Dataset-orange?logo=zenodo"></a>
-                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/static/v1?label=ckn3&message=palm-ds-sp&color=blue&logo=github"></a>
-                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/stars/ckn3/palm-ds-sp?style=social"></a>
-                        <a href="https://github.com/ckn3/palm-ds-sp"><img src="https://img.shields.io/github/forks/ckn3/palm-ds-sp?style=social"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/11059236">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2410.11124">Preprint</a>
+                        <a class="badge-chip" href="https://zenodo.org/records/13822508">Dataset</a>
+                        <a class="badge-chip" href="https://github.com/ckn3/palm-ds-sp">Code</a>
                     </div>
                 </div>
             </div>
@@ -548,6 +573,10 @@
             <div class="publication-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2024superpixel.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Cui et al., 2023" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -555,17 +584,40 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering"</strong></span>
-                        <span class="venue"><i>IEEE Trans. Geosci. Remote Sens.</i>, 2024</span>
+                        <span class="venue">[TGRS'24]</span>
                     </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/10491382"><img src="https://img.shields.io/static/v1?label=IEEE&message=TGRS&color=%2300629B&logo=IEEE"></a>
-                        <a href="https://arxiv.org/abs/2312.15447"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/static/v1?label=ckn3&message=S2DL&color=blue&logo=github"></a>
-                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/stars/ckn3/S2DL?style=social"></a>
-                        <a href="https://github.com/ckn3/S2DL"><img src="https://img.shields.io/github/forks/ckn3/S2DL?style=social"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/10491382">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2312.15447">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/ckn3/S2DL">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-entry">
+                <div class="publication-figure">
+                    <img src="figures/publications/pan2024dual.jpg" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
+                         alt="Figure for accurate detection and instance segmentation of unstained living adherent cells" 
+                         onclick="openModal(this.src)"
+                         title="Click to enlarge">
+                </div>
+                <div class="publication-text">
+                    <p class="title">
+                        <span class="paper-title"><strong>"Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images"</strong></span>
+                        <span class="venue">[CIBM'24]</span>
+                    </p>
+                    <p class="authors">
+                        Fei Pan<sup>†</sup>, Yutong Wu<sup>†</sup>, <span class="main-author">Kangning Cui</span>, Shuxun Chen, Yanfang Li, Yaofang Liu, Adnan Shakoor, Han Zhao, Beijia Lu, Shaohua Zhi, Raymond Hon-Fu Chan, and Dong Sun
+                    </p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://www.sciencedirect.com/science/article/pii/S0010482524012368">Paper</a>
                     </div>
                 </div>
             </div>
@@ -573,6 +625,10 @@
             <div class="publication-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/polk2023unsupervised.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Polk et al., 2023" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -580,17 +636,15 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images"</strong></span>
-                        <span class="venue"><i>Remote Sens.</i>, 2023</span>
+                        <span class="venue">[RS'23]</span>
                     </p>
                     <p class="authors">
                         Sam L. Polk, <span class="main-author">Kangning Cui</span>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy<sup>‡</sup>
                     </p>
                     <div class="badges">
-                        <a href="https://www.mdpi.com/2072-4292/15/4/1053"><img src="https://img.shields.io/static/v1?label=MDPI&message=RS&color=%233f7d3b"></a>
-                        <a href="https://arxiv.org/abs/2203.09992"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/static/v1?label=sampolk&message=D-VIC&color=blue&logo=github"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/stars/sampolk/D-VIC?style=social"></a>
-                        <a href="https://github.com/sampolk/D-VIC"><img src="https://img.shields.io/github/forks/sampolk/D-VIC?style=social"></a>
+                        <a class="badge-chip" href="https://www.mdpi.com/2072-4292/15/4/1053">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2203.09992">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/sampolk/D-VIC">Code</a>
                     </div>
                 </div>
             </div>
@@ -598,6 +652,10 @@
             <div class="publication-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/camalan2022change.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Camalan et al., 2022" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -605,15 +663,15 @@
                 <div class="publication-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery"</strong></span>
-                        <span class="venue"><i>Remote Sens.</i>, 2022</span>
+                        <span class="venue">[RS'22]</span>
                     </p>
                     <p class="authors">
                         Seda Camalan<sup>‡</sup>, <span class="main-author">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz
                     </p>
                     <div class="badges">
-                        <a href="https://www.mdpi.com/2072-4292/14/7/1746"><img src="https://img.shields.io/static/v1?label=MDPI&message=RS&color=%233f7d3b"></a>
-                        <a href="https://zenodo.org/records/6400211"><img src="https://img.shields.io/badge/Amazon-ASGM_Detection_Dataset-orange?logo=zenodo"></a>
-                        <a href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html"><img src="https://img.shields.io/static/v1?label=NBC&message=News&color=%236A1B9A&logo=nbc"></a>
+                        <a class="badge-chip" href="https://www.mdpi.com/2072-4292/14/7/1746">Paper</a>
+                        <a class="badge-chip" href="https://zenodo.org/records/6400211">Dataset</a>
+                        <a class="badge-chip" href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html">NBC News</a>
                     </div>
                 </div>
             </div>
@@ -647,6 +705,10 @@
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/yang2025miccai.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Yang et al., 2025" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -654,17 +716,15 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos"</strong></span>
-                        <span class="venue"><i>MICCAI</i>, 2025</span>
+                        <span class="venue">[MICCAI'25]</span>
                     </p>
                     <p class="authors">
                         Yingyu Yang, Qianye Yang, <span class="main-author">Kangning Cui</span>, Can Peng, Elena D'Alberti, Netzahualcoyotl Hernandez-Cruz, Olga Patey, Aris Papageorghiou, and Alison Noble
                     </p>
                     <div class="badges">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31"><img src="https://img.shields.io/static/v1?label=Springer&message=MICCAI+'25&color=%23006400&logo=springer" alt="Springer - MICCAI '25"></a>
-                        <a href="https://arxiv.org/abs/2507.05154"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/YingyuYyy/CardiacPhase"><img src="https://img.shields.io/static/v1?label=YingyuYyy&message=CardiacPhase&color=blue&logo=github" alt="YingyuYyy - CardiacPhase"></a>
-                        <a href="https://github.com/YingyuYyy/CardiacPhase"><img src="https://img.shields.io/github/stars/YingyuYyy/CardiacPhase?style=social" alt="stars - CardiacPhase"></a>
-                        <a href="https://github.com/YingyuYyy/CardiacPhase"><img src="https://img.shields.io/github/forks/YingyuYyy/CardiacPhase?style=social" alt="forks - CardiacPhase"></a>
+                        <a class="badge-chip" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2507.05154">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/YingyuYyy/CardiacPhase">Code</a>
                     </div>
                 </div>
             </div>
@@ -672,6 +732,10 @@
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/chen2025miccai.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Chen et al., 2025" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -679,14 +743,14 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Blind Restoration of High-Resolution Ultrasound Video"</strong></span>
-                        <span class="venue"><i>MICCAI</i>, 2025</span>
+                        <span class="venue">[MICCAI'25]</span>
                     </p>
                     <p class="authors">
                         Chu Chen<sup>‡</sup>, <span class="main-author">Kangning Cui</span>, Pasquale Cascarano, Wei Tang, Elena L. Piccolomini, and Raymond H. Chan
                     </p>
                     <div class="badges">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8"><img src="https://img.shields.io/static/v1?label=Springer&message=MICCAI+'25&color=%23006400&logo=springer" alt="Springer - MICCAI '25"></a>
-                        <a href="https://arxiv.org/abs/2505.13915"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a class="badge-chip" href="https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2505.13915">Preprint</a>
                     </div>
                 </div>
             </div>
@@ -694,6 +758,10 @@
             <div class="conference-entry highlight-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025ijcai.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Cui et al., 2025" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -701,19 +769,17 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms"</strong></span>
-                        <span class="venue"><i>IJCAI</i>, 2025</span>
+                        <span class="venue">[IJCAI'25]</span>
                     </p>
                     <p class="authors">
                         <span class="main-author">Kangning Cui</span><sup>†,‡</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman
                     </p>
                     <div class="badges">
-                        <a href="https://www.ijcai.org/proceedings/2025/1067"><img src="https://img.shields.io/static/v1?label=IJCAI&message=IJCAI+'25&color=%2300629B&logo=IJCAI" alt="IJCAI - IJCAI'25"></a>
-                        <a href="https://arxiv.org/abs/2502.13023"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="docs/posters/cui2025ijcai.pdf"><img src="https://img.shields.io/static/v1?label=Poster&message=View&color=%236A1B9A" alt="Poster"></a>
-                        <a href="docs/slides/cui2025ijcai.pdf"><img src="https://img.shields.io/static/v1?label=Slides&message=View&color=%23008B8B" alt="Slides"></a>
-                        <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/static/v1?label=Zippppo&message=PRISM&color=blue&logo=github" alt="Zippppo - PRISM"></a>
-                        <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/github/stars/Zippppo/PRISM?style=social" alt="stars - PRISM"></a>
-                        <a href="https://github.com/Zippppo/PRISM"><img src="https://img.shields.io/github/forks/Zippppo/PRISM?style=social" alt="forks - PRISM"></a>
+                        <a class="badge-chip" href="https://www.ijcai.org/proceedings/2025/1067">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2502.13023">Preprint</a>
+                        <a class="badge-chip" href="docs/posters/cui2025ijcai.pdf">Poster</a>
+                        <a class="badge-chip" href="docs/slides/cui2025ijcai.pdf">Slides</a>
+                        <a class="badge-chip" href="https://github.com/Zippppo/PRISM">Code</a>
                     </div>
                 </div>
             </div>
@@ -721,6 +787,10 @@
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/tang2025isbi.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Tang et al., 2025" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -728,14 +798,14 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis"</strong></span>
-                        <span class="venue"><i>ISBI</i>, 2025</span>
+                        <span class="venue">[ISBI'25]</span>
                     </p>
                     <p class="authors">
                         Wei Tang<sup>†</sup>, <span class="main-author">Kangning Cui</span><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel<sup>‡</sup>
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/10980912"><img src="https://img.shields.io/static/v1?label=IEEE&message=ISBI+'25&color=%2300629B&logo=IEEE" alt="Proc - ISBI '25"></a>
-                        <a href="https://arxiv.org/abs/2411.08819v1"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/10980912">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2411.08819v1">Preprint</a>
                     </div>
                 </div>
             </div>
@@ -743,6 +813,10 @@
             <div class="conference-entry">
                 <div class="publication-figure">
                     <img src="figures/publications/tang2024isbi.png" 
+                         loading="lazy"
+                         decoding="async"
+                         width="640"
+                         height="480"
                          alt="Figure for Tang et al., 2024" 
                          onclick="openModal(this.src)"
                          title="Click to enlarge">
@@ -750,17 +824,15 @@
                 <div class="conference-text">
                     <p class="title">
                         <span class="paper-title"><strong>"Optimized Hard Exudate Detection with Supervised Contrastive Learning"</strong></span>
-                        <span class="venue"><i>ISBI</i>, 2024</span>
+                        <span class="venue">[ISBI'24]</span>
                     </p>
                     <p class="authors">
                         Wei Tang, <span class="main-author">Kangning Cui</span><sup>‡</sup>, and Raymond H. Chan
                     </p>
                     <div class="badges">
-                        <a href="https://ieeexplore.ieee.org/document/10635760"><img src="https://img.shields.io/static/v1?label=IEEE&message=ISBI+'24&color=%2300629B&logo=IEEE" alt="Proc - ISBI '24"></a>
-                        <a href="https://arxiv.org/abs/2302.11517"><img src="https://img.shields.io/static/v1?label=ArXiv&message=Preprint&color=%23b31b1b&logo=arxiv" alt="ArXiv - Preprint"></a>
-                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/static/v1?label=wetang7&message=HECL&color=blue&logo=github" alt="wetang7 - HECL"></a>
-                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/stars/wetang7/HECL?style=social" alt="stars - HECL"></a>
-                        <a href="https://github.com/wetang7/HECL"><img src="https://img.shields.io/github/forks/wetang7/HECL?style=social" alt="forks - HECL"></a>
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/10635760">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2302.11517">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/wetang7/HECL">Code</a>
                     </div>
                 </div>
             </div>
@@ -775,6 +847,7 @@
   "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images": "Compared with natural images, remote sensing images (RSIs) have the unique characteristic, i.e., larger intraclass variance, which makes semantic segmentation for remote sensing images more challenging. Moreover, existing semantic segmentation models for remote sensing images usually employ a vanilla softmax classifier, which has three drawbacks: (1) non-direct supervision for the pixel representations during training; (2) inadequate modeling ability of parametric softmax classifiers under large intraclass variance; and (3) opaque process of classification decision. In this paper, we propose a novel classifier (called CenterSeg) customized for RSI semantic segmentation, which solves the abovementioned problems with multiple prototypes, direct supervision under Grassmann manifold, and interpretability strategy. Specifically, for each class, our CenterSeg obtains local class centers by aggregating corresponding pixel features based on ground-truth masks, and generates multiple prototypes through hard attention assignment and momentum updating. In addition, we introduce the Grassmann manifold and constrain the joint embedding space of pixel features and prototypes based on two additional regularization terms. Especially, during the inference, CenterSeg can further provide interpretability to the model by restricting the prototype as a sample of the training set. Experimental results on three remote sensing segmentation datasets validate the effectiveness of the model. Besides the superior performance, CenterSeg has the advantages of simplicity, lightweight, compatibility, and interpretability.",
   "Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery": "Understanding the spatial distribution of palms in tropical forests is essential for ecological monitoring, conservation strategies, and the sustainable integration of natural forest products into local and global supply chains. However, the analysis of remotely sensed data are challenged by overlapping palm and tree crowns, uneven shading across the canopy surface, and the heterogeneous nature of the forest landscapes, which often affect the performance of palm detection and segmentation algorithms. To overcome these issues, we introduce PalmDSNet, a deep learning framework for efficient detection, segmentation, and counting of canopy palms. To model spatial patterns, we introduce a bimodal reproduction algorithm that simulates palm propagation based on PalmDSNet outputs. We used UAV-captured imagery to create orthomosaics from 21 sites across western Ecuadorian tropical forests, covering a gradient from the everwet Choco forests near Colombia to the drier forests of southwestern Ecuador. Expert annotations were used to create a comprehensive dataset, including 7,356 bounding boxes on image patches and 7,603 palm centers across five orthomosaics, encompassing a total area of 449 hectares. By integrating detection and spatial modeling, we effectively simulate the spatial distribution of palms in diverse and dense tropical environments, validating its utility for advanced applications in tropical forest monitoring and remote sensing analysis. The dataset can be accessed at 10.5281/zenodo.13822508, and the code to replicate the study is available at github.com/ckn3/palm-ds-sp.",
   "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering": "Hyperspectral images (HSIs) provide exceptional spatial and spectral resolution of a scene, crucial for various remote sensing applications. However, the high dimensionality, presence of noise and outliers, and the need for precise labels of HSIs present significant challenges to the analysis of HSIs, motivating the development of performant HSI clustering algorithms. This paper introduces a novel unsupervised HSI clustering algorithm, Superpixel-based and Spatially-regularized Diffusion Learning (S2DL), which addresses these challenges by incorporating rich spatial information encoded in HSIs into diffusion geometry-based clustering. S2DL employs the Entropy Rate Superpixel (ERS) segmentation technique to partition an image into superpixels, then constructs a spatially-regularized diffusion graph using the most representative high-density pixels. This approach reduces computational burden while preserving accuracy. Cluster modes, serving as exemplars for underlying cluster structure, are identified as the highest-density pixels farthest in diffusion distance from other highest-density pixels. These modes guide the labeling of the remaining representative pixels from ERS superpixels. Finally, majority voting is applied to the labels assigned within each superpixel to propagate labels to the rest of the image. This spatial-spectral approach simultaneously simplifies graph construction, reduces computational cost, and improves clustering performance. S2DL’s performance is illustrated with extensive experiments on four publicly available, real-world HSIs: Indian Pines, Salinas, Salinas A, and WHU-Hi. Additionally, we apply S2DL to landscape-scale, unsupervised mangrove species mapping in the Mai Po Nature Reserve, Hong Kong, using a Gaofen-5 HSI. The success of S2DL in these diverse numerical experiments indicates its efficacy on a wide range of important unsupervised remote sensing analysis tasks.",
+  "Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images": "Detecting and segmenting unstained living adherent cells in differential interference contrast images is important for tasks such as microinjection, cell tracking, and phenotypic analysis. This work introduces a cascaded framework built on a curated dataset of 520 paired DIC images containing 12,198 annotated HepG2 cells. The method combines Mask R-CNN, filtering, and a ResNet-based mask selection stage, and it improves both detection and instance segmentation performance over strong baselines while capturing nearly every cell in practical settings.",
   "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images": "Hyperspectral images taken from aircraft or satellites contain information from hundreds of spectral bands, within which lie latent lower-dimensional structures that can be exploited for classifying vegetation and other materials. A disadvantage of working with hyperspectral images is that, due to an inherent trade-off between spectral and spatial resolution, they have a relatively coarse spatial scale, meaning that single pixels may correspond to spatial regions containing multiple materials. This article introduces the Diffusion and Volume maximization-based Image Clustering (D-VIC) algorithm for unsupervised material clustering to address this problem. By directly incorporating pixel purity into its labeling procedure, D-VIC gives greater weight to pixels corresponding to a spatial region containing just a single material. D-VIC is shown to outperform comparable state-of-the-art methods in extensive experiments on a range of hyperspectral images, including land-use maps and highly mixed forest health surveys (in the context of ash dieback disease), implying that it is well-equipped for unsupervised material clustering of spectrally-mixed hyperspectral datasets.",
   "Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery": "Monitoring changes within the land surface and open water bodies is critical for natural resource management, conservation, and environmental policy. While the use of satellite imagery for these purposes is common, fine-scale change detection can be a technical challenge. Difficulties arise from variable atmospheric conditions and the problem of assigning pixels to individual objects. We examined the degree to which two machine learning approaches can better characterize change detection in the context of artisanal small-scale gold mining (ASGM). We obtained Sentinel-2 imagery and consulted with domain experts to construct an open-source labeled land-cover change dataset focused on the Madre de Dios region in Peru, a hotspot of ASGM activity, and also generated out-of-sample datasets from other countries. With these labeled data, we utilized supervised and semi-supervised approaches to study binary and multi-class change within mining ponds. We also tested how multiple channels, histogram matching, and La*b* color metrics improved performance and reduced atmospheric effects. Empirical results show that the supervised E-ReCNN method on 6-channel histogram-matched images generated the most accurate change detection both in the focal region and in out-of-sample regions, indicating strong scalability to other forms of land-use modification.",
   "Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos": "The identification of cardiac phase is an essential step for analysis and diagnosis of cardiac function. Automatic methods, especially data-driven methods for cardiac phase detection, typically require extensive annotations, which is time-consuming and labour-intensive. In this paper, we present an unsupervised framework for end-diastole (ED) and end-systole (ES) detection through self-supervised learning of latent cardiac motion trajectories from 4-chamber-view echocardiography videos. Our method eliminates the need for manual annotations, including ED and ES indices, segmentation, or volumetric measurements, by training a reconstruction model to encode interpretable spatiotemporal motion patterns. Evaluated on the EchoNet-Dynamic benchmark, the approach achieves mean absolute error (MAE) of 3.0 frames (58.3 ms) for ED and 2.0 frames (38.8 ms) for ES detection, matching state-of-the-art supervised methods. Extended to fetal echocardiography, the model demonstrates robust performance with MAE 1.5 frames (20.7 ms) for ED and 1.7 frames (25.3 ms) for ES, despite the fact that the fetal heart model is built using non-standardized heart views due to fetal heart positioning variability. Our results demonstrate the potential of the proposed latent motion trajectory strategy for cardiac phase detection in adult and fetal echocardiography. This work advances unsupervised cardiac motion analysis, offering a scalable solution for clinical populations lacking annotated data. Code is released at https://github.com/YingyuYyy/CardiacPhase.",
@@ -873,6 +946,16 @@
     </script>
 
     </main>
-
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangnicui2@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank">GitHub</a>
+            </div>
+            <div class="site-footer-meta">Last updated: April 2026</div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name='Author' content='Kangning Cui'>
-    <meta name='Content' content='Homepage'>
-    <link rel="icon" href="figures/main/profile.jpeg" type="image/x-icon">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Students, collaborators, and group snapshots related to Kangning Cui's research and mentoring.">
+    <meta property="og:title" content="Team | Kangning Cui">
+    <meta property="og:description" content="Students, collaborators, and group snapshots related to Kangning Cui's research and mentoring.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/collaborators.html">
+    <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Team | Kangning Cui</title>
     <style>
@@ -29,38 +43,16 @@
             min-width: 0;
         }
 
-        .team-section {
-            margin-bottom: 22px;
-            padding: 22px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,250,248,0.98) 100%);
-            border-radius: 18px;
-            border: 1px solid var(--line);
-            box-shadow: 0 8px 20px rgba(31, 41, 51, 0.05);
-        }
-
-        .team-section h3 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-            color: var(--ink);
-        }
-
-        .section-intro {
-            margin: 0 0 20px 0;
-            font-size: 1rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
         .imaging-gallery {
-            display: flex;
+            display: grid;
+            grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
             gap: 20px;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            align-items: center;
+            margin-top: 16px;
         }
 
         .imaging-gallery img {
-            width: min(100%, 320px);
+            width: min(100%, 420px);
             height: auto;
             border-radius: 16px;
             box-shadow: var(--shadow-soft);
@@ -72,6 +64,39 @@
         .imaging-gallery img:hover {
             transform: translateY(-3px);
             box-shadow: 0 16px 30px rgba(31, 41, 51, 0.08);
+        }
+
+        .archive-note {
+            padding: 16px 18px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px dashed rgba(158, 126, 56, 0.24);
+        }
+
+        .archive-label {
+            margin: 0 0 8px 0;
+            color: var(--accent-deep);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .archive-note .section-intro {
+            margin-bottom: 0;
+        }
+
+        .archive-caption {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .archive-figure {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .student-grid {
@@ -104,22 +129,10 @@
         }
         
         .collaborator {
-            background: rgba(255, 255, 255, 0.94);
             padding: 16px 14px;
             border-radius: 16px;
-            box-shadow: var(--shadow-soft);
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
             text-align: center;
-            border: 1px solid var(--line);
             min-width: 0;
-            will-change: transform;
-            transform: translateZ(0);
-        }
-        
-        .collaborator:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 16px 30px rgba(31, 41, 51, 0.08);
-            border-color: var(--line-strong);
         }
         
         .collaborator img {
@@ -184,7 +197,7 @@
         }
 
         .alphabet-index a:hover {
-            background-color: var(--accent);
+            background: linear-gradient(135deg, var(--accent-deep), var(--accent));
             color: white;
             transform: translateX(-2px);
         }
@@ -192,8 +205,8 @@
         .alphabet-index a.active {
             font-weight: bold;
             color: var(--accent-deep);
-            border-color: var(--accent);
-            background-color: rgba(158, 126, 56, 0.1);
+            border-color: rgba(158, 126, 56, 0.24);
+            background: rgba(158, 126, 56, 0.09);
         }
 
         /* 调整滚动偏移量 */
@@ -252,25 +265,6 @@
                 width: 100%;
             }
 
-            .team-section {
-                margin-bottom: 22px;
-                padding: 16px;
-                border-radius: 14px;
-                box-shadow: 0 8px 24px rgba(44, 62, 80, 0.08);
-            }
-
-            .team-section h3 {
-                margin-bottom: 8px;
-                font-size: 18px;
-                line-height: 1.3;
-            }
-
-            .section-intro {
-                margin-bottom: 14px;
-                font-size: 0.92em;
-                line-height: 1.55;
-            }
-
             .student-grid {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 10px;
@@ -318,12 +312,30 @@
             }
 
             .imaging-gallery {
-                justify-content: flex-start;
+                grid-template-columns: 1fr;
                 gap: 12px !important;
+                align-items: start;
             }
 
             .imaging-gallery img {
-                width: min(100%, 280px) !important;
+                width: min(100%, 320px) !important;
+            }
+
+            .archive-note {
+                padding: 14px 15px;
+                max-width: 100%;
+            }
+
+            .archive-label {
+                font-size: 0.72rem;
+            }
+
+            .archive-caption {
+                font-size: 0.84rem;
+            }
+
+            .archive-figure {
+                width: 100%;
             }
         }
 
@@ -387,7 +399,7 @@
                 <a href="teach.html">Teaching</a>
                 <a href="academic_honors.html">Services</a>
                 <a href="collaborators.html" aria-current="page">Team</a>
-                <a href="others.html">Gallery</a>
+                <a href="gallery.html">Gallery</a>
             </nav>
         </div>
     </header>
@@ -397,6 +409,7 @@
     <div class="content content-top">
         <div class="page-header">
             <h1>Team</h1>
+            <p class="page-intro">Students, collaborators, and group snapshots.</p>
         </div>
     </div>
 
@@ -468,7 +481,7 @@
 
     <div class="content">
         <div class="team-section">
-            <h3>My Wonderful Collaborators</h3>
+            <h3>Collaborators</h3>
             <p class="section-intro">Several wonderful people I am fortunate to work with across institutions and disciplines.</p>
             <div class="collaborators-layout">
                 <div class="collaborators-wrapper">
@@ -487,35 +500,35 @@
                             <span>Çamalan</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="C">
+                    <div class="collaborator">
                         <img src="https://eo.conservation.cam.ac.uk/wp-content/uploads/2024/04/x20200122_171101-1-edited.jpg">
                         <a href="https://eo.conservation.cam.ac.uk/people/aland-chan/" class="name">
                             <span>Aland H.Y.</span>
                             <span>Chan</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="C">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ICiiEOAAAAAJ&citpid=10">
                         <a href="https://raymondhonfu.github.io/" class="name">
                             <span>Raymond H.</span>
                             <span>Chan</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="C">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=9StYw58AAAAJ&citpid=2">
                         <a href="https://scholar.google.com/citations?user=9StYw58AAAAJ&hl=en" class="name">
                             <span>Peng Wah</span>
                             <span>Chee</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="C">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=QP_BDK0AAAAJ&citpid=3">
                         <a href="https://scholar.google.com/citations?hl=en&user=QP_BDK0AAAAJ" class="name">
                             <span>Chu</span>
                             <span>Chen</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="C">
+                    <div class="collaborator">
                         <img src="https://www.plantsci.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/coomes-david_1.jpg?itok=xU6t2iMP">
                         <a href="https://www.plantsci.cam.ac.uk/research/groups/forest-ecology-and-conservation" class="name">
                             <span>David A.</span>
@@ -543,21 +556,21 @@
                             <span>Larsen</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="L">
+                    <div class="collaborator">
                         <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png">
                         <a href="https://scholar.google.com/citations?user=kqb7IlsAAAAJ&hl=en" class="name">
                             <span>Ruoning</span>
                             <span>Li</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="L">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=WWb7Y7AAAAAJ&citpid=3">
                         <a href="https://scholar.google.com/citations?user=WWb7Y7AAAAAJ&hl=en" class="name">
                             <span>Yaofang</span>
                             <span>Liu</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="L">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=pLU2z1QAAAAJ&citpid=2">
                         <a href="https://scholar.google.com/citations?user=pLU2z1QAAAAJ&hl=en" class="name">
                             <span>David A.</span>
@@ -571,7 +584,7 @@
                             <span>Morel</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="M">
+                    <div class="collaborator">
                         <img src="https://jmurphy.math.tufts.edu/Headshot2017.jpg">
                         <a href="https://jmurphy.math.tufts.edu/" class="name">
                             <span>James M.</span>
@@ -606,7 +619,7 @@
                             <span>Plemmons</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="P">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ZhtVbxsAAAAJ&citpid=2">
                         <a href="https://scholar.google.com/citations?user=ZhtVbxsAAAAJ&hl=en" class="name">
                             <span>Sam L.</span>
@@ -620,7 +633,7 @@
                             <span>Shao</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="S">
+                    <div class="collaborator">
                         <img src="https://cincia.wfu.edu/en/wp-content/uploads/Miles.jpg">
                         <a href="https://biology.wfu.edu/faculty-research/miles-silman/" class="name">
                             <span>Miles R.</span>
@@ -641,7 +654,7 @@
                             <span>Wang</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="W">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=79sbI-UAAAAJ&citpid=1">
                         <a href="https://scholar.google.com/citations?hl=en&user=79sbI-UAAAAJ" class="name">
                             <span>Rui-Feng</span>
@@ -655,14 +668,14 @@
                             <span>Yang</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="Y">
+                    <div class="collaborator">
                         <img src="https://scholar.google.com/citations/images/avatar_scholar_256.png">
                         <a href="https://scholar.google.com/citations?hl=en&user=Se8eLJQAAAAJ" class="name">
                             <span>Qianye</span>
                             <span>Yang</span>
                         </a>
                     </div>
-                    <div class="collaborator" id="Y">
+                    <div class="collaborator">
                         <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=GO6S-2oAAAAJ&citpid=5">
                         <a href="https://scholar.google.com/citations?hl=en&user=GO6S-2oAAAAJ" class="name">
                             <span>Yingyu</span>
@@ -680,39 +693,34 @@
                 </div>
                 <div class="alphabet-index">
                     <a href="#A">A</a>
-                    <a href="#B">B</a>
                     <a href="#C">C</a>
                     <a href="#D">D</a>
-                    <a href="#E">E</a>
-                    <a href="#F">F</a>
-                    <a href="#G">G</a>
-                    <a href="#H">H</a>
-                    <a href="#I">I</a>
                     <a href="#J">J</a>
-                    <a href="#K">K</a>
                     <a href="#L">L</a>
                     <a href="#M">M</a>
                     <a href="#N">N</a>
                     <a href="#O">O</a>
                     <a href="#P">P</a>
-                    <a href="#Q">Q</a>
                     <a href="#R">R</a>
                     <a href="#S">S</a>
                     <a href="#T">T</a>
-                    <a href="#U">U</a>
-                    <a href="#V">V</a>
                     <a href="#W">W</a>
-                    <a href="#X">X</a>
                     <a href="#Y">Y</a>
                     <a href="#Z">Z</a>
                 </div>
             </div>
         </div>
         <div class="team-section">
-            <h3>CityU Imaging Group, 2023</h3>
-            <p class="section-intro">A glimpse of the group and the people I had the pleasure to work with at City University of Hong Kong.</p>
+            <h3>CityU Imaging Group (2023)</h3>
             <div class="imaging-gallery">
-                <img src="figures/main/group1.JPG" alt="CityU Imaging Group photo 1" class="gallery-trigger">
+                <div class="archive-figure">
+                    <img src="figures/main/group1.JPG" alt="CityU Imaging Group photo 1" class="gallery-trigger">
+                    <div class="archive-caption">CityU Imaging Group, Hong Kong, 2023.</div>
+                </div>
+                <div class="archive-note">
+                    <div class="archive-label">Archive Note</div>
+                    <p class="section-intro">Group photo from City University of Hong Kong, kept here as a small record from my time with the imaging group.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -773,29 +781,48 @@
             });
         });
 
-        // 监听滚动事件，更新当前字母的高亮状态
-        window.addEventListener('scroll', function() {
-            const collaborators = document.querySelectorAll('.collaborator');
-            const letters = document.querySelectorAll('.alphabet-index a');
-            
-            // 重置所有字母的样式
-            letters.forEach(letter => letter.classList.remove('active'));
-            
-            // 找到当前在视口中的第一个合作者
-            for (let i = 0; i < collaborators.length; i++) {
-                const rect = collaborators[i].getBoundingClientRect();
-                if (rect.top >= 0) {
-                    const id = collaborators[i].id;
-                    const activeLetter = document.querySelector(`.alphabet-index a[href="#${id}"]`);
-                    if (activeLetter) {
-                        activeLetter.classList.add('active');
-                    }
-                    break;
+        const anchorCollaborators = Array.from(document.querySelectorAll('.collaborators-wrapper .collaborator[id]'));
+        const alphabetLinks = Array.from(document.querySelectorAll('.alphabet-index a'));
+
+        function updateActiveLetter() {
+            if (!anchorCollaborators.length) return;
+
+            let activeId = anchorCollaborators[0].id;
+            const offset = window.innerWidth <= 768 ? 110 : 130;
+
+            anchorCollaborators.forEach(card => {
+                if (card.getBoundingClientRect().top - offset <= 0) {
+                    activeId = card.id;
                 }
-            }
+            });
+
+            alphabetLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+            });
+        }
+
+        alphabetLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                alphabetLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
         });
+
+        window.addEventListener('scroll', updateActiveLetter, { passive: true });
+        window.addEventListener('load', updateActiveLetter);
 
     </script>
     </main>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangnicui2@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank">GitHub</a>
+            </div>
+            <div class="site-footer-meta">Last updated: April 2026</div>
+        </div>
+    </footer>
 </body>
 </html> 
