@@ -49,6 +49,11 @@
             margin-bottom: 10px;
         }
 
+        .page-header p {
+            max-width: none;
+            text-wrap: pretty;
+        }
+
         .section-header {
             justify-content: space-between;
             gap: 16px;
@@ -58,6 +63,83 @@
             color: var(--muted);
             font-size: 0.95rem;
             white-space: nowrap;
+        }
+
+        .direction-card {
+            padding: 15px 18px;
+            border-radius: 18px;
+            margin-bottom: 12px;
+        }
+
+        .direction-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .direction-card h3 {
+            margin-bottom: 4px;
+            font-size: 1.08rem;
+            color: var(--ink);
+        }
+
+        .direction-card p {
+            margin: 0 0 8px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .direction-meta {
+            margin-bottom: 4px;
+            color: var(--accent-deep);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .direction-links {
+            display: grid;
+            gap: 6px;
+        }
+
+        .direction-item {
+            padding: 7px 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(158, 126, 56, 0.12);
+            background: rgba(255, 255, 255, 0.68);
+            color: var(--muted);
+            font-size: 0.89rem;
+            line-height: 1.4;
+        }
+
+        .direction-item a {
+            color: var(--ink);
+            font-size: 0.92rem;
+            line-height: 1.4;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .direction-item a:hover {
+            color: var(--accent-deep);
+            text-decoration: none;
+        }
+
+        .direction-item .sep {
+            margin: 0 5px;
+            color: rgba(91, 102, 114, 0.7);
+        }
+
+        .direction-item .venue-inline {
+            color: var(--muted);
+            font-size: 0.84rem;
+            font-weight: 500;
+        }
+
+        .direction-item .paper-inline {
+            color: var(--accent);
+            font-size: 0.84rem;
+            font-weight: 600;
         }
 
         .publication-entry {
@@ -384,6 +466,18 @@
                 white-space: normal;
             }
 
+            .direction-card p {
+                font-size: 0.92rem;
+            }
+
+            .direction-card {
+                padding: 14px 12px;
+            }
+
+            .direction-item {
+                padding: 7px 9px;
+            }
+
             .publication-entry, .conference-entry {
                 grid-template-columns: minmax(0, 1fr);
                 gap: 16px;
@@ -479,8 +573,61 @@
     <div class="content content-top">
         <div class="page-header">
             <h1>Research</h1>
-            <p class="page-intro">Selected publications in machine learning, image and signal processing, remote sensing, and healthcare applications.</p>
+            <p class="page-intro">Selected publications across computer vision, signal processing, large language models, geoscience, and healthcare.</p>
+            <p class="page-note">My research focuses on efficient and structure-aware learning methods for scientific and real-world sensing problems, with recurring themes in efficiency, limited supervision, and geometry-aware modeling for deployment in ecology and healthcare.</p>
             <p class="page-note">Full publication list on <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>. † indicates first authorship, and ‡ indicates corresponding authorship.</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section-header">
+            <h2>Research Directions</h2>
+        </div>
+        <div class="section-card direction-card">
+            <div class="direction-meta">Direction 1</div>
+            <h3>Geospatial AI for Ecological Monitoring and Environmental Change</h3>
+            <p>I develop efficient sensing and learning pipelines for large-scale ecological and environmental questions, including palm detection and spatial distribution modeling, illegal mining detection, and remote sensing understanding under limited labels and deployment constraints.</p>
+            <div class="direction-links">
+                <div class="direction-item"><a href="#paper-centerseg">Center-guided Classifier for Semantic Segmentation of Remote Sensing Images</a><span class="sep">|</span><span class="venue-inline">[TGRS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11364332" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing</span><span class="sep">|</span><span class="venue-inline">[arXiv'25]</span></div>
+                <div class="direction-item"><a href="#paper-palms-tgrs">Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</a><span class="sep">|</span><span class="venue-inline">[TGRS'25]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><a href="#paper-palms-ijcai">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</a><span class="sep">|</span><span class="venue-inline">[IJCAI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization</span><span class="sep">|</span><span class="venue-inline">[IGARSS'26]</span></div>
+                <div class="direction-item"><span>PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning</span><span class="sep">|</span><span class="venue-inline">[ACMSE'24]</span></div>
+                <div class="direction-item"><a href="#paper-mining-change">Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery</a><span class="sep">|</span><span class="venue-inline">[RS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank" rel="noopener noreferrer">Paper</a></div>
+            </div>
+        </div>
+
+        <div class="section-card direction-card">
+            <div class="direction-meta">Direction 2</div>
+            <h3>Label-Efficient and Geometry-Aware Learning for Hyperspectral Imaging</h3>
+            <p>I study how spatial structure, diffusion geometry, superpixels, and multi-view representations can improve learning from high-dimensional hyperspectral data when supervision is limited or unavailable.</p>
+            <div class="direction-links">
+                <div class="direction-item"><a href="#paper-shrmc">Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images</a><span class="sep">|</span><span class="venue-inline">[JSTARS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11433595" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><a href="#paper-s2dl">Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</a><span class="sep">|</span><span class="venue-inline">[TGRS'24]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><a href="#paper-dvic">Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images</a><span class="sep">|</span><span class="venue-inline">[RS'23]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/15/4/1053" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'22]</span></div>
+                <div class="direction-item"><span>Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span></div>
+                <div class="direction-item"><span>Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span></div>
+                <div class="direction-item"><span>Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span></div>
+                <div class="direction-item"><span>Unsupervised Classification of AVIRIS-NG Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'21]</span></div>
+            </div>
+        </div>
+
+        <div class="section-card direction-card">
+            <div class="direction-meta">Direction 3</div>
+            <h3>Medical Imaging and Biomedical Signal Analysis</h3>
+            <p>I work on annotation-efficient and clinically meaningful methods for ultrasound, echocardiography, ECG, and cell imaging, with an emphasis on reconstruction, motion understanding, and practical downstream analysis.</p>
+            <div class="direction-links">
+                <div class="direction-item"><a href="#paper-cardiac-phase">Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</a><span class="sep">|</span><span class="venue-inline">[MICCAI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><a href="#paper-ultrasound-restoration">Blind Restoration of High-Resolution Ultrasound Video</a><span class="sep">|</span><span class="venue-inline">[MICCAI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection</span><span class="sep">|</span><span class="venue-inline">[FIMH'25]</span></div>
+                <div class="direction-item"><a href="#paper-lvh">Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis</a><span class="sep">|</span><span class="venue-inline">[ISBI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10980912" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>A Method for Cardiovascular Disorder Identification via Prototype-Driven Biomedical Signal Evaluation</span><span class="sep">|</span><span class="venue-inline">[US Patent App., filed '25]</span></div>
+                <div class="direction-item"><a href="#paper-dic-cells">Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</a><span class="sep">|</span><span class="venue-inline">[CIBM'24]</span><span class="sep">|</span><a class="paper-inline" href="https://www.sciencedirect.com/science/article/pii/S0010482524012368" target="_blank" rel="noopener noreferrer">Paper</a></div>
+                <div class="direction-item"><span>Method for Accurate Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</span><span class="sep">|</span><span class="venue-inline">[US Patent, filed '23; published '25]</span></div>
+                <div class="direction-item"><span>Optimized Hard Exudate Detection with Supervised Contrastive Learning</span><span class="sep">|</span><span class="venue-inline">[ISBI'24]</span></div>
+            </div>
         </div>
     </div>
 
@@ -490,7 +637,7 @@
         </div>
         <div class="publications-grid">
 
-            <div class="publication-entry">
+            <div class="publication-entry" id="paper-shrmc">
                 <div class="publication-figure">
                     <img src="figures/publications/yang2026superpixel.png" 
                          loading="lazy"
@@ -515,7 +662,7 @@
                 </div>
             </div>
 
-            <div class="publication-entry">
+            <div class="publication-entry" id="paper-centerseg">
                 <div class="publication-figure">
                     <img src="figures/publications/zhang2026center.png" 
                          loading="lazy"
@@ -542,7 +689,7 @@
                 </div>
             </div>
 
-            <div class="publication-entry highlight-entry">
+            <div class="publication-entry highlight-entry" id="paper-palms-tgrs">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025efficient.png" 
                          loading="lazy"
@@ -570,7 +717,7 @@
                 </div>
             </div>
 
-            <div class="publication-entry highlight-entry">
+            <div class="publication-entry highlight-entry" id="paper-s2dl">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2024superpixel.png" 
                          loading="lazy"
@@ -597,7 +744,7 @@
                 </div>
             </div>
 
-            <div class="publication-entry">
+            <div class="publication-entry" id="paper-dic-cells">
                 <div class="publication-figure">
                     <img src="figures/publications/pan2024dual.jpg" 
                          loading="lazy"
@@ -622,7 +769,7 @@
                 </div>
             </div>
         
-            <div class="publication-entry">
+            <div class="publication-entry" id="paper-dvic">
                 <div class="publication-figure">
                     <img src="figures/publications/polk2023unsupervised.png" 
                          loading="lazy"
@@ -649,7 +796,7 @@
                 </div>
             </div>
         
-            <div class="publication-entry">
+            <div class="publication-entry" id="paper-mining-change">
                 <div class="publication-figure">
                     <img src="figures/publications/camalan2022change.png" 
                          loading="lazy"
@@ -702,7 +849,7 @@
         </div>
         <div class="conference-grid">
 
-            <div class="conference-entry">
+            <div class="conference-entry" id="paper-cardiac-phase">
                 <div class="publication-figure">
                     <img src="figures/publications/yang2025miccai.png" 
                          loading="lazy"
@@ -729,7 +876,7 @@
                 </div>
             </div>
 
-            <div class="conference-entry">
+            <div class="conference-entry" id="paper-ultrasound-restoration">
                 <div class="publication-figure">
                     <img src="figures/publications/chen2025miccai.png" 
                          loading="lazy"
@@ -755,7 +902,7 @@
                 </div>
             </div>
 
-            <div class="conference-entry highlight-entry">
+            <div class="conference-entry highlight-entry" id="paper-palms-ijcai">
                 <div class="publication-figure">
                     <img src="figures/publications/cui2025ijcai.png" 
                          loading="lazy"
@@ -784,7 +931,7 @@
                 </div>
             </div>
 
-            <div class="conference-entry">
+            <div class="conference-entry" id="paper-lvh">
                 <div class="publication-figure">
                     <img src="figures/publications/tang2025isbi.png" 
                          loading="lazy"

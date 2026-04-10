@@ -230,6 +230,10 @@ h4 {
     box-sizing: border-box;
 }
 
+:is(.publication-entry, .conference-entry, .team-section, .section-header [id], .publication-entry[id], .conference-entry[id]) {
+    scroll-margin-top: 92px;
+}
+
 :is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .collaborator, .gallery-card, .news-card)::before {
     content: "";
     position: absolute;
