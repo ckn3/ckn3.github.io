@@ -75,6 +75,26 @@
             margin-bottom: 0;
         }
 
+        .direction-card summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .direction-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .direction-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .direction-heading {
+            min-width: 0;
+        }
+
         .direction-card h3 {
             margin-bottom: 4px;
             font-size: 1.08rem;
@@ -95,6 +115,33 @@
             font-weight: 700;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+        }
+
+        .direction-toggle {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            border: 1px solid rgba(158, 126, 56, 0.16);
+            background: rgba(255, 255, 255, 0.78);
+            color: var(--accent-deep);
+            font-size: 1rem;
+            transition: transform 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
+        }
+
+        .direction-card[open] .direction-toggle {
+            transform: rotate(45deg);
+            border-color: rgba(158, 126, 56, 0.28);
+            background: rgba(248, 243, 231, 0.92);
+        }
+
+        .direction-body {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(158, 126, 56, 0.1);
         }
 
         .direction-links {
@@ -163,7 +210,7 @@
             align-self: stretch;
             display: flex;
             align-items: center;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 16 / 9;
             overflow: hidden;
             border-radius: 14px;
             background: rgba(158, 126, 56, 0.04);
@@ -525,7 +572,7 @@
 
             .publication-figure {
                 width: 100%;
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 16 / 7;
             }
 
             .publication-figure img {
@@ -621,11 +668,17 @@
 
     <div class="content">
         <div class="section-header">
-            <h2>Research Directions</h2>
+            <h2>Research Themes</h2>
         </div>
-        <div class="section-card direction-card">
-            <div class="direction-meta">Direction 1</div>
-            <h3>Geospatial AI for Ecological Monitoring and Environmental Change</h3>
+        <details class="section-card direction-card">
+            <summary class="direction-summary">
+                <div class="direction-heading">
+                    <div class="direction-meta">Theme 1</div>
+                    <h3>Geospatial AI for Ecological Monitoring and Environmental Change</h3>
+                </div>
+                <span class="direction-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="direction-body">
             <p>I develop efficient pipelines for large-scale ecological and environmental questions, including palm detection and spatial distribution modeling, illegal mining detection, and remote sensing understanding under limited labels and deployment constraints.</p>
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-centerseg">Center-guided Classifier for Semantic Segmentation of Remote Sensing Images</a><span class="sep">|</span><span class="venue-inline">[TGRS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11364332" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2503.16963" target="_blank" rel="noopener noreferrer">Preprint</a></div>
@@ -636,11 +689,18 @@
                 <div class="direction-item"><span>PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning</span><span class="sep">|</span><span class="venue-inline">[ACMSE'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1145/3603287.3651220" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2403.03161" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><a href="#paper-mining-change">Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery</a><span class="sep">|</span><span class="venue-inline">[RS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
-        </div>
+            </div>
+        </details>
 
-        <div class="section-card direction-card">
-            <div class="direction-meta">Direction 2</div>
-            <h3>Label-Efficient and Geometry-Aware Learning for Hyperspectral Imaging</h3>
+        <details class="section-card direction-card">
+            <summary class="direction-summary">
+                <div class="direction-heading">
+                    <div class="direction-meta">Theme 2</div>
+                    <h3>Label-Efficient and Geometry-Aware Learning for Hyperspectral Imaging</h3>
+                </div>
+                <span class="direction-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="direction-body">
             <p>I study how spatial structure, diffusion geometry, superpixels, and multi-view representations can improve learning from high-dimensional hyperspectral data when supervision is limited or unavailable.</p>
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-shrmc">Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images</a><span class="sep">|</span><span class="venue-inline">[JSTARS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11433595" target="_blank" rel="noopener noreferrer">Paper</a></div>
@@ -652,11 +712,18 @@
                 <div class="direction-item"><span>Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9884029" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.06298" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><span>Unsupervised Classification of AVIRIS-NG Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'21]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9484006" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
-        </div>
+            </div>
+        </details>
 
-        <div class="section-card direction-card">
-            <div class="direction-meta">Direction 3</div>
-            <h3>Medical Imaging and Biomedical Signal Analysis</h3>
+        <details class="section-card direction-card">
+            <summary class="direction-summary">
+                <div class="direction-heading">
+                    <div class="direction-meta">Theme 3</div>
+                    <h3>Medical Imaging and Biomedical Signal Analysis</h3>
+                </div>
+                <span class="direction-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="direction-body">
             <p>I work on annotation-efficient and clinically meaningful methods for ultrasound, echocardiography, ECG, and cell imaging, with an emphasis on reconstruction, motion understanding, and practical downstream analysis.</p>
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-cardiac-phase">Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</a><span class="sep">|</span><span class="venue-inline">[MICCAI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a></div>
@@ -668,7 +735,8 @@
                 <div class="direction-item"><span>Method for Accurate Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</span><span class="sep">|</span><span class="venue-inline">[US Patent, filed '23; published '25]</span><span class="sep">|</span><a class="paper-inline" href="https://patents.google.com/patent/US12450925B2/en" target="_blank" rel="noopener noreferrer">Patent</a></div>
                 <div class="direction-item"><span>Optimized Hard Exudate Detection with Supervised Contrastive Learning</span><span class="sep">|</span><span class="venue-inline">[ISBI'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/ISBI56570.2024.10635760" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
-        </div>
+            </div>
+        </details>
     </div>
 
     <div class="content">
