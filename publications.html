@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kangning Cui">
-    <meta name="description" content="Selected journal and conference publications by Kangning Cui in machine learning, image and signal processing, remote sensing, and healthcare applications.">
+    <meta name="description" content="Research areas and publications by Kangning Cui across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta property="og:title" content="Research | Kangning Cui">
-    <meta property="og:description" content="Selected journal and conference publications by Kangning Cui in machine learning, image and signal processing, remote sensing, and healthcare applications.">
+    <meta property="og:description" content="Research areas and publications by Kangning Cui across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/publications.html">
     <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
@@ -23,624 +23,9 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Research | Kangning Cui</title>
-    <style>
-        .record-link {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.22s var(--ease-smooth);
-        }
-        
-        .record-link:hover {
-            color: var(--accent-deep);
-            text-decoration: underline;
-        }
-
-        ol {
-            list-style-type: decimal;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .page-header h1 {
-            margin-bottom: 10px;
-        }
-
-        .page-header p {
-            max-width: none;
-            text-wrap: pretty;
-        }
-
-        .section-header {
-            justify-content: space-between;
-            gap: 16px;
-        }
-
-        .section-meta {
-            color: var(--muted);
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-
-        .direction-card {
-            padding: 15px 18px;
-            border-radius: 18px;
-            margin-bottom: 12px;
-        }
-
-        .direction-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .direction-card summary {
-            list-style: none;
-            cursor: pointer;
-        }
-
-        .direction-card summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .direction-summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-        }
-
-        .direction-heading {
-            min-width: 0;
-        }
-
-        .direction-card h3 {
-            margin-bottom: 4px;
-            font-size: 1.08rem;
-            color: var(--ink);
-        }
-
-        .direction-card p {
-            margin: 0 0 8px;
-            color: var(--muted);
-            font-size: 0.92rem;
-            line-height: 1.5;
-        }
-
-        .direction-meta {
-            margin-bottom: 4px;
-            color: var(--accent-deep);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .direction-toggle {
-            flex-shrink: 0;
-            width: 30px;
-            height: 30px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            border: 1px solid rgba(158, 126, 56, 0.16);
-            background: rgba(255, 255, 255, 0.78);
-            color: var(--accent-deep);
-            font-size: 1rem;
-            transition: transform 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
-        }
-
-        .direction-card[open] .direction-toggle {
-            transform: rotate(45deg);
-            border-color: rgba(158, 126, 56, 0.28);
-            background: rgba(248, 243, 231, 0.92);
-        }
-
-        .direction-body {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid rgba(158, 126, 56, 0.1);
-        }
-
-        .direction-links {
-            display: grid;
-            gap: 6px;
-        }
-
-        .direction-item {
-            padding: 7px 10px;
-            border-radius: 12px;
-            border: 1px solid rgba(158, 126, 56, 0.12);
-            background: rgba(255, 255, 255, 0.68);
-            color: var(--muted);
-            font-size: 0.89rem;
-            line-height: 1.4;
-        }
-
-        .direction-item a {
-            color: var(--ink);
-            font-size: 0.92rem;
-            line-height: 1.4;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .direction-item a:hover {
-            color: var(--accent-deep);
-            text-decoration: none;
-        }
-
-        .direction-item .sep {
-            margin: 0 5px;
-            color: rgba(91, 102, 114, 0.7);
-        }
-
-        .direction-item .venue-inline {
-            color: var(--muted);
-            font-size: 0.84rem;
-            font-weight: 500;
-        }
-
-        .direction-item .paper-inline {
-            color: var(--accent);
-            font-size: 0.84rem;
-            font-weight: 600;
-        }
-
-        .publication-entry {
-            display: grid;
-            grid-template-columns: 232px minmax(0, 1fr);
-            align-items: start;
-            gap: 22px;
-            padding: 20px;
-            border-radius: 18px;
-            cursor: pointer;
-        }
-
-        .publication-entry:focus-visible,
-        .conference-entry:focus-visible {
-            outline: 2px solid rgba(158, 126, 56, 0.5);
-            outline-offset: 3px;
-        }
-
-        .publication-figure {
-            width: 100%;
-            align-self: stretch;
-            display: flex;
-            align-items: center;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            border-radius: 14px;
-            background: rgba(158, 126, 56, 0.04);
-        }
-    
-        .publication-figure img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 0;
-            cursor: pointer;
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth);
-            border: none;
-            box-shadow: none;
-        }
-    
-        .publication-figure img:hover {
-            transform: scale(1.02);
-        }
-    
-        .publication-text {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .publication-text p.title,
-        .conference-text p.title {
-            margin: 0 0 8px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 16px;
-        }
-        
-        .publication-text p.title .paper-title,
-        .conference-text p.title .paper-title {
-            display: block;
-            flex: 1;
-            min-width: 0;
-            color: var(--ink);
-            font-size: 1.08rem;
-            line-height: 1.42;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-        }
-        
-        .publication-text p.title .venue,
-        .conference-text p.title .venue {
-            display: inline-flex;
-            flex-shrink: 0;
-            font-size: 0.93rem;
-            color: var(--muted);
-            letter-spacing: 0.01em;
-            text-align: right;
-        }
-        
-        .publication-text p.authors,
-        .conference-text p.authors {
-            font-size: 0.96rem;
-            line-height: 1.58;
-            margin: 0 0 14px;
-            color: var(--muted);
-        }
-        
-        .publication-text p.authors .main-author,
-        .conference-text p.authors .main-author {
-            color: var(--ink);
-            font-weight: 700;
-            letter-spacing: 0.01em;
-        }
-        
-        .publication-text .badges,
-        .conference-text .badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .badges a {
-            display: inline-flex;
-            transition: transform 0.16s var(--ease-smooth);
-        }
-
-        .badges a:hover {
-            transform: translateY(-1px);
-        }
-
-        .badge-chip {
-            align-items: center;
-            justify-content: center;
-            padding: 6px 11px;
-            border-radius: 999px;
-            border: 1px solid rgba(23, 23, 28, 0.08);
-            background: rgba(255, 255, 255, 0.82);
-            color: #43505d !important;
-            font-size: 0.88rem;
-            font-weight: 600;
-            line-height: 1;
-        }
-
-        .badge-chip:hover {
-            text-decoration: none;
-            color: var(--accent-deep) !important;
-            border-color: rgba(158, 126, 56, 0.22);
-            background: rgba(255, 255, 255, 0.94);
-        }
-
-        .publications-grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        /* Modal styles */
-        .modal {
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 36px;
-            box-sizing: border-box;
-            background: rgba(15, 19, 24, 0.82);
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity 0.22s var(--ease-smooth), visibility 0.22s var(--ease-smooth);
-        }
-
-        .modal.is-open {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        .modal-panel {
-            width: min(920px, 100%);
-            max-height: calc(100vh - 72px);
-            overflow-y: auto;
-            border-radius: 24px;
-            background: rgba(251, 249, 244, 0.98);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 28px 72px rgba(0, 0, 0, 0.36);
-            transform: translateY(20px) scale(0.97);
-            opacity: 0;
-            transition: transform 0.26s var(--ease-smooth), opacity 0.22s var(--ease-smooth);
-        }
-
-        .modal.is-open .modal-panel {
-            transform: translateY(0) scale(1);
-            opacity: 1;
-        }
-
-        .modal-media {
-            padding: 22px 22px 0;
-        }
-
-        .modal-content {
-            display: block;
-            width: 100%;
-            max-height: min(52vh, 520px);
-            object-fit: contain;
-            border-radius: 18px;
-            border: 1px solid rgba(31, 41, 51, 0.08);
-            background: linear-gradient(180deg, rgba(246, 244, 239, 0.92), rgba(255, 255, 255, 0.98));
-        }
-
-        .modal-body {
-            padding: 20px 24px 24px;
-        }
-
-        .modal-venue {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--muted);
-            font-size: 0.95rem;
-            letter-spacing: 0.01em;
-        }
-
-        .modal-title {
-            margin: 0 0 10px;
-            font-family: 'Fraunces', serif;
-            font-size: clamp(1.45rem, 2vw, 2rem);
-            line-height: 1.2;
-            color: #17202a;
-        }
-
-        .modal-authors {
-            margin: 0 0 18px;
-            color: var(--muted);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .modal-authors .main-author {
-            color: var(--ink);
-            font-weight: 700;
-            letter-spacing: 0.01em;
-        }
-
-        .modal-abstract-block {
-            padding-top: 16px;
-            border-top: 1px solid var(--line);
-        }
-
-        .modal-abstract-label {
-            margin-bottom: 10px;
-            color: var(--accent-deep);
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .modal-abstract {
-            margin: 0;
-            color: var(--ink);
-            font-size: 1rem;
-            line-height: 1.72;
-            max-height: none;
-            overflow-y: visible;
-        }
-
-        .close {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 30px;
-            line-height: 1;
-            font-weight: 400;
-            cursor: pointer;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            backdrop-filter: blur(6px);
-            transition: background-color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth);
-        }
-
-        .close:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: scale(1.04);
-        }
-
-        body.modal-open {
-            overflow: hidden;
-        }
-
-        .conference-grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        .conference-entry {
-            display: grid;
-            grid-template-columns: 232px minmax(0, 1fr);
-            align-items: start;
-            gap: 22px;
-            padding: 20px;
-            border-radius: 18px;
-            cursor: pointer;
-        }
-
-        .publication-entry.highlight-entry,
-        .conference-entry.highlight-entry {
-            background:
-                linear-gradient(135deg, rgba(255, 250, 240, 0.98), rgba(248, 243, 231, 0.96)),
-                linear-gradient(115deg, rgba(158, 126, 56, 0.08), transparent 50%);
-            border: 1px solid rgba(158, 126, 56, 0.2);
-            box-shadow: 0 12px 24px rgba(158, 126, 56, 0.08);
-        }
-
-        .publication-entry.highlight-entry:hover,
-        .conference-entry.highlight-entry:hover {
-            box-shadow: 0 16px 28px rgba(158, 126, 56, 0.1);
-        }
-
-        @keyframes jumpHighlight {
-            0% {
-                box-shadow: 0 0 0 rgba(158, 126, 56, 0);
-                border-color: rgba(158, 126, 56, 0.18);
-                background:
-                    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 250, 248, 0.98) 100%);
-                transform: translateY(0);
-            }
-            20% {
-                box-shadow: 0 0 0 6px rgba(158, 126, 56, 0.18), 0 22px 42px rgba(158, 126, 56, 0.18);
-                border-color: rgba(158, 126, 56, 0.55);
-                background:
-                    linear-gradient(135deg, rgba(255, 251, 242, 1), rgba(248, 242, 226, 0.98)),
-                    linear-gradient(115deg, rgba(158, 126, 56, 0.14), transparent 55%);
-                transform: translateY(-3px) scale(1.01);
-            }
-            55% {
-                box-shadow: 0 0 0 4px rgba(158, 126, 56, 0.12), 0 16px 30px rgba(158, 126, 56, 0.12);
-                border-color: rgba(158, 126, 56, 0.36);
-                background:
-                    linear-gradient(135deg, rgba(255, 252, 245, 0.99), rgba(249, 244, 232, 0.97)),
-                    linear-gradient(115deg, rgba(158, 126, 56, 0.1), transparent 58%);
-                transform: translateY(-1px) scale(1.004);
-            }
-            100% {
-                box-shadow: 0 0 0 rgba(158, 126, 56, 0);
-                border-color: rgba(158, 126, 56, 0.18);
-                background:
-                    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 250, 248, 0.98) 100%);
-                transform: translateY(0);
-            }
-        }
-
-        .publication-entry.jump-highlight,
-        .conference-entry.jump-highlight {
-            animation: jumpHighlight 1.45s var(--ease-smooth);
-            z-index: 2;
-        }
- 
-        .conference-text {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .publication-footnote {
-            margin: 18px 0 0;
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            .section-meta {
-                white-space: normal;
-            }
-
-            .direction-card p {
-                font-size: 0.92rem;
-            }
-
-            .direction-card {
-                padding: 14px 12px;
-            }
-
-            .direction-item {
-                padding: 7px 9px;
-            }
-
-            .publication-entry, .conference-entry {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 16px;
-                padding: 16px;
-            }
-
-            .publication-figure {
-                width: 100%;
-                aspect-ratio: 16 / 7;
-            }
-
-            .publication-figure img {
-                width: 100%;
-                display: block;
-            }
-
-            .publication-text, .conference-text {
-                width: 100%;
-            }
-
-            .publication-text p.title,
-            .conference-text p.title {
-                margin-bottom: 8px;
-                display: block;
-            }
-
-            .publication-text p.title .venue,
-            .conference-text p.title .venue {
-                display: block;
-                margin-top: 6px;
-                text-align: left;
-            }
-
-            .badges {
-                flex-wrap: wrap;
-            }
-
-            .modal {
-                padding: 18px;
-            }
-
-            .modal-panel {
-                max-height: calc(100vh - 36px);
-                border-radius: 20px;
-                overflow-y: auto;
-            }
-
-            .modal-media {
-                padding: 16px 16px 0;
-            }
-
-            .modal-content {
-                max-height: 36vh;
-                border-radius: 14px;
-            }
-
-            .modal-body {
-                padding: 16px 18px 18px;
-            }
-
-            .modal-abstract {
-                max-height: none;
-                overflow-y: visible;
-            }
-
-            .close {
-                top: 12px;
-                right: 12px;
-                width: 40px;
-                height: 40px;
-                font-size: 26px;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="research-page">
     <header class="site-topbar">
         <div class="site-topbar-inner">
             <a class="site-brand" href="index.html">Kangning Cui</a>
@@ -660,7 +45,7 @@
     <div class="content content-top">
         <div class="page-header">
             <h1>Research</h1>
-            <p class="page-intro">Selected publications across computer vision, signal processing, large language models, geoscience, and healthcare.</p>
+            <p class="page-intro">Selected publications and research areas across computer vision, signal processing, large language models, geoscience, and healthcare.</p>
             <p class="page-note">My research focuses on efficient and structure-aware learning methods for scientific and real-world sensing problems, with recurring themes in efficiency, limited supervision, and geometry-aware modeling for deployment in ecology and healthcare.</p>
             <p class="page-note">Full publication list on <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>. † indicates first authorship, and * indicates corresponding authorship.</p>
         </div>
@@ -668,12 +53,11 @@
 
     <div class="content">
         <div class="section-header">
-            <h2>Research Themes</h2>
+            <h2>Research Areas</h2>
         </div>
         <details class="section-card direction-card">
             <summary class="direction-summary">
                 <div class="direction-heading">
-                    <div class="direction-meta">Theme 1</div>
                     <h3>Geospatial AI for Ecological Monitoring and Environmental Change</h3>
                 </div>
                 <span class="direction-toggle" aria-hidden="true">+</span>
@@ -696,7 +80,6 @@
         <details class="section-card direction-card">
             <summary class="direction-summary">
                 <div class="direction-heading">
-                    <div class="direction-meta">Theme 2</div>
                     <h3>Label-Efficient and Geometry-Aware Learning for Hyperspectral Imaging</h3>
                 </div>
                 <span class="direction-toggle" aria-hidden="true">+</span>
@@ -719,7 +102,6 @@
         <details class="section-card direction-card">
             <summary class="direction-summary">
                 <div class="direction-heading">
-                    <div class="direction-meta">Theme 3</div>
                     <h3>Medical Imaging and Biomedical Signal Analysis</h3>
                 </div>
                 <span class="direction-toggle" aria-hidden="true">+</span>
@@ -742,7 +124,7 @@
 
     <div class="content">
         <div class="section-header">
-            <h2 id="journal-publications">Journal Publications</h2>
+            <h2 id="journal-publications">Selected Journal Publications</h2>
         </div>
         <div class="publications-grid">
 
@@ -954,7 +336,7 @@
 
     <div class="content">
         <div class="section-header">
-            <h2 id="conference-publications">Conference Publications</h2>
+            <h2 id="conference-publications">Selected Conference Publications</h2>
         </div>
         <div class="conference-grid">
 
@@ -1203,6 +585,7 @@
 
             document.querySelectorAll('.publication-entry, .conference-entry').forEach(function(entry) {
                 entry.setAttribute('tabindex', '0');
+
                 entry.addEventListener('click', function(event) {
                     if (event.target.closest('a')) {
                         return;

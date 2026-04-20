@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kangning Cui">
-    <meta name="description" content="Students, collaborators, and group snapshots related to Kangning Cui's research and mentoring.">
+    <meta name="description" content="Students, collaborators, and mentoring related to Kangning Cui's research across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta property="og:title" content="Team | Kangning Cui">
-    <meta property="og:description" content="Students, collaborators, and group snapshots related to Kangning Cui's research and mentoring.">
+    <meta property="og:description" content="Students, collaborators, and mentoring related to Kangning Cui's research across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/collaborators.html">
     <meta property="og:image" content="https://ckn3.github.io/figures/main/profile.jpeg">
@@ -100,28 +100,70 @@
         }
 
         .student-grid {
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            grid-template-columns: 1fr;
             gap: 14px;
             justify-content: stretch;
         }
 
+        .student-grid .collaborator {
+            display: grid;
+            grid-template-columns: 92px minmax(0, 1fr);
+            align-items: center;
+            gap: 16px;
+            padding: 16px 18px;
+            text-align: left;
+        }
+
+        .student-grid .collaborator img {
+            margin-bottom: 0;
+        }
+
+        .student-card-content {
+            min-width: 0;
+            align-self: center;
+        }
+
+        .student-card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .student-grid .name {
+            display: inline-block;
+            font-size: 0.96rem;
+            line-height: 1.15;
+            white-space: nowrap;
+        }
+
+        .student-grid .student-card-header .name span {
+            display: inline;
+        }
+
+        .student-grid .student-card-header .name span + span::before {
+            content: " ";
+        }
+
         .member-meta {
-            margin-top: 10px;
             color: var(--accent-deep);
             font-weight: 500;
-            font-size: 0.9em;
+            font-size: 0.86em;
             line-height: 1.2;
+            white-space: nowrap;
+            margin-top: 0;
         }
 
         .member-detail {
-            margin: 8px 0 0 0;
+            margin: 0;
             font-size: 0.9em;
             color: #555;
             line-height: 1.35;
         }
 
         .member-next-position {
-            margin-top: 8px;
+            margin-top: 6px;
             font-size: 0.9em;
             color: var(--ink);
             font-weight: 500;
@@ -266,19 +308,26 @@
             }
 
             .student-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: 1fr;
                 gap: 10px;
             }
 
             .student-grid .collaborator {
-                padding: 12px 8px;
+                grid-template-columns: 72px minmax(0, 1fr);
+                gap: 12px;
+                padding: 12px 12px;
                 border-radius: 12px;
             }
 
             .student-grid .collaborator img {
                 width: 72px;
                 height: 72px;
-                margin-bottom: 6px;
+                margin-bottom: 0;
+            }
+
+            .student-card-header {
+                gap: 8px;
+                margin-bottom: 5px;
             }
 
             .student-grid .member-meta,
@@ -346,17 +395,24 @@
             }
 
             .student-grid {
-                grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+                grid-template-columns: 1fr;
                 gap: 8px;
             }
 
             .student-grid .collaborator {
-                padding: 10px 7px;
+                grid-template-columns: 64px minmax(0, 1fr);
+                gap: 10px;
+                padding: 10px 10px;
             }
 
             .student-grid .collaborator img {
                 width: 64px;
                 height: 64px;
+            }
+
+            .student-card-header {
+                flex-direction: column;
+                gap: 5px;
             }
 
             .student-grid .member-meta,
@@ -419,61 +475,85 @@
             <p class="section-intro">Current and former students I have had the pleasure to supervise or mentor.</p>
             <div class="collaborators student-grid">
                 <div class="collaborator">
-                    <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=_ksO_SgAAAAJ&citpid=2" alt="Aditi Golder">
-                    <a href="https://scholar.google.com/citations?hl=en&user=_ksO_SgAAAAJ" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Aditi</span>
-                        <span>Golder</span>
-                    </a>
-                    <div class="member-meta">Aug 2025 - Present</div>
-                    <p class="member-detail">Ecological object detection and evaluation.</p>
-                </div>
-                <div class="collaborator">
                     <img src="https://media.licdn.com/dms/image/v2/D4E03AQH736KHy1k4VQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709763410693?e=1764806400&v=beta&t=CggM6suXaalPh7hvwbffvDctzt7LlLuP9ilyUd7T7bs" alt="Mallory Pitts">
-                    <a href="https://www.linkedin.com/in/mallory-pitts-18778824b/" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Mallory</span>
-                        <span>Pitts</span>
-                    </a>
-                    <div class="member-meta">Aug 2025 - Present</div>
-                    <p class="member-detail">Global mining detection with foundation models.</p>
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://www.linkedin.com/in/mallory-pitts-18778824b/" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Mallory</span>
+                                <span>Pitts</span>
+                            </a>
+                            <div class="member-meta">Aug 2025 - Present</div>
+                        </div>
+                        <p class="member-detail">Global mining detection with foundation models.</p>
+                    </div>
                 </div>
                 <div class="collaborator">
                     <img src="https://spygaurad.github.io/images/profile.png" alt="Suraj Prasai">
-                    <a href="https://spygaurad.github.io/" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Suraj</span>
-                        <span>Prasai</span>
-                    </a>
-                    <div class="member-meta">Aug 2025 - Present</div>
-                    <p class="member-detail">Auto-labeling and human-in-the-loop machine learning.</p>
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://spygaurad.github.io/" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Suraj</span>
+                                <span>Prasai</span>
+                            </a>
+                            <div class="member-meta">Aug 2025 - Present</div>
+                        </div>
+                        <p class="member-detail">Auto-labeling and human-in-the-loop machine learning.</p>
+                    </div>
+                </div>
+                <div class="collaborator">
+                    <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=_ksO_SgAAAAJ&citpid=2" alt="Aditi Golder">
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://scholar.google.com/citations?hl=en&user=_ksO_SgAAAAJ" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Aditi</span>
+                                <span>Golder</span>
+                            </a>
+                            <div class="member-meta">Aug 2025 - Apr 2026</div>
+                        </div>
+                        <p class="member-detail">Ecological object detection and evaluation.</p>
+                    </div>
                 </div>
                 <div class="collaborator">
                     <img src="https://xi-xiaoran.github.io/images/avatar.JPG" alt="Zhen Yang">
-                    <a href="https://xi-xiaoran.github.io/" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Zhen</span>
-                        <span>Yang</span>
-                    </a>
-                    <div class="member-meta">Nov 2025 - Present</div>
-                    <p class="member-detail">Image segmentation with post-hoc processing.</p>
-                    <div class="member-next-position">Next Position: MS Student at Yale University</div>
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://xi-xiaoran.github.io/" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Zhen</span>
+                                <span>Yang</span>
+                            </a>
+                            <div class="member-meta">Nov 2025 - Present</div>
+                        </div>
+                        <p class="member-detail">Image segmentation with post-hoc processing.</p>
+                        <div class="member-next-position">Next Position: MS Student at Yale University</div>
+                    </div>
                 </div>
                 <div class="collaborator">
                     <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=D-IHI1kAAAAJ&citpid=1" alt="Rongkun Zhu">
-                    <a href="https://scholar.google.com/citations?hl=en&user=D-IHI1kAAAAJ" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Rongkun</span>
-                        <span>Zhu</span>
-                    </a>
-                    <div class="member-meta">Feb 2024 - Aug 2025</div>
-                    <p class="member-detail">Palm localization and ecological monitoring.</p>
-                    <div class="member-next-position">Next Position: PhD Student at Hong Kong Baptist University</div>
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://scholar.google.com/citations?hl=en&user=D-IHI1kAAAAJ" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Rongkun</span>
+                                <span>Zhu</span>
+                            </a>
+                            <div class="member-meta">Feb 2024 - Aug 2025</div>
+                        </div>
+                        <p class="member-detail">Palm localization and ecological monitoring.</p>
+                        <div class="member-next-position">Next Position: PhD Student at Hong Kong Baptist University</div>
+                    </div>
                 </div>
                 <div class="collaborator">
                     <img src="https://zishan-shao.github.io/me.jpeg" alt="Zishan Shao">
-                    <a href="https://zishan-shao.github.io/" class="name" target="_blank" rel="noopener noreferrer">
-                        <span>Zishan</span>
-                        <span>Shao</span>
-                    </a>
-                    <div class="member-meta">Jun 2023 - May 2024</div>
-                    <p class="member-detail">Transfer learning for tropical forest image classification.</p>
-                    <div class="member-next-position">Next Position: PhD Student at Duke University</div>
+                    <div class="student-card-content">
+                        <div class="student-card-header">
+                            <a href="https://zishan-shao.github.io/" class="name" target="_blank" rel="noopener noreferrer">
+                                <span>Zishan</span>
+                                <span>Shao</span>
+                            </a>
+                            <div class="member-meta">Jun 2023 - May 2024</div>
+                        </div>
+                        <p class="member-detail">Transfer learning for tropical forest image classification.</p>
+                        <div class="member-next-position">Next Position: PhD Student at Duke University</div>
+                    </div>
                 </div>
             </div>
         </div>
