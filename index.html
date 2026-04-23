@@ -22,517 +22,10 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <title>Home | Kangning Cui</title>
-    <style>
-        .hero-card {
-            overflow: hidden;
-            padding: 28px 30px;
-            border-radius: 20px;
-            border: 1px solid var(--line);
-            background:
-                linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 243, 231, 0.88)),
-                linear-gradient(180deg, rgba(158, 126, 56, 0.08), transparent);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .hero-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.7fr);
-            gap: 28px;
-            align-items: center;
-        }
-
-        .hero-copy {
-            padding: 0;
-        }
-
-        .hero-spotlight {
-            display: grid;
-            justify-items: end;
-        }
-
-        .hero-portrait {
-            width: min(100%, 280px);
-            aspect-ratio: 1 / 1.08;
-            overflow: hidden;
-            border-radius: 28px;
-            border: 1px solid rgba(158, 126, 56, 0.16);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(246, 242, 232, 0.92));
-            box-shadow: 0 18px 34px rgba(31, 41, 51, 0.12);
-        }
-
-        .hero-portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        .hero-kicker {
-            display: inline-block;
-            margin-bottom: 14px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, rgba(158, 126, 56, 0.12), rgba(255, 255, 255, 0.82));
-            color: var(--ink);
-            border: 1px solid rgba(158, 126, 56, 0.18);
-            font-size: 0.88em;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .hero-title {
-            margin: 0 0 14px 0;
-            font-size: clamp(2.2rem, 4vw, 3.8rem);
-            line-height: 1.04;
-            color: #17202a;
-        }
-
-        .hero-lead {
-            margin: 0 0 18px 0;
-            max-width: 760px;
-            color: var(--muted);
-            font-size: 1.08em;
-            line-height: 1.65;
-        }
-
-        .hero-note {
-            margin: -2px 0 20px 0;
-            max-width: 640px;
-            color: var(--accent-deep);
-            font-size: 1em;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-        }
-
-        .hero-status {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 0 0 18px 0;
-        }
-
-        .hero-status span,
-        .hero-status a {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 12px;
-            border-radius: 999px;
-            background: rgba(23, 23, 28, 0.04);
-            border: 1px solid rgba(23, 23, 28, 0.08);
-            color: #343842;
-            font-size: 0.94rem;
-            font-weight: 600;
-        }
-
-        .hero-status span:last-child {
-            background: rgba(158, 126, 56, 0.1);
-            border-color: rgba(158, 126, 56, 0.16);
-            color: var(--accent-deep);
-        }
-
-        .hero-status a:hover {
-            text-decoration: none;
-            color: var(--accent-deep);
-            border-color: rgba(158, 126, 56, 0.22);
-            background: rgba(255, 255, 255, 0.92);
-        }
-
-        .hero-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 18px;
-        }
-
-        .hero-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 9px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.76);
-            border: 1px solid rgba(23, 23, 28, 0.08);
-            color: #43505d;
-            font-weight: 600;
-            line-height: 1;
-            box-shadow: 0 8px 18px rgba(31, 41, 51, 0.06);
-            transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), background-color 0.18s var(--ease-smooth);
-        }
-
-        .hero-links a:hover {
-            text-decoration: none;
-            color: var(--accent-deep);
-            background: rgba(255, 255, 255, 0.94);
-            border-color: rgba(158, 126, 56, 0.18);
-            box-shadow: 0 12px 22px rgba(31, 41, 51, 0.08);
-            transform: translateY(-1px);
-        }
-
-        .home-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr);
-            gap: 18px;
-            align-items: stretch;
-        }
-
-        .section-card {
-            border-radius: 18px;
-            padding: 22px;
-            box-sizing: border-box;
-            height: 100%;
-        }
-
-        .section-heading {
-            margin-bottom: 18px;
-        }
-
-        .section-heading h2,
-        .section-heading h3 {
-            margin: 0;
-            font-size: 1.5em;
-            color: var(--ink);
-        }
-
-        .timeline {
-            display: grid;
-            gap: 14px;
-        }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 112px minmax(0, 1fr);
-            gap: 10px;
-            padding: 16px 0;
-            border-top: 1px solid rgba(31, 41, 51, 0.08);
-        }
-
-        .timeline-item:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .timeline-date {
-            color: var(--accent-deep);
-            font-weight: 700;
-            font-size: 0.92em;
-            letter-spacing: 0.02em;
-        }
-
-        .timeline-content strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--ink);
-            font-size: 1.03em;
-        }
-
-        .timeline-head {
-            display: grid;
-            grid-template-columns: 64px minmax(0, 1fr);
-            gap: 24px;
-            align-items: start;
-        }
-
-        .timeline-logo {
-            width: 64px;
-            height: 64px;
-            padding: 8px;
-            border-radius: 14px;
-            background: rgba(255,255,255,0.96);
-            border: 1px solid rgba(31, 41, 51, 0.08);
-            box-shadow: 0 6px 14px rgba(31, 41, 51, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-self: start;
-        }
-
-        .timeline-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .timeline-content .meta {
-            margin-bottom: 6px;
-            color: #43505d;
-            font-style: italic;
-        }
-
-        .timeline-copy p {
-            margin: 0;
-            color: var(--muted);
-            line-height: 1.55;
-        }
-
-        .news-shell {
-            overflow: hidden;
-        }
-
-        .news-container {
-            position: relative;
-            padding: 0;
-            height: 100%;
-        }
-
-        .news-slider {
-            display: grid;
-            gap: 12px;
-            max-height: 292px;
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding: 4px 2px 2px 2px;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent) #f0f0f0;
-        }
-
-        .news-slider::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .news-slider::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 3px;
-        }
-
-        .news-slider::-webkit-scrollbar-thumb {
-            background: var(--accent);
-            border-radius: 3px;
-        }
-
-        .news-card {
-            display: grid;
-            grid-template-columns: 92px minmax(0, 1fr);
-            gap: 16px;
-            padding: 14px 16px;
-            border-radius: 16px;
-        }
-
-        .news-date {
-            color: var(--accent-deep);
-            font-weight: 700;
-            font-size: 0.9em;
-            letter-spacing: 0.02em;
-            white-space: nowrap;
-            padding-top: 2px;
-        }
-
-        .news-content {
-            color: var(--ink);
-            font-size: 0.98em;
-            line-height: 1.55;
-        }
-
-        .news-content i {
-            color: #666;
-        }
-
-        @media screen and (max-width: 768px) {
-            .home-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-layout {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .hero-copy {
-                padding: 0;
-                text-align: center;
-            }
-
-            .hero-card {
-                padding: 20px 16px;
-            }
-
-            .hero-spotlight {
-                order: -1;
-                justify-items: center;
-            }
-
-            .hero-portrait {
-                width: min(170px, 100%);
-                border-radius: 24px;
-            }
-
-            .hero-kicker {
-                display: block;
-                margin-bottom: 10px;
-                padding: 0;
-                border: none;
-                background: none;
-                color: var(--accent-deep);
-                font-size: 0.78rem;
-                line-height: 1.45;
-                letter-spacing: 0.05em;
-                text-transform: none;
-                max-width: 20rem;
-                margin-left: auto;
-                margin-right: auto;
-                text-wrap: balance;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-                line-height: 1.08;
-                margin-bottom: 10px;
-            }
-
-            .hero-lead {
-                font-size: 0.98rem;
-                line-height: 1.58;
-                margin-bottom: 14px;
-                max-width: 32rem;
-                margin-left: auto;
-                margin-right: auto;
-                text-wrap: balance;
-            }
-
-            .hero-note {
-                margin: 0 0 14px 0;
-                font-size: 0.93rem;
-                line-height: 1.55;
-                max-width: 30rem;
-                margin-left: auto;
-                margin-right: auto;
-                text-wrap: balance;
-            }
-
-            .hero-status {
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-                margin-bottom: 14px;
-            }
-
-            .hero-status span,
-            .hero-status a {
-                padding: 7px 11px;
-                font-size: 0.9rem;
-            }
-
-            .hero-links {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 8px;
-            }
-
-            .hero-links a {
-                padding: 8px 12px;
-                font-size: 0.9rem;
-                justify-content: center;
-            }
-
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
-                padding: 14px 0;
-            }
-
-            .timeline-date {
-                font-size: 0.84em;
-                line-height: 1.2;
-                white-space: nowrap;
-            }
-
-            .timeline-head {
-                grid-template-columns: 56px minmax(0, 1fr);
-                gap: 20px;
-                align-items: start;
-            }
-
-            .timeline-logo {
-                width: 56px;
-                height: 56px;
-                padding: 7px;
-                border-radius: 12px;
-            }
-
-            .timeline-copy {
-                padding-left: 3px;
-            }
-
-            .timeline-content strong {
-                font-size: 1em;
-            }
-
-            .timeline-content .meta {
-                font-size: 0.93em;
-                line-height: 1.45;
-            }
-
-            .timeline-copy p {
-                font-size: 0.94em;
-                line-height: 1.55;
-            }
-
-            .news-card {
-                grid-template-columns: 1fr;
-                gap: 6px;
-                padding: 14px 14px 13px 14px;
-                border-radius: 14px;
-            }
-
-            .news-date {
-                padding-top: 0;
-                white-space: normal;
-            }
-
-            .news-slider {
-                max-height: none;
-                overflow: visible;
-            }
-
-        }
-
-        @media screen and (max-width: 520px) {
-            .hero-card {
-                padding: 18px 14px;
-            }
-
-            .hero-title {
-                font-size: 1.95rem;
-            }
-
-            .hero-kicker {
-                font-size: 0.74rem;
-                max-width: 17rem;
-            }
-
-            .hero-links {
-                grid-template-columns: 1fr;
-            }
-
-            .section-card {
-                padding: 18px;
-            }
-
-            .timeline-head {
-                grid-template-columns: 48px minmax(0, 1fr);
-                gap: 16px;
-            }
-
-            .timeline-logo {
-                width: 48px;
-                height: 48px;
-                padding: 6px;
-            }
-
-            .timeline-copy {
-                padding-left: 2px;
-            }
-
-            .timeline-date {
-                font-size: 0.8em;
-            }
-        }
-
-    </style>
 </head>
 
 
-<body>
+<body class="home-page">
     <header class="site-topbar">
         <div class="site-topbar-inner">
             <a class="site-brand" href="index.html">Kangning Cui</a>
@@ -559,7 +52,7 @@
                     <p class="hero-note">I would be delighted to connect about collaborations, ideas, and opportunities to work together.</p>
                     <div class="hero-status">
                         <a href="https://cs.wfu.edu/faculty/jason-cui/">Wake Forest University</a>
-                        <span>Incoming CItyU-DG</span>
+                        <span>Incoming CityU-DG</span>
                     </div>
                     <div class="hero-links">
                         <a href="mailto:kangnicui2@gmail.com">Email</a>
@@ -639,7 +132,6 @@
                                 <div class="timeline-copy">
                                     <strong>Society for Industrial and Applied Mathematics</strong>
                                     <div class="meta">Founding President, <a href="https://www.cityu.edu.hk/en/ma/research/siam-cityuhk-student-chapter" target="_blank" rel="noopener noreferrer" class="record-link">SIAM Student Chapter at CityU</a></div>
-                                    <p>Led chapter formation and activities connecting applied mathematics, machine learning, and student research culture.</p>
                                 </div>
                             </div>
                         </div>
@@ -662,7 +154,7 @@
                                 <div class="timeline-copy">
                                     <strong>Ph.D. in Mathematics</strong>
                                     <div class="meta">City University of Hong Kong & Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</div>
-                                    <p>Focused on machine learning and deep learning in computer vision, with applications in medicine and remote sensing.</p>
+                                    <p>Research in machine learning and computer vision for medicine and remote sensing, advised by <a href="https://raymondhonfu.github.io/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Raymond H. Chan</a> and <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Jean-Michel Morel</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -677,7 +169,7 @@
                                 <div class="timeline-copy">
                                     <strong>Visiting DPhil Student in Biomedical Engineering</strong>
                                     <div class="meta">University of Oxford</div>
-                                    <p>Worked on deep learning-based ultrasound video analysis and medical imaging workflows.</p>
+                                    <p>Research in ultrasound video analysis and biomedical imaging, advised by <a href="https://eng.ox.ac.uk/people/alison-noble/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Alison Noble</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -692,7 +184,7 @@
                                 <div class="timeline-copy">
                                     <strong>B.S. in Computing Mathematics</strong>
                                     <div class="meta">City University of Hong Kong</div>
-                                    <p>Graduated with First Class Honours and a minor in Computer Science.</p>
+                                    <p>Training in computing mathematics with First Class Honours and a minor in Computer Science.</p>
                                 </div>
                             </div>
                         </div>
@@ -707,7 +199,7 @@
                                 <div class="timeline-copy">
                                     <strong>Visiting B.S. in Applied Mathematics</strong>
                                     <div class="meta">Delft University of Technology</div>
-                                    <p>Studied applied mathematics during an exchange term in the Netherlands.</p>
+                                    <p>Exchange study in applied mathematics in the Netherlands.</p>
                                 </div>
                             </div>
                         </div>
@@ -788,14 +280,6 @@
                         The paper "Blind Restoration of High-Resolution Ultrasound Video" was accepted by <i>MICCAI 2025</i>.
                     </div>
                 </div>
-
-                <div class="news-card">
-                    <div class="news-date">[04/2025]</div>
-                    <div class="news-content">
-                        The paper "Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms" was accepted by <i>IJCAI 2025</i>.
-                    </div>
-                </div>
-
 
                     </div>
                 </div>
