@@ -342,6 +342,10 @@
                 <div class="modal-venue" id="modal-venue"></div>
                 <h3 class="modal-title" id="modal-title"></h3>
                 <p class="modal-authors" id="modal-authors"></p>
+                <div class="modal-history-block" id="modal-history-block" hidden>
+                    <div class="modal-history-label">Submission Trail</div>
+                    <div class="modal-history" id="modal-history"></div>
+                </div>
                 <div class="modal-abstract-block">
                     <div class="modal-abstract-label">Abstract</div>
                     <p class="modal-abstract" id="modal-abstract"></p>
@@ -537,6 +541,77 @@
 }
     </script>
 
+    <script id="publication-history" type="application/json">
+{
+  "Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images": [
+    {
+      "venue": "TNNLS'24",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "TGRS'25",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "JSTARS'26",
+      "status": "Accepted",
+      "tone": "accepted"
+    }
+  ],
+  "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images": [
+    {
+      "venue": "ISPRS'25",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "TGRS'26",
+      "status": "Accepted",
+      "tone": "accepted"
+    }
+  ],
+  "Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images": [
+    {
+      "venue": "TMI'23",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "CIBM'24",
+      "status": "Accepted",
+      "tone": "accepted"
+    }
+  ],
+  "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images": [
+    {
+      "venue": "TGRS'22",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "RS'23",
+      "status": "Accepted",
+      "tone": "accepted"
+    }
+  ],
+  "Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms": [
+    {
+      "venue": "AAAI'25",
+      "status": "Rejected",
+      "tone": "rejected"
+    },
+    {
+      "venue": "IJCAI'25",
+      "status": "Accepted",
+      "note": "Oral",
+      "tone": "accepted"
+    }
+  ]
+}
+    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById("modal");
@@ -544,9 +619,12 @@
             var modalTitle = document.getElementById("modal-title");
             var modalVenue = document.getElementById("modal-venue");
             var modalAuthors = document.getElementById("modal-authors");
+            var modalHistoryBlock = document.getElementById("modal-history-block");
+            var modalHistory = document.getElementById("modal-history");
             var modalAbstract = document.getElementById("modal-abstract");
             var closeBtn = document.getElementsByClassName("close")[0];
             var abstracts = JSON.parse(document.getElementById("publication-abstracts").textContent);
+            var publicationHistory = JSON.parse(document.getElementById("publication-history").textContent);
 
             function normalizeTitle(text) {
                 return text.replace(/^["“”]+|["“”]+$/g, '').trim();
@@ -555,6 +633,46 @@
             function closeModal() {
                 modal.classList.remove("is-open");
                 document.body.classList.remove("modal-open");
+            }
+
+            function renderHistory(title) {
+                var historyItems = publicationHistory[title] || [];
+                modalHistory.textContent = '';
+
+                if (!historyItems.length) {
+                    modalHistoryBlock.hidden = true;
+                    return;
+                }
+
+                historyItems.forEach(function(item) {
+                    var chip = document.createElement('div');
+                    chip.className = 'modal-history-chip';
+
+                    if (item.tone) {
+                        chip.classList.add('is-' + item.tone);
+                    }
+
+                    var venue = document.createElement('span');
+                    venue.className = 'modal-history-venue';
+                    venue.textContent = item.venue;
+                    chip.appendChild(venue);
+
+                    var status = document.createElement('span');
+                    status.className = 'modal-history-status';
+                    status.textContent = item.status;
+                    chip.appendChild(status);
+
+                    if (item.note) {
+                        var note = document.createElement('span');
+                        note.className = 'modal-history-note';
+                        note.textContent = item.note;
+                        chip.appendChild(note);
+                    }
+
+                    modalHistory.appendChild(chip);
+                });
+
+                modalHistoryBlock.hidden = false;
             }
 
             function openDetailModal(entry) {
@@ -568,6 +686,7 @@
                 modalTitle.textContent = title;
                 modalVenue.textContent = venue;
                 modalAuthors.innerHTML = authorsHtml;
+                renderHistory(title);
                 modalAbstract.textContent = abstracts[title] || "Abstract will be added soon.";
                 modal.classList.add("is-open");
                 document.body.classList.add("modal-open");
@@ -608,6 +727,8 @@
                     modalTitle.textContent = '';
                     modalVenue.textContent = '';
                     modalAuthors.innerHTML = '';
+                    modalHistory.textContent = '';
+                    modalHistoryBlock.hidden = true;
                     modalAbstract.textContent = '';
                     modal.classList.add("is-open");
                     document.body.classList.add("modal-open");

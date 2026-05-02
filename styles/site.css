@@ -1637,6 +1637,61 @@ h4 {
     letter-spacing: 0.01em;
 }
 
+.research-page .modal-history-block {
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    border: 1px solid rgba(31, 41, 51, 0.08);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.52);
+}
+
+.research-page .modal-history-label {
+    margin-bottom: 10px;
+    color: var(--accent-deep);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.research-page .modal-history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.research-page .modal-history-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid rgba(31, 41, 51, 0.12);
+    border-radius: 999px;
+    color: var(--ink);
+    background: rgba(246, 244, 239, 0.86);
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.research-page .modal-history-chip.is-accepted {
+    border-color: rgba(62, 128, 91, 0.28);
+    background: rgba(226, 242, 231, 0.86);
+}
+
+.research-page .modal-history-chip.is-rejected {
+    border-color: rgba(179, 74, 60, 0.22);
+    background: rgba(251, 232, 226, 0.84);
+}
+
+.research-page .modal-history-venue {
+    font-weight: 700;
+}
+
+.research-page .modal-history-status,
+.research-page .modal-history-note {
+    color: var(--muted);
+}
+
 .research-page .modal-abstract-block {
     padding-top: 16px;
     border-top: 1px solid var(--line);
