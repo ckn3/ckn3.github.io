@@ -847,22 +847,37 @@ h4 {
 
 .team-page .student-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
     justify-content: stretch;
+}
+
+.team-page .student-subgroup + .student-subgroup {
+    margin-top: 16px;
+}
+
+.team-page .student-subheading {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .team-page .student-grid .collaborator {
     display: grid;
-    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-columns: 60px minmax(0, 1fr);
     align-items: center;
-    gap: 12px;
-    padding: 12px 14px;
+    gap: 10px;
+    padding: 10px 12px;
     text-align: left;
 }
 
 .team-page .student-grid .collaborator img {
-    width: 76px;
-    height: 76px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 0;
 }
 
@@ -875,14 +890,14 @@ h4 {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 4px;
+    gap: 8px;
+    margin-bottom: 2px;
 }
 
 .team-page .student-grid .name {
     display: inline-block;
-    font-size: 0.92rem;
-    line-height: 1.15;
+    font-size: 0.89rem;
+    line-height: 1.1;
     white-space: nowrap;
 }
 
@@ -897,25 +912,33 @@ h4 {
 .team-page .member-meta {
     color: var(--accent-deep);
     font-weight: 500;
-    font-size: 0.8em;
-    line-height: 1.2;
+    font-size: 0.77em;
+    line-height: 1.15;
     white-space: nowrap;
     margin-top: 0;
 }
 
 .team-page .member-detail {
     margin: 0;
-    font-size: 0.86em;
+    font-size: 0.83em;
     color: #555;
-    line-height: 1.28;
+    line-height: 1.22;
 }
 
 .team-page .member-next-position {
-    margin-top: 4px;
-    font-size: 0.84em;
+    margin-top: 2px;
+    font-size: 0.81em;
     color: var(--ink);
     font-weight: 500;
-    line-height: 1.24;
+    line-height: 1.2;
+}
+
+.team-page .member-supervision {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 0.81em;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .team-page .collaborator {
@@ -2115,32 +2138,33 @@ body.modal-open {
 
     .team-page .student-grid {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 8px;
     }
 
     .team-page .student-grid .collaborator {
-        grid-template-columns: 72px minmax(0, 1fr);
-        gap: 12px;
-        padding: 12px 12px;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px 11px;
         border-radius: 12px;
     }
 
     .team-page .student-grid .collaborator img {
-        width: 72px;
-        height: 72px;
+        width: 58px;
+        height: 58px;
         margin-bottom: 0;
     }
 
     .team-page .student-card-header {
-        gap: 8px;
-        margin-bottom: 5px;
+        gap: 7px;
+        margin-bottom: 3px;
     }
 
     .team-page .student-grid .member-meta,
     .team-page .student-grid .member-detail,
+    .team-page .student-grid .member-supervision,
     .team-page .student-grid .member-next-position {
-        font-size: 0.82em;
-        line-height: 1.35;
+        font-size: 0.8em;
+        line-height: 1.26;
     }
 
     .team-page .collaborator {
@@ -2418,29 +2442,31 @@ body.modal-open {
 
     .team-page .student-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 7px;
     }
 
     .team-page .student-grid .collaborator {
-        grid-template-columns: 64px minmax(0, 1fr);
-        gap: 10px;
-        padding: 10px 10px;
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 9px;
+        padding: 9px 9px;
     }
 
     .team-page .student-grid .collaborator img {
-        width: 64px;
-        height: 64px;
+        width: 52px;
+        height: 52px;
     }
 
     .team-page .student-card-header {
         flex-direction: column;
-        gap: 5px;
+        gap: 3px;
     }
 
     .team-page .student-grid .member-meta,
     .team-page .student-grid .member-detail,
+    .team-page .student-grid .member-supervision,
     .team-page .student-grid .member-next-position {
-        font-size: 0.78em;
+        font-size: 0.76em;
+        line-height: 1.22;
     }
 
     .team-page .collaborator {
