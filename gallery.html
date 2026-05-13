@@ -57,7 +57,7 @@
         <div class="gallery-grid card-grid">
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/Dallas2025.jpg" alt="UT Dallas StARLinG Lab" class="gallery-trigger">
+                    <img src="figures/visits/Dallas2025.webp" alt="UT Dallas StARLinG Lab" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">UT Dallas</div>
@@ -67,7 +67,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/ChapelHill2025.jpg" alt="TriCAMS 2025" class="gallery-trigger">
+                    <img src="figures/visits/ChapelHill2025.webp" alt="TriCAMS 2025" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">The Triangle Region, NC</div>
@@ -77,7 +77,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/oxford.JPG" alt="University of Oxford" class="gallery-trigger">
+                    <img src="figures/visits/oxford.webp" alt="University of Oxford" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">University of Oxford</div>
@@ -87,7 +87,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/WakeForest2023.jpg" alt="Wake Forest University Research" class="gallery-trigger">
+                    <img src="figures/visits/WakeForest2023.webp" alt="Wake Forest University Research" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">Wake Forest University</div>
@@ -107,7 +107,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/Delft2020.jpg" alt="Delft University of Technology Exchange" class="gallery-trigger">
+                    <img src="figures/visits/Delft2020.webp" alt="Delft University of Technology Exchange" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">Delft University of Technology</div>
@@ -117,7 +117,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/Beijing2019.jpg" alt="Peking University Exchange" class="gallery-trigger">
+                    <img src="figures/visits/Beijing2019.webp" alt="Peking University Exchange" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">Peking University</div>
@@ -127,7 +127,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/London2018.JPG" alt="Middlesex University Exchange" class="gallery-trigger">
+                    <img src="figures/visits/London2018.webp" alt="Middlesex University Exchange" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">Middlesex University</div>
@@ -137,7 +137,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/visits/Beijing2018.jpg" alt="Tsinghua University Visit" class="gallery-trigger">
+                    <img src="figures/visits/Beijing2018.webp" alt="Tsinghua University Visit" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-title">Tsinghua University</div>
@@ -155,7 +155,7 @@
         <div class="gallery-grid card-grid">
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/others/clement-5yr.jpg" alt="Clement, 5 years old" class="gallery-trigger">
+                    <img src="figures/others/clement-5yr.webp" alt="Clement, 5 years old" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-description">Seeing me off at the airport<br>August 2025</div>
@@ -164,7 +164,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/others/clement-4yr.JPG" alt="Clement, 4 years old" class="gallery-trigger">
+                    <img src="figures/others/clement-4yr.webp" alt="Clement, 4 years old" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-description">Wearing a watermelon hat<br>July 2024</div>
@@ -173,7 +173,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/others/clement-3yr.jpg" alt="Clement, 3 years old" class="gallery-trigger">
+                    <img src="figures/others/clement-3yr.webp" alt="Clement, 3 years old" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-description">Yawning<br>November 2023</div>
@@ -182,7 +182,7 @@
 
             <div class="gallery-card">
                 <div class="gallery-image">
-                    <img src="figures/others/clement-3mo.JPG" alt="Clement, 3 months old" class="gallery-trigger">
+                    <img src="figures/others/clement-3mo.webp" alt="Clement, 3 months old" class="gallery-trigger" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-copy">
                     <div class="gallery-description">Lying on the sofa<br>3 months old<br>October 2020</div>
@@ -198,48 +198,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const galleryModal = document.getElementById('gallery-modal');
-            const galleryModalImage = document.getElementById('gallery-modal-image');
-            const galleryModalClose = document.getElementById('gallery-modal-close');
-            const galleryTriggers = document.querySelectorAll('.gallery-trigger');
-
-            galleryTriggers.forEach(img => {
-                img.addEventListener('click', function () {
-                    if (!this.src) return;
-                    galleryModalImage.src = this.src;
-                    galleryModalImage.alt = this.alt;
-                    galleryModal.classList.add('active');
-                    galleryModal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            function closeGalleryModal() {
-                galleryModal.classList.remove('active');
-                galleryModal.setAttribute('aria-hidden', 'true');
-                galleryModalImage.src = '';
-                galleryModalImage.alt = '';
-                document.body.style.overflow = '';
-            }
-
-            galleryModalClose.addEventListener('click', closeGalleryModal);
-
-            galleryModal.addEventListener('click', function (event) {
-                if (event.target === galleryModal) {
-                    closeGalleryModal();
-                }
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && galleryModal.classList.contains('active')) {
-                    closeGalleryModal();
-                }
-            });
-        });
-
-    </script>
+    <script src="scripts/gallery-modal.js"></script>
 
     </main>
     <footer class="site-footer">
@@ -250,7 +209,7 @@
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <div class="site-footer-meta">Last updated: April 2026</div>
+            <div class="site-footer-meta">Last updated: May 2026</div>
         </div>
     </footer>
 </body>

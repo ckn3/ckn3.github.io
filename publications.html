@@ -132,6 +132,7 @@
             <div class="direction-body">
             <p>I study efficient and interpretable LLMs, focusing on low-rank/SVD compression, fair evaluation, recovery in compressed subspaces, and decode-time attribution.</p>
             <div class="direction-links">
+                <div class="direction-item"><span>FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast</span><span class="sep">|</span><span class="venue-inline">[arXiv'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><a href="#paper-decodeshare-icml">DecodeShare: Tracing the Shared Pathways of LLM Decode-Time Decisions</a><span class="sep">|</span><span class="venue-inline">[ICML'26, Spotlight]</span></div>
             </div>
             </div>
@@ -152,7 +153,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Superpixel-level Hypergraph Multi-view Clustering" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -177,7 +177,6 @@
                          width="640"
                          height="480"
                          alt="Figure for CenterSeg" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -204,7 +203,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Cui et al., 2025" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -232,7 +230,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Cui et al., 2023" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -259,7 +256,6 @@
                          width="640"
                          height="480"
                          alt="Figure for accurate detection and instance segmentation of unstained living adherent cells" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -284,7 +280,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Polk et al., 2023" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -311,7 +306,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Camalan et al., 2022" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="publication-text">
@@ -368,7 +362,6 @@
                          width="1500"
                          height="324"
                          alt="Figure for DecodeShare"
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="conference-text">
@@ -394,7 +387,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Learning Where to Embed" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="conference-text">
@@ -419,7 +411,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Yang et al., 2025" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                     </div>
                 <div class="conference-text">
@@ -447,7 +438,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Chen et al., 2025" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="conference-text">
@@ -474,7 +464,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Cui et al., 2025" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                     </div>
                 <div class="conference-text">
@@ -503,7 +492,6 @@
                          width="640"
                          height="480"
                          alt="Figure for Tang et al., 2025" 
-                         onclick="openModal(this.src)"
                          title="Click to enlarge">
                 </div>
                 <div class="conference-text">
@@ -724,24 +712,6 @@
                 }, 240);
             }
 
-            window.openModal = function(source) {
-                if (typeof source === 'string') {
-                    modalImg.src = source;
-                    modalTitle.textContent = '';
-                    modalVenue.textContent = '';
-                    modalAuthors.innerHTML = '';
-                    modalHistory.textContent = '';
-                    modalHistoryBlock.hidden = true;
-                    modalAbstract.textContent = '';
-                    modal.classList.add("is-open");
-                    document.body.classList.add("modal-open");
-                }
-            };
-
-            document.querySelectorAll('.publication-figure img[onclick]').forEach(function(img) {
-                img.removeAttribute('onclick');
-            });
-
             document.querySelectorAll('a[href^="#paper-"]').forEach(function(link) {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
@@ -799,7 +769,7 @@
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <div class="site-footer-meta">Last updated: April 2026</div>
+            <div class="site-footer-meta">Last updated: May 2026</div>
         </div>
     </footer>
 </body>

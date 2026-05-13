@@ -399,7 +399,7 @@
             <h3>Wake Forest Group (2026)</h3>
             <div class="imaging-gallery">
                 <div class="archive-figure">
-                    <img src="figures/main/wfu_group.JPG" alt="Wake Forest University group photo" class="gallery-trigger">
+                    <img src="figures/main/wfu_group.webp" alt="Wake Forest University group photo" class="gallery-trigger" loading="lazy" decoding="async">
                     <div class="archive-caption">Wake Forest University group photo, 2026.</div>
                 </div>
                 <div class="archive-note">
@@ -412,7 +412,7 @@
             <h3>CityU Imaging Group (2023)</h3>
             <div class="imaging-gallery">
                 <div class="archive-figure">
-                    <img src="figures/main/group1.JPG" alt="CityU Imaging Group photo 1" class="gallery-trigger">
+                    <img src="figures/main/group1.webp" alt="CityU Imaging Group photo 1" class="gallery-trigger" loading="lazy" decoding="async">
                     <div class="archive-caption">CityU Imaging Group, Hong Kong, 2023.</div>
                 </div>
                 <div class="archive-note">
@@ -428,6 +428,7 @@
             <img src="" alt="" class="gallery-modal-image" id="gallery-modal-image">
         </div>
     </div>
+    <script src="scripts/gallery-modal.js"></script>
     <script>
         // 设置默认头像
         const defaultAvatar = 'https://scholar.google.com/citations/images/avatar_scholar_256.png';
@@ -435,47 +436,11 @@
         // 为所有合作者头像添加错误处理
         document.addEventListener('DOMContentLoaded', function() {
             const collaboratorImages = document.querySelectorAll('.collaborator img');
-            const galleryModal = document.getElementById('gallery-modal');
-            const galleryModalImage = document.getElementById('gallery-modal-image');
-            const galleryModalClose = document.getElementById('gallery-modal-close');
-            const galleryTriggers = document.querySelectorAll('.gallery-trigger');
             
             collaboratorImages.forEach(img => {
                 img.addEventListener('error', function() {
                     this.src = defaultAvatar;
                 });
-            });
-
-            galleryTriggers.forEach(img => {
-                img.addEventListener('click', function() {
-                    galleryModalImage.src = this.src;
-                    galleryModalImage.alt = this.alt;
-                    galleryModal.classList.add('active');
-                    galleryModal.setAttribute('aria-hidden', 'false');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            function closeGalleryModal() {
-                galleryModal.classList.remove('active');
-                galleryModal.setAttribute('aria-hidden', 'true');
-                galleryModalImage.src = '';
-                galleryModalImage.alt = '';
-                document.body.style.overflow = '';
-            }
-
-            galleryModalClose.addEventListener('click', closeGalleryModal);
-
-            galleryModal.addEventListener('click', function(event) {
-                if (event.target === galleryModal) {
-                    closeGalleryModal();
-                }
-            });
-
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && galleryModal.classList.contains('active')) {
-                    closeGalleryModal();
-                }
             });
         });
 
@@ -519,7 +484,7 @@
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <div class="site-footer-meta">Last updated: April 2026</div>
+            <div class="site-footer-meta">Last updated: May 2026</div>
         </div>
     </footer>
 </body>
