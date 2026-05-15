@@ -375,6 +375,16 @@ h4 {
     line-height: 1.55;
 }
 
+.cv-talk-meta a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.cv-talk-meta a:hover {
+    color: var(--accent-deep);
+    text-decoration: none;
+}
+
 .cv-inline {
     color: var(--muted);
     font-size: 0.98rem;

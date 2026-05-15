@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    document.querySelectorAll('[data-hide-on-error]').forEach(function (image) {
+        image.addEventListener('error', function () {
+            const card = image.closest('.gallery-card');
+            if (card) {
+                card.style.display = 'none';
+            }
+        });
+    });
+
     function openGalleryModal(image) {
         if (!image.src) return;
         galleryModalImage.src = image.src;
