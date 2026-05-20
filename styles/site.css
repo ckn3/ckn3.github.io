@@ -1352,6 +1352,18 @@ h4 {
     gap: 6px;
 }
 
+.research-page .direction-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 10px;
+}
+
+.research-page .direction-media .badge-chip {
+    display: inline-flex;
+    text-decoration: none;
+}
+
 .research-page .direction-item {
     padding: 7px 10px;
     border-radius: 12px;
