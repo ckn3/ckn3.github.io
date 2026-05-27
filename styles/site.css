@@ -689,6 +689,71 @@ h4 {
     font-size: 0.95rem;
 }
 
+.home-page .roles-timeline {
+    gap: 6px;
+}
+
+.home-page .roles-timeline .timeline-item {
+    padding: 8px 0;
+}
+
+.home-page .roles-timeline .timeline-head {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+}
+
+.home-page .roles-timeline .timeline-logo {
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+}
+
+.home-page .roles-timeline .timeline-content strong {
+    margin-bottom: 2px;
+    font-size: 0.96em;
+}
+
+.home-page .roles-timeline .timeline-content .meta {
+    margin-bottom: 0;
+    line-height: 1.28;
+    font-size: 0.92rem;
+}
+
+.home-page .education-timeline {
+    gap: 7px;
+}
+
+.home-page .education-timeline .timeline-item {
+    padding: 9px 0;
+}
+
+.home-page .education-timeline .timeline-head {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 14px;
+}
+
+.home-page .education-timeline .timeline-logo {
+    width: 52px;
+    height: 52px;
+    padding: 6px;
+}
+
+.home-page .education-timeline .timeline-content strong {
+    margin-bottom: 2px;
+    font-size: 0.96em;
+}
+
+.home-page .education-timeline .timeline-content .meta {
+    margin-bottom: 2px;
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+
+.home-page .education-timeline .timeline-copy p {
+    line-height: 1.34;
+    font-size: 0.9rem;
+}
+
 .home-page .news-shell {
     overflow: hidden;
     width: 100%;
@@ -1553,6 +1618,18 @@ h4 {
     box-shadow: 0 16px 28px rgba(158, 126, 56, 0.1);
 }
 
+.research-page .conference-entry.collaborative-highlight {
+    background:
+        linear-gradient(135deg, rgba(247, 250, 252, 0.98), rgba(240, 245, 248, 0.96)),
+        linear-gradient(115deg, rgba(72, 104, 126, 0.08), transparent 52%);
+    border: 1px solid rgba(72, 104, 126, 0.22);
+    box-shadow: 0 12px 24px rgba(72, 104, 126, 0.07);
+}
+
+.research-page .conference-entry.collaborative-highlight:hover {
+    box-shadow: 0 16px 28px rgba(72, 104, 126, 0.1);
+}
+
 @keyframes jumpHighlight {
     0% {
         box-shadow: 0 0 0 rgba(158, 126, 56, 0);
@@ -2078,6 +2155,73 @@ body.modal-open {
         line-height: 1.45;
     }
 
+    .home-page .roles-timeline {
+        gap: 5px;
+    }
+
+    .home-page .roles-timeline .timeline-item {
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .home-page .roles-timeline .timeline-head {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .home-page .roles-timeline .timeline-logo {
+        width: 44px;
+        height: 44px;
+        padding: 5px;
+    }
+
+    .home-page .roles-timeline .timeline-content strong {
+        margin-bottom: 1px;
+        font-size: 0.94em;
+    }
+
+    .home-page .roles-timeline .timeline-content .meta {
+        margin-bottom: 0;
+        font-size: 0.88rem;
+        line-height: 1.25;
+    }
+
+    .home-page .education-timeline {
+        gap: 5px;
+    }
+
+    .home-page .education-timeline .timeline-item {
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .home-page .education-timeline .timeline-head {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 11px;
+    }
+
+    .home-page .education-timeline .timeline-logo {
+        width: 46px;
+        height: 46px;
+        padding: 5px;
+    }
+
+    .home-page .education-timeline .timeline-content strong {
+        margin-bottom: 1px;
+        font-size: 0.93em;
+    }
+
+    .home-page .education-timeline .timeline-content .meta {
+        margin-bottom: 1px;
+        font-size: 0.86rem;
+        line-height: 1.24;
+    }
+
+    .home-page .education-timeline .timeline-copy p {
+        font-size: 0.86rem;
+        line-height: 1.3;
+    }
+
     .home-page .news-card {
         grid-template-columns: 76px minmax(0, 1fr);
         gap: 10px;
@@ -2455,6 +2599,61 @@ body.modal-open {
 
     .home-page .timeline-date {
         font-size: 0.78em;
+    }
+
+    .home-page .roles-timeline .timeline-item {
+        gap: 5px;
+        padding: 7px 0;
+    }
+
+    .home-page .roles-timeline .timeline-head {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 9px;
+    }
+
+    .home-page .roles-timeline .timeline-logo {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+    }
+
+    .home-page .roles-timeline .timeline-content strong {
+        font-size: 0.9em;
+    }
+
+    .home-page .roles-timeline .timeline-content .meta {
+        font-size: 0.84rem;
+        line-height: 1.22;
+    }
+
+    .home-page .education-timeline .timeline-item {
+        gap: 5px;
+        padding: 7px 0;
+    }
+
+    .home-page .education-timeline .timeline-head {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .home-page .education-timeline .timeline-logo {
+        width: 42px;
+        height: 42px;
+        padding: 4px;
+    }
+
+    .home-page .education-timeline .timeline-content strong {
+        font-size: 0.9em;
+    }
+
+    .home-page .education-timeline .timeline-content .meta {
+        font-size: 0.82rem;
+        line-height: 1.22;
+    }
+
+    .home-page .education-timeline .timeline-copy p {
+        font-size: 0.82rem;
+        line-height: 1.28;
     }
 
     .team-page .collaborators {
