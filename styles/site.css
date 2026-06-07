@@ -525,6 +525,16 @@ h4 {
     letter-spacing: 0.01em;
 }
 
+.home-page .hero-motto {
+    margin: 10px 0 0 0;
+    max-width: 42rem;
+    color: #747b82;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.4;
+}
+
 .home-page .hero-status {
     display: flex;
     flex-wrap: wrap;
@@ -831,7 +841,7 @@ h4 {
 }
 
 .services-page h4 {
-    margin: 18px 0 10px;
+    margin: 18px 0 6px;
     color: var(--muted);
     font-size: 0.98rem;
     font-family: 'Source Sans 3', sans-serif;
@@ -842,6 +852,45 @@ h4 {
 
 .services-page .cv-group.single-line {
     background: rgba(255, 255, 255, 0.72);
+}
+
+.services-page .cv-review-list {
+    display: grid;
+    gap: 8px;
+    padding: 2px 0;
+}
+
+.services-page .cv-review-row {
+    display: block;
+    padding: 9px 0 11px;
+    border-top: 1px solid rgba(31, 41, 51, 0.065);
+}
+
+.services-page .cv-review-list.compact .cv-review-row {
+    padding-block: 8px 10px;
+}
+
+.services-page .cv-review-source {
+    display: inline-flex;
+    margin-bottom: 4px;
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.services-page .cv-review-row .cv-inline {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.services-page .cv-review-row .cv-inline i {
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 500;
 }
 
 .team-page .collaborators {
@@ -933,7 +982,7 @@ h4 {
 .team-page .student-subheading {
     margin: 0 0 8px;
     color: var(--muted);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -1475,6 +1524,16 @@ h4 {
     gap: 12px;
 }
 
+.research-page .publication-data-error {
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(158, 126, 56, 0.16);
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
 .research-page .publication-entry,
 .research-page .conference-entry {
     display: block;
@@ -1759,61 +1818,6 @@ h4 {
     letter-spacing: 0.01em;
 }
 
-.research-page .modal-history-block {
-    margin: 0 0 18px;
-    padding: 14px 16px;
-    border: 1px solid rgba(31, 41, 51, 0.08);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.52);
-}
-
-.research-page .modal-history-label {
-    margin-bottom: 10px;
-    color: var(--accent-deep);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.research-page .modal-history {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.research-page .modal-history-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 10px;
-    border: 1px solid rgba(31, 41, 51, 0.12);
-    border-radius: 999px;
-    color: var(--ink);
-    background: rgba(246, 244, 239, 0.86);
-    font-size: 0.9rem;
-    line-height: 1;
-}
-
-.research-page .modal-history-chip.is-accepted {
-    border-color: rgba(62, 128, 91, 0.28);
-    background: rgba(226, 242, 231, 0.86);
-}
-
-.research-page .modal-history-chip.is-rejected {
-    border-color: rgba(179, 74, 60, 0.22);
-    background: rgba(251, 232, 226, 0.84);
-}
-
-.research-page .modal-history-venue {
-    font-weight: 700;
-}
-
-.research-page .modal-history-status,
-.research-page .modal-history-note {
-    color: var(--muted);
-}
-
 .research-page .modal-abstract-block {
     padding-top: 16px;
     border-top: 1px solid var(--line);
@@ -2087,6 +2091,14 @@ body.modal-open {
         text-wrap: balance;
     }
 
+    .home-page .hero-motto {
+        margin: 10px auto 0 auto;
+        max-width: 24rem;
+        font-size: 0.78rem;
+        line-height: 1.4;
+        text-wrap: balance;
+    }
+
     .home-page .hero-status {
         flex-direction: column;
         align-items: center;
@@ -2241,6 +2253,14 @@ body.modal-open {
 
     .services-page .cv-group {
         padding: 14px;
+    }
+
+    .services-page .cv-review-row {
+        padding: 9px 0 11px;
+    }
+
+    .services-page .cv-review-source {
+        font-size: 0.78rem;
     }
 
     .services-page .cv-titleline,
