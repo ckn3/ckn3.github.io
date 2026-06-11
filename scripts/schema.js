@@ -60,7 +60,7 @@
                 alternateName: 'Jason Cui',
                 url: siteRoot,
                 image: siteRoot + 'assets/og-card.png',
-                email: 'mailto:kangnicui2@gmail.com',
+                email: 'mailto:kangning.cui@cityu-dg.edu.cn',
                 jobTitle: 'Research Assistant Professor; Incoming Assistant Professor',
                 affiliation: [
                     {
