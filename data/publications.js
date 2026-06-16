@@ -131,38 +131,6 @@ window.PUBLICATIONS_DATA = {
             "href": "https://github.com/sampolk/D-VIC"
           }
         ]
-      },
-      {
-        "id": "paper-mining-change",
-        "kind": "journal",
-        "highlight": null,
-        "image": {
-          "src": "figures/publications/camalan2022change.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Camalan et al., 2022"
-        },
-        "title": "Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery",
-        "venue": "[RS'22]",
-        "authorsHtml": "Seda Camalan<sup>*</sup>, <span class=\"main-author\">Kangning Cui</span>, Victor P. Pauca, Sarra Alqahtani, Miles Silman, Raymond H. Chan, Robert J. Plemmons, Evan N. Dethier, Luis E. Fernandez, and David A. Lutz",
-        "badges": [
-          {
-            "label": "Paper",
-            "href": "https://www.mdpi.com/2072-4292/14/7/1746"
-          },
-          {
-            "label": "Dataset",
-            "href": "https://zenodo.org/records/6400211"
-          },
-          {
-            "label": "NBC News",
-            "href": "https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html"
-          },
-          {
-            "label": "The Today Show",
-            "href": "https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998"
-          }
-        ]
       }
     ],
     "conferences": [
@@ -208,8 +176,16 @@ window.PUBLICATIONS_DATA = {
         "authorsHtml": "Yangchen Zeng<sup>†</sup>, Zhenyu Yu<sup>†</sup>, Dongming Jiang, Wenbo Zhang, Yifan Hong, Zhanhua Hu, Jiao Luo, and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
         "badges": [
           {
+            "label": "Paper",
+            "href": "https://dl.acm.org/doi/10.1145/3805622.3810593"
+          },
+          {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2604.15065"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval"
           }
         ]
       },
@@ -241,33 +217,6 @@ window.PUBLICATIONS_DATA = {
           {
             "label": "Code",
             "href": "https://github.com/YingyuYyy/CardiacPhase"
-          }
-        ]
-      },
-      {
-        "id": "paper-ultrasound-restoration",
-        "kind": "conference",
-        "highlight": null,
-        "image": {
-          "src": "figures/publications/chen2025miccai.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Chen et al., 2025"
-        },
-        "title": "Blind Restoration of High-Resolution Ultrasound Video",
-        "venue": "[MICCAI'25]",
-        "authorsHtml": "Chu Chen<sup>*</sup>, <span class=\"main-author\">Kangning Cui</span>, Pasquale Cascarano, Wei Tang, Elena L. Piccolomini, and Raymond H. Chan",
-        "badges": [
-          {
-            "label": "Top 9%"
-          },
-          {
-            "label": "Paper",
-            "href": "https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8"
-          },
-          {
-            "label": "Preprint",
-            "href": "https://arxiv.org/abs/2505.13915"
           }
         ]
       },
