@@ -61,7 +61,7 @@
                 url: siteRoot,
                 image: siteRoot + 'assets/og-card.png',
                 email: 'mailto:kangning.cui@cityu-dg.edu.cn',
-                jobTitle: 'Research Assistant Professor; Incoming Assistant Professor',
+                jobTitle: 'Research Assistant Professor; Assistant Professor',
                 affiliation: [
                     {
                         '@type': 'CollegeOrUniversity',
