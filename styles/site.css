@@ -1337,6 +1337,56 @@ h4 {
     text-wrap: pretty;
 }
 
+.research-page .media-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+}
+
+.research-page .media-item {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+    padding: 12px 13px;
+    border-radius: 14px;
+    border: 1px solid rgba(158, 126, 56, 0.14);
+    background: rgba(255, 255, 255, 0.64);
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth), background 0.18s var(--ease-smooth);
+}
+
+.research-page .media-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(158, 126, 56, 0.28);
+    background: rgba(255, 255, 255, 0.86);
+    text-decoration: none;
+}
+
+.research-page .media-source {
+    color: var(--accent-deep);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.research-page .media-title {
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.22;
+}
+
+.research-page .media-note {
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.38;
+}
+
 .research-page .direction-card {
     padding: 15px 18px;
     border-radius: 18px;
@@ -1410,18 +1460,6 @@ h4 {
 .research-page .direction-links {
     display: grid;
     gap: 6px;
-}
-
-.research-page .direction-media {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 0 0 10px;
-}
-
-.research-page .direction-media .badge-chip {
-    display: inline-flex;
-    text-decoration: none;
 }
 
 .research-page .direction-item {
@@ -2331,6 +2369,16 @@ body.modal-open {
         gap: 8px;
     }
 
+    .research-page .media-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .research-page .media-item {
+        padding: 11px 12px;
+    }
+
     .research-page .direction-card {
         padding: 14px 12px;
     }
@@ -2631,6 +2679,14 @@ body.modal-open {
     .team-page .person-card img {
         width: 66px;
         height: 66px;
+    }
+
+    .research-page .media-title {
+        font-size: 0.94rem;
+    }
+
+    .research-page .media-note {
+        font-size: 0.8rem;
     }
 
     .research-page .direction-card {
