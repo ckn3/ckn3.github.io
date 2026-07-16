@@ -1339,18 +1339,18 @@ h4 {
 
 .research-page .media-card {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    padding: 12px;
+    gap: 10px;
+    padding: 10px;
 }
 
 .research-page .media-item {
     display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 10px;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 14px;
     overflow: hidden;
     min-width: 0;
-    padding: 9px;
+    padding: 10px;
     border-radius: 16px;
     border: 1px solid rgba(158, 126, 56, 0.14);
     background: rgba(255, 255, 255, 0.64);
@@ -1372,7 +1372,8 @@ h4 {
     display: block;
     overflow: hidden;
     border-radius: 12px;
-    aspect-ratio: 16 / 7.6;
+    min-height: 108px;
+    aspect-ratio: 16 / 9;
     background: rgba(31, 41, 51, 0.06);
 }
 
@@ -1393,14 +1394,17 @@ h4 {
 .research-page .media-copy {
     display: grid;
     gap: 5px;
-    padding: 0 3px 3px;
+    align-content: center;
+    min-width: 0;
+    padding: 2px 4px 2px 0;
 }
 
 .research-page .media-meta {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px 10px;
     min-width: 0;
 }
 
@@ -2418,23 +2422,20 @@ body.modal-open {
     }
 
     .research-page .media-card {
-        grid-template-columns: 1fr;
         gap: 8px;
-        padding: 10px;
+        padding: 8px;
     }
 
     .research-page .media-item {
-        grid-template-columns: 132px minmax(0, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: 126px minmax(0, 1fr);
         align-items: stretch;
         padding: 8px;
         gap: 10px;
     }
 
     .research-page .media-thumb {
-        height: 100%;
-        min-height: 96px;
-        aspect-ratio: auto;
+        min-height: 88px;
+        aspect-ratio: 4 / 3;
     }
 
     .research-page .media-copy {
@@ -2750,11 +2751,12 @@ body.modal-open {
 
     .research-page .media-item {
         grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .research-page .media-thumb {
         min-height: 0;
-        aspect-ratio: 16 / 7.8;
+        aspect-ratio: 16 / 8.5;
     }
 
     .research-page .media-meta {
