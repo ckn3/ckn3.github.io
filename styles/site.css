@@ -223,7 +223,7 @@ h4 {
     line-height: 1.6;
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .collaborator, .gallery-card, .news-card, .info-card, .summary-card, .team-section) {
+:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card, .info-card, .summary-card, .team-section) {
     position: relative;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -235,7 +235,7 @@ h4 {
     scroll-margin-top: 92px;
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .collaborator, .gallery-card, .news-card)::before {
+:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -246,13 +246,13 @@ h4 {
     pointer-events: none;
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .collaborator, .gallery-card, .news-card) {
+:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card) {
     transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
     will-change: transform;
     transform: translateZ(0);
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .collaborator, .gallery-card, .news-card):hover {
+:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card):hover {
     transform: translateY(-2px);
     box-shadow: var(--card-shadow-hover);
     border-color: var(--line-strong);
@@ -893,24 +893,11 @@ h4 {
     font-weight: 500;
 }
 
-.team-page .collaborators {
+.team-page .people-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
     padding: 0;
-}
-
-.team-page .collaborators-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.team-page .collaborators-wrapper {
-    flex: 1;
-    min-width: 0;
 }
 
 .team-page .imaging-gallery {
@@ -990,7 +977,7 @@ h4 {
     text-transform: uppercase;
 }
 
-.team-page .student-grid .collaborator {
+.team-page .student-grid .person-card {
     display: grid;
     grid-template-columns: 60px minmax(0, 1fr);
     align-items: center;
@@ -999,7 +986,7 @@ h4 {
     text-align: left;
 }
 
-.team-page .student-grid .collaborator img {
+.team-page .student-grid .person-card img {
     width: 60px;
     height: 60px;
     margin-bottom: 0;
@@ -1065,14 +1052,14 @@ h4 {
     line-height: 1.2;
 }
 
-.team-page .collaborator {
+.team-page .person-card {
     padding: 16px 14px;
     border-radius: 16px;
     text-align: center;
     min-width: 0;
 }
 
-.team-page .collaborator img {
+.team-page .person-card img {
     width: 92px;
     height: 92px;
     border-radius: 50%;
@@ -1081,11 +1068,11 @@ h4 {
     transition: transform 0.18s var(--ease-smooth);
 }
 
-.team-page .collaborator img:hover {
+.team-page .person-card img:hover {
     transform: scale(1.05);
 }
 
-.team-page .collaborator .name {
+.team-page .person-card .name {
     color: var(--ink);
     text-decoration: none;
     font-size: 0.92em;
@@ -1093,59 +1080,18 @@ h4 {
     min-width: 0;
 }
 
-.team-page .collaborator .name span {
+.team-page .person-card .name span {
     display: block;
     line-height: 1.2;
     overflow-wrap: anywhere;
 }
 
-.team-page .collaborator a:hover {
+.team-page .person-card a:hover {
     color: var(--accent-deep);
     text-decoration: none;
 }
 
-.team-page .alphabet-index {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 14px 10px;
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 14px;
-    box-shadow: var(--shadow-soft);
-    position: sticky;
-    top: 20px;
-    height: fit-content;
-    margin-left: 20px;
-    flex-shrink: 0;
-    border: 1px solid var(--line);
-}
-
-.team-page .alphabet-index a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: normal;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.18s var(--ease-smooth), color 0.18s var(--ease-smooth), transform 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
-    font-size: 0.9em;
-    text-align: center;
-    border: 1px solid transparent;
-}
-
-.team-page .alphabet-index a:hover {
-    background: linear-gradient(135deg, var(--accent-deep), var(--accent));
-    color: white;
-    transform: translateX(-2px);
-}
-
-.team-page .alphabet-index a.active {
-    font-weight: bold;
-    color: var(--accent-deep);
-    border-color: rgba(158, 126, 56, 0.24);
-    background: rgba(158, 126, 56, 0.09);
-}
-
-.team-page .collaborator {
+.team-page .person-card {
     scroll-margin-top: 20px;
 }
 
@@ -2284,42 +2230,10 @@ body.modal-open {
         line-height: 1.58;
     }
 
-    .team-page .alphabet-index {
-        position: sticky;
-        top: 62px;
-        z-index: 5;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        margin: 0 0 14px 0;
-        padding: 10px 8px;
-        gap: 6px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.96);
-        border: 1px solid rgba(158, 126, 56, 0.12);
-    }
-
-    .team-page .alphabet-index a {
-        min-width: 28px;
-        padding: 4px 6px;
-        font-size: 0.78em;
-        background: rgba(158, 126, 56, 0.06);
-    }
-
-    .team-page .collaborators {
+    .team-page .people-grid {
         grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
         gap: 10px;
         padding: 0;
-    }
-
-    .team-page .collaborators-layout {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .team-page .collaborators-wrapper {
-        width: 100%;
     }
 
     .team-page .student-grid {
@@ -2327,14 +2241,14 @@ body.modal-open {
         gap: 8px;
     }
 
-    .team-page .student-grid .collaborator {
+    .team-page .student-grid .person-card {
         grid-template-columns: 58px minmax(0, 1fr);
         gap: 10px;
         padding: 10px 11px;
         border-radius: 12px;
     }
 
-    .team-page .student-grid .collaborator img {
+    .team-page .student-grid .person-card img {
         width: 58px;
         height: 58px;
         margin-bottom: 0;
@@ -2353,19 +2267,19 @@ body.modal-open {
         line-height: 1.26;
     }
 
-    .team-page .collaborator {
+    .team-page .person-card {
         padding: 12px 8px;
         border-radius: 12px;
         box-shadow: 0 8px 18px rgba(0,0,0,0.07);
     }
 
-    .team-page .collaborator img {
+    .team-page .person-card img {
         width: 74px;
         height: 74px;
         margin-bottom: 6px;
     }
 
-    .team-page .collaborator .name {
+    .team-page .person-card .name {
         font-size: 0.82em;
         line-height: 1.25;
     }
@@ -2676,7 +2590,7 @@ body.modal-open {
         line-height: 1.28;
     }
 
-    .team-page .collaborators {
+    .team-page .people-grid {
         grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
         gap: 8px;
     }
@@ -2686,13 +2600,13 @@ body.modal-open {
         gap: 7px;
     }
 
-    .team-page .student-grid .collaborator {
+    .team-page .student-grid .person-card {
         grid-template-columns: 52px minmax(0, 1fr);
         gap: 9px;
         padding: 9px 9px;
     }
 
-    .team-page .student-grid .collaborator img {
+    .team-page .student-grid .person-card img {
         width: 52px;
         height: 52px;
     }
@@ -2710,25 +2624,13 @@ body.modal-open {
         line-height: 1.22;
     }
 
-    .team-page .collaborator {
+    .team-page .person-card {
         padding: 10px 7px;
     }
 
-    .team-page .collaborator img {
+    .team-page .person-card img {
         width: 66px;
         height: 66px;
-    }
-
-    .team-page .alphabet-index {
-        top: 58px;
-        padding: 8px 6px;
-        gap: 5px;
-    }
-
-    .team-page .alphabet-index a {
-        min-width: 26px;
-        padding: 3px 5px;
-        font-size: 0.74em;
     }
 
     .research-page .direction-card {
