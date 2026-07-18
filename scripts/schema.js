@@ -61,17 +61,17 @@
                 url: siteRoot,
                 image: siteRoot + 'assets/og-card.png',
                 email: 'mailto:kangning.cui@cityu-dg.edu.cn',
-                jobTitle: 'Research Assistant Professor; Assistant Professor',
+                jobTitle: 'Assistant Professor',
                 affiliation: [
-                    {
-                        '@type': 'CollegeOrUniversity',
-                        name: 'Wake Forest University',
-                        url: 'https://www.wfu.edu/'
-                    },
                     {
                         '@type': 'CollegeOrUniversity',
                         name: 'City University of Hong Kong (Dongguan)',
                         url: 'https://www.cityu-dg.edu.cn/'
+                    },
+                    {
+                        '@type': 'CollegeOrUniversity',
+                        name: 'Wake Forest University',
+                        url: 'https://www.wfu.edu/'
                     }
                 ],
                 alumniOf: [
@@ -92,6 +92,7 @@
                     'https://www.scopus.com/authid/detail.uri?authorId=57226829865',
                     'https://github.com/ckn3/',
                     'https://www.linkedin.com/in/kangning-cui-57662b177/',
+                    'https://faculty.cityu-dg.edu.cn/?lang=en&alphabet=C&title=&keyword=&page=2',
                     'https://cs.wfu.edu/faculty/jason-cui/'
                 ]
             },
@@ -177,11 +178,6 @@
 
     function loadPublicationSchema() {
         if (!document.body.classList.contains('research-page')) {
-            return;
-        }
-
-        if (window.PUBLICATIONS_DATA) {
-            appendJsonLd(articleGraphFromData(window.PUBLICATIONS_DATA), 'schema-publications');
             return;
         }
 

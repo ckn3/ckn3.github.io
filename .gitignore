@@ -15,6 +15,9 @@ ENV/
 scholar_page_debug.html
 *.log
 
+# Local source-image archive
+_archive/
+
 # Logs
 logs/
 
@@ -28,4 +31,3 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
-

@@ -25,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function loadPublicationData() {
-        if (window.PUBLICATIONS_DATA) {
-            return Promise.resolve(window.PUBLICATIONS_DATA);
-        }
-
         if (!window.fetch) {
             return Promise.reject(new Error('Publication data is not available.'));
         }
