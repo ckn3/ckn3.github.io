@@ -1,7 +1,7 @@
 {
   "name": "Kangning Cui",
   "short_name": "Kangning Cui",
-  "description": "Academic homepage of Kangning Cui.",
+  "description": "Academic homepage of Kangning Cui, featuring efficient and explainable machine learning research.",
   "start_url": "/",
   "display": "standalone",
   "scope": "/",

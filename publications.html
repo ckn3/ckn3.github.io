@@ -10,11 +10,16 @@
     <meta property="og:description" content="Research areas, selected publications, and media coverage by Kangning Cui across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/publications.html">
+    <link rel="canonical" href="https://ckn3.github.io/publications.html">
     <meta property="og:image" content="https://ckn3.github.io/assets/og-card.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kangning Cui academic homepage">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research | Kangning Cui">
+    <meta name="twitter:description" content="Research areas, selected publications, and media coverage by Kangning Cui across computer vision, signal processing, large language models, geoscience, and healthcare.">
     <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png">
+    <meta name="twitter:image:alt" content="Kangning Cui academic homepage">
     <meta name="theme-color" content="#f6f4ef">
     <meta name="apple-mobile-web-app-title" content="Kangning Cui">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,10 +31,12 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <script src="scripts/schema.js" defer></script>
+    <script src="scripts/site.js" defer></script>
     <title>Research | Kangning Cui</title>
 </head>
 
 <body class="research-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-topbar">
         <div class="site-topbar-inner">
             <a class="site-brand" href="index.html">Kangning Cui</a>
@@ -44,7 +51,7 @@
         </div>
     </header>
 
-    <main class="site-shell">
+    <main class="site-shell" id="main-content" tabindex="-1">
 
     <div class="content content-top">
         <div class="page-header">
@@ -197,9 +204,9 @@
         <div class="publications-grid" id="journal-publications-list" data-publication-section="journals"></div>
     </div>
     
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" aria-hidden="true">
         <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <span class="close" aria-label="Close preview">&times;</span>
+            <button type="button" class="close" aria-label="Close publication details">&times;</button>
             <div class="modal-media">
                 <img class="modal-content" id="modal-img" alt="">
             </div>
@@ -222,7 +229,9 @@
         <div class="conference-grid" id="conference-publications-list" data-publication-section="conferences"></div>
     </div>
 
-    <script src="scripts/publications.js" data-publications-data="data/publications.json"></script>
+    <script src="scripts/publications.js"
+            data-publications-data="data/publications.json"
+            data-publications-fallback="data/publications-fallback.js"></script>
 
     </main>
     <footer class="site-footer">
@@ -230,7 +239,7 @@
             <div class="site-footer-copy">Kangning Cui</div>
             <div class="site-footer-links">
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>

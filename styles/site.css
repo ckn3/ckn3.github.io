@@ -27,6 +27,29 @@ body {
     color: var(--ink);
 }
 
+.skip-link {
+    position: fixed;
+    top: 10px;
+    left: 12px;
+    z-index: 2000;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: #fff !important;
+    font-weight: 700;
+    transform: translateY(-160%);
+    transition: transform 0.18s var(--ease-smooth);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+:where(a, button, summary, [role="button"]):focus-visible {
+    outline: 2px solid rgba(158, 126, 56, 0.62);
+    outline-offset: 3px;
+}
+
 a:link,
 a:visited {
     text-decoration: none;
@@ -210,7 +233,7 @@ h4 {
     border-radius: 18px;
 }
 
-.team-section h3 {
+.team-section > h2 {
     margin-bottom: 10px;
     font-size: 1.5rem;
     color: var(--ink);
@@ -246,13 +269,11 @@ h4 {
     pointer-events: none;
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card) {
+:is(.publication-entry, .conference-entry) {
     transition: transform 0.18s var(--ease-smooth), box-shadow 0.18s var(--ease-smooth), border-color 0.18s var(--ease-smooth);
-    will-change: transform;
-    transform: translateZ(0);
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card):hover {
+:is(.publication-entry, .conference-entry):hover {
     transform: translateY(-2px);
     box-shadow: var(--card-shadow-hover);
     border-color: var(--line-strong);
@@ -923,6 +944,11 @@ h4 {
     box-shadow: 0 16px 30px rgba(31, 41, 51, 0.08);
 }
 
+.gallery-trigger[role="button"]:focus-visible {
+    outline: 3px solid rgba(158, 126, 56, 0.62);
+    outline-offset: 4px;
+}
+
 .team-page .archive-note {
     padding: 16px 18px;
     border-radius: 16px;
@@ -1065,11 +1091,6 @@ h4 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-    transition: transform 0.18s var(--ease-smooth);
-}
-
-.team-page .person-card img:hover {
-    transform: scale(1.05);
 }
 
 .team-page .person-card .name {
@@ -1148,6 +1169,7 @@ h4 {
     border-radius: 999px;
     background: rgba(31, 41, 51, 0.92);
     color: white;
+    font-family: inherit;
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0 10px 24px rgba(17, 24, 39, 0.2);
@@ -1176,7 +1198,7 @@ h4 {
     transition: transform 0.18s var(--ease-smooth);
 }
 
-.gallery-page .gallery-card:hover .gallery-image img {
+.gallery-page .gallery-trigger:hover {
     transform: scale(1.03);
 }
 
@@ -1887,6 +1909,8 @@ h4 {
     align-items: center;
     justify-content: center;
     color: #fff;
+    padding: 0;
+    font-family: inherit;
     font-size: 30px;
     line-height: 1;
     font-weight: 400;
@@ -1944,13 +1968,31 @@ body.modal-open {
     .site-topbar-inner {
         align-items: flex-start;
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
         padding: 12px 14px;
     }
 
     .site-nav {
         justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 14px;
         width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 1px 2px 4px;
+        box-sizing: border-box;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .site-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .site-nav a {
+        flex: 0 0 auto;
     }
 
     .site-shell {
@@ -2017,7 +2059,7 @@ body.modal-open {
         border-radius: 14px;
     }
 
-    .team-section h3 {
+    .team-section > h2 {
         margin-bottom: 8px;
         font-size: 18px;
         line-height: 1.3;
@@ -2595,7 +2637,7 @@ body.modal-open {
     }
 
     .site-nav {
-        gap: 8px;
+        gap: 12px;
     }
 
     .site-nav a {
@@ -2808,5 +2850,16 @@ body.modal-open {
 
     .research-page .modal-body {
         padding: 12px 13px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

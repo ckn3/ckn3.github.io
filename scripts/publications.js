@@ -2,6 +2,9 @@ var publicationsScript = document.currentScript;
 var publicationsDataUrl = publicationsScript && publicationsScript.dataset.publicationsData
     ? publicationsScript.dataset.publicationsData
     : 'data/publications.json';
+var publicationsFallbackUrl = publicationsScript && publicationsScript.dataset.publicationsFallback
+    ? publicationsScript.dataset.publicationsFallback
+    : 'data/publications-fallback.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById('modal');
@@ -10,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var modalVenue = document.getElementById('modal-venue');
     var modalAuthors = document.getElementById('modal-authors');
     var modalAbstract = document.getElementById('modal-abstract');
-    var closeBtn = document.getElementsByClassName('close')[0];
+    var closeBtn = modal && modal.querySelector('.close');
+    var lastFocusedElement = null;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract) {
+    if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract || !closeBtn) {
         return;
     }
 
@@ -25,8 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function loadPublicationData() {
+        if (window.location.protocol === 'file:') {
+            return loadPublicationFallback();
+        }
+
         if (!window.fetch) {
-            return Promise.reject(new Error('Publication data is not available.'));
+            return loadPublicationFallback();
         }
 
         return fetch(publicationsDataUrl).then(function (response) {
@@ -34,6 +43,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error('Unable to load publication data.');
             }
             return response.json();
+        }).catch(function () {
+            return loadPublicationFallback();
+        });
+    }
+
+    function loadPublicationFallback() {
+        if (window.publicationsData) {
+            return Promise.resolve(window.publicationsData);
+        }
+
+        return new Promise(function (resolve, reject) {
+            var fallbackScript = document.createElement('script');
+            fallbackScript.src = publicationsFallbackUrl;
+
+            fallbackScript.addEventListener('load', function () {
+                if (window.publicationsData) {
+                    resolve(window.publicationsData);
+                    return;
+                }
+                reject(new Error('Publication fallback data is not available.'));
+            });
+
+            fallbackScript.addEventListener('error', function () {
+                reject(new Error('Unable to load publication fallback data.'));
+            });
+
+            document.head.appendChild(fallbackScript);
         });
     }
 
@@ -44,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            container.innerHTML = '<div class="publication-data-error">Selected publications could not be loaded. Please serve the site locally or check <code>data/publications.json</code>.</div>';
+            container.innerHTML = '<div class="publication-data-error">Selected publications could not be loaded. Please check <code>data/publications.json</code> and <code>data/publications-fallback.js</code>.</div>';
         });
 
         if (window.console && error) {
@@ -69,6 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
             var entry = document.createElement('div');
             entry.className = baseClass;
             entry.id = item.id;
+            entry.setAttribute('role', 'button');
+            entry.setAttribute('aria-haspopup', 'dialog');
+            entry.setAttribute('aria-controls', 'modal');
+            entry.setAttribute('aria-label', 'View publication details: ' + item.title);
 
             if (item.highlight === 'primary') {
                 entry.classList.add('highlight-entry');
@@ -192,8 +232,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function closeModal() {
+        if (!modal.classList.contains('is-open')) {
+            return;
+        }
+
         modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
     }
 
     function openDetailModal(entry, abstracts) {
@@ -202,6 +252,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var venue = entry.querySelector('.venue').textContent.trim();
         var authorsHtml = entry.querySelector('.authors').innerHTML.trim();
 
+        lastFocusedElement = entry;
         modalImg.src = image.src;
         modalImg.alt = title;
         modalTitle.textContent = title;
@@ -209,7 +260,9 @@ document.addEventListener('DOMContentLoaded', function () {
         modalAuthors.innerHTML = authorsHtml;
         modalAbstract.textContent = abstracts[title] || 'Abstract will be added soon.';
         modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
+        closeBtn.focus();
     }
 
     function flashTarget(target) {
@@ -235,10 +288,10 @@ document.addEventListener('DOMContentLoaded', function () {
             history.pushState(null, '', hash);
         }
 
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
         window.setTimeout(function () {
             flashTarget(target);
-        }, 240);
+        }, reducedMotion ? 0 : 240);
     }
 
     if (closeBtn) {
@@ -252,8 +305,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
             closeModal();
+        } else if (event.key === 'Tab' && modal.classList.contains('is-open')) {
+            event.preventDefault();
+            closeBtn.focus();
         }
     });
 

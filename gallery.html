@@ -10,11 +10,16 @@
     <meta property="og:description" content="Selected academic visits, travel, and snapshots from Kangning Cui's research activities and collaborations.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/gallery.html">
+    <link rel="canonical" href="https://ckn3.github.io/gallery.html">
     <meta property="og:image" content="https://ckn3.github.io/assets/og-card.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kangning Cui academic homepage">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Kangning Cui">
+    <meta name="twitter:description" content="Selected academic visits, travel, and snapshots from Kangning Cui's research activities and collaborations.">
     <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png">
+    <meta name="twitter:image:alt" content="Kangning Cui academic homepage">
     <meta name="theme-color" content="#f6f4ef">
     <meta name="apple-mobile-web-app-title" content="Kangning Cui">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,10 +31,12 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles/site.css">
     <script src="scripts/schema.js" defer></script>
+    <script src="scripts/site.js" defer></script>
     <title>Gallery | Kangning Cui</title>
 </head>
 
 <body class="gallery-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-topbar">
         <div class="site-topbar-inner">
             <a class="site-brand" href="index.html">Kangning Cui</a>
@@ -44,7 +51,7 @@
         </div>
     </header>
 
-    <main class="site-shell">
+    <main class="site-shell" id="main-content" tabindex="-1">
 
     <div class="content content-top">
         <div class="page-header">
@@ -196,8 +203,8 @@
     </div>
 
     <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
-        <div class="gallery-modal-panel">
-            <button class="gallery-modal-close" id="gallery-modal-close" aria-label="Close image preview">×</button>
+        <div class="gallery-modal-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+            <button type="button" class="gallery-modal-close" id="gallery-modal-close" aria-label="Close image preview">×</button>
             <img src="" alt="" class="gallery-modal-image" id="gallery-modal-image">
         </div>
     </div>
@@ -210,7 +217,7 @@
             <div class="site-footer-copy">Kangning Cui</div>
             <div class="site-footer-links">
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
-                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
