@@ -105,10 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
             var entry = document.createElement('div');
             entry.className = baseClass;
             entry.id = item.id;
-            entry.setAttribute('role', 'button');
-            entry.setAttribute('aria-haspopup', 'dialog');
-            entry.setAttribute('aria-controls', 'modal');
-            entry.setAttribute('aria-label', 'View publication details: ' + item.title);
 
             if (item.highlight === 'primary') {
                 entry.classList.add('highlight-entry');
@@ -165,12 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         wrapper.appendChild(titleLine);
         wrapper.appendChild(authors);
-        wrapper.appendChild(renderBadges(item.badges || []));
+        wrapper.appendChild(renderBadges(item.badges || [], item.title));
 
         return wrapper;
     }
 
-    function renderBadges(badges) {
+    function renderBadges(badges, title) {
         var badgeList = document.createElement('div');
         badgeList.className = 'badges';
 
@@ -191,6 +187,15 @@ document.addEventListener('DOMContentLoaded', function () {
             badgeList.appendChild(badgeElement);
         });
 
+        var detailsButton = document.createElement('button');
+        detailsButton.type = 'button';
+        detailsButton.className = 'badge-chip publication-details-button';
+        detailsButton.textContent = 'Details';
+        detailsButton.setAttribute('aria-haspopup', 'dialog');
+        detailsButton.setAttribute('aria-controls', 'modal');
+        detailsButton.setAttribute('aria-label', 'View publication details: ' + title);
+        badgeList.appendChild(detailsButton);
+
         return badgeList;
     }
 
@@ -203,20 +208,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         document.querySelectorAll('.publication-entry, .conference-entry').forEach(function (entry) {
-            entry.setAttribute('tabindex', '0');
+            var detailsButton = entry.querySelector('.publication-details-button');
+
+            if (detailsButton) {
+                detailsButton.addEventListener('click', function () {
+                    openDetailModal(entry, abstracts, detailsButton);
+                });
+            }
 
             entry.addEventListener('click', function (event) {
-                if (event.target.closest('a')) {
+                if (event.target.closest('a, button')) {
                     return;
                 }
-                openDetailModal(entry, abstracts);
-            });
-
-            entry.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    openDetailModal(entry, abstracts);
-                }
+                openDetailModal(entry, abstracts, detailsButton);
             });
         });
 
@@ -246,13 +250,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function openDetailModal(entry, abstracts) {
+    function openDetailModal(entry, abstracts, trigger) {
         var image = entry.querySelector('.publication-figure img');
         var title = normalizeTitle(entry.querySelector('.paper-title').textContent);
         var venue = entry.querySelector('.venue').textContent.trim();
         var authorsHtml = entry.querySelector('.authors').innerHTML.trim();
 
-        lastFocusedElement = entry;
+        lastFocusedElement = trigger;
         modalImg.src = image.src;
         modalImg.alt = title;
         modalTitle.textContent = title;
@@ -262,7 +266,11 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
-        closeBtn.focus();
+        window.requestAnimationFrame(function () {
+            if (modal.classList.contains('is-open')) {
+                closeBtn.focus();
+            }
+        });
     }
 
     function flashTarget(target) {
