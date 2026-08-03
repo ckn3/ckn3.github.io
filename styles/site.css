@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 600 700;
+    font-display: swap;
+    src: url('../assets/fonts/fraunces-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('../assets/fonts/source-sans-3-latin.woff2') format('woff2');
+}
 
 :root {
     --accent: #9E7E38;
@@ -179,6 +193,14 @@ h4 {
 
 .content-top > .page-header:last-child {
     margin-bottom: 0;
+}
+
+.content.content-open {
+    padding: 0 20px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .page-header {
@@ -556,37 +578,21 @@ h4 {
     line-height: 1.4;
 }
 
-.home-page .hero-status {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 0 14px 0;
-}
-
-.home-page .hero-status span,
-.home-page .hero-status a {
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 11px;
-    border-radius: 999px;
-    background: rgba(23, 23, 28, 0.04);
-    border: 1px solid rgba(23, 23, 28, 0.08);
-    color: #343842;
-    font-size: 0.9rem;
+.home-page .hero-appointment {
+    margin: 0 0 14px;
+    color: var(--ink);
+    font-size: 0.94rem;
     font-weight: 600;
+    line-height: 1.5;
 }
 
-.home-page .hero-status span:last-child {
-    background: rgba(158, 126, 56, 0.1);
-    border-color: rgba(158, 126, 56, 0.16);
+.home-page .hero-appointment a {
     color: var(--accent-deep);
 }
 
-.home-page .hero-status a:hover {
+.home-page .hero-appointment a:hover {
+    color: var(--accent);
     text-decoration: none;
-    color: var(--accent-deep);
-    border-color: rgba(158, 126, 56, 0.22);
-    background: rgba(255, 255, 255, 0.92);
 }
 
 .home-page .hero-links {
@@ -2008,6 +2014,10 @@ body.modal-open {
         border: none;
     }
 
+    .content.content-open {
+        padding: 0 12px;
+    }
+
     .page-header {
         padding: 22px 18px;
         margin-bottom: 22px;
@@ -2178,17 +2188,11 @@ body.modal-open {
         text-wrap: balance;
     }
 
-    .home-page .hero-status {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
+    .home-page .hero-appointment {
         margin-bottom: 14px;
-    }
-
-    .home-page .hero-status span,
-    .home-page .hero-status a {
-        padding: 7px 11px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
+        line-height: 1.45;
+        text-wrap: balance;
     }
 
     .home-page .hero-links {
