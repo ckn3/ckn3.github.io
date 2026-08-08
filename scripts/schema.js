@@ -92,7 +92,7 @@
                     'https://www.scopus.com/authid/detail.uri?authorId=57226829865',
                     'https://github.com/ckn3/',
                     'https://www.linkedin.com/in/kangning-cui-57662b177/',
-                    'https://faculty.cityu-dg.edu.cn/?lang=en&alphabet=C&title=&keyword=&page=2',
+                    'https://rims.cityu-dg.edu.cn/en/persons/kangning-cui/publications/',
                     'https://cs.wfu.edu/faculty/jason-cui/'
                 ]
             },
