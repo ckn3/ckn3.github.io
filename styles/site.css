@@ -587,23 +587,6 @@ h4 {
     line-height: 1.4;
 }
 
-.home-page .hero-appointment {
-    margin: 0 0 14px;
-    color: var(--ink);
-    font-size: 0.94rem;
-    font-weight: 600;
-    line-height: 1.5;
-}
-
-.home-page .hero-appointment a {
-    color: var(--accent-deep);
-}
-
-.home-page .hero-appointment a:hover {
-    color: var(--accent);
-    text-decoration: none;
-}
-
 .home-page .hero-recruitment {
     margin: 0 0 14px;
     padding: 10px 12px;
@@ -1073,7 +1056,7 @@ h4 {
 
 .team-page .recruitment-requirements {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
     margin: 9px 0 0;
     padding: 0;
@@ -1090,6 +1073,23 @@ h4 {
     font-size: 0.9rem;
     line-height: 1.4;
     counter-increment: application-requirement;
+}
+
+.team-page .recruitment-requirements strong,
+.team-page .recruitment-requirements span {
+    display: block;
+}
+
+.team-page .recruitment-requirements strong {
+    margin-bottom: 3px;
+    color: var(--ink);
+    font-size: 0.92rem;
+}
+
+.team-page .recruitment-requirements span {
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.42;
 }
 
 .team-page .recruitment-requirements li::before {
@@ -2324,13 +2324,6 @@ body.modal-open {
         max-width: 24rem;
         font-size: 0.78rem;
         line-height: 1.4;
-        text-wrap: balance;
-    }
-
-    .home-page .hero-appointment {
-        margin-bottom: 14px;
-        font-size: 0.88rem;
-        line-height: 1.45;
         text-wrap: balance;
     }
 
