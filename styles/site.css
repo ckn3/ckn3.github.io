@@ -203,6 +203,15 @@ h4 {
     box-shadow: none;
 }
 
+.home-page .content-top,
+.services-page .content-top {
+    padding: 0 20px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
 .page-header {
     padding: 28px 30px;
     border-radius: 20px;
@@ -844,6 +853,10 @@ h4 {
     display: none;
 }
 
+.home-page .news-card:first-child {
+    border-top: 0;
+}
+
 .home-page .news-card:hover {
     transform: none;
     box-shadow: none;
@@ -879,6 +892,29 @@ h4 {
     max-width: none;
 }
 
+.services-page .service-panel {
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 20px !important;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--card-shadow);
+}
+
+.services-page .service-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(158, 126, 56, 0.32), rgba(158, 126, 56, 0.12), rgba(158, 126, 56, 0));
+    pointer-events: none;
+}
+
 .services-page .cv-group-grid {
     grid-template-columns: 1fr;
 }
@@ -897,8 +933,21 @@ h4 {
     text-transform: uppercase;
 }
 
-.services-page .cv-group.single-line {
-    background: rgba(255, 255, 255, 0.72);
+.services-page .service-panel .cv-group {
+    padding: 11px 0 13px;
+    border: 0;
+    border-top: 1px solid rgba(31, 41, 51, 0.08);
+    border-radius: 0;
+    background: transparent;
+}
+
+.services-page .service-panel .cv-group > .cv-inline {
+    padding: 6px 0;
+}
+
+.services-page .service-panel .cv-group > .cv-inline + .cv-inline {
+    margin-top: 0;
+    border-top: 1px solid rgba(31, 41, 51, 0.06);
 }
 
 .services-page .cv-review-list {
@@ -2103,6 +2152,11 @@ body.modal-open {
         padding: 0 12px;
     }
 
+    .home-page .content-top,
+    .services-page .content-top {
+        padding: 0 12px;
+    }
+
     .page-header {
         padding: 22px 18px;
         margin-bottom: 22px;
@@ -2433,8 +2487,15 @@ body.modal-open {
         font-size: 0.88rem;
     }
 
-    .services-page .cv-group {
-        padding: 14px;
+    .services-page .service-panel {
+        margin-right: 12px;
+        margin-left: 12px !important;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .services-page .service-panel .cv-group {
+        padding: 10px 0 12px;
     }
 
     .services-page .cv-review-row {
