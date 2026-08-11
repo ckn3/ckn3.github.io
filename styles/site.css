@@ -276,7 +276,7 @@ h4 {
     box-sizing: border-box;
 }
 
-:is(.publication-entry, .conference-entry, .team-section, .section-header [id], .publication-entry[id], .conference-entry[id]) {
+:is(.publication-entry, .conference-entry, .team-section, .section-header [id], .publication-entry[id], .conference-entry[id], .team-page #prospective-applicants) {
     scroll-margin-top: 92px;
 }
 
@@ -1015,6 +1015,43 @@ h4 {
     color: var(--muted);
     font-size: 0.94rem;
     line-height: 1.55;
+}
+
+.team-page .recruitment-note .recruitment-apply {
+    margin-top: 10px;
+    color: var(--ink);
+}
+
+.team-page .recruitment-requirements {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 9px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: application-requirement;
+}
+
+.team-page .recruitment-requirements li {
+    position: relative;
+    min-width: 0;
+    padding: 8px 10px 8px 34px;
+    border-top: 1px solid rgba(158, 126, 56, 0.2);
+    color: var(--ink);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    counter-increment: application-requirement;
+}
+
+.team-page .recruitment-requirements li::before {
+    content: counter(application-requirement, decimal-leading-zero);
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: var(--accent-deep);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
 }
 
 .team-page .recruitment-note a {
@@ -2250,6 +2287,11 @@ body.modal-open {
         font-size: 0.86rem;
         line-height: 1.48;
         text-align: left;
+    }
+
+    .team-page .recruitment-requirements {
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 
     .home-page .hero-links {
