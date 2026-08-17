@@ -389,6 +389,163 @@ h4 {
     margin-top: 8px;
 }
 
+.course-page .course-summary {
+    margin-top: 0;
+}
+
+.course-page .content-top {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.course-page .course-copy {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.course-page .course-copy p {
+    margin: 0;
+}
+
+.course-page .course-copy p + p {
+    margin-top: 10px;
+}
+
+.course-page .course-topic-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.course-page .course-topic-list li {
+    padding: 9px 0 9px 18px;
+    border-top: 1px solid rgba(31, 41, 51, 0.07);
+    color: var(--ink);
+    line-height: 1.45;
+    position: relative;
+}
+
+.course-page .course-topic-list li::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.course-page .course-outcomes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: course-outcome;
+}
+
+.course-page .course-outcomes li {
+    position: relative;
+    padding: 12px 0 12px 38px;
+    border-top: 1px solid rgba(31, 41, 51, 0.08);
+    color: var(--muted);
+    line-height: 1.55;
+    counter-increment: course-outcome;
+}
+
+.course-page .course-outcomes li::before {
+    content: counter(course-outcome, decimal-leading-zero);
+    position: absolute;
+    top: 13px;
+    left: 0;
+    color: var(--accent-deep);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.course-page .course-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.course-page .course-detail {
+    min-width: 0;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.course-page .course-detail h3 {
+    margin: 0 0 7px;
+    color: var(--ink);
+    font-size: 1.05rem;
+}
+
+.course-page .course-detail p,
+.course-page .course-detail ul {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.58;
+}
+
+.course-page .assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.course-page .assessment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 14px;
+    border-top: 2px solid rgba(158, 126, 56, 0.42);
+    background: rgba(158, 126, 56, 0.055);
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+.course-page .assessment-item strong {
+    color: var(--accent-deep);
+    font-size: 1.08rem;
+    white-space: nowrap;
+}
+
+.course-page .course-assessment-notes {
+    margin-top: 18px;
+}
+
+.course-page .course-resource-list {
+    padding-left: 18px;
+}
+
+.course-page .course-resource-list li + li {
+    margin-top: 7px;
+}
+
+.course-page .course-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 .cv-subsection + .cv-subsection {
     margin-top: 28px;
 }
@@ -2188,6 +2345,25 @@ body.modal-open {
         gap: 16px;
     }
 
+    .course-page .course-topic-list,
+    .course-page .course-outcomes,
+    .course-page .course-detail-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .course-page .page-header h1 {
+        font-size: 1.72rem;
+        line-height: 1.14;
+    }
+
+    .course-page .assessment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-page .course-detail {
+        padding: 15px;
+    }
+
     .cv-titleline,
     .cv-inline {
         font-size: 0.97rem;
@@ -2801,6 +2977,14 @@ body.modal-open {
     .site-nav a {
         padding: 3px 0 5px;
         font-size: 0.9rem;
+    }
+
+    .course-page .assessment-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .course-page .page-header h1 {
+        font-size: 1.55rem;
     }
 
     .home-page .hero-card {
