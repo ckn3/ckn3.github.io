@@ -179,6 +179,10 @@ window.publicationsData = {
             "href": "https://icml.cc/virtual/2026/poster/61072"
           },
           {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2607.20469"
+          },
+          {
             "label": "Project Page",
             "href": "https://zishan-shao.github.io/decodeshare/"
           }
@@ -209,37 +213,6 @@ window.publicationsData = {
           {
             "label": "Code",
             "href": "https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval"
-          }
-        ]
-      },
-      {
-        "id": "paper-cardiac-phase",
-        "kind": "conference",
-        "highlight": "collaborative",
-        "image": {
-          "src": "figures/publications/yang2025miccai.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Yang et al., 2025"
-        },
-        "title": "Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos",
-        "venue": "[MICCAI'25, Oral]",
-        "authorsHtml": "Yingyu Yang, Qianye Yang, <span class=\"main-author\">Kangning Cui</span>, Can Peng, Elena D'Alberti, Netzahualcoyotl Hernandez-Cruz, Olga Patey, Aris Papageorghiou, and Alison Noble",
-        "badges": [
-          {
-            "label": "Top 2.1%"
-          },
-          {
-            "label": "Paper",
-            "href": "https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31"
-          },
-          {
-            "label": "Preprint",
-            "href": "https://arxiv.org/abs/2507.05154"
-          },
-          {
-            "label": "Code",
-            "href": "https://github.com/YingyuYyy/CardiacPhase"
           }
         ]
       },
