@@ -148,7 +148,7 @@ window.publicationsData = {
           "alt": "DPQ uncertainty-preservation results for quantized language models"
         },
         "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
-        "venue": "[EMNLP Findings'26]",
+        "venue": "[EMNLP'26, Findings]",
         "authorsHtml": "Zhen Yang<sup>†</sup>, Sizai Hou<sup>†</sup>, Kaiwen Zheng, Yaofang Liu, Liang He, Yixuan Chen<sup>*</sup>, and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
         "badges": [
           {
