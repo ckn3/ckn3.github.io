@@ -147,7 +147,7 @@
         },
         "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
         "venue": "[EMNLP Findings'26]",
-        "authorsHtml": "Zhen Yang and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
+        "authorsHtml": "Zhen Yang<sup>1,†</sup>, Sizai Hou<sup>2,†</sup>, Kaiwen Zheng<sup>3</sup>, Yaofang Liu<sup>4</sup>, Liang He<sup>5</sup>, Yixuan Chen<sup>6,*</sup>, and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
         "badges": [
           {
             "label": "Code",
