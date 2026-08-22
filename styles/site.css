@@ -982,6 +982,20 @@ h4 {
     color: var(--muted);
 }
 
+.home-page .news-content a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(158, 126, 56, 0.38);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.home-page .news-content a:hover {
+    color: var(--accent-deep);
+    text-decoration-color: currentColor;
+}
+
 .services-page .page-header h1 {
     white-space: nowrap;
     word-break: keep-all;
@@ -1168,6 +1182,41 @@ h4 {
 .team-page .recruitment-note .recruitment-apply {
     margin-top: 10px;
     color: var(--ink);
+}
+
+.team-page .recruitment-details {
+    margin-top: 10px;
+    border-top: 1px solid rgba(158, 126, 56, 0.2);
+}
+
+.team-page .recruitment-details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0 2px;
+    color: var(--ink);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    list-style: none;
+}
+
+.team-page .recruitment-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.team-page .recruitment-details summary::after {
+    content: "+";
+    flex: 0 0 auto;
+    color: var(--accent-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.team-page .recruitment-details[open] summary::after {
+    content: "−";
 }
 
 .team-page .recruitment-requirements {
@@ -2188,6 +2237,57 @@ body.modal-open {
     overflow: hidden;
 }
 
+.error-page .site-shell {
+    min-height: calc(100vh - 178px);
+    display: grid;
+    align-items: center;
+}
+
+.error-page .content-top {
+    padding: 0 20px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.error-page .page-header {
+    padding: 48px 30px;
+    text-align: center;
+}
+
+.error-page .error-code {
+    margin: 0 0 8px;
+    color: var(--accent-deep);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.error-page .error-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 22px;
+}
+
+.error-page .error-links a {
+    padding: 8px 13px;
+    border: 1px solid rgba(158, 126, 56, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.error-page .error-links a:hover {
+    border-color: rgba(158, 126, 56, 0.34);
+    color: var(--accent-deep);
+    text-decoration: none;
+}
+
 .site-footer {
     padding: 0 18px 28px;
 }
@@ -3087,13 +3187,14 @@ body.modal-open {
     }
 
     .research-page .media-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: 104px minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
     }
 
     .research-page .media-thumb {
         min-height: 0;
-        aspect-ratio: 16 / 8.5;
+        aspect-ratio: 4 / 3;
     }
 
     .research-page .media-meta {
@@ -3103,7 +3204,19 @@ body.modal-open {
     }
 
     .research-page .media-note {
-        font-size: 0.8rem;
+        display: none;
+    }
+
+    .error-page .site-shell {
+        min-height: calc(100vh - 210px);
+    }
+
+    .error-page .content-top {
+        padding: 0 12px;
+    }
+
+    .error-page .page-header {
+        padding: 36px 18px;
     }
 
     .research-page .direction-card {

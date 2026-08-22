@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.requestAnimationFrame(function () {
-        currentLink.scrollIntoView({
-            behavior: 'auto',
-            block: 'nearest',
-            inline: 'center'
-        });
+        var centeredLeft = currentLink.offsetLeft - (navigation.clientWidth - currentLink.offsetWidth) / 2;
+        navigation.scrollLeft = Math.max(0, centeredLeft);
     });
 });
