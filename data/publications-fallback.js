@@ -152,6 +152,10 @@ window.publicationsData = {
         "authorsHtml": "Zhen Yang<sup>†</sup>, Sizai Hou<sup>†</sup>, Kaiwen Zheng, Yaofang Liu, Liang He, Yixuan Chen<sup>*</sup>, and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
         "badges": [
           {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.21019"
+          },
+          {
             "label": "Code",
             "href": "https://github.com/xi-xiaoran/DPQ"
           }
