@@ -203,8 +203,7 @@ h4 {
     box-shadow: none;
 }
 
-.home-page .content-top,
-.services-page .content-top {
+.content.content-top {
     padding: 0 20px;
     border: 0;
     border-radius: 0;
@@ -260,8 +259,10 @@ h4 {
 
 .team-section {
     margin-bottom: 22px;
-    padding: 22px;
-    border-radius: 18px;
+}
+
+.team-section:last-child {
+    margin-bottom: 0;
 }
 
 .team-section > h2 {
@@ -277,7 +278,7 @@ h4 {
     line-height: 1.6;
 }
 
-:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card, .info-card, .summary-card, .team-section) {
+:is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card, .info-card, .summary-card) {
     position: relative;
     background: var(--surface);
     border: 1px solid var(--line);
@@ -395,10 +396,6 @@ h4 {
 
 .course-page .content-top {
     padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
 }
 
 .course-page .course-copy {
@@ -1667,7 +1664,6 @@ h4 {
 .research-page .media-card {
     display: grid;
     gap: 10px;
-    padding: 10px;
 }
 
 .research-page .media-item {
@@ -1803,7 +1799,7 @@ h4 {
 }
 
 .research-page .direction-card p {
-    margin: 0 0 8px;
+    margin: 6px 0 0;
     color: var(--muted);
     font-size: 0.92rem;
     line-height: 1.5;
@@ -1984,7 +1980,8 @@ h4 {
 }
 
 .research-page .publication-text .badges,
-.research-page .conference-text .badges {
+.research-page .conference-text .badges,
+.research-page .modal-links {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
@@ -2205,6 +2202,14 @@ h4 {
     overflow-y: visible;
 }
 
+.research-page .modal-links {
+    margin-top: 18px;
+}
+
+.research-page .modal-links[hidden] {
+    display: none;
+}
+
 .research-page .close {
     position: absolute;
     top: 18px;
@@ -2241,14 +2246,6 @@ body.modal-open {
     min-height: calc(100vh - 178px);
     display: grid;
     align-items: center;
-}
-
-.error-page .content-top {
-    padding: 0 20px;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
 }
 
 .error-page .page-header {
@@ -2368,9 +2365,12 @@ body.modal-open {
         padding: 0 12px;
     }
 
-    .home-page .content-top,
-    .services-page .content-top {
+    .content.content-top {
         padding: 0 12px;
+    }
+
+    .course-page .content-top {
+        padding: 0;
     }
 
     .page-header {
@@ -2434,12 +2434,6 @@ body.modal-open {
     .cv-links .sep,
     .cv-inline .sep {
         margin: 0 6px;
-    }
-
-    .team-section {
-        margin-bottom: 22px;
-        padding: 16px;
-        border-radius: 14px;
     }
 
     .team-section > h2 {
@@ -2575,9 +2569,7 @@ body.modal-open {
     }
 
     .home-page .hero-links {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
+        justify-content: center;
     }
 
     .home-page .hero-links a {
@@ -2856,7 +2848,6 @@ body.modal-open {
 
     .research-page .media-card {
         gap: 8px;
-        padding: 8px;
     }
 
     .research-page .media-item {
@@ -3057,10 +3048,6 @@ body.modal-open {
         max-width: 17rem;
     }
 
-    .home-page .hero-links {
-        grid-template-columns: 1fr;
-    }
-
     .home-page .section-card {
         padding: 18px;
     }
@@ -3211,10 +3198,6 @@ body.modal-open {
         min-height: calc(100vh - 210px);
     }
 
-    .error-page .content-top {
-        padding: 0 12px;
-    }
-
     .error-page .page-header {
         padding: 36px 18px;
     }
@@ -3269,5 +3252,10 @@ body.modal-open {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .research-page .modal,
+    .research-page .modal * {
+        transition: none !important;
     }
 }

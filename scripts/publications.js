@@ -13,11 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var modalVenue = document.getElementById('modal-venue');
     var modalAuthors = document.getElementById('modal-authors');
     var modalAbstract = document.getElementById('modal-abstract');
+    var modalLinks = document.getElementById('modal-links');
     var closeBtn = modal && modal.querySelector('.close');
     var lastFocusedElement = null;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract || !closeBtn) {
+    if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract || !modalLinks || !closeBtn) {
         return;
     }
 
@@ -263,6 +264,11 @@ document.addEventListener('DOMContentLoaded', function () {
         modalVenue.textContent = venue;
         modalAuthors.innerHTML = authorsHtml;
         modalAbstract.textContent = abstracts[title] || 'Abstract will be added soon.';
+        modalLinks.textContent = '';
+        entry.querySelectorAll('.badges a').forEach(function (link) {
+            modalLinks.appendChild(link.cloneNode(true));
+        });
+        modalLinks.hidden = !modalLinks.childElementCount;
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
@@ -316,8 +322,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.key === 'Escape' && modal.classList.contains('is-open')) {
             closeModal();
         } else if (event.key === 'Tab' && modal.classList.contains('is-open')) {
-            event.preventDefault();
-            closeBtn.focus();
+            var focusable = modal.querySelectorAll('button, a[href]');
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+            var active = document.activeElement;
+
+            if (!modal.contains(active) || (event.shiftKey && active === first)) {
+                event.preventDefault();
+                (event.shiftKey ? last : first).focus();
+            } else if (!event.shiftKey && active === last) {
+                event.preventDefault();
+                first.focus();
+            }
         }
     });
 
