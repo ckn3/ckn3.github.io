@@ -211,6 +211,28 @@ h4 {
     box-shadow: none;
 }
 
+.content.page-panel {
+    position: relative;
+    margin-right: 20px;
+    margin-left: 20px !important;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--card-shadow);
+}
+
+.content.page-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(158, 126, 56, 0.32), rgba(158, 126, 56, 0.12), rgba(158, 126, 56, 0));
+    pointer-events: none;
+}
+
 .page-header {
     padding: 28px 30px;
     border-radius: 20px;
@@ -263,12 +285,6 @@ h4 {
 
 .team-section:last-child {
     margin-bottom: 0;
-}
-
-.team-section > h2 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: var(--ink);
 }
 
 .section-intro {
@@ -392,10 +408,6 @@ h4 {
 
 .course-page .course-summary {
     margin-top: 0;
-}
-
-.course-page .content-top {
-    padding: 0;
 }
 
 .course-page .course-copy {
@@ -1002,29 +1014,6 @@ h4 {
     max-width: none;
 }
 
-.services-page .service-panel {
-    position: relative;
-    overflow: hidden;
-    margin-right: 20px;
-    margin-left: 20px !important;
-    padding: 22px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--surface);
-    box-shadow: var(--card-shadow);
-}
-
-.services-page .service-panel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 18px;
-    left: 18px;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(158, 126, 56, 0.32), rgba(158, 126, 56, 0.12), rgba(158, 126, 56, 0));
-    pointer-events: none;
-}
-
 .services-page .cv-group-grid {
     grid-template-columns: 1fr;
 }
@@ -1531,7 +1520,7 @@ h4 {
 
 .album-heading h2 {
     margin: 0;
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     scroll-margin-top: 110px;
 }
 
@@ -1820,7 +1809,7 @@ h4 {
 
 @media (max-width: 768px) {
     .album-section {
-        margin: 28px 0 40px;
+        margin: 28px 12px 40px;
     }
 
     .album-heading {
@@ -1829,7 +1818,7 @@ h4 {
     }
 
     .album-heading h2 {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         scroll-margin-top: 135px;
     }
 
@@ -2749,8 +2738,14 @@ body.modal-open {
         padding: 0 12px;
     }
 
-    .course-page .content-top {
-        padding: 0;
+    .content.page-panel {
+        margin-right: 12px;
+        margin-left: 12px !important;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: var(--card-shadow);
     }
 
     .page-header {
@@ -3083,13 +3078,6 @@ body.modal-open {
     .services-page h4 {
         margin: 16px 0 8px;
         font-size: 0.88rem;
-    }
-
-    .services-page .service-panel {
-        margin-right: 12px;
-        margin-left: 12px !important;
-        padding: 18px;
-        border-radius: 16px;
     }
 
     .services-page .service-panel .cv-group {
