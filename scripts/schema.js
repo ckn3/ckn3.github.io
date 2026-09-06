@@ -67,13 +67,13 @@
                         '@type': 'CollegeOrUniversity',
                         name: 'City University of Hong Kong (Dongguan)',
                         url: 'https://www.cityu-dg.edu.cn/'
-                    },
-                    {
-                        '@type': 'CollegeOrUniversity',
-                        name: 'Wake Forest University',
-                        url: 'https://www.wfu.edu/'
                     }
                 ],
+                memberOf: {
+                    '@type': 'Organization',
+                    name: 'Andrew Sabin Family Center for Environment and Sustainability',
+                    url: 'https://sabincenter.wfu.edu/'
+                },
                 alumniOf: [
                     {
                         '@type': 'CollegeOrUniversity',

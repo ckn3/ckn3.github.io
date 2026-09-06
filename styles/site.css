@@ -67,7 +67,7 @@ body {
 a:link,
 a:visited {
     text-decoration: none;
-    color: var(--accent);
+    color: var(--accent-deep);
     transition: color 0.22s var(--ease-smooth);
 }
 
@@ -155,7 +155,7 @@ h4 {
 
 .site-nav a:hover {
     text-decoration: none;
-    color: var(--accent) !important;
+    color: var(--accent-deep) !important;
     border-color: rgba(158, 126, 56, 0.3);
 }
 
@@ -264,6 +264,18 @@ h4 {
 
 .page-note {
     font-size: 0.98rem !important;
+}
+
+.publication-note {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px 0;
+}
+
+.publication-note .sep {
+    margin: 0 9px;
+    color: rgba(91, 102, 114, 0.58);
 }
 
 .section-header {
@@ -553,7 +565,7 @@ h4 {
 }
 
 .cv-talk-meta a {
-    color: var(--accent);
+    color: var(--accent-deep);
     text-decoration: none;
 }
 
@@ -613,7 +625,7 @@ h4 {
 }
 
 .record-link {
-    color: var(--accent);
+    color: var(--accent-deep);
 }
 
 .record-link:hover {
@@ -1170,6 +1182,10 @@ h4 {
     color: var(--ink);
 }
 
+.team-page .recruitment-summary {
+    max-width: 46rem;
+}
+
 .team-page .recruitment-details {
     margin-top: 10px;
     border-top: 1px solid rgba(158, 126, 56, 0.2);
@@ -1203,6 +1219,14 @@ h4 {
 
 .team-page .recruitment-details[open] summary::after {
     content: "−";
+}
+
+.team-page .recruitment-details-body {
+    padding-top: 8px;
+}
+
+.team-page .recruitment-details-body > p + p {
+    margin-top: 8px;
 }
 
 .team-page .recruitment-requirements {
@@ -1533,13 +1557,14 @@ h4 {
 }
 
 .album-grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 32px 24px;
 }
 
 .album-photo {
-    grid-column: span 4;
+    flex: var(--photo-grow, 1.333) 1 var(--photo-basis, 346px);
     min-width: 0;
     margin: 0;
 }
@@ -1548,13 +1573,29 @@ h4 {
     display: none;
 }
 
-.album-photo--lead {
-    grid-column: span 8;
+.album-photo--ratio-4x3 {
+    --photo-grow: 1.333;
+    --photo-basis: 346px;
 }
 
-.album-photo--wide,
-.album-grid:has(> [hidden]) > .album-photo:not(.album-photo--lead):not(.album-photo--portrait) {
-    grid-column: span 6;
+.album-photo--ratio-3x4 {
+    --photo-grow: 0.75;
+    --photo-basis: 195px;
+}
+
+.album-photo--ratio-10x9 {
+    --photo-grow: 1.111;
+    --photo-basis: 289px;
+}
+
+.album-photo--ratio-7x6 {
+    --photo-grow: 1.159;
+    --photo-basis: 303px;
+}
+
+.album-photo--ratio-3x2 {
+    --photo-grow: 1.5;
+    --photo-basis: 390px;
 }
 
 .album-image {
@@ -1572,7 +1613,7 @@ h4 {
 }
 
 .album-image::after {
-    content: "↗";
+    content: "+";
     position: absolute;
     right: 16px;
     bottom: 16px;
@@ -1648,15 +1689,20 @@ h4 {
 }
 
 .album-grid--clement {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 24px;
 }
 
 .album-grid--clement .album-photo {
-    grid-column: auto;
+    --photo-basis: 327px;
 }
 
-.album-grid--clement .album-image {
-    aspect-ratio: auto;
+.album-grid--clement .album-photo--ratio-3x4 {
+    --photo-basis: 184px;
+}
+
+.album-grid--clement .album-photo--ratio-10x11 {
+    --photo-grow: 0.912;
+    --photo-basis: 223px;
 }
 
 .album-grid--clement .album-caption {
@@ -1827,27 +1873,47 @@ h4 {
     }
 
     .album-grid--clement {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 16px;
     }
 }
 
 @media (max-width: 600px) {
     .album-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px 12px;
     }
 
-    .album-grid .album-photo,
-    .album-grid:has(> [hidden]) > .album-photo:not(.album-photo--lead):not(.album-photo--portrait) {
-        grid-column: auto;
+    .album-grid .album-photo {
+        min-width: 0;
     }
 
-    .album-grid .album-photo--lead {
-        grid-column: 1 / -1;
+    .album-grid .album-photo--ratio-4x3,
+    .album-grid--clement .album-photo--ratio-4x3 {
+        --photo-basis: 147px;
     }
 
-    .album-grid:not(.album-grid--clement):has(> [hidden]) > .album-photo:last-child {
-        grid-column: 1 / -1;
+    .album-grid .album-photo--ratio-3x4,
+    .album-grid--clement .album-photo--ratio-3x4 {
+        --photo-basis: 83px;
+    }
+
+    .album-grid .album-photo--ratio-10x9,
+    .album-grid--clement .album-photo--ratio-10x9 {
+        --photo-basis: 122px;
+    }
+
+    .album-grid .album-photo--ratio-7x6,
+    .album-grid--clement .album-photo--ratio-7x6 {
+        --photo-basis: 127px;
+    }
+
+    .album-grid .album-photo--ratio-3x2,
+    .album-grid--clement .album-photo--ratio-3x2 {
+        --photo-basis: 165px;
+    }
+
+    .album-grid .album-photo--ratio-10x11,
+    .album-grid--clement .album-photo--ratio-10x11 {
+        --photo-basis: 100px;
     }
 
     .album-image {
@@ -2013,7 +2079,7 @@ h4 {
 
 .teaching-page .teaching-entry.cityu .course-links a:hover,
 .teaching-page .teaching-entry.wfu .course-links a:hover {
-    color: var(--accent);
+    color: var(--ink);
 }
 
 .teaching-page .link-divider {
@@ -2241,7 +2307,7 @@ h4 {
 }
 
 .research-page .direction-item .paper-inline {
-    color: var(--accent);
+    color: var(--accent-deep);
     font-size: 0.84rem;
     font-weight: 600;
 }
@@ -3215,7 +3281,16 @@ body.modal-open {
     }
 
     .research-page .media-card {
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(260px, 88%);
         gap: 8px;
+        overflow-x: auto;
+        padding: 1px 1px 7px;
+        scroll-padding-inline: 1px;
+        scroll-snap-type: inline mandatory;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
     }
 
     .research-page .media-item {
@@ -3223,6 +3298,7 @@ body.modal-open {
         align-items: stretch;
         padding: 8px;
         gap: 10px;
+        scroll-snap-align: start;
     }
 
     .research-page .media-thumb {

@@ -23,20 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    document.querySelectorAll('[data-hide-on-error]').forEach(function (image) {
-        const card = image.closest('.album-photo, .gallery-card');
-        function hideFailedPhoto() {
-            if (card) card.hidden = true;
-        }
-        image.addEventListener('error', hideFailedPhoto);
-        image.addEventListener('load', function () {
-            if (card) card.hidden = false;
-        });
-        // Do not leave an empty photo frame while a third-party server is unresponsive.
-        if (!image.complete || image.naturalWidth === 0) hideFailedPhoto();
-        image.loading = 'eager';
-    });
-
     function triggerFor(image) {
         return image.closest('[data-gallery-open]') || image;
     }
