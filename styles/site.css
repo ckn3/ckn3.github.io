@@ -714,16 +714,6 @@ h4 {
     letter-spacing: 0.01em;
 }
 
-.home-page .hero-motto {
-    margin: 10px 0 0 0;
-    max-width: 42rem;
-    color: #747b82;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 0.82rem;
-    font-style: italic;
-    line-height: 1.4;
-}
-
 .home-page .hero-recruitment {
     margin: 0 0 14px;
     padding: 10px 12px;
@@ -2984,14 +2974,6 @@ body.modal-open {
         max-width: 30rem;
         margin-left: auto;
         margin-right: auto;
-        text-wrap: balance;
-    }
-
-    .home-page .hero-motto {
-        margin: 10px auto 0 auto;
-        max-width: 24rem;
-        font-size: 0.78rem;
-        line-height: 1.4;
         text-wrap: balance;
     }
 
