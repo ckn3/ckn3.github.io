@@ -1118,6 +1118,12 @@ h4 {
     transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s var(--ease-smooth);
 }
 
+.services-page .service-photo-trigger--4x3 {
+    flex-basis: 69px;
+    width: 69px;
+    aspect-ratio: 4 / 3;
+}
+
 .services-page .service-photo-trigger::after {
     content: "+";
     position: absolute;
@@ -3247,6 +3253,11 @@ body.modal-open {
     .services-page .service-photo-trigger {
         flex-basis: 66px;
         width: 66px;
+    }
+
+    .services-page .service-photo-trigger--4x3 {
+        flex-basis: 59px;
+        width: 59px;
     }
 
     .team-page .people-grid {
