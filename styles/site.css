@@ -1096,32 +1096,6 @@ h4 {
     border-top: 1px solid rgba(31, 41, 51, 0.08);
 }
 
-.services-page .service-event-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    max-width: 860px;
-}
-
-.services-page .service-event-header > div {
-    min-width: 0;
-}
-
-.services-page .service-event-header .cv-titleline {
-    font-weight: 600;
-}
-
-.services-page .service-event-date {
-    flex: 0 0 auto;
-    padding-top: 2px;
-    color: var(--accent-deep);
-    font-size: 0.85rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: 0.035em;
-}
-
 .services-page .service-photo-grid {
     display: flex;
     flex-wrap: wrap;
@@ -3263,10 +3237,6 @@ body.modal-open {
     .services-page .cv-group.single-line .cv-inline {
         font-size: 0.93rem;
         line-height: 1.58;
-    }
-
-    .services-page .service-event-header {
-        gap: 14px;
     }
 
     .services-page .service-photo-grid {
