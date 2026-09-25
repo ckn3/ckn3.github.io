@@ -2,6 +2,7 @@
 // Run npm run sync:publications whenever the publication data changes.
 window.publicationsData = {
   "abstracts": {
+    "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons": "Electrocardiogram (ECG) foundation models pretrained on typical diagnostic 10-second ECG segments, have demonstrated strong transferability across a range of clinical applications. However, many real-world applications produce recordings that are typically longer, and are varied in duration during inference time. These 10-second models have no built-in way to combine information across time. Extending them to longer horizons introduces two challenges: structural incompatibilities arising from input-length disparities, and semantic challenges that limit meaningful temporal aggregation. We propose a parameter-efficient framework that extends pretrained ECG foundation models to longer and variable-length ECGs without retraining the backbone. Guided by a frozen pretrained 10-second model, we introduce a lightweight plug-in module that extends the model in two complementary ways: (i) structurally compatible long-sequence processing and (ii) semantically informed temporal modeling. Experiments on multiple long-horizon ECG tasks, datasets, and foundation model backbones demonstrate that our method enables robust long-horizon extension from pretrained snapshot models, consistently outperforming sliding-window and pooling-based baselines with strong parameter efficiency.",
     "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models": "Post-training quantization can preserve model utility while distorting uncertainty and answerability behavior. This work introduces Doubt-Preserving Quantization (DPQ), a target-aware calibration-data selection strategy that chooses calibration strings before GPTQ- or AWQ-style quantization to better preserve the uncertainty behavior of the full-precision model. DPQ changes only the calibration data, leaves the quantizer kernel unchanged, and adds no inference-time overhead. Experiments compare distributional preservation across quantized language models and calibration strategies.",
     "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images": "Compared with natural images, remote sensing images (RSIs) have the unique characteristic, i.e., larger intraclass variance, which makes semantic segmentation for remote sensing images more challenging. Moreover, existing semantic segmentation models for remote sensing images usually employ a vanilla softmax classifier, which has three drawbacks: (1) non-direct supervision for the pixel representations during training; (2) inadequate modeling ability of parametric softmax classifiers under large intraclass variance; and (3) opaque process of classification decision. In this paper, we propose a novel classifier (called CenterSeg) customized for RSI semantic segmentation, which solves the abovementioned problems with multiple prototypes, direct supervision under Grassmann manifold, and interpretability strategy. Specifically, for each class, our CenterSeg obtains local class centers by aggregating corresponding pixel features based on ground-truth masks, and generates multiple prototypes through hard attention assignment and momentum updating. In addition, we introduce the Grassmann manifold and constrain the joint embedding space of pixel features and prototypes based on two additional regularization terms. Especially, during the inference, CenterSeg can further provide interpretability to the model by restricting the prototype as a sample of the training set. Experimental results on three remote sensing segmentation datasets validate the effectiveness of the model. Besides the superior performance, CenterSeg has the advantages of simplicity, lightweight, compatibility, and interpretability.",
     "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions": "Large language models (LLMs) handle many tasks with one set of parameters, but under KV-cached inference it is unclear what task-general structure, if any, is used at decode time rather than during prefill. We propose DECODESHARE, a protocol that identifies a low-dimensional subspace that is consistently shared across tasks in decode-time hidden states, and then tests its causal role by removing that subspace only during decoding. In our experiments, disturbing the discovered shared subspace degrades decision performance far more than disturbing either a prefill-derived subspace or a random subspace under the same intervention budget. We further find that this decode-shared subspace overlaps common steering vectors, enabling a simple offline adjustment: projecting steering vectors away from the shared subspace can reduce template sensitivity while preserving non-random task utility, with task-dependent trade-offs. Despite being compact, the shared subspace can serve as a high-leverage causal channel at decode time.",
@@ -137,6 +138,26 @@ window.publicationsData = {
       }
     ],
     "conferences": [
+      {
+        "id": "paper-ecg-horizons-neurips",
+        "kind": "conference",
+        "highlight": null,
+        "image": {
+          "src": "figures/publications/tang2026neurips.webp",
+          "width": 966,
+          "height": 583,
+          "alt": "Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module"
+        },
+        "title": "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons",
+        "venue": "[NeurIPS'26, Poster]",
+        "authorsHtml": "Wei Tang, Jinpei Han, <span class=\"main-author\">Kangning Cui</span>, Mattia Carletti, Fredrik K. Gustafsson, Shreyank N Gowda, Patitapaban Palo, Anshul Thakur, Lei Clifton, Jean-Michel Morel, Raymond H. Chan, David A. Clifton, and Xiao Gu",
+        "badges": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2605.16975"
+          }
+        ]
+      },
       {
         "id": "paper-dpq-emnlp",
         "kind": "conference",
