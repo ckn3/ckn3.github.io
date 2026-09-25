@@ -2,6 +2,7 @@
 // Run npm run sync:publications whenever the publication data changes.
 window.publicationsData = {
   "abstracts": {
+    "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression": "SVD-based low-rank compression has become a fast-growing direction for reducing the memory and computational cost of large language models (LLMs). However, meaningful comparison across existing studies remains difficult as prior evaluations use varied benchmarks, inconsistent ratios, and diverse setups, often failing to isolate low-rank effects from auxiliary techniques. As a result, it remains unclear whether reported gains reflect method-level improvements or differences in evaluation protocol. This lack of comparability highlights the need for a unified, reproducible evaluation platform. To address this problem, we present LowRankArena, a standardized evaluation platform for SVD-based LLM compression. LowRankArena unifies task versions, uniform-precision compression budgets, comparison regimes, and inference measurements, and provides a reproducible pipeline with over 3 TiB released compressed checkpoints. Using LowRankArena, our aligned audit of five representative SVD methods reveals that prior findings are highly conditional under standardized protocols: clear leaders and performance tiers shift across backbones and keep ratios, multiple-choice accuracy can hide large perplexity degradation, and nominal low-rank savings yield workload-dependent and often limited end-to-end speedups. Our code is available at: https://github.com/Zishan-Shao/lowrankarena.git.",
     "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons": "Electrocardiogram (ECG) foundation models pretrained on typical diagnostic 10-second ECG segments, have demonstrated strong transferability across a range of clinical applications. However, many real-world applications produce recordings that are typically longer, and are varied in duration during inference time. These 10-second models have no built-in way to combine information across time. Extending them to longer horizons introduces two challenges: structural incompatibilities arising from input-length disparities, and semantic challenges that limit meaningful temporal aggregation. We propose a parameter-efficient framework that extends pretrained ECG foundation models to longer and variable-length ECGs without retraining the backbone. Guided by a frozen pretrained 10-second model, we introduce a lightweight plug-in module that extends the model in two complementary ways: (i) structurally compatible long-sequence processing and (ii) semantically informed temporal modeling. Experiments on multiple long-horizon ECG tasks, datasets, and foundation model backbones demonstrate that our method enables robust long-horizon extension from pretrained snapshot models, consistently outperforming sliding-window and pooling-based baselines with strong parameter efficiency.",
     "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models": "Post-training quantization can preserve model utility while distorting uncertainty and answerability behavior. This work introduces Doubt-Preserving Quantization (DPQ), a target-aware calibration-data selection strategy that chooses calibration strings before GPTQ- or AWQ-style quantization to better preserve the uncertainty behavior of the full-precision model. DPQ changes only the calibration data, leaves the quantizer kernel unchanged, and adds no inference-time overhead. Experiments compare distributional preservation across quantized language models and calibration strategies.",
     "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images": "Compared with natural images, remote sensing images (RSIs) have the unique characteristic, i.e., larger intraclass variance, which makes semantic segmentation for remote sensing images more challenging. Moreover, existing semantic segmentation models for remote sensing images usually employ a vanilla softmax classifier, which has three drawbacks: (1) non-direct supervision for the pixel representations during training; (2) inadequate modeling ability of parametric softmax classifiers under large intraclass variance; and (3) opaque process of classification decision. In this paper, we propose a novel classifier (called CenterSeg) customized for RSI semantic segmentation, which solves the abovementioned problems with multiple prototypes, direct supervision under Grassmann manifold, and interpretability strategy. Specifically, for each class, our CenterSeg obtains local class centers by aggregating corresponding pixel features based on ground-truth masks, and generates multiple prototypes through hard attention assignment and momentum updating. In addition, we introduce the Grassmann manifold and constrain the joint embedding space of pixel features and prototypes based on two additional regularization terms. Especially, during the inference, CenterSeg can further provide interpretability to the model by restricting the prototype as a sample of the training set. Experimental results on three remote sensing segmentation datasets validate the effectiveness of the model. Besides the superior performance, CenterSeg has the advantages of simplicity, lightweight, compatibility, and interpretability.",
@@ -138,6 +139,34 @@ window.publicationsData = {
       }
     ],
     "conferences": [
+      {
+        "id": "paper-lowrankarena-neurips",
+        "kind": "conference",
+        "highlight": null,
+        "image": {
+          "src": "figures/publications/shao2026lowrankarena.webp",
+          "width": 1127,
+          "height": 600,
+          "alt": "LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency"
+        },
+        "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+        "venue": "[NeurIPS'26, Evaluations and Datasets Track]",
+        "authorsHtml": "Zishan Shao, Lixun Zhang, <span class=\"main-author\">Kangning Cui</span>, Wenhao Wu, Jinhee Kim, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Li",
+        "badges": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.26389"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zishan-Shao/lowrankarena"
+          },
+          {
+            "label": "Project Page",
+            "href": "https://zishan-shao.github.io/lowrankarena/"
+          }
+        ]
+      },
       {
         "id": "paper-ecg-horizons-neurips",
         "kind": "conference",
