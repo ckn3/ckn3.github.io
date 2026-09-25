@@ -336,30 +336,6 @@ window.publicationsData = {
             "href": "https://github.com/Zippppo/PRISM"
           }
         ]
-      },
-      {
-        "id": "paper-lvh",
-        "kind": "conference",
-        "highlight": null,
-        "image": {
-          "src": "figures/publications/tang2025isbi.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Tang et al., 2025"
-        },
-        "title": "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis",
-        "venue": "[ISBI'25, Oral]",
-        "authorsHtml": "Wei Tang<sup>†</sup>, <span class=\"main-author\">Kangning Cui</span><sup>†</sup>, Raymond H. Chan, and Jean-Michel Morel<sup>*</sup>",
-        "badges": [
-          {
-            "label": "Paper",
-            "href": "https://ieeexplore.ieee.org/document/10980912"
-          },
-          {
-            "label": "Preprint",
-            "href": "https://arxiv.org/abs/2411.08819v1"
-          }
-        ]
       }
     ]
   }
