@@ -151,7 +151,7 @@ window.publicationsData = {
         },
         "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
         "venue": "[NeurIPS'26, ED Track, Poster]",
-        "authorsHtml": "Zishan Shao, Lixun Zhang, <span class=\"main-author\">Kangning Cui</span>, Wenhao Wu, Jinhee Kim, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Li",
+        "authorsHtml": "Zishan Shao<sup>†</sup>, Lixun Zhang<sup>†</sup>, <span class=\"main-author\">Kangning Cui</span><sup>†</sup>, Wenhao Wu<sup>†</sup>, Jinhee Kim, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Li",
         "badges": [
           {
             "label": "Preprint",
