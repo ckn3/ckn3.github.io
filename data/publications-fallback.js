@@ -150,7 +150,7 @@ window.publicationsData = {
           "alt": "LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency"
         },
         "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
-        "venue": "[NeurIPS'26, Evaluations and Datasets Track]",
+        "venue": "[NeurIPS'26, ED Track]",
         "authorsHtml": "Zishan Shao, Lixun Zhang, <span class=\"main-author\">Kangning Cui</span>, Wenhao Wu, Jinhee Kim, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Li",
         "badges": [
           {
