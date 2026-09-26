@@ -106,34 +106,6 @@
             "href": "https://github.com/ckn3/S2DL"
           }
         ]
-      },
-      {
-        "id": "paper-dvic",
-        "kind": "journal",
-        "highlight": null,
-        "image": {
-          "src": "figures/publications/polk2023unsupervised.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Polk et al., 2023"
-        },
-        "title": "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images",
-        "venue": "[RS'23]",
-        "authorsHtml": "Sam L. Polk, <span class=\"main-author\">Kangning Cui</span>, Aland H. Y. Chan, David A. Coomes, Robert J. Plemmons, and James M. Murphy<sup>*</sup>",
-        "badges": [
-          {
-            "label": "Paper",
-            "href": "https://www.mdpi.com/2072-4292/15/4/1053"
-          },
-          {
-            "label": "Preprint",
-            "href": "https://arxiv.org/abs/2203.09992"
-          },
-          {
-            "label": "Code",
-            "href": "https://github.com/sampolk/D-VIC"
-          }
-        ]
       }
     ],
     "conferences": [
