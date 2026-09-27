@@ -1690,6 +1690,11 @@ h4 {
     --photo-basis: 390px;
 }
 
+.album-photo--ratio-16x9 {
+    --photo-grow: 1.778;
+    --photo-basis: 462px;
+}
+
 .album-image {
     position: relative;
     display: block;
@@ -1801,8 +1806,8 @@ h4 {
     text-align: center;
 }
 
-.album-grid--travel .album-photo {
-    max-width: 560px;
+.album-grid--personal .album-photo {
+    max-width: calc(var(--photo-grow, 1.333) * 420px);
 }
 
 .album-viewer {
@@ -2010,6 +2015,11 @@ h4 {
     .album-grid .album-photo--ratio-10x11,
     .album-grid--clement .album-photo--ratio-10x11 {
         --photo-basis: 100px;
+    }
+
+    .album-grid--personal .album-photo {
+        flex: 1 1 140px;
+        max-width: 100%;
     }
 
     .album-image {
