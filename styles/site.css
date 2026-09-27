@@ -1706,6 +1706,22 @@ h4 {
     gap: 12px;
 }
 
+.album-photo--triptych {
+    --photo-grow: 1.5;
+    --photo-basis: 450px;
+}
+
+.album-image-triptych {
+    display: grid;
+    grid-template-columns: minmax(0, 9fr) minmax(0, 8fr);
+    align-items: center;
+    gap: 12px;
+}
+
+.album-image-triptych > .album-image:first-child {
+    grid-row: span 2;
+}
+
 .album-image {
     position: relative;
     display: block;
@@ -2033,7 +2049,8 @@ h4 {
         max-width: 100%;
     }
 
-    .album-grid--personal .album-photo--pair {
+    .album-grid--personal .album-photo--pair,
+    .album-grid--personal .album-photo--triptych {
         flex-basis: 100%;
     }
 
