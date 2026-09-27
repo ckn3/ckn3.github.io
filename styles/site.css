@@ -1695,6 +1695,17 @@ h4 {
     --photo-basis: 462px;
 }
 
+.album-photo--pair {
+    --photo-grow: 1.5;
+    --photo-basis: 402px;
+}
+
+.album-image-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
 .album-image {
     position: relative;
     display: block;
@@ -2020,6 +2031,10 @@ h4 {
     .album-grid--personal .album-photo {
         flex: 1 1 140px;
         max-width: 100%;
+    }
+
+    .album-grid--personal .album-photo--pair {
+        flex-basis: 100%;
     }
 
     .album-image {
