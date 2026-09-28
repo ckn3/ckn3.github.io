@@ -1711,6 +1711,12 @@ h4 {
     gap: 12px;
 }
 
+.album-image-pair--mixed {
+    /* Share the row by image aspect ratio, without cropping either view. */
+    grid-template-columns: var(--pair-columns);
+    align-items: center;
+}
+
 .album-image-pair--landscape {
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
