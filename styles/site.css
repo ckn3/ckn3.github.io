@@ -1712,8 +1712,14 @@ h4 {
 }
 
 .album-image-pair--landscape {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 4fr);
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
+    gap: 8px;
+}
+
+.album-photo--stack {
+    /* Combined aspect ratio of the two uncropped landscape photographs. */
+    --photo-grow: 0.762;
 }
 
 .album-photo--triptych {
@@ -1845,6 +1851,16 @@ h4 {
 
 .album-grid--personal .album-photo {
     max-width: calc(var(--photo-grow, 1.333) * 420px);
+}
+
+.album-grid--travel {
+    --album-row-size: 230px;
+    gap: 24px 18px;
+}
+
+.album-grid--travel .album-photo {
+    flex: var(--photo-grow, 1.333) 1 calc(var(--photo-grow, 1.333) * var(--album-row-size));
+    max-width: calc(var(--photo-grow, 1.333) * 360px);
 }
 
 .album-viewer {
@@ -2013,6 +2029,11 @@ h4 {
     .album-grid--clement {
         gap: 25px 16px;
     }
+
+    .album-grid--travel {
+        --album-row-size: 190px;
+        gap: 22px 14px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -2064,6 +2085,17 @@ h4 {
         flex-basis: 100%;
     }
 
+    .album-grid--travel {
+        --album-row-size: 120px;
+        gap: 20px 12px;
+    }
+
+    .album-grid--travel .album-photo {
+        flex: var(--photo-grow, 1.333) 1 calc(var(--photo-grow, 1.333) * var(--album-row-size));
+        min-width: 112px;
+        max-width: 100%;
+    }
+
     .album-image {
         padding: 4px;
     }
@@ -2102,6 +2134,12 @@ h4 {
     .album-viewer-controls button {
         width: 44px;
         height: 44px;
+    }
+}
+
+@media (max-width: 360px) {
+    .album-grid--travel {
+        --album-row-size: 100px;
     }
 }
 
