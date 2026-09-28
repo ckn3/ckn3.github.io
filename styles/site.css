@@ -1685,6 +1685,11 @@ h4 {
     --photo-basis: 303px;
 }
 
+.album-photo--ratio-7x5 {
+    --photo-grow: 1.401;
+    --photo-basis: 364px;
+}
+
 .album-photo--ratio-3x2 {
     --photo-grow: 1.5;
     --photo-basis: 390px;
@@ -1704,6 +1709,11 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+}
+
+.album-image-pair--landscape {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 4fr);
+    align-items: start;
 }
 
 .album-photo--triptych {
