@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=20260929">
+    <link rel="stylesheet" href="styles/site.css?v=20261002">
     <script src="scripts/schema.js?v=20260920" defer></script>
     <script src="scripts/site.js?v=20260920" defer></script>
     <title>Research | Kangning Cui</title>
@@ -56,25 +56,36 @@
     <div class="content content-top">
         <div class="page-header">
             <h1>Research</h1>
-            <p class="page-intro">I develop efficient, explainable, and structure-aware machine learning methods for computer vision, signal processing, and large language models, with applications in geoscience and healthcare.</p>
+            <p class="page-intro">I develop efficient and reliable machine learning methods for language models, geospatial data, and medical images and signals. My work focuses on model compression, interpretability, and learning with limited labels.</p>
             <p class="page-note publication-note"><span>Full list: <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span><span class="sep">|</span><span>† first author</span><span class="sep">|</span><span>* corresponding author</span></p>
         </div>
     </div>
 
 
-    <div class="content page-panel">
-        <div class="section-header">
-            <h2>Research Topics</h2>
-        </div>
-        <details class="section-card direction-card">
-            <summary class="direction-summary">
-                <div class="direction-heading">
-                    <h3>Geospatial AI</h3>
-                    <p>How can efficient learning map palms, monitor mining, and track environmental change at scale?</p>
-                </div>
-                <span class="direction-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="direction-body">
+<section class="content page-panel" aria-labelledby="research-topics">
+        <div class="section-header"><h2 id="research-topics">Research Themes</h2></div>
+        <div class="research-themes"><article class="research-topic">
+            <h3>Efficient and Reliable LLMs</h3>
+            <p>How can we make language models smaller and faster while understanding their decisions and preserving uncertainty?</p>
+            <details class="text-disclosure direction-card">
+                <summary>Related publications</summary>
+                <div class="direction-body">
+            <p class="direction-context">My work spans low-rank/SVD compression, quantization, practical inference acceleration, uncertainty estimation, and interpretability.</p>
+            <div class="direction-links">
+                <div class="direction-item"><a href="#paper-lowrankarena-neurips">LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, ED Track, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a></div>
+                <div class="direction-item"><a href="#paper-dpq-emnlp">Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</a><span class="sep">|</span><span class="venue-inline">[EMNLP'26, Findings]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a></div>
+                <div class="direction-item"><span>FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast</span><span class="sep">|</span><span class="venue-inline">[arXiv'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a></div>
+                <div class="direction-item"><a href="#paper-decodeshare-icml">DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</a><span class="sep">|</span><span class="venue-inline">[ICML'26, Spotlight]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a></div>
+            </div>
+            </div>
+            </details>
+        </article>
+<article class="research-topic">
+            <h3>Geospatial AI</h3>
+            <p>How can we map forests and environmental change from aerial and satellite images, with fewer labels?</p>
+            <details class="text-disclosure direction-card">
+                <summary>Related publications</summary>
+                <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><span>AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery</span><span class="sep">|</span><span class="venue-inline">[IJCAI Demo'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2606.23542" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><a href="#paper-help-icmr">Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection</a><span class="sep">|</span><span class="venue-inline">[ICMR'26]</span><span class="sep">|</span><a class="paper-inline" href="https://dl.acm.org/doi/10.1145/3805622.3810593" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2604.15065" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval" target="_blank" rel="noopener noreferrer">Code</a></div>
@@ -86,22 +97,11 @@
                 <div class="direction-item"><span>PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning</span><span class="sep">|</span><span class="venue-inline">[ACMSE'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1145/3603287.3651220" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2403.03161" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><span>Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery</span><span class="sep">|</span><span class="venue-inline">[RS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
-            </div>
-        </details>
+            <h4>Learning from Hyperspectral Images</h4>
 
-        <details class="section-card direction-card">
-            <summary class="direction-summary">
-                <div class="direction-heading">
-                    <h3>Label-Efficient Hyperspectral Learning</h3>
-                    <p>How can spatial structure and geometry help us learn from hyperspectral images with few or no labels?</p>
-                </div>
-                <span class="direction-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><span>Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[JSTARS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11433595" target="_blank" rel="noopener noreferrer">Paper</a></div>
                 <div class="direction-item"><a href="#paper-s2dl">Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</a><span class="sep">|</span><span class="venue-inline">[TGRS'24]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a></div>
-                <div class="direction-item"><span>Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[RS'23]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/15/4/1053" target="_blank" rel="noopener noreferrer">Paper</a></div>
                 <div class="direction-item"><span>Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.13497" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><span>Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/IGARSS46834.2022.9883429" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.09041" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><span>Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9883961" target="_blank" rel="noopener noreferrer">Paper</a></div>
@@ -109,17 +109,14 @@
                 <div class="direction-item"><span>Unsupervised Classification of AVIRIS-NG Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'21]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9484006" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
             </div>
-        </details>
-
-        <details class="section-card direction-card">
-            <summary class="direction-summary">
-                <div class="direction-heading">
-                    <h3>Medical Imaging and Signals</h3>
-                    <p>How can we reconstruct medical images and analyze biomedical signals with limited annotations?</p>
-                </div>
-                <span class="direction-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="direction-body">
+            </details>
+        </article>
+<article class="research-topic">
+            <h3>Medical Imaging and Signals</h3>
+            <p>How can we analyze heart motion and biomedical signals without extensive manual annotation?</p>
+            <details class="text-disclosure direction-card">
+                <summary>Related publications</summary>
+                <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-ecg-horizons-neurips">Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a></div>
                 <div class="direction-item"><a href="#paper-cardiac-phase">Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</a><span class="sep">|</span><span class="venue-inline">[MICCAI'25, Oral]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a></div>
@@ -132,27 +129,38 @@
                 <div class="direction-item"><span>Optimized Hard Exudate Detection with Supervised Contrastive Learning</span><span class="sep">|</span><span class="venue-inline">[ISBI'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/ISBI56570.2024.10635760" target="_blank" rel="noopener noreferrer">Paper</a></div>
             </div>
             </div>
-        </details>
+            </details>
+        </article></div>
+    </section>
 
-        <details class="section-card direction-card">
-            <summary class="direction-summary">
-                <div class="direction-heading">
-                    <h3>LLM Compression and Interpretability</h3>
-                    <p>How can we compress and accelerate language models while preserving their reliability and understanding their decisions?</p>
-                </div>
-                <span class="direction-toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="direction-body">
-            <p class="direction-context">My work spans low-rank/SVD compression, quantization, practical inference acceleration, uncertainty estimation, and interpretability.</p>
-            <div class="direction-links">
-                <div class="direction-item"><a href="#paper-lowrankarena-neurips">LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, ED Track, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a></div>
-                <div class="direction-item"><a href="#paper-dpq-emnlp">Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</a><span class="sep">|</span><span class="venue-inline">[EMNLP'26, Findings]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a></div>
-                <div class="direction-item"><span>FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast</span><span class="sep">|</span><span class="venue-inline">[arXiv'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a></div>
-                <div class="direction-item"><a href="#paper-decodeshare-icml">DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</a><span class="sep">|</span><span class="venue-inline">[ICML'26, Spotlight]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a></div>
-            </div>
-            </div>
-        </details>
-    </div>
+    <section class="content page-panel featured-section" aria-labelledby="featured-research">
+        <div class="section-header section-header--split">
+            <h2 id="featured-research">Selected Research</h2>
+            <a href="#conference-publications">Publication lists</a>
+        </div>
+        <!-- featured-research:start -->
+        <div class="research-highlights">
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Language Models</p>
+                <h3><a href="#paper-decodeshare-icml" title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">Understanding shared LLM decisions</a></h3>
+                <p class="research-highlight-contribution">DecodeShare identifies a compact subspace shared across tasks and tests how it influences language-model decisions during decoding.</p>
+                <p class="research-highlight-venue">ICML&#39;26, Spotlight</p>
+            </article>
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Geospatial AI</p>
+                <h3><a href="#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Mapping palms in tropical forests</a></h3>
+                <p class="research-highlight-contribution">PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration.</p>
+                <p class="research-highlight-venue">IJCAI&#39;25, Oral</p>
+            </article>
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Medical Imaging</p>
+                <h3><a href="#paper-cardiac-phase" title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">Measuring heart motion without labels</a></h3>
+                <p class="research-highlight-contribution">A self-supervised motion model detects cardiac phases in adult and fetal ultrasound videos without manual phase annotations.</p>
+                <p class="research-highlight-venue">MICCAI&#39;25, Oral</p>
+            </article>
+        </div>
+        <!-- featured-research:end -->
+    </section>
 
     <div class="content page-panel">
         <div class="section-header">
@@ -235,8 +243,8 @@
     </div>
 
     <script src="scripts/publications.js?v=20260920"
-            data-publications-data="data/publications.json?v=20260926"
-            data-publications-fallback="data/publications-fallback.js?v=20260926"></script>
+            data-publications-data="data/publications.json?v=20261002"
+            data-publications-fallback="data/publications-fallback.js?v=20261002"></script>
 
     </main>
     <footer class="site-footer">

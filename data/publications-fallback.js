@@ -19,6 +19,26 @@ window.publicationsData = {
     "Optimized Hard Exudate Detection with Supervised Contrastive Learning": "Diabetic retinopathy (DR) is a leading global cause of blindness. Early detection of hard exudates plays a crucial role in identifying DR, which aids in treating diabetes and preventing vision loss. However, the unique characteristics of hard exudates, ranging from their inconsistent shapes to indistinct boundaries, pose significant challenges to existing segmentation techniques. To address these issues, we present a novel supervised contrastive learning framework to optimize hard exudate segmentation. Specifically, we introduce a patch-wise density contrasting scheme to distinguish between areas with varying lesion concentrations, and therefore improve the model’s proficiency in segmenting small lesions. To handle the ambiguous boundaries, we develop a discriminative edge inspection module to dynamically analyze the pixels that lie around the boundaries and accurately delineate the exudates. Upon evaluation using the IDRiD dataset and comparison with state-of-the-art frameworks, our method exhibits its effectiveness and shows potential for computer-assisted hard exudate detection. The code to replicate experiments is available at github.com/wetang7/HECL/.",
     "Unsupervised Spatial-spectral Hyperspectral Image Reconstruction and Clustering with Diffusion Geometry": "Hyperspectral images, which store a hundred or more spectral bands of reflectance, have become an important data source in natural and social sciences. They are often generated in large quantities at a relatively coarse spatial resolution, motivating unsupervised machine learning algorithms that incorporate known structure in hyperspectral imagery. This work introduces the Spatial-Spectral Image Reconstruction and Clustering with Diffusion Geometry (DSIRC) algorithm for partitioning highly mixed hyperspectral images. DSIRC reduces measurement noise through a shape-adaptive reconstruction procedure that uses spectrally correlated pixels within a data-adaptive spatial neighborhood. It then locates high-density, high-purity pixels that are far in diffusion distance from one another and treats these as cluster exemplars. Non-modal pixels are assigned labels through diffusion-distance nearest-neighbor propagation. Strong numerical results indicate that incorporating spatial information through image reconstruction substantially improves pixel-wise clustering performance."
   },
+  "featured": [
+    {
+      "id": "paper-decodeshare-icml",
+      "theme": "Language Models",
+      "heading": "Understanding shared LLM decisions",
+      "contribution": "DecodeShare identifies a compact subspace shared across tasks and tests how it influences language-model decisions during decoding."
+    },
+    {
+      "id": "paper-palms-ijcai",
+      "theme": "Geospatial AI",
+      "heading": "Mapping palms in tropical forests",
+      "contribution": "PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration."
+    },
+    {
+      "id": "paper-cardiac-phase",
+      "theme": "Medical Imaging",
+      "heading": "Measuring heart motion without labels",
+      "contribution": "A self-supervised motion model detects cardiac phases in adult and fetal ultrasound videos without manual phase annotations."
+    }
+  ],
   "selected": {
     "journals": [
       {

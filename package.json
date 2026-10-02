@@ -2,7 +2,8 @@
   "name": "kangning-cui-academic-homepage",
   "private": true,
   "scripts": {
-    "sync:publications": "node scripts/sync-publications-fallback.mjs",
-    "check:publications": "node scripts/sync-publications-fallback.mjs --check"
+    "check": "npm run check:publications && node scripts/check-site.mjs",
+    "sync:publications": "node scripts/sync-publications-fallback.mjs && node scripts/sync-featured-research.mjs",
+    "check:publications": "node scripts/sync-publications-fallback.mjs --check && node scripts/sync-featured-research.mjs --check"
   }
 }
