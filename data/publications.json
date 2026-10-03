@@ -19,10 +19,10 @@
   },
   "featured": [
     {
-      "id": "paper-decodeshare-icml",
+      "id": "paper-lowrankarena-neurips",
       "theme": "Language Models",
-      "heading": "Understanding shared LLM decisions",
-      "contribution": "DecodeShare identifies a compact subspace shared across tasks and tests how it influences language-model decisions during decoding."
+      "heading": "LowRankArena: evaluating LLM compression",
+      "contribution": "LowRankArena compares SVD-based language-model compression using shared tasks, compression budgets, and inference measurements."
     },
     {
       "id": "paper-palms-ijcai",
@@ -31,10 +31,10 @@
       "contribution": "PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration."
     },
     {
-      "id": "paper-cardiac-phase",
-      "theme": "Medical Imaging",
-      "heading": "Measuring heart motion without labels",
-      "contribution": "A self-supervised motion model detects cardiac phases in adult and fetal ultrasound videos without manual phase annotations."
+      "id": "paper-s2dl",
+      "theme": "Hyperspectral Learning",
+      "heading": "S2DL: clustering hyperspectral images",
+      "contribution": "S2DL combines superpixels and diffusion geometry to cluster hyperspectral images without labels while reducing computational cost."
     }
   ],
   "selected": {

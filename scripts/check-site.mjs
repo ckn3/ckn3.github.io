@@ -40,9 +40,11 @@ assert.equal((news.match(/class="news-card"/g) || []).length, 4);
 assert.ok(home.indexOf('id="news"') < home.indexOf('id="featured-research"'));
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="positions"'));
 assert.match(home, /class="hero-role"><strong>Assistant Professor/);
+assert.doesNotMatch(home, /<h[1-6][^>]*>Teaching\b|class="home-course-links"/);
 assert.equal((html.get('publications.html').match(/class="research-topic"/g) || []).length, 3);
 assert.ok(!html.get('publications.html').includes('Unsupervised Diffusion and Volume Maximization-Based Clustering'));
 for (const feature of data.featured) assert.ok(paperIds.includes(feature.id), `Unknown highlight: ${feature.id}`);
+assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-s2dl']);
 
 const team = html.get('team.html');
 assert.ok(team.indexOf('>Current Students</h3>') < team.indexOf('<aside class="recruitment-note"'));

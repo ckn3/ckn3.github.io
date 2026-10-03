@@ -3961,8 +3961,7 @@ body.modal-open {
 .home-page .news-content { font-size: 1rem; }
 .home-page .news-content a { text-decoration-color: var(--cityu-line); }
 
-.research-highlights,
-.research-themes {
+.research-highlights {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
@@ -3979,11 +3978,12 @@ body.modal-open {
 .research-highlight h3 a:hover { color: var(--cityu-purple-deep); }
 .research-highlight-contribution { margin: 0 0 14px; color: var(--muted); font-size: 1rem; }
 .research-highlight-venue { margin: auto 0 0; padding-top: 4px; font-weight: 600; color: var(--cityu-purple-deep); }
-.research-topic { min-width: 0; display: flex; flex-direction: column; }
+.research-themes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.research-topic { min-width: 0; }
+.research-topic + .research-topic { border-top: 1px solid var(--line); padding-top: 20px; }
 .research-topic > h3 { margin: 0 0 8px; font-size: 1.2rem; }
 .research-topic > p { margin: 0; color: var(--muted); }
-.research-page .research-topic .direction-card { padding: 8px 0 0; margin-top: auto; border: 0; }
-.research-topic:has(details[open]) { grid-column: 1 / -1; }
+.research-page .research-topic .direction-card { padding: 8px 0 0; margin: 0; border: 0; }
 .research-page .direction-body { border-color: var(--line); }
 .research-page .direction-body h4 { margin: 22px 0 8px; color: var(--ink); }
 .research-page .publication-entry,
@@ -4001,16 +4001,13 @@ body.modal-open {
 .research-page .publications-grid,
 .research-page .conference-grid { gap: 4px; }
 
-.home-page .home-connecting,
 .home-page .home-grid.background-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
 }
 .home-connecting h2 { margin-bottom: 12px; }
 .home-connecting p { margin: 0 0 12px; color: var(--muted); }
-.home-course-links { list-style: none; padding: 0; margin: 0 0 12px; }
-.home-course-links li + li { margin-top: 8px; }
 .home-page .background-grid .timeline-item { grid-template-columns: 100px minmax(0, 1fr); }
 .home-page .background-grid .timeline-head { grid-template-columns: 42px minmax(0, 1fr); gap: 12px; }
 .home-page .background-grid .timeline-logo { width: 42px; height: 42px; padding: 2px; border: 0; }
@@ -4021,7 +4018,7 @@ body.modal-open {
 .teaching-page .current-courses .teaching-entry { grid-template-rows: auto auto 1fr auto; background: #fff; }
 .teaching-page .teaching-grid.previous-courses { grid-template-columns: 1fr; gap: 0; }
 .teaching-page .previous-courses .teaching-entry {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.8fr) minmax(0, 1.5fr) auto;
+    grid-template-columns: 8.5rem minmax(0, 1.35fr) minmax(0, 1.2fr) 7rem;
     grid-template-rows: auto;
     align-items: center;
     gap: 18px;
@@ -4035,7 +4032,7 @@ body.modal-open {
 .teaching-page .previous-courses .course-title { font-size: 1.08rem; margin: 0; }
 .teaching-page .previous-courses .course-code,
 .teaching-page .previous-courses .status-chip { padding: 0; border: 0; background: none; }
-.teaching-page .previous-courses .course-links { padding: 0; border: 0; }
+.teaching-page .previous-courses .course-links { margin: 0; padding: 0; border: 0; align-self: center; }
 
 .course-jumps { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 0 20px 12px; }
 .course-jumps a { padding: 6px 0; font-weight: 600; border-bottom: 1px solid var(--cityu-line); }
@@ -4067,9 +4064,7 @@ body.modal-open {
 .services-page .journal-reviewers { padding-block: 2px; margin-block: 14px; border-block: 1px solid var(--line); }
 
 @media (max-width: 960px) {
-    .home-page .home-grid.background-grid { grid-template-columns: 1fr; gap: 8px; }
-    .research-highlights,
-    .research-themes { gap: 20px; }
+    .research-highlights { gap: 20px; }
     .teaching-page .previous-courses .teaching-entry { grid-template-columns: 1fr 2fr; gap: 8px 20px; }
 }
 
@@ -4085,12 +4080,9 @@ body.modal-open {
     .home-page .hero-links { grid-column: 1 / -1; margin: 0; }
     .home-page .hero-lead { font-size: 1rem; line-height: 1.55; }
     .home-page .hero-links { justify-content: flex-start; gap: 4px 16px; }
-    .research-highlights,
-    .research-themes { grid-template-columns: 1fr; gap: 20px; }
-    .research-highlight + .research-highlight,
-    .research-topic + .research-topic { border-top: 1px solid var(--line); padding-top: 18px; }
+    .research-highlights { grid-template-columns: 1fr; gap: 20px; }
+    .research-highlight + .research-highlight { border-top: 1px solid var(--line); padding-top: 18px; }
     .research-highlight-contribution { margin-bottom: 8px; }
-    .home-page .home-connecting { grid-template-columns: 1fr; gap: 28px; }
     .home-page .background-grid .timeline-item { grid-template-columns: 1fr; }
     .teaching-page .teaching-grid.current-courses { grid-template-columns: 1fr; }
     .course-jumps { margin-inline: 12px; }
