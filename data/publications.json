@@ -105,9 +105,9 @@
         "highlight": "primary",
         "image": {
           "src": "figures/publications/cui2024superpixel.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Cui et al., 2023"
+          "width": 1256,
+          "height": 517,
+          "alt": "S2DL workflow: hyperspectral data, superpixels, diffusion geometry, and clustering without labels"
         },
         "title": "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering",
         "venue": "[TGRS'24]",
@@ -297,9 +297,9 @@
         "highlight": "primary",
         "image": {
           "src": "figures/publications/cui2025ijcai.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Cui et al., 2025"
+          "width": 1248,
+          "height": 373,
+          "alt": "PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping"
         },
         "title": "Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms",
         "venue": "[IJCAI'25, Oral]",

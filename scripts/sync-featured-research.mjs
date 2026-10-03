@@ -14,6 +14,9 @@ for (const file of ['index.html']) {
         const paper = papers.get(feature.id);
         if (!paper) throw new Error(`Unknown featured publication: ${feature.id}`);
         return `            <article class="research-highlight">
+                <a class="research-highlight-image" href="${prefix}#${escape(paper.id)}" aria-label="View ${escape(feature.heading)}">
+                    <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
+                </a>
                 <p class="research-highlight-theme">${escape(feature.theme)}</p>
                 <h3><a href="${prefix}#${escape(paper.id)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>

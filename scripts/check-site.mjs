@@ -50,6 +50,11 @@ assert.equal((html.get('publications.html').match(/class="research-topic"/g) || 
 const research = html.get('publications.html');
 assert.doesNotMatch(research, /id="featured-research"|href="#featured-research"|publications-fallback/);
 assert.equal((home.match(/class="research-highlight"/g) || []).length, 3);
+assert.equal((home.match(/class="research-highlight-image"/g) || []).length, 3);
+for (const featured of data.featured) {
+    const paper = Object.values(data.selected).flat().find(item => item.id === featured.id);
+    assert.ok(home.includes(`src="${paper.image.src}"`), `Missing featured research image: ${featured.id}`);
+}
 const entries = [...research.matchAll(/<article class="(?:publication-entry|conference-entry)[^"]*" id="([^"]+)">([\s\S]*?)<\/article>/g)];
 assert.deepEqual(entries.map(entry => entry[1]), paperIds, 'Static paper order does not match the registry');
 for (const [, id, content] of entries) {
