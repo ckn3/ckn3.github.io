@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=20261003">
+    <link rel="stylesheet" href="styles/site.css?v=2026100302">
     <script src="scripts/schema.js?v=20260920" defer></script>
     <script src="scripts/site.js?v=20260920" defer></script>
     <title>Research | Kangning Cui</title>
@@ -61,8 +61,15 @@
         </div>
     </div>
 
+    <nav class="page-jumps" aria-label="Research sections">
+        <a href="#research-topics">Themes</a>
+        <a href="#featured-research">Selected Research</a>
+        <a href="#journal-publications">Journal Papers</a>
+        <a href="#conference-publications">Conference Papers</a>
+        <a href="#research-media">Media</a>
+    </nav>
 
-<section class="content page-panel" aria-labelledby="research-topics">
+    <section class="content page-panel" aria-labelledby="research-topics">
         <div class="section-header"><h2 id="research-topics">Research Themes</h2></div>
         <div class="research-themes"><article class="research-topic">
             <h3>Efficient and Reliable LLMs</h3>
@@ -171,7 +178,10 @@
     
     <div id="modal" class="modal" aria-hidden="true">
         <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button type="button" class="close" aria-label="Close publication details">&times;</button>
+            <div class="modal-toolbar">
+                <span>Publication details</span>
+                <button type="button" class="close" aria-label="Close publication details">&times;</button>
+            </div>
             <div class="modal-media">
                 <img class="modal-content" id="modal-img" alt="">
             </div>
@@ -197,12 +207,12 @@
 
     <div class="content page-panel">
         <div class="section-header">
-            <h2>Research in the Media</h2>
+            <h2 id="research-media">Research in the Media</h2>
         </div>
         <div class="media-card">
             <a class="media-item" href="https://www.timeshighereducation.com/content/lingnan-university?shpath=/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact" target="_blank" rel="noopener noreferrer">
                 <span class="media-thumb">
-                    <img src="https://times-higher-education.shorthandstories.com/lingnan-hub/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact/assets/UFpEqtRjtR/lingnan_4th-article11-3257x1832.webp" alt="Times Higher Education coverage image for AI and sustainable impact" loading="lazy" decoding="async" width="3257" height="1832">
+                    <img src="figures/media/the-sustainable-impact.webp" alt="Times Higher Education coverage image for AI and sustainable impact" loading="lazy" decoding="async" width="640" height="360">
                 </span>
                 <span class="media-copy">
                     <span class="media-meta">
@@ -215,7 +225,7 @@
             </a>
             <a class="media-item" href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html" target="_blank" rel="noopener noreferrer">
                 <span class="media-thumb">
-                    <img src="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/assets/QMUK14zfx3/220926-la-pampa-mining-mjf-1059-2500x1391.jpg" alt="NBC News coverage image from Paradise Lost" loading="lazy" decoding="async" width="2500" height="1391">
+                    <img src="figures/media/nbc-paradise-lost.webp" alt="NBC News coverage image from Paradise Lost" loading="lazy" decoding="async" width="640" height="357">
                 </span>
                 <span class="media-copy">
                     <span class="media-meta">
@@ -228,7 +238,7 @@
             </a>
             <a class="media-item" href="https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998" target="_blank" rel="noopener noreferrer">
                 <span class="media-thumb">
-                    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/mpx/2704722219/2022_09/amazon_2-siphi2.jpg" alt="The Today Show coverage image for illegal gold mining in the Amazon" loading="lazy" decoding="async" width="1200" height="630">
+                    <img src="figures/media/today-amazon.webp" alt="The Today Show coverage image for illegal gold mining in the Amazon" loading="lazy" decoding="async" width="640" height="336">
                 </span>
                 <span class="media-copy">
                     <span class="media-meta">
@@ -242,7 +252,7 @@
         </div>
     </div>
 
-    <script src="scripts/publications.js?v=20260920"
+    <script src="scripts/publications.js?v=20261003"
             data-publications-data="data/publications.json?v=20261003"
             data-publications-fallback="data/publications-fallback.js?v=20261003"></script>
 

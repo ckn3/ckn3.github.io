@@ -19,6 +19,11 @@ for (const [file, source] of html) {
     const version = source.match(/site\.css\?v=(\d+)/);
     assert.ok(version, `${file}: missing CSS cache version`);
     styleVersions.add(version[1]);
+    for (const [image, imageSource] of source.matchAll(/<img\b[^>]*\bsrc="([^"]+)"[^>]*>/g)) {
+        assert.ok(!/^https?:\/\//.test(imageSource), `${file}: externally hosted image ${imageSource}`);
+        assert.match(image, /\bwidth="[1-9]\d*"/, `${file}: image has no reserved width`);
+        assert.match(image, /\bheight="[1-9]\d*"/, `${file}: image has no reserved height`);
+    }
 }
 assert.equal(styleVersions.size, 1, 'Pages use different CSS cache versions');
 
@@ -44,9 +49,17 @@ assert.doesNotMatch(home, /<h[1-6][^>]*>Teaching\b|class="home-course-links"/);
 assert.equal((html.get('publications.html').match(/class="research-topic"/g) || []).length, 3);
 assert.ok(!html.get('publications.html').includes('Unsupervised Diffusion and Volume Maximization-Based Clustering'));
 for (const feature of data.featured) assert.ok(paperIds.includes(feature.id), `Unknown highlight: ${feature.id}`);
+for (const paper of Object.values(data.selected).flat()) {
+    assert.ok(fs.existsSync(path.join(root, paper.image.src)), `Missing publication image: ${paper.image.src}`);
+    assert.ok(paper.image.width > 0 && paper.image.height > 0, `Missing publication image dimensions: ${paper.id}`);
+}
 assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-s2dl']);
 
 const team = html.get('team.html');
+assert.match(team, /src="figures\/team\/mallory-pitts.webp" alt="Mallory Pitts"/);
+for (const item of JSON.parse(fs.readFileSync(path.join(root, 'data/image-sources.json'), 'utf8')).images) {
+    assert.ok(fs.existsSync(path.join(root, item.file)), `Missing localized image: ${item.file}`);
+}
 assert.ok(team.indexOf('>Current Students</h3>') < team.indexOf('<aside class="recruitment-note"'));
 assert.ok(team.indexOf('<aside class="recruitment-note"') < team.indexOf('>Former Students</h3>'));
 const services = html.get('academic_honors.html');

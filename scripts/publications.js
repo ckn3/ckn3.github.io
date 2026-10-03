@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var modalLinks = document.getElementById('modal-links');
     var closeBtn = modal && modal.querySelector('.close');
     var lastFocusedElement = null;
+    var backgroundState = [];
+    var bodyWasLocked = false;
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract || !modalLinks || !closeBtn) {
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            container.innerHTML = '<div class="publication-data-error">Selected publications could not be loaded. Please check <code>data/publications.json</code> and <code>data/publications-fallback.js</code>.</div>';
+            container.innerHTML = '<p class="publication-data-error">Publications are temporarily unavailable. You can still browse the <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">full list on Google Scholar</a>.</p>';
         });
 
         if (window.console && error) {
@@ -203,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initializePublicationInteractions(abstracts) {
         document.querySelectorAll('a[href^="#paper-"]').forEach(function (link) {
             link.addEventListener('click', function (event) {
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
                 event.preventDefault();
                 jumpToEntry(link.getAttribute('href'), true);
             });
@@ -243,15 +246,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         modal.classList.remove('is-open');
         modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
+        if (!bodyWasLocked) document.body.classList.remove('modal-open');
+        backgroundState.forEach(function (state) { state[0].inert = state[1]; });
+        backgroundState = [];
 
         if (lastFocusedElement) {
-            lastFocusedElement.focus();
+            lastFocusedElement.focus({ preventScroll: true });
             lastFocusedElement = null;
         }
     }
 
     function openDetailModal(entry, abstracts, trigger) {
+        if (modal.classList.contains('is-open')) return;
         var image = entry.querySelector('.publication-figure img');
         var title = normalizeTitle(entry.querySelector('.paper-title').textContent);
         var venue = entry.querySelector('.venue').textContent.trim();
@@ -271,7 +277,18 @@ document.addEventListener('DOMContentLoaded', function () {
         modalLinks.hidden = !modalLinks.childElementCount;
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
+        modal.querySelector('.modal-panel').scrollTop = 0;
+        bodyWasLocked = document.body.classList.contains('modal-open');
         document.body.classList.add('modal-open');
+        // Keep the dialog's ancestor path active while excluding background content.
+        backgroundState = [];
+        for (var node = modal; node.parentElement; node = node.parentElement) {
+            Array.from(node.parentElement.children).forEach(function (sibling) {
+                if (sibling === node || /^(SCRIPT|STYLE|LINK)$/.test(sibling.tagName)) return;
+                backgroundState.push([sibling, sibling.inert]);
+                sibling.inert = true;
+            });
+        }
         window.requestAnimationFrame(function () {
             if (modal.classList.contains('is-open')) {
                 closeBtn.focus();
@@ -293,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        var target = document.querySelector(hash);
+        var target = document.getElementById(hash.slice(1));
         if (!target) {
             return;
         }
@@ -303,6 +320,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+        var detailsButton = target.querySelector('.publication-details-button');
+        if (detailsButton) detailsButton.focus({ preventScroll: true });
         window.setTimeout(function () {
             flashTarget(target);
         }, reducedMotion ? 0 : 240);
@@ -311,6 +330,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
+
+    window.addEventListener('hashchange', function () {
+        if (window.location.hash.indexOf('#paper-') === 0) jumpToEntry(window.location.hash, false);
+    });
 
     modal.addEventListener('click', function (event) {
         if (event.target === modal) {

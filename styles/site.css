@@ -319,8 +319,9 @@ h4 {
     box-sizing: border-box;
 }
 
-:is(.publication-entry, .conference-entry, .team-section, .section-header [id], .publication-entry[id], .conference-entry[id], .team-page #prospective-applicants) {
-    scroll-margin-top: 92px;
+/* Avoid ID specificity here so page-specific anchor spacing can still override it. */
+:where(.publication-entry, .conference-entry, .team-section, .section-header [id], .student-subheading[id], .team-page #prospective-applicants) {
+    scroll-margin-top: 120px;
 }
 
 :is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card)::before {
@@ -4000,6 +4001,32 @@ body.modal-open {
 .research-page .badge-chip { border-radius: 4px; }
 .research-page .publications-grid,
 .research-page .conference-grid { gap: 4px; }
+.research-page .modal-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 14px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+.research-page .modal-toolbar .close {
+    position: static;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-control);
+    backdrop-filter: none;
+}
+.research-page .modal-toolbar .close:hover { background: var(--cityu-soft); }
 
 .home-page .home-grid.background-grid {
     display: grid;
@@ -4034,8 +4061,11 @@ body.modal-open {
 .teaching-page .previous-courses .status-chip { padding: 0; border: 0; background: none; }
 .teaching-page .previous-courses .course-links { margin: 0; padding: 0; border: 0; align-self: center; }
 
-.course-jumps { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 0 20px 12px; }
-.course-jumps a { padding: 6px 0; font-weight: 600; border-bottom: 1px solid var(--cityu-line); }
+.course-jumps,
+.page-jumps { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0 20px 12px; }
+.course-jumps a,
+.page-jumps a { padding: 6px 0; font-weight: 600; border-bottom: 1px solid var(--cityu-line); }
+.page-jumps a:hover { border-color: var(--cityu-purple); }
 .course-table-wrap { overflow-x: auto; }
 .course-materials { width: 100%; border-collapse: collapse; text-align: left; }
 .course-materials caption { text-align: left; }
@@ -4061,6 +4091,13 @@ body.modal-open {
 }
 
 .team-page .recruitment-note { margin-top: 24px; border: 0; border-left: 2px solid var(--cityu-purple); border-radius: 0; box-shadow: none; }
+.team-page .student-card-header { flex-wrap: wrap; }
+.team-page .student-grid .student-card-header .name { font-size: 1.0625rem; line-height: 1.35; white-space: normal; }
+.team-page .student-grid .member-meta { font-size: 0.875rem; line-height: 1.45; }
+.team-page .student-grid .member-detail,
+.team-page .student-grid .member-next-position,
+.team-page .student-grid .member-supervision { font-size: 0.9375rem; line-height: 1.45; }
+.team-page .student-grid .person-card { padding-block: 14px; }
 .services-page .journal-reviewers { padding-block: 2px; margin-block: 14px; border-block: 1px solid var(--line); }
 
 @media (max-width: 960px) {
@@ -4085,7 +4122,8 @@ body.modal-open {
     .research-highlight-contribution { margin-bottom: 8px; }
     .home-page .background-grid .timeline-item { grid-template-columns: 1fr; }
     .teaching-page .teaching-grid.current-courses { grid-template-columns: 1fr; }
-    .course-jumps { margin-inline: 12px; }
+    .course-jumps,
+    .page-jumps { margin-inline: 12px; }
     .course-materials th,
     .course-materials td { padding: 10px 6px; }
     .course-materials th:first-child { width: auto; }

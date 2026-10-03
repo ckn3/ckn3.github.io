@@ -1,0 +1,43 @@
+{
+  "retrieved": "2026-10-03",
+  "images": [
+    {
+      "file": "figures/team/mallory-pitts.webp",
+      "source": "https://cdn.atriumhealth.org/-/media/wakeforest/school/files/research/wfirm/summer-scholars/scholars-profiles.pdf?hash=1F9A1A096FB8F76A1FDBC2CED8FB4A00&rev=ee920cd55c7a4f209f4cfae881c4e63b",
+      "page": 15,
+      "note": "Portrait beside Mallory Pitts's named profile in the official WFIRM 2024 Summer Scholars document. Extracted without cropping."
+    },
+    {
+      "file": "figures/team/suraj-prasai.webp",
+      "source": "https://spygaurad.github.io/images/profile.png"
+    },
+    {
+      "file": "figures/team/zhen-yang.webp",
+      "source": "https://xi-xiaoran.github.io/images/avatar.JPG"
+    },
+    {
+      "file": "figures/team/aditi-golder.webp",
+      "source": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=_ksO_SgAAAAJ&citpid=2"
+    },
+    {
+      "file": "figures/team/rongkun-zhu.webp",
+      "source": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=D-IHI1kAAAAJ&citpid=1"
+    },
+    {
+      "file": "figures/team/zishan-shao.webp",
+      "source": "https://zishan-shao.github.io/me.jpeg"
+    },
+    {
+      "file": "figures/media/the-sustainable-impact.webp",
+      "source": "https://times-higher-education.shorthandstories.com/lingnan-hub/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact/assets/UFpEqtRjtR/lingnan_4th-article11-3257x1832.webp"
+    },
+    {
+      "file": "figures/media/nbc-paradise-lost.webp",
+      "source": "https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/assets/QMUK14zfx3/220926-la-pampa-mining-mjf-1059-2500x1391.jpg"
+    },
+    {
+      "file": "figures/media/today-amazon.webp",
+      "source": "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/mpx/2704722219/2022_09/amazon_2-siphi2.jpg"
+    }
+  ]
+}
