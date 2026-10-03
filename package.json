@@ -2,7 +2,7 @@
   "name": "kangning-cui-academic-homepage",
   "private": true,
   "scripts": {
-    "check": "npm run check:publications && node scripts/check-site.mjs && node scripts/check-team.mjs",
+    "check": "npm run check:publications && node scripts/check-site.mjs && node scripts/check-team.mjs && node scripts/check-motion.mjs",
     "sync:publications": "node scripts/sync-publications.mjs && node scripts/sync-featured-research.mjs",
     "check:publications": "node scripts/sync-publications.mjs --check && node scripts/sync-featured-research.mjs --check"
   }

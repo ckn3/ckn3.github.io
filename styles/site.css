@@ -2646,7 +2646,6 @@ body:not(.gallery-page) .page-header::before,
 
 .research-page .badges a {
     display: inline-flex;
-    transition: transform 0.16s var(--ease-smooth);
 }
 
 .research-page .badges a:hover {
@@ -2658,22 +2657,32 @@ body:not(.gallery-page) .page-header::before,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    padding: 9px 12px;
+    min-height: 30px;
+    padding: 5px 11px;
     border-radius: 999px;
-    border: 1px solid rgba(23, 23, 28, 0.08);
-    background: rgba(255, 255, 255, 0.82);
-    color: #43505d !important;
-    font-size: 0.875rem;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--accent-deep) !important;
+    font-size: 0.8125rem;
     font-weight: 600;
     line-height: 1.25;
+    transition: background-color 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
 }
 
-.research-page .badge-chip:hover {
+.research-page :is(a, button, summary).badge-chip:hover {
     text-decoration: none;
     color: var(--accent-deep) !important;
-    border-color: rgba(158, 126, 56, 0.22);
-    background: rgba(255, 255, 255, 0.94);
+    border-color: var(--cityu-purple);
+    background: #f1e8ef;
+    transform: translateY(-1px);
+}
+
+.research-page span.badge-chip {
+    min-height: 26px;
+    padding: 3px 9px;
+    border-color: transparent;
+    background: var(--cityu-soft);
+    color: var(--muted) !important;
 }
 
 .research-page .publication-details-button {
@@ -2708,36 +2717,8 @@ body:not(.gallery-page) .page-header::before,
 }
 
 @keyframes jumpHighlight {
-    0% {
-        box-shadow: 0 0 0 rgba(72, 104, 126, 0);
-        border-color: rgba(72, 104, 126, 0.18);
-        background:
-            linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 250, 248, 0.98) 100%);
-        transform: translateY(0);
-    }
-    20% {
-        box-shadow: 0 0 0 6px rgba(72, 104, 126, 0.2), 0 22px 42px rgba(72, 104, 126, 0.18);
-        border-color: rgba(72, 104, 126, 0.55);
-        background:
-            linear-gradient(135deg, rgba(248, 252, 254, 1), rgba(239, 246, 249, 0.98)),
-            linear-gradient(115deg, rgba(72, 104, 126, 0.16), transparent 55%);
-        transform: translateY(-3px) scale(1.01);
-    }
-    55% {
-        box-shadow: 0 0 0 4px rgba(72, 104, 126, 0.13), 0 16px 30px rgba(72, 104, 126, 0.12);
-        border-color: rgba(72, 104, 126, 0.36);
-        background:
-            linear-gradient(135deg, rgba(250, 253, 254, 0.99), rgba(242, 247, 249, 0.97)),
-            linear-gradient(115deg, rgba(72, 104, 126, 0.1), transparent 58%);
-        transform: translateY(-1px) scale(1.004);
-    }
-    100% {
-        box-shadow: 0 0 0 rgba(72, 104, 126, 0);
-        border-color: rgba(72, 104, 126, 0.18);
-        background:
-            linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 250, 248, 0.98) 100%);
-        transform: translateY(0);
-    }
+    0%, 100% { background-color: transparent; }
+    25%, 55% { background-color: var(--cityu-soft); }
 }
 
 .research-page .publication-entry.jump-highlight,
@@ -3607,7 +3588,8 @@ body.modal-open {
     }
 
     .research-page .badge-chip {
-        padding: 9px 12px;
+        min-height: 34px;
+        padding: 6px 11px;
         font-size: 0.875rem;
     }
 
@@ -3982,6 +3964,8 @@ body.modal-open {
 .text-disclosure > summary::-webkit-details-marker { display: none; }
 .text-disclosure > summary::after { content: " +"; padding-left: 6px; }
 .text-disclosure[open] > summary::after { content: " -"; }
+.disclosure-content { display: flow-root; }
+.disclosure-content.is-animating { overflow: hidden; }
 .news-archive { border-top: 1px solid var(--line); margin-top: 8px; }
 .home-page .news-content { font-size: 1rem; }
 .home-page .news-content a { text-decoration-color: var(--cityu-line); }
@@ -4042,7 +4026,6 @@ body.modal-open {
 }
 .research-page .publication-entry:hover,
 .research-page .conference-entry:hover { transform: none; box-shadow: none; }
-.research-page .badge-chip { border-radius: 4px; border-color: var(--line); background: var(--surface); }
 .research-page .publications-grid,
 .research-page .conference-grid { gap: 4px; }
 .research-page .modal-toolbar {
@@ -4201,6 +4184,11 @@ body.modal-open {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+    @view-transition { navigation: auto; }
+    ::view-transition-group(root),
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation-duration: 0.18s; animation-timing-function: ease-out; }
     .content-top { animation: masthead-in 0.45s ease-out both; }
 }
 

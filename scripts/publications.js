@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var lastFocusedElement = null;
     var backgroundState = [];
     var bodyWasLocked = false;
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     if (!modal || !modalImg || !modalTitle || !modalVenue || !modalAuthors || !modalAbstract || !modalLinks || !closeBtn) return;
 
@@ -96,10 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var target = document.getElementById(hash.slice(1));
         if (!target) return;
         if (pushHash && window.location.hash !== hash) history.pushState(null, '', hash);
-        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
         var detailsButton = target.querySelector('.publication-details-button');
         if (detailsButton) detailsButton.focus({ preventScroll: true });
-        window.setTimeout(function () { flashTarget(target); }, reducedMotion ? 0 : 240);
+        window.setTimeout(function () { flashTarget(target); }, reducedMotion.matches ? 0 : 240);
     }
 
     closeBtn.addEventListener('click', closeModal);
