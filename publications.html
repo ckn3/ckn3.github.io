@@ -29,8 +29,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026100302">
-    <script src="scripts/schema.js?v=20260920" defer></script>
+    <link rel="stylesheet" href="styles/site.css?v=2026100303">
+    <script src="scripts/schema.js?v=2026100302" defer></script>
     <script src="scripts/site.js?v=20260920" defer></script>
     <title>Research | Kangning Cui</title>
 </head>
@@ -63,7 +63,6 @@
 
     <nav class="page-jumps" aria-label="Research sections">
         <a href="#research-topics">Themes</a>
-        <a href="#featured-research">Selected Research</a>
         <a href="#journal-publications">Journal Papers</a>
         <a href="#conference-publications">Conference Papers</a>
         <a href="#research-media">Media</a>
@@ -140,40 +139,72 @@
         </article></div>
     </section>
 
-    <section class="content page-panel featured-section" aria-labelledby="featured-research">
-        <div class="section-header section-header--split">
-            <h2 id="featured-research">Selected Research</h2>
-            <a href="#conference-publications">Publication lists</a>
-        </div>
-        <!-- featured-research:start -->
-        <div class="research-highlights">
-            <article class="research-highlight">
-                <p class="research-highlight-theme">Language Models</p>
-                <h3><a href="#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">LowRankArena: evaluating LLM compression</a></h3>
-                <p class="research-highlight-contribution">LowRankArena compares SVD-based language-model compression using shared tasks, compression budgets, and inference measurements.</p>
-                <p class="research-highlight-venue">NeurIPS&#39;26, ED Track, Poster</p>
-            </article>
-            <article class="research-highlight">
-                <p class="research-highlight-theme">Geospatial AI</p>
-                <h3><a href="#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Mapping palms in tropical forests</a></h3>
-                <p class="research-highlight-contribution">PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration.</p>
-                <p class="research-highlight-venue">IJCAI&#39;25, Oral</p>
-            </article>
-            <article class="research-highlight">
-                <p class="research-highlight-theme">Hyperspectral Learning</p>
-                <h3><a href="#paper-s2dl" title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">S2DL: clustering hyperspectral images</a></h3>
-                <p class="research-highlight-contribution">S2DL combines superpixels and diffusion geometry to cluster hyperspectral images without labels while reducing computational cost.</p>
-                <p class="research-highlight-venue">TGRS&#39;24</p>
-            </article>
-        </div>
-        <!-- featured-research:end -->
-    </section>
-
     <div class="content page-panel">
         <div class="section-header">
             <h2 id="journal-publications">Selected Journal Publications</h2>
         </div>
-        <div class="publications-grid" id="journal-publications-list" data-publication-section="journals"></div>
+        <div class="publications-grid" id="journal-publications-list" data-publication-section="journals">
+        <!-- publications:journals:start -->
+            <article class="publication-entry" id="paper-centerseg">
+                <div class="publication-text">
+                    <p class="title"><span class="paper-title"><strong>Center-guided Classifier for Semantic Segmentation of Remote Sensing Images</strong></span><span class="venue">[TGRS&#39;26]</span></p>
+                    <p class="authors">Wei Zhang, Qin Huang, Mengting Ma, Yizhen Jiang, Yun Chen, Zhenhua Huang, Wangyu Wu, <span class="main-author">Kangning Cui</span>, Rongrong Lian, Zhenkai Wu, and Xiaowen Ma<sup>*</sup></p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/11364332" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2503.16963" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/xwmaxwma/rssegmentation" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Center-guided Classifier for Semantic Segmentation of Remote Sensing Images">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/zhang2026center.webp" alt="Figure for CenterSeg" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Compared with natural images, remote sensing images (RSIs) have the unique characteristic, i.e., larger intraclass variance, which makes semantic segmentation for remote sensing images more challenging. Moreover, existing semantic segmentation models for remote sensing images usually employ a vanilla softmax classifier, which has three drawbacks: (1) non-direct supervision for the pixel representations during training; (2) inadequate modeling ability of parametric softmax classifiers under large intraclass variance; and (3) opaque process of classification decision. In this paper, we propose a novel classifier (called CenterSeg) customized for RSI semantic segmentation, which solves the abovementioned problems with multiple prototypes, direct supervision under Grassmann manifold, and interpretability strategy. Specifically, for each class, our CenterSeg obtains local class centers by aggregating corresponding pixel features based on ground-truth masks, and generates multiple prototypes through hard attention assignment and momentum updating. In addition, we introduce the Grassmann manifold and constrain the joint embedding space of pixel features and prototypes based on two additional regularization terms. Especially, during the inference, CenterSeg can further provide interpretability to the model by restricting the prototype as a sample of the training set. Experimental results on three remote sensing segmentation datasets validate the effectiveness of the model. Besides the superior performance, CenterSeg has the advantages of simplicity, lightweight, compatibility, and interpretability.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="publication-entry highlight-entry" id="paper-palms-tgrs">
+                <div class="publication-text">
+                    <p class="title"><span class="paper-title"><strong>Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</strong></span><span class="venue">[TGRS&#39;25]</span></p>
+                    <p class="authors"><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Wei Tang<sup>†</sup>, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman</p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a>
+                        <a class="badge-chip" href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/cui2025efficient.webp" alt="Figure for Cui et al., 2025" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Understanding the spatial distribution of palms in tropical forests is essential for ecological monitoring, conservation strategies, and the sustainable integration of natural forest products into local and global supply chains. However, the analysis of remotely sensed data are challenged by overlapping palm and tree crowns, uneven shading across the canopy surface, and the heterogeneous nature of the forest landscapes, which often affect the performance of palm detection and segmentation algorithms. To overcome these issues, we introduce PalmDSNet, a deep learning framework for efficient detection, segmentation, and counting of canopy palms. To model spatial patterns, we introduce a bimodal reproduction algorithm that simulates palm propagation based on PalmDSNet outputs. We used UAV-captured imagery to create orthomosaics from 21 sites across western Ecuadorian tropical forests, covering a gradient from the everwet Choco forests near Colombia to the drier forests of southwestern Ecuador. Expert annotations were used to create a comprehensive dataset, including 7,356 bounding boxes on image patches and 7,603 palm centers across five orthomosaics, encompassing a total area of 449 hectares. By integrating detection and spatial modeling, we effectively simulate the spatial distribution of palms in diverse and dense tropical environments, validating its utility for advanced applications in tropical forest monitoring and remote sensing analysis. The dataset can be accessed at 10.5281/zenodo.13822508, and the code to replicate the study is available at github.com/ckn3/palm-ds-sp.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="publication-entry highlight-entry" id="paper-s2dl">
+                <div class="publication-text">
+                    <p class="title"><span class="paper-title"><strong>Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</strong></span><span class="venue">[TGRS&#39;24]</span></p>
+                    <p class="authors"><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan</p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/cui2024superpixel.webp" alt="Figure for Cui et al., 2023" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Hyperspectral images (HSIs) provide exceptional spatial and spectral resolution of a scene, crucial for various remote sensing applications. However, the high dimensionality, presence of noise and outliers, and the need for precise labels of HSIs present significant challenges to the analysis of HSIs, motivating the development of performant HSI clustering algorithms. This paper introduces a novel unsupervised HSI clustering algorithm, Superpixel-based and Spatially-regularized Diffusion Learning (S2DL), which addresses these challenges by incorporating rich spatial information encoded in HSIs into diffusion geometry-based clustering. S2DL employs the Entropy Rate Superpixel (ERS) segmentation technique to partition an image into superpixels, then constructs a spatially-regularized diffusion graph using the most representative high-density pixels. This approach reduces computational burden while preserving accuracy. Cluster modes, serving as exemplars for underlying cluster structure, are identified as the highest-density pixels farthest in diffusion distance from other highest-density pixels. These modes guide the labeling of the remaining representative pixels from ERS superpixels. Finally, majority voting is applied to the labels assigned within each superpixel to propagate labels to the rest of the image. This spatial-spectral approach simultaneously simplifies graph construction, reduces computational cost, and improves clustering performance. S2DL’s performance is illustrated with extensive experiments on four publicly available, real-world HSIs: Indian Pines, Salinas, Salinas A, and WHU-Hi. Additionally, we apply S2DL to landscape-scale, unsupervised mangrove species mapping in the Mai Po Nature Reserve, Hong Kong, using a Gaofen-5 HSI. The success of S2DL in these diverse numerical experiments indicates its efficacy on a wide range of important unsupervised remote sensing analysis tasks.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        <!-- publications:journals:end -->
+        </div>
     </div>
     
     <div id="modal" class="modal" aria-hidden="true">
@@ -202,7 +233,144 @@
         <div class="section-header">
             <h2 id="conference-publications">Selected Conference Publications</h2>
         </div>
-        <div class="conference-grid" id="conference-publications-list" data-publication-section="conferences"></div>
+        <div class="conference-grid" id="conference-publications-list" data-publication-section="conferences">
+        <!-- publications:conferences:start -->
+            <article class="conference-entry" id="paper-lowrankarena-neurips">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</strong></span><span class="venue">[NeurIPS&#39;26, ED Track, Poster]</span></p>
+                    <p class="authors">Zishan Shao<sup>†</sup>, Lixun Zhang<sup>†</sup>, <span class="main-author">Kangning Cui</span><sup>†</sup>, Wenhao Wu<sup>†</sup>, Jinhee Kim, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Li</p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a>
+                        <a class="badge-chip" href="https://zishan-shao.github.io/lowrankarena/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">SVD-based low-rank compression has become a fast-growing direction for reducing the memory and computational cost of large language models (LLMs). However, meaningful comparison across existing studies remains difficult as prior evaluations use varied benchmarks, inconsistent ratios, and diverse setups, often failing to isolate low-rank effects from auxiliary techniques. As a result, it remains unclear whether reported gains reflect method-level improvements or differences in evaluation protocol. This lack of comparability highlights the need for a unified, reproducible evaluation platform. To address this problem, we present LowRankArena, a standardized evaluation platform for SVD-based LLM compression. LowRankArena unifies task versions, uniform-precision compression budgets, comparison regimes, and inference measurements, and provides a reproducible pipeline with over 3 TiB released compressed checkpoints. Using LowRankArena, our aligned audit of five representative SVD methods reveals that prior findings are highly conditional under standardized protocols: clear leaders and performance tiers shift across backbones and keep ratios, multiple-choice accuracy can hide large perplexity degradation, and nominal low-rank savings yield workload-dependent and often limited end-to-end speedups. Our code is available at: https://github.com/Zishan-Shao/lowrankarena.git.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry" id="paper-ecg-horizons-neurips">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</strong></span><span class="venue">[NeurIPS&#39;26, Poster]</span></p>
+                    <p class="authors">Wei Tang, Jinpei Han, <span class="main-author">Kangning Cui</span>, Mattia Carletti, Fredrik K. Gustafsson, Shreyank N Gowda, Patitapaban Palo, Anshul Thakur, Lei Clifton, Jean-Michel Morel, Raymond H. Chan, David A. Clifton, and Xiao Gu</p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Electrocardiogram (ECG) foundation models pretrained on typical diagnostic 10-second ECG segments, have demonstrated strong transferability across a range of clinical applications. However, many real-world applications produce recordings that are typically longer, and are varied in duration during inference time. These 10-second models have no built-in way to combine information across time. Extending them to longer horizons introduces two challenges: structural incompatibilities arising from input-length disparities, and semantic challenges that limit meaningful temporal aggregation. We propose a parameter-efficient framework that extends pretrained ECG foundation models to longer and variable-length ECGs without retraining the backbone. Guided by a frozen pretrained 10-second model, we introduce a lightweight plug-in module that extends the model in two complementary ways: (i) structurally compatible long-sequence processing and (ii) semantically informed temporal modeling. Experiments on multiple long-horizon ECG tasks, datasets, and foundation model backbones demonstrate that our method enables robust long-horizon extension from pretrained snapshot models, consistently outperforming sliding-window and pooling-based baselines with strong parameter efficiency.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry" id="paper-dpq-emnlp">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</strong></span><span class="venue">[EMNLP&#39;26, Findings]</span></p>
+                    <p class="authors">Zhen Yang<sup>†</sup>, Sizai Hou<sup>†</sup>, Kaiwen Zheng, Yaofang Liu, Liang He, Yixuan Chen<sup>*</sup>, and <span class="main-author">Kangning Cui</span><sup>*</sup></p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/dpq2026emnlp.webp" alt="DPQ uncertainty-preservation results for quantized language models" width="1600" height="681" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Post-training quantization can preserve model utility while distorting uncertainty and answerability behavior. This work introduces Doubt-Preserving Quantization (DPQ), a target-aware calibration-data selection strategy that chooses calibration strings before GPTQ- or AWQ-style quantization to better preserve the uncertainty behavior of the full-precision model. DPQ changes only the calibration data, leaves the quantizer kernel unchanged, and adds no inference-time overhead. Experiments compare distributional preservation across quantized language models and calibration strategies.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry collaborative-highlight" id="paper-decodeshare-icml">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</strong></span><span class="venue">[ICML&#39;26, Spotlight]</span></p>
+                    <p class="authors">Zishan Shao, Lixun Zhang, <span class="main-author">Kangning Cui</span>, Yixiao Wang, Ting Jiang, Hancheng Ye, Qinsi Wang, Zhixu Du, Yuzhe Fu, Fan Yang, Danyang Zhuo, Yiran Chen, and Hai Helen Li</p>
+                    <div class="badges">
+                        <span class="badge-chip">Top 2.2%</span>
+                        <a class="badge-chip" href="https://icml.cc/virtual/2026/poster/61072" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://zishan-shao.github.io/decodeshare/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/decodeshare_pipeline.webp" alt="Figure for DecodeShare" width="1500" height="324" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Large language models (LLMs) handle many tasks with one set of parameters, but under KV-cached inference it is unclear what task-general structure, if any, is used at decode time rather than during prefill. We propose DECODESHARE, a protocol that identifies a low-dimensional subspace that is consistently shared across tasks in decode-time hidden states, and then tests its causal role by removing that subspace only during decoding. In our experiments, disturbing the discovered shared subspace degrades decision performance far more than disturbing either a prefill-derived subspace or a random subspace under the same intervention budget. We further find that this decode-shared subspace overlaps common steering vectors, enabling a simple offline adjustment: projecting steering vectors away from the shared subspace can reduce template sensitivity while preserving non-random task utility, with task-dependent trade-offs. Despite being compact, the shared subspace can serve as a high-leverage causal channel at decode time.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry" id="paper-help-icmr">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection</strong></span><span class="venue">[ICMR&#39;26]</span></p>
+                    <p class="authors">Yangchen Zeng<sup>†</sup>, Zhenyu Yu<sup>†</sup>, Dongming Jiang, Wenbo Zhang, Yifan Hong, Zhanhua Hu, Jiao Luo, and <span class="main-author">Kangning Cui</span><sup>*</sup></p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://dl.acm.org/doi/10.1145/3805622.3810593" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2604.15065" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/zeng2026icmr.webp" alt="Figure for Learning Where to Embed" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Transformer-based detectors have advanced small-object detection, but they often remain inefficient and vulnerable to background-induced query noise. This work presents HELP, a noise-aware positional-semantic fusion framework that studies where to embed positional information by preserving positional cues in foreground-salient regions while suppressing background clutter. It introduces Heatmap-guided Positional Embedding for both encoder and decoder stages, combines it with a gradient-based mask filter for cleaner query retrieval, and integrates Linear-Snake Convolution to enrich retrieval-relevant representations. The result is a lighter detector that reduces decoder depth and parameters substantially while maintaining competitive accuracy under a reduced compute budget.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry collaborative-highlight" id="paper-cardiac-phase">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</strong></span><span class="venue">[MICCAI&#39;25, Oral]</span></p>
+                    <p class="authors">Yingyu Yang, Qianye Yang, <span class="main-author">Kangning Cui</span>, Can Peng, Elena D'Alberti, Netzahualcoyotl Hernandez-Cruz, Olga Patey, Aris Papageorghiou, and Alison Noble</p>
+                    <div class="badges">
+                        <span class="badge-chip">Top 2.1%</span>
+                        <a class="badge-chip" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2507.05154" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/yang2025miccai.webp" alt="Figure for Yang et al., 2025" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">The identification of cardiac phase is an essential step for analysis and diagnosis of cardiac function. Automatic methods, especially data-driven methods for cardiac phase detection, typically require extensive annotations, which is time-consuming and labour-intensive. In this paper, we present an unsupervised framework for end-diastole (ED) and end-systole (ES) detection through self-supervised learning of latent cardiac motion trajectories from 4-chamber-view echocardiography videos. Our method eliminates the need for manual annotations, including ED and ES indices, segmentation, or volumetric measurements, by training a reconstruction model to encode interpretable spatiotemporal motion patterns. Evaluated on the EchoNet-Dynamic benchmark, the approach achieves mean absolute error (MAE) of 3.0 frames (58.3 ms) for ED and 2.0 frames (38.8 ms) for ES detection, matching state-of-the-art supervised methods. Extended to fetal echocardiography, the model demonstrates robust performance with MAE 1.5 frames (20.7 ms) for ED and 1.7 frames (25.3 ms) for ES, despite the fact that the fetal heart model is built using non-standardized heart views due to fetal heart positioning variability. Our results demonstrate the potential of the proposed latent motion trajectory strategy for cardiac phase detection in adult and fetal echocardiography. This work advances unsupervised cardiac motion analysis, offering a scalable solution for clinical populations lacking annotated data. Code is released at https://github.com/YingyuYyy/CardiacPhase.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+            <article class="conference-entry highlight-entry" id="paper-palms-ijcai">
+                <div class="conference-text">
+                    <p class="title"><span class="paper-title"><strong>Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</strong></span><span class="venue">[IJCAI&#39;25, Oral]</span></p>
+                    <p class="authors"><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman</p>
+                    <div class="badges">
+                        <a class="badge-chip" href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a>
+                        <a class="badge-chip" href="https://arxiv.org/abs/2502.13023" target="_blank" rel="noopener noreferrer">Preprint</a>
+                        <a class="badge-chip" href="docs/posters/cui2025ijcai.pdf">Poster</a>
+                        <a class="badge-chip" href="docs/slides/cui2025ijcai.pdf">Slides</a>
+                        <a class="badge-chip" href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a>
+                        <details class="publication-details">
+                            <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Details</summary>
+                            <div class="publication-detail-content">
+                                <img class="publication-detail-image" src="figures/publications/cui2025ijcai.webp" alt="Figure for Cui et al., 2025" width="640" height="480" loading="lazy" decoding="async">
+                                <h3>Abstract</h3>
+                                <p class="publication-abstract">Palms are ecologically and economically indicators of tropical forest health, biodiversity, and human impact that support local economies and global forest product supply chains. While palm detection in plantations is well-studied, efforts to map naturally occurring palms in dense forests remain limited by overlapping crowns, uneven shading, and heterogeneous landscapes. We develop PRISM (Processing, Inference, Segmentation, and Mapping), a flexible pipeline for detecting and localizing palms in dense tropical forests using large orthomosaic images. Orthomosaics are created from thousands of aerial images and spanning several to hundreds of gigabytes. Our contributions are threefold. First, we construct a large UAV-derived orthomosaic dataset collected across 21 ecologically diverse sites in western Ecuador, annotated with 8,830 bounding boxes and 5,026 palm center points. Second, we evaluate multiple state-of-the-art object detectors based on efficiency and performance, integrating zero-shot SAM 2 as the segmentation backbone, and refining the results for precise geographic mapping. Third, we apply calibration methods to align confidence scores with IoU and explore saliency maps for feature explainability. Though optimized for palms, PRISM is adaptable for identifying other natural objects, such as eastern white pines. Future work will explore transfer learning for lower-resolution datasets (0.5–1m). Data and code can be found at github.com/Zippppo/PRISM.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        <!-- publications:conferences:end -->
+        </div>
     </div>
 
     <div class="content page-panel">
@@ -252,9 +420,7 @@
         </div>
     </div>
 
-    <script src="scripts/publications.js?v=20261003"
-            data-publications-data="data/publications.json?v=20261003"
-            data-publications-fallback="data/publications-fallback.js?v=20261003"></script>
+    <script src="scripts/publications.js?v=2026100302"></script>
 
     </main>
     <footer class="site-footer">

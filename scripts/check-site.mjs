@@ -14,7 +14,6 @@ const styleVersions = new Set();
 for (const [file, source] of html) {
     const list = [...source.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(new Set(list).size, list.length, `${file}: duplicate IDs`);
-    if (file === 'publications.html') list.push(...paperIds);
     ids.set(file, new Set(list));
     const version = source.match(/site\.css\?v=(\d+)/);
     assert.ok(version, `${file}: missing CSS cache version`);
@@ -44,9 +43,22 @@ const news = home.slice(home.indexOf('aria-labelledby="news"'), home.indexOf('<d
 assert.equal((news.match(/class="news-card"/g) || []).length, 4);
 assert.ok(home.indexOf('id="news"') < home.indexOf('id="featured-research"'));
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="positions"'));
-assert.match(home, /class="hero-role"><strong>Assistant Professor/);
+assert.match(home, /class="hero-role"><strong>Assistant Professor of Data Science<\/strong>/);
+assert.match(home, /class="hero-office">Office: AC4-422<\/p>/);
 assert.doesNotMatch(home, /<h[1-6][^>]*>Teaching\b|class="home-course-links"/);
 assert.equal((html.get('publications.html').match(/class="research-topic"/g) || []).length, 3);
+const research = html.get('publications.html');
+assert.doesNotMatch(research, /id="featured-research"|href="#featured-research"|publications-fallback/);
+assert.equal((home.match(/class="research-highlight"/g) || []).length, 3);
+const entries = [...research.matchAll(/<article class="(?:publication-entry|conference-entry)[^"]*" id="([^"]+)">([\s\S]*?)<\/article>/g)];
+assert.deepEqual(entries.map(entry => entry[1]), paperIds, 'Static paper order does not match the registry');
+for (const [, id, content] of entries) {
+    assert.ok(ids.get('publications.html').has(id), `Paper anchor is not in HTML: ${id}`);
+    assert.match(content, /<details class="publication-details">/, `${id}: missing no-script details`);
+    assert.match(content, /<summary [^>]*aria-label="View publication details: [^"]+">Details<\/summary>/);
+    assert.match(content, /<p class="publication-abstract">[^<]+<\/p>/, `${id}: missing static abstract`);
+    assert.match(content, /<a class="badge-chip" href="[^"]+"/, `${id}: missing resource links`);
+}
 assert.ok(!html.get('publications.html').includes('Unsupervised Diffusion and Volume Maximization-Based Clustering'));
 for (const feature of data.featured) assert.ok(paperIds.includes(feature.id), `Unknown highlight: ${feature.id}`);
 for (const paper of Object.values(data.selected).flat()) {

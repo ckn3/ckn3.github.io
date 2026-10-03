@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-// Pre-render shared highlights so the homepage also works without JavaScript.
+// Homepage highlights share the publication data but are not repeated on Research.
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/publications.json', root), 'utf8'));
 const papers = new Map(Object.values(data.selected).flat().map(paper => [paper.id, paper]));
@@ -8,8 +8,8 @@ const checkOnly = process.argv.includes('--check');
 const escape = text => text.replace(/[&<>"']/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[char]));
 const marker = /<!-- featured-research:start -->[\s\S]*?<!-- featured-research:end -->/g;
 
-for (const file of ['index.html', 'publications.html']) {
-    const prefix = file === 'index.html' ? 'publications.html' : '';
+for (const file of ['index.html']) {
+    const prefix = 'publications.html';
     const cards = data.featured.map(feature => {
         const paper = papers.get(feature.id);
         if (!paper) throw new Error(`Unknown featured publication: ${feature.id}`);
@@ -32,4 +32,4 @@ ${cards}
     if (checkOnly && generated !== original) throw new Error(`Outdated highlights in ${file}. Run npm run sync:publications.`);
     if (!checkOnly) await writeFile(url, generated);
 }
-console.log(checkOnly ? 'Featured research is synchronized.' : 'Updated shared research highlights.');
+console.log(checkOnly ? 'Featured research is synchronized.' : 'Updated homepage research highlights.');

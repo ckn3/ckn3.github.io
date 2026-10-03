@@ -61,7 +61,7 @@
                 url: siteRoot,
                 image: siteRoot + 'assets/og-card.png',
                 email: 'mailto:kangning.cui@cityu-dg.edu.cn',
-                jobTitle: 'Assistant Professor',
+                jobTitle: 'Assistant Professor of Data Science',
                 affiliation: [
                     {
                         '@type': 'CollegeOrUniversity',
