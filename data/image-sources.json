@@ -2,10 +2,10 @@
   "retrieved": "2026-10-03",
   "images": [
     {
-      "file": "figures/team/mallory-pitts.webp",
-      "source": "https://cdn.atriumhealth.org/-/media/wakeforest/school/files/research/wfirm/summer-scholars/scholars-profiles.pdf?hash=1F9A1A096FB8F76A1FDBC2CED8FB4A00&rev=ee920cd55c7a4f209f4cfae881c4e63b",
-      "page": 15,
-      "note": "Portrait beside Mallory Pitts's named profile in the official WFIRM 2024 Summer Scholars document. Extracted without cropping."
+      "file": "figures/team/mallory-pitts-linkedin.webp",
+      "source": "https://media.licdn.com/dms/image/v2/D4E03AQH736KHy1k4VQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709763410693?e=2147483647&v=beta&t=OEyO0y4_cuaqg7Qil_eN-7h67Q2glzcMg8vJ1FlJ-qc",
+      "profile": "https://www.linkedin.com/in/mallory-pitts-18778824b/",
+      "note": "LinkedIn profile avatar retrieved from the author's public post. Same original image ID as the former expired site URL; stored locally without cropping."
     },
     {
       "file": "figures/team/suraj-prasai.webp",

@@ -56,7 +56,7 @@ for (const paper of Object.values(data.selected).flat()) {
 assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-s2dl']);
 
 const team = html.get('team.html');
-assert.match(team, /src="figures\/team\/mallory-pitts.webp" alt="Mallory Pitts"/);
+assert.match(team, /src="figures\/team\/mallory-pitts-linkedin\.webp" alt="Mallory Pitts" width="400" height="400"/);
 for (const item of JSON.parse(fs.readFileSync(path.join(root, 'data/image-sources.json'), 'utf8')).images) {
     assert.ok(fs.existsSync(path.join(root, item.file)), `Missing localized image: ${item.file}`);
 }
