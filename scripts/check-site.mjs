@@ -104,10 +104,17 @@ for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 
     const source = html.get(`courses/${course}.html`);
     assert.deepEqual([...source.matchAll(/<strong>(\d+)%<\/strong>/g)].map(m => Number(m[1])), weights);
     assert.ok(source.indexOf('id="materials"') < source.indexOf('id="schedule"'));
-    const rows = source.match(/<tr><th scope="row">\d<\/th>[\s\S]*?<\/tr>/g) || [];
-    assert.equal(rows.length, 5);
+    const rows = source.match(/<tr><th scope="row">\d+<\/th>[\s\S]*?<\/tr>/g) || [];
+    assert.equal(rows.length, 6);
     for (const [index, row] of rows.entries()) {
-        assert.ok(row.includes(`-l${index + 1}.pdf`) && row.includes(`-t${index + 1}s.pdf`));
+        const week = index + 1;
+        assert.ok(row.includes(`<th scope="row">${week}</th>`) && row.includes(`-l${week}.pdf`));
+        const tutorial = `${course.toUpperCase()}-t${week}s.pdf`;
+        if (fs.existsSync(path.join(root, 'docs/courses', course, '2026a', tutorial))) {
+            assert.ok(row.includes(tutorial), `${course}: missing tutorial link for week ${week}`);
+        } else {
+            assert.match(row, /<td>Not posted<\/td><\/tr>$/, `${course}: unpublished tutorial needs a clear status`);
+        }
         assert.match(row, /class="material-topic">[^<]+<\/td>/);
     }
 }
