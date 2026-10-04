@@ -1,0 +1,1369 @@
+{
+  "settings": {
+    "widths": [
+      400,
+      800
+    ],
+    "quality": 82,
+    "method": 6
+  },
+  "images": [
+    {
+      "source": "figures/visits/Dallas2025.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 204544,
+      "sha256": "4a4cf971017ac8259ac6997fa77fb9464a86257a3c25b0d75853999c67779420",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/Dallas2025-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 25710,
+          "sha256": "eeeba07dc8366d236ce545821c299df492eb51d49ac737ebdd17b71a23141271"
+        },
+        {
+          "file": "figures/gallery-previews/visits/Dallas2025-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 78278,
+          "sha256": "3ee795e3413c6484d4cf035817a96e19fa321a4c17df24963c0b1229f18c3d44"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/ChapelHill2025.webp",
+      "width": 1600,
+      "height": 2134,
+      "bytes": 815408,
+      "sha256": "8164ed7bad7a5d84b017aaacdcd705b13dcf9f8ab75017f8c1bb0b6a9032d901",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/ChapelHill2025-400.webp",
+          "width": 400,
+          "height": 534,
+          "bytes": 67084,
+          "sha256": "c7246f0dab8e081b5fe5b465535e4f02f4e872491624188abd918e8b39cefabe"
+        },
+        {
+          "file": "figures/gallery-previews/visits/ChapelHill2025-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 252872,
+          "sha256": "ca8dad3186f1a88600f13e87af94d17fd0bba3414beb0a4128555d7b01486d39"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/oxford.webp",
+      "width": 1600,
+      "height": 1443,
+      "bytes": 137374,
+      "sha256": "77fa42b8b80f76ce71aa8cb6811cad6fc56e36c5c59c212a6cbf074609800791",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/oxford-400.webp",
+          "width": 400,
+          "height": 361,
+          "bytes": 24278,
+          "sha256": "8353f2b3fd7e6d1f8499545e2ad8753721eb0e1d90337f3d831b6e15f0123af4"
+        },
+        {
+          "file": "figures/gallery-previews/visits/oxford-800.webp",
+          "width": 800,
+          "height": 722,
+          "bytes": 58122,
+          "sha256": "00aecbe4603538f1ef18ae3f248486f96417ce2e5a94c537f057171c9879ba9c"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/WakeForest2023.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 299676,
+      "sha256": "9712fb54eed48741f397f578ca9ae88bd359e8be37cd249a74322b9eaa1a12a8",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/WakeForest2023-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 23288,
+          "sha256": "9f5abbc19f81948aa78934104efe3d230564b2174cac84d929cebaa804d187ac"
+        },
+        {
+          "file": "figures/gallery-previews/visits/WakeForest2023-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 82376,
+          "sha256": "dd666a04cdc8ea03019adfa3a552d4e10e331041f2616b74cff3746fbe4be662"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/RomeMoscow2020.webp",
+      "width": 654,
+      "height": 564,
+      "bytes": 42058,
+      "sha256": "1b28132618b588bcf00959dbb78f65c2fe3ff412a60177cb6358a71303d06f89",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/RomeMoscow2020-400.webp",
+          "width": 400,
+          "height": 345,
+          "bytes": 18878,
+          "sha256": "a0139338ab2a8c6d2ef2f604435eeb3c385972dd0835d56ed809ab29f893c9cf"
+        },
+        {
+          "file": "figures/gallery-previews/visits/RomeMoscow2020-654.webp",
+          "width": 654,
+          "height": 564,
+          "bytes": 38844,
+          "sha256": "fb5de4db02a794e48f95c271e669b49ba61eed87a1144d584a02f64e230be4ff"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/Delft2020.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 140570,
+      "sha256": "c50e6db6fd5451a1d2025035f1ec2787fa8d1a50142fbb252ae319c2e3521fc0",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/Delft2020-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 10360,
+          "sha256": "209dea3b652404dc8f1f8e369ed6c46d86d151acf5f8839e53e457c7accf035e"
+        },
+        {
+          "file": "figures/gallery-previews/visits/Delft2020-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 38524,
+          "sha256": "84cff88c28d14af046e78e7fbdd621750e7bac8775334066eadc80e4b425fc92"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/Beijing2019.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 117716,
+      "sha256": "510421c0d92491fafd684672b4508fb775521ddbc9674b0bd5386ce01c0da4bc",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/Beijing2019-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 14398,
+          "sha256": "29a372ade905e26d083046b95e9221767f737bad92c0cfc01e539bbc0f6f38d5"
+        },
+        {
+          "file": "figures/gallery-previews/visits/Beijing2019-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 39190,
+          "sha256": "1e96789515e7c3ed0a5df120ed1fb51f084a94ed6f213de497d3560aa6289d93"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/London2018.webp",
+      "width": 1600,
+      "height": 1070,
+      "bytes": 62306,
+      "sha256": "9a2bf4a455d21bc19e5174aaa9a29433563c27098bdd40d57d9332fe8299e3af",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/London2018-400.webp",
+          "width": 400,
+          "height": 268,
+          "bytes": 6214,
+          "sha256": "6dc4c6879cca8360b5ad0a10d92bd618e2894caa25a4610cf91c6d131b491bfc"
+        },
+        {
+          "file": "figures/gallery-previews/visits/London2018-800.webp",
+          "width": 800,
+          "height": 535,
+          "bytes": 19868,
+          "sha256": "9d34b00cabaec0b43dbc31fe600bdcc8e1c77394b9469651332a290caa9198fa"
+        }
+      ]
+    },
+    {
+      "source": "figures/visits/Beijing2018.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 274062,
+      "sha256": "4bf18d32a87f4d1c35afa22cc1d6e3ca36c2eaa4a7a28459326b4a0dcfe99155",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/visits/Beijing2018-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 19714,
+          "sha256": "31dbef659ff75622cf5ca6e3542a7d81e0ca52fba326d3e74a7f6928dda44121"
+        },
+        {
+          "file": "figures/gallery-previews/visits/Beijing2018-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 73082,
+          "sha256": "8e651de4cd500beae07bfdc93e9a6aece8fc0adcee9e19adcce0750f2a33e96f"
+        }
+      ]
+    },
+    {
+      "source": "figures/others/clement-5yr.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 137802,
+      "sha256": "49c1dd098f8b4f6bd628680f614b6d768bfd26daee0929938ecd994feb3c7e3a",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/others/clement-5yr-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 14490,
+          "sha256": "071fbadf88ad027da0676300f960a0ddfc0ac3f9f58ea0a8509a9d86bdbde681"
+        },
+        {
+          "file": "figures/gallery-previews/others/clement-5yr-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 41558,
+          "sha256": "7afe3dfa62ff8a11b84cb1cbe8111b5e69a52512dd17ef24fc95627a33a8b4df"
+        }
+      ]
+    },
+    {
+      "source": "figures/others/clement-4yr.webp",
+      "width": 765,
+      "height": 839,
+      "bytes": 73842,
+      "sha256": "ece92e7a5d8428d3fc8bc54eb7b83a5008ed7ce7a4eef1f6415212190529ef12",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/others/clement-4yr-400.webp",
+          "width": 400,
+          "height": 439,
+          "bytes": 22624,
+          "sha256": "4a9ed8bd348c09c1075f03b6d94a6442d970c6c48d276f8c0d08b0cda90e697b"
+        },
+        {
+          "file": "figures/gallery-previews/others/clement-4yr-765.webp",
+          "width": 765,
+          "height": 839,
+          "bytes": 69746,
+          "sha256": "6d66628caaa441786ba7b1a238b722cddebe738ed9f009393f72fb61120820a6"
+        }
+      ]
+    },
+    {
+      "source": "figures/others/clement-3yr.webp",
+      "width": 1600,
+      "height": 2134,
+      "bytes": 244086,
+      "sha256": "82431de0661860d5ad886355e95646c8d76dd5ffa24b47da4c8514b9616f7dc8",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/others/clement-3yr-400.webp",
+          "width": 400,
+          "height": 534,
+          "bytes": 26610,
+          "sha256": "667761d9722c5db3aa6f3ec4c7ec8a8fcad9a675daa4bd18d94181a62b15330c"
+        },
+        {
+          "file": "figures/gallery-previews/others/clement-3yr-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 75886,
+          "sha256": "a3074d75125383f640d06e2ab8866b6c21a996d1e7f6449ee1b799d008093a68"
+        }
+      ]
+    },
+    {
+      "source": "figures/others/clement-3mo.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 66820,
+      "sha256": "79688424d9476a0fa7cf19d664fef276238381111384359e7a1ec0fd2128cd86",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/others/clement-3mo-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 8886,
+          "sha256": "3a717b22874e403cfbbe1b6daf08377e6b8014ad62af730df39072d9643ce1f8"
+        },
+        {
+          "file": "figures/gallery-previews/others/clement-3mo-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 22354,
+          "sha256": "85cafefa7d08d055a388434df198740a4a1e7ab9a421c657142ec0166932ec4b"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/datong-july-2025.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 161244,
+      "sha256": "c757197f30eb4e11488f28b0cceae2c9211a25a21217e87b415d1831e743130e",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/datong-july-2025-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 15726,
+          "sha256": "6a2c3a7270168a142096c4f418612ff056bad30d3a271e42bf4fbef354181527"
+        },
+        {
+          "file": "figures/gallery-previews/travel/datong-july-2025-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 50548,
+          "sha256": "72e4a7f435a7fea52beb8e21f0ddd175c0a7b68cbaa9d5f12c963ecaa4f70564"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/merzouga-dunes-sunset-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 40658,
+      "sha256": "965dbffda0622bfd5fadca959a12b3e6ac4f01ce1b5584977952b974b540f8f8",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/merzouga-dunes-sunset-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 3734,
+          "sha256": "837e0347e4ffc6e09f2772750f7413cd4899b523c2a0a54964342ead01732377"
+        },
+        {
+          "file": "figures/gallery-previews/travel/merzouga-dunes-sunset-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 10824,
+          "sha256": "f8c8d04b3fc4d1c4632268305076d3a8c98efeec4e6d5403e15fd25982790d4c"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/ait-ben-haddou-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 599894,
+      "sha256": "be730bc4e37849d069a5855439c94c019d28479de2674743a9b18aac61c3e04b",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/ait-ben-haddou-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 39548,
+          "sha256": "14bcb8a3290e1285de7773558271c7f4bee60b12d468505ba5fca273c7c52523"
+        },
+        {
+          "file": "figures/gallery-previews/travel/ait-ben-haddou-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 161774,
+          "sha256": "8a66f75c8011e4d09593f17e820d1975bb13aaf1f91d088aef275c9cb7e962a9"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/tizi-n-tichka-snow-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 341480,
+      "sha256": "948067cbf662a01484303144fe5062c476a6a92ca9ca64a5540b6774f2fcd00b",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/tizi-n-tichka-snow-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 20798,
+          "sha256": "db8f1ce2f34fe670ab529ba18e6d8b85164ffb706a86f586d507a60800331886"
+        },
+        {
+          "file": "figures/gallery-previews/travel/tizi-n-tichka-snow-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 85364,
+          "sha256": "5b2725870a1b5de394eaf08db541826b669b06399085be888c0c78162b8821a8"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/tizi-n-tichka-group-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 178002,
+      "sha256": "fe583c46f2ee41694a7fa9d1e77d0d7f9ee3d6bdb64bd9aab271868cbc53c9f1",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/tizi-n-tichka-group-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 20526,
+          "sha256": "55827faffdbfe6f2268e71f2533d88787eb75581562115e81f48806251696e8a"
+        },
+        {
+          "file": "figures/gallery-previews/travel/tizi-n-tichka-group-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 55768,
+          "sha256": "0ee252808e33819e3f7f5140576da4f014e3cda2c87aa729f5fc50836c524045"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/high-atlas-sleeping-dog-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 348830,
+      "sha256": "d437575ca1bba3b20579b28ee19a77e4fbad6acb5a35de91fdd18f96d2e50412",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/high-atlas-sleeping-dog-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 33300,
+          "sha256": "20af346b8388033048a26c2efd035d5c2722edaeff4180bc2757f93348bc201e"
+        },
+        {
+          "file": "figures/gallery-previews/travel/high-atlas-sleeping-dog-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 120502,
+          "sha256": "031fbe7d3c8ce99466099b5174f5ae33554b192dd83e2219b1f40a5232d79c7e"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/high-atlas-roadside-dogs-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 219452,
+      "sha256": "229c7019a2b6f3ef866661d133dc6cd65029adb6dce8b55e0a2bc7adcf6071a4",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/high-atlas-roadside-dogs-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 18804,
+          "sha256": "111ea0d1e4649b2ca38e112b3ce2fc82e9ed3801e4c3dfc580a0ba9346924706"
+        },
+        {
+          "file": "figures/gallery-previews/travel/high-atlas-roadside-dogs-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 60712,
+          "sha256": "fc7bffe5cdc3d89aa4400d0b0d52314f150a797e88e0ea341a322b8dd861e611"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/koutoubia-mosque-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 514432,
+      "sha256": "8e1f4b36e4402298c0e904202da10167dcb9c7d95b3d8a9043422aa8d7bcbe80",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/koutoubia-mosque-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 32538,
+          "sha256": "472c9dcc2494a071d9560a4c0e005e45ca680d769b038231c7716be01fd8b29f"
+        },
+        {
+          "file": "figures/gallery-previews/travel/koutoubia-mosque-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 129326,
+          "sha256": "342c227c691f8762beece4c22e6f762ccb09bdc2f3a1ddefa415208d710213e3"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/giants-causeway-coast-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 394920,
+      "sha256": "953e31f60f88408d4c94ac81a000915521ecaa2bb5bae74babe117a8bd4154cc",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/giants-causeway-coast-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 38966,
+          "sha256": "808f83cd35254c02b0fed886030c63f7c367e192197c85c35929d46a8d4dfaf3"
+        },
+        {
+          "file": "figures/gallery-previews/travel/giants-causeway-coast-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 132562,
+          "sha256": "1a4277bd47fdd3ea53191ba60dd7902ce4fc94cae68070d7a9b5a3acdf7ee7a2"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/dark-hedges-december-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 691556,
+      "sha256": "fb159a325f5c6d3399460858f542338b32182a9904c5ae1eac09f9842391c330",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/dark-hedges-december-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 49802,
+          "sha256": "f25ef4ae85e5554d4e429e1ebcec41fd413336fb27b0f8413be01f93d62537a0"
+        },
+        {
+          "file": "figures/gallery-previews/travel/dark-hedges-december-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 192948,
+          "sha256": "60e07e6e52c5a7bac0b97be3eec252050e8bc40950fd14991c2770e2f7c8e030"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/big-ben-street-october-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 230482,
+      "sha256": "41f46fb8a8b501680de2bdb913455a7e496520ecedf83e99634c80e0d87c7858",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/big-ben-street-october-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 34878,
+          "sha256": "e8ee0832a403cc667ae9c296e0e8926e6081c7cf044464f885581721a8355565"
+        },
+        {
+          "file": "figures/gallery-previews/travel/big-ben-street-october-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 101090,
+          "sha256": "adb746245805f82aca3527d54e9e07c201243e608bd4cf29aa80af30f58b66e6"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/big-ben-sunset-october-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 141728,
+      "sha256": "7980233de55513b38b3da960c001b8174b2f4f39b610524fc600f85545d8ed30",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/big-ben-sunset-october-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 14306,
+          "sha256": "fc301b9509c9db100f22cb125892fcbb2fcec0f3561bb0cc2f827cfa17bde04e"
+        },
+        {
+          "file": "figures/gallery-previews/travel/big-ben-sunset-october-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 43304,
+          "sha256": "2d7ee416efbfc2248d32c363b048035e18043c53cc1da8b0d34e47ca61500b81"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/peak-district-september-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 131438,
+      "sha256": "f7912fa058e13435dfa2a528de67d0c6fa0d760ac8383ef464e3dbfb3fe3b684",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/peak-district-september-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 20536,
+          "sha256": "0a53bb1727f50bae616d4a2d8d13b577fc5b4505fa41eb0cae6d695cc826f902"
+        },
+        {
+          "file": "figures/gallery-previews/photography/peak-district-september-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 55738,
+          "sha256": "8527e5aed03af5e9c7ab65e8bb1cdb6c83ed6b37b4dd6e3b5af87286f9a40e1e"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/wast-water-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 475480,
+      "sha256": "61463475e099c0d11b58656529a3898eb5291bb13c4996230007e2bc4d4b552c",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/wast-water-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 25526,
+          "sha256": "0dfdce133d128f7e828424e7a4ad6580cc464dd7fc7b805fe3fa3f2d9b49c378"
+        },
+        {
+          "file": "figures/gallery-previews/photography/wast-water-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 118326,
+          "sha256": "2cc584376f8a08726587faf2ddbacac9f7c8866e8c4f9ff82a22a322ac4fe265"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/keswick-mountain-september-2024.webp",
+      "width": 900,
+      "height": 1600,
+      "bytes": 236728,
+      "sha256": "70f1d0a38207337d3f8b2c321a16887fccce335d309672dc2a71a8220d6fabe2",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/keswick-mountain-september-2024-400.webp",
+          "width": 400,
+          "height": 711,
+          "bytes": 44828,
+          "sha256": "f2970890354919fbb08538e491c10068fdcb761b584d7fbf08691b5065976bce"
+        },
+        {
+          "file": "figures/gallery-previews/photography/keswick-mountain-september-2024-800.webp",
+          "width": 800,
+          "height": 1422,
+          "bytes": 139800,
+          "sha256": "5699758bb9b29f2ef0c4014b0d4b949b85056a1e40fabad7955f68982b8a2048"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/stonehenge-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 205004,
+      "sha256": "7169ae4fb265ceadbae4e76bf844d9a01501f072b5774968a1418e708c15483e",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/stonehenge-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 12728,
+          "sha256": "36a9fc4ac8264868018948246752943d8143443bb555d0ad4a240791e973caba"
+        },
+        {
+          "file": "figures/gallery-previews/travel/stonehenge-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 49780,
+          "sha256": "6010a7ad68b23987c06225de2be3627a7e93bcb43a03f8caf3e474b2266d2192"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/seven-sisters-cliffs-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 116822,
+      "sha256": "ba960d33368a5f7881761f8d5bee9a14dc5bc928c1ab345d7fe6eb256e4eebd4",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/seven-sisters-cliffs-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 7212,
+          "sha256": "a0cb249f3ff343565071b2ac975ee510978547d9bba0d86a5877219c975e1db1"
+        },
+        {
+          "file": "figures/gallery-previews/travel/seven-sisters-cliffs-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 29380,
+          "sha256": "3bdf618777dc03d4dac7fa5be36ca3243fa5f501bbc487130576705f33894f4d"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/seven-sisters-walk-september-2024.webp",
+      "width": 1600,
+      "height": 901,
+      "bytes": 120008,
+      "sha256": "eceb196368c84246a8dc48d463d5fe60ff5b1cc236546f5a2d3178b7032ae85f",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/seven-sisters-walk-september-2024-400.webp",
+          "width": 400,
+          "height": 225,
+          "bytes": 8384,
+          "sha256": "5a16fe350391d5d03ed7ba283d9fb42cff13f632946a2d28e10234a35b5f9b65"
+        },
+        {
+          "file": "figures/gallery-previews/travel/seven-sisters-walk-september-2024-800.webp",
+          "width": 800,
+          "height": 451,
+          "bytes": 28050,
+          "sha256": "12992c14e75f0366fc7d7893b4cc66d706bd208435f8bb1a12cb03844847cf8a"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/bibury-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 564826,
+      "sha256": "f953f0b2749f2ac418b6d289fa93d0e5a83bd2eace218807260cd955a1fc491c",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/bibury-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 34920,
+          "sha256": "b4c90a6934c4f83222e1e3eaa73115c906cff833b7e17559f98b36cee1080d3b"
+        },
+        {
+          "file": "figures/gallery-previews/travel/bibury-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 143598,
+          "sha256": "f518ee47e96a61ed5929ed9f813dcdaa4adf30e1dc0e57e6dc6f83ce862fcef6"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/cotswold-motoring-museum-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 238234,
+      "sha256": "599bc1b697978ef02a758e4729192fb656b90a5c139f7eb6ad4ae45899b430ba",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/cotswold-motoring-museum-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 24470,
+          "sha256": "8bf688fbd5c04229f1b532d62eabb2b3c3a078a461f6432862d92596e3e36746"
+        },
+        {
+          "file": "figures/gallery-previews/travel/cotswold-motoring-museum-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 74364,
+          "sha256": "323afbb3d00a2930d744c453f6f70cf3c69f7288f67bf6aa1a761af16e4a996c"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/orange-isle-changsha-july-2024.webp",
+      "width": 1600,
+      "height": 1142,
+      "bytes": 154498,
+      "sha256": "a17f8e9d4e7ec25f5aadf490362624778ae54c16df0c36f9cd22c9d486dd9ba4",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/orange-isle-changsha-july-2024-400.webp",
+          "width": 400,
+          "height": 286,
+          "bytes": 14150,
+          "sha256": "ca90efe468d43a1369bbaa7ac2e1892e3356d61cfaa4cc0db7cf6963f019e119"
+        },
+        {
+          "file": "figures/gallery-previews/travel/orange-isle-changsha-july-2024-800.webp",
+          "width": 800,
+          "height": 571,
+          "bytes": 46294,
+          "sha256": "6bb366227316da2a03607a4a6ec8131f2b964787b793e97744655892ade1f33f"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/okinawa-july-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 87222,
+      "sha256": "d00cbaa1f5e7a3defda4bbe22057dfd4126e60752174653046486d6645dd1e0c",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/okinawa-july-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 15644,
+          "sha256": "850ae7d936cbbce1459607ecb923ff90033c96ae5d5485eaf5d6b40661361a02"
+        },
+        {
+          "file": "figures/gallery-previews/travel/okinawa-july-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 38698,
+          "sha256": "74850b8487de30df9178a05d015e71d448ebd9e95a40289bdfb07f758f71a0f8"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/shuri-castle-lion-july-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 221412,
+      "sha256": "bdb0e2f7e2ddd6ae5dbd603aee1bf7670f35de463fe3e633526b44b82df39fc8",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/shuri-castle-lion-july-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 18854,
+          "sha256": "0197f81da3cb5279546cc3d0b51ea7f3bc348ea6e94aa714cf8a0ab53f158889"
+        },
+        {
+          "file": "figures/gallery-previews/travel/shuri-castle-lion-july-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 62672,
+          "sha256": "374ae90f33a6165e776cf81ae52cbd4aab1603a3a1d3a6d1fa4edcb4f865ccdd"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/shuri-castle-walls-july-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 678858,
+      "sha256": "6882b8284c6a94bcdd99ca877809ed342cdd67083eb886c01402e42d21415655",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/shuri-castle-walls-july-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 40370,
+          "sha256": "47c0babb2c5d5341d73545dd70318231ef28655b4724080859e827eaf8401863"
+        },
+        {
+          "file": "figures/gallery-previews/travel/shuri-castle-walls-july-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 171204,
+          "sha256": "d33b5dd51c61838433a8deec4d18d395e352fed03af810d1eeaef923c2fcab1a"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/pattaya-beach-june-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 337828,
+      "sha256": "71b09e5142b6dc2e5f23ef7c2af6a9a4c624acdfe7249fa0f4ad6b8d2fa8bab2",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/pattaya-beach-june-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 26610,
+          "sha256": "3218d76bea78bd4606ec8a1d27ed11fb966ae539b51687766f0c097d44db0b46"
+        },
+        {
+          "file": "figures/gallery-previews/travel/pattaya-beach-june-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 95058,
+          "sha256": "77eaaa0fc682883024acbf9f7a22807551c54fe0a75b02d2ae2b6faeea087720"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/long-beach-summer-2023.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 188300,
+      "sha256": "3ca28e2960b379c8ce95a51a314548f6b0c45e59052b7516855466bdf3a21ba3",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/long-beach-summer-2023-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 15940,
+          "sha256": "a3be5a3cd0c357c8347c95b2c5a47efb34d58bb7ba993ccd4fbe332d085d6ee3"
+        },
+        {
+          "file": "figures/gallery-previews/travel/long-beach-summer-2023-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 52250,
+          "sha256": "f37acbe9441d1f1ac751401fcfc94aefd447a3b25b3c555546f139b2c40fe2bd"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/antep-oxford-january-2025.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 308784,
+      "sha256": "e913814025e2e5d2686e7f0fcbac1751a9acdffa7513421023786ed4f8e887c5",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/antep-oxford-january-2025-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 34512,
+          "sha256": "cd60f9d65694c120c9621a59b163ca4470f0c84d92e7630b6102f055bcca52bd"
+        },
+        {
+          "file": "figures/gallery-previews/food/antep-oxford-january-2025-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 103374,
+          "sha256": "53b7f047833951c26421975d1a1da9a293012207df755e6c2338a985775a6e51"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/shiraz-oxford-june-2025.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 303634,
+      "sha256": "1c5347c54c063a1ccb3491293c239bf22b8ffe711e6a1fd74e08c9e57da59cb0",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/shiraz-oxford-june-2025-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 54082,
+          "sha256": "edf08d44f22514d375367c6ed9527a0f90d2b789683470ee9a37bac1215ffc6f"
+        },
+        {
+          "file": "figures/gallery-previews/food/shiraz-oxford-june-2025-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 139546,
+          "sha256": "b5472d5b534f713e6ae19e123af0133cde2701bbbdfd0502b1802ae5014a9b25"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/beigel-bake-london-june-2025.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 173636,
+      "sha256": "f4ea877c13263b1a8c2c2cd8e54f40a44561d29980c4f9af9fc8c3c0f98e3ba2",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/beigel-bake-london-june-2025-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 29650,
+          "sha256": "0457837f87dedd0bba6b2fda2d1838a4abc5944124c7a02dcec5198370fd09f9"
+        },
+        {
+          "file": "figures/gallery-previews/food/beigel-bake-london-june-2025-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 73264,
+          "sha256": "79d5e08909b2e007a278d2ece46e4eae7baa9803eecb324b17fe156e82f881ba"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/chang-an-club-august-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 234456,
+      "sha256": "53a340ec8b109bb4746b7c804ce0601d1720ba4829feba27a5e85d924b62e448",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/chang-an-club-august-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 24298,
+          "sha256": "27101d731eef010d34cd051b6350a9dc8dd014f736c7a4aae6012f53f31db52c"
+        },
+        {
+          "file": "figures/gallery-previews/food/chang-an-club-august-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 74080,
+          "sha256": "35635cf90972ae0e5e901ddb2b358991417235f695982a3ab229b8628cec23e5"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/xian-abalone-baiji-flatbread-february-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 137680,
+      "sha256": "31aa8baa4acb2ecd73f61a95a2b31ad0b8297257f6ef53e48c06addceb9a51ae",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/xian-abalone-baiji-flatbread-february-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 25448,
+          "sha256": "07f57a42e253a48aa25b59c5d7b6057e3be407aeb6fea82b3d00572c8f4eb2d8"
+        },
+        {
+          "file": "figures/gallery-previews/food/xian-abalone-baiji-flatbread-february-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 64284,
+          "sha256": "2782fd8224431d97ff3c28d0eb30313e75173331b448563fcc3afa872243ad6f"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/macau-golden-snowflake-beef-december-2023.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 94052,
+      "sha256": "14ea8db9bc82324bb2cc5e6ca7f18ee16c91dead310332a55407ff6a37bf3662",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/macau-golden-snowflake-beef-december-2023-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 12520,
+          "sha256": "b251c447e2c50969be633ae4836ae9376cbfb440d4545645e919e11a02a80883"
+        },
+        {
+          "file": "figures/gallery-previews/food/macau-golden-snowflake-beef-december-2023-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 31498,
+          "sha256": "0135a8e989a1eaa6dc1785f3c6a12cf599ea19521daed74a72df1ef6ca460004"
+        }
+      ]
+    },
+    {
+      "source": "figures/food/yangzhou-fried-rice-2023.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 191172,
+      "sha256": "d466608c984555163070268c4ac81ea8fdd73e5b6d015a747d59dc1c1ad0c20f",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/food/yangzhou-fried-rice-2023-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 17916,
+          "sha256": "38d3c80fb29c8f7d8793d6e6348e860b7cccc1338c20dc38770e86d9e93196a7"
+        },
+        {
+          "file": "figures/gallery-previews/food/yangzhou-fried-rice-2023-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 52738,
+          "sha256": "94e0fcaa074af4916a9dcf76b6db5296dd1b34455d0f9293a1a4bdba4d53e5c2"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/tower-bridge-june-2025.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 489242,
+      "sha256": "3ae8138b7d1a0f789d0d63b37cef19f88185413ef8abaaee01da984a78fc1051",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/tower-bridge-june-2025-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 37182,
+          "sha256": "3c0b460022027199bc2f9431fd9ffef26a90e4351fe05cf3366ada0d937d5e34"
+        },
+        {
+          "file": "figures/gallery-previews/photography/tower-bridge-june-2025-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 141312,
+          "sha256": "d724ccc4c51ab69dd10285018d5570e7b9c1ce5185f519af9e69abda156161f6"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/hyde-park-swan-june-2025.webp",
+      "width": 1279,
+      "height": 1319,
+      "bytes": 299740,
+      "sha256": "45326c318609d62518016032419460be5f2c0c6470474a6886bf1b879cfe3bbe",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/hyde-park-swan-june-2025-400.webp",
+          "width": 400,
+          "height": 413,
+          "bytes": 35762,
+          "sha256": "7c764c6447995bcebf10a75e81f8f6ca710e5be92b0f4032af846ad337becfd0"
+        },
+        {
+          "file": "figures/gallery-previews/photography/hyde-park-swan-june-2025-800.webp",
+          "width": 800,
+          "height": 825,
+          "bytes": 109878,
+          "sha256": "855775114e23607ab8de0f108410b375bb78f2f11f3589ebd34005a945941c8c"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/london-streets-june-2025.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 276570,
+      "sha256": "a3ac12ee7e2648790f4f9998da74ee69cffb52ea1acaec4abb2c83a8c207439b",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/london-streets-june-2025-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 44850,
+          "sha256": "dc152aaa4daa438a37228d055b7583da94133b8c495ac059fbaff42625445451"
+        },
+        {
+          "file": "figures/gallery-previews/photography/london-streets-june-2025-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 127476,
+          "sha256": "df33a7735d0bab743c31a65915f55aea0e906c1d79ca8b005c6ef2815c4fb980"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/oxford-halloween-fog-october-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 78958,
+      "sha256": "7989171fb0d61f57305ba83f9839c7c0c9c9f4a3c169b9604e67dd2893d541a3",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/oxford-halloween-fog-october-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 11002,
+          "sha256": "f01f3fac8d2a0bd82cbc217c494bc9d3d6a323f38157518961ebb7a4e91b1b6d"
+        },
+        {
+          "file": "figures/gallery-previews/travel/oxford-halloween-fog-october-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 29104,
+          "sha256": "e26e63b20e8b818e561c17ac156d9ab0662bfdc3558f927d648c5dd45fda6a82"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/oxford-ambulance-september-2024.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 513942,
+      "sha256": "0924682fb99e1b91668deb0eb7cba48f465d097f7637e874f060e844dcb6df10",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/oxford-ambulance-september-2024-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 61088,
+          "sha256": "68f25d860023e93b997b082e5f2b0166c4cc81fbaba5d4e765d9395dce9b688c"
+        },
+        {
+          "file": "figures/gallery-previews/travel/oxford-ambulance-september-2024-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 215390,
+          "sha256": "ba7d541d591ae4e4e94f9fc154c32a4bc9c3e470281c5570dd9c00dc47c56f6b"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/ashmolean-porcelain-september-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 399024,
+      "sha256": "879600ca10f2426793a0a59523460f6bd93ad9cf35a37d159062c547e808cc51",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/ashmolean-porcelain-september-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 39040,
+          "sha256": "13a9936cc02c352ba303403cf9f87ae1263424de4c73436593ba1e1364015829"
+        },
+        {
+          "file": "figures/gallery-previews/photography/ashmolean-porcelain-september-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 126648,
+          "sha256": "190ff7dc721421239f1254d3357b394852f819ae1c577cee41f39642fc70c572"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/taiwan-strait-july-2024.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 916748,
+      "sha256": "66e1e7a5b23327c462c72e90c1dd15dcc8cc25f6515b1b53aeceae45c81de7c5",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/taiwan-strait-july-2024-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 49230,
+          "sha256": "531ed9f9eabb745f28785bce0be833dbb367f568a3f0fac88b452d758a4bd43a"
+        },
+        {
+          "file": "figures/gallery-previews/travel/taiwan-strait-july-2024-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 216324,
+          "sha256": "17d814340265a77f80fa47dbd732f8dc56262b6f42dc5bb9d574f1362cfc5f30"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/hong-kong-sunset-december-2023.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 124356,
+      "sha256": "59f338236b88dad73d1ed7fc34f7b0ba34f4f36c5f688684089f88c32ca53f87",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/hong-kong-sunset-december-2023-400.webp",
+          "width": 400,
+          "height": 300,
+          "bytes": 11128,
+          "sha256": "b287396015f3a6dfe7e94cfb5cb574c8dfaaa8dad3158b1bf079d149bc23dacc"
+        },
+        {
+          "file": "figures/gallery-previews/travel/hong-kong-sunset-december-2023-800.webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 33314,
+          "sha256": "da8fcf46e5c37cc4d6f556f77ba52b9bc0d2c7bd34c45095f1ef6507bfd9b7dd"
+        }
+      ]
+    },
+    {
+      "source": "figures/travel/macau-tower-december-2023.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 365406,
+      "sha256": "679d00f59776eb352931248d7c47d26af38d9b6a445e7222acacebac3de7af98",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/travel/macau-tower-december-2023-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 50074,
+          "sha256": "ab1d35d4a3f48e223c5ca6d8ce89ea145e87372124249db65c3841087aa92394"
+        },
+        {
+          "file": "figures/gallery-previews/travel/macau-tower-december-2023-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 160494,
+          "sha256": "ed492c5744cd6ecbba1cebfbc8c5d4b20c37225075b1de5c50f7fd76b1620e83"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/jellyfish-pine-knoll-shores-2023.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 79046,
+      "sha256": "1237f26d768493a613236b5e8879ceddf5d08cb6555480870a4457f21e094543",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/jellyfish-pine-knoll-shores-2023-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 13718,
+          "sha256": "d9d1f0b50c398de683b14e319ef70f4a0f98b30a1a5534f4d7f4326013dedcca"
+        },
+        {
+          "file": "figures/gallery-previews/photography/jellyfish-pine-knoll-shores-2023-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 35226,
+          "sha256": "a471741578b4f6e800095f3651470deaf8d6a6076f25cdebfa60288c6e209e19"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/cookie-2023-02.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 339682,
+      "sha256": "1e2403ae4e049f09a58c26ba6710f948f60be9730c6b3d2db049e49fc1db669a",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/cookie-2023-02-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 56282,
+          "sha256": "6af99c9704a6f9a8306178b645361539b6f6e1a58b19f5f3479c3925e825c012"
+        },
+        {
+          "file": "figures/gallery-previews/photography/cookie-2023-02-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 152812,
+          "sha256": "42d6e9d7ff9706f8cb499379082203eea6495bc7ee5aef8fdbd79f99076974b8"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/cookie-2023-01.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 165578,
+      "sha256": "b4f2aa9ca5c1e1655cf97793045f50c1dfa739bcf5db51325027c61c45b1563f",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/cookie-2023-01-400.webp",
+          "width": 400,
+          "height": 533,
+          "bytes": 29864,
+          "sha256": "b9d87f6a96149f51127a3b0e3acee6feb9e752b1bb758ff372e5c5b3e1dacbc4"
+        },
+        {
+          "file": "figures/gallery-previews/photography/cookie-2023-01-800.webp",
+          "width": 800,
+          "height": 1067,
+          "bytes": 76412,
+          "sha256": "dda2c7bd17444367e95a4a56a36285b467ff1bc2064dd87033c203682766e0e9"
+        }
+      ]
+    },
+    {
+      "source": "figures/photography/hong-kong-los-angeles-flight-2023.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 17344,
+      "sha256": "05d6064bc5cf9f6bd66f6529f1963a9a70edc902f344900347bb36007121ef09",
+      "variants": [
+        {
+          "file": "figures/gallery-previews/photography/hong-kong-los-angeles-flight-2023-400.webp",
+          "width": 400,
+          "height": 225,
+          "bytes": 1370,
+          "sha256": "1a2fef2792b41f6b5a598ad5797c964571652fb5f872b63d6cc24179a89481d5"
+        },
+        {
+          "file": "figures/gallery-previews/photography/hong-kong-los-angeles-flight-2023-800.webp",
+          "width": 800,
+          "height": 450,
+          "bytes": 3464,
+          "sha256": "ff105b7248ef8d5eb655fefa77a125596088f8556e0da06ab673b0316d94eaee"
+        }
+      ]
+    }
+  ]
+}

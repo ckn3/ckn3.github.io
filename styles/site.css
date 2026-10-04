@@ -2842,7 +2842,7 @@ body:not(.gallery-page) .page-header::before,
 }
 
 .research-page .modal-links {
-    margin-top: 18px;
+    margin: 0 0 20px;
 }
 
 .research-page .modal-links[hidden] {
@@ -4007,6 +4007,15 @@ body.modal-open {
 .research-highlight h3 a:hover { color: var(--cityu-purple-deep); }
 .research-highlight-contribution { margin: 0 0 14px; color: var(--muted); font-size: 1rem; }
 .research-highlight-venue { margin: auto 0 0; padding-top: 4px; font-weight: 600; color: var(--cityu-purple-deep); }
+.research-highlight-role { margin: 3px 0 0; color: var(--muted); font-size: 0.94rem; }
+
+.conference-reviews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; margin: 0; }
+.conference-reviews > div { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 16px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.conference-reviews dt { font-weight: 600; }
+.conference-reviews dd { margin: 0; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+    .conference-reviews { grid-template-columns: 1fr; }
+}
 .research-themes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 .research-topic { min-width: 0; }
 .research-topic + .research-topic { border-top: 1px solid var(--line); padding-top: 20px; }
@@ -4121,6 +4130,7 @@ body.modal-open {
 .course-materials a { display: inline-block; padding: 8px 4px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .course-materials td { font-size: 1rem; }
 .course-materials .material-topic { width: 50%; }
+.course-assignments th:first-child { width: 40%; }
 .course-page .section-header [id] { scroll-margin-top: 120px; }
 .visually-hidden {
     position: absolute;

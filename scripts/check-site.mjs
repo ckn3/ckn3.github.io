@@ -54,7 +54,10 @@ assert.equal((home.match(/class="research-highlight-image"/g) || []).length, 3);
 for (const featured of data.featured) {
     const paper = Object.values(data.selected).flat().find(item => item.id === featured.id);
     assert.ok(home.includes(`src="${paper.image.src}"`), `Missing featured research image: ${featured.id}`);
+    assert.ok(home.includes(`<p class="research-highlight-role">${featured.authorRole}</p>`), `Missing featured author role: ${featured.id}`);
 }
+assert.deepEqual(data.featured.map(item => item.authorRole), ['Co-first author', 'Co-first and corresponding author', 'Co-first and corresponding author']);
+assert.ok(research.indexOf('id="modal-links"') < research.indexOf('class="modal-abstract-block"'), 'Modal resource links must precede the abstract');
 const entries = [...research.matchAll(/<article class="(?:publication-entry|conference-entry)[^"]*" id="([^"]+)">([\s\S]*?)<\/article>/g)];
 assert.deepEqual(entries.map(entry => entry[1]), paperIds, 'Static paper order does not match the registry');
 for (const [, id, content] of entries) {
@@ -82,6 +85,20 @@ assert.ok(team.indexOf('<aside class="recruitment-note"') < team.indexOf('>Forme
 const services = html.get('academic_honors.html');
 assert.ok(services.indexOf('>Review Experience</h3>') < services.indexOf('>Community Service</h3>'));
 assert.match(services, /<details class="text-disclosure journal-reviewers">/);
+const conferences = services.match(/<dl class="conference-reviews"[^>]*>([\s\S]*?)<\/dl>/)?.[1];
+assert.ok(conferences, 'Missing aligned conference review list');
+assert.equal((conferences.match(/<dt>/g) || []).length, 12);
+assert.match(conferences, /<dt>ICLR<\/dt><dd>2027<\/dd>/);
+assert.match(conferences, /<dt>AAMAS<\/dt><dd>2027<\/dd>/);
+
+const cs5487 = html.get('courses/cs5487.html');
+assert.match(cs5487, /href="#assignments"/);
+assert.ok(cs5487.indexOf('id="materials"') < cs5487.indexOf('id="assignments"'));
+for (const file of ['CS5487-assignment1.pdf', 'CS5487-assignment1-solutions.pdf']) {
+    assert.ok(cs5487.includes(`href="../docs/courses/cs5487/2026a/${file}"`));
+    const pdf = fs.readFileSync(path.join(root, 'docs/courses/cs5487/2026a', file));
+    assert.equal(pdf.subarray(0, 5).toString(), '%PDF-', `Invalid assignment PDF: ${file}`);
+}
 
 for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 10, 30, 30]]]) {
     const source = html.get(`courses/${course}.html`);

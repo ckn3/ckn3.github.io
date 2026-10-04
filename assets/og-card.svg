@@ -1,53 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Kangning Cui academic homepage share card</title>
-  <desc id="desc">Open Graph card for Kangning Cui with research areas and current academic position.</desc>
+  <title id="title">Kangning Cui | Assistant Professor of Data Science</title>
+  <desc id="desc">City University of Hong Kong (Dongguan). Research in efficient and reliable language models, geospatial AI, and medical images and signals.</desc>
   <defs>
-    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#fbfaf6"/>
-      <stop offset="0.58" stop-color="#f4efe3"/>
-      <stop offset="1" stop-color="#ece4d3"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f4ef"/>
+      <stop offset="1" stop-color="#eee5eb"/>
     </linearGradient>
-    <linearGradient id="ink" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#111111"/>
-      <stop offset="1" stop-color="#2a2118"/>
-    </linearGradient>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#1f2933" flood-opacity="0.16"/>
-    </filter>
+    <radialGradient id="glow">
+      <stop stop-color="#85235f" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#85235f" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-
   <rect width="1200" height="630" fill="url(#paper)"/>
-  <circle cx="1048" cy="92" r="198" fill="#b88a36" opacity="0.10"/>
-  <circle cx="88" cy="556" r="220" fill="#111111" opacity="0.045"/>
-  <path d="M0 520 C240 462 406 548 640 490 C832 442 930 340 1200 390 L1200 630 L0 630 Z" fill="#111111" opacity="0.045"/>
-
-  <rect x="76" y="70" width="1048" height="490" rx="34" fill="#fffdf8" opacity="0.92" filter="url(#softShadow)"/>
-  <rect x="76" y="70" width="1048" height="490" rx="34" fill="none" stroke="#c9a15b" stroke-width="2" opacity="0.42"/>
-
-  <line x1="132" y1="138" x2="324" y2="138" stroke="#b88a36" stroke-width="5" stroke-linecap="round"/>
-  <text x="132" y="190" fill="#6f5423" font-family="Georgia, 'Times New Roman', serif" font-size="28" letter-spacing="2.8">ACADEMIC HOMEPAGE</text>
-  <text x="132" y="286" fill="url(#ink)" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="700" letter-spacing="-1.5">Kangning Cui</text>
-  <text x="136" y="338" fill="#2f353a" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="25" font-weight="500">Efficient, explainable, and structure-aware machine learning</text>
-
-  <g font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#222222">
-    <text x="136" y="414">Computer Vision</text>
-    <circle cx="330" cy="407" r="4" fill="#b88a36"/>
-    <text x="350" y="414">Signal Processing</text>
-    <circle cx="548" cy="407" r="4" fill="#b88a36"/>
-    <text x="568" y="414">LLM</text>
-    <circle cx="640" cy="407" r="4" fill="#b88a36"/>
-    <text x="660" y="414">Geoscience</text>
-    <circle cx="810" cy="407" r="4" fill="#b88a36"/>
-    <text x="830" y="414">Healthcare</text>
+  <rect width="10" height="630" fill="#85235f"/>
+  <circle cx="1090" cy="150" r="330" fill="url(#glow)"/>
+  <g fill="none" stroke="#85235f" stroke-opacity="0.1">
+    <circle cx="1070" cy="170" r="154"/>
+    <circle cx="1070" cy="170" r="190"/>
+    <circle cx="1070" cy="170" r="226"/>
   </g>
-
-  <g font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="23" fill="#4c5358">
-    <text x="136" y="486">Assistant Professor</text>
-    <text x="136" y="522">City University of Hong Kong (Dongguan)</text>
+  <text x="80" y="97" fill="#6f1d50" font-family="'Avenir Next', sans-serif" font-size="19" font-weight="600" letter-spacing="3">RESEARCH · TEACHING · PEOPLE</text>
+  <text x="76" y="220" fill="#29232b" font-family="Georgia, serif" font-size="82" font-weight="700" letter-spacing="-2">Kangning Cui</text>
+  <text x="80" y="279" fill="#6f1d50" font-family="'Avenir Next', sans-serif" font-size="29" font-weight="600">Assistant Professor of Data Science</text>
+  <text x="80" y="322" fill="#625d65" font-family="'Avenir Next', sans-serif" font-size="26">City University of Hong Kong (Dongguan)</text>
+  <line x1="80" y1="390" x2="1120" y2="390" stroke="#442f37" stroke-opacity="0.18"/>
+  <g font-family="'Avenir Next', sans-serif" font-size="24" font-weight="600" fill="#29232b">
+    <text x="80" y="445">Efficient &amp; reliable</text>
+    <text x="80" y="479">language models</text>
+    <text x="466" y="445">Geospatial AI</text>
+    <text x="816" y="445">Medical images</text>
+    <text x="816" y="479">&amp; signals</text>
   </g>
-
-  <g transform="translate(940 140)">
-    <rect x="0" y="0" width="118" height="118" rx="26" fill="#111111"/>
-    <text x="59" y="73" text-anchor="middle" fill="#d5aa5d" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">KC</text>
-  </g>
+  <text x="80" y="574" fill="#6f1d50" font-family="'Avenir Next', sans-serif" font-size="22">ckn3.github.io</text>
+  <line x1="1024" y1="566" x2="1120" y2="566" stroke="#85235f" stroke-width="3"/>
 </svg>

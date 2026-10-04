@@ -22,18 +22,21 @@
       "id": "paper-lowrankarena-neurips",
       "theme": "Language Models",
       "heading": "LowRankArena: evaluating LLM compression",
+      "authorRole": "Co-first author",
       "contribution": "LowRankArena compares SVD-based language-model compression using shared tasks, compression budgets, and inference measurements."
     },
     {
       "id": "paper-palms-ijcai",
       "theme": "Geospatial AI",
       "heading": "Mapping palms in tropical forests",
+      "authorRole": "Co-first and corresponding author",
       "contribution": "PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration."
     },
     {
       "id": "paper-s2dl",
       "theme": "Hyperspectral Learning",
       "heading": "S2DL: clustering hyperspectral images",
+      "authorRole": "Co-first and corresponding author",
       "contribution": "S2DL combines superpixels and diffusion geometry to cluster hyperspectral images without labels while reducing computational cost."
     }
   ],
