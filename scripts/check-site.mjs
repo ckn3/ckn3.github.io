@@ -91,13 +91,17 @@ assert.equal((conferences.match(/<dt>/g) || []).length, 12);
 assert.match(conferences, /<dt>ICLR<\/dt><dd>2027<\/dd>/);
 assert.match(conferences, /<dt>AAMAS<\/dt><dd>2027<\/dd>/);
 
-const cs5487 = html.get('courses/cs5487.html');
-assert.match(cs5487, /href="#assignments"/);
-assert.ok(cs5487.indexOf('id="materials"') < cs5487.indexOf('id="assignments"'));
-for (const file of ['CS5487-assignment1.pdf', 'CS5487-assignment1-solutions.pdf']) {
-    assert.ok(cs5487.includes(`href="../docs/courses/cs5487/2026a/${file}"`));
-    const pdf = fs.readFileSync(path.join(root, 'docs/courses/cs5487/2026a', file));
-    assert.equal(pdf.subarray(0, 5).toString(), '%PDF-', `Invalid assignment PDF: ${file}`);
+for (const course of ['cs5487', 'dsc5001']) {
+    const source = html.get(`courses/${course}.html`);
+    assert.match(source, /href="#assignments"/);
+    assert.ok(source.indexOf('id="materials"') < source.indexOf('id="assignments"'));
+    assert.ok(source.indexOf('id="assignments"') < source.indexOf('id="schedule"'));
+    for (const suffix of ['assignment1.pdf', 'assignment1-solutions.pdf']) {
+        const file = `${course.toUpperCase()}-${suffix}`;
+        assert.ok(source.includes(`href="../docs/courses/${course}/2026a/${file}"`));
+        const pdf = fs.readFileSync(path.join(root, 'docs/courses', course, '2026a', file));
+        assert.equal(pdf.subarray(0, 5).toString(), '%PDF-', `Invalid assignment PDF: ${file}`);
+    }
 }
 
 for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 10, 30, 30]]]) {
