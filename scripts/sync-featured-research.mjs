@@ -20,9 +20,7 @@ for (const file of ['index.html']) {
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
         const venues = publications.map(publication => {
             const label = escape(publication.venue.replace(/^\[|\]$/g, ''));
-            return publications.length > 1
-                ? `<a href="${prefix}#${escape(publication.id)}" title="${escape(publication.title)}">${label}</a>`
-                : label;
+            return `<a href="${prefix}#${escape(publication.id)}" title="${escape(publication.title)}">${label}</a>`;
         }).join(' · ');
         return `            <article class="research-highlight">
                 <a class="research-highlight-image" href="${prefix}#${escape(paper.id)}" aria-label="View ${escape(feature.heading)}">
