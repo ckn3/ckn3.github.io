@@ -27,10 +27,11 @@
     },
     {
       "id": "paper-palms-ijcai",
+      "relatedIds": ["paper-palms-tgrs"],
       "theme": "Geospatial AI",
       "heading": "Mapping palms in tropical forests",
       "authorRole": "Co-first and corresponding author",
-      "contribution": "PRISM turns large aerial images into geographic maps of individual palms, combining detection, segmentation, and confidence calibration."
+      "contribution": "PalmDSNet and PRISM detect, segment, and geographically locate individual palms in aerial imagery, supporting tropical forest mapping and spatial distribution modeling."
     },
     {
       "id": "paper-s2dl",

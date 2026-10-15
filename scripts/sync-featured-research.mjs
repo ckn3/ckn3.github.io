@@ -11,9 +11,19 @@ const marker = /<!-- featured-research:start -->[\s\S]*?<!-- featured-research:e
 for (const file of ['index.html']) {
     const prefix = 'publications.html';
     const cards = data.featured.map(feature => {
-        const paper = papers.get(feature.id);
-        if (!paper) throw new Error(`Unknown featured publication: ${feature.id}`);
+        const publications = [feature.id, ...(feature.relatedIds ?? [])].map(id => {
+            const paper = papers.get(id);
+            if (!paper) throw new Error(`Unknown featured publication: ${id}`);
+            return paper;
+        });
+        const paper = publications[0];
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
+        const venues = publications.map(publication => {
+            const label = escape(publication.venue.replace(/^\[|\]$/g, ''));
+            return publications.length > 1
+                ? `<a href="${prefix}#${escape(publication.id)}" title="${escape(publication.title)}">${label}</a>`
+                : label;
+        }).join(' · ');
         return `            <article class="research-highlight">
                 <a class="research-highlight-image" href="${prefix}#${escape(paper.id)}" aria-label="View ${escape(feature.heading)}">
                     <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
@@ -21,7 +31,7 @@ for (const file of ['index.html']) {
                 <p class="research-highlight-theme">${escape(feature.theme)}</p>
                 <h3><a href="${prefix}#${escape(paper.id)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>
-                <p class="research-highlight-venue">${escape(paper.venue.replace(/^\[|\]$/g, ''))}</p>
+                <p class="research-highlight-venue">${venues}</p>
                 <p class="research-highlight-role">${escape(feature.authorRole)}</p>
             </article>`;
     }).join('\n');
