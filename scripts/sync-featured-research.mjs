@@ -21,16 +21,22 @@ for (const file of ['index.html']) {
         const venues = publications.map(publication => {
             const label = escape(publication.venue.replace(/^\[|\]$/g, ''));
             return `<a href="${prefix}#${escape(publication.id)}" title="${escape(publication.title)}">${label}</a>`;
+        }).join('<span aria-hidden="true"> · </span>');
+        const related = (feature.furtherReading ?? []).map(({id, label}) => {
+            const publication = papers.get(id);
+            if (!publication) throw new Error(`Unknown related publication: ${id}`);
+            return `<a href="${prefix}#${escape(id)}" title="${escape(publication.title)}">${escape(label)}</a>`;
         }).join(' · ');
         return `            <article class="research-highlight">
+                <p class="research-highlight-theme">${escape(feature.theme)}</p>
                 <a class="research-highlight-image" href="${prefix}#${escape(paper.id)}" aria-label="View ${escape(feature.heading)}">
                     <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
                 </a>
-                <p class="research-highlight-theme">${escape(feature.theme)}</p>
                 <h3><a href="${prefix}#${escape(paper.id)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>
                 <p class="research-highlight-venue">${venues}</p>
                 <p class="research-highlight-role">${escape(feature.authorRole)}</p>
+                ${related ? `<p class="research-highlight-related">Also: ${related}</p>` : ''}
             </article>`;
     }).join('\n');
     const block = `<!-- featured-research:start -->

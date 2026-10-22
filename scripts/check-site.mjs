@@ -41,7 +41,7 @@ for (const [file, source] of html) {
 const home = html.get('index.html');
 const news = home.slice(home.indexOf('aria-labelledby="news"'), home.indexOf('<details class="text-disclosure news-archive"'));
 assert.equal((news.match(/class="news-card"/g) || []).length, 4);
-assert.ok(home.indexOf('id="news"') < home.indexOf('id="featured-research"'));
+assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="news"'));
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="positions"'));
 assert.match(home, /class="hero-role"><strong>Assistant Professor of Data Science<\/strong>/);
 assert.match(home, /class="hero-office">Office: AC4-422<\/p>/);
@@ -56,7 +56,7 @@ for (const featured of data.featured) {
     assert.ok(home.includes(`src="${paper.image.src}"`), `Missing featured research image: ${featured.id}`);
     assert.ok(home.includes(`<p class="research-highlight-role">${featured.authorRole}</p>`), `Missing featured author role: ${featured.id}`);
 }
-assert.deepEqual(data.featured.map(item => item.authorRole), ['Co-first author', 'Co-first and corresponding author', 'Co-first and corresponding author']);
+assert.deepEqual(data.featured.map(item => item.authorRole), ['Co-first author', 'Co-first and corresponding author', 'Co-author']);
 assert.ok(research.indexOf('id="modal-links"') < research.indexOf('class="modal-abstract-block"'), 'Modal resource links must precede the abstract');
 const entries = [...research.matchAll(/<article class="(?:publication-entry|conference-entry)[^"]*" id="([^"]+)">([\s\S]*?)<\/article>/g)];
 assert.deepEqual(entries.map(entry => entry[1]), paperIds, 'Static paper order does not match the registry');
@@ -73,7 +73,7 @@ for (const paper of Object.values(data.selected).flat()) {
     assert.ok(fs.existsSync(path.join(root, paper.image.src)), `Missing publication image: ${paper.image.src}`);
     assert.ok(paper.image.width > 0 && paper.image.height > 0, `Missing publication image dimensions: ${paper.id}`);
 }
-assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-s2dl']);
+assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-ecg-horizons-neurips']);
 
 const team = html.get('team.html');
 assert.match(team, /src="figures\/team\/mallory-pitts-linkedin\.webp" alt="Mallory Pitts" width="400" height="400"/);

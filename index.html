@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kangning Cui">
-    <meta name="description" content="Academic homepage of Kangning Cui, featuring efficient, explainable, and structure-aware machine learning across computer vision, signal processing, large language models, geoscience, and healthcare.">
+    <meta name="description" content="Kangning Cui, Assistant Professor at CityU-DG. Research on efficient, reliable and interpretable machine learning, with applications in geospatial and medical AI.">
     <meta property="og:title" content="Home | Kangning Cui">
-    <meta property="og:description" content="Academic homepage of Kangning Cui, featuring efficient, explainable, and structure-aware machine learning across computer vision, signal processing, large language models, geoscience, and healthcare.">
+    <meta property="og:description" content="Kangning Cui, Assistant Professor at CityU-DG. Research on efficient, reliable and interpretable machine learning, with applications in geospatial and medical AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/">
     <link rel="canonical" href="https://ckn3.github.io/">
@@ -16,10 +16,10 @@
     <meta property="og:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Home | Kangning Cui">
-    <meta name="twitter:description" content="Academic homepage of Kangning Cui, featuring efficient, explainable, and structure-aware machine learning across computer vision, signal processing, large language models, geoscience, and healthcare.">
+    <meta name="twitter:description" content="Kangning Cui, Assistant Professor at CityU-DG. Research on efficient, reliable and interpretable machine learning, with applications in geospatial and medical AI.">
     <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
     <meta name="twitter:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
-    <meta name="theme-color" content="#f6f4ef">
+    <meta name="theme-color" content="#faf9f6">
     <meta name="apple-mobile-web-app-title" content="Kangning Cui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026100401">
+    <link rel="stylesheet" href="styles/site.css?v=2026102201">
     <script src="scripts/schema.js?v=2026100302" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
     <title>Home | Kangning Cui</title>
@@ -60,7 +60,8 @@
                     <h1 class="hero-title" id="welcome">Kangning Cui</h1>
                     <p class="hero-role"><strong>Assistant Professor of Data Science</strong><span class="hero-affiliation">City University of Hong Kong (Dongguan)</span></p>
                     <p class="hero-office">Office: AC4-422</p>
-                    <p class="hero-lead">I develop efficient and reliable machine learning methods for language models, geospatial data, and medical images and signals. My work focuses on model compression, interpretability, and learning with limited labels.</p>
+                    <p class="hero-focus">Machine learning with limited compute and supervision.</p>
+                    <p class="hero-lead">I develop efficient, reliable and interpretable methods for language models, geospatial observation, and medical images and signals.</p>
                     <p class="hero-recruitment">PhD and research assistant opportunities: <a href="team.html#prospective-applicants">join the group</a>.</p>
                     <div class="hero-links">
                         <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
@@ -80,6 +81,51 @@
             </div>
         </div>
     </div>
+
+    <section class="content page-panel featured-section" aria-labelledby="featured-research">
+        <div class="section-header section-header--split">
+            <h2 id="featured-research">Selected Research</h2>
+            <a href="publications.html">All research</a>
+        </div>
+        <p class="section-intro">Three connected directions: how models work, how they map the world, and how they interpret health data.</p>
+        <!-- featured-research:start -->
+        <div class="research-highlights">
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Efficient &amp; Reliable ML</p>
+                <a class="research-highlight-image" href="publications.html#paper-lowrankarena-neurips" aria-label="View Understanding the cost of compression">
+                    <img src="figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async">
+                </a>
+                <h3><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Understanding the cost of compression</a></h3>
+                <p class="research-highlight-contribution">LowRankArena evaluates language-model compression under shared tasks and budgets, measuring both accuracy and practical inference efficiency.</p>
+                <p class="research-highlight-venue"><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">NeurIPS&#39;26, ED Track, Poster</a></p>
+                <p class="research-highlight-role">Co-first author</p>
+                <p class="research-highlight-related">Also: <a href="publications.html#paper-dpq-emnlp" title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">DPQ · EMNLP’26</a></p>
+            </article>
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Geospatial AI</p>
+                <a class="research-highlight-image" href="publications.html#paper-palms-ijcai" aria-label="View From aerial imagery to forest maps">
+                    <img src="figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async">
+                </a>
+                <h3><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">From aerial imagery to forest maps</a></h3>
+                <p class="research-highlight-contribution">PRISM and PalmDSNet detect and locate individual palms in dense tropical forests, connecting image analysis with spatial distribution modeling.</p>
+                <p class="research-highlight-venue"><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">IJCAI&#39;25, Oral</a><span aria-hidden="true"> · </span><a href="publications.html#paper-palms-tgrs" title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">TGRS&#39;25</a></p>
+                <p class="research-highlight-role">Co-first and corresponding author</p>
+                <p class="research-highlight-related">Also: <a href="publications.html#paper-s2dl" title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">S2DL · TGRS’24</a></p>
+            </article>
+            <article class="research-highlight">
+                <p class="research-highlight-theme">Medical AI</p>
+                <a class="research-highlight-image" href="publications.html#paper-ecg-horizons-neurips" aria-label="View Extending the reach of ECG models">
+                    <img src="figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async">
+                </a>
+                <h3><a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Extending the reach of ECG models</a></h3>
+                <p class="research-highlight-contribution">A lightweight module adapts pretrained ECG models to longer recordings without retraining the backbone, enabling efficient analysis across time.</p>
+                <p class="research-highlight-venue"><a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">NeurIPS&#39;26, Poster</a></p>
+                <p class="research-highlight-role">Co-author</p>
+                <p class="research-highlight-related">Also: <a href="publications.html#paper-cardiac-phase" title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">Cardiac motion · MICCAI’25</a></p>
+            </article>
+        </div>
+        <!-- featured-research:end -->
+    </section>
 
     <section class="content page-panel news-shell" aria-labelledby="news">
         <div class="section-header"><h2 id="news">Recent News</h2></div>
@@ -134,47 +180,6 @@
                     </div>
                 </div></div>
         </details>
-    </section>
-
-    <section class="content page-panel featured-section" aria-labelledby="featured-research">
-        <div class="section-header section-header--split">
-            <h2 id="featured-research">Selected Research</h2>
-            <a href="publications.html">All research</a>
-        </div>
-        <!-- featured-research:start -->
-        <div class="research-highlights">
-            <article class="research-highlight">
-                <a class="research-highlight-image" href="publications.html#paper-lowrankarena-neurips" aria-label="View LowRankArena: evaluating LLM compression">
-                    <img src="figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async">
-                </a>
-                <p class="research-highlight-theme">Language Models</p>
-                <h3><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">LowRankArena: evaluating LLM compression</a></h3>
-                <p class="research-highlight-contribution">LowRankArena compares SVD-based language-model compression using shared tasks, compression budgets, and inference measurements.</p>
-                <p class="research-highlight-venue"><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">NeurIPS&#39;26, ED Track, Poster</a></p>
-                <p class="research-highlight-role">Co-first author</p>
-            </article>
-            <article class="research-highlight">
-                <a class="research-highlight-image" href="publications.html#paper-palms-ijcai" aria-label="View Mapping palms in tropical forests">
-                    <img src="figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async">
-                </a>
-                <p class="research-highlight-theme">Geospatial AI</p>
-                <h3><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Mapping palms in tropical forests</a></h3>
-                <p class="research-highlight-contribution">PalmDSNet and PRISM detect, segment, and geographically locate individual palms in aerial imagery, supporting tropical forest mapping and spatial distribution modeling.</p>
-                <p class="research-highlight-venue"><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">IJCAI&#39;25, Oral</a> · <a href="publications.html#paper-palms-tgrs" title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">TGRS&#39;25</a></p>
-                <p class="research-highlight-role">Co-first and corresponding author</p>
-            </article>
-            <article class="research-highlight">
-                <a class="research-highlight-image" href="publications.html#paper-s2dl" aria-label="View S2DL: clustering hyperspectral images">
-                    <img src="figures/publications/cui2024superpixel.webp" alt="S2DL workflow: hyperspectral data, superpixels, diffusion geometry, and clustering without labels" width="1256" height="517" loading="lazy" decoding="async">
-                </a>
-                <p class="research-highlight-theme">Hyperspectral Learning</p>
-                <h3><a href="publications.html#paper-s2dl" title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">S2DL: clustering hyperspectral images</a></h3>
-                <p class="research-highlight-contribution">S2DL combines superpixels and diffusion geometry to cluster hyperspectral images without labels while reducing computational cost.</p>
-                <p class="research-highlight-venue"><a href="publications.html#paper-s2dl" title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">TGRS&#39;24</a></p>
-                <p class="research-highlight-role">Co-first and corresponding author</p>
-            </article>
-        </div>
-        <!-- featured-research:end -->
     </section>
 
     <section class="content page-panel home-connecting" aria-labelledby="join-the-group">

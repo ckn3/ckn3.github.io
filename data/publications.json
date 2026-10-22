@@ -20,25 +20,45 @@
   "featured": [
     {
       "id": "paper-lowrankarena-neurips",
-      "theme": "Language Models",
-      "heading": "LowRankArena: evaluating LLM compression",
+      "theme": "Efficient & Reliable ML",
+      "heading": "Understanding the cost of compression",
       "authorRole": "Co-first author",
-      "contribution": "LowRankArena compares SVD-based language-model compression using shared tasks, compression budgets, and inference measurements."
+      "contribution": "LowRankArena evaluates language-model compression under shared tasks and budgets, measuring both accuracy and practical inference efficiency.",
+      "furtherReading": [
+        {
+          "id": "paper-dpq-emnlp",
+          "label": "DPQ · EMNLP’26"
+        }
+      ]
     },
     {
       "id": "paper-palms-ijcai",
-      "relatedIds": ["paper-palms-tgrs"],
+      "relatedIds": [
+        "paper-palms-tgrs"
+      ],
       "theme": "Geospatial AI",
-      "heading": "Mapping palms in tropical forests",
+      "heading": "From aerial imagery to forest maps",
       "authorRole": "Co-first and corresponding author",
-      "contribution": "PalmDSNet and PRISM detect, segment, and geographically locate individual palms in aerial imagery, supporting tropical forest mapping and spatial distribution modeling."
+      "contribution": "PRISM and PalmDSNet detect and locate individual palms in dense tropical forests, connecting image analysis with spatial distribution modeling.",
+      "furtherReading": [
+        {
+          "id": "paper-s2dl",
+          "label": "S2DL · TGRS’24"
+        }
+      ]
     },
     {
-      "id": "paper-s2dl",
-      "theme": "Hyperspectral Learning",
-      "heading": "S2DL: clustering hyperspectral images",
-      "authorRole": "Co-first and corresponding author",
-      "contribution": "S2DL combines superpixels and diffusion geometry to cluster hyperspectral images without labels while reducing computational cost."
+      "id": "paper-ecg-horizons-neurips",
+      "theme": "Medical AI",
+      "heading": "Extending the reach of ECG models",
+      "authorRole": "Co-author",
+      "contribution": "A lightweight module adapts pretrained ECG models to longer recordings without retraining the backbone, enabling efficient analysis across time.",
+      "furtherReading": [
+        {
+          "id": "paper-cardiac-phase",
+          "label": "Cardiac motion · MICCAI’25"
+        }
+      ]
     }
   ],
   "selected": {
