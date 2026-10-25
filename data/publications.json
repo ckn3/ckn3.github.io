@@ -219,12 +219,24 @@
         "authorsHtml": "Zhen Yang<sup>†</sup>, Sizai Hou<sup>†</sup>, Kaiwen Zheng, Yaofang Liu, Liang He, Yixuan Chen<sup>*</sup>, and <span class=\"main-author\">Kangning Cui</span><sup>*</sup>",
         "badges": [
           {
+            "label": "Paper",
+            "href": "https://aclanthology.org/2026.findings-emnlp.670/"
+          },
+          {
+            "label": "PDF",
+            "href": "https://aclanthology.org/2026.findings-emnlp.670.pdf"
+          },
+          {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2608.21019"
           },
           {
             "label": "Code",
             "href": "https://github.com/xi-xiaoran/DPQ"
+          },
+          {
+            "label": "BibTeX",
+            "href": "docs/bibtex/yang2026target.bib"
           }
         ]
       },
