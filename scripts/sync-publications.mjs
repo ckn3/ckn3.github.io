@@ -7,6 +7,12 @@ const page = new URL('publications.html', root);
 const original = await readFile(page, 'utf8');
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
+function renderCitation(id, variant = 'badge-chip') {
+    const citation = data.citations[id];
+    assert.ok(citation?.bibtex && citation.source?.url, `Missing citation: ${id}`);
+    return `<details class="citation-details" data-citation-id="${escape(id)}" data-title="${escape(citation.title)}" data-source="${escape(citation.source.url)}" data-source-label="${escape(citation.source.label)}" data-note="${escape(citation.note)}"><summary class="${variant}" aria-label="View BibTeX citation: ${escape(citation.title)}">BibTeX</summary><pre><code>${escape(citation.bibtex.trim())}</code></pre></details>`;
+}
+
 function renderPaper(paper, section) {
     assert.match(paper.id, /^paper-[a-z0-9-]+$/);
     assert.ok(data.abstracts[paper.title], `Missing abstract: ${paper.id}`);
@@ -30,6 +36,7 @@ function renderPaper(paper, section) {
                     <p class="authors">${paper.authorsHtml}</p>
                     <div class="badges">
 ${badges}
+                        ${renderCitation(paper.id)}
                         <details class="publication-details">
                             <summary class="badge-chip publication-details-toggle" aria-label="View publication details: ${escape(paper.title)}">Details</summary>
                             <div class="publication-detail-content">
@@ -50,10 +57,23 @@ for (const section of ['journals', 'conferences']) {
     const block = `<!-- publications:${section}:start -->\n${data.selected[section].map(paper => renderPaper(paper, section)).join('\n')}\n        <!-- publications:${section}:end -->`;
     generated = generated.replace(marker, () => block);
 }
+// Related lists and project pages share the same citation text as selected papers.
+function syncCitations(source) {
+    return source.replace(/<details class="citation-details" data-citation-id="([^"]+)"[^>]*>[\s\S]*?<\/details>/g, (block, id) => {
+        const variant = block.match(/<summary class="([^"]+)"/)?.[1] || 'citation-inline';
+        return renderCitation(id, variant);
+    });
+}
+generated = syncCitations(generated);
+const projectPage = new URL('projects/geospatial-ai.html', root);
+const projectOriginal = await readFile(projectPage, 'utf8');
+const projectGenerated = syncCitations(projectOriginal);
 if (process.argv.includes('--check')) {
     assert.equal(generated, original, 'Static publications are out of date. Run npm run sync:publications.');
-    console.log('Static publication lists, resources, and abstracts are synchronized.');
+    assert.equal(projectGenerated, projectOriginal, 'Project citations are out of date. Run npm run sync:publications.');
+    console.log('Static publication lists, resources, abstracts, and citations are synchronized.');
 } else {
     await writeFile(page, generated);
-    console.log('Updated static publication lists and no-JavaScript details.');
+    await writeFile(projectPage, projectGenerated);
+    console.log('Updated static publications, citations, and no-JavaScript details.');
 }

@@ -78,11 +78,15 @@
         },
         "title": "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images",
         "venue": "[TGRS'26]",
-        "authorsHtml": "Wei Zhang, Qin Huang, Mengting Ma, Yizhen Jiang, Yun Chen, Zhenhua Huang, Wangyu Wu, <span class=\"main-author\">Kangning Cui</span>, Rongrong Lian, Zhenkai Wu, and Xiaowen Ma<sup>*</sup>",
+        "authorsHtml": "Wei Zhang, Mengting Ma, Yizhen Jiang, Yun Chen, Zhenhua Huang, Wangyu Wu, <span class=\"main-author\">Kangning Cui</span>, Rongrong Lian, Zhenkai Wu, and Xiaowen Ma<sup>*</sup>",
         "badges": [
           {
             "label": "Paper",
             "href": "https://ieeexplore.ieee.org/document/11364332"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2503.16963"
           },
           {
             "label": "Preprint",
@@ -111,6 +115,10 @@
           {
             "label": "Paper",
             "href": "https://ieeexplore.ieee.org/document/11059236"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2410.11124"
           },
           {
             "label": "Preprint",
@@ -145,6 +153,10 @@
             "href": "https://ieeexplore.ieee.org/document/10491382"
           },
           {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2312.15447"
+          },
+          {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2312.15447"
           },
@@ -175,6 +187,10 @@
             "href": "https://arxiv.org/abs/2608.26389"
           },
           {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2608.26389"
+          },
+          {
             "label": "Code",
             "href": "https://github.com/Zishan-Shao/lowrankarena"
           },
@@ -201,6 +217,10 @@
           {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2605.16975"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2605.16975"
           }
         ]
       },
@@ -233,10 +253,6 @@
           {
             "label": "Code",
             "href": "https://github.com/xi-xiaoran/DPQ"
-          },
-          {
-            "label": "BibTeX",
-            "href": "docs/bibtex/yang2026target.bib"
           }
         ]
       },
@@ -259,7 +275,11 @@
           },
           {
             "label": "Paper",
-            "href": "https://icml.cc/virtual/2026/poster/61072"
+            "href": "https://proceedings.mlr.press/v306/shao26j.html"
+          },
+          {
+            "label": "PDF",
+            "href": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf"
           },
           {
             "label": "Preprint",
@@ -268,6 +288,10 @@
           {
             "label": "Project Page",
             "href": "https://zishan-shao.github.io/decodeshare/"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zishan-Shao/decodeshare"
           }
         ]
       },
@@ -288,6 +312,10 @@
           {
             "label": "Paper",
             "href": "https://dl.acm.org/doi/10.1145/3805622.3810593"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2604.15065"
           },
           {
             "label": "Preprint",
@@ -321,6 +349,10 @@
             "href": "https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31"
           },
           {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2507.05154"
+          },
+          {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2507.05154"
           },
@@ -349,6 +381,10 @@
             "href": "https://www.ijcai.org/proceedings/2025/1067"
           },
           {
+            "label": "PDF",
+            "href": "https://www.ijcai.org/proceedings/2025/1067.pdf"
+          },
+          {
             "label": "Preprint",
             "href": "https://arxiv.org/abs/2502.13023"
           },
@@ -367,5 +403,446 @@
         ]
       }
     ]
+  },
+  "citations": {
+    "paper-lowrankarena-neurips": {
+      "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+      "bibtex": "@misc{shao2026lowrankarena,\n  title = {{LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression}},\n  author = {Shao, Zishan and Zhang, Lixun and Cui, Kangning and Wu, Wenhao and Kim, Jinhee and Wang, Yixiao and Jiang, Ting and Ye, Hancheng and Wang, Qinsi and Yang, Fan and Zhuo, Danyang and Chen, Yiran and Li, Hai},\n  year = {2026},\n  eprint = {2608.26389},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2608.26389}\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.26389"
+      },
+      "note": "arXiv version; accepted at NeurIPS 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2608.26389"
+      ],
+      "resources": [
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2608.26389"
+        }
+      ]
+    },
+    "paper-dpq-emnlp": {
+      "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
+      "bibtex": "@inproceedings{yang-etal-2026-target,\n    title = \"Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models\",\n    author = \"Yang, Zhen  and\n      Hou, Sizai  and\n      Zheng, Kaiwen  and\n      Liu, Yaofang  and\n      He, Liang  and\n      Chen, Yixuan  and\n      Cui, Kangning\",\n    editor = \"Lee, Hung-Yi  and\n      Dev, Sunipa  and\n      Li, Jessy  and\n      Elliott, Desmond\",\n    booktitle = \"Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2026\",\n    month = oct,\n    year = \"2026\",\n    address = \"Budapest, Hungary\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2026.findings-emnlp.670/\",\n    pages = \"14073--14093\",\n    ISBN = \"979-8-89176-462-0\"\n}\n",
+      "source": {
+        "label": "ACL Anthology",
+        "url": "https://aclanthology.org/2026.findings-emnlp.670/"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://aclanthology.org/2026.findings-emnlp.670/"
+      ],
+      "resources": [
+        {
+          "label": "PDF",
+          "href": "https://aclanthology.org/2026.findings-emnlp.670.pdf"
+        }
+      ]
+    },
+    "paper-decodeshare-icml": {
+      "title": "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions",
+      "bibtex": "@InProceedings{pmlr-v306-shao26j,\n  title = \t {{D}ecode{S}hare: Tracing the Shared Subspace of {LLM} Decode-Time Decisions},\n  author =       {Shao, Zishan and Zhang, Lixun and Cui, Kangning and Wang, Yixiao and Jiang, Ting and Ye, Hancheng and Wang, Qinsi and Du, Zhixu and Fu, Yuzhe and Yang, Fan and Zhuo, Danyang and Chen, Yiran and Li, Hai Helen},\n  booktitle = \t {Proceedings of the 43rd International Conference on Machine Learning},\n  pages = \t {110338--110373},\n  year = \t {2026},\n  editor = \t {Zhang, Tong and Dudik, Miroslav and Jaggi, Martin and Agarwal, Alekh and Li, Sharon and Schuurmans, Dale and Zhu, Jerry and Berkenkamp, Felix and Dong, Hanze and Bietti, Alberto},\n  volume = \t {306},\n  series = \t {Proceedings of Machine Learning Research},\n  month = \t {06--11 Jul},\n  publisher =    {PMLR},\n  pdf = \t {https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf},\n  url = \t {https://proceedings.mlr.press/v306/shao26j.html}\n}\n",
+      "source": {
+        "label": "PMLR",
+        "url": "https://proceedings.mlr.press/v306/shao26j.html"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://proceedings.mlr.press/v306/shao26j.html"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://proceedings.mlr.press/v306/shao26j.html"
+        },
+        {
+          "label": "PDF",
+          "href": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/Zishan-Shao/decodeshare"
+        }
+      ]
+    },
+    "paper-awakeforest": {
+      "title": "AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery",
+      "bibtex": "@inproceedings{ijcai2026p986,\n  title     = {AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery},\n  author    = {Prasai, Suraj and Cui, Kangning and Zhu, Rongkun and Alqahtani, Sarra and Zhang, Ying and Pauca, Victor Paúl and Silman, Miles R. and Yang, Fan},\n  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on\n               Artificial Intelligence, {IJCAI-26}},\n  publisher = {International Joint Conferences on Artificial Intelligence Organization},\n  editor    = {Diego Calvanese},\n  pages     = {8487--8491},\n  year      = {2026},\n  month     = {8},\n  note      = {Demo Track},\n  doi       = {10.24963/ijcai.2026/986},\n  url       = {https://doi.org/10.24963/ijcai.2026/986},\n}\n",
+      "source": {
+        "label": "IJCAI",
+        "url": "https://www.ijcai.org/proceedings/2026/986"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.24963/ijcai.2026/986",
+        "https://www.ijcai.org/proceedings/2026/986"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://www.ijcai.org/proceedings/2026/986"
+        },
+        {
+          "label": "PDF",
+          "href": "https://ijcai.org/proceedings/2026/0986.pdf"
+        }
+      ]
+    },
+    "paper-help-icmr": {
+      "title": "Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection",
+      "bibtex": "@inproceedings{zeng2026helpicmr,\n  title = {{Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection}},\n  author = {Zeng, Yangchen and Yu, Zhenyu and Jiang, Dongming and Zhang, Wenbo and Hong, Yifan and Hu, Zhanhua and Luo, Jiao and Cui, Kangning},\n  booktitle = {Proceedings of the 2026 International Conference on Multimedia Retrieval},\n  year = {2026},\n  pages = {1260--1269},\n  doi = {10.1145/3805622.3810593},\n  url = {https://doi.org/10.1145/3805622.3810593}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1145/3805622.3810593"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1145/3805622.3810593"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2604.15065"
+        }
+      ]
+    },
+    "paper-centerseg": {
+      "title": "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images",
+      "bibtex": "@article{zhang2026centerseg,\n  title = {{Center-Guided Classifier for Semantic Segmentation of Remote Sensing Images}},\n  author = {Zhang, Wei and Ma, Mengting and Jiang, Yizhen and Chen, Yun and Huang, Zhenhua and Wu, Wangyu and Cui, Kangning and Lian, Rongrong and Wu, Zhenkai and Ma, Xiaowen},\n  journal = {IEEE Transactions on Geoscience and Remote Sensing},\n  year = {2026},\n  volume = {64},\n  pages = {1--16},\n  doi = {10.1109/tgrs.2026.3657453},\n  url = {https://doi.org/10.1109/tgrs.2026.3657453}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/tgrs.2026.3657453"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/tgrs.2026.3657453",
+        "https://scholars.cityu.edu.hk/en/publications/center-guided-classifier-for-semantic-segmentation-of-remote-sens/"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2503.16963"
+        }
+      ]
+    },
+    "paper-raw-uav": {
+      "title": "From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization",
+      "bibtex": "@inproceedings{zhu2026rawuav,\n  title = {{From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization}},\n  author = {Zhu, Rongkun and Cui, Kangning and Tang, Wei and Wang, Rui-Feng and Alqahtani, Sarra and Lutz, David and Yang, Fan and Fine, Paul and Karubian, Jordan and Plemmons, Robert and Morel, Jean-Michel and Pauca, Victor and Silman, Miles},\n  booktitle = {IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing Symposium},\n  year = {2026},\n  pages = {3390--3394},\n  doi = {10.1109/igarss60577.2026.11731064},\n  url = {https://doi.org/10.1109/igarss60577.2026.11731064}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/igarss60577.2026.11731064"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/igarss60577.2026.11731064"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1109/igarss60577.2026.11731064"
+        },
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2509.12400"
+        }
+      ]
+    },
+    "paper-palms-tgrs": {
+      "title": "Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery",
+      "bibtex": "@article{cui2025palmstgrs,\n  title = {{Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery}},\n  author = {Cui, Kangning and Tang, Wei and Zhu, Rongkun and Wang, Manqi and Larsen, Gregory D. and Pauca, Victor P. and Alqahtani, Sarra and Yang, Fan and Segurado, David and Fine, Paul and Karubian, Jordan and Chan, Raymond H. and Plemmons, Robert J. and Morel, Jean-Michel and Silman, Miles R.},\n  journal = {IEEE Transactions on Geoscience and Remote Sensing},\n  year = {2025},\n  volume = {63},\n  pages = {1--15},\n  doi = {10.1109/tgrs.2025.3584093},\n  url = {https://doi.org/10.1109/tgrs.2025.3584093}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/tgrs.2025.3584093"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/tgrs.2025.3584093"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2410.11124"
+        }
+      ]
+    },
+    "paper-palms-ijcai": {
+      "title": "Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms",
+      "bibtex": "@inproceedings{ijcai2025p1067,\n  title     = {Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms},\n  author    = {Cui, Kangning and Zhu, Rongkun and Wang, Manqi and Tang, Wei and Larsen, Gregory D. and Pauca, Victor P. and Alqahtani, Sarra and Yang, Fan and Segurado, David and Lutz, David A. and Morel, Jean-Michel and Silman, Miles R.},\n  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on\n               Artificial Intelligence, {IJCAI-25}},\n  publisher = {International Joint Conferences on Artificial Intelligence Organization},\n  editor    = {James Kwok},\n  pages     = {9601--9609},\n  year      = {2025},\n  month     = {8},\n  note      = {AI and Social Good},\n  doi       = {10.24963/ijcai.2025/1067},\n  url       = {https://doi.org/10.24963/ijcai.2025/1067},\n}\n",
+      "source": {
+        "label": "IJCAI",
+        "url": "https://www.ijcai.org/proceedings/2025/1067"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.24963/ijcai.2025/1067",
+        "https://www.ijcai.org/proceedings/2025/1067"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://www.ijcai.org/proceedings/2025/1067"
+        },
+        {
+          "label": "PDF",
+          "href": "https://www.ijcai.org/proceedings/2025/1067.pdf"
+        }
+      ]
+    },
+    "paper-palmprobnet": {
+      "title": "PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning",
+      "bibtex": "@inproceedings{cui2024palmprobnet,\n  title = {{PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning}},\n  author = {Cui, Kangning and Shao, Zishan and Larsen, Gregory and Pauca, Victor and Alqahtani, Sarra and Segurado, David and Pinheiro, Jo{\\~a}o and Wang, Manqi and Lutz, David and Plemmons, Robert and Silman, Miles},\n  booktitle = {Proceedings of the 2024 ACM Southeast Conference on ZZZ},\n  year = {2024},\n  pages = {272--277},\n  doi = {10.1145/3603287.3651220},\n  url = {https://doi.org/10.1145/3603287.3651220}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1145/3603287.3651220"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1145/3603287.3651220"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2403.03161"
+        }
+      ]
+    },
+    "paper-gold-mining": {
+      "title": "Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery",
+      "bibtex": "@article{camalan2022goldmining,\n  title = {{Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery}},\n  author = {Camalan, Seda and Cui, Kangning and Pauca, Victor Paul and Alqahtani, Sarra and Silman, Miles and Chan, Raymond and Plemmons, Robert Jame and Dethier, Evan Nylen and Fernandez, Luis E. and Lutz, David A.},\n  journal = {Remote Sensing},\n  year = {2022},\n  volume = {14},\n  number = {7},\n  pages = {1746},\n  doi = {10.3390/rs14071746},\n  url = {https://doi.org/10.3390/rs14071746}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/rs14071746"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/rs14071746"
+      ],
+      "resources": []
+    },
+    "paper-hypergraph": {
+      "title": "Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images",
+      "bibtex": "@article{yang2026hypergraph,\n  title = {{Superpixel-Level Hypergraph Regularized Multiview Clustering for Hyperspectral Images}},\n  author = {Yang, Shujun and Cui, Kangning and Jia, Yuheng and Ding, Yao and Guan, Renxiang and Ding, Yun},\n  journal = {IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n  year = {2026},\n  volume = {19},\n  pages = {10473--10488},\n  doi = {10.1109/jstars.2026.3673839},\n  url = {https://doi.org/10.1109/jstars.2026.3673839}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/jstars.2026.3673839"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/jstars.2026.3673839"
+      ],
+      "resources": []
+    },
+    "paper-s2dl": {
+      "title": "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering",
+      "bibtex": "@article{cui2024s2dl,\n  title = {{Superpixel-Based and Spatially Regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering}},\n  author = {Cui, Kangning and Li, Ruoning and Polk, Sam L and Lin, Yinyi and Zhang, Hongsheng and Murphy, James M. and Plemmons, Robert J. and Chan, Raymond H.},\n  journal = {IEEE Transactions on Geoscience and Remote Sensing},\n  year = {2024},\n  volume = {62},\n  pages = {1--18},\n  doi = {10.1109/tgrs.2024.3385202},\n  url = {https://doi.org/10.1109/tgrs.2024.3385202}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/tgrs.2024.3385202"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/tgrs.2024.3385202"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2312.15447"
+        }
+      ]
+    },
+    "paper-dsirc": {
+      "title": "Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry",
+      "bibtex": "@inproceedings{cui2022dsirc,\n  title = {{Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction And Clustering With Diffusion Geometry}},\n  author = {Cui, Kangning and Li, Ruoning and Polk, Sam L. and Murphy, James M. and Plemmons, Robert J. and Chan, Raymond H.},\n  booktitle = {2022 12th Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing (WHISPERS)},\n  year = {2022},\n  pages = {1--5},\n  doi = {10.1109/whispers56178.2022.9955069},\n  url = {https://doi.org/10.1109/whispers56178.2022.9955069}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/whispers56178.2022.9955069"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/whispers56178.2022.9955069"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1109/whispers56178.2022.9955069"
+        },
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2204.13497"
+        }
+      ]
+    },
+    "paper-ash-dieback": {
+      "title": "Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering",
+      "bibtex": "@inproceedings{polk2022ashdieback,\n  title = {{Unsupervised Detection of ASH Dieback Disease (Hymenoscyphus Fraxineus) Using Diffusion-Based Hyperspectral Image Clustering}},\n  author = {Polk, Sam L. and Chan, Aland H. Y. and Cui, Kangning and Plemmons, Robert J. and Coomes, David A. and Murphy, James M.},\n  booktitle = {IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium},\n  year = {2022},\n  pages = {2287--2290},\n  doi = {10.1109/igarss46834.2022.9883429},\n  url = {https://doi.org/10.1109/igarss46834.2022.9883429}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/igarss46834.2022.9883429"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883429"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2204.09041"
+        }
+      ]
+    },
+    "paper-svm-satv": {
+      "title": "Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation",
+      "bibtex": "@inproceedings{li2022svmsatv,\n  title = {{Classification of Hyperspectral Images Using SVM with Shape-Adaptive Reconstruction and Smoothed Total Variation}},\n  author = {Li, Ruoning and Cui, Kangning and Chan, Raymond H. and Plemmons, Robert J.},\n  booktitle = {IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium},\n  year = {2022},\n  pages = {1368--1371},\n  doi = {10.1109/igarss46834.2022.9883961},\n  url = {https://doi.org/10.1109/igarss46834.2022.9883961}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/igarss46834.2022.9883961"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883961"
+      ],
+      "resources": []
+    },
+    "paper-active-diffusion": {
+      "title": "Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images",
+      "bibtex": "@inproceedings{polk2022activediffusion,\n  title = {{Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images}},\n  author = {Polk, Sam L. and Cui, Kangning and Plemmons, Robert J. and Murphy, James M.},\n  booktitle = {IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium},\n  year = {2022},\n  pages = {1364--1367},\n  doi = {10.1109/igarss46834.2022.9883894},\n  url = {https://doi.org/10.1109/igarss46834.2022.9883894}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/igarss46834.2022.9883894"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883894"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1109/igarss46834.2022.9883894"
+        },
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2204.06298"
+        }
+      ]
+    },
+    "paper-aviris-ng": {
+      "title": "Unsupervised Classification of AVIRIS-NG Hyperspectral Images",
+      "bibtex": "@inproceedings{cui2021avirisng,\n  title = {{Unsupervised Classification of Aviris-NG Hyperspectral Images}},\n  author = {Cui, Kangning and Plemmons, Robert J.},\n  booktitle = {2021 11th Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing (WHISPERS)},\n  year = {2021},\n  pages = {1--5},\n  doi = {10.1109/whispers52202.2021.9484006},\n  url = {https://doi.org/10.1109/whispers52202.2021.9484006}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/whispers52202.2021.9484006"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/whispers52202.2021.9484006"
+      ],
+      "resources": []
+    },
+    "paper-ecg-horizons-neurips": {
+      "title": "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons",
+      "bibtex": "@misc{tang2026extending,\n  title = {{Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons}},\n  author = {Tang, Wei and Han, Jinpei and Cui, Kangning and Carletti, Mattia and Gustafsson, Fredrik K. and Gowda, Shreyank N and Palo, Patitapaban and Thakur, Anshul and Clifton, Lei and Morel, Jean-michel and Chan, Raymond H. and Clifton, David A. and Gu, Xiao},\n  year = {2026},\n  eprint = {2605.16975},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2605.16975}\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.16975"
+      },
+      "note": "arXiv version; accepted at NeurIPS 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2605.16975"
+      ],
+      "resources": [
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2605.16975"
+        }
+      ]
+    },
+    "paper-cardiac-phase": {
+      "title": "Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos",
+      "bibtex": "@InProceedings{10.1007/978-3-032-05185-1_31,\nauthor=\"Yang, Yingyu\nand Yang, Qianye\nand Cui, Kangning\nand Peng, Can\nand D'Alberti, Elena\nand Hernandez-Cruz, Netzahualcoyotl\nand Patey, Olga\nand Papageorghiou, Aris T.\nand Noble, J. Alison\",\neditor=\"Gee, James C.\nand Alexander, Daniel C.\nand Hong, Jaesung\nand Iglesias, Juan Eugenio\nand Sudre, Carole H.\nand Venkataraman, Archana\nand Golland, Polina\nand Kim, Jong Hyo\nand Park, Jinah\",\ntitle=\"Latent Motion Profiling for Annotation-Free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos\",\nbooktitle=\"Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025\",\nyear=\"2026\",\npublisher=\"Springer Nature Switzerland\",\naddress=\"Cham\",\npages=\"316--325\",\nisbn=\"978-3-032-05185-1\" ,\ndoi=\"10.1007/978-3-032-05185-1_31\",\nurl=\"https://doi.org/10.1007/978-3-032-05185-1_31\"\n}\n",
+      "source": {
+        "label": "Springer",
+        "url": "https://doi.org/10.1007/978-3-032-05185-1_31"
+      },
+      "note": "Publisher citation: the MICCAI 2025 volume has a 2026 publication year.",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1007/978-3-032-05185-1_31",
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-05185-1_31?format=bibtex&flavour=citation"
+      ],
+      "resources": [
+        {
+          "label": "PDF (preprint)",
+          "href": "https://arxiv.org/pdf/2507.05154"
+        }
+      ]
+    },
+    "paper-blind-ultrasound": {
+      "title": "Blind Restoration of High-Resolution Ultrasound Video",
+      "bibtex": "@InProceedings{10.1007/978-3-032-04947-6_8,\nauthor=\"Chen, Chu\nand Cui, Kangning\nand Cascarano, Pasquale\nand Tang, Wei\nand Piccolomini, Elena Loli\nand Chan, Raymond H.\",\neditor=\"Gee, James C.\nand Alexander, Daniel C.\nand Hong, Jaesung\nand Iglesias, Juan Eugenio\nand Sudre, Carole H.\nand Venkataraman, Archana\nand Golland, Polina\nand Kim, Jong Hyo\nand Park, Jinah\",\ntitle=\"Blind Restoration of High-Resolution Ultrasound Video\",\nbooktitle=\"Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025\",\nyear=\"2026\",\npublisher=\"Springer Nature Switzerland\",\naddress=\"Cham\",\npages=\"77--87\",\nisbn=\"978-3-032-04947-6\" ,\ndoi=\"10.1007/978-3-032-04947-6_8\",\nurl=\"https://doi.org/10.1007/978-3-032-04947-6_8\"\n}\n",
+      "source": {
+        "label": "Springer",
+        "url": "https://doi.org/10.1007/978-3-032-04947-6_8"
+      },
+      "note": "Publisher citation: the MICCAI 2025 volume has a 2026 publication year.",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1007/978-3-032-04947-6_8",
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-04947-6_8?format=bibtex&flavour=citation"
+      ],
+      "resources": []
+    },
+    "paper-fetal-tracking": {
+      "title": "A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection",
+      "bibtex": "@InProceedings{10.1007/978-3-031-94562-5_20,\nauthor=\"Yang, Qianye\nand Cui, Kangning\nand Hu, Yipeng\nand Peng, Can\nand Hernandez-Cruz, Netzahualcoyotl\nand Ahuja, Rahul\nand D'Alberti, Elena\nand Raymond, Chan\nand Patey, Olga\nand Papageorghiou, Aris\nand Noble, J. Alison\",\neditor=\"Chabiniok, Radom{\\'i}r\nand Zou, Qing\nand Hussain, Tarique\nand Nguyen, Hoang H.\nand Zaha, Vlad G.\nand Gusseva, Maria\",\ntitle=\"A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection\",\nbooktitle=\"Functional Imaging and Modeling of the Heart\",\nyear=\"2025\",\npublisher=\"Springer Nature Switzerland\",\naddress=\"Cham\",\npages=\"219--230\",\nisbn=\"978-3-031-94562-5\" ,\ndoi=\"10.1007/978-3-031-94562-5_20\",\nurl=\"https://doi.org/10.1007/978-3-031-94562-5_20\"\n}\n",
+      "source": {
+        "label": "Springer",
+        "url": "https://doi.org/10.1007/978-3-031-94562-5_20"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1007/978-3-031-94562-5_20",
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-031-94562-5_20?format=bibtex&flavour=citation"
+      ],
+      "resources": []
+    },
+    "paper-bilateral-warping": {
+      "title": "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis",
+      "bibtex": "@inproceedings{tang2025bilateralwarping,\n  title = {{Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis}},\n  author = {Tang, Wei and Cui, Kangning and Chan, Raymond H. and Morel, Jean-Michel},\n  booktitle = {2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)},\n  year = {2025},\n  pages = {1--5},\n  doi = {10.1109/isbi60581.2025.10980912},\n  url = {https://doi.org/10.1109/isbi60581.2025.10980912}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/isbi60581.2025.10980912"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/isbi60581.2025.10980912"
+      ],
+      "resources": []
+    },
+    "paper-cell-segmentation": {
+      "title": "Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images",
+      "bibtex": "@article{pan2024cellsegmentation,\n  title = {{Accurate detection and instance segmentation of unstained living adherent cells in differential interference contrast images}},\n  author = {Pan, Fei and Wu, Yutong and Cui, Kangning and Chen, Shuxun and Li, Yanfang and Liu, Yaofang and Shakoor, Adnan and Zhao, Han and Lu, Beijia and Zhi, Shaohua and Chan, Raymond Hon-Fu and Sun, Dong},\n  journal = {Computers in Biology and Medicine},\n  year = {2024},\n  volume = {182},\n  pages = {109151},\n  doi = {10.1016/j.compbiomed.2024.109151},\n  url = {https://doi.org/10.1016/j.compbiomed.2024.109151}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1016/j.compbiomed.2024.109151"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1016/j.compbiomed.2024.109151"
+      ],
+      "resources": []
+    },
+    "paper-hard-exudates": {
+      "title": "Optimized Hard Exudate Detection with Supervised Contrastive Learning",
+      "bibtex": "@inproceedings{tang2024hardexudates,\n  title = {{Optimized Hard Exudate Detection with Supervised Contrastive Learning}},\n  author = {Tang, Wei and Cui, Kangning and Chan, Raymond H.},\n  booktitle = {2024 IEEE International Symposium on Biomedical Imaging (ISBI)},\n  year = {2024},\n  pages = {1--5},\n  doi = {10.1109/isbi56570.2024.10635760},\n  url = {https://doi.org/10.1109/isbi56570.2024.10635760}\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/isbi56570.2024.10635760"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/isbi56570.2024.10635760"
+      ],
+      "resources": []
+    }
   }
 }

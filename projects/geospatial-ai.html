@@ -29,8 +29,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../styles/site.css?v=2026102502">
+    <link rel="stylesheet" href="../styles/site.css?v=2026102503">
     <script src="../scripts/schema.js?v=2026100302" defer></script>
+    <script src="../scripts/citations.js?v=2026102503" defer></script>
     <script src="../scripts/site.js?v=2026100305" defer></script>
     <title>Geospatial AI | Kangning Cui</title>
 </head>
@@ -67,7 +68,20 @@
             <p class="project-method-intro">A pipeline for mapping individual palms in dense tropical forests, where overlapping crowns and uneven shading make detection difficult.</p>
             <figure class="project-figure"><a href="../figures/publications/cui2025ijcai.webp" aria-label="Open full-size PRISM: from aerial imagery to detected crowns and geographic locations."><img src="../figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async"></a><figcaption>PRISM: from aerial imagery to detected crowns and geographic locations.</figcaption></figure>
             <ul class="project-points"><li><strong>Method.</strong> Evaluate object detectors, segment crowns with SAM 2, and convert detections into geographic locations. Calibrate confidence scores against localization quality.</li><li><strong>Study.</strong> UAV imagery from 21 sites in western Ecuador, annotated with 8,830 bounding boxes and 5,026 palm center points.</li><li><strong>Output.</strong> Geolocated palm detections and crown masks, with code, presentation slides and a poster for reuse.</li></ul>
-            <div class="project-resources" aria-label="PRISM resources"><a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2502.13023" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="../docs/posters/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Poster</a> <a href="../docs/slides/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Slides</a> <a href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <div class="project-resources" aria-label="PRISM resources"><a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2502.13023" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="../docs/posters/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Poster</a> <a href="../docs/slides/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Slides</a> <a href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://www.ijcai.org/proceedings/2025/1067.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-palms-ijcai" data-title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms" data-source="https://www.ijcai.org/proceedings/2025/1067" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">BibTeX</summary><pre><code>@inproceedings{ijcai2025p1067,
+  title     = {Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms},
+  author    = {Cui, Kangning and Zhu, Rongkun and Wang, Manqi and Tang, Wei and Larsen, Gregory D. and Pauca, Victor P. and Alqahtani, Sarra and Yang, Fan and Segurado, David and Lutz, David A. and Morel, Jean-Michel and Silman, Miles R.},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
+               Artificial Intelligence, {IJCAI-25}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {James Kwok},
+  pages     = {9601--9609},
+  year      = {2025},
+  month     = {8},
+  note      = {AI and Social Good},
+  doi       = {10.24963/ijcai.2025/1067},
+  url       = {https://doi.org/10.24963/ijcai.2025/1067},
+}</code></pre></details></div>
             <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</strong> <span>[IJCAI&#x27;25, Oral]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-palms-ijcai">Abstract and publication details</a></div></details>
         </section>
 
@@ -76,7 +90,16 @@
             <p class="project-method-intro">Linking image analysis with ecological spatial modeling to study how canopy palms are distributed across tropical forests.</p>
             <figure class="project-figure"><a href="../figures/publications/cui2025efficient.webp" aria-label="Open full-size PalmDSNet: detection, segmentation, counting and model saliency."><img src="../figures/publications/cui2025efficient.webp" alt="PalmDSNet workflow: UAV imagery, palm detection, segmentation, counting, and saliency maps" width="1251" height="358" loading="lazy" decoding="async"></a><figcaption>PalmDSNet: detection, segmentation, counting and model saliency.</figcaption></figure>
             <ul class="project-points"><li><strong>Method.</strong> Detect, segment and count palms, then simulate their distribution with a bimodal reproduction algorithm.</li><li><strong>Study.</strong> UAV orthomosaics from 21 western Ecuador sites spanning wet Chocó forests to drier southwestern forests.</li><li><strong>Output.</strong> Palm maps, spatial simulations, an openly available annotated dataset, and code to reproduce the study.</li></ul>
-            <div class="project-resources" aria-label="PalmDSNet resources"><a href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a> <a href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <div class="project-resources" aria-label="PalmDSNet resources"><a href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a> <a href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2410.11124" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-palms-tgrs" data-title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery" data-source="https://doi.org/10.1109/tgrs.2025.3584093" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">BibTeX</summary><pre><code>@article{cui2025palmstgrs,
+  title = {{Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery}},
+  author = {Cui, Kangning and Tang, Wei and Zhu, Rongkun and Wang, Manqi and Larsen, Gregory D. and Pauca, Victor P. and Alqahtani, Sarra and Yang, Fan and Segurado, David and Fine, Paul and Karubian, Jordan and Chan, Raymond H. and Plemmons, Robert J. and Morel, Jean-Michel and Silman, Miles R.},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  year = {2025},
+  volume = {63},
+  pages = {1--15},
+  doi = {10.1109/tgrs.2025.3584093},
+  url = {https://doi.org/10.1109/tgrs.2025.3584093}
+}</code></pre></details></div>
             <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</strong> <span>[TGRS&#x27;25]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Wei Tang<sup>†</sup>, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-palms-tgrs">Abstract and publication details</a></div></details>
         </section>
 
@@ -85,7 +108,16 @@
             <p class="project-method-intro">A complementary direction: learning spatial and spectral structure without annotated training data.</p>
             <figure class="project-figure"><a href="../figures/publications/cui2024superpixel.webp" aria-label="Open full-size S2DL: spatially regularized diffusion learning for hyperspectral clustering."><img src="../figures/publications/cui2024superpixel.webp" alt="S2DL workflow: hyperspectral data, superpixels, diffusion geometry, and clustering without labels" width="1256" height="517" loading="lazy" decoding="async"></a><figcaption>S2DL: spatially regularized diffusion learning for hyperspectral clustering.</figcaption></figure>
             <ul class="project-points"><li><strong>Method.</strong> Build a diffusion graph from representative pixels within superpixels, then propagate cluster labels to the full image.</li><li><strong>Study.</strong> Evaluated on Indian Pines, Salinas, Salinas A and WHU-Hi, with a Gaofen-5 application to mangrove species mapping in Hong Kong’s Mai Po Nature Reserve.</li><li><strong>Output.</strong> Unsupervised clustering maps with reduced graph construction cost; the implementation is publicly available.</li></ul>
-            <div class="project-resources" aria-label="S2DL resources"><a href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <div class="project-resources" aria-label="S2DL resources"><a href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2312.15447" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-s2dl" data-title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" data-source="https://doi.org/10.1109/tgrs.2024.3385202" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">BibTeX</summary><pre><code>@article{cui2024s2dl,
+  title = {{Superpixel-Based and Spatially Regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering}},
+  author = {Cui, Kangning and Li, Ruoning and Polk, Sam L and Lin, Yinyi and Zhang, Hongsheng and Murphy, James M. and Plemmons, Robert J. and Chan, Raymond H.},
+  journal = {IEEE Transactions on Geoscience and Remote Sensing},
+  year = {2024},
+  volume = {62},
+  pages = {1--18},
+  doi = {10.1109/tgrs.2024.3385202},
+  url = {https://doi.org/10.1109/tgrs.2024.3385202}
+}</code></pre></details></div>
             <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</strong> <span>[TGRS&#x27;24]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-s2dl">Abstract and publication details</a></div></details>
         </section>
         <section class="content page-panel project-data" aria-labelledby="open-data">

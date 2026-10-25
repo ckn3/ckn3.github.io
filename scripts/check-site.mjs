@@ -12,7 +12,7 @@ const ids = new Map();
 const styleVersions = new Set();
 
 for (const [file, source] of html) {
-    const list = [...source.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+    const list = [...source.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(new Set(list).size, list.length, `${file}: duplicate IDs`);
     ids.set(file, new Set(list));
     const version = source.match(/site\.css\?v=(\d+)/);
@@ -66,6 +66,32 @@ for (const [, id, content] of entries) {
     assert.match(content, /<summary [^>]*aria-label="View publication details: [^"]+">Details<\/summary>/);
     assert.match(content, /<p class="publication-abstract">[^<]+<\/p>/, `${id}: missing static abstract`);
     assert.match(content, /<a class="badge-chip" href="[^"]+"/, `${id}: missing resource links`);
+    assert.ok(content.includes(`data-citation-id="${id}"`), `${id}: missing citation`);
+}
+const relatedIds = [...research.matchAll(/class="direction-item" data-publication-id="([^"]+)"/g)].map(match => match[1]);
+assert.equal(relatedIds.length, 25, 'Expected a citation for every related publication');
+assert.deepEqual(new Set(relatedIds), new Set(Object.keys(data.citations)), 'Citation coverage must match related publications');
+const citationKeys = new Set();
+for (const [id, citation] of Object.entries(data.citations)) {
+    const key = citation.bibtex.match(/^@(?:article|inproceedings|misc)\{([^,]+),/i)?.[1];
+    assert.ok(key && !citationKeys.has(key), `${id}: missing or duplicate BibTeX key`);
+    citationKeys.add(key);
+    for (const field of ['title', 'author', 'year', 'url']) assert.match(citation.bibtex, new RegExp(`\\b${field}\\s*=\\s*[{"]`, 'i'), `${id}: missing ${field}`);
+    assert.match(citation.bibtex, /Cui, Kangning/, `${id}: wrong authors`);
+    assert.equal(new URL(citation.source.url).protocol, 'https:');
+    if (citation.source.label === 'arXiv') {
+        assert.match(citation.bibtex, /^@misc\{/);
+        assert.match(citation.note, /arXiv version/);
+    }
+}
+for (const [file, source] of [['publications.html', research], ['projects/geospatial-ai.html', html.get('projects/geospatial-ai.html')]]) {
+    assert.doesNotMatch(source, /href="[^"]+\.bib(?:[?#][^"]*)?"/, `${file}: citations must not download`);
+    const citations = [...source.matchAll(/<details class="citation-details" data-citation-id="([^"]+)"[^>]*>[\s\S]*?<code>([\s\S]*?)<\/code>[\s\S]*?<\/details>/g)];
+    assert.equal(citations.length, file === 'publications.html' ? 35 : 3, `${file}: missing static citation fallback`);
+    for (const [, id, bibtex] of citations) {
+        const escaped = data.citations[id].bibtex.trim().replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+        assert.equal(bibtex, escaped, `${file}: stale citation for ${id}`);
+    }
 }
 assert.ok(!html.get('publications.html').includes('Unsupervised Diffusion and Volume Maximization-Based Clustering'));
 for (const feature of data.featured) assert.ok(paperIds.includes(feature.id), `Unknown highlight: ${feature.id}`);

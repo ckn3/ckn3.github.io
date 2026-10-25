@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modalAuthors.replaceChildren(...Array.from(entry.querySelector('.authors').childNodes, function (node) { return node.cloneNode(true); }));
         modalAbstract.textContent = entry.querySelector('.publication-abstract').textContent.trim();
         modalLinks.replaceChildren();
-        entry.querySelectorAll('.badges > a').forEach(function (link) { modalLinks.appendChild(link.cloneNode(true)); });
+        entry.querySelectorAll('.badges > a, .badges > .citation-button').forEach(function (link) { modalLinks.appendChild(link.cloneNode(true)); });
         modalLinks.hidden = !modalLinks.childElementCount;
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target === modal) closeModal();
     });
     document.addEventListener('keydown', function (event) {
-        if (!modal.classList.contains('is-open')) return;
+        if (!modal.classList.contains('is-open') || document.querySelector('#citation-dialog[open]')) return;
         if (event.key === 'Escape') {
             closeModal();
         } else if (event.key === 'Tab') {

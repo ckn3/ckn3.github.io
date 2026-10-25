@@ -4333,6 +4333,44 @@ body.modal-open {
 .project-citation { margin-top: 12px; font-size: 1rem; }
 .project-citation-body { padding: 16px 20px; border-left: 2px solid var(--cityu-line); background: var(--surface); }
 .project-citation-body p { margin: 0 0 12px; line-height: 1.65; }
+
+/* Shared citation controls, with readable static text when scripts are unavailable. */
+.citation-details { display: inline-block; max-width: 100%; vertical-align: baseline; }
+.citation-details[hidden] { display: none; }
+.citation-details > summary { list-style: none; cursor: pointer; }
+.citation-details > summary::-webkit-details-marker { display: none; }
+.citation-details[open] { display: block; flex-basis: 100%; }
+.citation-details pre { margin: 12px 0; padding: 16px; border: 1px solid var(--line); background: var(--surface); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.875rem; line-height: 1.6; }
+.citation-button { font-family: inherit; cursor: pointer; }
+.citation-inline { display: inline; padding: 0; border: 0; background: transparent; color: var(--cityu-purple-deep); font: inherit; font-weight: 600; text-decoration: underline; text-decoration-color: var(--cityu-line); text-underline-offset: 3px; cursor: pointer; }
+.citation-inline:hover { text-decoration-color: currentColor; }
+.project-resources .citation-inline { display: inline-flex; align-items: center; min-height: 36px; }
+body.citation-open { overflow: hidden; }
+.citation-dialog { box-sizing: border-box; width: min(760px, calc(100% - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); box-shadow: 0 24px 80px #231b2638; overflow: auto; }
+.citation-dialog::backdrop { background: rgb(24 20 29 / 62%); }
+.citation-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.citation-eyebrow { margin: 0; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cityu-purple-deep); }
+.citation-dialog h2 { margin: 12px 0 18px; font-size: 1.4rem; line-height: 1.4; overflow-wrap: anywhere; }
+.citation-note { margin: 0 0 16px; font-size: 0.9375rem; line-height: 1.5; color: var(--muted); }
+.citation-note[hidden] { display: none; }
+.citation-text { box-sizing: border-box; display: block; width: 100%; height: clamp(180px, 38dvh, 340px); padding: 16px; border: 1px solid var(--line-strong); border-radius: 8px; background: #faf9f6; color: var(--ink); font: 0.875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; resize: vertical; tab-size: 2; }
+.citation-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 18px; }
+.citation-dialog button { min-height: 44px; padding: 9px 16px; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--surface); color: var(--ink); font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+.citation-dialog button:hover { background: var(--cityu-soft); border-color: var(--cityu-purple); }
+.citation-dialog .citation-copy { background: var(--cityu-purple-deep); border-color: var(--cityu-purple-deep); color: #fff; }
+.citation-dialog .citation-copy:hover { background: var(--cityu-purple); }
+.citation-dialog .citation-copy:disabled { opacity: 0.65; cursor: wait; }
+.citation-dialog .citation-close { border-color: transparent; padding: 8px 10px; }
+.citation-close span { margin-left: 8px; font-size: 1.25rem; }
+.citation-source { margin-left: auto; padding: 10px 0; font-size: 0.875rem; text-underline-offset: 3px; }
+.citation-status { min-height: 1.5em; margin: 10px 0 0; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+.citation-dialog :is(button, textarea, a):focus-visible, .citation-button:focus-visible { outline: 3px solid var(--cityu-purple); outline-offset: 3px; }
+@media (max-width: 520px) {
+    .citation-dialog { padding: 16px; border-radius: 12px; }
+    .citation-dialog h2 { font-size: 1.2rem; }
+    .citation-text { padding: 12px; }
+    .citation-source { margin-left: 0; }
+}
 .project-author-key { color: var(--muted); font-size: 0.875rem; }
 .project-data-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 28px 0; }
 .project-data-stats > div { padding-top: 18px; border-top: 2px solid var(--cityu-line); }
