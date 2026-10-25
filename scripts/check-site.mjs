@@ -69,8 +69,26 @@ for (const [, id, content] of entries) {
     assert.ok(content.includes(`data-citation-id="${id}"`), `${id}: missing citation`);
 }
 const relatedIds = [...research.matchAll(/class="direction-item" data-publication-id="([^"]+)"/g)].map(match => match[1]);
-assert.equal(relatedIds.length, 25, 'Expected a citation for every related publication');
+assert.equal(relatedIds.length, Object.keys(data.citations).length, 'Expected a citation for every related publication');
+assert.equal(new Set(relatedIds).size, relatedIds.length, 'Each publication must have one primary research theme');
 assert.deepEqual(new Set(relatedIds), new Set(Object.keys(data.citations)), 'Citation coverage must match related publications');
+const themeIds = data.themes.flatMap(theme => theme.groups.flatMap(group => group.ids));
+assert.deepEqual(themeIds, relatedIds, 'Theme order must match the publication registry');
+for (const theme of data.themes) {
+    const count = theme.groups.reduce((sum, group) => sum + group.ids.length, 0);
+    const block = research.split(`<!-- theme:${theme.id}:start -->`)[1].split(`<!-- theme:${theme.id}:end -->`)[0];
+    assert.ok(block.includes(`Publications &amp; preprints (${count})`), `${theme.id}: stale publication count`);
+    for (const group of theme.groups) {
+        const years = group.ids.map(id => data.citations[id].listing.year);
+        assert.deepEqual(years, [...years].sort((a, b) => b - a), `${theme.id}: newest papers must come first`);
+    }
+}
+assert.equal(data.scholarImport.records.length, data.scholarImport.recordCount, 'Incomplete Scholar import');
+assert.equal(new Set(data.scholarImport.records.map(record => record.scholarId)).size, data.scholarImport.recordCount, 'Duplicate Scholar records');
+assert.deepEqual(new Set(data.scholarImport.records.filter(record => record.kind !== 'patent').map(record => record.publicationId)), new Set(relatedIds), 'Every Scholar paper must be represented');
+for (const record of data.scholarImport.records.filter(record => record.kind === 'patent')) {
+    assert.ok(ids.get('publications.html').has(record.publicationId), `Missing Scholar patent: ${record.title}`);
+}
 const citationKeys = new Set();
 for (const [id, citation] of Object.entries(data.citations)) {
     const key = citation.bibtex.match(/^@(?:article|inproceedings|misc)\{([^,]+),/i)?.[1];
@@ -83,17 +101,17 @@ for (const [id, citation] of Object.entries(data.citations)) {
         assert.match(citation.bibtex, /^@misc\{/);
         assert.match(citation.note, /arXiv version/);
     }
+    if (citation.listing.kind === 'preprint') assert.match(citation.listing.venue, /Preprint/);
 }
 for (const [file, source] of [['publications.html', research], ['projects/geospatial-ai.html', html.get('projects/geospatial-ai.html')]]) {
     assert.doesNotMatch(source, /href="[^"]+\.bib(?:[?#][^"]*)?"/, `${file}: citations must not download`);
     const citations = [...source.matchAll(/<details class="citation-details" data-citation-id="([^"]+)"[^>]*>[\s\S]*?<code>([\s\S]*?)<\/code>[\s\S]*?<\/details>/g)];
-    assert.equal(citations.length, file === 'publications.html' ? 35 : 3, `${file}: missing static citation fallback`);
+    assert.equal(citations.length, file === 'publications.html' ? relatedIds.length + paperIds.length : 3, `${file}: missing static citation fallback`);
     for (const [, id, bibtex] of citations) {
         const escaped = data.citations[id].bibtex.trim().replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
         assert.equal(bibtex, escaped, `${file}: stale citation for ${id}`);
     }
 }
-assert.ok(!html.get('publications.html').includes('Unsupervised Diffusion and Volume Maximization-Based Clustering'));
 for (const feature of data.featured) assert.ok(paperIds.includes(feature.id), `Unknown highlight: ${feature.id}`);
 for (const paper of Object.values(data.selected).flat()) {
     assert.ok(fs.existsSync(path.join(root, paper.image.src)), `Missing publication image: ${paper.image.src}`);
@@ -102,6 +120,10 @@ for (const paper of Object.values(data.selected).flat()) {
 assert.deepEqual(data.featured.map(feature => feature.id), ['paper-lowrankarena-neurips', 'paper-palms-ijcai', 'paper-ecg-horizons-neurips']);
 
 const team = html.get('team.html');
+for (const [file, source] of [['index.html', home], ['team.html', team]]) {
+    assert.match(source, /All PhD positions through and including Fall 2027 have been filled\./, `${file}: missing recruitment status`);
+    assert.doesNotMatch(source, /PhD positions are available|PhD opportunities at CityU/, `${file}: stale PhD recruitment notice`);
+}
 assert.match(team, /src="figures\/team\/mallory-pitts-linkedin\.webp" alt="Mallory Pitts" width="400" height="400"/);
 for (const item of JSON.parse(fs.readFileSync(path.join(root, 'data/image-sources.json'), 'utf8')).images) {
     assert.ok(fs.existsSync(path.join(root, item.file)), `Missing localized image: ${item.file}`);

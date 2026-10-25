@@ -4047,6 +4047,13 @@ body.modal-open {
 .research-page .research-topic .direction-card { padding: 8px 0 0; margin: 12px 0 0; border: 0; }
 .research-page .direction-body { border-color: var(--line); }
 .research-page .direction-body h4 { margin: 22px 0 8px; color: var(--ink); }
+.research-page .direction-body h4:first-child { margin-top: 6px; }
+.research-page .direction-title { color: var(--ink); font-weight: 600; line-height: 1.5; }
+.research-page .direction-item .direction-title a { font-size: inherit; line-height: inherit; }
+.research-page .direction-resources { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 12px; margin-top: 7px; }
+.research-page .direction-resources .citation-inline { font-size: 0.84rem; }
+.research-page .direction-resources .citation-details[open] { min-width: 0; width: 100%; }
+.patent-entry + .patent-entry { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .research-page .publication-entry,
 .research-page .conference-entry {
     padding: 16px 0;

@@ -424,7 +424,8 @@
       "metadataSources": [
         "https://arxiv.org/abs/2608.26389",
         "https://neurips.cc/virtual/2026/poster/139091",
-        "https://neurips.cc/Conferences/2026/CallForPapers"
+        "https://neurips.cc/Conferences/2026/CallForPapers",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:p2g8aNsByqUC"
       ],
       "resources": [
         {
@@ -440,6 +441,29 @@
         "checkedOn": "2026-10-25",
         "version": "accepted-conference-paper",
         "source": "https://neurips.cc/virtual/2026/poster/139091"
+      },
+      "listing": {
+        "venue": "NeurIPS'26, ED Track, Poster",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://neurips.cc/virtual/2026/poster/139091"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.26389"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zishan-Shao/lowrankarena"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2608.26389"
+          }
+        ]
       }
     },
     "paper-dpq-emnlp": {
@@ -452,7 +476,8 @@
       "note": "",
       "metadataSources": [
         "https://aclanthology.org/2026.findings-emnlp.670/",
-        "https://aclanthology.org/2026.findings-emnlp.670.bib"
+        "https://aclanthology.org/2026.findings-emnlp.670.bib",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:OU6Ihb5iCvQC"
       ],
       "resources": [
         {
@@ -464,6 +489,29 @@
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://aclanthology.org/2026.findings-emnlp.670.bib"
+      },
+      "listing": {
+        "venue": "EMNLP'26, Findings",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://aclanthology.org/2026.findings-emnlp.670/"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.21019"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/xi-xiaoran/DPQ"
+          },
+          {
+            "label": "PDF",
+            "href": "https://aclanthology.org/2026.findings-emnlp.670.pdf"
+          }
+        ]
       }
     },
     "paper-decodeshare-icml": {
@@ -475,7 +523,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://proceedings.mlr.press/v306/shao26j.html"
+        "https://proceedings.mlr.press/v306/shao26j.html",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:KxtntwgDAa4C"
       ],
       "resources": [
         {
@@ -495,6 +544,29 @@
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://proceedings.mlr.press/v306/shao26j.html"
+      },
+      "listing": {
+        "venue": "ICML'26, Spotlight",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2607.20469"
+          },
+          {
+            "label": "Paper",
+            "href": "https://proceedings.mlr.press/v306/shao26j.html"
+          },
+          {
+            "label": "PDF",
+            "href": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zishan-Shao/decodeshare"
+          }
+        ]
       }
     },
     "paper-awakeforest": {
@@ -508,7 +580,8 @@
       "metadataSources": [
         "https://api.crossref.org/works/10.24963/ijcai.2026/986",
         "https://www.ijcai.org/proceedings/2026/986",
-        "https://www.ijcai.org/proceedings/2026/bibtex/986"
+        "https://www.ijcai.org/proceedings/2026/bibtex/986",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:1sJd4Hv_s6UC"
       ],
       "resources": [
         {
@@ -524,6 +597,25 @@
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://www.ijcai.org/proceedings/2026/bibtex/986"
+      },
+      "listing": {
+        "venue": "IJCAI Demo'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2606.23542"
+          },
+          {
+            "label": "Paper",
+            "href": "https://www.ijcai.org/proceedings/2026/986"
+          },
+          {
+            "label": "PDF",
+            "href": "https://ijcai.org/proceedings/2026/0986.pdf"
+          }
+        ]
       }
     },
     "paper-help-icmr": {
@@ -535,7 +627,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1145/3805622.3810593"
+        "https://api.crossref.org/works/10.1145/3805622.3810593",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:cFHS6HbyZ2cC"
       ],
       "resources": [
         {
@@ -548,6 +641,29 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1145/3805622.3810593",
         "indexedAt": "2026-10-06T16:31:40Z"
+      },
+      "listing": {
+        "venue": "ICMR'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://dl.acm.org/doi/10.1145/3805622.3810593"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2604.15065"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2604.15065"
+          }
+        ]
       }
     },
     "paper-centerseg": {
@@ -560,7 +676,8 @@
       "note": "",
       "metadataSources": [
         "https://api.crossref.org/works/10.1109/tgrs.2026.3657453",
-        "https://scholars.cityu.edu.hk/en/publications/center-guided-classifier-for-semantic-segmentation-of-remote-sens/"
+        "https://scholars.cityu.edu.hk/en/publications/center-guided-classifier-for-semantic-segmentation-of-remote-sens/",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:QIV2ME_5wuYC"
       ],
       "resources": [
         {
@@ -573,6 +690,25 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/tgrs.2026.3657453",
         "indexedAt": "2026-10-23T20:20:30Z"
+      },
+      "listing": {
+        "venue": "TGRS'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/11364332"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2503.16963"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2503.16963"
+          }
+        ]
       }
     },
     "paper-raw-uav": {
@@ -584,7 +720,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/igarss60577.2026.11731064"
+        "https://api.crossref.org/works/10.1109/igarss60577.2026.11731064",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:j3f4tGmQtD8C"
       ],
       "resources": [
         {
@@ -601,6 +738,25 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/igarss60577.2026.11731064",
         "indexedAt": "2026-10-22T06:39:22Z"
+      },
+      "listing": {
+        "venue": "IGARSS'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2509.12400"
+          },
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/igarss60577.2026.11731064"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2509.12400"
+          }
+        ]
       }
     },
     "paper-palms-tgrs": {
@@ -612,7 +768,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/tgrs.2025.3584093"
+        "https://api.crossref.org/works/10.1109/tgrs.2025.3584093",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:-f6ydRqryjwC"
       ],
       "resources": [
         {
@@ -625,6 +782,33 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/tgrs.2025.3584093",
         "indexedAt": "2026-10-23T20:20:12Z"
+      },
+      "listing": {
+        "venue": "TGRS'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/11059236"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2410.11124"
+          },
+          {
+            "label": "Dataset",
+            "href": "https://zenodo.org/records/13822508"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/ckn3/palm-ds-sp"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2410.11124"
+          }
+        ]
       }
     },
     "paper-palms-ijcai": {
@@ -638,7 +822,8 @@
       "metadataSources": [
         "https://api.crossref.org/works/10.24963/ijcai.2025/1067",
         "https://www.ijcai.org/proceedings/2025/1067",
-        "https://www.ijcai.org/proceedings/2025/bibtex/1067"
+        "https://www.ijcai.org/proceedings/2025/bibtex/1067",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:ldfaerwXgEUC"
       ],
       "resources": [
         {
@@ -654,6 +839,25 @@
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://www.ijcai.org/proceedings/2025/bibtex/1067"
+      },
+      "listing": {
+        "venue": "IJCAI'25, Oral",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://www.ijcai.org/proceedings/2025/1067"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zippppo/PRISM"
+          },
+          {
+            "label": "PDF",
+            "href": "https://www.ijcai.org/proceedings/2025/1067.pdf"
+          }
+        ]
       }
     },
     "paper-palmprobnet": {
@@ -666,7 +870,8 @@
       "note": "",
       "metadataSources": [
         "https://api.crossref.org/works/10.1145/3603287.3651220",
-        "https://scholars.cityu.edu.hk/en/publications/palmprobnet-a-probabilistic-approach-to-understanding-palm-distri/"
+        "https://scholars.cityu.edu.hk/en/publications/palmprobnet-a-probabilistic-approach-to-understanding-palm-distri/",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:YOwf2qJgpHMC"
       ],
       "resources": [
         {
@@ -686,6 +891,25 @@
             "source": "https://scholars.cityu.edu.hk/en/publications/palmprobnet-a-probabilistic-approach-to-understanding-palm-distri/"
           }
         ]
+      },
+      "listing": {
+        "venue": "ACMSE'24",
+        "year": 2024,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1145/3603287.3651220"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2403.03161"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2403.03161"
+          }
+        ]
       }
     },
     "paper-gold-mining": {
@@ -697,7 +921,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.3390/rs14071746"
+        "https://api.crossref.org/works/10.3390/rs14071746",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qjMakFHDy7sC"
       ],
       "resources": [],
       "verification": {
@@ -705,6 +930,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.3390/rs14071746",
         "indexedAt": "2026-10-22T17:07:41Z"
+      },
+      "listing": {
+        "venue": "RS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://www.mdpi.com/2072-4292/14/7/1746"
+          }
+        ]
       }
     },
     "paper-hypergraph": {
@@ -716,7 +952,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/jstars.2026.3673839"
+        "https://api.crossref.org/works/10.1109/jstars.2026.3673839",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:dfsIfKJdRG4C"
       ],
       "resources": [],
       "verification": {
@@ -724,6 +961,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/jstars.2026.3673839",
         "indexedAt": "2026-10-22T17:07:33Z"
+      },
+      "listing": {
+        "venue": "JSTARS'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/11433595"
+          }
+        ]
       }
     },
     "paper-s2dl": {
@@ -735,7 +983,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/tgrs.2024.3385202"
+        "https://api.crossref.org/works/10.1109/tgrs.2024.3385202",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:M3ejUd6NZC8C"
       ],
       "resources": [
         {
@@ -748,6 +997,29 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/tgrs.2024.3385202",
         "indexedAt": "2026-10-23T20:20:19Z"
+      },
+      "listing": {
+        "venue": "TGRS'24",
+        "year": 2024,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/10491382"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2312.15447"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/ckn3/S2DL"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2312.15447"
+          }
+        ]
       }
     },
     "paper-dsirc": {
@@ -759,7 +1031,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/whispers56178.2022.9955069"
+        "https://api.crossref.org/works/10.1109/whispers56178.2022.9955069",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:_FxGoFyzp5QC"
       ],
       "resources": [
         {
@@ -776,6 +1049,25 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/whispers56178.2022.9955069",
         "indexedAt": "2026-09-18T17:53:00Z"
+      },
+      "listing": {
+        "venue": "WHISPERS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2204.13497"
+          },
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/whispers56178.2022.9955069"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2204.13497"
+          }
+        ]
       }
     },
     "paper-ash-dieback": {
@@ -787,7 +1079,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883429"
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883429",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:ufrVoPGSRksC"
       ],
       "resources": [
         {
@@ -800,6 +1093,25 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/igarss46834.2022.9883429",
         "indexedAt": "2026-10-22T17:11:25Z"
+      },
+      "listing": {
+        "venue": "IGARSS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/IGARSS46834.2022.9883429"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2204.09041"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2204.09041"
+          }
+        ]
       }
     },
     "paper-svm-satv": {
@@ -811,7 +1123,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883961"
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883961",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:YsMSGLbcyi4C"
       ],
       "resources": [],
       "verification": {
@@ -819,6 +1132,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/igarss46834.2022.9883961",
         "indexedAt": "2026-10-08T03:08:58Z"
+      },
+      "listing": {
+        "venue": "IGARSS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/9883961"
+          }
+        ]
       }
     },
     "paper-active-diffusion": {
@@ -830,7 +1154,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883894"
+        "https://api.crossref.org/works/10.1109/igarss46834.2022.9883894",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:W7OEmFMy1HYC"
       ],
       "resources": [
         {
@@ -847,6 +1172,25 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/igarss46834.2022.9883894",
         "indexedAt": "2026-10-22T17:11:39Z"
+      },
+      "listing": {
+        "venue": "IGARSS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/igarss46834.2022.9883894"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2204.06298"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2204.06298"
+          }
+        ]
       }
     },
     "paper-aviris-ng": {
@@ -858,7 +1202,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/whispers52202.2021.9484006"
+        "https://api.crossref.org/works/10.1109/whispers52202.2021.9484006",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:u5HHmVD_uO8C"
       ],
       "resources": [],
       "verification": {
@@ -866,6 +1211,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/whispers52202.2021.9484006",
         "indexedAt": "2026-05-08T14:43:10Z"
+      },
+      "listing": {
+        "venue": "WHISPERS'21",
+        "year": 2021,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/9484006"
+          }
+        ]
       }
     },
     "paper-ecg-horizons-neurips": {
@@ -879,7 +1235,8 @@
       "metadataSources": [
         "https://arxiv.org/abs/2605.16975",
         "https://neurips.cc/virtual/2026/poster/150095",
-        "https://neurips.cc/Conferences/2026/CallForPapers"
+        "https://neurips.cc/Conferences/2026/CallForPapers",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:EUQCXRtRnyEC"
       ],
       "resources": [
         {
@@ -895,6 +1252,25 @@
         "checkedOn": "2026-10-25",
         "version": "accepted-conference-paper",
         "source": "https://neurips.cc/virtual/2026/poster/150095"
+      },
+      "listing": {
+        "venue": "NeurIPS'26, Poster",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://neurips.cc/virtual/2026/poster/150095"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2605.16975"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2605.16975"
+          }
+        ]
       }
     },
     "paper-cardiac-phase": {
@@ -907,7 +1283,8 @@
       "note": "Publisher citation: the MICCAI 2025 volume has a 2026 publication year.",
       "metadataSources": [
         "https://api.crossref.org/works/10.1007/978-3-032-05185-1_31",
-        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-05185-1_31?format=bibtex&flavour=citation"
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-05185-1_31?format=bibtex&flavour=citation",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:TFP_iSt0sucC"
       ],
       "resources": [
         {
@@ -919,6 +1296,25 @@
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-05185-1_31?format=bibtex&flavour=citation"
+      },
+      "listing": {
+        "venue": "MICCAI'25, Oral",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/YingyuYyy/CardiacPhase"
+          },
+          {
+            "label": "PDF (preprint)",
+            "href": "https://arxiv.org/pdf/2507.05154"
+          }
+        ]
       }
     },
     "paper-blind-ultrasound": {
@@ -931,13 +1327,25 @@
       "note": "Publisher citation: the MICCAI 2025 volume has a 2026 publication year.",
       "metadataSources": [
         "https://api.crossref.org/works/10.1007/978-3-032-04947-6_8",
-        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-04947-6_8?format=bibtex&flavour=citation"
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-04947-6_8?format=bibtex&flavour=citation",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:isC4tDSrTZIC"
       ],
       "resources": [],
       "verification": {
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://citation-needed.springer.com/v2/references/10.1007/978-3-032-04947-6_8?format=bibtex&flavour=citation"
+      },
+      "listing": {
+        "venue": "MICCAI'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8"
+          }
+        ]
       }
     },
     "paper-fetal-tracking": {
@@ -950,13 +1358,25 @@
       "note": "",
       "metadataSources": [
         "https://api.crossref.org/works/10.1007/978-3-031-94562-5_20",
-        "https://citation-needed.springer.com/v2/references/10.1007/978-3-031-94562-5_20?format=bibtex&flavour=citation"
+        "https://citation-needed.springer.com/v2/references/10.1007/978-3-031-94562-5_20?format=bibtex&flavour=citation",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qUcmZB5y_30C"
       ],
       "resources": [],
       "verification": {
         "checkedOn": "2026-10-25",
         "version": "version-of-record",
         "source": "https://citation-needed.springer.com/v2/references/10.1007/978-3-031-94562-5_20?format=bibtex&flavour=citation"
+      },
+      "listing": {
+        "venue": "FIMH'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1007/978-3-031-94562-5_20"
+          }
+        ]
       }
     },
     "paper-bilateral-warping": {
@@ -968,7 +1388,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/isbi60581.2025.10980912"
+        "https://api.crossref.org/works/10.1109/isbi60581.2025.10980912",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:mVmsd5A6BfQC"
       ],
       "resources": [],
       "verification": {
@@ -976,6 +1397,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/isbi60581.2025.10980912",
         "indexedAt": "2026-09-23T18:58:56Z"
+      },
+      "listing": {
+        "venue": "ISBI'25, Oral",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://ieeexplore.ieee.org/document/10980912"
+          }
+        ]
       }
     },
     "paper-cell-segmentation": {
@@ -987,7 +1419,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1016/j.compbiomed.2024.109151"
+        "https://api.crossref.org/works/10.1016/j.compbiomed.2024.109151",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:R3hNpaxXUhUC"
       ],
       "resources": [],
       "verification": {
@@ -995,6 +1428,17 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1016/j.compbiomed.2024.109151",
         "indexedAt": "2026-09-23T12:56:44Z"
+      },
+      "listing": {
+        "venue": "CIBM'24",
+        "year": 2024,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://www.sciencedirect.com/science/article/pii/S0010482524012368"
+          }
+        ]
       }
     },
     "paper-hard-exudates": {
@@ -1006,7 +1450,8 @@
       },
       "note": "",
       "metadataSources": [
-        "https://api.crossref.org/works/10.1109/isbi56570.2024.10635760"
+        "https://api.crossref.org/works/10.1109/isbi56570.2024.10635760",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qxL8FJ1GzNcC"
       ],
       "resources": [],
       "verification": {
@@ -1014,7 +1459,1524 @@
         "version": "version-of-record",
         "source": "https://api.crossref.org/works/10.1109/isbi56570.2024.10635760",
         "indexedAt": "2026-06-16T04:48:18Z"
+      },
+      "listing": {
+        "venue": "ISBI'24",
+        "year": 2024,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/ISBI56570.2024.10635760"
+          }
+        ]
+      }
+    },
+    "paper-cotton-network": {
+      "title": "Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification",
+      "bibtex": "@article{wang2025cotton,\n  author = {Wang, Zhengle and\n            Zhang, Heng-Wei and\n            Dai, Ying-Qiang and\n            Cui, Kangning and\n            Wang, Haihua and\n            Chee, Peng W. and\n            Wang, Rui-Feng},\n  title = {Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification},\n  journal = {Plants},\n  year = {2025},\n  volume = {14},\n  number = {13},\n  pages = {2082},\n  publisher = {MDPI AG},\n  month = {July},\n  doi = {10.3390/plants14132082},\n  url = {https://doi.org/10.3390/plants14132082},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/plants14132082"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/plants14132082",
+        "https://doi.org/10.3390/plants14132082",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:hFOr9nPyWt4C"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/plants14132082"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/plants14132082"
+      },
+      "listing": {
+        "venue": "Plants'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/plants14132082"
+          }
+        ]
+      }
+    },
+    "paper-lightweight-uav": {
+      "title": "Toward Efficient UAV-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion",
+      "bibtex": "@article{di2025uav,\n  author = {Di, Xingyu and\n            Cui, Kangning and\n            Wang, Rui-Feng},\n  title = {Toward Efficient {UAV}-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion},\n  journal = {Remote Sensing},\n  year = {2025},\n  volume = {17},\n  number = {13},\n  pages = {2235},\n  publisher = {MDPI AG},\n  month = {June},\n  doi = {10.3390/rs17132235},\n  url = {https://doi.org/10.3390/rs17132235},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/rs17132235"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/rs17132235",
+        "https://doi.org/10.3390/rs17132235",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:hC7cP41nSMkC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/rs17132235"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/rs17132235"
+      },
+      "listing": {
+        "venue": "Remote Sensing'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/rs17132235"
+          }
+        ]
+      }
+    },
+    "paper-ra-cottnet": {
+      "title": "RA-CottNet: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition",
+      "bibtex": "@article{wang2025racott,\n  author = {Wang, Rui-Feng and\n            Qin, Yi-Ming and\n            Zhao, Yi-Yi and\n            Xu, Mingrui and\n            Schardong, Iago Beffart and\n            Cui, Kangning},\n  title = {{RA-CottNet}: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition},\n  journal = {{AI}},\n  year = {2025},\n  volume = {6},\n  number = {9},\n  pages = {235},\n  publisher = {MDPI AG},\n  month = {September},\n  doi = {10.3390/ai6090235},\n  url = {https://doi.org/10.3390/ai6090235},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/ai6090235"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/ai6090235",
+        "https://doi.org/10.3390/ai6090235",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:iH-uZ7U-co4C"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/ai6090235"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/ai6090235"
+      },
+      "listing": {
+        "venue": "AI'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/ai6090235"
+          }
+        ]
+      }
+    },
+    "paper-diffusion-volume": {
+      "title": "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images",
+      "bibtex": "@article{polk2023diffusionvolume,\n  author = {Polk, Sam L. and\n            Cui, Kangning and\n            Chan, Aland H. Y. and\n            Coomes, David A. and\n            Plemmons, Robert J. and\n            Murphy, James M.},\n  title = {Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images},\n  journal = {Remote Sensing},\n  year = {2023},\n  volume = {15},\n  number = {4},\n  pages = {1053},\n  publisher = {MDPI AG},\n  month = {February},\n  doi = {10.3390/rs15041053},\n  url = {https://doi.org/10.3390/rs15041053},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/rs15041053"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/rs15041053",
+        "https://doi.org/10.3390/rs15041053",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Se3iqnhoufwC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/rs15041053"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/rs15041053"
+      },
+      "listing": {
+        "venue": "Remote Sensing'23",
+        "year": 2023,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/rs15041053"
+          }
+        ]
+      }
+    },
+    "paper-agriculture-forestry": {
+      "title": "Advanced Remote Sensing and AI Techniques in Agriculture and Forestry",
+      "bibtex": "@article{wang2026agriculture,\n  author = {Wang, Rui-Feng and\n            Cui, Kangning},\n  title = {Advanced Remote Sensing and {AI} Techniques in Agriculture and Forestry},\n  journal = {Plants},\n  year = {2026},\n  volume = {15},\n  number = {17},\n  pages = {2706},\n  publisher = {MDPI AG},\n  month = {September},\n  doi = {10.3390/plants15172706},\n  url = {https://doi.org/10.3390/plants15172706},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/plants15172706"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/plants15172706",
+        "https://doi.org/10.3390/plants15172706",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Tiz5es2fbqcC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/plants15172706"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/plants15172706"
+      },
+      "listing": {
+        "venue": "Plants'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/plants15172706"
+          }
+        ]
+      }
+    },
+    "paper-jassidnet": {
+      "title": "JassidNet as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid (Amrasca biguttula) detection and counting toward objective resistance screening",
+      "bibtex": "@article{wang2026jassid,\n  author = {Wang, Rui-Feng and\n            Cui, Kangning and\n            Schardong, Iago Beffart and\n            Bauer, Matthew C. and\n            Somala, Rama Vamsi and\n            Xu, Mingrui and\n            West, Dalton and\n            Jones, Donald C. and\n            Taylor, Sally V. and\n            Roberts, Phillip M. and\n            Li, Changying and\n            Chee, Peng W.},\n  title = {{JassidNet} as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid ({Amrasca} biguttula) detection and counting toward objective resistance screening},\n  journal = {Industrial Crops and Products},\n  year = {2026},\n  volume = {249},\n  pages = {123716},\n  publisher = {Elsevier BV},\n  month = {July},\n  doi = {10.1016/j.indcrop.2026.123716},\n  url = {https://doi.org/10.1016/j.indcrop.2026.123716},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1016/j.indcrop.2026.123716"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1016/j.indcrop.2026.123716",
+        "https://doi.org/10.1016/j.indcrop.2026.123716",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:CHSYGLWDkRkC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1016/j.indcrop.2026.123716"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/UGA-BSAIL/JassidNet"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.1016/j.indcrop.2026.123716"
+      },
+      "listing": {
+        "venue": "Industrial Crops and Products'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1016/j.indcrop.2026.123716"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/UGA-BSAIL/JassidNet"
+          }
+        ]
+      }
+    },
+    "paper-seaf-net": {
+      "title": "SEAF-Net: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition",
+      "bibtex": "@article{han2026seaf,\n  author = {Han, Yu-Shan and\n            Zhao, Sheng-Lun and\n            Chen, Chu and\n            Cui, Kangning and\n            Hu, Pingfan and\n            Wang, Rui-Feng},\n  title = {{SEAF-Net}: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition},\n  journal = {Journal of Marine Science and Engineering},\n  year = {2026},\n  volume = {14},\n  number = {4},\n  pages = {351},\n  publisher = {MDPI AG},\n  month = {February},\n  doi = {10.3390/jmse14040351},\n  url = {https://doi.org/10.3390/jmse14040351},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.3390/jmse14040351"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.3390/jmse14040351",
+        "https://doi.org/10.3390/jmse14040351",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:lSLTfruPkqcC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.3390/jmse14040351"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.3390/jmse14040351"
+      },
+      "listing": {
+        "venue": "JMSE'26",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.3390/jmse14040351"
+          }
+        ]
+      }
+    },
+    "paper-community-detection": {
+      "title": "A Local Perspective-based Model for Overlapping Community Detection",
+      "bibtex": "@inproceedings{zhou2025community,\n  author = {Zhou, Gaofeng and\n            Wang, Rui-Feng and\n            Cui, Kangning},\n  title = {A Local Perspective-based Model for Overlapping Community Detection},\n  booktitle = {2025 {IEEE} International Conference on Systems, Man, and Cybernetics ({SMC})},\n  year = {2025},\n  pages = {2965--2970},\n  publisher = {IEEE},\n  month = {October},\n  doi = {10.1109/smc58881.2025.11343612},\n  url = {https://doi.org/10.1109/smc58881.2025.11343612},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/smc58881.2025.11343612"
+      },
+      "note": "Official IEEE proceedings year: 2025 (the Scholar profile lists 2026).",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/smc58881.2025.11343612",
+        "https://doi.org/10.1109/smc58881.2025.11343612",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:dhFuZR0502QC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1109/smc58881.2025.11343612"
+        },
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2503.21558"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.1109/smc58881.2025.11343612"
+      },
+      "listing": {
+        "venue": "IEEE SMC'25",
+        "year": 2025,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/smc58881.2025.11343612"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2503.21558"
+          }
+        ]
+      }
+    },
+    "paper-water-change": {
+      "title": "Semi-Supervised Change Detection Of Small Water Bodies Using RGB And Multispectral Images In Peruvian Rainforests",
+      "bibtex": "@inproceedings{cui2022water,\n  author = {Cui, Kangning and\n            Camalan, Seda and\n            Li, Ruoning and\n            Pauca, Victor Paul and\n            Alqahtani, Sarra and\n            Plemmons, Robert and\n            Silman, Miles and\n            Dethier, Evan Nylen and\n            Lutz, David and\n            Chan, Raymond},\n  title = {Semi-Supervised Change Detection Of Small Water Bodies Using {RGB} And Multispectral Images In {Peruvian} Rainforests},\n  booktitle = {2022 12th Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing ({WHISPERS})},\n  year = {2022},\n  pages = {1--5},\n  publisher = {IEEE},\n  month = {September},\n  doi = {10.1109/whispers56178.2022.9955140},\n  url = {https://doi.org/10.1109/whispers56178.2022.9955140},\n}\n",
+      "source": {
+        "label": "Publisher",
+        "url": "https://doi.org/10.1109/whispers56178.2022.9955140"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1109/whispers56178.2022.9955140",
+        "https://doi.org/10.1109/whispers56178.2022.9955140",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Tyk-4Ss8FVUC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://doi.org/10.1109/whispers56178.2022.9955140"
+        },
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2206.09365"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/ckn3/SVM-Change-Detection"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://api.crossref.org/works/10.1109/whispers56178.2022.9955140"
+      },
+      "listing": {
+        "venue": "WHISPERS'22",
+        "year": 2022,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://doi.org/10.1109/whispers56178.2022.9955140"
+          },
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2206.09365"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/ckn3/SVM-Change-Detection"
+          }
+        ]
+      }
+    },
+    "paper-post-compression-recovery": {
+      "title": "The Functional Structure of Post-Compression Recovery in Low-Rank LLMs",
+      "bibtex": "@misc{shao2026functional,\n  author = {Shao, Zishan and\n            Tian, Liang and\n            Zemlevskiy, Georgiy and\n            Cui, Kangning and\n            Zhang, Lixun and\n            Wang, Yixiao and\n            Jiang, Ting and\n            Kim, Jinhee and\n            Chen, Yixuan and\n            Wang, Rui-Feng and\n            Yang, Fan and\n            Li, Hai and\n            Chen, Yiran},\n  title = {The Functional Structure of Post-Compression Recovery in Low-Rank {LLMs}},\n  year = {2026},\n  url = {https://arxiv.org/abs/2610.05504v1},\n  eprint = {2610.05504},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2610.05504v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2610.05504v1",
+        "https://arxiv.org/abs/2610.05504",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:K3LRdlH-MEoC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2610.05504"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2610.05504v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2610.05504v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2610.05504"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2610.05504v1"
+          }
+        ]
+      }
+    },
+    "paper-branch-space-quantization": {
+      "title": "Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance",
+      "bibtex": "@misc{jiang2026joint,\n  author = {Jiang, Mingrun and\n            Liu, Yuejia and\n            Shao, Zishan and\n            Jiang, Ting and\n            Wang, Qinsi and\n            Ye, Hancheng and\n            Wang, Yixiao and\n            Wang, Rui-Feng and\n            Cui, Kangning and\n            Chen, Yixuan and\n            Yang, Fan and\n            Cheng, Xiang and\n            Li, Hai and\n            Chen, Yiran},\n  title = {Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance},\n  year = {2026},\n  url = {https://arxiv.org/abs/2610.00930v1},\n  eprint = {2610.00930},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2610.00930v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2610.00930v1",
+        "https://arxiv.org/abs/2610.00930",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:738O_yMBCRsC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2610.00930"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2610.00930v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2610.00930v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2610.00930"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2610.00930v1"
+          }
+        ]
+      }
+    },
+    "paper-provider-routing": {
+      "title": "You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference",
+      "bibtex": "@misc{he2026provider,\n  author = {He, Liang and\n            Wen, Jingbo and\n            Chen, Yixiong and\n            Yang, Yue and\n            Lan, Qizhen and\n            Cui, Kangning and\n            Wang, Xilu},\n  title = {You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight {LLM} Inference},\n  year = {2026},\n  url = {https://arxiv.org/abs/2609.37902v1},\n  eprint = {2609.37902},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2609.37902v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2609.37902v1",
+        "https://arxiv.org/abs/2609.37902",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:WbkHhVStYXYC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2609.37902"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2609.37902v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2609.37902v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2609.37902"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2609.37902v1"
+          }
+        ]
+      }
+    },
+    "paper-visual-token-compression": {
+      "title": "Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression",
+      "bibtex": "@misc{wen2026consequence,\n  author = {Wen, Jingbo and\n            He, Liang and\n            Cao, Mingyu and\n            Wang, Haoyu and\n            Hu, Minxuan and\n            Cui, Kangning and\n            Wang, Xilu},\n  title = {Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression},\n  year = {2026},\n  url = {https://arxiv.org/abs/2608.09176v1},\n  eprint = {2608.09176},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.09176v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2608.09176v1",
+        "https://arxiv.org/abs/2608.09176",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:uWQEDVKXjbEC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2608.09176"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2608.09176v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2608.09176v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.09176"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2608.09176v1"
+          }
+        ]
+      }
+    },
+    "paper-execution-gating": {
+      "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents",
+      "bibtex": "@misc{he2026execution,\n  author = {He, Liang and\n            Wen, Jingbo and\n            Gu, Hongyu and\n            Li, Hao and\n            Wang, Haoyu and\n            Chen, Yixiong and\n            Cui, Kangning and\n            Wang, Xilu},\n  title = {From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based {LLM} Agents},\n  year = {2026},\n  url = {https://arxiv.org/abs/2608.09168v1},\n  eprint = {2608.09168},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2608.09168v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2608.09168v1",
+        "https://arxiv.org/abs/2608.09168",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:SP6oXDckpogC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2608.09168"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2608.09168v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2608.09168v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2608.09168"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2608.09168v1"
+          }
+        ]
+      }
+    },
+    "paper-provenance-audit": {
+      "title": "Auditing Provenance Sensitivity in LLM Agent Action Selection",
+      "bibtex": "@misc{liao2026auditing,\n  author = {Liao, Junchi and\n            Huang, Qiang and\n            Qian, Rui and\n            Mao, Xutao and\n            Cheng, Juntao and\n            Cui, Kangning and\n            Li, Yu and\n            Sun, Jingyu and\n            Hou, Yuchao},\n  title = {Auditing Provenance Sensitivity in {LLM} Agent Action Selection},\n  year = {2026},\n  url = {https://arxiv.org/abs/2607.20827v1},\n  eprint = {2607.20827},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20827v1"
+      },
+      "note": "arXiv version 1; author list follows the Google Scholar record, confirmed by the site owner on 25 October 2026. The arXiv landing page currently lists only Junchi Liao.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2607.20827v1",
+        "https://arxiv.org/abs/2607.20827",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:l7t_Zn2s7bgC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2607.20827"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2607.20827v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2607.20827v1",
+        "corrections": [
+          {
+            "field": "author",
+            "reason": "The site owner confirmed the nine-author list on Google Scholar; it differs from the current arXiv landing-page metadata.",
+            "source": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:l7t_Zn2s7bgC"
+          }
+        ]
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2607.20827"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2607.20827v1"
+          }
+        ]
+      }
+    },
+    "paper-budgetdraft": {
+      "title": "BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding",
+      "bibtex": "@misc{he2026budgetdraft,\n  author = {He, Liang and\n            Wen, Jingbo and\n            Zhan, Qishi and\n            Chen, Yixiong and\n            Cui, Kangning and\n            Lan, Qizhen and\n            Wang, Xilu},\n  title = {{BudgetDraft}: Acceptance-Aware Multi-View Training for Sparse-{KV} Speculative Decoding},\n  year = {2026},\n  url = {https://arxiv.org/abs/2606.00144v1},\n  eprint = {2606.00144},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2606.00144v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2606.00144v1",
+        "https://arxiv.org/abs/2606.00144",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:P5F9QuxV20EC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2606.00144"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2606.00144v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2606.00144v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2606.00144"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2606.00144v1"
+          }
+        ]
+      }
+    },
+    "paper-eldor": {
+      "title": "ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest",
+      "bibtex": "@misc{cui2026eldor,\n  author = {Cui, Kangning and\n            Bohara, Surendra and\n            Prasai, Suraj and\n            Shao, Zishan and\n            Tang, Wei and\n            Pillaca, Martin and\n            Flores, Edwin and\n            Yang, Zhen and\n            Larsen, Gregory and\n            Dethier, Evan and\n            Lutz, David and\n            Morel, Jean-Michel and\n            Silman, Miles and\n            Pauca, Victor and\n            Yang, Fan},\n  title = {{ELDOR}: A Dataset and Benchmark for Illegal Gold Mining in the {Amazon} Rainforest},\n  year = {2026},\n  url = {https://arxiv.org/abs/2605.15397v1},\n  eprint = {2605.15397},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.15397v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2605.15397v1",
+        "https://arxiv.org/abs/2605.15397",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:_xSYboBqXhAC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2605.15397"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2605.15397v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2605.15397v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2605.15397"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2605.15397v1"
+          }
+        ]
+      }
+    },
+    "paper-visual-generation": {
+      "title": "Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm",
+      "bibtex": "@misc{liu2026visual,\n  author = {Liu, Yaofang and\n            Cui, Kangning and\n            Chu, Meng and\n            Li, Zhaoqing and\n            Zhang, Suiyun and\n            Morel, Jean-Michel and\n            Cun, Xiaodong and\n            Che, Haoxuan and\n            Liu, Rui and\n            Chan, Raymond H.},\n  title = {Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm},\n  year = {2026},\n  url = {https://arxiv.org/abs/2605.12271v2},\n  eprint = {2605.12271},\n  archiveprefix = {arXiv},\n  version = {2},\n  note = {arXiv preprint, version 2},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.12271v2"
+      },
+      "note": "arXiv version 2; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2605.12271v2",
+        "https://arxiv.org/abs/2605.12271",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:bFI3QPDXJZMC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2605.12271"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2605.12271v2"
+        },
+        {
+          "label": "Project",
+          "href": "https://yaofang-liu.github.io/V2V_Web"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2605.12271v2"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2605.12271"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2605.12271v2"
+          },
+          {
+            "label": "Project",
+            "href": "https://yaofang-liu.github.io/V2V_Web"
+          }
+        ]
+      }
+    },
+    "paper-flashsvd": {
+      "title": "FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast",
+      "bibtex": "@misc{wu2026flashsvd,\n  author = {Wu, Wenhao and\n            Shao, Zishan and\n            Cui, Kangning and\n            Kim, Jinhee and\n            Wang, Yixiao and\n            Ye, Hancheng and\n            Zhuo, Danyang and\n            Chen, Yiran},\n  title = {{FlashSVD} v1.5: Making Low-Rank Transformers Inference Actually Fast},\n  year = {2026},\n  url = {https://arxiv.org/abs/2605.08314v1},\n  eprint = {2605.08314},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2605.08314v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2605.08314v1",
+        "https://arxiv.org/abs/2605.08314",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:a0OBvERweLwC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2605.08314"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2605.08314v1"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/Zishan-Shao/FlashSVD"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2605.08314v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2605.08314"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2605.08314v1"
+          },
+          {
+            "label": "Code",
+            "href": "https://github.com/Zishan-Shao/FlashSVD"
+          }
+        ]
+      }
+    },
+    "paper-mosaic": {
+      "title": "MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing",
+      "bibtex": "@misc{gupta2025mosaic,\n  author = {Gupta, Debashis and\n            Golder, Aditi and\n            Zhu, Rongkhun and\n            Cui, Kangning and\n            Tang, Wei and\n            Yang, Fan and\n            Csillik, Ovidiu and\n            Alaqahtani, Sarra and\n            Pauca, V. Paul},\n  title = {{MoSAiC}: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing},\n  year = {2025},\n  url = {https://arxiv.org/abs/2507.08683v1},\n  eprint = {2507.08683},\n  archiveprefix = {arXiv},\n  version = {1},\n  note = {arXiv preprint, version 1},\n}\n",
+      "source": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2507.08683v1"
+      },
+      "note": "arXiv version 1; latest available on 25 October 2026.",
+      "metadataSources": [
+        "https://arxiv.org/abs/2507.08683v1",
+        "https://arxiv.org/abs/2507.08683",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:TQgYirikUcIC"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://arxiv.org/abs/2507.08683"
+        },
+        {
+          "label": "PDF",
+          "href": "https://arxiv.org/pdf/2507.08683v1"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "arxiv-preprint",
+        "source": "https://arxiv.org/abs/2507.08683v1"
+      },
+      "listing": {
+        "venue": "Preprint · 2025",
+        "year": 2025,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://arxiv.org/abs/2507.08683"
+          },
+          {
+            "label": "PDF",
+            "href": "https://arxiv.org/pdf/2507.08683v1"
+          }
+        ]
+      }
+    },
+    "paper-cott-adnet": {
+      "title": "Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions",
+      "bibtex": "@inproceedings{Wang_2026_WACV,\n  author = {Wang, Rui-Feng and\n            Xu, Mingrui and\n            Bauer, Matthew and\n            Schardong, Iago and\n            Ma, Xiaowen and\n            Chee, Peng and\n            Cui, Kangning},\n  title = {{Cott-ADNet}: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions},\n  booktitle = {Proceedings of the {IEEE}/{CVF} Winter Conference on Applications of Computer Vision ({WACV}) Workshops},\n  year = {2026},\n  pages = {500--509},\n  month = {March},\n  url = {https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html},\n}\n",
+      "source": {
+        "label": "CVF Open Access",
+        "url": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html"
+      },
+      "note": "",
+      "metadataSources": [
+        "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:g5m5HwL7SMYC"
+      ],
+      "resources": [
+        {
+          "label": "Paper",
+          "href": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html"
+        },
+        {
+          "label": "PDF",
+          "href": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.pdf"
+        },
+        {
+          "label": "Code & data",
+          "href": "https://github.com/SweefongWong/Cott-ADNet"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "version-of-record",
+        "source": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html"
+      },
+      "listing": {
+        "venue": "WACV'26 Workshop",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Paper",
+            "href": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html"
+          },
+          {
+            "label": "PDF",
+            "href": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.pdf"
+          },
+          {
+            "label": "Code & data",
+            "href": "https://github.com/SweefongWong/Cott-ADNet"
+          }
+        ]
+      }
+    },
+    "paper-biomoth": {
+      "title": "BioMoth: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision",
+      "bibtex": "@misc{lutz2026biomoth,\n  author = {Lutz, David A. and\n            Suhavi, Suhavi and\n            Jones, Jessica S. and\n            Aldrich, Quinn M. and\n            Cummings, Wyatt J. and\n            Cui, Kangning and\n            Ayres, Matthew P.},\n  title = {{BioMoth}: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision},\n  year = {2026},\n  doi = {10.2139/ssrn.6943698},\n  url = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698},\n  eprint = {6943698},\n  archiveprefix = {SSRN},\n  note = {SSRN preprint, posted 15 June 2026},\n}\n",
+      "source": {
+        "label": "SSRN",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698"
+      },
+      "note": "SSRN preprint, posted 15 June 2026.",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.2139/ssrn.6943698",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:NhqRSupF_l8C"
+      ],
+      "resources": [
+        {
+          "label": "Preprint",
+          "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "ssrn-preprint",
+        "source": "https://api.crossref.org/works/10.2139/ssrn.6943698"
+      },
+      "listing": {
+        "venue": "Preprint · 2026",
+        "year": 2026,
+        "kind": "preprint",
+        "resources": [
+          {
+            "label": "Preprint",
+            "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698"
+          }
+        ]
+      }
+    },
+    "paper-agu-mining": {
+      "title": "Detecting Change Due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning",
+      "bibtex": "@inproceedings{camalan2022detecting,\n  author = {Camalan, Seda and\n            Cui, Kangning and\n            Pauca, Pa{\\'u}l and\n            Alqahtani, Sarra and\n            Silman, Miles and\n            Chan, Raymond and\n            Dethier, Evan and\n            Fernandez, Luis E. and\n            Lutz, David A. and\n            Plemmons, Robert},\n  title = {Detecting Change Due to Alluvial Gold Mining in {Peruvian} Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning},\n  booktitle = {{AGU} Fall Meeting Abstracts},\n  year = {2022},\n  volume = {2022},\n  eid = {B52G-0905},\n  month = {December},\n  url = {https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract},\n  note = {Conference abstract B52G-0905},\n}\n",
+      "source": {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC"
+      },
+      "note": "Conference abstract B52G-0905; bibliographic metadata from the linked Scholar record.",
+      "metadataSources": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC",
+        "https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract",
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC"
+      ],
+      "resources": [
+        {
+          "label": "Abstract",
+          "href": "https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract"
+        },
+        {
+          "label": "Scholar",
+          "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-10-25",
+        "version": "conference-abstract",
+        "source": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC"
+      },
+      "listing": {
+        "venue": "AGU'22 · Conference abstract",
+        "year": 2022,
+        "kind": "abstract",
+        "resources": [
+          {
+            "label": "Abstract",
+            "href": "https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract"
+          },
+          {
+            "label": "Scholar",
+            "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC"
+          }
+        ]
       }
     }
-  }
+  },
+  "scholarImport": {
+    "profile": "https://scholar.google.com/citations?user=vzCZaIwAAAAJ&hl=en",
+    "checkedOn": "2026-10-25",
+    "recordCount": 50,
+    "records": [
+      {
+        "scholarId": "vzCZaIwAAAAJ:p2g8aNsByqUC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:p2g8aNsByqUC",
+        "title": "LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-lowrankarena-neurips"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:EUQCXRtRnyEC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:EUQCXRtRnyEC",
+        "title": "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-ecg-horizons-neurips"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:K3LRdlH-MEoC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:K3LRdlH-MEoC",
+        "title": "The Functional Structure of Post-Compression Recovery in Low-Rank LLMs",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-post-compression-recovery"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:738O_yMBCRsC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:738O_yMBCRsC",
+        "title": "Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-branch-space-quantization"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:OU6Ihb5iCvQC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:OU6Ihb5iCvQC",
+        "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-dpq-emnlp"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:WbkHhVStYXYC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:WbkHhVStYXYC",
+        "title": "You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-provider-routing"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:Tiz5es2fbqcC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Tiz5es2fbqcC",
+        "title": "Advanced Remote Sensing and AI Techniques in Agriculture and Forestry",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-agriculture-forestry"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:uWQEDVKXjbEC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:uWQEDVKXjbEC",
+        "title": "Not all visual tokens are equally safe to remove: Consequence-sensitive visual token compression",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-visual-token-compression"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:SP6oXDckpogC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:SP6oXDckpogC",
+        "title": "From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-execution-gating"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:l7t_Zn2s7bgC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:l7t_Zn2s7bgC",
+        "title": "Auditing Provenance Sensitivity in LLM Agent Action Selection",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-provenance-audit"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:CHSYGLWDkRkC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:CHSYGLWDkRkC",
+        "title": "JassidNet as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid (Amrasca biguttula) detection and counting toward objective resistance …",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-jassidnet"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:1sJd4Hv_s6UC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:1sJd4Hv_s6UC",
+        "title": "AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-awakeforest"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:cFHS6HbyZ2cC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:cFHS6HbyZ2cC",
+        "title": "Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-help-icmr"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:P5F9QuxV20EC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:P5F9QuxV20EC",
+        "title": "BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-budgetdraft"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:_xSYboBqXhAC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:_xSYboBqXhAC",
+        "title": "ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-eldor"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:bFI3QPDXJZMC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:bFI3QPDXJZMC",
+        "title": "Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-visual-generation"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:a0OBvERweLwC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:a0OBvERweLwC",
+        "title": "FlashSVD v1. 5: Making Low-Rank Transformers Inference Actually Fast",
+        "scholarYear": "2026",
+        "kind": "preprint",
+        "publicationId": "paper-flashsvd"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:KxtntwgDAa4C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:KxtntwgDAa4C",
+        "title": "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-decodeshare-icml"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:dfsIfKJdRG4C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:dfsIfKJdRG4C",
+        "title": "Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-hypergraph"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:lSLTfruPkqcC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:lSLTfruPkqcC",
+        "title": "SEAF-Net: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-seaf-net"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:dhFuZR0502QC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:dhFuZR0502QC",
+        "title": "A Local Perspective-based Model for Overlapping Community Detection",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-community-detection"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:QIV2ME_5wuYC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:QIV2ME_5wuYC",
+        "title": "Center-guided Classifier for Semantic Segmentation of Remote Sensing Images",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-centerseg"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:g5m5HwL7SMYC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:g5m5HwL7SMYC",
+        "title": "Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions",
+        "scholarYear": "2026",
+        "kind": "published",
+        "publicationId": "paper-cott-adnet"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:ns9cj8rnVeAC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:ns9cj8rnVeAC",
+        "title": "Method for accurate segmentation of unstained living adherent cells in differential interference contrast images",
+        "scholarYear": "2025",
+        "kind": "patent",
+        "publicationId": "patent-cells"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:isC4tDSrTZIC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:isC4tDSrTZIC",
+        "title": "Blind Restoration of High-Resolution Ultrasound Video",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-blind-ultrasound"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:TFP_iSt0sucC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:TFP_iSt0sucC",
+        "title": "Latent Motion Profiling for Annotation-Free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-cardiac-phase"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:iH-uZ7U-co4C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:iH-uZ7U-co4C",
+        "title": "RA-CottNet: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-ra-cottnet"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:j3f4tGmQtD8C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:j3f4tGmQtD8C",
+        "title": "From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-raw-uav"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:ldfaerwXgEUC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:ldfaerwXgEUC",
+        "title": "Detection and geographic localization of natural objects in the wild: A case study on palms",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-palms-ijcai"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:TQgYirikUcIC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:TQgYirikUcIC",
+        "title": "Mosaic: Multi-modal multi-label supervision-aware contrastive learning for remote sensing",
+        "scholarYear": "2025",
+        "kind": "preprint",
+        "publicationId": "paper-mosaic"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:hFOr9nPyWt4C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:hFOr9nPyWt4C",
+        "title": "Resource-efficient cotton network: A lightweight deep learning framework for cotton disease and pest classification",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-cotton-network"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:-f6ydRqryjwC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:-f6ydRqryjwC",
+        "title": "Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-palms-tgrs"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:hC7cP41nSMkC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:hC7cP41nSMkC",
+        "title": "Toward efficient uav-based small object detection: A lightweight network with enhanced feature fusion",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-lightweight-uav"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:qUcmZB5y_30C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qUcmZB5y_30C",
+        "title": "A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-fetal-tracking"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:mVmsd5A6BfQC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:mVmsd5A6BfQC",
+        "title": "Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis",
+        "scholarYear": "2025",
+        "kind": "published",
+        "publicationId": "paper-bilateral-warping"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:R3hNpaxXUhUC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:R3hNpaxXUhUC",
+        "title": "Accurate detection and instance segmentation of unstained living adherent cells in differential interference contrast images",
+        "scholarYear": "2024",
+        "kind": "published",
+        "publicationId": "paper-cell-segmentation"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:qxL8FJ1GzNcC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qxL8FJ1GzNcC",
+        "title": "Optimized hard exudate detection with supervised contrastive learning",
+        "scholarYear": "2024",
+        "kind": "published",
+        "publicationId": "paper-hard-exudates"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:YOwf2qJgpHMC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:YOwf2qJgpHMC",
+        "title": "Palmprobnet: A probabilistic approach to understanding palm distributions in ecuadorian tropical forest via transfer learning",
+        "scholarYear": "2024",
+        "kind": "published",
+        "publicationId": "paper-palmprobnet"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:M3ejUd6NZC8C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:M3ejUd6NZC8C",
+        "title": "Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering",
+        "scholarYear": "2024",
+        "kind": "published",
+        "publicationId": "paper-s2dl"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:Se3iqnhoufwC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Se3iqnhoufwC",
+        "title": "Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images",
+        "scholarYear": "2023",
+        "kind": "published",
+        "publicationId": "paper-diffusion-volume"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:LkGwnXOMwfcC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC",
+        "title": "Detecting change due to alluvial gold mining in peruvian rainforest using recursive convolutional neural networks and contrastive learning",
+        "scholarYear": "2022",
+        "kind": "abstract",
+        "publicationId": "paper-agu-mining"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:_FxGoFyzp5QC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:_FxGoFyzp5QC",
+        "title": "Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction And Clustering With Diffusion Geometry",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-dsirc"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:Tyk-4Ss8FVUC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:Tyk-4Ss8FVUC",
+        "title": "Semi-supervised change detection of small water bodies using RGB and multispectral images in Peruvian rainforests",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-water-change"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:ufrVoPGSRksC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:ufrVoPGSRksC",
+        "title": "Unsupervised Detection of ASH Dieback Disease (Hymenoscyphus Fraxineus) Using Diffusion-Based Hyperspectral Image Clustering",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-ash-dieback"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:YsMSGLbcyi4C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:YsMSGLbcyi4C",
+        "title": "Classification of hyperspectral images using SVM with shape-adaptive reconstruction and smoothed total variation",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-svm-satv"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:W7OEmFMy1HYC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:W7OEmFMy1HYC",
+        "title": "Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-active-diffusion"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:qjMakFHDy7sC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:qjMakFHDy7sC",
+        "title": "Change detection of amazonian alluvial gold mining using deep learning and sentinel-2 imagery",
+        "scholarYear": "2022",
+        "kind": "published",
+        "publicationId": "paper-gold-mining"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:u5HHmVD_uO8C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:u5HHmVD_uO8C",
+        "title": "Unsupervised classification of AVIRIS-NG hyperspectral images",
+        "scholarYear": "2021",
+        "kind": "published",
+        "publicationId": "paper-aviris-ng"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:NhqRSupF_l8C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:NhqRSupF_l8C",
+        "title": "BioMoth: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision",
+        "scholarYear": null,
+        "kind": "preprint",
+        "publicationId": "paper-biomoth"
+      },
+      {
+        "scholarId": "vzCZaIwAAAAJ:BqipwSGYUEgC",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=vzCZaIwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=vzCZaIwAAAAJ:BqipwSGYUEgC",
+        "title": "A Method for Cardiovascular Disorder Identification via Prototype-Driven Biomedical Signal Evaluation",
+        "scholarYear": null,
+        "kind": "patent",
+        "publicationId": "patent-cardiovascular"
+      }
+    ]
+  },
+  "themes": [
+    {
+      "id": "efficient-ml",
+      "groups": [
+        {
+          "title": "Compression & efficient inference",
+          "ids": [
+            "paper-post-compression-recovery",
+            "paper-branch-space-quantization",
+            "paper-provider-routing",
+            "paper-lowrankarena-neurips",
+            "paper-visual-token-compression",
+            "paper-budgetdraft",
+            "paper-flashsvd"
+          ]
+        },
+        {
+          "title": "Reliability, agents & representations",
+          "ids": [
+            "paper-dpq-emnlp",
+            "paper-execution-gating",
+            "paper-provenance-audit",
+            "paper-decodeshare-icml",
+            "paper-visual-generation"
+          ]
+        },
+        {
+          "title": "Structured learning",
+          "ids": [
+            "paper-community-detection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geospatial-ai",
+      "groups": [
+        {
+          "title": "Forest mapping & environmental change",
+          "ids": [
+            "paper-awakeforest",
+            "paper-eldor",
+            "paper-raw-uav",
+            "paper-palms-tgrs",
+            "paper-palms-ijcai",
+            "paper-palmprobnet",
+            "paper-gold-mining",
+            "paper-water-change",
+            "paper-agu-mining"
+          ]
+        },
+        {
+          "title": "Remote sensing & hyperspectral learning",
+          "ids": [
+            "paper-help-icmr",
+            "paper-centerseg",
+            "paper-hypergraph",
+            "paper-lightweight-uav",
+            "paper-mosaic",
+            "paper-s2dl",
+            "paper-diffusion-volume",
+            "paper-dsirc",
+            "paper-ash-dieback",
+            "paper-svm-satv",
+            "paper-active-diffusion",
+            "paper-aviris-ng"
+          ]
+        },
+        {
+          "title": "Agriculture & biodiversity",
+          "ids": [
+            "paper-agriculture-forestry",
+            "paper-jassidnet",
+            "paper-biomoth",
+            "paper-seaf-net",
+            "paper-cott-adnet",
+            "paper-ra-cottnet",
+            "paper-cotton-network"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medical-ai",
+      "groups": [
+        {
+          "title": "Cardiac images & signals",
+          "ids": [
+            "paper-ecg-horizons-neurips",
+            "paper-cardiac-phase",
+            "paper-blind-ultrasound",
+            "paper-fetal-tracking",
+            "paper-bilateral-warping"
+          ]
+        },
+        {
+          "title": "Cell & retinal imaging",
+          "ids": [
+            "paper-cell-segmentation",
+            "paper-hard-exudates"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -51,6 +51,35 @@ ${badges}
 }
 
 let generated = original;
+const selectedIds = new Set(Object.values(data.selected).flat().map(paper => paper.id));
+function renderRelated(id) {
+    const citation = data.citations[id];
+    assert.ok(citation?.listing, `Missing theme listing: ${id}`);
+    const { venue, resources } = citation.listing;
+    const title = selectedIds.has(id)
+        ? `<a href="#${escape(id)}">${escape(citation.title)}</a>`
+        : `<span>${escape(citation.title)}</span>`;
+    const links = resources.map(resource => {
+        assert.equal(new URL(resource.href).protocol, 'https:', `${id}: invalid resource URL`);
+        return `<a class="paper-inline" href="${escape(resource.href)}" target="_blank" rel="noopener noreferrer">${escape(resource.label)}</a>`;
+    });
+    return `                    <div class="direction-item" data-publication-id="${escape(id)}"><div class="direction-title">${title}</div><div class="direction-resources"><span class="venue-inline">${escape(venue)}</span>${links.join('')}${renderCitation(id, 'citation-inline')}</div></div>`;
+}
+for (const theme of data.themes) {
+    const marker = new RegExp(`<!-- theme:${theme.id}:start -->[\\s\\S]*?<!-- theme:${theme.id}:end -->`, 'g');
+    assert.equal([...generated.matchAll(marker)].length, 1, `Expected one ${theme.id} block`);
+    const count = theme.groups.reduce((total, group) => total + group.ids.length, 0);
+    const groups = theme.groups.map(group => `                <h4>${escape(group.title)}</h4>\n                <div class="direction-links">\n${group.ids.map(renderRelated).join('\n')}\n                </div>`).join('\n');
+    const block = `<!-- theme:${theme.id}:start -->
+                <details class="text-disclosure direction-card">
+                    <summary>Publications &amp; preprints (${count})</summary>
+                    <div class="direction-body">
+${groups}
+                    </div>
+                </details>
+                <!-- theme:${theme.id}:end -->`;
+    generated = generated.replace(marker, () => block);
+}
 for (const section of ['journals', 'conferences']) {
     const marker = new RegExp(`<!-- publications:${section}:start -->[\\s\\S]*?<!-- publications:${section}:end -->`, 'g');
     assert.equal([...generated.matchAll(marker)].length, 1, `Expected one ${section} block`);

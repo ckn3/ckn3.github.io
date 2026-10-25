@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026102503">
+    <link rel="stylesheet" href="styles/site.css?v=2026102504">
     <script src="scripts/schema.js?v=2026100302" defer></script>
     <script src="scripts/citations.js?v=2026102503" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
@@ -58,7 +58,7 @@
         <div class="page-header">
             <h1>Research</h1>
             <p class="page-intro">Efficient, reliable and interpretable machine learning for language models, geospatial observation, and medical images and signals. My work combines model compression, uncertainty estimation, and learning with limited labels.</p>
-            <p class="page-note publication-note"><span>Full list: <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span><span class="sep">|</span><span>† first author</span><span class="sep">|</span><span>* corresponding author</span></p>
+            <p class="page-note publication-note"><span>Scholar profile: <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span><span class="sep">|</span><span>† first author</span><span class="sep">|</span><span>* corresponding author</span></p>
         </div>
     </div>
 
@@ -72,23 +72,87 @@
 
     <section class="content page-panel" aria-labelledby="research-topics">
         <div class="section-header"><h2 id="research-topics">Research Themes</h2></div>
+        <p class="page-note">Publications, preprints, and conference abstracts are grouped below. Preprints are labeled explicitly; patents are listed separately. Updated 25 October 2026.</p>
         <div class="research-themes"><article class="research-topic">
             <div class="research-topic-intro">
                 <h3 id="efficient-ml">Efficient &amp; Reliable ML</h3>
-                <p>Compression, uncertainty, and model behavior.</p>
+                <p>Language and generative models: compression, inference, reliability, and representations.</p>
 
             </div>
             <div class="research-topic-work">
                 <ul class="research-focus-points">
-                    <li><strong>Evaluation.</strong> <a href="#paper-lowrankarena-neurips">LowRankArena</a> measures accuracy and practical inference efficiency under shared compression budgets.</li>
-                    <li><strong>Reliability.</strong> <a href="#paper-dpq-emnlp">DPQ</a> selects calibration data to preserve uncertainty in quantized models.</li>
-                    <li><strong>Interpretability.</strong> <a href="#paper-decodeshare-icml">DecodeShare</a> identifies shared representations and tests their role in decoding.</li>
+                    <li><strong>Compression &amp; inference.</strong> <a href="#paper-lowrankarena-neurips">LowRankArena</a>, FlashSVD, and BudgetDraft study compression quality, practical speed, and efficient decoding.</li>
+                    <li><strong>Reliability &amp; agents.</strong> <a href="#paper-dpq-emnlp">DPQ</a> preserves uncertainty after quantization; related work examines agent decisions and execution utility.</li>
+                    <li><strong>Representations.</strong> <a href="#paper-decodeshare-icml">DecodeShare</a> studies shared decoding subspaces, alongside visual generation and graph community learning.</li>
                 </ul>
+                <!-- theme:efficient-ml:start -->
                 <details class="text-disclosure direction-card">
-                <summary>Related publications (3)</summary>
-                <div class="direction-body">
-            <div class="direction-links">
-                <div class="direction-item" data-publication-id="paper-lowrankarena-neurips"><a href="#paper-lowrankarena-neurips">LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, ED Track, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://neurips.cc/virtual/2026/poster/139091" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2608.26389" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-lowrankarena-neurips" data-title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression" data-source="https://neurips.cc/virtual/2026/poster/139091" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">BibTeX</summary><pre><code>@inproceedings{shao2026lowrankarena,
+                    <summary>Publications &amp; preprints (13)</summary>
+                    <div class="direction-body">
+                <h4>Compression &amp; efficient inference</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-post-compression-recovery"><div class="direction-title"><span>The Functional Structure of Post-Compression Recovery in Low-Rank LLMs</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2610.05504" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2610.05504v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-post-compression-recovery" data-title="The Functional Structure of Post-Compression Recovery in Low-Rank LLMs" data-source="https://arxiv.org/abs/2610.05504v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: The Functional Structure of Post-Compression Recovery in Low-Rank LLMs">BibTeX</summary><pre><code>@misc{shao2026functional,
+  author = {Shao, Zishan and
+            Tian, Liang and
+            Zemlevskiy, Georgiy and
+            Cui, Kangning and
+            Zhang, Lixun and
+            Wang, Yixiao and
+            Jiang, Ting and
+            Kim, Jinhee and
+            Chen, Yixuan and
+            Wang, Rui-Feng and
+            Yang, Fan and
+            Li, Hai and
+            Chen, Yiran},
+  title = {The Functional Structure of Post-Compression Recovery in Low-Rank {LLMs}},
+  year = {2026},
+  url = {https://arxiv.org/abs/2610.05504v1},
+  eprint = {2610.05504},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-branch-space-quantization"><div class="direction-title"><span>Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2610.00930" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2610.00930v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-branch-space-quantization" data-title="Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance" data-source="https://arxiv.org/abs/2610.00930v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance">BibTeX</summary><pre><code>@misc{jiang2026joint,
+  author = {Jiang, Mingrun and
+            Liu, Yuejia and
+            Shao, Zishan and
+            Jiang, Ting and
+            Wang, Qinsi and
+            Ye, Hancheng and
+            Wang, Yixiao and
+            Wang, Rui-Feng and
+            Cui, Kangning and
+            Chen, Yixuan and
+            Yang, Fan and
+            Cheng, Xiang and
+            Li, Hai and
+            Chen, Yiran},
+  title = {Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance},
+  year = {2026},
+  url = {https://arxiv.org/abs/2610.00930v1},
+  eprint = {2610.00930},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-provider-routing"><div class="direction-title"><span>You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2609.37902" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2609.37902v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-provider-routing" data-title="You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference" data-source="https://arxiv.org/abs/2609.37902v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight LLM Inference">BibTeX</summary><pre><code>@misc{he2026provider,
+  author = {He, Liang and
+            Wen, Jingbo and
+            Chen, Yixiong and
+            Yang, Yue and
+            Lan, Qizhen and
+            Cui, Kangning and
+            Wang, Xilu},
+  title = {You Cannot Pick a Provider From the Price List: Market-Aware Routing for Open-Weight {LLM} Inference},
+  year = {2026},
+  url = {https://arxiv.org/abs/2609.37902v1},
+  eprint = {2609.37902},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-lowrankarena-neurips"><div class="direction-title"><a href="#paper-lowrankarena-neurips">LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</a></div><div class="direction-resources"><span class="venue-inline">NeurIPS&#39;26, ED Track, Poster</span><a class="paper-inline" href="https://neurips.cc/virtual/2026/poster/139091" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://arxiv.org/pdf/2608.26389" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-lowrankarena-neurips" data-title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression" data-source="https://neurips.cc/virtual/2026/poster/139091" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">BibTeX</summary><pre><code>@inproceedings{shao2026lowrankarena,
   author = {Shao, Zishan and
             Zhang, Lixun and
             Cui, Kangning and
@@ -107,8 +171,60 @@
   year = {2026},
   url = {https://neurips.cc/virtual/2026/poster/139091},
   note = {Accepted conference paper, Evaluations and Datasets Track},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-dpq-emnlp"><a href="#paper-dpq-emnlp">Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</a><span class="sep">|</span><span class="venue-inline">[EMNLP'26, Findings]</span><span class="sep">|</span><a class="paper-inline" href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://aclanthology.org/2026.findings-emnlp.670.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-dpq-emnlp" data-title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models" data-source="https://aclanthology.org/2026.findings-emnlp.670/" data-source-label="ACL Anthology" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">BibTeX</summary><pre><code>@inproceedings{yang-etal-2026-target,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-visual-token-compression"><div class="direction-title"><span>Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2608.09176" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2608.09176v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-visual-token-compression" data-title="Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression" data-source="https://arxiv.org/abs/2608.09176v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression">BibTeX</summary><pre><code>@misc{wen2026consequence,
+  author = {Wen, Jingbo and
+            He, Liang and
+            Cao, Mingyu and
+            Wang, Haoyu and
+            Hu, Minxuan and
+            Cui, Kangning and
+            Wang, Xilu},
+  title = {Not All Visual Tokens Are Equally Safe to Remove: Consequence-Sensitive Visual Token Compression},
+  year = {2026},
+  url = {https://arxiv.org/abs/2608.09176v1},
+  eprint = {2608.09176},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-budgetdraft"><div class="direction-title"><span>BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2606.00144" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2606.00144v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-budgetdraft" data-title="BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding" data-source="https://arxiv.org/abs/2606.00144v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding">BibTeX</summary><pre><code>@misc{he2026budgetdraft,
+  author = {He, Liang and
+            Wen, Jingbo and
+            Zhan, Qishi and
+            Chen, Yixiong and
+            Cui, Kangning and
+            Lan, Qizhen and
+            Wang, Xilu},
+  title = {{BudgetDraft}: Acceptance-Aware Multi-View Training for Sparse-{KV} Speculative Decoding},
+  year = {2026},
+  url = {https://arxiv.org/abs/2606.00144v1},
+  eprint = {2606.00144},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-flashsvd"><div class="direction-title"><span>FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2605.08314v1" target="_blank" rel="noopener noreferrer">PDF</a><a class="paper-inline" href="https://github.com/Zishan-Shao/FlashSVD" target="_blank" rel="noopener noreferrer">Code</a><details class="citation-details" data-citation-id="paper-flashsvd" data-title="FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast" data-source="https://arxiv.org/abs/2605.08314v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast">BibTeX</summary><pre><code>@misc{wu2026flashsvd,
+  author = {Wu, Wenhao and
+            Shao, Zishan and
+            Cui, Kangning and
+            Kim, Jinhee and
+            Wang, Yixiao and
+            Ye, Hancheng and
+            Zhuo, Danyang and
+            Chen, Yiran},
+  title = {{FlashSVD} v1.5: Making Low-Rank Transformers Inference Actually Fast},
+  year = {2026},
+  url = {https://arxiv.org/abs/2605.08314v1},
+  eprint = {2605.08314},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                </div>
+                <h4>Reliability, agents &amp; representations</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-dpq-emnlp"><div class="direction-title"><a href="#paper-dpq-emnlp">Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</a></div><div class="direction-resources"><span class="venue-inline">EMNLP&#39;26, Findings</span><a class="paper-inline" href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://aclanthology.org/2026.findings-emnlp.670.pdf" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-dpq-emnlp" data-title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models" data-source="https://aclanthology.org/2026.findings-emnlp.670/" data-source-label="ACL Anthology" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">BibTeX</summary><pre><code>@inproceedings{yang-etal-2026-target,
   author = {Yang, Zhen and
             Hou, Sizai and
             Zheng, Kaiwen and
@@ -129,8 +245,43 @@
   month = {October},
   isbn = {979-8-89176-462-0},
   url = {https://aclanthology.org/2026.findings-emnlp.670/},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-decodeshare-icml"><a href="#paper-decodeshare-icml">DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</a><span class="sep">|</span><span class="venue-inline">[ICML'26, Spotlight]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://proceedings.mlr.press/v306/shao26j.html" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zishan-Shao/decodeshare" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-decodeshare-icml" data-title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions" data-source="https://proceedings.mlr.press/v306/shao26j.html" data-source-label="PMLR" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">BibTeX</summary><pre><code>@inproceedings{pmlr-v306-shao26j,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-execution-gating"><div class="direction-title"><span>From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2608.09168" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2608.09168v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-execution-gating" data-title="From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents" data-source="https://arxiv.org/abs/2608.09168v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based LLM Agents">BibTeX</summary><pre><code>@misc{he2026execution,
+  author = {He, Liang and
+            Wen, Jingbo and
+            Gu, Hongyu and
+            Li, Hao and
+            Wang, Haoyu and
+            Chen, Yixiong and
+            Cui, Kangning and
+            Wang, Xilu},
+  title = {From Relevance to Execution Utility: Reward-Aware Dynamic Execution Gating for Skill-Based {LLM} Agents},
+  year = {2026},
+  url = {https://arxiv.org/abs/2608.09168v1},
+  eprint = {2608.09168},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-provenance-audit"><div class="direction-title"><span>Auditing Provenance Sensitivity in LLM Agent Action Selection</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2607.20827" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2607.20827v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-provenance-audit" data-title="Auditing Provenance Sensitivity in LLM Agent Action Selection" data-source="https://arxiv.org/abs/2607.20827v1" data-source-label="arXiv" data-note="arXiv version 1; author list follows the Google Scholar record, confirmed by the site owner on 25 October 2026. The arXiv landing page currently lists only Junchi Liao."><summary class="citation-inline" aria-label="View BibTeX citation: Auditing Provenance Sensitivity in LLM Agent Action Selection">BibTeX</summary><pre><code>@misc{liao2026auditing,
+  author = {Liao, Junchi and
+            Huang, Qiang and
+            Qian, Rui and
+            Mao, Xutao and
+            Cheng, Juntao and
+            Cui, Kangning and
+            Li, Yu and
+            Sun, Jingyu and
+            Hou, Yuchao},
+  title = {Auditing Provenance Sensitivity in {LLM} Agent Action Selection},
+  year = {2026},
+  url = {https://arxiv.org/abs/2607.20827v1},
+  eprint = {2607.20827},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-decodeshare-icml"><div class="direction-title"><a href="#paper-decodeshare-icml">DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</a></div><div class="direction-resources"><span class="venue-inline">ICML&#39;26, Spotlight</span><a class="paper-inline" href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://proceedings.mlr.press/v306/shao26j.html" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf" target="_blank" rel="noopener noreferrer">PDF</a><a class="paper-inline" href="https://github.com/Zishan-Shao/decodeshare" target="_blank" rel="noopener noreferrer">Code</a><details class="citation-details" data-citation-id="paper-decodeshare-icml" data-title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions" data-source="https://proceedings.mlr.press/v306/shao26j.html" data-source-label="PMLR" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">BibTeX</summary><pre><code>@inproceedings{pmlr-v306-shao26j,
   author = {Shao, Zishan and
             Zhang, Lixun and
             Cui, Kangning and
@@ -163,29 +314,67 @@
   publisher = {PMLR},
   month = {July},
   url = {https://proceedings.mlr.press/v306/shao26j.html},
-}</code></pre></details></div>
-            </div>
-            </div>
-            </details>
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-visual-generation"><div class="direction-title"><span>Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2605.12271" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2605.12271v2" target="_blank" rel="noopener noreferrer">PDF</a><a class="paper-inline" href="https://yaofang-liu.github.io/V2V_Web" target="_blank" rel="noopener noreferrer">Project</a><details class="citation-details" data-citation-id="paper-visual-generation" data-title="Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm" data-source="https://arxiv.org/abs/2605.12271v2" data-source-label="arXiv" data-note="arXiv version 2; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm">BibTeX</summary><pre><code>@misc{liu2026visual,
+  author = {Liu, Yaofang and
+            Cui, Kangning and
+            Chu, Meng and
+            Li, Zhaoqing and
+            Zhang, Suiyun and
+            Morel, Jean-Michel and
+            Cun, Xiaodong and
+            Che, Haoxuan and
+            Liu, Rui and
+            Chan, Raymond H.},
+  title = {Beyond Text Prompts: Visual-to-Visual Generation as A Unified Paradigm},
+  year = {2026},
+  url = {https://arxiv.org/abs/2605.12271v2},
+  eprint = {2605.12271},
+  archiveprefix = {arXiv},
+  version = {2},
+  note = {arXiv preprint, version 2},
+}</code></pre></details></div></div>
+                </div>
+                <h4>Structured learning</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-community-detection"><div class="direction-title"><span>A Local Perspective-based Model for Overlapping Community Detection</span></div><div class="direction-resources"><span class="venue-inline">IEEE SMC&#39;25</span><a class="paper-inline" href="https://doi.org/10.1109/smc58881.2025.11343612" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2503.21558" target="_blank" rel="noopener noreferrer">Preprint</a><details class="citation-details" data-citation-id="paper-community-detection" data-title="A Local Perspective-based Model for Overlapping Community Detection" data-source="https://doi.org/10.1109/smc58881.2025.11343612" data-source-label="Publisher" data-note="Official IEEE proceedings year: 2025 (the Scholar profile lists 2026)."><summary class="citation-inline" aria-label="View BibTeX citation: A Local Perspective-based Model for Overlapping Community Detection">BibTeX</summary><pre><code>@inproceedings{zhou2025community,
+  author = {Zhou, Gaofeng and
+            Wang, Rui-Feng and
+            Cui, Kangning},
+  title = {A Local Perspective-based Model for Overlapping Community Detection},
+  booktitle = {2025 {IEEE} International Conference on Systems, Man, and Cybernetics ({SMC})},
+  year = {2025},
+  pages = {2965--2970},
+  publisher = {IEEE},
+  month = {October},
+  doi = {10.1109/smc58881.2025.11343612},
+  url = {https://doi.org/10.1109/smc58881.2025.11343612},
+}</code></pre></details></div></div>
+                </div>
+                    </div>
+                </details>
+                <!-- theme:efficient-ml:end -->
             </div>
         </article>
 <article class="research-topic">
             <div class="research-topic-intro">
                 <h3 id="geospatial-ai">Geospatial AI</h3>
-                <p>Spatial learning for forest and environmental monitoring.</p>
+                <p>Remote sensing and visual learning for forests, agriculture, and biodiversity.</p>
                 <a class="topic-project-link" href="projects/geospatial-ai.html">Explore the Geospatial AI project <span aria-hidden="true">→</span></a>
             </div>
             <div class="research-topic-work">
                 <ul class="research-focus-points">
-                    <li><strong>Object mapping.</strong> <a href="#paper-palms-ijcai">PRISM</a> detects, segments, and geographically locates canopy palms.</li>
-                    <li><strong>Spatial modeling.</strong> <a href="#paper-palms-tgrs">PalmDSNet</a> connects palm detection with distribution modeling and an open UAV dataset.</li>
+                    <li><strong>Forests &amp; environmental change.</strong> <a href="#paper-palms-ijcai">PRISM</a> and <a href="#paper-palms-tgrs">PalmDSNet</a> map canopy palms; ELDOR supports monitoring of illegal gold mining.</li>
+                    <li><strong>Field vision.</strong> Lightweight detection models support crop phenotyping, pest recognition, and biodiversity monitoring.</li>
                     <li><strong>Learning without labels.</strong> <a href="#paper-s2dl">S2DL</a> uses superpixels and diffusion geometry for efficient hyperspectral clustering.</li>
                 </ul>
+                <!-- theme:geospatial-ai:start -->
                 <details class="text-disclosure direction-card">
-                <summary>Related publications (15)</summary>
-                <div class="direction-body">
-            <div class="direction-links">
-                <div class="direction-item" data-publication-id="paper-awakeforest"><span>AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery</span><span class="sep">|</span><span class="venue-inline">[IJCAI Demo'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2606.23542" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://www.ijcai.org/proceedings/2026/986" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://ijcai.org/proceedings/2026/0986.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-awakeforest" data-title="AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery" data-source="https://www.ijcai.org/proceedings/2026/986" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery">BibTeX</summary><pre><code>@inproceedings{ijcai2026p986,
+                    <summary>Publications &amp; preprints (28)</summary>
+                    <div class="direction-body">
+                <h4>Forest mapping &amp; environmental change</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-awakeforest"><div class="direction-title"><span>AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery</span></div><div class="direction-resources"><span class="venue-inline">IJCAI Demo&#39;26</span><a class="paper-inline" href="https://arxiv.org/abs/2606.23542" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://www.ijcai.org/proceedings/2026/986" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://ijcai.org/proceedings/2026/0986.pdf" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-awakeforest" data-title="AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery" data-source="https://www.ijcai.org/proceedings/2026/986" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery">BibTeX</summary><pre><code>@inproceedings{ijcai2026p986,
   author = {Prasai, Suraj and
             Cui, Kangning and
             Zhu, Rongkun and
@@ -204,46 +393,32 @@
   doi = {10.24963/ijcai.2026/986},
   url = {https://doi.org/10.24963/ijcai.2026/986},
   note = {Demo Track},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-help-icmr"><a href="#paper-help-icmr">Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection</a><span class="sep">|</span><span class="venue-inline">[ICMR'26]</span><span class="sep">|</span><a class="paper-inline" href="https://dl.acm.org/doi/10.1145/3805622.3810593" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2604.15065" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2604.15065" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-help-icmr" data-title="Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection" data-source="https://doi.org/10.1145/3805622.3810593" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection">BibTeX</summary><pre><code>@inproceedings{zeng2026helpicmr,
-  author = {Zeng, Yangchen and
-            Yu, Zhenyu and
-            Jiang, Dongming and
-            Zhang, Wenbo and
-            Hong, Yifan and
-            Hu, Zhanhua and
-            Luo, Jiao and
-            Cui, Kangning},
-  title = {Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection},
-  booktitle = {Proceedings of the 2026 International Conference on Multimedia Retrieval},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-eldor"><div class="direction-title"><span>ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://arxiv.org/abs/2605.15397" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2605.15397v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-eldor" data-title="ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest" data-source="https://arxiv.org/abs/2605.15397v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest">BibTeX</summary><pre><code>@misc{cui2026eldor,
+  author = {Cui, Kangning and
+            Bohara, Surendra and
+            Prasai, Suraj and
+            Shao, Zishan and
+            Tang, Wei and
+            Pillaca, Martin and
+            Flores, Edwin and
+            Yang, Zhen and
+            Larsen, Gregory and
+            Dethier, Evan and
+            Lutz, David and
+            Morel, Jean-Michel and
+            Silman, Miles and
+            Pauca, Victor and
+            Yang, Fan},
+  title = {{ELDOR}: A Dataset and Benchmark for Illegal Gold Mining in the {Amazon} Rainforest},
   year = {2026},
-  pages = {1260--1269},
-  publisher = {ACM},
-  month = {June},
-  doi = {10.1145/3805622.3810593},
-  url = {https://doi.org/10.1145/3805622.3810593},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-centerseg"><a href="#paper-centerseg">Center-guided Classifier for Semantic Segmentation of Remote Sensing Images</a><span class="sep">|</span><span class="venue-inline">[TGRS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11364332" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2503.16963" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2503.16963" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-centerseg" data-title="Center-guided Classifier for Semantic Segmentation of Remote Sensing Images" data-source="https://doi.org/10.1109/tgrs.2026.3657453" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Center-guided Classifier for Semantic Segmentation of Remote Sensing Images">BibTeX</summary><pre><code>@article{zhang2026centerseg,
-  author = {Zhang, Wei and
-            Ma, Mengting and
-            Jiang, Yizhen and
-            Chen, Yun and
-            Huang, Zhenhua and
-            Wu, Wangyu and
-            Cui, Kangning and
-            Lian, Rongrong and
-            Wu, Zhenkai and
-            Ma, Xiaowen},
-  title = {Center-Guided Classifier for Semantic Segmentation of Remote Sensing Images},
-  journal = {{IEEE} Transactions on Geoscience and Remote Sensing},
-  year = {2026},
-  volume = {64},
-  pages = {1--16},
-  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-  doi = {10.1109/tgrs.2026.3657453},
-  url = {https://doi.org/10.1109/tgrs.2026.3657453},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-raw-uav"><span>From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization</span><span class="sep">|</span><span class="venue-inline">[IGARSS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2509.12400" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/igarss60577.2026.11731064" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2509.12400" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-raw-uav" data-title="From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization" data-source="https://doi.org/10.1109/igarss60577.2026.11731064" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization">BibTeX</summary><pre><code>@inproceedings{zhu2026rawuav,
+  url = {https://arxiv.org/abs/2605.15397v1},
+  eprint = {2605.15397},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-raw-uav"><div class="direction-title"><span>From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization</span></div><div class="direction-resources"><span class="venue-inline">IGARSS&#39;26</span><a class="paper-inline" href="https://arxiv.org/abs/2509.12400" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://doi.org/10.1109/igarss60577.2026.11731064" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/pdf/2509.12400" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-raw-uav" data-title="From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization" data-source="https://doi.org/10.1109/igarss60577.2026.11731064" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: From Orthomosaics to Raw UAV Imagery: Enhancing Palm Detection and Crown-Center Localization">BibTeX</summary><pre><code>@inproceedings{zhu2026rawuav,
   author = {Zhu, Rongkun and
             Cui, Kangning and
             Tang, Wei and
@@ -265,8 +440,8 @@
   month = {August},
   doi = {10.1109/igarss60577.2026.11731064},
   url = {https://doi.org/10.1109/igarss60577.2026.11731064},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-palms-tgrs"><a href="#paper-palms-tgrs">Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</a><span class="sep">|</span><span class="venue-inline">[TGRS'25]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2410.11124" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-palms-tgrs" data-title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery" data-source="https://doi.org/10.1109/tgrs.2025.3584093" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">BibTeX</summary><pre><code>@article{cui2025palmstgrs,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-palms-tgrs"><div class="direction-title"><a href="#paper-palms-tgrs">Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</a></div><div class="direction-resources"><span class="venue-inline">TGRS&#39;25</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a><a class="paper-inline" href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://arxiv.org/pdf/2410.11124" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-palms-tgrs" data-title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery" data-source="https://doi.org/10.1109/tgrs.2025.3584093" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">BibTeX</summary><pre><code>@article{cui2025palmstgrs,
   author = {Cui, Kangning and
             Tang, Wei and
             Zhu, Rongkun and
@@ -290,8 +465,8 @@
   publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
   doi = {10.1109/tgrs.2025.3584093},
   url = {https://doi.org/10.1109/tgrs.2025.3584093},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-palms-ijcai"><a href="#paper-palms-ijcai">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</a><span class="sep">|</span><span class="venue-inline">[IJCAI'25, Oral]</span><span class="sep">|</span><a class="paper-inline" href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://www.ijcai.org/proceedings/2025/1067.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-palms-ijcai" data-title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms" data-source="https://www.ijcai.org/proceedings/2025/1067" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">BibTeX</summary><pre><code>@inproceedings{ijcai2025p1067,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-palms-ijcai"><div class="direction-title"><a href="#paper-palms-ijcai">Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</a></div><div class="direction-resources"><span class="venue-inline">IJCAI&#39;25, Oral</span><a class="paper-inline" href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://www.ijcai.org/proceedings/2025/1067.pdf" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-palms-ijcai" data-title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms" data-source="https://www.ijcai.org/proceedings/2025/1067" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">BibTeX</summary><pre><code>@inproceedings{ijcai2025p1067,
   author = {Cui, Kangning and
             Zhu, Rongkun and
             Wang, Manqi and
@@ -314,8 +489,8 @@
   doi = {10.24963/ijcai.2025/1067},
   url = {https://doi.org/10.24963/ijcai.2025/1067},
   note = {AI and Social Good},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-palmprobnet"><span>PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning</span><span class="sep">|</span><span class="venue-inline">[ACMSE'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1145/3603287.3651220" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2403.03161" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2403.03161" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-palmprobnet" data-title="PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning" data-source="https://doi.org/10.1145/3603287.3651220" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning">BibTeX</summary><pre><code>@inproceedings{cui2024palmprobnet,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-palmprobnet"><div class="direction-title"><span>PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning</span></div><div class="direction-resources"><span class="venue-inline">ACMSE&#39;24</span><a class="paper-inline" href="https://doi.org/10.1145/3603287.3651220" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2403.03161" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2403.03161" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-palmprobnet" data-title="PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning" data-source="https://doi.org/10.1145/3603287.3651220" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: PalmProbNet: A Probabilistic Approach to Understanding Palm Distributions in Ecuadorian Tropical Forest via Transfer Learning">BibTeX</summary><pre><code>@inproceedings{cui2024palmprobnet,
   author = {Cui, Kangning and
             Shao, Zishan and
             Larsen, Gregory and
@@ -335,8 +510,8 @@
   month = {April},
   doi = {10.1145/3603287.3651220},
   url = {https://doi.org/10.1145/3603287.3651220},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-gold-mining"><span>Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery</span><span class="sep">|</span><span class="venue-inline">[RS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-gold-mining" data-title="Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery" data-source="https://doi.org/10.3390/rs14071746" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery">BibTeX</summary><pre><code>@article{camalan2022goldmining,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-gold-mining"><div class="direction-title"><span>Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery</span></div><div class="direction-resources"><span class="venue-inline">RS&#39;22</span><a class="paper-inline" href="https://www.mdpi.com/2072-4292/14/7/1746" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-gold-mining" data-title="Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery" data-source="https://doi.org/10.3390/rs14071746" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Change Detection of Amazonian Alluvial Gold Mining Using Deep Learning and Sentinel-2 Imagery">BibTeX</summary><pre><code>@article{camalan2022goldmining,
   author = {Camalan, Seda and
             Cui, Kangning and
             Pauca, Victor Paul and
@@ -357,12 +532,89 @@
   month = {April},
   doi = {10.3390/rs14071746},
   url = {https://doi.org/10.3390/rs14071746},
-}</code></pre></details></div>
-            </div>
-            <h4>Learning from Hyperspectral Images</h4>
-
-            <div class="direction-links">
-                <div class="direction-item" data-publication-id="paper-hypergraph"><span>Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[JSTARS'26]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11433595" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-hypergraph" data-title="Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images" data-source="https://doi.org/10.1109/jstars.2026.3673839" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images">BibTeX</summary><pre><code>@article{yang2026hypergraph,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-water-change"><div class="direction-title"><span>Semi-Supervised Change Detection Of Small Water Bodies Using RGB And Multispectral Images In Peruvian Rainforests</span></div><div class="direction-resources"><span class="venue-inline">WHISPERS&#39;22</span><a class="paper-inline" href="https://doi.org/10.1109/whispers56178.2022.9955140" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2206.09365" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://github.com/ckn3/SVM-Change-Detection" target="_blank" rel="noopener noreferrer">Code</a><details class="citation-details" data-citation-id="paper-water-change" data-title="Semi-Supervised Change Detection Of Small Water Bodies Using RGB And Multispectral Images In Peruvian Rainforests" data-source="https://doi.org/10.1109/whispers56178.2022.9955140" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Semi-Supervised Change Detection Of Small Water Bodies Using RGB And Multispectral Images In Peruvian Rainforests">BibTeX</summary><pre><code>@inproceedings{cui2022water,
+  author = {Cui, Kangning and
+            Camalan, Seda and
+            Li, Ruoning and
+            Pauca, Victor Paul and
+            Alqahtani, Sarra and
+            Plemmons, Robert and
+            Silman, Miles and
+            Dethier, Evan Nylen and
+            Lutz, David and
+            Chan, Raymond},
+  title = {Semi-Supervised Change Detection Of Small Water Bodies Using {RGB} And Multispectral Images In {Peruvian} Rainforests},
+  booktitle = {2022 12th Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing ({WHISPERS})},
+  year = {2022},
+  pages = {1--5},
+  publisher = {IEEE},
+  month = {September},
+  doi = {10.1109/whispers56178.2022.9955140},
+  url = {https://doi.org/10.1109/whispers56178.2022.9955140},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-agu-mining"><div class="direction-title"><span>Detecting Change Due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning</span></div><div class="direction-resources"><span class="venue-inline">AGU&#39;22 · Conference abstract</span><a class="paper-inline" href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract" target="_blank" rel="noopener noreferrer">Abstract</a><a class="paper-inline" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;oe=ASCII&amp;user=vzCZaIwAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC" target="_blank" rel="noopener noreferrer">Scholar</a><details class="citation-details" data-citation-id="paper-agu-mining" data-title="Detecting Change Due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning" data-source="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;oe=ASCII&amp;user=vzCZaIwAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=vzCZaIwAAAAJ:LkGwnXOMwfcC" data-source-label="Google Scholar" data-note="Conference abstract B52G-0905; bibliographic metadata from the linked Scholar record."><summary class="citation-inline" aria-label="View BibTeX citation: Detecting Change Due to Alluvial Gold Mining in Peruvian Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning">BibTeX</summary><pre><code>@inproceedings{camalan2022detecting,
+  author = {Camalan, Seda and
+            Cui, Kangning and
+            Pauca, Pa{\&#39;u}l and
+            Alqahtani, Sarra and
+            Silman, Miles and
+            Chan, Raymond and
+            Dethier, Evan and
+            Fernandez, Luis E. and
+            Lutz, David A. and
+            Plemmons, Robert},
+  title = {Detecting Change Due to Alluvial Gold Mining in {Peruvian} Rainforest Using Recursive Convolutional Neural Networks and Contrastive Learning},
+  booktitle = {{AGU} Fall Meeting Abstracts},
+  year = {2022},
+  volume = {2022},
+  eid = {B52G-0905},
+  month = {December},
+  url = {https://ui.adsabs.harvard.edu/abs/2022AGUFM.B52G0905C/abstract},
+  note = {Conference abstract B52G-0905},
+}</code></pre></details></div></div>
+                </div>
+                <h4>Remote sensing &amp; hyperspectral learning</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-help-icmr"><div class="direction-title"><a href="#paper-help-icmr">Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection</a></div><div class="direction-resources"><span class="venue-inline">ICMR&#39;26</span><a class="paper-inline" href="https://dl.acm.org/doi/10.1145/3805622.3810593" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2604.15065" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://github.com/yidimopozhibai/Noise-Suppressed-Query-Retrieval" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://arxiv.org/pdf/2604.15065" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-help-icmr" data-title="Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection" data-source="https://doi.org/10.1145/3805622.3810593" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection">BibTeX</summary><pre><code>@inproceedings{zeng2026helpicmr,
+  author = {Zeng, Yangchen and
+            Yu, Zhenyu and
+            Jiang, Dongming and
+            Zhang, Wenbo and
+            Hong, Yifan and
+            Hu, Zhanhua and
+            Luo, Jiao and
+            Cui, Kangning},
+  title = {Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection},
+  booktitle = {Proceedings of the 2026 International Conference on Multimedia Retrieval},
+  year = {2026},
+  pages = {1260--1269},
+  publisher = {ACM},
+  month = {June},
+  doi = {10.1145/3805622.3810593},
+  url = {https://doi.org/10.1145/3805622.3810593},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-centerseg"><div class="direction-title"><a href="#paper-centerseg">Center-guided Classifier for Semantic Segmentation of Remote Sensing Images</a></div><div class="direction-resources"><span class="venue-inline">TGRS&#39;26</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11364332" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2503.16963" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2503.16963" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-centerseg" data-title="Center-guided Classifier for Semantic Segmentation of Remote Sensing Images" data-source="https://doi.org/10.1109/tgrs.2026.3657453" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Center-guided Classifier for Semantic Segmentation of Remote Sensing Images">BibTeX</summary><pre><code>@article{zhang2026centerseg,
+  author = {Zhang, Wei and
+            Ma, Mengting and
+            Jiang, Yizhen and
+            Chen, Yun and
+            Huang, Zhenhua and
+            Wu, Wangyu and
+            Cui, Kangning and
+            Lian, Rongrong and
+            Wu, Zhenkai and
+            Ma, Xiaowen},
+  title = {Center-Guided Classifier for Semantic Segmentation of Remote Sensing Images},
+  journal = {{IEEE} Transactions on Geoscience and Remote Sensing},
+  year = {2026},
+  volume = {64},
+  pages = {1--16},
+  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+  doi = {10.1109/tgrs.2026.3657453},
+  url = {https://doi.org/10.1109/tgrs.2026.3657453},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-hypergraph"><div class="direction-title"><span>Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images</span></div><div class="direction-resources"><span class="venue-inline">JSTARS&#39;26</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/11433595" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-hypergraph" data-title="Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images" data-source="https://doi.org/10.1109/jstars.2026.3673839" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Superpixel-Level Hypergraph Regularized Multi-View Clustering for Hyperspectral Images">BibTeX</summary><pre><code>@article{yang2026hypergraph,
   author = {Yang, Shujun and
             Cui, Kangning and
             Jia, Yuheng and
@@ -377,8 +629,41 @@
   publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
   doi = {10.1109/jstars.2026.3673839},
   url = {https://doi.org/10.1109/jstars.2026.3673839},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-s2dl"><a href="#paper-s2dl">Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</a><span class="sep">|</span><span class="venue-inline">[TGRS'24]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2312.15447" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-s2dl" data-title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" data-source="https://doi.org/10.1109/tgrs.2024.3385202" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">BibTeX</summary><pre><code>@article{cui2024s2dl,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-lightweight-uav"><div class="direction-title"><span>Toward Efficient UAV-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion</span></div><div class="direction-resources"><span class="venue-inline">Remote Sensing&#39;25</span><a class="paper-inline" href="https://doi.org/10.3390/rs17132235" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-lightweight-uav" data-title="Toward Efficient UAV-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion" data-source="https://doi.org/10.3390/rs17132235" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Toward Efficient UAV-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion">BibTeX</summary><pre><code>@article{di2025uav,
+  author = {Di, Xingyu and
+            Cui, Kangning and
+            Wang, Rui-Feng},
+  title = {Toward Efficient {UAV}-Based Small Object Detection: A Lightweight Network with Enhanced Feature Fusion},
+  journal = {Remote Sensing},
+  year = {2025},
+  volume = {17},
+  number = {13},
+  pages = {2235},
+  publisher = {MDPI AG},
+  month = {June},
+  doi = {10.3390/rs17132235},
+  url = {https://doi.org/10.3390/rs17132235},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-mosaic"><div class="direction-title"><span>MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2025</span><a class="paper-inline" href="https://arxiv.org/abs/2507.08683" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2507.08683v1" target="_blank" rel="noopener noreferrer">PDF</a><details class="citation-details" data-citation-id="paper-mosaic" data-title="MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing" data-source="https://arxiv.org/abs/2507.08683v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: MoSAiC: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing">BibTeX</summary><pre><code>@misc{gupta2025mosaic,
+  author = {Gupta, Debashis and
+            Golder, Aditi and
+            Zhu, Rongkhun and
+            Cui, Kangning and
+            Tang, Wei and
+            Yang, Fan and
+            Csillik, Ovidiu and
+            Alaqahtani, Sarra and
+            Pauca, V. Paul},
+  title = {{MoSAiC}: Multi-Modal Multi-Label Supervision-Aware Contrastive Learning for Remote Sensing},
+  year = {2025},
+  url = {https://arxiv.org/abs/2507.08683v1},
+  eprint = {2507.08683},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-s2dl"><div class="direction-title"><a href="#paper-s2dl">Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</a></div><div class="direction-resources"><span class="venue-inline">TGRS&#39;24</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://arxiv.org/pdf/2312.15447" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-s2dl" data-title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering" data-source="https://doi.org/10.1109/tgrs.2024.3385202" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">BibTeX</summary><pre><code>@article{cui2024s2dl,
   author = {Cui, Kangning and
             Li, Ruoning and
             Polk, Sam L and
@@ -395,8 +680,26 @@
   publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
   doi = {10.1109/tgrs.2024.3385202},
   url = {https://doi.org/10.1109/tgrs.2024.3385202},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-dsirc"><span>Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.13497" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/whispers56178.2022.9955069" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2204.13497" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-dsirc" data-title="Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry" data-source="https://doi.org/10.1109/whispers56178.2022.9955069" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry">BibTeX</summary><pre><code>@inproceedings{cui2022dsirc,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-diffusion-volume"><div class="direction-title"><span>Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images</span></div><div class="direction-resources"><span class="venue-inline">Remote Sensing&#39;23</span><a class="paper-inline" href="https://doi.org/10.3390/rs15041053" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-diffusion-volume" data-title="Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images" data-source="https://doi.org/10.3390/rs15041053" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images">BibTeX</summary><pre><code>@article{polk2023diffusionvolume,
+  author = {Polk, Sam L. and
+            Cui, Kangning and
+            Chan, Aland H. Y. and
+            Coomes, David A. and
+            Plemmons, Robert J. and
+            Murphy, James M.},
+  title = {Unsupervised Diffusion and Volume Maximization-Based Clustering of Hyperspectral Images},
+  journal = {Remote Sensing},
+  year = {2023},
+  volume = {15},
+  number = {4},
+  pages = {1053},
+  publisher = {MDPI AG},
+  month = {February},
+  doi = {10.3390/rs15041053},
+  url = {https://doi.org/10.3390/rs15041053},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-dsirc"><div class="direction-title"><span>Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry</span></div><div class="direction-resources"><span class="venue-inline">WHISPERS&#39;22</span><a class="paper-inline" href="https://arxiv.org/abs/2204.13497" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://doi.org/10.1109/whispers56178.2022.9955069" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/pdf/2204.13497" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-dsirc" data-title="Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry" data-source="https://doi.org/10.1109/whispers56178.2022.9955069" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Spatial-Spectral Hyperspectral Image Reconstruction and Clustering With Diffusion Geometry">BibTeX</summary><pre><code>@inproceedings{cui2022dsirc,
   author = {Cui, Kangning and
             Li, Ruoning and
             Polk, Sam L. and
@@ -411,8 +714,8 @@
   month = {September},
   doi = {10.1109/whispers56178.2022.9955069},
   url = {https://doi.org/10.1109/whispers56178.2022.9955069},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-ash-dieback"><span>Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/IGARSS46834.2022.9883429" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.09041" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2204.09041" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-ash-dieback" data-title="Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering" data-source="https://doi.org/10.1109/igarss46834.2022.9883429" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering">BibTeX</summary><pre><code>@inproceedings{polk2022ashdieback,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-ash-dieback"><div class="direction-title"><span>Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering</span></div><div class="direction-resources"><span class="venue-inline">IGARSS&#39;22</span><a class="paper-inline" href="https://doi.org/10.1109/IGARSS46834.2022.9883429" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2204.09041" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2204.09041" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-ash-dieback" data-title="Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering" data-source="https://doi.org/10.1109/igarss46834.2022.9883429" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Detection of Ash Dieback Disease Using Diffusion-Based Hyperspectral Image Clustering">BibTeX</summary><pre><code>@inproceedings{polk2022ashdieback,
   author = {Polk, Sam L. and
             Chan, Aland H. Y. and
             Cui, Kangning and
@@ -427,8 +730,8 @@
   month = {July},
   doi = {10.1109/igarss46834.2022.9883429},
   url = {https://doi.org/10.1109/igarss46834.2022.9883429},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-svm-satv"><span>Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9883961" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-svm-satv" data-title="Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation" data-source="https://doi.org/10.1109/igarss46834.2022.9883961" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation">BibTeX</summary><pre><code>@inproceedings{li2022svmsatv,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-svm-satv"><div class="direction-title"><span>Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation</span></div><div class="direction-resources"><span class="venue-inline">IGARSS&#39;22</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9883961" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-svm-satv" data-title="Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation" data-source="https://doi.org/10.1109/igarss46834.2022.9883961" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Classification of Hyperspectral Images Using SVM With Shape-Adaptive Reconstruction and Smoothed Total Variation">BibTeX</summary><pre><code>@inproceedings{li2022svmsatv,
   author = {Li, Ruoning and
             Cui, Kangning and
             Chan, Raymond H. and
@@ -441,8 +744,8 @@
   month = {July},
   doi = {10.1109/igarss46834.2022.9883961},
   url = {https://doi.org/10.1109/igarss46834.2022.9883961},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-active-diffusion"><span>Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[IGARSS'22]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/igarss46834.2022.9883894" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2204.06298" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2204.06298" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-active-diffusion" data-title="Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images" data-source="https://doi.org/10.1109/igarss46834.2022.9883894" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images">BibTeX</summary><pre><code>@inproceedings{polk2022activediffusion,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-active-diffusion"><div class="direction-title"><span>Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images</span></div><div class="direction-resources"><span class="venue-inline">IGARSS&#39;22</span><a class="paper-inline" href="https://doi.org/10.1109/igarss46834.2022.9883894" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2204.06298" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2204.06298" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-active-diffusion" data-title="Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images" data-source="https://doi.org/10.1109/igarss46834.2022.9883894" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Active Diffusion and VCA-Assisted Image Segmentation of Hyperspectral Images">BibTeX</summary><pre><code>@inproceedings{polk2022activediffusion,
   author = {Polk, Sam L. and
             Cui, Kangning and
             Plemmons, Robert J. and
@@ -455,8 +758,8 @@
   month = {July},
   doi = {10.1109/igarss46834.2022.9883894},
   url = {https://doi.org/10.1109/igarss46834.2022.9883894},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-aviris-ng"><span>Unsupervised Classification of AVIRIS-NG Hyperspectral Images</span><span class="sep">|</span><span class="venue-inline">[WHISPERS'21]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9484006" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-aviris-ng" data-title="Unsupervised Classification of AVIRIS-NG Hyperspectral Images" data-source="https://doi.org/10.1109/whispers52202.2021.9484006" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Classification of AVIRIS-NG Hyperspectral Images">BibTeX</summary><pre><code>@inproceedings{cui2021avirisng,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-aviris-ng"><div class="direction-title"><span>Unsupervised Classification of AVIRIS-NG Hyperspectral Images</span></div><div class="direction-resources"><span class="venue-inline">WHISPERS&#39;21</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/9484006" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-aviris-ng" data-title="Unsupervised Classification of AVIRIS-NG Hyperspectral Images" data-source="https://doi.org/10.1109/whispers52202.2021.9484006" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Unsupervised Classification of AVIRIS-NG Hyperspectral Images">BibTeX</summary><pre><code>@inproceedings{cui2021avirisng,
   author = {Cui, Kangning and
             Plemmons, Robert J.},
   title = {Unsupervised Classification of {AVIRIS-NG} Hyperspectral Images},
@@ -467,16 +770,144 @@
   month = {March},
   doi = {10.1109/whispers52202.2021.9484006},
   url = {https://doi.org/10.1109/whispers52202.2021.9484006},
-}</code></pre></details></div>
-            </div>
-            </div>
-            </details>
+}</code></pre></details></div></div>
+                </div>
+                <h4>Agriculture &amp; biodiversity</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-agriculture-forestry"><div class="direction-title"><span>Advanced Remote Sensing and AI Techniques in Agriculture and Forestry</span></div><div class="direction-resources"><span class="venue-inline">Plants&#39;26</span><a class="paper-inline" href="https://doi.org/10.3390/plants15172706" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-agriculture-forestry" data-title="Advanced Remote Sensing and AI Techniques in Agriculture and Forestry" data-source="https://doi.org/10.3390/plants15172706" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Advanced Remote Sensing and AI Techniques in Agriculture and Forestry">BibTeX</summary><pre><code>@article{wang2026agriculture,
+  author = {Wang, Rui-Feng and
+            Cui, Kangning},
+  title = {Advanced Remote Sensing and {AI} Techniques in Agriculture and Forestry},
+  journal = {Plants},
+  year = {2026},
+  volume = {15},
+  number = {17},
+  pages = {2706},
+  publisher = {MDPI AG},
+  month = {September},
+  doi = {10.3390/plants15172706},
+  url = {https://doi.org/10.3390/plants15172706},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-jassidnet"><div class="direction-title"><span>JassidNet as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid (Amrasca biguttula) detection and counting toward objective resistance screening</span></div><div class="direction-resources"><span class="venue-inline">Industrial Crops and Products&#39;26</span><a class="paper-inline" href="https://doi.org/10.1016/j.indcrop.2026.123716" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://github.com/UGA-BSAIL/JassidNet" target="_blank" rel="noopener noreferrer">Code</a><details class="citation-details" data-citation-id="paper-jassidnet" data-title="JassidNet as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid (Amrasca biguttula) detection and counting toward objective resistance screening" data-source="https://doi.org/10.1016/j.indcrop.2026.123716" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: JassidNet as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid (Amrasca biguttula) detection and counting toward objective resistance screening">BibTeX</summary><pre><code>@article{wang2026jassid,
+  author = {Wang, Rui-Feng and
+            Cui, Kangning and
+            Schardong, Iago Beffart and
+            Bauer, Matthew C. and
+            Somala, Rama Vamsi and
+            Xu, Mingrui and
+            West, Dalton and
+            Jones, Donald C. and
+            Taylor, Sally V. and
+            Roberts, Phillip M. and
+            Li, Changying and
+            Chee, Peng W.},
+  title = {{JassidNet} as a quantization-aware lightweight phenotyping framework for high-throughput cotton jassid ({Amrasca} biguttula) detection and counting toward objective resistance screening},
+  journal = {Industrial Crops and Products},
+  year = {2026},
+  volume = {249},
+  pages = {123716},
+  publisher = {Elsevier BV},
+  month = {July},
+  doi = {10.1016/j.indcrop.2026.123716},
+  url = {https://doi.org/10.1016/j.indcrop.2026.123716},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-biomoth"><div class="direction-title"><span>BioMoth: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision</span></div><div class="direction-resources"><span class="venue-inline">Preprint · 2026</span><a class="paper-inline" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698" target="_blank" rel="noopener noreferrer">Preprint</a><details class="citation-details" data-citation-id="paper-biomoth" data-title="BioMoth: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision" data-source="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698" data-source-label="SSRN" data-note="SSRN preprint, posted 15 June 2026."><summary class="citation-inline" aria-label="View BibTeX citation: BioMoth: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision">BibTeX</summary><pre><code>@misc{lutz2026biomoth,
+  author = {Lutz, David A. and
+            Suhavi, Suhavi and
+            Jones, Jessica S. and
+            Aldrich, Quinn M. and
+            Cummings, Wyatt J. and
+            Cui, Kangning and
+            Ayres, Matthew P.},
+  title = {{BioMoth}: Non-Lethal Estimation of Moth Abundance and Biomass from Blacklight Sheet Imagery Using Computer Vision},
+  year = {2026},
+  doi = {10.2139/ssrn.6943698},
+  url = {https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6943698},
+  eprint = {6943698},
+  archiveprefix = {SSRN},
+  note = {SSRN preprint, posted 15 June 2026},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-seaf-net"><div class="direction-title"><span>SEAF-Net: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition</span></div><div class="direction-resources"><span class="venue-inline">JMSE&#39;26</span><a class="paper-inline" href="https://doi.org/10.3390/jmse14040351" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-seaf-net" data-title="SEAF-Net: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition" data-source="https://doi.org/10.3390/jmse14040351" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: SEAF-Net: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition">BibTeX</summary><pre><code>@article{han2026seaf,
+  author = {Han, Yu-Shan and
+            Zhao, Sheng-Lun and
+            Chen, Chu and
+            Cui, Kangning and
+            Hu, Pingfan and
+            Wang, Rui-Feng},
+  title = {{SEAF-Net}: A Sustainable and Lightweight Attention-Enhanced Detection Network for Underwater Fish Species Recognition},
+  journal = {Journal of Marine Science and Engineering},
+  year = {2026},
+  volume = {14},
+  number = {4},
+  pages = {351},
+  publisher = {MDPI AG},
+  month = {February},
+  doi = {10.3390/jmse14040351},
+  url = {https://doi.org/10.3390/jmse14040351},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-cott-adnet"><div class="direction-title"><span>Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions</span></div><div class="direction-resources"><span class="venue-inline">WACV&#39;26 Workshop</span><a class="paper-inline" href="https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.pdf" target="_blank" rel="noopener noreferrer">PDF</a><a class="paper-inline" href="https://github.com/SweefongWong/Cott-ADNet" target="_blank" rel="noopener noreferrer">Code &amp; data</a><details class="citation-details" data-citation-id="paper-cott-adnet" data-title="Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions" data-source="https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html" data-source-label="CVF Open Access" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Cott-ADNet: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions">BibTeX</summary><pre><code>@inproceedings{Wang_2026_WACV,
+  author = {Wang, Rui-Feng and
+            Xu, Mingrui and
+            Bauer, Matthew and
+            Schardong, Iago and
+            Ma, Xiaowen and
+            Chee, Peng and
+            Cui, Kangning},
+  title = {{Cott-ADNet}: Lightweight Real-Time Cotton Boll and Flower Detection Under Field Conditions},
+  booktitle = {Proceedings of the {IEEE}/{CVF} Winter Conference on Applications of Computer Vision ({WACV}) Workshops},
+  year = {2026},
+  pages = {500--509},
+  month = {March},
+  url = {https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/html/Wang_Cott-ADNet_Lightweight_Real-Time_Cotton_Boll_and_Flower_Detection_Under_Field_WACVW_2026_paper.html},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-ra-cottnet"><div class="direction-title"><span>RA-CottNet: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition</span></div><div class="direction-resources"><span class="venue-inline">AI&#39;25</span><a class="paper-inline" href="https://doi.org/10.3390/ai6090235" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-ra-cottnet" data-title="RA-CottNet: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition" data-source="https://doi.org/10.3390/ai6090235" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: RA-CottNet: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition">BibTeX</summary><pre><code>@article{wang2025racott,
+  author = {Wang, Rui-Feng and
+            Qin, Yi-Ming and
+            Zhao, Yi-Yi and
+            Xu, Mingrui and
+            Schardong, Iago Beffart and
+            Cui, Kangning},
+  title = {{RA-CottNet}: A Real-Time High-Precision Deep Learning Model for Cotton Boll and Flower Recognition},
+  journal = {{AI}},
+  year = {2025},
+  volume = {6},
+  number = {9},
+  pages = {235},
+  publisher = {MDPI AG},
+  month = {September},
+  doi = {10.3390/ai6090235},
+  url = {https://doi.org/10.3390/ai6090235},
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-cotton-network"><div class="direction-title"><span>Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification</span></div><div class="direction-resources"><span class="venue-inline">Plants&#39;25</span><a class="paper-inline" href="https://doi.org/10.3390/plants14132082" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-cotton-network" data-title="Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification" data-source="https://doi.org/10.3390/plants14132082" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification">BibTeX</summary><pre><code>@article{wang2025cotton,
+  author = {Wang, Zhengle and
+            Zhang, Heng-Wei and
+            Dai, Ying-Qiang and
+            Cui, Kangning and
+            Wang, Haihua and
+            Chee, Peng W. and
+            Wang, Rui-Feng},
+  title = {Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification},
+  journal = {Plants},
+  year = {2025},
+  volume = {14},
+  number = {13},
+  pages = {2082},
+  publisher = {MDPI AG},
+  month = {July},
+  doi = {10.3390/plants14132082},
+  url = {https://doi.org/10.3390/plants14132082},
+}</code></pre></details></div></div>
+                </div>
+                    </div>
+                </details>
+                <!-- theme:geospatial-ai:end -->
             </div>
         </article>
 <article class="research-topic">
             <div class="research-topic-intro">
                 <h3 id="medical-ai">Medical AI</h3>
                 <p>Temporal structure in biomedical images and signals.</p>
+                <a class="topic-project-link" href="#patents">Related medical AI patents <span aria-hidden="true">→</span></a>
 
             </div>
             <div class="research-topic-work">
@@ -485,11 +916,13 @@
                     <li><strong>Annotation-free analysis.</strong> <a href="#paper-cardiac-phase">Cardiac motion profiling</a> identifies cardiac phases in adult and fetal echocardiography.</li>
                     <li><strong>Collaborative applications.</strong> Ultrasound restoration and tracking, biomedical signal analysis, and cell segmentation.</li>
                 </ul>
+                <!-- theme:medical-ai:start -->
                 <details class="text-disclosure direction-card">
-                <summary>Related publications (7)</summary>
-                <div class="direction-body">
-            <div class="direction-links">
-                <div class="direction-item" data-publication-id="paper-ecg-horizons-neurips"><a href="#paper-ecg-horizons-neurips">Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://neurips.cc/virtual/2026/poster/150095" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2605.16975" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-ecg-horizons-neurips" data-title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons" data-source="https://neurips.cc/virtual/2026/poster/150095" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">BibTeX</summary><pre><code>@inproceedings{tang2026extending,
+                    <summary>Publications &amp; preprints (7)</summary>
+                    <div class="direction-body">
+                <h4>Cardiac images &amp; signals</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-ecg-horizons-neurips"><div class="direction-title"><a href="#paper-ecg-horizons-neurips">Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</a></div><div class="direction-resources"><span class="venue-inline">NeurIPS&#39;26, Poster</span><a class="paper-inline" href="https://neurips.cc/virtual/2026/poster/150095" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a><a class="paper-inline" href="https://arxiv.org/pdf/2605.16975" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-ecg-horizons-neurips" data-title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons" data-source="https://neurips.cc/virtual/2026/poster/150095" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">BibTeX</summary><pre><code>@inproceedings{tang2026extending,
   author = {Tang, Wei and
             Han, Jinpei and
             Cui, Kangning and
@@ -508,8 +941,8 @@
   year = {2026},
   url = {https://neurips.cc/virtual/2026/poster/150095},
   note = {Accepted conference paper},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-cardiac-phase"><a href="#paper-cardiac-phase">Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</a><span class="sep">|</span><span class="venue-inline">[MICCAI'25, Oral]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code</a><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/pdf/2507.05154" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-cardiac-phase" data-title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos" data-source="https://doi.org/10.1007/978-3-032-05185-1_31" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-05185-1_31,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-cardiac-phase"><div class="direction-title"><a href="#paper-cardiac-phase">Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</a></div><div class="direction-resources"><span class="venue-inline">MICCAI&#39;25, Oral</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a><a class="paper-inline" href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code</a><a class="paper-inline" href="https://arxiv.org/pdf/2507.05154" target="_blank" rel="noopener noreferrer">PDF (preprint)</a><details class="citation-details" data-citation-id="paper-cardiac-phase" data-title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos" data-source="https://doi.org/10.1007/978-3-032-05185-1_31" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-05185-1_31,
   author = {Yang, Yingyu and
             Yang, Qianye and
             Cui, Kangning and
@@ -537,8 +970,8 @@
   isbn = {978-3-032-05185-1},
   doi = {10.1007/978-3-032-05185-1_31},
   url = {https://doi.org/10.1007/978-3-032-05185-1_31},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-blind-ultrasound"><span>Blind Restoration of High-Resolution Ultrasound Video</span><span class="sep">|</span><span class="venue-inline">[MICCAI'25]</span><span class="sep">|</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-blind-ultrasound" data-title="Blind Restoration of High-Resolution Ultrasound Video" data-source="https://doi.org/10.1007/978-3-032-04947-6_8" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Blind Restoration of High-Resolution Ultrasound Video">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-04947-6_8,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-blind-ultrasound"><div class="direction-title"><span>Blind Restoration of High-Resolution Ultrasound Video</span></div><div class="direction-resources"><span class="venue-inline">MICCAI&#39;25</span><a class="paper-inline" href="https://link.springer.com/chapter/10.1007/978-3-032-04947-6_8" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-blind-ultrasound" data-title="Blind Restoration of High-Resolution Ultrasound Video" data-source="https://doi.org/10.1007/978-3-032-04947-6_8" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Blind Restoration of High-Resolution Ultrasound Video">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-04947-6_8,
   author = {Chen, Chu and
             Cui, Kangning and
             Cascarano, Pasquale and
@@ -563,8 +996,8 @@
   isbn = {978-3-032-04947-6},
   doi = {10.1007/978-3-032-04947-6_8},
   url = {https://doi.org/10.1007/978-3-032-04947-6_8},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-fetal-tracking"><span>A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection</span><span class="sep">|</span><span class="venue-inline">[FIMH'25]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1007/978-3-031-94562-5_20" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-fetal-tracking" data-title="A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection" data-source="https://doi.org/10.1007/978-3-031-94562-5_20" data-source-label="Springer" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-031-94562-5_20,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-fetal-tracking"><div class="direction-title"><span>A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection</span></div><div class="direction-resources"><span class="venue-inline">FIMH&#39;25</span><a class="paper-inline" href="https://doi.org/10.1007/978-3-031-94562-5_20" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-fetal-tracking" data-title="A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection" data-source="https://doi.org/10.1007/978-3-031-94562-5_20" data-source-label="Springer" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: A Deep Learning Framework for Fetal Heart Tracking in Ultrasound Videos: Toward Enhanced Congenital Heart Defects Detection">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-031-94562-5_20,
   author = {Yang, Qianye and
             Cui, Kangning and
             Hu, Yipeng and
@@ -591,8 +1024,8 @@
   isbn = {978-3-031-94562-5},
   doi = {10.1007/978-3-031-94562-5_20},
   url = {https://doi.org/10.1007/978-3-031-94562-5_20},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-bilateral-warping"><span>Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis</span><span class="sep">|</span><span class="venue-inline">[ISBI'25, Oral]</span><span class="sep">|</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10980912" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-bilateral-warping" data-title="Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis" data-source="https://doi.org/10.1109/isbi60581.2025.10980912" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis">BibTeX</summary><pre><code>@inproceedings{tang2025bilateralwarping,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-bilateral-warping"><div class="direction-title"><span>Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis</span></div><div class="direction-resources"><span class="venue-inline">ISBI&#39;25, Oral</span><a class="paper-inline" href="https://ieeexplore.ieee.org/document/10980912" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-bilateral-warping" data-title="Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis" data-source="https://doi.org/10.1109/isbi60581.2025.10980912" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Bilateral Signal Warping for Left Ventricular Hypertrophy Diagnosis">BibTeX</summary><pre><code>@inproceedings{tang2025bilateralwarping,
   author = {Tang, Wei and
             Cui, Kangning and
             Chan, Raymond H. and
@@ -605,8 +1038,11 @@
   month = {April},
   doi = {10.1109/isbi60581.2025.10980912},
   url = {https://doi.org/10.1109/isbi60581.2025.10980912},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-cell-segmentation"><span>Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</span><span class="sep">|</span><span class="venue-inline">[CIBM'24]</span><span class="sep">|</span><a class="paper-inline" href="https://www.sciencedirect.com/science/article/pii/S0010482524012368" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-cell-segmentation" data-title="Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images" data-source="https://doi.org/10.1016/j.compbiomed.2024.109151" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images">BibTeX</summary><pre><code>@article{pan2024cellsegmentation,
+}</code></pre></details></div></div>
+                </div>
+                <h4>Cell &amp; retinal imaging</h4>
+                <div class="direction-links">
+                    <div class="direction-item" data-publication-id="paper-cell-segmentation"><div class="direction-title"><span>Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</span></div><div class="direction-resources"><span class="venue-inline">CIBM&#39;24</span><a class="paper-inline" href="https://www.sciencedirect.com/science/article/pii/S0010482524012368" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-cell-segmentation" data-title="Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images" data-source="https://doi.org/10.1016/j.compbiomed.2024.109151" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Accurate Detection and Instance Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images">BibTeX</summary><pre><code>@article{pan2024cellsegmentation,
   author = {Pan, Fei and
             Wu, Yutong and
             Cui, Kangning and
@@ -628,8 +1064,8 @@
   month = {November},
   doi = {10.1016/j.compbiomed.2024.109151},
   url = {https://doi.org/10.1016/j.compbiomed.2024.109151},
-}</code></pre></details></div>
-                <div class="direction-item" data-publication-id="paper-hard-exudates"><span>Optimized Hard Exudate Detection with Supervised Contrastive Learning</span><span class="sep">|</span><span class="venue-inline">[ISBI'24]</span><span class="sep">|</span><a class="paper-inline" href="https://doi.org/10.1109/ISBI56570.2024.10635760" target="_blank" rel="noopener noreferrer">Paper</a><span class="sep">|</span><details class="citation-details" data-citation-id="paper-hard-exudates" data-title="Optimized Hard Exudate Detection with Supervised Contrastive Learning" data-source="https://doi.org/10.1109/isbi56570.2024.10635760" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Optimized Hard Exudate Detection with Supervised Contrastive Learning">BibTeX</summary><pre><code>@inproceedings{tang2024hardexudates,
+}</code></pre></details></div></div>
+                    <div class="direction-item" data-publication-id="paper-hard-exudates"><div class="direction-title"><span>Optimized Hard Exudate Detection with Supervised Contrastive Learning</span></div><div class="direction-resources"><span class="venue-inline">ISBI&#39;24</span><a class="paper-inline" href="https://doi.org/10.1109/ISBI56570.2024.10635760" target="_blank" rel="noopener noreferrer">Paper</a><details class="citation-details" data-citation-id="paper-hard-exudates" data-title="Optimized Hard Exudate Detection with Supervised Contrastive Learning" data-source="https://doi.org/10.1109/isbi56570.2024.10635760" data-source-label="Publisher" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Optimized Hard Exudate Detection with Supervised Contrastive Learning">BibTeX</summary><pre><code>@inproceedings{tang2024hardexudates,
   author = {Tang, Wei and
             Cui, Kangning and
             Chan, Raymond H.},
@@ -641,10 +1077,11 @@
   month = {May},
   doi = {10.1109/isbi56570.2024.10635760},
   url = {https://doi.org/10.1109/isbi56570.2024.10635760},
-}</code></pre></details></div>
-            </div>
-            </div>
-            </details>
+}</code></pre></details></div></div>
+                </div>
+                    </div>
+                </details>
+                <!-- theme:medical-ai:end -->
             </div>
         </article></div>
     </section>
@@ -1166,9 +1603,13 @@
 
     <section class="content page-panel" aria-labelledby="patents">
         <div class="section-header"><h2 id="patents">Patents</h2></div>
-        <article class="patent-entry">
+        <article class="patent-entry" id="patent-cells">
             <h3><a href="https://patents.google.com/patent/US12450925B2/en" target="_blank" rel="noopener noreferrer">Method for Accurate Segmentation of Unstained Living Adherent Cells in Differential Interference Contrast Images</a></h3>
-            <p>US 12,450,925 B2 · Granted 21 October 2025 · Filed 2 November 2023</p>
+            <p>US 12,450,925 B2 · Granted 21 October 2025 · Filed 2 November 2023 · Medical AI</p>
+        </article>
+        <article class="patent-entry" id="patent-cardiovascular">
+            <h3><a href="https://scholars.cityu.edu.hk/en/publications/a-method-for-cardiovascular-disorder-identification-via-prototype/" target="_blank" rel="noopener noreferrer">A Method for Cardiovascular Disorder Identification via Prototype-Driven Biomedical Signal Evaluation</a></h3>
+            <p>US application 19/283,983 · Filed 29 July 2025 · Medical AI</p>
         </article>
     </section>
 

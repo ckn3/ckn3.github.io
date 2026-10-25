@@ -20,10 +20,22 @@ for (const [id, citation] of Object.entries(data.citations)) {
     if (fields.doi) assert.match(fields.doi, /^10\.\d{4,9}\/\S+$/, `${id}: invalid DOI`);
     if (entry.type === 'article') assert.ok(fields.journal && !fields.booktitle, `${id}: incorrect journal entry`);
     if (entry.type === 'inproceedings') assert.ok(fields.booktitle && !fields.journal, `${id}: incorrect conference entry`);
-    if (entry.type === 'misc') assert.ok(fields.eprint && fields.archiveprefix === 'arXiv' && !fields.booktitle, `${id}: incomplete preprint entry`);
+    if (entry.type === 'misc') {
+        assert.ok(fields.eprint && ['arXiv', 'SSRN'].includes(fields.archiveprefix) && !fields.booktitle, `${id}: incomplete preprint entry`);
+        assert.equal(citation.verification.version, fields.archiveprefix === 'arXiv' ? 'arxiv-preprint' : 'ssrn-preprint');
+        if (fields.archiveprefix === 'arXiv') {
+            assert.match(fields.version, /^[1-9]\d*$/, `${id}: missing verified arXiv version`);
+            assert.equal(fields.url, `https://arxiv.org/abs/${fields.eprint}v${fields.version}`, `${id}: citation must identify the checked version`);
+        }
+    }
     assert.match(citation.verification.checkedOn, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(citation.metadataSources.includes(citation.verification.source), `${id}: missing verification source`);
-    assert.ok(['version-of-record', 'accepted-conference-paper', 'arxiv-preprint'].includes(citation.verification.version));
+    assert.ok(['version-of-record', 'accepted-conference-paper', 'conference-abstract', 'arxiv-preprint', 'ssrn-preprint'].includes(citation.verification.version));
+    if (citation.verification.version === 'conference-abstract') {
+        assert.equal(entry.type, 'inproceedings');
+        assert.match(fields.note, /Conference abstract/);
+        assert.ok(fields.eid, `${id}: missing abstract identifier`);
+    }
     if (citation.verification.version === 'accepted-conference-paper') {
         assert.equal(entry.type, 'inproceedings');
         assert.match(fields.note, /Accepted conference paper/);
