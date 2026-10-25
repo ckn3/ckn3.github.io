@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026102201">
+    <link rel="stylesheet" href="styles/site.css?v=2026102501">
     <script src="scripts/schema.js?v=2026100302" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
     <title>Research | Kangning Cui</title>
@@ -56,45 +56,35 @@
     <div class="content content-top">
         <div class="page-header">
             <h1>Research</h1>
-            <p class="page-intro">My research asks how machine learning can remain efficient, reliable and interpretable when compute and labeled data are limited. I study these questions through language models, geospatial observation, and medical images and signals.</p>
+            <p class="page-intro">Efficient, reliable and interpretable machine learning for language models, geospatial observation, and medical images and signals. My work combines model compression, uncertainty estimation, and learning with limited labels.</p>
             <p class="page-note publication-note"><span>Full list: <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span><span class="sep">|</span><span>† first author</span><span class="sep">|</span><span>* corresponding author</span></p>
         </div>
     </div>
 
     <nav class="page-jumps" aria-label="Research sections">
         <a href="#research-topics">Themes</a>
+        <a href="#research-media">Media</a>
         <a href="#journal-publications">Journal Papers</a>
         <a href="#conference-publications">Conference Papers</a>
         <a href="#patents">Patents</a>
-        <a href="#research-media">Media</a>
     </nav>
 
     <section class="content page-panel" aria-labelledby="research-topics">
         <div class="section-header"><h2 id="research-topics">Research Themes</h2></div>
         <div class="research-themes"><article class="research-topic">
             <div class="research-topic-intro">
-                <h3>Efficient &amp; Reliable ML</h3>
-                <p class="research-question">How can smaller models retain their capabilities and calibrated uncertainty?</p>
-                <p>I study compression alongside model behavior: what is preserved, what changes, and whether theoretical savings translate into faster inference. This connects low-rank evaluation, uncertainty-aware quantization, and interpretation of shared representations.</p>
+                <h3 id="efficient-ml">Efficient &amp; Reliable ML</h3>
+                <p>Compression, uncertainty, and model behavior.</p>
+
             </div>
             <div class="research-topic-work">
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-lowrankarena-neurips">LowRankArena</a></h4><span class="research-example-venue">NeurIPS&#x27;26, ED Track, Poster</span></div>
-                    <p>A common evaluation platform for SVD compression, linking accuracy and compression budgets to measured inference efficiency.</p>
-                    <div class="research-resources"><a href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint<span class="visually-hidden">: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</span></a> <a href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</span></a></div>
-                </div>
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-dpq-emnlp">DPQ</a></h4><span class="research-example-venue">EMNLP&#x27;26, Findings</span></div>
-                    <p>Target-aware calibration data selection to preserve uncertainty when quantizing language models.</p>
-                    <div class="research-resources"><a href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint<span class="visually-hidden">: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</span></a> <a href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models</span></a></div>
-                </div>
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-decodeshare-icml">DecodeShare</a></h4><span class="research-example-venue">ICML&#x27;26, Spotlight</span></div>
-                    <p>Tracing shared representations across tasks to understand their causal role in decode-time decisions.</p>
-                    <div class="research-resources"><a href="https://icml.cc/virtual/2026/poster/61072" target="_blank" rel="noopener noreferrer">Paper<span class="visually-hidden">: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions</span></a></div>
-                </div>
+                <ul class="research-focus-points">
+                    <li><strong>Evaluation.</strong> <a href="#paper-lowrankarena-neurips">LowRankArena</a> measures accuracy and practical inference efficiency under shared compression budgets.</li>
+                    <li><strong>Reliability.</strong> <a href="#paper-dpq-emnlp">DPQ</a> selects calibration data to preserve uncertainty in quantized models.</li>
+                    <li><strong>Interpretability.</strong> <a href="#paper-decodeshare-icml">DecodeShare</a> identifies shared representations and tests their role in decoding.</li>
+                </ul>
                 <details class="text-disclosure direction-card">
-                <summary>All related publications</summary>
+                <summary>Related publications (3)</summary>
                 <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-lowrankarena-neurips">LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, ED Track, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a><span class="sep">|</span><a class="paper-inline" href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a></div>
@@ -107,28 +97,18 @@
         </article>
 <article class="research-topic">
             <div class="research-topic-intro">
-                <h3>Geospatial AI</h3>
-                <p class="research-question">How can we turn complex imagery into useful environmental maps with fewer labels?</p>
-                <p>I combine spatial structure, efficient visual models, and learning with limited supervision to analyze aerial and hyperspectral imagery. The work links individual-tree localization with forest-scale mapping and label-free clustering.</p>
+                <h3 id="geospatial-ai">Geospatial AI</h3>
+                <p>Spatial learning for forest and environmental monitoring.</p>
+                <a class="topic-project-link" href="projects/geospatial-ai.html">Explore the Geospatial AI project <span aria-hidden="true">→</span></a>
             </div>
             <div class="research-topic-work">
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-palms-ijcai">PRISM</a></h4><span class="research-example-venue">IJCAI&#x27;25, Oral</span></div>
-                    <p>Detecting, segmenting, and geographically locating canopy palms in challenging aerial forest imagery.</p>
-                    <div class="research-resources"><a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper<span class="visually-hidden">: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</span></a> <a href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</span></a></div>
-                </div>
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-palms-tgrs">PalmDSNet</a></h4><span class="research-example-venue">TGRS&#x27;25</span></div>
-                    <p>Connecting palm detection and segmentation with spatial distribution modeling; includes a public UAV dataset.</p>
-                    <div class="research-resources"><a href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper<span class="visually-hidden">: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</span></a> <a href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset<span class="visually-hidden">: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</span></a> <a href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</span></a></div>
-                </div>
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-s2dl">S2DL</a></h4><span class="research-example-venue">TGRS&#x27;24</span></div>
-                    <p>Using superpixels and diffusion geometry to cluster hyperspectral images without labels, with lower computational cost.</p>
-                    <div class="research-resources"><a href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper<span class="visually-hidden">: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</span></a> <a href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</span></a></div>
-                </div>
+                <ul class="research-focus-points">
+                    <li><strong>Object mapping.</strong> <a href="#paper-palms-ijcai">PRISM</a> detects, segments, and geographically locates canopy palms.</li>
+                    <li><strong>Spatial modeling.</strong> <a href="#paper-palms-tgrs">PalmDSNet</a> connects palm detection with distribution modeling and an open UAV dataset.</li>
+                    <li><strong>Learning without labels.</strong> <a href="#paper-s2dl">S2DL</a> uses superpixels and diffusion geometry for efficient hyperspectral clustering.</li>
+                </ul>
                 <details class="text-disclosure direction-card">
-                <summary>All related publications</summary>
+                <summary>Related publications (15)</summary>
                 <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><span>AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery</span><span class="sep">|</span><span class="venue-inline">[IJCAI Demo'26]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2606.23542" target="_blank" rel="noopener noreferrer">Preprint</a></div>
@@ -157,23 +137,18 @@
         </article>
 <article class="research-topic">
             <div class="research-topic-intro">
-                <h3>Medical AI</h3>
-                <p class="research-question">How can we learn from medical images and signals without extensive new annotation?</p>
-                <p>In collaborative work, I study how temporal and spatial structure can make biomedical models more adaptable and interpretable. Efficient adaptation of ECG models and annotation-free cardiac motion analysis connect this direction to the broader research on limited compute and supervision.</p>
+                <h3 id="medical-ai">Medical AI</h3>
+                <p>Temporal structure in biomedical images and signals.</p>
+
             </div>
             <div class="research-topic-work">
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-ecg-horizons-neurips">Long-horizon ECG models</a></h4><span class="research-example-venue">NeurIPS&#x27;26, Poster</span></div>
-                    <p>Extending frozen 10-second foundation models to longer, variable-length recordings through a lightweight plug-in module.</p>
-                    <div class="research-resources"><a href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint<span class="visually-hidden">: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</span></a></div>
-                </div>
-                <div class="research-example">
-                    <div class="research-example-heading"><h4><a href="#paper-cardiac-phase">Annotation-free cardiac motion</a></h4><span class="research-example-venue">MICCAI&#x27;25, Oral</span></div>
-                    <p>Learning interpretable motion trajectories to identify cardiac phases in adult and fetal echocardiography without manual phase labels.</p>
-                    <div class="research-resources"><a href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper<span class="visually-hidden">: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</span></a> <a href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code<span class="visually-hidden">: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos</span></a></div>
-                </div>
+                <ul class="research-focus-points">
+                    <li><strong>Efficient adaptation.</strong> <a href="#paper-ecg-horizons-neurips">Long-horizon ECG models</a> extend frozen 10-second backbones to variable-length recordings.</li>
+                    <li><strong>Annotation-free analysis.</strong> <a href="#paper-cardiac-phase">Cardiac motion profiling</a> identifies cardiac phases in adult and fetal echocardiography.</li>
+                    <li><strong>Collaborative applications.</strong> Ultrasound restoration and tracking, biomedical signal analysis, and cell segmentation.</li>
+                </ul>
                 <details class="text-disclosure direction-card">
-                <summary>All related publications</summary>
+                <summary>Related publications (7)</summary>
                 <div class="direction-body">
             <div class="direction-links">
                 <div class="direction-item"><a href="#paper-ecg-horizons-neurips">Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</a><span class="sep">|</span><span class="venue-inline">[NeurIPS'26, Poster]</span><span class="sep">|</span><a class="paper-inline" href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a></div>
@@ -188,6 +163,43 @@
             </details>
             </div>
         </article></div>
+    </section>
+
+    <section class="content page-panel research-media-section" aria-labelledby="research-media">
+        <div class="section-header"><h2 id="research-media">Research in the Media</h2></div>
+        <p class="section-intro">Environmental monitoring and sustainable development, through feature journalism and broadcast coverage.</p>
+        <div class="media-card">
+            <article class="media-item">
+                <a class="media-thumb" href="https://www.timeshighereducation.com/content/lingnan-university?shpath=/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact" target="_blank" rel="noopener noreferrer" aria-label="Times Higher Education: Using AI to Scale Sustainable Impact"><img src="figures/media/the-sustainable-impact.webp" alt="Times Higher Education coverage image for AI and sustainable impact" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="media-copy">
+                    <div class="media-meta"><span class="media-source">Times Higher Education</span><span class="media-date">Feb 4, 2026</span></div>
+                    <h3 class="media-title"><a href="https://www.timeshighereducation.com/content/lingnan-university?shpath=/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact" target="_blank" rel="noopener noreferrer">Using AI to Scale Sustainable Impact</a></h3>
+                    <p class="media-context">AI and sustainable development</p>
+                    <p class="media-note">Interdisciplinary AI research applied to environmental and sustainability challenges.</p>
+                    <a class="media-read" href="https://www.timeshighereducation.com/content/lingnan-university?shpath=/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact" target="_blank" rel="noopener noreferrer">Read the feature <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+            <article class="media-item">
+                <a class="media-thumb" href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html" target="_blank" rel="noopener noreferrer" aria-label="NBC News: Paradise Lost"><img src="figures/media/nbc-paradise-lost.webp" alt="NBC News coverage image from Paradise Lost" loading="lazy" decoding="async" width="640" height="357"></a>
+                <div class="media-copy">
+                    <div class="media-meta"><span class="media-source">NBC News</span><span class="media-date">Nov 22, 2022</span></div>
+                    <h3 class="media-title"><a href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html" target="_blank" rel="noopener noreferrer">Paradise Lost</a></h3>
+                    <p class="media-context">Monitoring environmental change</p>
+                    <p class="media-note">Reporting on illegal gold mining in Peru’s Amazon and the role of AI-assisted environmental monitoring.</p>
+                    <a class="media-read" href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html" target="_blank" rel="noopener noreferrer">Read the investigation <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+            <article class="media-item">
+                <a class="media-thumb" href="https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998" target="_blank" rel="noopener noreferrer" aria-label="The Today Show: Illegal Gold Mining in the Amazon"><img src="figures/media/today-amazon.webp" alt="The Today Show coverage image for illegal gold mining in the Amazon" loading="lazy" decoding="async" width="640" height="336"></a>
+                <div class="media-copy">
+                    <div class="media-meta"><span class="media-source">The Today Show</span><span class="media-date">Sep 23, 2022</span></div>
+                    <h3 class="media-title"><a href="https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998" target="_blank" rel="noopener noreferrer">Illegal Gold Mining in the Amazon</a></h3>
+                    <p class="media-context">Environmental research on television</p>
+                    <p class="media-note">A broadcast report on the wider environmental and social effects of illegal gold mining in the Amazon.</p>
+                    <a class="media-read" href="https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998" target="_blank" rel="noopener noreferrer">Watch the report <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+        </div>
     </section>
 
     <div class="content page-panel">
@@ -227,7 +239,7 @@
                         <details class="publication-details">
                             <summary class="badge-chip publication-details-toggle" aria-label="View publication details: Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">Details</summary>
                             <div class="publication-detail-content">
-                                <img class="publication-detail-image" src="figures/publications/cui2025efficient.webp" alt="Figure for Cui et al., 2025" width="640" height="480" loading="lazy" decoding="async">
+                                <img class="publication-detail-image" src="figures/publications/cui2025efficient.webp" alt="PalmDSNet workflow: UAV imagery, palm detection, segmentation, counting, and saliency maps" width="1251" height="358" loading="lazy" decoding="async">
                                 <h3>Abstract</h3>
                                 <p class="publication-abstract">Understanding the spatial distribution of palms in tropical forests is essential for ecological monitoring, conservation strategies, and the sustainable integration of natural forest products into local and global supply chains. However, the analysis of remotely sensed data are challenged by overlapping palm and tree crowns, uneven shading across the canopy surface, and the heterogeneous nature of the forest landscapes, which often affect the performance of palm detection and segmentation algorithms. To overcome these issues, we introduce PalmDSNet, a deep learning framework for efficient detection, segmentation, and counting of canopy palms. To model spatial patterns, we introduce a bimodal reproduction algorithm that simulates palm propagation based on PalmDSNet outputs. We used UAV-captured imagery to create orthomosaics from 21 sites across western Ecuadorian tropical forests, covering a gradient from the everwet Choco forests near Colombia to the drier forests of southwestern Ecuador. Expert annotations were used to create a comprehensive dataset, including 7,356 bounding boxes on image patches and 7,603 palm centers across five orthomosaics, encompassing a total area of 449 hectares. By integrating detection and spatial modeling, we effectively simulate the spatial distribution of palms in diverse and dense tropical environments, validating its utility for advanced applications in tropical forest monitoring and remote sensing analysis. The dataset can be accessed at 10.5281/zenodo.13822508, and the code to replicate the study is available at github.com/ckn3/palm-ds-sp.</p>
                             </div>
@@ -257,7 +269,7 @@
         <!-- publications:journals:end -->
         </div>
     </div>
-    
+
     <div id="modal" class="modal" aria-hidden="true">
         <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <div class="modal-toolbar">
@@ -431,53 +443,6 @@
             <p>US 12,450,925 B2 · Granted 21 October 2025 · Filed 2 November 2023</p>
         </article>
     </section>
-
-    <div class="content page-panel">
-        <div class="section-header">
-            <h2 id="research-media">Research in the Media</h2>
-        </div>
-        <div class="media-card">
-            <a class="media-item" href="https://www.timeshighereducation.com/content/lingnan-university?shpath=/lingnan-university/driving-innovation-through-interdisciplinarity/using-ai-to-scale-sustainable-impact" target="_blank" rel="noopener noreferrer">
-                <span class="media-thumb">
-                    <img src="figures/media/the-sustainable-impact.webp" alt="Times Higher Education coverage image for AI and sustainable impact" loading="lazy" decoding="async" width="640" height="360">
-                </span>
-                <span class="media-copy">
-                    <span class="media-meta">
-                        <span class="media-source">Times Higher Education</span>
-                        <span class="media-date">Feb 4, 2026</span>
-                    </span>
-                    <span class="media-title">Using AI to Scale Sustainable Impact</span>
-                    <span class="media-note">Coverage of AI-driven interdisciplinary work for sustainable impact.</span>
-                </span>
-            </a>
-            <a class="media-item" href="https://www.nbcnews.com/specials/paradise-lost-inside-peru-s-emergency-zone/index.html" target="_blank" rel="noopener noreferrer">
-                <span class="media-thumb">
-                    <img src="figures/media/nbc-paradise-lost.webp" alt="NBC News coverage image from Paradise Lost" loading="lazy" decoding="async" width="640" height="357">
-                </span>
-                <span class="media-copy">
-                    <span class="media-meta">
-                        <span class="media-source">NBC News</span>
-                        <span class="media-date">Nov 22, 2022</span>
-                    </span>
-                    <span class="media-title">Paradise Lost</span>
-                    <span class="media-note">Coverage related to AI-assisted monitoring of illegal gold mining in the Amazon.</span>
-                </span>
-            </a>
-            <a class="media-item" href="https://www.today.com/video/inside-the-broad-ripple-effects-of-illegal-gold-mining-in-the-amazon-149102149998" target="_blank" rel="noopener noreferrer">
-                <span class="media-thumb">
-                    <img src="figures/media/today-amazon.webp" alt="The Today Show coverage image for illegal gold mining in the Amazon" loading="lazy" decoding="async" width="640" height="336">
-                </span>
-                <span class="media-copy">
-                    <span class="media-meta">
-                        <span class="media-source">The Today Show</span>
-                        <span class="media-date">Sep 23, 2022</span>
-                    </span>
-                    <span class="media-title">Illegal Gold Mining in the Amazon</span>
-                    <span class="media-note">Broadcast segment on the broader impact of illegal gold mining.</span>
-                </span>
-            </a>
-        </div>
-    </div>
 
     <script src="scripts/publications.js?v=2026100305"></script>
 

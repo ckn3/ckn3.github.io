@@ -17,6 +17,7 @@ for (const file of ['index.html']) {
             return paper;
         });
         const paper = publications[0];
+        const destination = feature.project?.href || `${prefix}#${paper.id}`;
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
         const venues = publications.map(publication => {
             const label = escape(publication.venue.replace(/^\[|\]$/g, ''));
@@ -27,16 +28,21 @@ for (const file of ['index.html']) {
             if (!publication) throw new Error(`Unknown related publication: ${id}`);
             return `<a href="${prefix}#${escape(id)}" title="${escape(publication.title)}">${escape(label)}</a>`;
         }).join(' · ');
+        const preferred = paper.badges.some(badge => badge.label === 'Paper') ? 'Paper' : 'Preprint';
+        const resources = paper.badges.filter(badge => badge.href && [preferred, 'Code'].includes(badge.label))
+            .map(badge => `<a href="${escape(badge.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(badge.label)}: ${escape(paper.title)}">${escape(badge.label)}</a>`);
+        if (feature.project) resources.unshift(`<a href="${escape(feature.project.href)}">Project overview</a>`);
         return `            <article class="research-highlight">
                 <p class="research-highlight-theme">${escape(feature.theme)}</p>
-                <a class="research-highlight-image" href="${prefix}#${escape(paper.id)}" aria-label="View ${escape(feature.heading)}">
+                <h3><a href="${escape(destination)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
+                <a class="research-highlight-image" href="${escape(destination)}" aria-label="View ${escape(feature.heading)}">
                     <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
                 </a>
-                <h3><a href="${prefix}#${escape(paper.id)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>
                 <p class="research-highlight-venue">${venues}</p>
                 <p class="research-highlight-role">${escape(feature.authorRole)}</p>
                 ${related ? `<p class="research-highlight-related">Also: ${related}</p>` : ''}
+                <div class="research-highlight-links">${resources.join(' ')}</div>
             </article>`;
     }).join('\n');
     const block = `<!-- featured-research:start -->

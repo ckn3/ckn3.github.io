@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta property="og:title" content="Geospatial AI | Kangning Cui">
+    <meta property="og:description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/projects/geospatial-ai.html">
+    <link rel="canonical" href="https://ckn3.github.io/projects/geospatial-ai.html">
+    <meta property="og:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geospatial AI | Kangning Cui">
+    <meta name="twitter:description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
+    <meta name="twitter:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
+    <meta name="theme-color" content="#faf9f6">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../styles/site.css?v=2026102501">
+    <script src="../scripts/schema.js?v=2026100302" defer></script>
+    <script src="../scripts/site.js?v=2026100305" defer></script>
+    <title>Geospatial AI | Kangning Cui</title>
+</head>
+
+<body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-topbar">
+        <div class="site-topbar-inner">
+            <a class="site-brand" href="../index.html">Kangning Cui</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html">Home</a>
+                <a href="../publications.html" aria-current="location">Research</a>
+                <a href="../teach.html">Teaching</a>
+                <a href="../academic_honors.html">Services</a>
+                <a href="../team.html">Team</a>
+                <a href="../gallery.html">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-shell" id="main-content" tabindex="-1">
+        <div class="content content-top project-header">
+            <a class="project-back" href="../publications.html#geospatial-ai">← Research / Geospatial AI</a>
+            <div class="page-header">
+                <p class="project-eyebrow">Geospatial AI</p>
+                <h1>From aerial imagery<br>to forest maps.</h1>
+                <p class="page-intro">We develop methods to locate individual trees, model their spatial distributions, and map landscapes with limited labels. PRISM and PalmDSNet work with UAV imagery; S2DL learns from hyperspectral images without manual annotations.</p>
+                <p class="project-byline">Kangning Cui and collaborators · IJCAI 2025 (Oral) · IEEE TGRS 2025 &amp; 2024</p>
+            </div>
+        </div>
+        <nav class="page-jumps" aria-label="Project sections"><a href="#prism">PRISM</a><a href="#palmdsnet">PalmDSNet</a><a href="#s2dl">S2DL</a><a href="#open-data">Open data</a></nav>
+        <section class="content page-panel project-method" aria-labelledby="prism">
+            <div class="project-method-heading"><div><p class="project-eyebrow">01 / IJCAI&#x27;25, Oral</p><h2 id="prism">PRISM</h2></div><p>Detection, segmentation and geographic mapping</p></div>
+            <p class="project-method-intro">A pipeline for mapping individual palms in dense tropical forests, where overlapping crowns and uneven shading make detection difficult.</p>
+            <figure class="project-figure"><a href="../figures/publications/cui2025ijcai.webp" aria-label="Open full-size PRISM: from aerial imagery to detected crowns and geographic locations."><img src="../figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async"></a><figcaption>PRISM: from aerial imagery to detected crowns and geographic locations.</figcaption></figure>
+            <ul class="project-points"><li><strong>Method.</strong> Evaluate object detectors, segment crowns with SAM 2, and convert detections into geographic locations. Calibrate confidence scores against localization quality.</li><li><strong>Study.</strong> UAV imagery from 21 sites in western Ecuador, annotated with 8,830 bounding boxes and 5,026 palm center points.</li><li><strong>Output.</strong> Geolocated palm detections and crown masks, with code, presentation slides and a poster for reuse.</li></ul>
+            <div class="project-resources" aria-label="PRISM resources"><a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2502.13023" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="../docs/posters/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Poster</a> <a href="../docs/slides/cui2025ijcai.pdf" target="_blank" rel="noopener noreferrer">Slides</a> <a href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms</strong> <span>[IJCAI&#x27;25, Oral]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Rongkun Zhu<sup>†</sup>, Manqi Wang, Wei Tang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, David Lutz, Jean-Michel Morel, and Miles R. Silman</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-palms-ijcai">Abstract and publication details</a></div></details>
+        </section>
+
+        <section class="content page-panel project-method" aria-labelledby="palmdsnet">
+            <div class="project-method-heading"><div><p class="project-eyebrow">02 / TGRS&#x27;25</p><h2 id="palmdsnet">PalmDSNet</h2></div><p>From individual palms to spatial distributions</p></div>
+            <p class="project-method-intro">Linking image analysis with ecological spatial modeling to study how canopy palms are distributed across tropical forests.</p>
+            <figure class="project-figure"><a href="../figures/publications/cui2025efficient.webp" aria-label="Open full-size PalmDSNet: detection, segmentation, counting and model saliency."><img src="../figures/publications/cui2025efficient.webp" alt="PalmDSNet workflow: UAV imagery, palm detection, segmentation, counting, and saliency maps" width="1251" height="358" loading="lazy" decoding="async"></a><figcaption>PalmDSNet: detection, segmentation, counting and model saliency.</figcaption></figure>
+            <ul class="project-points"><li><strong>Method.</strong> Detect, segment and count palms, then simulate their distribution with a bimodal reproduction algorithm.</li><li><strong>Study.</strong> UAV orthomosaics from 21 western Ecuador sites spanning wet Chocó forests to drier southwestern forests.</li><li><strong>Output.</strong> Palm maps, spatial simulations, an openly available annotated dataset, and code to reproduce the study.</li></ul>
+            <div class="project-resources" aria-label="PalmDSNet resources"><a href="https://ieeexplore.ieee.org/document/11059236" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2410.11124" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Dataset</a> <a href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery</strong> <span>[TGRS&#x27;25]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Wei Tang<sup>†</sup>, Rongkun Zhu, Manqi Wang, Gregory D. Larsen, Victor P. Pauca, Sarra Alqahtani, Fan Yang, David Segurado, Paul Fine, Jordan Karubian, Raymond H. Chan, Robert J. Plemmons, Jean-Michel Morel, and Miles R. Silman</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-palms-tgrs">Abstract and publication details</a></div></details>
+        </section>
+
+        <section class="content page-panel project-method" aria-labelledby="s2dl">
+            <div class="project-method-heading"><div><p class="project-eyebrow">03 / TGRS&#x27;24</p><h2 id="s2dl">S2DL</h2></div><p>Hyperspectral clustering without manual labels</p></div>
+            <p class="project-method-intro">A complementary direction: learning spatial and spectral structure without annotated training data.</p>
+            <figure class="project-figure"><a href="../figures/publications/cui2024superpixel.webp" aria-label="Open full-size S2DL: spatially regularized diffusion learning for hyperspectral clustering."><img src="../figures/publications/cui2024superpixel.webp" alt="S2DL workflow: hyperspectral data, superpixels, diffusion geometry, and clustering without labels" width="1256" height="517" loading="lazy" decoding="async"></a><figcaption>S2DL: spatially regularized diffusion learning for hyperspectral clustering.</figcaption></figure>
+            <ul class="project-points"><li><strong>Method.</strong> Build a diffusion graph from representative pixels within superpixels, then propagate cluster labels to the full image.</li><li><strong>Study.</strong> Evaluated on Indian Pines, Salinas, Salinas A and WHU-Hi, with a Gaofen-5 application to mangrove species mapping in Hong Kong’s Mai Po Nature Reserve.</li><li><strong>Output.</strong> Unsupervised clustering maps with reduced graph construction cost; the implementation is publicly available.</li></ul>
+            <div class="project-resources" aria-label="S2DL resources"><a href="https://ieeexplore.ieee.org/document/10491382" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2312.15447" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/ckn3/S2DL" target="_blank" rel="noopener noreferrer">Code</a></div>
+            <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</strong> <span>[TGRS&#x27;24]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-s2dl">Abstract and publication details</a></div></details>
+        </section>
+        <section class="content page-panel project-data" aria-labelledby="open-data">
+            <div class="section-header"><h2 id="open-data">Open data for canopy palm mapping</h2></div>
+            <p>The PalmDSNet dataset contains expert annotations for UAV imagery of western Ecuador’s tropical forests.</p>
+            <dl class="project-data-stats">
+                <div><dt>449 ha</dt><dd>Area covered by the five annotated orthomosaics</dd></div>
+                <div><dt>7,356</dt><dd>Bounding boxes on image patches</dd></div>
+                <div><dt>7,603</dt><dd>Palm centers across five orthomosaics</dd></div>
+            </dl>
+            <div class="project-resources"><a href="https://zenodo.org/records/13822508" target="_blank" rel="noopener noreferrer">Download the dataset ↗</a><a href="https://github.com/ckn3/palm-ds-sp" target="_blank" rel="noopener noreferrer">Reproduce the study ↗</a></div>
+            <p class="project-data-note">These counts refer to the PalmDSNet dataset (TGRS 2025). PRISM reports a separate annotation set, described above. Please cite the corresponding paper and follow the license and instructions provided with each resource.</p>
+        </section>
+        <section class="content page-panel project-contact" aria-labelledby="collaborate">
+            <h2 id="collaborate">Research and collaboration</h2>
+            <p>For collaboration on geospatial learning and environmental monitoring, <a href="mailto:kangning.cui@cityu-dg.edu.cn">contact Kangning Cui</a>. Prospective students can <a href="../team.html#prospective-applicants">explore opportunities in the group</a>.</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
+                <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+            </div>
+            <div class="site-footer-meta">Last updated: October 2026</div>
+        </div>
+    </footer>
+</body>
+</html>

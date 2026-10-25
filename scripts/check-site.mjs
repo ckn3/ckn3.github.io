@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const files = ['index.html', 'publications.html', 'teach.html', 'team.html', 'academic_honors.html', 'gallery.html', '404.html', 'courses/dsc5001.html', 'courses/cs5487.html'];
+const files = ['index.html', 'publications.html', 'teach.html', 'team.html', 'academic_honors.html', 'gallery.html', '404.html', 'courses/dsc5001.html', 'courses/cs5487.html', 'projects/geospatial-ai.html'];
 const html = new Map(files.map(file => [file, fs.readFileSync(path.join(root, file), 'utf8')]));
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data/publications.json'), 'utf8'));
 const paperIds = Object.values(data.selected).flat().map(paper => paper.id);

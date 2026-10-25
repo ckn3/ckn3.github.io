@@ -23,7 +23,7 @@
       "theme": "Efficient & Reliable ML",
       "heading": "Understanding the cost of compression",
       "authorRole": "Co-first author",
-      "contribution": "LowRankArena evaluates language-model compression under shared tasks and budgets, measuring both accuracy and practical inference efficiency.",
+      "contribution": "LowRankArena evaluates the accuracy and inference efficiency of compressed language models under shared tasks and budgets.",
       "furtherReading": [
         {
           "id": "paper-dpq-emnlp",
@@ -39,20 +39,23 @@
       "theme": "Geospatial AI",
       "heading": "From aerial imagery to forest maps",
       "authorRole": "Co-first and corresponding author",
-      "contribution": "PRISM and PalmDSNet detect and locate individual palms in dense tropical forests, connecting image analysis with spatial distribution modeling.",
+      "contribution": "PRISM and PalmDSNet detect and locate canopy palms, connecting aerial imagery with forest maps and spatial modeling.",
       "furtherReading": [
         {
           "id": "paper-s2dl",
           "label": "S2DL · TGRS’24"
         }
-      ]
+      ],
+      "project": {
+        "href": "projects/geospatial-ai.html"
+      }
     },
     {
       "id": "paper-ecg-horizons-neurips",
       "theme": "Medical AI",
       "heading": "Extending the reach of ECG models",
       "authorRole": "Co-author",
-      "contribution": "A lightweight module adapts pretrained ECG models to longer recordings without retraining the backbone, enabling efficient analysis across time.",
+      "contribution": "A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.",
       "furtherReading": [
         {
           "id": "paper-cardiac-phase",
@@ -97,9 +100,9 @@
         "highlight": "primary",
         "image": {
           "src": "figures/publications/cui2025efficient.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Cui et al., 2025"
+          "width": 1251,
+          "height": 358,
+          "alt": "PalmDSNet workflow: UAV imagery, palm detection, segmentation, counting, and saliency maps"
         },
         "title": "Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery",
         "venue": "[TGRS'25]",

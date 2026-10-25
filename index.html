@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026102201">
+    <link rel="stylesheet" href="styles/site.css?v=2026102501">
     <script src="scripts/schema.js?v=2026100302" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
     <title>Home | Kangning Cui</title>
@@ -60,17 +60,14 @@
                     <h1 class="hero-title" id="welcome">Kangning Cui</h1>
                     <p class="hero-role"><strong>Assistant Professor of Data Science</strong><span class="hero-affiliation">City University of Hong Kong (Dongguan)</span></p>
                     <p class="hero-office">Office: AC4-422</p>
-                    <p class="hero-focus">Machine learning with limited compute and supervision.</p>
-                    <p class="hero-lead">I develop efficient, reliable and interpretable methods for language models, geospatial observation, and medical images and signals.</p>
-                    <p class="hero-recruitment">PhD and research assistant opportunities: <a href="team.html#prospective-applicants">join the group</a>.</p>
+                    <p class="hero-focus">Efficient and reliable machine learning.</p>
+                    <p class="hero-lead">I study model compression, uncertainty, and learning with limited labels across language models, geospatial data, and healthcare.</p>
+                    <p class="hero-recruitment">PhD and research assistant opportunities. <a href="team.html#prospective-applicants">Join the group</a>.</p>
                     <div class="hero-links">
                         <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                         <a class="affiliation-link" href="https://rims.cityu-dg.edu.cn/en/persons/kangning-cui/publications/" target="_blank" rel="noopener noreferrer">CityU-DG Profile</a>
                         <a href="https://github.com/ckn3/">GitHub</a>
-                        <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
-                        <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en">Google Scholar</a>
-                        <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+                        <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en">Scholar</a>
                     </div>
                 </div>
                 <div class="hero-spotlight">
@@ -87,41 +84,43 @@
             <h2 id="featured-research">Selected Research</h2>
             <a href="publications.html">All research</a>
         </div>
-        <p class="section-intro">Three connected directions: how models work, how they map the world, and how they interpret health data.</p>
         <!-- featured-research:start -->
         <div class="research-highlights">
             <article class="research-highlight">
                 <p class="research-highlight-theme">Efficient &amp; Reliable ML</p>
+                <h3><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Understanding the cost of compression</a></h3>
                 <a class="research-highlight-image" href="publications.html#paper-lowrankarena-neurips" aria-label="View Understanding the cost of compression">
                     <img src="figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async">
                 </a>
-                <h3><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Understanding the cost of compression</a></h3>
-                <p class="research-highlight-contribution">LowRankArena evaluates language-model compression under shared tasks and budgets, measuring both accuracy and practical inference efficiency.</p>
+                <p class="research-highlight-contribution">LowRankArena evaluates the accuracy and inference efficiency of compressed language models under shared tasks and budgets.</p>
                 <p class="research-highlight-venue"><a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">NeurIPS&#39;26, ED Track, Poster</a></p>
                 <p class="research-highlight-role">Co-first author</p>
                 <p class="research-highlight-related">Also: <a href="publications.html#paper-dpq-emnlp" title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">DPQ · EMNLP’26</a></p>
+                <div class="research-highlight-links"><a href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer" aria-label="Preprint: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Preprint</a> <a href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer" aria-label="Code: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">Code</a></div>
             </article>
             <article class="research-highlight">
                 <p class="research-highlight-theme">Geospatial AI</p>
-                <a class="research-highlight-image" href="publications.html#paper-palms-ijcai" aria-label="View From aerial imagery to forest maps">
+                <h3><a href="projects/geospatial-ai.html" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">From aerial imagery to forest maps</a></h3>
+                <a class="research-highlight-image" href="projects/geospatial-ai.html" aria-label="View From aerial imagery to forest maps">
                     <img src="figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async">
                 </a>
-                <h3><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">From aerial imagery to forest maps</a></h3>
-                <p class="research-highlight-contribution">PRISM and PalmDSNet detect and locate individual palms in dense tropical forests, connecting image analysis with spatial distribution modeling.</p>
+                <p class="research-highlight-contribution">PRISM and PalmDSNet detect and locate canopy palms, connecting aerial imagery with forest maps and spatial modeling.</p>
                 <p class="research-highlight-venue"><a href="publications.html#paper-palms-ijcai" title="Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">IJCAI&#39;25, Oral</a><span aria-hidden="true"> · </span><a href="publications.html#paper-palms-tgrs" title="Efficient Localization and Spatial Distribution Modeling of Canopy Palms Using UAV Imagery">TGRS&#39;25</a></p>
                 <p class="research-highlight-role">Co-first and corresponding author</p>
                 <p class="research-highlight-related">Also: <a href="publications.html#paper-s2dl" title="Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering">S2DL · TGRS’24</a></p>
+                <div class="research-highlight-links"><a href="projects/geospatial-ai.html">Project overview</a> <a href="https://www.ijcai.org/proceedings/2025/1067" target="_blank" rel="noopener noreferrer" aria-label="Paper: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Paper</a> <a href="https://github.com/Zippppo/PRISM" target="_blank" rel="noopener noreferrer" aria-label="Code: Detection and Geographic Localization of Natural Objects in the Wild: A Case Study on Palms">Code</a></div>
             </article>
             <article class="research-highlight">
                 <p class="research-highlight-theme">Medical AI</p>
+                <h3><a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Extending the reach of ECG models</a></h3>
                 <a class="research-highlight-image" href="publications.html#paper-ecg-horizons-neurips" aria-label="View Extending the reach of ECG models">
                     <img src="figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async">
                 </a>
-                <h3><a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Extending the reach of ECG models</a></h3>
-                <p class="research-highlight-contribution">A lightweight module adapts pretrained ECG models to longer recordings without retraining the backbone, enabling efficient analysis across time.</p>
+                <p class="research-highlight-contribution">A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.</p>
                 <p class="research-highlight-venue"><a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">NeurIPS&#39;26, Poster</a></p>
                 <p class="research-highlight-role">Co-author</p>
                 <p class="research-highlight-related">Also: <a href="publications.html#paper-cardiac-phase" title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">Cardiac motion · MICCAI’25</a></p>
+                <div class="research-highlight-links"><a href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer" aria-label="Preprint: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Preprint</a></div>
             </article>
         </div>
         <!-- featured-research:end -->
@@ -184,7 +183,7 @@
 
     <section class="content page-panel home-connecting" aria-labelledby="join-the-group">
         <div>
-            <h2 id="join-the-group">Join the Group</h2>
+            <h2 id="join-the-group">Join the group</h2>
             <p>PhD opportunities at CityU and research assistant positions at CityU-DG. For CityU-DG projects, feel free to <a href="mailto:kangning.cui@cityu-dg.edu.cn">email me</a> to discuss your interests.</p>
             <a href="team.html#prospective-applicants">Application details</a>
         </div>
@@ -258,7 +257,7 @@
                                 <div class="timeline-copy">
                                     <strong>Ph.D. in Mathematics</strong>
                                     <div class="meta">City University of Hong Kong &amp; Hong Kong Centre for Cerebro-Cardiovascular Health Engineering</div>
-                                    <p>Research in image and signal processing for medicine and remote sensing, advised by <a href="https://raymondhonfu.github.io/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Raymond H. Chan</a> and <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Jean-Michel Morel</a>.</p>
+                                    <p>Medical and remote sensing image/signal analysis. Advisors: <a href="https://raymondhonfu.github.io/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Raymond H. Chan</a> and <a href="https://sites.google.com/site/jeanmichelmorelcmlaenscachan/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Jean-Michel Morel</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +272,7 @@
                                 <div class="timeline-copy">
                                     <strong>Visiting DPhil Student in Biomedical Engineering</strong>
                                     <div class="meta">University of Oxford</div>
-                                    <p>Research in ultrasound video analysis and biomedical imaging, advised by <a href="https://eng.ox.ac.uk/people/alison-noble/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Alison Noble</a>.</p>
+                                    <p>Ultrasound video analysis and biomedical imaging. Advisor: <a href="https://eng.ox.ac.uk/people/alison-noble/" target="_blank" rel="noopener noreferrer" class="record-link">Prof. Alison Noble</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +287,7 @@
                                 <div class="timeline-copy">
                                     <strong>B.S. in Computing Mathematics</strong>
                                     <div class="meta">City University of Hong Kong</div>
-                                    <p>Training in computing mathematics with First Class Honours and a minor in Computer Science.</p>
+                                    <p>First Class Honours · Minor in Computer Science.</p>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +302,7 @@
                                 <div class="timeline-copy">
                                     <strong>Exchange Student, Applied Mathematics</strong>
                                     <div class="meta">Delft University of Technology</div>
-                                    <p>Exchange study in applied mathematics in the Netherlands.</p>
+                                    <p>Delft, Netherlands.</p>
                                 </div>
                             </div>
                         </div>
@@ -321,6 +320,9 @@
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
+                <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
             </div>
             <div class="site-footer-meta">Last updated: October 2026</div>
         </div>
