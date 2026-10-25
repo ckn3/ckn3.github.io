@@ -6,6 +6,6 @@
     "sync:gallery": "node scripts/sync-gallery-previews.mjs",
     "check:gallery": "node scripts/sync-gallery-previews.mjs --check",
     "sync:publications": "node scripts/sync-publications.mjs && node scripts/sync-featured-research.mjs",
-    "check:publications": "node scripts/sync-publications.mjs --check && node scripts/sync-featured-research.mjs --check"
+    "check:publications": "node scripts/check-citations.mjs && node scripts/sync-publications.mjs --check && node scripts/sync-featured-research.mjs --check"
   }
 }
