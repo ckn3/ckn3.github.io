@@ -60,7 +60,7 @@ const generated = original.replace(/<img\b[^>]*>/g, tag => {
     tag = setAttribute(tag, 'src', entry.variants[0].file);
     tag = setAttribute(tag, 'data-full-src', source);
     tag = setAttribute(tag, 'srcset', entry.variants.map(item => `${item.file} ${item.width}w`).join(', '));
-    return setAttribute(tag, 'sizes', `${auto}(max-width: 900px) 50vw, 360px`);
+    return setAttribute(tag, 'sizes', `${auto}(max-width: 600px) 70vw, (max-width: 960px) 45vw, 480px`);
 });
 assert.ok(entries.size > 0, 'No gallery images found');
 const manifest = { settings, images: [...entries.values()] };
