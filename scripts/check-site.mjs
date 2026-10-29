@@ -135,7 +135,7 @@ assert.ok(services.indexOf('>Review Experience</h3>') < services.indexOf('>Commu
 assert.match(services, /<details class="text-disclosure journal-reviewers">/);
 const conferences = services.match(/<dl class="conference-reviews"[^>]*>([\s\S]*?)<\/dl>/)?.[1];
 assert.ok(conferences, 'Missing aligned conference review list');
-assert.equal((conferences.match(/<dt>/g) || []).length, 12);
+assert.equal((conferences.match(/<dt>/g) || []).length, 13);
 assert.match(conferences, /<dt>ICLR<\/dt><dd>2027<\/dd>/);
 assert.match(conferences, /<dt>AAMAS<\/dt><dd>2027<\/dd>/);
 
