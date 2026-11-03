@@ -29,7 +29,10 @@
           "id": "paper-dpq-emnlp",
           "label": "DPQ · EMNLP’26"
         }
-      ]
+      ],
+      "project": {
+        "href": "projects/efficient-llm.html"
+      }
     },
     {
       "id": "paper-palms-ijcai",
@@ -2465,6 +2468,41 @@
           }
         ]
       }
+    },
+    "paper-geotalos": {
+      "title": "GeoTALOS: A Geoscience Platform for Automated Landscape Observation and Spatial Analysis",
+      "bibtex": "@inproceedings{prasai2026geotalos,\n  author = {Prasai, Suraj and\n            Cui, Kangning and\n            Damoye, Temidayo and\n            Zhu, Rongkun and\n            Luo, Zixiao and\n            Lutz, David and\n            Dethier, Evan and\n            Segurado, David and\n            Zhang, Ying and\n            Silman, Miles and\n            Pauca, Victor P. and\n            Yang, Fan},\n  title = {{GeoTALOS}: A Geoscience Platform for Automated Landscape Observation and Spatial Analysis},\n  booktitle = {34th ACM International Conference on Advances in Geographic Information Systems},\n  year = {2026},\n  url = {https://sigspatial2026.sigspatial.org/application-accepted/},\n  note = {Accepted conference paper, Applications Track},\n}\n",
+      "source": {
+        "label": "ACM SIGSPATIAL",
+        "url": "https://sigspatial2026.sigspatial.org/application-accepted/"
+      },
+      "note": "Accepted-paper citation from the official ACM SIGSPATIAL 2026 Applications Track record.",
+      "metadataSources": [
+        "https://sigspatial2026.sigspatial.org/application-accepted/",
+        "https://sigspatial2026.sigspatial.org/detailed-program.html"
+      ],
+      "resources": [
+        {
+          "label": "Conference record",
+          "href": "https://sigspatial2026.sigspatial.org/application-accepted/"
+        }
+      ],
+      "verification": {
+        "checkedOn": "2026-11-03",
+        "version": "accepted-conference-paper",
+        "source": "https://sigspatial2026.sigspatial.org/application-accepted/"
+      },
+      "listing": {
+        "venue": "SIGSPATIAL'26, Applications Track · Accepted",
+        "year": 2026,
+        "kind": "published",
+        "resources": [
+          {
+            "label": "Conference record",
+            "href": "https://sigspatial2026.sigspatial.org/application-accepted/"
+          }
+        ]
+      }
     }
   },
   "scholarImport": {
@@ -2915,6 +2953,7 @@
           "title": "Forest mapping & environmental change",
           "ids": [
             "paper-awakeforest",
+            "paper-geotalos",
             "paper-eldor",
             "paper-raw-uav",
             "paper-palms-tgrs",

@@ -1,0 +1,1 @@
+export const sitePages = ['index.html', 'publications.html', 'teach.html', 'team.html', 'academic_honors.html', 'gallery.html', '404.html', 'courses/dsc5001.html', 'courses/cs5487.html', 'projects/geospatial-ai.html', 'projects/efficient-llm.html'];

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
+import { citationMetadata, publicationSchema } from './publication-metadata.mjs';
 
 const root = new URL('../', import.meta.url);
 const data = JSON.parse(await readFile(new URL('data/publications.json', root), 'utf8'));
@@ -30,7 +31,7 @@ function renderPaper(paper, section) {
         return `                        <a class="badge-chip" href="${escape(badge.href)}"${external}>${escape(badge.label)}</a>`;
     }).join('\n');
     const image = paper.image;
-    return `            <article class="${entryClass}${highlight}" id="${escape(paper.id)}">
+    return `            <article class="${entryClass}${highlight}" id="selected-${escape(paper.id)}">
                 <div class="${textClass}">
                     <p class="title"><span class="paper-title"><strong>${escape(paper.title)}</strong></span><span class="venue">${escape(paper.venue)}</span></p>
                     <p class="authors">${paper.authorsHtml}</p>
@@ -52,34 +53,58 @@ ${badges}
 
 let generated = original;
 const selectedIds = new Set(Object.values(data.selected).flat().map(paper => paper.id));
+const themeNames = { 'efficient-ml': 'Efficient & Reliable ML', 'geospatial-ai': 'Geospatial AI', 'medical-ai': 'Medical AI' };
+const paperThemes = new Map(data.themes.flatMap(theme => theme.groups.flatMap(group => group.ids.map(id => [id, theme.id]))));
 function renderRelated(id) {
     const citation = data.citations[id];
     assert.ok(citation?.listing, `Missing theme listing: ${id}`);
-    const { venue, resources } = citation.listing;
-    const title = selectedIds.has(id)
-        ? `<a href="#${escape(id)}">${escape(citation.title)}</a>`
-        : `<span>${escape(citation.title)}</span>`;
+    const { venue, resources, kind } = citation.listing;
+    const { authors, year } = citationMetadata(citation);
     const links = resources.map(resource => {
         assert.equal(new URL(resource.href).protocol, 'https:', `${id}: invalid resource URL`);
         return `<a class="paper-inline" href="${escape(resource.href)}" target="_blank" rel="noopener noreferrer">${escape(resource.label)}</a>`;
     });
-    return `                    <div class="direction-item" data-publication-id="${escape(id)}"><div class="direction-title">${title}</div><div class="direction-resources"><span class="venue-inline">${escape(venue)}</span>${links.join('')}${renderCitation(id, 'citation-inline')}</div></div>`;
+    const theme = paperThemes.get(id);
+    const authorLine = authors.map(name => name === 'Kangning Cui' ? `<strong class="main-author">${escape(name)}</strong>` : escape(name)).join(', ');
+    const publicationYear = year !== citation.listing.year ? ` · Published ${year}` : '';
+    const detailsLink = selectedIds.has(id) ? `<a class="paper-inline" href="#selected-${escape(id)}">Abstract &amp; details</a>` : '';
+    return `            <article class="direction-item" data-publication-id="${escape(id)}" id="${escape(id)}" data-year="${year}" data-theme="${theme}" data-kind="${kind}" tabindex="-1">
+                <div class="direction-title"><a href="#${escape(id)}" aria-label="Permanent link: ${escape(citation.title)}">${escape(citation.title)}</a></div>
+                <p class="library-authors">${authorLine}</p>
+                <div class="direction-resources"><span class="venue-inline">${escape(venue + publicationYear)}</span><span class="library-theme">${escape(themeNames[theme])}</span>${links.join('')}${renderCitation(id, 'citation-inline')}${detailsLink}</div>
+            </article>`;
 }
 for (const theme of data.themes) {
     const marker = new RegExp(`<!-- theme:${theme.id}:start -->[\\s\\S]*?<!-- theme:${theme.id}:end -->`, 'g');
     assert.equal([...generated.matchAll(marker)].length, 1, `Expected one ${theme.id} block`);
     const count = theme.groups.reduce((total, group) => total + group.ids.length, 0);
-    const groups = theme.groups.map(group => `                <h4>${escape(group.title)}</h4>\n                <div class="direction-links">\n${group.ids.map(renderRelated).join('\n')}\n                </div>`).join('\n');
     const block = `<!-- theme:${theme.id}:start -->
-                <details class="text-disclosure direction-card">
-                    <summary>Publications &amp; preprints (${count})</summary>
-                    <div class="direction-body">
-${groups}
-                    </div>
-                </details>
+                <p class="theme-library-link"><a href="#all-publications" data-filter-theme="${theme.id}">Browse publications &amp; preprints (${count}) <span aria-hidden="true">→</span></a></p>
                 <!-- theme:${theme.id}:end -->`;
     generated = generated.replace(marker, () => block);
 }
+const libraryIds = [...paperThemes.keys()].sort((a, b) => citationMetadata(data.citations[b]).year - citationMetadata(data.citations[a]).year);
+const years = [...new Set(libraryIds.map(id => citationMetadata(data.citations[id]).year))];
+const libraryMarker = /<!-- publication-library:start -->[\s\S]*?<!-- publication-library:end -->/g;
+assert.equal([...generated.matchAll(libraryMarker)].length, 1, 'Expected one publication library');
+generated = generated.replace(libraryMarker, () => `<!-- publication-library:start -->
+        <form class="publication-filters" id="publication-filters" aria-label="Filter publications" hidden>
+            <label class="publication-search">Search <input type="search" name="search" placeholder="Title, author or venue" autocomplete="off"></label>
+            <label>Research theme <select name="theme"><option value="">All themes</option>${Object.entries(themeNames).map(([id, name]) => `<option value="${id}">${escape(name)}</option>`).join('')}</select></label>
+            <label>Year <select name="year"><option value="">All years</option>${years.map(year => `<option value="${year}">${year}</option>`).join('')}</select></label>
+            <label>Status <select name="kind"><option value="">All statuses</option><option value="published">Published / accepted</option><option value="preprint">Preprints</option><option value="abstract">Conference abstracts</option></select></label>
+            <button type="reset" class="library-reset">Reset</button>
+        </form>
+        <p class="library-count" id="publication-count" role="status" aria-live="polite">${libraryIds.length} publications and preprints</p>
+        <div class="publication-library" id="publication-library">
+${libraryIds.map(renderRelated).join('\n')}
+        </div>
+        <p class="library-empty" id="publication-empty" hidden>No matching publications. Try another keyword or reset the filters.</p>
+        <button class="library-more" id="publication-more" type="button" hidden>Show more publications</button>
+        <!-- publication-library:end -->`);
+const schemaMarker = /<!-- publication-schema:start -->[\s\S]*?<!-- publication-schema:end -->/g;
+assert.equal([...generated.matchAll(schemaMarker)].length, 1, 'Expected one publication schema block');
+generated = generated.replace(schemaMarker, () => `<!-- publication-schema:start -->\n    <script type="application/ld+json" id="schema-publications">${JSON.stringify(publicationSchema(data.citations)).replaceAll('<', '\\u003c')}</script>\n    <!-- publication-schema:end -->`);
 for (const section of ['journals', 'conferences']) {
     const marker = new RegExp(`<!-- publications:${section}:start -->[\\s\\S]*?<!-- publications:${section}:end -->`, 'g');
     assert.equal([...generated.matchAll(marker)].length, 1, `Expected one ${section} block`);
@@ -94,15 +119,15 @@ function syncCitations(source) {
     });
 }
 generated = syncCitations(generated);
-const projectPage = new URL('projects/geospatial-ai.html', root);
-const projectOriginal = await readFile(projectPage, 'utf8');
-const projectGenerated = syncCitations(projectOriginal);
-if (process.argv.includes('--check')) {
-    assert.equal(generated, original, 'Static publications are out of date. Run npm run sync:publications.');
-    assert.equal(projectGenerated, projectOriginal, 'Project citations are out of date. Run npm run sync:publications.');
-    console.log('Static publication lists, resources, abstracts, and citations are synchronized.');
-} else {
-    await writeFile(page, generated);
-    await writeFile(projectPage, projectGenerated);
-    console.log('Updated static publications, citations, and no-JavaScript details.');
+const projectPages = ['projects/geospatial-ai.html', 'projects/efficient-llm.html'];
+const outputs = [{ url: page, original, generated }];
+for (const file of projectPages) {
+    const url = new URL(file, root);
+    const source = await readFile(url, 'utf8');
+    outputs.push({ url, original: source, generated: syncCitations(source) });
 }
+for (const output of outputs) {
+    if (process.argv.includes('--check')) assert.equal(output.generated, output.original, `Static publications are out of date: ${output.url.pathname}. Run npm run sync:publications.`);
+    else await writeFile(output.url, output.generated);
+}
+console.log(process.argv.includes('--check') ? 'Publication library, schema, and project citations are synchronized.' : 'Updated publication library, schema, and project citations.');

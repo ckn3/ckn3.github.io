@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         details.hidden = true;
     });
 
-    document.querySelectorAll('a[href^="#paper-"]').forEach(function (link) {
+    document.querySelectorAll('a[href^="#paper-"], a[href^="#selected-paper-"]').forEach(function (link) {
         link.addEventListener('click', function (event) {
             if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
@@ -95,16 +95,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!hash || hash.charAt(0) !== '#') return;
         var target = document.getElementById(hash.slice(1));
         if (!target) return;
+        document.dispatchEvent(new CustomEvent('publication:reveal', { detail: target }));
         if (pushHash && window.location.hash !== hash) history.pushState(null, '', hash);
         target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
         var detailsButton = target.querySelector('.publication-details-button');
         if (detailsButton) detailsButton.focus({ preventScroll: true });
+        else if (target.hasAttribute('tabindex')) target.focus({ preventScroll: true });
         window.setTimeout(function () { flashTarget(target); }, reducedMotion.matches ? 0 : 240);
     }
 
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('hashchange', function () {
-        if (window.location.hash.indexOf('#paper-') === 0) jumpToEntry(window.location.hash, false);
+        if (/^#(?:selected-)?paper-/.test(window.location.hash)) jumpToEntry(window.location.hash, false);
     });
     modal.addEventListener('click', function (event) {
         if (event.target === modal) closeModal();
@@ -127,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-    if (window.location.hash.indexOf('#paper-') === 0) {
+    if (/^#(?:selected-)?paper-/.test(window.location.hash)) {
         document.fonts.ready.then(function () { jumpToEntry(window.location.hash, false); });
     }
 });

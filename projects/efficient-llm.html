@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kangning Cui">
+    <meta name="description" content="Efficient and reliable language models: compression evaluation, practical inference efficiency, and uncertainty after quantization. Research and open code from Kangning Cui and collaborators.">
+    <meta property="og:title" content="Efficient &amp; Reliable LLMs | Kangning Cui">
+    <meta property="og:description" content="Efficient and reliable language models: compression evaluation, practical inference efficiency, and uncertainty after quantization. Research and open code from Kangning Cui and collaborators.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ckn3.github.io/projects/efficient-llm.html">
+    <link rel="canonical" href="https://ckn3.github.io/projects/efficient-llm.html">
+    <meta property="og:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Efficient &amp; Reliable LLMs | Kangning Cui">
+    <meta name="twitter:description" content="Efficient and reliable language models: compression evaluation, practical inference efficiency, and uncertainty after quantization. Research and open code from Kangning Cui and collaborators.">
+    <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
+    <meta name="twitter:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
+    <meta name="theme-color" content="#faf9f6">
+    <meta name="apple-mobile-web-app-title" content="Kangning Cui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../styles/site.css?v=2026110301">
+    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110301">
+    <script src="../scripts/schema.js?v=2026110301" defer></script>
+    <script src="../scripts/citations.js?v=2026102503" defer></script>
+    <script src="../scripts/site.js?v=2026100305" defer></script>
+    <title>Efficient &amp; Reliable LLMs | Kangning Cui</title>
+</head>
+
+<body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-topbar">
+        <div class="site-topbar-inner">
+            <a class="site-brand" href="../index.html">Kangning Cui</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="../index.html">Home</a>
+                <a href="../publications.html" aria-current="location">Research</a>
+                <a href="../teach.html">Teaching</a>
+                <a href="../academic_honors.html">Services</a>
+                <a href="../team.html">Team</a>
+                <a href="../gallery.html">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-shell" id="main-content" tabindex="-1">
+        <div class="content content-top project-header">
+            <a class="project-back" href="../publications.html#efficient-ml">← Research / Efficient &amp; Reliable ML</a>
+            <div class="page-header">
+                <p class="project-eyebrow">Efficient &amp; Reliable LLMs</p>
+                <h1>Efficient language models.<br>Reliable behavior.</h1>
+                <p class="page-intro">We study how language models behave when their memory and inference costs are reduced. Our work connects fair compression evaluation, practical serving efficiency, and the preservation of uncertainty after quantization.</p>
+                <p class="project-byline">Kangning Cui and collaborators · Evaluation, inference, and reliability</p>
+            </div>
+        </div>
+        <nav class="page-jumps" aria-label="Project sections"><a href="#evaluation">Evaluation</a><a href="#inference">Inference</a><a href="#reliability">Reliability</a><a href="../publications.html?theme=efficient-ml#all-publications">All publications</a></nav>
+        <section class="content page-panel project-roadmap" aria-labelledby="research-line">
+            <div class="section-header"><h2 id="research-line">A connected research programme</h2></div>
+            <figure class="research-route">
+                <ol class="research-route-steps">
+                    <li><a href="#evaluation"><span class="research-route-number">01</span><strong>Evaluate compression</strong><span>Compare quality under aligned budgets and protocols.</span><em>LowRankArena</em></a></li>
+                    <li><a href="#inference"><span class="research-route-number">02</span><strong>Measure practical efficiency</strong><span>Connect smaller models and caches to serving performance.</span><em>FlashSVD · BudgetDraft</em></a></li>
+                    <li><a href="#reliability"><span class="research-route-number">03</span><strong>Preserve reliable behavior</strong><span>Track uncertainty alongside task accuracy.</span><em>DPQ</em></a></li>
+                </ol>
+                <figcaption>Three complementary lines of work, from evaluation to deployment and model behavior.</figcaption>
+            </figure>
+        </section>
+        <section class="content page-panel project-method" aria-labelledby="evaluation">
+            <div class="project-method-heading"><div><p class="project-eyebrow">01 / Evaluation</p><h2 id="evaluation">Make compression results comparable</h2></div></div>
+            <article class="project-study">
+                <p class="project-status">NeurIPS&#39;26, ED Track, Poster</p>
+                <h3>LowRankArena</h3>
+                <p>LowRankArena aligns evaluation tasks, compression budgets, and inference measurements for SVD-based language model compression. Its reproducible pipeline helps separate method-level differences from changes in experimental setup.</p>
+                <p class="project-takeaway"><strong>Finding.</strong> Method rankings vary with the model and compression ratio. Accuracy alone can hide degraded language modeling, and smaller parameter counts do not guarantee faster serving.</p>
+                <div class="project-resources" aria-label="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression resources"><a href="https://neurips.cc/virtual/2026/poster/139091" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2608.26389" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-lowrankarena-neurips" data-title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression" data-source="https://neurips.cc/virtual/2026/poster/139091" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">BibTeX</summary><pre><code>@inproceedings{shao2026lowrankarena,
+  author = {Shao, Zishan and
+            Zhang, Lixun and
+            Cui, Kangning and
+            Wu, Wenhao and
+            Kim, Jinhee and
+            Wang, Yixiao and
+            Jiang, Ting and
+            Ye, Hancheng and
+            Wang, Qinsi and
+            Yang, Fan and
+            Zhuo, Danyang and
+            Li, Hai and
+            Chen, Yiran},
+  title = {{LowRankArena}: A Standardized Evaluation Platform for {SVD}-Based {LLM} Compression},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+  year = {2026},
+  url = {https://neurips.cc/virtual/2026/poster/139091},
+  note = {Accepted conference paper, Evaluations and Datasets Track},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-lowrankarena-neurips">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+        </section>
+        <section class="content page-panel project-method" aria-labelledby="inference">
+            <div class="project-method-heading"><div><p class="project-eyebrow">02 / Inference</p><h2 id="inference">Turn memory savings into useful speed</h2></div></div>
+            <p class="project-method-intro">We examine the execution and decoding choices that determine whether theoretical savings translate into lower serving costs.</p>
+            <div class="project-study-grid">
+            <article class="project-study">
+                <p class="project-status">Preprint · 2026</p>
+                <h3>FlashSVD</h3>
+                <p>FlashSVD reorganizes the execution of SVD-compressed transformers, with kernels and execution strategies tailored to prefill and autoregressive decoding.</p>
+                <p class="project-takeaway"><strong>Contribution.</strong> Treats the runtime as part of low-rank model design; the preprint evaluates both decode and end-to-end serving performance.</p>
+                <div class="project-resources" aria-label="FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast resources"><a href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2605.08314v1" target="_blank" rel="noopener noreferrer">PDF</a> <a href="https://github.com/Zishan-Shao/FlashSVD" target="_blank" rel="noopener noreferrer">Code</a> <details class="citation-details" data-citation-id="paper-flashsvd" data-title="FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast" data-source="https://arxiv.org/abs/2605.08314v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast">BibTeX</summary><pre><code>@misc{wu2026flashsvd,
+  author = {Wu, Wenhao and
+            Shao, Zishan and
+            Cui, Kangning and
+            Kim, Jinhee and
+            Wang, Yixiao and
+            Ye, Hancheng and
+            Zhuo, Danyang and
+            Chen, Yiran},
+  title = {{FlashSVD} v1.5: Making Low-Rank Transformers Inference Actually Fast},
+  year = {2026},
+  url = {https://arxiv.org/abs/2605.08314v1},
+  eprint = {2605.08314},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-flashsvd">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+            <article class="project-study">
+                <p class="project-status">Preprint · 2026</p>
+                <h3>BudgetDraft</h3>
+                <p>BudgetDraft trains a speculative drafter across multiple sparse KV-cache budgets while a verifier retains its full cache. Training aligns sparse views with a shared full-cache target.</p>
+                <p class="project-takeaway"><strong>Contribution.</strong> Addresses the loss of token acceptance as the drafter’s context cache becomes sparse, without adding inference-time components.</p>
+                <div class="project-resources" aria-label="BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding resources"><a href="https://arxiv.org/abs/2606.00144" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2606.00144v1" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-budgetdraft" data-title="BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding" data-source="https://arxiv.org/abs/2606.00144v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding">BibTeX</summary><pre><code>@misc{he2026budgetdraft,
+  author = {He, Liang and
+            Wen, Jingbo and
+            Zhan, Qishi and
+            Chen, Yixiong and
+            Cui, Kangning and
+            Lan, Qizhen and
+            Wang, Xilu},
+  title = {{BudgetDraft}: Acceptance-Aware Multi-View Training for Sparse-{KV} Speculative Decoding},
+  year = {2026},
+  url = {https://arxiv.org/abs/2606.00144v1},
+  eprint = {2606.00144},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-budgetdraft">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+            </div>
+        </section>
+        <section class="content page-panel project-method" aria-labelledby="reliability">
+            <div class="project-method-heading"><div><p class="project-eyebrow">03 / Reliability</p><h2 id="reliability">Preserve uncertainty after quantization</h2></div></div>
+            <article class="project-study">
+                <p class="project-status">EMNLP&#39;26, Findings</p>
+                <h3>Doubt-Preserving Quantization</h3>
+                <p>DPQ selects calibration data before quantization to preserve the uncertainty behavior of a full-precision language model. It works with GPTQ- and AWQ-style quantization while leaving the quantizer kernel unchanged.</p>
+                <p class="project-takeaway"><strong>Contribution.</strong> Changes the calibration data, with no added inference-time overhead. The evaluation tracks distributional preservation alongside model utility.</p>
+                <div class="project-resources" aria-label="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models resources"><a href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://aclanthology.org/2026.findings-emnlp.670.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-dpq-emnlp" data-title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models" data-source="https://aclanthology.org/2026.findings-emnlp.670/" data-source-label="ACL Anthology" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">BibTeX</summary><pre><code>@inproceedings{yang-etal-2026-target,
+  author = {Yang, Zhen and
+            Hou, Sizai and
+            Zheng, Kaiwen and
+            Liu, Yaofang and
+            He, Liang and
+            Chen, Yixuan and
+            Cui, Kangning},
+  title = {Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2026},
+  editor = {Lee, Hung-Yi and
+            Dev, Sunipa and
+            Li, Jessy and
+            Elliott, Desmond},
+  year = {2026},
+  pages = {14073--14093},
+  publisher = {Association for Computational Linguistics},
+  address = {Budapest, Hungary},
+  month = {October},
+  isbn = {979-8-89176-462-0},
+  url = {https://aclanthology.org/2026.findings-emnlp.670/},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-dpq-emnlp">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+            <aside class="project-related-study" aria-labelledby="decode-structure">
+                <p class="project-status">Related work · ICML’26, Spotlight</p>
+                <h3 id="decode-structure">DecodeShare: understanding decode-time decisions</h3>
+                <p>DecodeShare identifies a subspace shared across tasks during decoding and tests its role through targeted interventions. This complementary work studies the internal structure behind language model decisions.</p>
+                <div class="project-resources" aria-label="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions resources"><a href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://proceedings.mlr.press/v306/shao26j.html" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <a href="https://github.com/Zishan-Shao/decodeshare" target="_blank" rel="noopener noreferrer">Code</a> <details class="citation-details" data-citation-id="paper-decodeshare-icml" data-title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions" data-source="https://proceedings.mlr.press/v306/shao26j.html" data-source-label="PMLR" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">BibTeX</summary><pre><code>@inproceedings{pmlr-v306-shao26j,
+  author = {Shao, Zishan and
+            Zhang, Lixun and
+            Cui, Kangning and
+            Wang, Yixiao and
+            Jiang, Ting and
+            Ye, Hancheng and
+            Wang, Qinsi and
+            Du, Zhixu and
+            Fu, Yuzhe and
+            Yang, Fan and
+            Zhuo, Danyang and
+            Chen, Yiran and
+            Li, Hai Helen},
+  title = {{DecodeShare}: Tracing the Shared Subspace of {LLM} Decode-Time Decisions},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  editor = {Zhang, Tong and
+            Dudik, Miroslav and
+            Jaggi, Martin and
+            Agarwal, Alekh and
+            Li, Sharon and
+            Schuurmans, Dale and
+            Zhu, Jerry and
+            Berkenkamp, Felix and
+            Dong, Hanze and
+            Bietti, Alberto},
+  year = {2026},
+  volume = {306},
+  pages = {110338--110373},
+  series = {Proceedings of Machine Learning Research},
+  publisher = {PMLR},
+  month = {July},
+  url = {https://proceedings.mlr.press/v306/shao26j.html},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-decodeshare-icml">Full publication record <span aria-hidden="true">→</span></a>
+            </aside>
+        </section>
+        <section class="content page-panel project-contact" aria-labelledby="collaborate">
+            <h2 id="collaborate">Research and collaboration</h2>
+            <p>See <a href="../publications.html#efficient-ml">all publications and preprints in Efficient &amp; Reliable ML</a>, including work on agent behavior and representations. For collaboration, <a href="mailto:kangning.cui@cityu-dg.edu.cn">contact Kangning Cui</a>; current recruitment information is on the <a href="../team.html#prospective-applicants">Team page</a>.</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-links">
+                <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
+                <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
+                <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+            </div>
+            <div class="site-footer-meta">Last updated: November 2026</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.publication-filters { display: grid; grid-template-columns: minmax(200px, 1.5fr) minmax(170px, 1fr) minmax(95px, .55fr) minmax(165px, 1fr) auto; gap: 12px; align-items: end; margin: 24px 0 14px; }
+.publication-filters[hidden], .publication-library [hidden], .library-more[hidden], .library-empty[hidden] { display: none; }
+.publication-filters label { display: grid; gap: 6px; font-size: .82rem; font-weight: 600; color: var(--muted); }
+.publication-filters input, .publication-filters select, .library-reset, .library-more { font: inherit; color: var(--ink); background: var(--paper, #fff); border: 1px solid var(--line); border-radius: 7px; min-height: 42px; padding: 9px 10px; }
+.publication-filters input, .publication-filters select { width: 100%; min-width: 0; font-size: .9rem; box-sizing: border-box; }
+.library-reset, .library-more { cursor: pointer; font-weight: 600; color: var(--accent-deep); }
+.library-more { margin-top: 22px; padding-inline: 20px; }
+.library-reset:hover, .library-more:hover { border-color: var(--accent-deep); }
+.library-count { color: var(--muted); font-size: .83rem; margin: 12px 0; }
+.research-page .publication-library .direction-item { padding: 20px 0; scroll-margin-top: 100px; }
+.research-page .publication-library .direction-title a { font-size: 1rem; line-height: 1.45; }
+.research-page .library-authors { font-size: .84rem; line-height: 1.6; margin: 7px 0 0; color: var(--muted); }
+.library-authors .main-author { color: var(--ink); font-weight: 600; }
+.library-theme { font-size: .75rem; padding: 2px 7px; border: 1px solid var(--line); border-radius: 4px; }
+.theme-library-link { margin: 16px 0 0; font-size: .89rem; font-weight: 600; }
+.research-topic-link { font-size: .9rem; font-weight: 600; }
+.media-research-link { display: block; margin-top: 12px; font-size: .88rem; font-weight: 600; }
+@media (max-width: 900px) {
+    .publication-filters { grid-template-columns: 1fr 1fr; }
+    .publication-filters .publication-search { grid-column: 1 / -1; }
+    .library-reset { justify-self: start; }
+}
+@media (max-width: 480px) {
+    .publication-filters { gap: 12px 10px; }
+    .publication-filters input, .publication-filters select { font-size: 16px; }
+    .research-page .publication-library .direction-title a { font-size: .96rem; }
+    .research-page .library-authors { font-size: .82rem; }
+}

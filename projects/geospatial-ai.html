@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kangning Cui">
-    <meta name="description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta name="description" content="Geospatial AI for forest mapping and environmental monitoring: PRISM, PalmDSNet, S2DL, AwakeForest and ELDOR. Research, open code and UAV data.">
     <meta property="og:title" content="Geospatial AI | Kangning Cui">
-    <meta property="og:description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta property="og:description" content="Geospatial AI for forest mapping and environmental monitoring: PRISM, PalmDSNet, S2DL, AwakeForest and ELDOR. Research, open code and UAV data.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ckn3.github.io/projects/geospatial-ai.html">
     <link rel="canonical" href="https://ckn3.github.io/projects/geospatial-ai.html">
@@ -17,7 +17,7 @@
     <meta property="og:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Geospatial AI | Kangning Cui">
-    <meta name="twitter:description" content="Geospatial AI for forest mapping: PRISM, PalmDSNet and S2DL. Methods, published papers, open code and UAV data from Kangning Cui and collaborators.">
+    <meta name="twitter:description" content="Geospatial AI for forest mapping and environmental monitoring: PRISM, PalmDSNet, S2DL, AwakeForest and ELDOR. Research, open code and UAV data.">
     <meta name="twitter:image" content="https://ckn3.github.io/assets/og-card.png?v=20261004">
     <meta name="twitter:image:alt" content="Kangning Cui, Assistant Professor of Data Science at City University of Hong Kong (Dongguan)">
     <meta name="theme-color" content="#faf9f6">
@@ -29,8 +29,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../styles/site.css?v=2026102504">
-    <script src="../scripts/schema.js?v=2026100302" defer></script>
+    <link rel="stylesheet" href="../styles/site.css?v=2026110301">
+    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110301">
+    <script src="../scripts/schema.js?v=2026110301" defer></script>
     <script src="../scripts/citations.js?v=2026102503" defer></script>
     <script src="../scripts/site.js?v=2026100305" defer></script>
     <title>Geospatial AI | Kangning Cui</title>
@@ -58,11 +59,11 @@
             <div class="page-header">
                 <p class="project-eyebrow">Geospatial AI</p>
                 <h1>From aerial imagery<br>to forest maps.</h1>
-                <p class="page-intro">We develop methods to locate individual trees, model their spatial distributions, and map landscapes with limited labels. PRISM and PalmDSNet work with UAV imagery; S2DL learns from hyperspectral images without manual annotations.</p>
-                <p class="project-byline">Kangning Cui and collaborators · IJCAI 2025 (Oral) · IEEE TGRS 2025 &amp; 2024</p>
+                <p class="page-intro">We develop methods to locate individual trees, model their spatial distributions, and map landscapes with limited labels. PRISM and PalmDSNet work with UAV imagery; S2DL learns from hyperspectral images without manual annotations. Recent work extends this line to interactive forest analysis and monitoring mining-related landscape change.</p>
+                <p class="project-byline">Kangning Cui and collaborators · Forest mapping, open data, and environmental monitoring</p>
             </div>
         </div>
-        <nav class="page-jumps" aria-label="Project sections"><a href="#prism">PRISM</a><a href="#palmdsnet">PalmDSNet</a><a href="#s2dl">S2DL</a><a href="#open-data">Open data</a></nav>
+        <nav class="page-jumps" aria-label="Project sections"><a href="#prism">PRISM</a><a href="#palmdsnet">PalmDSNet</a><a href="#s2dl">S2DL</a><a href="#recent-extensions">Recent work</a><a href="#open-data">Open data</a></nav>
         <section class="content page-panel project-method" aria-labelledby="prism">
             <div class="project-method-heading"><div><p class="project-eyebrow">01 / IJCAI&#x27;25, Oral</p><h2 id="prism">PRISM</h2></div><p>Detection, segmentation and geographic mapping</p></div>
             <p class="project-method-intro">A pipeline for mapping individual palms in dense tropical forests, where overlapping crowns and uneven shading make detection difficult.</p>
@@ -153,6 +154,74 @@
 }</code></pre></details></div>
             <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Superpixel-based and Spatially-regularized Diffusion Learning for Unsupervised Hyperspectral Image Clustering</strong> <span>[TGRS&#x27;24]</span></p><p><span class="main-author">Kangning Cui</span><sup>†,*</sup>, Ruoning Li, Sam L. Polk, Yinyi Lin, Hongsheng Zhang, James M. Murphy, Robert J. Plemmons, and Raymond H. Chan</p><p class="project-author-key">† First author · * Corresponding author</p><a href="../publications.html#paper-s2dl">Abstract and publication details</a></div></details>
         </section>
+        <section class="content page-panel" aria-labelledby="recent-extensions">
+            <div class="section-header"><h2 id="recent-extensions">Recent extensions</h2></div>
+            <p class="section-intro">From individual tree maps to interactive analysis and benchmarks for environmental change.</p>
+            <div class="project-study-grid">
+            <article class="project-study">
+                <p class="project-status">IJCAI Demo&#39;26</p>
+                <h3>AwakeForest</h3>
+                <p>An interactive platform brings model-assisted prediction, annotation, and human refinement into a common workflow for large forest imagery. The IJCAI demonstration uses the PALMS dataset.</p>
+                <p class="project-takeaway"><strong>Contribution.</strong> Connects forest image models with the annotation and geospatial analysis work needed to use them.</p>
+                <div class="project-resources" aria-label="AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery resources"><a href="https://arxiv.org/abs/2606.23542" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://www.ijcai.org/proceedings/2026/986" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://ijcai.org/proceedings/2026/0986.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-awakeforest" data-title="AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery" data-source="https://www.ijcai.org/proceedings/2026/986" data-source-label="IJCAI" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: AwakeForest: An Interactive Geospatial Platform for Large-Scale Forest Imagery">BibTeX</summary><pre><code>@inproceedings{ijcai2026p986,
+  author = {Prasai, Suraj and
+            Cui, Kangning and
+            Zhu, Rongkun and
+            Alqahtani, Sarra and
+            Zhang, Ying and
+            Pauca, Victor Pa{\&#39;u}l and
+            Silman, Miles R. and
+            Yang, Fan},
+  title = {{AwakeForest}: An Interactive Geospatial Platform for Large-Scale Forest Imagery},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence, {IJCAI}-26},
+  editor = {Calvanese, Diego},
+  year = {2026},
+  pages = {8487--8491},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  month = {August},
+  doi = {10.24963/ijcai.2026/986},
+  url = {https://doi.org/10.24963/ijcai.2026/986},
+  note = {Demo Track},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-awakeforest">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+            <article class="project-study">
+                <p class="project-status">Preprint · 2026</p>
+                <h3>ELDOR</h3>
+                <p>A UAV dataset and benchmark for illegal gold mining in the Amazon rainforest, with semantic labels for mining activity and the surrounding landscape. The preprint evaluates segmentation, classification, and vision-language models.</p>
+                <p class="project-takeaway"><strong>Finding.</strong> Rare mining structures and fine-grained recovery classes remain difficult for the evaluated models.</p>
+                <div class="project-resources" aria-label="ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest resources"><a href="https://arxiv.org/abs/2605.15397" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2605.15397v1" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-eldor" data-title="ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest" data-source="https://arxiv.org/abs/2605.15397v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: ELDOR: A Dataset and Benchmark for Illegal Gold Mining in the Amazon Rainforest">BibTeX</summary><pre><code>@misc{cui2026eldor,
+  author = {Cui, Kangning and
+            Bohara, Surendra and
+            Prasai, Suraj and
+            Shao, Zishan and
+            Tang, Wei and
+            Pillaca, Martin and
+            Flores, Edwin and
+            Yang, Zhen and
+            Larsen, Gregory and
+            Dethier, Evan and
+            Lutz, David and
+            Morel, Jean-Michel and
+            Silman, Miles and
+            Pauca, Victor and
+            Yang, Fan},
+  title = {{ELDOR}: A Dataset and Benchmark for Illegal Gold Mining in the {Amazon} Rainforest},
+  year = {2026},
+  url = {https://arxiv.org/abs/2605.15397v1},
+  eprint = {2605.15397},
+  archiveprefix = {arXiv},
+  version = {1},
+  note = {arXiv preprint, version 1},
+}</code></pre></details></div>
+                <a class="project-record-link" href="../publications.html#paper-eldor">Full publication record <span aria-hidden="true">→</span></a>
+
+            </article>
+            </div>
+            <p class="project-data-note"><a href="../publications.html#paper-geotalos">GeoTALOS</a>, our platform for automated landscape observation and spatial analysis, was accepted to the SIGSPATIAL 2026 Applications Track.</p>
+            <p class="project-data-note">For the wider programme in remote sensing, agriculture, and biodiversity, see <a href="../publications.html?theme=geospatial-ai#all-publications">all Geospatial AI publications and preprints</a>.</p>
+        </section>
         <section class="content page-panel project-data" aria-labelledby="open-data">
             <div class="section-header"><h2 id="open-data">Open data for canopy palm mapping</h2></div>
             <p>The PalmDSNet dataset contains expert annotations for UAV imagery of western Ecuador’s tropical forests.</p>
@@ -180,7 +249,7 @@
                 <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
                 <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
             </div>
-            <div class="site-footer-meta">Last updated: October 2026</div>
+            <div class="site-footer-meta">Last updated: November 2026</div>
         </div>
     </footer>
 </body>

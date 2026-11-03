@@ -1,0 +1,167 @@
+/* Shared layouts for focused research project pages. */
+.project-page .research-route {
+    margin: 24px 0 0;
+}
+
+.project-page .research-route-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.project-page .research-route-steps li {
+    min-width: 0;
+    position: relative;
+}
+
+.project-page .research-route-steps li + li::before {
+    content: "→";
+    position: absolute;
+    left: -22px;
+    top: 35px;
+    color: var(--cityu-purple-deep);
+    font-size: 1.2rem;
+}
+
+.project-page .research-route-steps a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    background: var(--cityu-soft);
+    border-top: 2px solid var(--cityu-purple);
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.project-page .research-route-steps a:hover {
+    background: var(--canvas-deep);
+}
+
+.project-page .research-route-steps a:focus-visible {
+    outline: 3px solid var(--cityu-purple);
+    outline-offset: 4px;
+}
+
+.project-page .research-route-number {
+    margin-bottom: 18px;
+    color: var(--cityu-purple-deep);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.project-page .research-route-steps strong {
+    display: block;
+    font-size: 1.15rem;
+    line-height: 1.35;
+}
+
+.project-page .research-route-steps strong + span {
+    display: block;
+    margin: 12px 0 18px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.project-page .research-route-steps em {
+    margin-top: auto;
+    color: var(--cityu-purple-deep);
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.project-page .research-route figcaption {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.project-page .project-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.project-page .project-study {
+    min-width: 0;
+}
+
+.project-page .project-study-grid .project-study {
+    border-top: 1px solid var(--line-strong);
+    padding-top: 20px;
+}
+
+.project-page .project-status {
+    margin: 0 0 8px;
+    color: var(--cityu-purple-deep);
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.project-page .project-study h3,
+.project-page .project-related-study h3 {
+    margin: 0 0 14px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.project-page .project-study > p:not(.project-status),
+.project-page .project-related-study > p:not(.project-status) {
+    max-width: 55rem;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+}
+
+.project-page .project-takeaway {
+    margin: 18px 0;
+    padding-left: 16px;
+    border-left: 2px solid var(--cityu-line);
+}
+
+.project-page .project-record-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 8px;
+    font-size: 0.9375rem;
+}
+
+.project-page .project-related-study {
+    margin-top: 32px;
+    padding: 24px 26px;
+    background: var(--cityu-soft);
+    border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+    .project-page .research-route-steps,
+    .project-page .project-study-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-page .research-route-steps {
+        gap: 24px;
+    }
+
+    .project-page .research-route-steps li + li::before {
+        content: "↓";
+        left: 24px;
+        top: -26px;
+    }
+
+    .project-page .research-route-number {
+        margin-bottom: 10px;
+    }
+
+    .project-page .project-related-study {
+        padding: 20px;
+    }
+}
