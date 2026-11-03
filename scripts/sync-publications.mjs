@@ -74,15 +74,6 @@ function renderRelated(id) {
                 <div class="direction-resources"><span class="venue-inline">${escape(venue + publicationYear)}</span><span class="library-theme">${escape(themeNames[theme])}</span>${links.join('')}${renderCitation(id, 'citation-inline')}${detailsLink}</div>
             </article>`;
 }
-for (const theme of data.themes) {
-    const marker = new RegExp(`<!-- theme:${theme.id}:start -->[\\s\\S]*?<!-- theme:${theme.id}:end -->`, 'g');
-    assert.equal([...generated.matchAll(marker)].length, 1, `Expected one ${theme.id} block`);
-    const count = theme.groups.reduce((total, group) => total + group.ids.length, 0);
-    const block = `<!-- theme:${theme.id}:start -->
-                <p class="theme-library-link"><a href="#all-publications" data-filter-theme="${theme.id}">Browse publications &amp; preprints (${count}) <span aria-hidden="true">→</span></a></p>
-                <!-- theme:${theme.id}:end -->`;
-    generated = generated.replace(marker, () => block);
-}
 const libraryIds = [...paperThemes.keys()].sort((a, b) => citationMetadata(data.citations[b]).year - citationMetadata(data.citations[a]).year);
 const years = [...new Set(libraryIds.map(id => citationMetadata(data.citations[id]).year))];
 const libraryMarker = /<!-- publication-library:start -->[\s\S]*?<!-- publication-library:end -->/g;

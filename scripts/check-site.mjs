@@ -82,9 +82,6 @@ for (const id of relatedIds) assert.ok(ids.get('publications.html').has(id), `Mi
 const schema = JSON.parse(research.match(/<script type="application\/ld\+json" id="schema-publications">([\s\S]*?)<\/script>/)[1]);
 assert.deepEqual(schema, publicationSchema(data.citations), 'Structured data must use canonical citation metadata');
 for (const theme of data.themes) {
-    const count = theme.groups.reduce((sum, group) => sum + group.ids.length, 0);
-    const block = research.split(`<!-- theme:${theme.id}:start -->`)[1].split(`<!-- theme:${theme.id}:end -->`)[0];
-    assert.ok(block.includes(`Browse publications &amp; preprints (${count})`), `${theme.id}: stale publication count`);
     for (const group of theme.groups) {
         const years = group.ids.map(id => data.citations[id].listing.year);
         assert.deepEqual(years, [...years].sort((a, b) => b - a), `${theme.id}: newest papers must come first`);

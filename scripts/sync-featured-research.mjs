@@ -20,29 +20,18 @@ for (const file of ['index.html']) {
         const destination = feature.project?.href || `${prefix}#${paper.id}`;
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
         const venues = publications.map(publication => {
-            const label = escape(publication.venue.replace(/^\[|\]$/g, ''));
-            return `<a href="${prefix}#${escape(publication.id)}" title="${escape(publication.title)}">${label}</a>`;
+            return escape(publication.venue.replace(/^\[|\]$/g, ''));
         }).join('<span aria-hidden="true"> · </span>');
-        const related = (feature.furtherReading ?? []).map(({id, label}) => {
-            const publication = papers.get(id);
-            if (!publication) throw new Error(`Unknown related publication: ${id}`);
-            return `<a href="${prefix}#${escape(id)}" title="${escape(publication.title)}">${escape(label)}</a>`;
-        }).join(' · ');
-        const preferred = paper.badges.some(badge => badge.label === 'Paper') ? 'Paper' : 'Preprint';
-        const resources = paper.badges.filter(badge => badge.href && [preferred, 'Code'].includes(badge.label))
-            .map(badge => `<a href="${escape(badge.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(badge.label)}: ${escape(paper.title)}">${escape(badge.label)}</a>`);
-        if (feature.project) resources.unshift(`<a href="${escape(feature.project.href)}">Project overview</a>`);
         return `            <article class="research-highlight">
                 <p class="research-highlight-theme">${escape(feature.theme)}</p>
-                <h3><a href="${escape(destination)}" title="${escape(paper.title)}">${escape(feature.heading)}</a></h3>
-                <a class="research-highlight-image" href="${escape(destination)}" aria-label="View ${escape(feature.heading)}">
+                <h3>${escape(feature.heading)}</h3>
+                <div class="research-highlight-image">
                     <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
-                </a>
+                </div>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>
                 <p class="research-highlight-venue">${venues}</p>
                 <p class="research-highlight-role">${escape(feature.authorRole)}</p>
-                ${related ? `<p class="research-highlight-related">Also: ${related}</p>` : ''}
-                <div class="research-highlight-links">${resources.join(' ')}</div>
+                <div class="research-highlight-links"><a href="${escape(destination)}" aria-label="Explore ${escape(feature.theme)} research">Explore research <span aria-hidden="true">→</span></a></div>
             </article>`;
     }).join('\n');
     const block = `<!-- featured-research:start -->

@@ -23,13 +23,7 @@
       "theme": "Efficient & Reliable ML",
       "heading": "Understanding the cost of compression",
       "authorRole": "Co-first author",
-      "contribution": "LowRankArena evaluates the accuracy and inference efficiency of compressed language models under shared tasks and budgets.",
-      "furtherReading": [
-        {
-          "id": "paper-dpq-emnlp",
-          "label": "DPQ · EMNLP’26"
-        }
-      ],
+      "contribution": "LowRankArena benchmarks compression quality and inference efficiency under shared evaluation settings.",
       "project": {
         "href": "projects/efficient-llm.html"
       }
@@ -42,13 +36,7 @@
       "theme": "Geospatial AI",
       "heading": "From aerial imagery to forest maps",
       "authorRole": "Co-first and corresponding author",
-      "contribution": "PRISM and PalmDSNet detect and locate canopy palms, connecting aerial imagery with forest maps and spatial modeling.",
-      "furtherReading": [
-        {
-          "id": "paper-s2dl",
-          "label": "S2DL · TGRS’24"
-        }
-      ],
+      "contribution": "PRISM and PalmDSNet turn aerial imagery into palm locations and forest maps.",
       "project": {
         "href": "projects/geospatial-ai.html"
       }
@@ -59,12 +47,6 @@
       "heading": "Extending the reach of ECG models",
       "authorRole": "Co-author",
       "contribution": "A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.",
-      "furtherReading": [
-        {
-          "id": "paper-cardiac-phase",
-          "label": "Cardiac motion · MICCAI’25"
-        }
-      ],
       "project": {
         "href": "projects/medical-ai.html"
       }
