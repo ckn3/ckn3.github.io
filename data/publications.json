@@ -64,7 +64,10 @@
           "id": "paper-cardiac-phase",
           "label": "Cardiac motion · MICCAI’25"
         }
-      ]
+      ],
+      "project": {
+        "href": "projects/medical-ai.html"
+      }
     }
   ],
   "selected": {
@@ -275,7 +278,7 @@
           "src": "figures/publications/decodeshare_pipeline.webp",
           "width": 1500,
           "height": 324,
-          "alt": "Figure for DecodeShare"
+          "alt": "DecodeShare pipeline: collect cross-task decoding activations, estimate their shared subspace, and analyze explained variance"
         },
         "title": "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions",
         "venue": "[ICML'26, Spotlight]",
@@ -344,9 +347,9 @@
         "highlight": "collaborative",
         "image": {
           "src": "figures/publications/yang2025miccai.webp",
-          "width": 640,
-          "height": 480,
-          "alt": "Figure for Yang et al., 2025"
+          "width": 917,
+          "height": 526,
+          "alt": "Cardiac motion profiling: an ultrasound reconstruction model separates static structure from motion and identifies end-diastole and end-systole along a latent trajectory"
         },
         "title": "Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos",
         "venue": "[MICCAI'25, Oral]",
@@ -471,7 +474,7 @@
     },
     "paper-dpq-emnlp": {
       "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models",
-      "bibtex": "@inproceedings{yang-etal-2026-target,\n  author = {Yang, Zhen and\n            Hou, Sizai and\n            Zheng, Kaiwen and\n            Liu, Yaofang and\n            He, Liang and\n            Chen, Yixuan and\n            Cui, Kangning},\n  title = {Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models},\n  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2026},\n  editor = {Lee, Hung-Yi and\n            Dev, Sunipa and\n            Li, Jessy and\n            Elliott, Desmond},\n  year = {2026},\n  pages = {14073--14093},\n  publisher = {Association for Computational Linguistics},\n  address = {Budapest, Hungary},\n  month = {October},\n  isbn = {979-8-89176-462-0},\n  url = {https://aclanthology.org/2026.findings-emnlp.670/},\n}\n",
+      "bibtex": "@inproceedings{yang-etal-2026-target,\n  author = {Yang, Zhen and\n            Hou, Sizai and\n            Zheng, Kaiwen and\n            Liu, Yaofang and\n            He, Liang and\n            Chen, Yixuan and\n            Cui, Kangning},\n  title = {Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models},\n  booktitle = {Findings of the Association for Computational Linguistics: {EMNLP} 2026},\n  editor = {Lee, Hung-Yi and\n            Dev, Sunipa and\n            Li, Jessy and\n            Elliott, Desmond},\n  year = {2026},\n  pages = {14073--14093},\n  publisher = {Association for Computational Linguistics},\n  address = {Budapest, Hungary},\n  month = {October},\n  isbn = {979-8-89176-462-0},\n  doi = {10.18653/2026.findings-emnlp.670},\n  url = {https://aclanthology.org/2026.findings-emnlp.670/},\n}\n",
       "source": {
         "label": "ACL Anthology",
         "url": "https://aclanthology.org/2026.findings-emnlp.670/"
@@ -489,7 +492,7 @@
         }
       ],
       "verification": {
-        "checkedOn": "2026-10-25",
+        "checkedOn": "2026-11-03",
         "version": "version-of-record",
         "source": "https://aclanthology.org/2026.findings-emnlp.670.bib"
       },

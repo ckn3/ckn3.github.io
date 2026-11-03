@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var count = document.getElementById('publication-count');
     var empty = document.getElementById('publication-empty');
     var more = document.getElementById('publication-more');
-    var pageSize = 12;
+    var pageSize = 5;
     var limit = pageSize;
     var matches = rows;
     function normalize(value) { return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }

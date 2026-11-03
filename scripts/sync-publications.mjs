@@ -119,7 +119,7 @@ function syncCitations(source) {
     });
 }
 generated = syncCitations(generated);
-const projectPages = ['projects/geospatial-ai.html', 'projects/efficient-llm.html'];
+const projectPages = ['projects/geospatial-ai.html', 'projects/efficient-llm.html', 'projects/medical-ai.html'];
 const outputs = [{ url: page, original, generated }];
 for (const file of projectPages) {
     const url = new URL(file, root);

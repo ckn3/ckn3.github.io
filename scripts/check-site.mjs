@@ -110,10 +110,10 @@ for (const [id, citation] of Object.entries(data.citations)) {
     }
     if (citation.listing.kind === 'preprint') assert.match(citation.listing.venue, /Preprint/);
 }
-for (const [file, source] of [['publications.html', research], ['projects/geospatial-ai.html', html.get('projects/geospatial-ai.html')], ['projects/efficient-llm.html', html.get('projects/efficient-llm.html')]]) {
+for (const [file, source] of [['publications.html', research], ['projects/geospatial-ai.html', html.get('projects/geospatial-ai.html')], ['projects/efficient-llm.html', html.get('projects/efficient-llm.html')], ['projects/medical-ai.html', html.get('projects/medical-ai.html')]]) {
     assert.doesNotMatch(source, /href="[^"]+\.bib(?:[?#][^"]*)?"/, `${file}: citations must not download`);
     const citations = [...source.matchAll(/<details class="citation-details" data-citation-id="([^"]+)"[^>]*>[\s\S]*?<code>([\s\S]*?)<\/code>[\s\S]*?<\/details>/g)];
-    assert.equal(citations.length, file === 'publications.html' ? relatedIds.length + paperIds.length : 5, `${file}: missing static citation fallback`);
+    assert.equal(citations.length, file === 'publications.html' ? relatedIds.length + paperIds.length : file === 'projects/medical-ai.html' ? 2 : 5, `${file}: missing static citation fallback`);
     for (const [, id, bibtex] of citations) {
         const escaped = data.citations[id].bibtex.trim().replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
         assert.equal(bibtex, escaped, `${file}: stale citation for ${id}`);
@@ -165,7 +165,7 @@ for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 
     assert.deepEqual([...source.matchAll(/<strong>(\d+)%<\/strong>/g)].map(m => Number(m[1])), weights);
     assert.ok(source.indexOf('id="materials"') < source.indexOf('id="schedule"'));
     const rows = source.match(/<tr><th scope="row">\d+<\/th>[\s\S]*?<\/tr>/g) || [];
-    assert.equal(rows.length, course === 'dsc5001' ? 10 : 8);
+    assert.equal(rows.length, 10);
     for (const [index, row] of rows.entries()) {
         const week = index + 1;
         assert.ok(row.includes(`<th scope="row">${week}</th>`) && row.includes(`-l${week}.pdf`));

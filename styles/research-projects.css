@@ -1,4 +1,38 @@
 /* Shared layouts for focused research project pages. */
+.project-page .project-author-role { color: var(--muted); font-size: .9rem; margin: -6px 0 18px; }
+.project-page .project-figure { margin: 24px 0 28px; }
+.project-figure > a { position: relative; cursor: zoom-in; }
+.project-figure .figure-enlarge { display: block; margin-top: 12px; color: var(--accent-deep); font-size: .85rem; font-weight: 600; text-align: right; }
+.project-page .project-figure img { max-height: 520px; }
+.project-page .project-explanation { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 0; margin: 26px 0; }
+.project-explanation > div { border-top: 1px solid var(--line-strong); padding-top: 14px; }
+.project-explanation dt { color: var(--accent-deep); font-size: .85rem; font-weight: 600; margin-bottom: 7px; }
+.project-explanation dd { margin: 0; font-size: 1rem; line-height: 1.6; }
+.medical-related { list-style: none; padding: 0; margin: 0; }
+.medical-related li { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.medical-related span { color: var(--muted); font-size: .9rem; }
+.medical-related a { font-weight: 600; }
+.medical-related p { margin: 5px 0 0; color: var(--muted); }
+.figure-viewer-open { overflow: hidden; }
+.figure-viewer { box-sizing: border-box; width: min(1250px, calc(100% - 32px)); max-height: 92vh; max-height: 92svh; padding: 24px; color: var(--ink); background: var(--surface, #fff); border: 1px solid var(--line); border-radius: 10px; }
+.figure-viewer::backdrop { background: rgba(24, 19, 25, .7); }
+.figure-viewer-header { display: flex; align-items: start; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+.figure-viewer-header h2 { font-size: 1.1rem; line-height: 1.45; margin: 0; max-width: 54rem; }
+.figure-viewer button { font: inherit; font-weight: 600; color: var(--accent-deep); background: white; border: 1px solid var(--line); border-radius: 5px; min-height: 44px; padding: 8px 14px; cursor: pointer; }
+.figure-viewer-close { flex: 0 0 auto; }
+.figure-viewer-stage { overflow: auto; max-height: 62vh; background: white; border: 1px solid var(--line); }
+.figure-viewer-stage img { display: block; width: auto; max-width: 100%; max-height: 62vh; height: auto; margin: 0 auto; object-fit: contain; }
+.figure-viewer-stage.is-zoomed img { max-width: none; max-height: none; }
+.figure-viewer-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+@media (max-width: 640px) {
+    .project-page .project-explanation { grid-template-columns: 1fr; gap: 16px; }
+    .medical-related li { grid-template-columns: 1fr; gap: 6px; }
+    .figure-viewer { width: calc(100% - 20px); padding: 14px; }
+    .figure-viewer-header { gap: 12px; }
+    .figure-viewer-header h2 { font-size: .94rem; }
+    .figure-viewer-header button { padding-inline: 10px; }
+}
+
 .project-page .research-route {
     margin: 24px 0 0;
 }
