@@ -562,39 +562,8 @@ body:not(.gallery-page) .page-header::before,
     margin-top: 28px;
 }
 
-.reviewer-recognition {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.reviewer-recognition li {
-    padding: 4px 0 4px 16px;
-    border-left: 3px solid var(--cityu-purple);
-}
-
-.reviewer-recognition span {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--muted);
-    font-size: .9rem;
-}
-
-.reviewer-recognition strong {
-    color: var(--ink);
-    font-size: 1.15rem;
-    line-height: 1.4;
-}
-
 .earlier-honors .cv-group {
     margin-top: 14px;
-}
-
-@media (max-width: 640px) {
-    .reviewer-recognition { grid-template-columns: minmax(0, 1fr); gap: 18px; }
 }
 
 .cv-list {
