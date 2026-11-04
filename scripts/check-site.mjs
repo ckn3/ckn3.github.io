@@ -42,7 +42,7 @@ for (const [file, source] of html) {
 
 const home = html.get('index.html');
 const news = home.slice(home.indexOf('aria-labelledby="news"'), home.indexOf('<details class="text-disclosure news-archive"'));
-assert.equal((news.match(/class="news-card"/g) || []).length, 4);
+assert.equal((news.match(/class="news-card"/g) || []).length, 3);
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="news"'));
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="positions"'));
 assert.match(home, /class="hero-role"><strong>Assistant Professor of Data Science<\/strong>/);
@@ -132,7 +132,7 @@ assert.match(team, /src="figures\/team\/mallory-pitts-linkedin\.webp" alt="Mallo
 for (const item of JSON.parse(fs.readFileSync(path.join(root, 'data/image-sources.json'), 'utf8')).images) {
     assert.ok(fs.existsSync(path.join(root, item.file)), `Missing localized image: ${item.file}`);
 }
-assert.ok(team.indexOf('id="prospective-applicants"') < team.indexOf('>Current Students</h3>'));
+assert.ok(team.indexOf('>Former Students</h3>') < team.indexOf('id="prospective-applicants"'));
 assert.match(team, /RA applications open/);
 assert.ok(team.indexOf('>Current Students</h3>') < team.indexOf('>Former Students</h3>'));
 const services = html.get('academic_honors.html');

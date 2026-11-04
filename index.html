@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026110401">
+    <link rel="stylesheet" href="styles/site.css?v=2026110402">
     <script src="scripts/schema.js?v=2026110301" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
     <title>Home | Kangning Cui</title>
@@ -62,7 +62,7 @@
                     <p class="hero-office">Office: AC4-422</p>
                     <p class="hero-focus">Efficient and reliable machine learning.</p>
                     <p class="hero-lead">I study model compression, uncertainty, and learning with limited labels across language models, geospatial data, and healthcare.</p>
-                    <p class="hero-recruitment">Research assistant opportunities available. <a href="team.html#prospective-applicants">Join the group</a>.</p>
+                    <p class="hero-recruitment" id="join-the-group">RA applications open. <a href="team.html#prospective-applicants">Join the group</a>.<span class="hero-recruitment-status">All PhD positions through and including Fall 2027 have been filled.</span></p>
                     <div class="hero-links">
                         <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                         <a class="affiliation-link" href="https://rims.cityu-dg.edu.cn/en/persons/kangning-cui/publications/" target="_blank" rel="noopener noreferrer">CityU-DG Profile</a>
@@ -125,33 +125,36 @@
 
     <section class="content page-panel news-shell" aria-labelledby="news">
         <div class="section-header"><h2 id="news">Recent News</h2></div>
-        <div class="news-slider">                <div class="news-card">
-                    <div class="news-date">[09/2026]</div>
-                    <div class="news-content">
-                        <a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">LowRankArena</a> accepted at <i>NeurIPS'26, ED Track, Poster</i>.
-                    </div>
+        <div class="news-slider">
+            <div class="news-card">
+                <div class="news-date">[09/2026]</div>
+                <div class="news-content">
+                    <a href="publications.html#paper-lowrankarena-neurips" title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">LowRankArena</a> accepted at <i>NeurIPS'26, ED Track, Poster</i>.
                 </div>
-                <div class="news-card">
-                    <div class="news-date">[09/2026]</div>
-                    <div class="news-content">
-                        <a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Extending ECG foundation models to longer recordings</a> accepted at <i>NeurIPS'26, Poster</i>.
-                    </div>
+            </div>
+            <div class="news-card">
+                <div class="news-date">[09/2026]</div>
+                <div class="news-content">
+                    <a href="publications.html#paper-ecg-horizons-neurips" title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">Extending ECG foundation models to longer recordings</a> accepted at <i>NeurIPS'26, Poster</i>.
                 </div>
-                <div class="news-card">
-                    <div class="news-date">[08/2026]</div>
-                    <div class="news-content">
-                        <a href="publications.html#paper-dpq-emnlp" title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">DPQ: preserving uncertainty in quantized language models</a> accepted at <i>EMNLP'26, Findings</i>. <a href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer" aria-label="DPQ official paper in ACL Anthology">Paper</a>.
-                    </div>
+            </div>
+            <div class="news-card">
+                <div class="news-date">[08/2026]</div>
+                <div class="news-content">
+                    <a href="publications.html#paper-dpq-emnlp" title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">DPQ: preserving uncertainty in quantized language models</a> accepted at <i>EMNLP'26, Findings</i>. <a href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer" aria-label="DPQ official paper in ACL Anthology">Paper</a>.
                 </div>
+            </div>
+        </div>
+        <details class="text-disclosure news-archive">
+            <summary>Earlier news</summary>
+            <div class="news-slider">
                 <div class="news-card">
                     <div class="news-date">[08/2026]</div>
                     <div class="news-content">
                         <a href="publications.html#paper-geotalos" title="GeoTALOS: A Geoscience Platform for Automated Landscape Observation and Spatial Analysis">GeoTALOS, our geoscience platform</a>, accepted at <i>SIGSPATIAL'26</i>.
                     </div>
-                </div></div>
-        <details class="text-disclosure news-archive">
-            <summary>Earlier news</summary>
-            <div class="news-slider">                <div class="news-card">
+                </div>
+                <div class="news-card">
                     <div class="news-date">[06/2026]</div>
                     <div class="news-content">
                         The paper "<a href="https://www.sciencedirect.com/science/article/pii/S0926669026011039" target="_blank" rel="noopener noreferrer">JassidNet as a Quantization-Aware Lightweight Phenotyping Framework for High-Throughput Cotton Jassid (Amrasca biguttula) Detection and Counting Toward Objective Resistance Screening</a>" was accepted by <i>Ind. Crops Prod.</i>.
@@ -174,16 +177,9 @@
                     <div class="news-content">
                         The paper "<a href="publications.html#paper-help-icmr">Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection</a>" was accepted by <i>ICMR 2026</i>.
                     </div>
-                </div></div>
+                </div>
+            </div>
         </details>
-    </section>
-
-    <section class="content page-panel home-connecting" aria-labelledby="join-the-group">
-        <div>
-            <h2 id="join-the-group">Join the group</h2>
-            <p>All PhD positions through and including Fall 2027 have been filled. For research assistant opportunities at CityU-DG, see the research areas and application details.</p>
-            <a href="team.html#prospective-applicants">Application details</a>
-        </div>
     </section>
 
     <div class="content content-open">
