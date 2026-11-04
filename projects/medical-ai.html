@@ -29,8 +29,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../styles/site.css?v=2026110402">
-    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110302">
+    <link rel="stylesheet" href="../styles/site.css?v=2026110403">
+    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110401">
     <script src="../scripts/schema.js?v=2026110301" defer></script>
     <script src="../scripts/citations.js?v=2026102503" defer></script>
     <script src="../scripts/site.js?v=2026100305" defer></script>
@@ -68,8 +68,9 @@
         <section class="content page-panel project-method" aria-labelledby="ecg">
             <div class="project-method-heading"><div><p class="project-eyebrow">01 / NeurIPS’26, Poster</p><h2 id="ecg">Extend ECG models beyond ten seconds</h2></div></div>
             <p class="project-author-role">Kangning Cui · Co-author</p>
+            <p class="project-key-result"><strong>Key result</strong> Experiments across ECG tasks and backbones improve on sliding-window and pooling baselines without retraining the backbone.</p>
             <figure class="project-figure"><a href="../figures/publications/tang2026neurips.webp" data-figure-title="Long-horizon ECG: a frozen backbone with a lightweight extension" aria-label="Enlarge figure: Long-horizon ECG: a frozen backbone with a lightweight extension"><img src="../figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>From snapshots to longer recordings.</strong> The framework adds temporal modeling to a frozen 10-second ECG backbone, connecting information across the recording rather than simply pooling independent windows.</figcaption></figure>
-            <dl class="project-explanation"><div><dt>Problem</dt><dd>An ECG model trained on 10-second clips cannot directly combine information across a longer, variable-length recording.</dd></div><div><dt>Method</dt><dd>Keep the pretrained backbone frozen and add a lightweight module for long-sequence processing and temporal relationships.</dd></div><div><dt>Result</dt><dd>Experiments across ECG tasks and backbones improve on sliding-window and pooling baselines without retraining the backbone.</dd></div></dl>
+            <dl class="project-explanation"><div><dt>Problem</dt><dd>An ECG model trained on 10-second clips cannot directly combine information across a longer, variable-length recording.</dd></div><div><dt>Method</dt><dd>Keep the pretrained backbone frozen and add a lightweight module for long-sequence processing and temporal relationships.</dd></div></dl>
             <div class="project-resources" aria-label="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons resources"><a href="https://neurips.cc/virtual/2026/poster/150095" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2605.16975" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-ecg-horizons-neurips" data-title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons" data-source="https://neurips.cc/virtual/2026/poster/150095" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">BibTeX</summary><pre><code>@inproceedings{tang2026extending,
   author = {Tang, Wei and
             Han, Jinpei and
@@ -95,8 +96,9 @@
         <section class="content page-panel project-method" aria-labelledby="cardiac-motion">
             <div class="project-method-heading"><div><p class="project-eyebrow">02 / MICCAI’25, Oral</p><h2 id="cardiac-motion">Find cardiac phases without manual labels</h2></div></div>
             <p class="project-author-role">Kangning Cui · Co-author</p>
+            <p class="project-key-result"><strong>Key result</strong> On EchoNet-Dynamic, mean absolute error is 3 frames for end-diastole and 2 for end-systole. The study also evaluates fetal echocardiography.</p>
             <figure class="project-figure"><a href="../figures/publications/yang2025miccai.webp" data-figure-title="Cardiac phase detection through latent motion trajectories" aria-label="Enlarge figure: Cardiac phase detection through latent motion trajectories"><img src="../figures/publications/yang2025miccai.webp" alt="Cardiac motion profiling: an ultrasound reconstruction model separates static structure from motion and identifies end-diastole and end-systole along a latent trajectory" width="917" height="526" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>Read the heartbeat from motion.</strong> The model learns to reconstruct ultrasound frames while separating static structure from motion. The resulting trajectory identifies end-diastole and end-systole.</figcaption></figure>
-            <dl class="project-explanation"><div><dt>Problem</dt><dd>Cardiac phase detection usually needs manually marked frames or segmentation annotations.</dd></div><div><dt>Method</dt><dd>Learn motion trajectories through video reconstruction, then identify end-diastole and end-systole in that representation.</dd></div><div><dt>Result</dt><dd>On EchoNet-Dynamic, mean absolute error is 3 frames for end-diastole and 2 for end-systole. The study also evaluates fetal echocardiography.</dd></div></dl>
+            <dl class="project-explanation"><div><dt>Problem</dt><dd>Cardiac phase detection usually needs manually marked frames or segmentation annotations.</dd></div><div><dt>Method</dt><dd>Learn motion trajectories through video reconstruction, then identify end-diastole and end-systole in that representation.</dd></div></dl>
             <div class="project-resources" aria-label="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos resources"><a href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2507.05154" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-cardiac-phase" data-title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos" data-source="https://doi.org/10.1007/978-3-032-05185-1_31" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-05185-1_31,
   author = {Yang, Yingyu and
             Yang, Qianye and
@@ -150,9 +152,9 @@
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
-                <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://orcid.org/0000-0002-1856-5064" target="_blank" rel="noopener noreferrer">ORCID</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865" target="_blank" rel="noopener noreferrer">Scopus</a>
             </div>
             <div class="site-footer-meta">Last updated: November 2026</div>
         </div>

@@ -15,7 +15,7 @@
 .gallery-page .album-library { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 26px 20px 42px; align-items: start; }
 .gallery-page .album-collection { min-width: 0; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
 .gallery-page .album-collection[open] { grid-column: 1 / -1; }
-.album-cover { display: flex; align-items: center; gap: 22px; padding: 18px; cursor: pointer; list-style: none; scroll-margin-top: 110px; border-radius: 8px; }
+.album-cover { display: flex; align-items: center; gap: 22px; padding: 18px; cursor: pointer; list-style: none; scroll-margin-top: max(110px, var(--anchor-clearance, 0px)); border-radius: 8px; }
 .album-cover::-webkit-details-marker { display: none; }
 .album-cover:hover .album-cover-title { color: var(--accent-deep); }
 .album-cover-image { display: flex; align-items: center; justify-content: center; flex: 0 0 132px; height: 108px; background: var(--canvas); }

@@ -29,8 +29,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
-    <link rel="stylesheet" href="../styles/site.css?v=2026110402">
-    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110302">
+    <link rel="stylesheet" href="../styles/site.css?v=2026110403">
+    <link rel="stylesheet" href="../styles/research-projects.css?v=2026110401">
     <script src="../scripts/schema.js?v=2026110301" defer></script>
     <script src="../scripts/citations.js?v=2026102503" defer></script>
     <script src="../scripts/site.js?v=2026100305" defer></script>
@@ -71,8 +71,9 @@
                 <p class="project-status">NeurIPS&#39;26, ED Track, Poster</p>
                 <h3>LowRankArena</h3>
                 <p class="project-author-role">Kangning Cui · Co-first author</p>
+                <p class="project-key-result"><strong>Key finding</strong> Rankings change across models and budgets; lower parameter counts do not always produce faster inference.</p>
                 <figure class="project-figure"><a href="../figures/publications/shao2026lowrankarena.webp" data-figure-title="LowRankArena: making compression evaluations comparable" aria-label="Enlarge figure: LowRankArena: making compression evaluations comparable"><img src="../figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>LowRankArena.</strong> A shared evaluation pipeline aligns compression budgets, tasks, and serving measurements so that different methods can be compared fairly.</figcaption></figure>
-                <dl class="project-explanation"><div><dt>Problem</dt><dd>Different benchmarks and compression budgets make published results hard to compare.</dd></div><div><dt>Method</dt><dd>Align task versions, model budgets, and end-to-end inference measurements in one reproducible platform.</dd></div><div><dt>Finding</dt><dd>Rankings change across models and budgets; lower parameter counts do not always produce faster inference.</dd></div></dl>
+                <dl class="project-explanation"><div><dt>Problem</dt><dd>Different benchmarks and compression budgets make published results hard to compare.</dd></div><div><dt>Method</dt><dd>Align task versions, model budgets, and end-to-end inference measurements in one reproducible platform.</dd></div></dl>
                 <div class="project-resources" aria-label="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression resources"><a href="https://neurips.cc/virtual/2026/poster/139091" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2608.26389" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-lowrankarena-neurips" data-title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression" data-source="https://neurips.cc/virtual/2026/poster/139091" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">BibTeX</summary><pre><code>@inproceedings{shao2026lowrankarena,
   author = {Shao, Zishan and
             Zhang, Lixun and
@@ -158,8 +159,9 @@
                 <p class="project-status">EMNLP&#39;26, Findings</p>
                 <h3>Doubt-Preserving Quantization</h3>
                 <p class="project-author-role">Kangning Cui · Corresponding author</p>
+                <p class="project-key-result"><strong>Key finding</strong> Answerability and broad QA favor different calibration recipes; the selection adds no inference-time components.</p>
                 <figure class="project-figure"><a href="../figures/publications/dpq2026emnlp.webp" data-figure-title="DPQ: uncertainty preservation after quantization" aria-label="Enlarge figure: DPQ: uncertainty preservation after quantization"><img src="../figures/publications/dpq2026emnlp.webp" alt="DPQ uncertainty-preservation results for quantized language models" width="1600" height="681" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>Preserving answerability behavior.</strong> Lower bars mean closer agreement with the full-precision model on this SQuAD2 evaluation. The best calibration recipe depends on the behavior being preserved.</figcaption></figure>
-                <dl class="project-explanation"><div><dt>Problem</dt><dd>Quantization can keep task accuracy while changing confidence and answerability.</dd></div><div><dt>Method</dt><dd>Choose calibration data for the target behavior before applying the quantizer.</dd></div><div><dt>Finding</dt><dd>Answerability and broad QA favor different calibration recipes; the selection adds no inference-time components.</dd></div></dl>
+                <dl class="project-explanation"><div><dt>Problem</dt><dd>Quantization can keep task accuracy while changing confidence and answerability.</dd></div><div><dt>Method</dt><dd>Choose calibration data for the target behavior before applying the quantizer.</dd></div></dl>
                 <div class="project-resources" aria-label="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models resources"><a href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://aclanthology.org/2026.findings-emnlp.670.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-dpq-emnlp" data-title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models" data-source="https://aclanthology.org/2026.findings-emnlp.670/" data-source-label="ACL Anthology" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">BibTeX</summary><pre><code>@inproceedings{yang-etal-2026-target,
   author = {Yang, Zhen and
             Hou, Sizai and
@@ -190,8 +192,8 @@
                 <p class="project-status">Related work · ICML’26, Spotlight</p>
                 <h3 id="decode-structure">DecodeShare: understanding decode-time decisions</h3>
                 <p class="project-author-role">Kangning Cui · Co-author</p>
+                <p class="project-key-result"><strong>Key finding</strong> DecodeShare identifies a subspace shared across tasks during decoding and tests its role through targeted interventions.</p>
                 <figure class="project-figure"><a href="../figures/publications/decodeshare_pipeline.webp" data-figure-title="DecodeShare: testing the shared structure of decoding" aria-label="Enlarge figure: DecodeShare: testing the shared structure of decoding"><img src="../figures/publications/decodeshare_pipeline.webp" alt="DecodeShare pipeline: collect cross-task decoding activations, estimate their shared subspace, and analyze explained variance" width="1500" height="324" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>From representation to intervention.</strong> The pipeline extracts a cross-task subspace from decoding activations; targeted interventions then test its role in model decisions.</figcaption></figure>
-                <p>DecodeShare identifies a subspace shared across tasks during decoding and tests its role through targeted interventions. This complementary work studies the internal structure behind language model decisions.</p>
                 <div class="project-resources" aria-label="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions resources"><a href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://proceedings.mlr.press/v306/shao26j.html" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <a href="https://github.com/Zishan-Shao/decodeshare" target="_blank" rel="noopener noreferrer">Code</a> <details class="citation-details" data-citation-id="paper-decodeshare-icml" data-title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions" data-source="https://proceedings.mlr.press/v306/shao26j.html" data-source-label="PMLR" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">BibTeX</summary><pre><code>@inproceedings{pmlr-v306-shao26j,
   author = {Shao, Zishan and
             Zhang, Lixun and
@@ -241,9 +243,9 @@
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 <a href="https://github.com/ckn3/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/">LinkedIn</a>
-                <a href="https://orcid.org/0000-0002-1856-5064">ORCID</a>
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865">Scopus</a>
+                <a href="https://www.linkedin.com/in/kangning-cui-57662b177/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://orcid.org/0000-0002-1856-5064" target="_blank" rel="noopener noreferrer">ORCID</a>
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57226829865" target="_blank" rel="noopener noreferrer">Scopus</a>
             </div>
             <div class="site-footer-meta">Last updated: November 2026</div>
         </div>

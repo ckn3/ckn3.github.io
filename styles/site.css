@@ -349,7 +349,7 @@ body:not(.gallery-page) .page-header::before,
 
 /* Avoid ID specificity here so page-specific anchor spacing can still override it. */
 :where(.publication-entry, .conference-entry, .team-section, .section-header [id], .student-subheading[id], .team-page #prospective-applicants) {
-    scroll-margin-top: 120px;
+    scroll-margin-top: max(120px, var(--anchor-clearance, 0px));
 }
 
 :is(.section-card, .publication-entry, .conference-entry, .teaching-entry, .person-card, .gallery-card, .news-card)::before {
@@ -560,6 +560,41 @@ body:not(.gallery-page) .page-header::before,
 
 .cv-subsection + .cv-subsection {
     margin-top: 28px;
+}
+
+.reviewer-recognition {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reviewer-recognition li {
+    padding: 4px 0 4px 16px;
+    border-left: 3px solid var(--cityu-purple);
+}
+
+.reviewer-recognition span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.reviewer-recognition strong {
+    color: var(--ink);
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.earlier-honors .cv-group {
+    margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+    .reviewer-recognition { grid-template-columns: minmax(0, 1fr); gap: 18px; }
 }
 
 .cv-list {
@@ -1554,7 +1589,7 @@ body:not(.gallery-page) .page-header::before,
 }
 
 .team-page .person-card {
-    scroll-margin-top: 20px;
+    scroll-margin-top: max(20px, var(--anchor-clearance, 0px));
 }
 
 .gallery-modal {
@@ -1672,7 +1707,7 @@ body:not(.gallery-page) .page-header::before,
 .album-heading h2 {
     margin: 0;
     font-size: 1.5rem;
-    scroll-margin-top: 110px;
+    scroll-margin-top: max(110px, var(--anchor-clearance, 0px));
 }
 
 .album-years {
@@ -2071,7 +2106,7 @@ body:not(.gallery-page) .page-header::before,
 
     .album-heading h2 {
         font-size: 1.25rem;
-        scroll-margin-top: 135px;
+        scroll-margin-top: max(135px, var(--anchor-clearance, 0px));
     }
 
     .album-grid {
@@ -4153,7 +4188,7 @@ body.modal-open {
 .course-materials td { font-size: 1rem; }
 .course-materials .material-topic { width: 50%; }
 .course-assignments th:first-child { width: 40%; }
-.course-page .section-header [id] { scroll-margin-top: 120px; }
+.course-page .section-header [id] { scroll-margin-top: max(120px, var(--anchor-clearance, 0px)); }
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -4435,4 +4470,17 @@ body.citation-open { overflow: hidden; }
 
 @media (max-width: 360px) {
     .gallery-page .album-grid { --album-row-size: 90px; }
+}
+
+@media (max-width: 400px) {
+    :root { --anchor-clearance: 170px; }
+    .site-topbar-inner { gap: 4px; padding-block: 8px; }
+    .site-nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 12px;
+        padding: 0;
+        overflow: visible;
+    }
+    .site-nav a { justify-content: center; min-width: 44px; min-height: 40px; padding: 4px 0; }
 }

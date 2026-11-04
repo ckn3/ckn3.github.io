@@ -6,6 +6,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var count = document.getElementById('publication-count');
     var empty = document.getElementById('publication-empty');
     var more = document.getElementById('publication-more');
+    var advanced = document.getElementById('publication-advanced');
+    var filterStatus = document.getElementById('publication-filter-status');
+    var desktopFilters = window.matchMedia('(min-width: 769px)');
+    function arrangeFilters() {
+        var active = document.activeElement;
+        advanced.open = desktopFilters.matches;
+        if (advanced.contains(active)) {
+            if (!desktopFilters.matches) advanced.querySelector('summary').focus();
+            else if (active === advanced.querySelector('summary')) form.elements.theme.focus();
+        }
+    }
+    arrangeFilters();
+    desktopFilters.addEventListener('change', arrangeFilters);
     var pageSize = 5;
     var limit = pageSize;
     var matches = rows;
@@ -16,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }).join(' '))];
     }));
     function render() {
+        var activeFilters = ['theme', 'year', 'kind'].filter(function (name) { return form.elements[name].value; }).length;
+        filterStatus.textContent = activeFilters ? activeFilters + ' active' : '';
+        filterStatus.hidden = activeFilters === 0;
         var terms = normalize(form.elements.search.value.trim()).split(/\s+/).filter(Boolean);
         matches = rows.filter(function (row) {
             return (!form.elements.theme.value || row.dataset.theme === form.elements.theme.value)

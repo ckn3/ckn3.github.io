@@ -81,10 +81,15 @@ assert.equal([...generated.matchAll(libraryMarker)].length, 1, 'Expected one pub
 generated = generated.replace(libraryMarker, () => `<!-- publication-library:start -->
         <form class="publication-filters" id="publication-filters" aria-label="Filter publications" hidden>
             <label class="publication-search">Search <input type="search" name="search" placeholder="Title, author or venue" autocomplete="off"></label>
-            <label>Research theme <select name="theme"><option value="">All themes</option>${Object.entries(themeNames).map(([id, name]) => `<option value="${id}">${escape(name)}</option>`).join('')}</select></label>
-            <label>Year <select name="year"><option value="">All years</option>${years.map(year => `<option value="${year}">${year}</option>`).join('')}</select></label>
-            <label>Status <select name="kind"><option value="">All statuses</option><option value="published">Published / accepted</option><option value="preprint">Preprints</option><option value="abstract">Conference abstracts</option></select></label>
-            <button type="reset" class="library-reset">Reset</button>
+            <details class="publication-advanced" id="publication-advanced">
+                <summary>Filters <span id="publication-filter-status" hidden></span></summary>
+                <div class="publication-filter-options">
+                    <label>Research theme <select name="theme"><option value="">All themes</option>${Object.entries(themeNames).map(([id, name]) => `<option value="${id}">${escape(name)}</option>`).join('')}</select></label>
+                    <label>Year <select name="year"><option value="">All years</option>${years.map(year => `<option value="${year}">${year}</option>`).join('')}</select></label>
+                    <label>Status <select name="kind"><option value="">All statuses</option><option value="published">Published / accepted</option><option value="preprint">Preprints</option><option value="abstract">Conference abstracts</option></select></label>
+                    <button type="reset" class="library-reset">Reset</button>
+                </div>
+            </details>
         </form>
         <p class="library-count" id="publication-count" role="status" aria-live="polite">${libraryIds.length} publications and preprints</p>
         <div class="publication-library" id="publication-library">
