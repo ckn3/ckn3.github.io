@@ -1150,6 +1150,7 @@ body:not(.gallery-page) .page-header::before,
     margin-top: 13px;
     padding-top: 15px;
     border-top: 1px solid rgba(31, 41, 51, 0.08);
+    scroll-margin-top: max(120px, var(--anchor-clearance, 0px));
 }
 
 .services-page .service-photo-grid {
@@ -1178,6 +1179,12 @@ body:not(.gallery-page) .page-header::before,
     flex-basis: 69px;
     width: 69px;
     aspect-ratio: 4 / 3;
+}
+
+.services-page .service-photo-grid--visit .service-photo-trigger {
+    flex: 0 0 auto;
+    width: auto;
+    height: 72px;
 }
 
 .services-page .service-photo-trigger::after {

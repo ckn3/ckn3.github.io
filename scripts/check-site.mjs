@@ -136,7 +136,7 @@ assert.ok(team.indexOf('>Former Students</h3>') < team.indexOf('id="prospective-
 assert.match(team, /RA applications open/);
 assert.ok(team.indexOf('>Current Students</h3>') < team.indexOf('>Former Students</h3>'));
 const services = html.get('academic_honors.html');
-assert.ok(services.indexOf('>Review Experience</h3>') < services.indexOf('>Community Service</h3>'));
+assert.ok(services.indexOf('>Review Experience</h3>') < services.indexOf('>Academic &amp; Community Engagement</h3>'));
 assert.match(services, /<details class="text-disclosure journal-reviewers">/);
 const conferences = services.match(/<dl class="conference-reviews"[^>]*>([\s\S]*?)<\/dl>/)?.[1];
 assert.ok(conferences, 'Missing aligned conference review list');
