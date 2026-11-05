@@ -46,7 +46,7 @@ assert.equal((news.match(/class="news-card"/g) || []).length, 3);
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="news"'));
 assert.ok(home.indexOf('id="featured-research"') < home.indexOf('id="positions"'));
 assert.match(home, /class="hero-role"><strong>Assistant Professor of Data Science<\/strong>/);
-assert.match(home, /class="hero-office">Office: AC4-422<\/p>/);
+assert.match(home.slice(home.indexOf('<footer')), /Office: AC4-422/);
 assert.doesNotMatch(home, /<h[1-6][^>]*>Teaching\b|class="home-course-links"/);
 assert.equal((html.get('publications.html').match(/class="research-topic"/g) || []).length, 3);
 const research = html.get('publications.html');
@@ -55,7 +55,7 @@ assert.equal((home.match(/class="research-highlight"/g) || []).length, 3);
 assert.equal((home.match(/class="research-highlight-image"/g) || []).length, 3);
 for (const featured of data.featured) {
     const paper = Object.values(data.selected).flat().find(item => item.id === featured.id);
-    assert.ok(home.includes(`src="${paper.image.src}"`), `Missing featured research image: ${featured.id}`);
+    assert.ok(home.includes(`src="${(featured.overviewImage || paper.image).src}"`), `Missing featured research image: ${featured.id}`);
     assert.ok(home.includes(`<p class="research-highlight-role">${featured.authorRole}</p>`), `Missing featured author role: ${featured.id}`);
 }
 assert.deepEqual(data.featured.map(item => item.authorRole), ['Co-first author', 'Co-first and corresponding author', 'Co-author']);

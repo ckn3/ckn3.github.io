@@ -26,6 +26,12 @@
       "contribution": "LowRankArena benchmarks compression quality and inference efficiency under shared evaluation settings.",
       "project": {
         "href": "projects/efficient-llm.html"
+      },
+      "overviewImage": {
+        "src": "figures/research/overview-compression.svg",
+        "alt": "Conceptual overview: low-rank model compression evaluated for quality, memory use and latency.",
+        "width": 600,
+        "height": 330
       }
     },
     {
@@ -39,6 +45,12 @@
       "contribution": "PRISM and PalmDSNet turn aerial imagery into palm locations and forest maps.",
       "project": {
         "href": "projects/geospatial-ai.html"
+      },
+      "overviewImage": {
+        "src": "figures/research/overview-geospatial.svg",
+        "alt": "Schematic workflow: aerial forest imagery becomes palm crown boundaries and geographic locations.",
+        "width": 600,
+        "height": 330
       }
     },
     {
@@ -49,6 +61,12 @@
       "contribution": "A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.",
       "project": {
         "href": "projects/medical-ai.html"
+      },
+      "overviewImage": {
+        "src": "figures/research/overview-ecg.svg",
+        "alt": "Schematic workflow: a frozen 10-second ECG backbone and a temporal module connect information across longer recordings.",
+        "width": 600,
+        "height": 330
       }
     }
   ],

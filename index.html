@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="styles/site.css?v=2026110501">
+    <link rel="stylesheet" href="styles/site.css?v=2026110502">
     <script src="scripts/schema.js?v=2026110301" defer></script>
     <script src="scripts/site.js?v=2026100305" defer></script>
     <title>Home | Kangning Cui</title>
@@ -59,7 +59,6 @@
                 <div class="hero-copy">
                     <h1 class="hero-title" id="welcome">Kangning Cui</h1>
                     <p class="hero-role"><strong>Assistant Professor of Data Science</strong><span class="hero-affiliation">City University of Hong Kong (Dongguan)</span></p>
-                    <p class="hero-office">Office: AC4-422</p>
                     <p class="hero-focus">Efficient and reliable machine learning.</p>
                     <p class="hero-lead">I study model compression, uncertainty, and learning with limited labels across language models, geospatial data, and healthcare.</p>
                     <p class="hero-recruitment" id="join-the-group">RA applications open. <a href="team.html#prospective-applicants">Join the group</a>.<span class="hero-recruitment-status">All PhD positions through and including Fall 2027 have been filled.</span></p>
@@ -90,7 +89,7 @@
                 <p class="research-highlight-theme">Efficient &amp; Reliable ML</p>
                 <h3>Understanding the cost of compression</h3>
                 <div class="research-highlight-image">
-                    <img src="figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async">
+                    <img src="figures/research/overview-compression.svg" alt="Conceptual overview: low-rank model compression evaluated for quality, memory use and latency." width="600" height="330" loading="lazy" decoding="async">
                 </div>
                 <p class="research-highlight-contribution">LowRankArena benchmarks compression quality and inference efficiency under shared evaluation settings.</p>
                 <p class="research-highlight-venue">NeurIPS&#39;26, ED Track, Poster</p>
@@ -101,7 +100,7 @@
                 <p class="research-highlight-theme">Geospatial AI</p>
                 <h3>From aerial imagery to forest maps</h3>
                 <div class="research-highlight-image">
-                    <img src="figures/publications/cui2025ijcai.webp" alt="PRISM workflow: aerial forest imagery, palm detection, segmentation, and geographic mapping" width="1248" height="373" loading="lazy" decoding="async">
+                    <img src="figures/research/overview-geospatial.svg" alt="Schematic workflow: aerial forest imagery becomes palm crown boundaries and geographic locations." width="600" height="330" loading="lazy" decoding="async">
                 </div>
                 <p class="research-highlight-contribution">PRISM and PalmDSNet turn aerial imagery into palm locations and forest maps.</p>
                 <p class="research-highlight-venue">IJCAI&#39;25, Oral<span aria-hidden="true"> · </span>TGRS&#39;25</p>
@@ -112,7 +111,7 @@
                 <p class="research-highlight-theme">Medical AI</p>
                 <h3>Extending the reach of ECG models</h3>
                 <div class="research-highlight-image">
-                    <img src="figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async">
+                    <img src="figures/research/overview-ecg.svg" alt="Schematic workflow: a frozen 10-second ECG backbone and a temporal module connect information across longer recordings." width="600" height="330" loading="lazy" decoding="async">
                 </div>
                 <p class="research-highlight-contribution">A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.</p>
                 <p class="research-highlight-venue">NeurIPS&#39;26, Poster</p>
@@ -270,37 +269,42 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2017–2021</div>
-                        <div class="timeline-content">
-                            <div class="timeline-head">
-                                <div class="timeline-logo">
-                                    <img src="figures/main/cityu.png" alt="City University of Hong Kong" width="1280" height="810">
-                                </div>
-                                <div class="timeline-copy">
-                                    <strong>B.S. in Computing Mathematics</strong>
-                                    <div class="meta">City University of Hong Kong</div>
-                                    <p>First Class Honours · Minor in Computer Science.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2020</div>
-                        <div class="timeline-content">
-                            <div class="timeline-head">
-                                <div class="timeline-logo">
-                                    <img src="figures/main/tudelft.png" alt="Delft University of Technology" width="223" height="200" loading="lazy" decoding="async">
-                                </div>
-                                <div class="timeline-copy">
-                                    <strong>Exchange Student, Applied Mathematics</strong>
-                                    <div class="meta">Delft University of Technology</div>
-                                    <p>Delft, Netherlands.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <details class="text-disclosure earlier-education">
+                    <summary>Earlier education · B.S. and exchange</summary>
+                    <div class="timeline education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2017–2021</div>
+                            <div class="timeline-content">
+                                <div class="timeline-head">
+                                    <div class="timeline-logo">
+                                        <img src="figures/main/cityu.png" alt="City University of Hong Kong" width="1280" height="810">
+                                    </div>
+                                    <div class="timeline-copy">
+                                        <strong>B.S. in Computing Mathematics</strong>
+                                        <div class="meta">City University of Hong Kong</div>
+                                        <p>First Class Honours · Minor in Computer Science.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020</div>
+                            <div class="timeline-content">
+                                <div class="timeline-head">
+                                    <div class="timeline-logo">
+                                        <img src="figures/main/tudelft.png" alt="Delft University of Technology" width="223" height="200" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="timeline-copy">
+                                        <strong>Exchange Student, Applied Mathematics</strong>
+                                        <div class="meta">Delft University of Technology</div>
+                                        <p>Delft, Netherlands.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
             </section>
         </div>
     </div>
@@ -308,7 +312,7 @@
     </main>
     <footer class="site-footer">
         <div class="site-footer-inner">
-            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-copy">Kangning Cui<span class="site-footer-office">Office: AC4-422 · CityU-DG</span></div>
             <div class="site-footer-links">
                 <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email</a>
                 <a href="https://scholar.google.com/citations?user=vzCZaIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>

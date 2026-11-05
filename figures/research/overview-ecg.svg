@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="title desc">
+  <title id="title">Connecting short ECG windows across longer recordings</title>
+  <desc id="desc">A schematic ECG recording is processed in 10-second windows by a frozen pretrained backbone. A lightweight temporal module connects information across the recording.</desc>
+  <defs><path id="beat" d="M0 0h28l8-9 9 9h9l7 12 9-47 9 62 7-27h13l9-10 12 10h26"/></defs>
+  <rect width="600" height="330" fill="#fbfaf8"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#293331"><text x="300" y="43" font-size="25">Longer ECG recordings</text></g>
+  <g fill="#ecf1ef" stroke="#cfded8"><rect x="38" y="65" width="164" height="96" rx="3"/><rect x="218" y="65" width="164" height="96" rx="3"/><rect x="398" y="65" width="164" height="96" rx="3"/></g>
+  <g stroke="#548079" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#beat" x="48" y="115"/><use href="#beat" x="228" y="115"/><use href="#beat" x="408" y="115"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" fill="#52665e" font-size="20"><text x="120" y="184">10 s</text><text x="300" y="184">10 s</text><text x="480" y="184">10 s</text></g>
+  <path d="M120 191v9h360v-9m-180 0v9m-148 0v8m-6-6 6 6 6-6" stroke="#756575" stroke-width="2" fill="none"/>
+  <rect x="38" y="215" width="228" height="51" rx="4" fill="#eee8ef" stroke="#d3c7d5"/>
+  <rect x="326" y="215" width="236" height="51" rx="4" fill="#e5efeb" stroke="#c8dad2"/>
+  <g stroke="#756575" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M278 240h35m-7-7 7 7-7 7"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-size="24"><text x="152" y="248" fill="#624867">Frozen backbone</text><text x="444" y="248" fill="#3f6657">Temporal module</text><text x="300" y="307" font-size="22" fill="#5a665f">Connect information over time</text></g>
+</svg>

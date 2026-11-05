@@ -17,6 +17,7 @@ for (const file of ['index.html']) {
             return paper;
         });
         const paper = publications[0];
+        const image = feature.overviewImage || paper.image;
         const destination = feature.project?.href || `${prefix}#${paper.id}`;
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
         const venues = publications.map(publication => {
@@ -26,7 +27,7 @@ for (const file of ['index.html']) {
                 <p class="research-highlight-theme">${escape(feature.theme)}</p>
                 <h3>${escape(feature.heading)}</h3>
                 <div class="research-highlight-image">
-                    <img src="${escape(paper.image.src)}" alt="${escape(paper.image.alt)}" width="${paper.image.width}" height="${paper.image.height}" loading="lazy" decoding="async">
+                    <img src="${escape(image.src)}" alt="${escape(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">
                 </div>
                 <p class="research-highlight-contribution">${escape(feature.contribution)}</p>
                 <p class="research-highlight-venue">${venues}</p>

@@ -2954,6 +2954,14 @@ body.modal-open {
     font-weight: 600;
 }
 
+.site-footer-office {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
 .site-footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -3934,7 +3942,6 @@ body.modal-open {
 .home-page .hero-lead { max-width: 42rem; font-size: 1.0625rem; line-height: 1.7; }
 .home-page .hero-role strong,
 .home-page .hero-affiliation { display: block; }
-.home-page .hero-office { margin: -6px 0 16px; color: var(--muted); font-size: 1rem; }
 .home-page .hero-portrait {
     width: 100%;
     box-sizing: border-box;
@@ -3995,8 +4002,8 @@ body.modal-open {
     flex-shrink: 0;
     min-height: 0;
     box-sizing: border-box;
-    aspect-ratio: 1.75;
-    padding: 10px;
+    aspect-ratio: 20 / 11;
+    padding: 0;
     margin-bottom: 22px;
     border: 1px solid var(--line);
     border-radius: 3px;
@@ -4200,7 +4207,6 @@ body.modal-open {
     .home-page .hero-title { grid-column: 1; grid-row: 1; align-self: center; font-size: clamp(1.55rem, 7vw, 1.9rem); margin: 0; }
     .home-page .hero-role { grid-column: 1 / -1; grid-row: 2; margin: 0; font-size: 1rem; }
     .home-page .hero-spotlight { grid-column: 2; grid-row: 1; order: 0; justify-items: end; }
-    .home-page .hero-office,
     .home-page .hero-focus,
     .home-page .hero-lead,
     .home-page .hero-recruitment,
@@ -4212,7 +4218,7 @@ body.modal-open {
     .research-highlights { grid-template-columns: 1fr; gap: 20px; }
     .research-highlight + .research-highlight { padding-top: 18px; }
     .research-highlight-contribution { margin-bottom: 8px; }
-    .research-highlight-image { aspect-ratio: 2.1; margin-bottom: 16px; }
+    .research-highlight-image { aspect-ratio: 20 / 11; margin-bottom: 16px; }
     .home-page .background-grid .timeline-item { grid-template-columns: 1fr; }
     .teaching-page .teaching-grid.current-courses { grid-template-columns: 1fr; }
     .course-jumps,
@@ -4274,6 +4280,8 @@ body.modal-open {
 .home-page .background-grid .timeline-item { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; align-items: start; }
 .home-page .background-grid .timeline-head { align-items: start; }
 .home-page .background-grid .timeline-copy p { margin-top: 8px; }
+.home-page .earlier-education { margin-top: 4px; border-top: 1px solid var(--line); }
+.home-page .earlier-education > summary { font-size: 0.9375rem; min-height: 44px; box-sizing: border-box; display: flex; align-items: center; }
 
 .topic-project-link { display: inline-flex; align-items: center; align-self: flex-start; gap: 6px; margin-top: auto; min-height: 36px; font-weight: 600; line-height: 1.5; text-decoration: underline; text-decoration-color: var(--cityu-line); text-underline-offset: 4px; }
 .research-page .research-topic .direction-card { padding-top: 0; margin-top: 8px; }
@@ -4402,12 +4410,12 @@ body.citation-open { overflow: hidden; }
     .home-page .hero-focus { margin-top: 4px; font-size: 1.35rem; line-height: 1.3; }
     .home-page .hero-links { gap: 0 15px; }
     .home-page .hero-links a { font-size: 0.9375rem; min-height: 36px; }
-    .home-page .research-highlight { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: start; gap: 0 14px; }
+    .home-page .research-highlight { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
     .home-page .research-highlight > :is(h3, .research-highlight-theme, .research-highlight-venue, .research-highlight-role, .research-highlight-links) { grid-column: 1 / -1; }
     .home-page .research-highlight h3 { min-height: 0; margin-bottom: 14px; font-size: 1.3rem; }
     .home-page .research-highlight-theme { margin-bottom: 6px; font-size: 0.8rem; }
-    .home-page .research-highlight-image { grid-column: 1; aspect-ratio: 1.4; margin: 2px 0 12px; padding: 5px; }
-    .home-page .research-highlight-contribution { grid-column: 2; margin-bottom: 12px; font-size: 1rem; line-height: 1.5; }
+    .home-page .research-highlight-image { width: min(100%, 440px); aspect-ratio: 20 / 11; margin: 2px 0 12px; padding: 0; }
+    .home-page .research-highlight-contribution { margin-bottom: 12px; font-size: 1rem; line-height: 1.5; }
     .home-page .research-highlight-venue { margin: 0; padding: 0; }
     .home-page .research-highlight-links { margin-top: 2px; }
     .home-page .home-grid.background-grid { grid-template-columns: 1fr; gap: 24px; }

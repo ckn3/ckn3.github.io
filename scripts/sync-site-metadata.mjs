@@ -17,10 +17,10 @@ const footerLinks = [
     ['ORCID', 'https://orcid.org/0000-0002-1856-5064'],
     ['Scopus', 'https://www.scopus.com/authid/detail.uri?authorId=57226829865'],
 ];
-function renderFooter(label) {
+function renderFooter(label, file) {
     return `<footer class="site-footer">
         <div class="site-footer-inner">
-            <div class="site-footer-copy">Kangning Cui</div>
+            <div class="site-footer-copy">Kangning Cui${file === 'index.html' ? '<span class="site-footer-office">Office: AC4-422 · CityU-DG</span>' : ''}</div>
             <div class="site-footer-links">
 ${footerLinks.map(([name, href]) => `                <a href="${href.replaceAll('&', '&amp;')}"${href.startsWith('https:') ? ' target="_blank" rel="noopener noreferrer"' : ''}>${name}</a>`).join('\n')}
             </div>
@@ -37,11 +37,11 @@ for (const file of sitePages) {
     const original = await readFile(url, 'utf8');
     const footer = /<footer class="site-footer">[\s\S]*?<\/footer>/g;
     assert.equal([...original.matchAll(footer)].length, 1, `${file}: expected one site footer.`);
-    let generated = original.replace(footer, () => renderFooter(label(date)));
+    let generated = original.replace(footer, () => renderFooter(label(date), file));
     // A shared footer change also updates the page, even when its body is unchanged.
     if (generated !== original) {
         date = today;
-        generated = original.replace(footer, () => renderFooter(label(date)));
+        generated = original.replace(footer, () => renderFooter(label(date), file));
     }
     if (check) assert.equal(generated, original, `${file}: stale footer. Run npm run sync:metadata.`);
     else if (generated !== original) await writeFile(url, generated);
