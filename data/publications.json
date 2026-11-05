@@ -23,15 +23,9 @@
       "theme": "Efficient & Reliable ML",
       "heading": "Understanding the cost of compression",
       "authorRole": "Co-first author",
-      "contribution": "LowRankArena benchmarks compression quality and inference efficiency under shared evaluation settings.",
+      "contribution": "LowRankArena shows that fewer parameters do not always mean faster inference. By exposing trade-offs between model quality, memory, and latency, it helps researchers judge whether compression delivers useful savings under real deployment constraints.",
       "project": {
         "href": "projects/efficient-llm.html"
-      },
-      "overviewImage": {
-        "src": "figures/research/overview-compression.svg",
-        "alt": "Conceptual overview: low-rank model compression evaluated for quality, memory use and latency.",
-        "width": 600,
-        "height": 330
       }
     },
     {
@@ -42,15 +36,9 @@
       "theme": "Geospatial AI",
       "heading": "From aerial imagery to forest maps",
       "authorRole": "Co-first and corresponding author",
-      "contribution": "PRISM and PalmDSNet turn aerial imagery into palm locations and forest maps.",
+      "contribution": "Where palms grow matters for understanding tropical forests and planning conservation. PRISM and PalmDSNet make those spatial patterns measurable from aerial imagery, connecting individual-tree mapping with ecological monitoring across diverse forest landscapes.",
       "project": {
         "href": "projects/geospatial-ai.html"
-      },
-      "overviewImage": {
-        "src": "figures/research/overview-geospatial.svg",
-        "alt": "Schematic workflow: aerial forest imagery becomes palm crown boundaries and geographic locations.",
-        "width": 600,
-        "height": 330
       }
     },
     {
@@ -58,15 +46,9 @@
       "theme": "Medical AI",
       "heading": "Extending the reach of ECG models",
       "authorRole": "Co-author",
-      "contribution": "A lightweight module extends pretrained ECG models to longer recordings without retraining the backbone.",
+      "contribution": "Longer ECG recordings contain temporal context that short-clip models cannot combine on their own. Our work makes that context usable while retaining pretrained backbones, extending the value of existing models without full retraining.",
       "project": {
         "href": "projects/medical-ai.html"
-      },
-      "overviewImage": {
-        "src": "figures/research/overview-ecg.svg",
-        "alt": "Schematic workflow: a frozen 10-second ECG backbone and a temporal module connect information across longer recordings.",
-        "width": 600,
-        "height": 330
       }
     }
   ],

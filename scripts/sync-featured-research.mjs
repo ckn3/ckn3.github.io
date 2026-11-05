@@ -17,7 +17,7 @@ for (const file of ['index.html']) {
             return paper;
         });
         const paper = publications[0];
-        const image = feature.overviewImage || paper.image;
+        const image = paper.image;
         const destination = feature.project?.href || `${prefix}#${paper.id}`;
         if (!feature.authorRole) throw new Error(`Missing author role: ${feature.id}`);
         const venues = publications.map(publication => {

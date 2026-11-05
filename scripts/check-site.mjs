@@ -55,7 +55,7 @@ assert.equal((home.match(/class="research-highlight"/g) || []).length, 3);
 assert.equal((home.match(/class="research-highlight-image"/g) || []).length, 3);
 for (const featured of data.featured) {
     const paper = Object.values(data.selected).flat().find(item => item.id === featured.id);
-    assert.ok(home.includes(`src="${(featured.overviewImage || paper.image).src}"`), `Missing featured research image: ${featured.id}`);
+    assert.ok(home.includes(`src="${paper.image.src}"`), `Missing featured research image: ${featured.id}`);
     assert.ok(home.includes(`<p class="research-highlight-role">${featured.authorRole}</p>`), `Missing featured author role: ${featured.id}`);
 }
 assert.deepEqual(data.featured.map(item => item.authorRole), ['Co-first author', 'Co-first and corresponding author', 'Co-author']);
