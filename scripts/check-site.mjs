@@ -166,8 +166,9 @@ for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 
     for (const [index, row] of rows.entries()) {
         const week = index + 1;
         assert.ok(row.includes(`<th scope="row">${week}</th>`) && row.includes(`-l${week}.pdf`));
-        const tutorial = `${course.toUpperCase()}-t${week}s.pdf`;
-        if (fs.existsSync(path.join(root, 'docs/courses', course, '2026a', tutorial))) {
+        const tutorial = [`${course.toUpperCase()}-t${week}s.pdf`, `${course.toUpperCase()}-t${week}.pdf`]
+            .find(file => fs.existsSync(path.join(root, 'docs/courses', course, '2026a', file)));
+        if (tutorial) {
             assert.ok(row.includes(tutorial), `${course}: missing tutorial link for week ${week}`);
         } else {
             assert.match(row, /<td>Not posted<\/td><\/tr>$/, `${course}: unpublished tutorial needs a clear status`);
