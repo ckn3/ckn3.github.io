@@ -20,6 +20,55 @@
 .theme-library-link { margin: 16px 0 0; font-size: .89rem; font-weight: 600; }
 .research-topic-link { font-size: .9rem; font-weight: 600; }
 .media-research-link { display: block; margin-top: 12px; font-size: .88rem; font-weight: 600; }
+
+/* Selected papers: a compact figure beside the full publication record. */
+.research-page :is(.publication-entry, .conference-entry) {
+    display: grid;
+    grid-template-columns: 216px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+    padding-block: 24px;
+}
+.publication-preview {
+    display: grid;
+    place-items: center;
+    align-self: center;
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: #fff;
+    cursor: zoom-in;
+}
+.publication-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+}
+.publication-preview:hover { border-color: var(--cityu-purple); }
+.publication-preview:focus-visible { outline: 3px solid var(--cityu-purple); outline-offset: 4px; }
+.research-page :is(.publication-text, .conference-text) p.title { display: block; }
+.research-page :is(.publication-text, .conference-text) p.title .venue {
+    display: block;
+    margin-top: 6px;
+    text-align: left;
+}
+@media (max-width: 960px) {
+    .research-page :is(.publication-entry, .conference-entry) { grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 600px) {
+    .research-page :is(.publication-entry, .conference-entry) { grid-template-columns: 112px minmax(0, 1fr); gap: 12px 16px; padding-block: 20px; }
+    .research-page :is(.publication-text, .conference-text) { display: contents; }
+    .publication-preview { grid-column: 1; grid-row: 1; padding: 4px; }
+    .research-page :is(.publication-text, .conference-text) p.title { grid-column: 2; grid-row: 1; margin: 0; }
+    .research-page :is(.publication-text, .conference-text) p.authors { grid-column: 1 / -1; margin: 0; }
+    .research-page :is(.publication-text, .conference-text) .badges { grid-column: 1 / -1; }
+}
 @media (max-width: 900px) {
     .publication-filters { grid-template-columns: minmax(0, 1fr); }
 }

@@ -32,6 +32,9 @@ function renderPaper(paper, section) {
     }).join('\n');
     const image = paper.image;
     return `            <article class="${entryClass}${highlight}" id="selected-${escape(paper.id)}">
+                <a class="publication-preview" href="${escape(image.src)}" target="_blank" rel="noopener noreferrer" aria-label="View figure and details: ${escape(paper.title)}">
+                    <img src="${escape(image.src)}" alt="${escape(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">
+                </a>
                 <div class="${textClass}">
                     <p class="title"><span class="paper-title"><strong>${escape(paper.title)}</strong></span><span class="venue">${escape(paper.venue)}</span></p>
                     <p class="authors">${paper.authorsHtml}</p>

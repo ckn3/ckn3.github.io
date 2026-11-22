@@ -29,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () { openDetailModal(entry, button); });
         details.before(button);
         details.hidden = true;
+        var preview = entry.querySelector('.publication-preview');
+        if (preview) {
+            preview.setAttribute('aria-haspopup', 'dialog');
+            preview.setAttribute('aria-controls', 'modal');
+            preview.addEventListener('click', function (event) {
+                if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                event.preventDefault();
+                openDetailModal(entry, preview);
+            });
+        }
     });
 
     document.querySelectorAll('a[href^="#paper-"], a[href^="#selected-paper-"]').forEach(function (link) {
