@@ -162,7 +162,7 @@ for (const [course, weights] of [['dsc5001', [10, 20, 20, 50]], ['cs5487', [30, 
     assert.deepEqual([...source.matchAll(/<strong>(\d+)%<\/strong>/g)].map(m => Number(m[1])), weights);
     assert.ok(source.indexOf('id="materials"') < source.indexOf('id="schedule"'));
     const rows = source.match(/<tr><th scope="row">\d+<\/th>[\s\S]*?<\/tr>/g) || [];
-    assert.equal(rows.length, 11);
+    assert.equal(rows.length, 12);
     for (const [index, row] of rows.entries()) {
         const week = index + 1;
         assert.ok(row.includes(`<th scope="row">${week}</th>`) && row.includes(`-l${week}.pdf`));
