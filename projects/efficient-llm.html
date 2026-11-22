@@ -56,24 +56,22 @@
 
     <main class="site-shell" id="main-content" tabindex="-1">
         <div class="content content-top project-header">
-            <a class="project-back" href="../publications.html#efficient-ml">← Research / Efficient &amp; Reliable ML</a>
+            <a class="project-back" href="../publications.html#efficient-ml">Research / Efficient &amp; Reliable ML</a>
             <div class="page-header">
                 <p class="project-eyebrow">Efficient &amp; Reliable LLMs</p>
-                <h1>Efficient language models.<br>Reliable behavior.</h1>
-                <p class="page-intro">We study how language models behave when their memory and inference costs are reduced. Our work connects fair compression evaluation, practical serving efficiency, and the preservation of uncertainty after quantization.</p>
-                <p class="project-byline">Kangning Cui and collaborators · Evaluation, inference, and reliability</p>
+                <h1>Language model compression</h1>
+                <p class="page-intro">We measure what compression changes in language models: memory use, inference speed, and uncertainty.</p>
             </div>
         </div>
         <nav class="page-jumps" aria-label="Project sections"><a href="#evaluation">Evaluation</a><a href="#inference">Inference</a><a href="#reliability">Reliability</a><a href="../publications.html?theme=efficient-ml#all-publications">All publications</a></nav>
         <section class="content page-panel project-method" aria-labelledby="evaluation">
-            <div class="project-method-heading"><div><p class="project-eyebrow">01 / Evaluation</p><h2 id="evaluation">Make compression results comparable</h2></div></div>
+            <div class="project-method-heading"><div><p class="project-eyebrow">Evaluation</p><h2 id="evaluation">Compare compression methods</h2></div></div>
             <article class="project-study">
                 <p class="project-status">NeurIPS&#39;26, ED Track, Poster</p>
                 <h3>LowRankArena</h3>
                 <p class="project-author-role">Kangning Cui · Co-first author</p>
-                <p class="project-key-result"><strong>Key finding</strong> Rankings change across models and budgets; lower parameter counts do not always produce faster inference.</p>
-                <figure class="project-figure"><a href="../figures/publications/shao2026lowrankarena.webp" data-figure-title="LowRankArena: making compression evaluations comparable" aria-label="Enlarge figure: LowRankArena: making compression evaluations comparable"><img src="../figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>LowRankArena.</strong> A shared evaluation pipeline aligns compression budgets, tasks, and serving measurements so that different methods can be compared fairly.</figcaption></figure>
-                <dl class="project-explanation"><div><dt>Problem</dt><dd>Different benchmarks and compression budgets make published results hard to compare.</dd></div><div><dt>Method</dt><dd>Align task versions, model budgets, and end-to-end inference measurements in one reproducible platform.</dd></div></dl>
+                <p class="project-method-intro">LowRankArena compares SVD compression methods at matched budgets, measuring accuracy, memory use, and inference speed. It provides evaluation code and compressed model checkpoints.</p>
+                <figure class="project-figure"><a href="../figures/publications/shao2026lowrankarena.webp" data-figure-title="LowRankArena: making compression evaluations comparable" aria-label="Enlarge figure: LowRankArena: making compression evaluations comparable"><img src="../figures/publications/shao2026lowrankarena.webp" alt="LowRankArena overview: evaluation challenges, a standardized SVD-compression platform, and findings on accuracy and inference efficiency" width="1127" height="600" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure</span></a><figcaption>Rankings depend on the model and budget; fewer parameters do not always mean faster inference.</figcaption></figure>
                 <div class="project-resources" aria-label="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression resources"><a href="https://neurips.cc/virtual/2026/poster/139091" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.26389" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/Zishan-Shao/lowrankarena" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2608.26389" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-lowrankarena-neurips" data-title="LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression" data-source="https://neurips.cc/virtual/2026/poster/139091" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression">BibTeX</summary><pre><code>@inproceedings{shao2026lowrankarena,
   author = {Shao, Zishan and
             Zhang, Lixun and
@@ -94,19 +92,17 @@
   url = {https://neurips.cc/virtual/2026/poster/139091},
   note = {Accepted conference paper, Evaluations and Datasets Track},
 }</code></pre></details></div>
-                <a class="project-record-link" href="../publications.html#paper-lowrankarena-neurips">Full publication record <span aria-hidden="true">→</span></a>
+                <a class="project-record-link" href="../publications.html#paper-lowrankarena-neurips">Full publication record</a>
 
             </article>
         </section>
         <section class="content page-panel project-method" aria-labelledby="inference">
-            <div class="project-method-heading"><div><p class="project-eyebrow">02 / Inference</p><h2 id="inference">Turn memory savings into useful speed</h2></div></div>
-            <p class="project-method-intro">We examine the execution and decoding choices that determine whether theoretical savings translate into lower serving costs.</p>
+            <div class="project-method-heading"><div><p class="project-eyebrow">Inference</p><h2 id="inference">Run models with less memory</h2></div></div>
             <div class="project-study-grid">
             <article class="project-study">
                 <p class="project-status">Preprint · 2026</p>
                 <h3>FlashSVD</h3>
-                <p>FlashSVD reorganizes the execution of SVD-compressed transformers, with kernels and execution strategies tailored to prefill and autoregressive decoding.</p>
-                <p class="project-takeaway"><strong>Contribution.</strong> Treats the runtime as part of low-rank model design; the preprint evaluates both decode and end-to-end serving performance.</p>
+                <p>GPU kernels for SVD-compressed transformers, covering prompt processing and token generation. The code includes benchmarks for decoding and end-to-end inference.</p>
                 <div class="project-resources" aria-label="FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast resources"><a href="https://arxiv.org/abs/2605.08314" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2605.08314v1" target="_blank" rel="noopener noreferrer">PDF</a> <a href="https://github.com/Zishan-Shao/FlashSVD" target="_blank" rel="noopener noreferrer">Code</a> <details class="citation-details" data-citation-id="paper-flashsvd" data-title="FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast" data-source="https://arxiv.org/abs/2605.08314v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: FlashSVD v1.5: Making Low-Rank Transformers Inference Actually Fast">BibTeX</summary><pre><code>@misc{wu2026flashsvd,
   author = {Wu, Wenhao and
             Shao, Zishan and
@@ -124,14 +120,13 @@
   version = {1},
   note = {arXiv preprint, version 1},
 }</code></pre></details></div>
-                <a class="project-record-link" href="../publications.html#paper-flashsvd">Full publication record <span aria-hidden="true">→</span></a>
+                <a class="project-record-link" href="../publications.html#paper-flashsvd">Full publication record</a>
 
             </article>
             <article class="project-study">
                 <p class="project-status">Preprint · 2026</p>
                 <h3>BudgetDraft</h3>
-                <p>BudgetDraft trains a speculative drafter across multiple sparse KV-cache budgets while a verifier retains its full cache. Training aligns sparse views with a shared full-cache target.</p>
-                <p class="project-takeaway"><strong>Contribution.</strong> Addresses the loss of token acceptance as the drafter’s context cache becomes sparse, without adding inference-time components.</p>
+                <p>BudgetDraft trains speculative draft models to work with smaller KV caches while the verifier keeps its full cache. The paper describes how to preserve token acceptance across cache budgets.</p>
                 <div class="project-resources" aria-label="BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding resources"><a href="https://arxiv.org/abs/2606.00144" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2606.00144v1" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-budgetdraft" data-title="BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding" data-source="https://arxiv.org/abs/2606.00144v1" data-source-label="arXiv" data-note="arXiv version 1; latest available on 25 October 2026."><summary class="citation-inline" aria-label="View BibTeX citation: BudgetDraft: Acceptance-Aware Multi-View Training for Sparse-KV Speculative Decoding">BibTeX</summary><pre><code>@misc{he2026budgetdraft,
   author = {He, Liang and
             Wen, Jingbo and
@@ -148,20 +143,19 @@
   version = {1},
   note = {arXiv preprint, version 1},
 }</code></pre></details></div>
-                <a class="project-record-link" href="../publications.html#paper-budgetdraft">Full publication record <span aria-hidden="true">→</span></a>
+                <a class="project-record-link" href="../publications.html#paper-budgetdraft">Full publication record</a>
 
             </article>
             </div>
         </section>
         <section class="content page-panel project-method" aria-labelledby="reliability">
-            <div class="project-method-heading"><div><p class="project-eyebrow">03 / Reliability</p><h2 id="reliability">Preserve uncertainty after quantization</h2></div></div>
+            <div class="project-method-heading"><div><p class="project-eyebrow">Reliability</p><h2 id="reliability">Calibrate quantized models</h2></div></div>
             <article class="project-study">
                 <p class="project-status">EMNLP&#39;26, Findings</p>
                 <h3>Doubt-Preserving Quantization</h3>
                 <p class="project-author-role">Kangning Cui · Corresponding author</p>
-                <p class="project-key-result"><strong>Key finding</strong> Answerability and broad QA favor different calibration recipes; the selection adds no inference-time components.</p>
-                <figure class="project-figure"><a href="../figures/publications/dpq2026emnlp.webp" data-figure-title="DPQ: uncertainty preservation after quantization" aria-label="Enlarge figure: DPQ: uncertainty preservation after quantization"><img src="../figures/publications/dpq2026emnlp.webp" alt="DPQ uncertainty-preservation results for quantized language models" width="1600" height="681" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>Preserving answerability behavior.</strong> Lower bars mean closer agreement with the full-precision model on this SQuAD2 evaluation. The best calibration recipe depends on the behavior being preserved.</figcaption></figure>
-                <dl class="project-explanation"><div><dt>Problem</dt><dd>Quantization can keep task accuracy while changing confidence and answerability.</dd></div><div><dt>Method</dt><dd>Choose calibration data for the target behavior before applying the quantizer.</dd></div></dl>
+                <p class="project-method-intro">DPQ selects calibration data to better preserve a language model’s confidence and answerability after quantization. It works with existing quantizers and adds no inference-time components.</p>
+                <figure class="project-figure"><a href="../figures/publications/dpq2026emnlp.webp" data-figure-title="DPQ: uncertainty preservation after quantization" aria-label="Enlarge figure: DPQ: uncertainty preservation after quantization"><img src="../figures/publications/dpq2026emnlp.webp" alt="DPQ uncertainty-preservation results for quantized language models" width="1600" height="681" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure</span></a><figcaption>On SQuAD2, lower bars mean closer agreement with the full-precision model. Calibration choices depend on the behavior being preserved.</figcaption></figure>
                 <div class="project-resources" aria-label="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models resources"><a href="https://aclanthology.org/2026.findings-emnlp.670/" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2608.21019" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://github.com/xi-xiaoran/DPQ" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://aclanthology.org/2026.findings-emnlp.670.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <details class="citation-details" data-citation-id="paper-dpq-emnlp" data-title="Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models" data-source="https://aclanthology.org/2026.findings-emnlp.670/" data-source-label="ACL Anthology" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models">BibTeX</summary><pre><code>@inproceedings{yang-etal-2026-target,
   author = {Yang, Zhen and
             Hou, Sizai and
@@ -185,15 +179,15 @@
   doi = {10.18653/2026.findings-emnlp.670},
   url = {https://aclanthology.org/2026.findings-emnlp.670/},
 }</code></pre></details></div>
-                <a class="project-record-link" href="../publications.html#paper-dpq-emnlp">Full publication record <span aria-hidden="true">→</span></a>
+                <a class="project-record-link" href="../publications.html#paper-dpq-emnlp">Full publication record</a>
 
             </article>
             <aside class="project-related-study" aria-labelledby="decode-structure">
                 <p class="project-status">Related work · ICML’26, Spotlight</p>
-                <h3 id="decode-structure">DecodeShare: understanding decode-time decisions</h3>
+                <h3 id="decode-structure">DecodeShare: analyzing model decisions</h3>
                 <p class="project-author-role">Kangning Cui · Co-author</p>
-                <p class="project-key-result"><strong>Key finding</strong> DecodeShare identifies a subspace shared across tasks during decoding and tests its role through targeted interventions.</p>
-                <figure class="project-figure"><a href="../figures/publications/decodeshare_pipeline.webp" data-figure-title="DecodeShare: testing the shared structure of decoding" aria-label="Enlarge figure: DecodeShare: testing the shared structure of decoding"><img src="../figures/publications/decodeshare_pipeline.webp" alt="DecodeShare pipeline: collect cross-task decoding activations, estimate their shared subspace, and analyze explained variance" width="1500" height="324" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>From representation to intervention.</strong> The pipeline extracts a cross-task subspace from decoding activations; targeted interventions then test its role in model decisions.</figcaption></figure>
+                <p class="project-method-intro">DecodeShare identifies activation patterns shared across decoding tasks and tests how intervening on them changes model decisions. Code is available for reproducing the analysis.</p>
+                <figure class="project-figure"><a href="../figures/publications/decodeshare_pipeline.webp" data-figure-title="DecodeShare: testing the shared structure of decoding" aria-label="Enlarge figure: DecodeShare: testing the shared structure of decoding"><img src="../figures/publications/decodeshare_pipeline.webp" alt="DecodeShare pipeline: collect cross-task decoding activations, estimate their shared subspace, and analyze explained variance" width="1500" height="324" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure</span></a><figcaption>Collect decoding activations, estimate a shared subspace, and test its effect through interventions.</figcaption></figure>
                 <div class="project-resources" aria-label="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions resources"><a href="https://arxiv.org/abs/2607.20469" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://proceedings.mlr.press/v306/shao26j.html" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://raw.githubusercontent.com/mlresearch/v306/main/assets/shao26j/shao26j.pdf" target="_blank" rel="noopener noreferrer">PDF</a> <a href="https://github.com/Zishan-Shao/decodeshare" target="_blank" rel="noopener noreferrer">Code</a> <details class="citation-details" data-citation-id="paper-decodeshare-icml" data-title="DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions" data-source="https://proceedings.mlr.press/v306/shao26j.html" data-source-label="PMLR" data-note=""><summary class="citation-inline" aria-label="View BibTeX citation: DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions">BibTeX</summary><pre><code>@inproceedings{pmlr-v306-shao26j,
   author = {Shao, Zishan and
             Zhang, Lixun and
@@ -228,12 +222,12 @@
   month = {July},
   url = {https://proceedings.mlr.press/v306/shao26j.html},
 }</code></pre></details></div>
-                <a class="project-record-link" href="../publications.html#paper-decodeshare-icml">Full publication record <span aria-hidden="true">→</span></a>
+                <a class="project-record-link" href="../publications.html#paper-decodeshare-icml">Full publication record</a>
             </aside>
         </section>
         <section class="content page-panel project-contact" aria-labelledby="collaborate">
-            <h2 id="collaborate">Research and collaboration</h2>
-            <p>See <a href="../publications.html?theme=efficient-ml#all-publications">all publications and preprints in Efficient &amp; Reliable ML</a>, including work on agent behavior and representations. For collaboration, <a href="mailto:kangning.cui@cityu-dg.edu.cn">contact Kangning Cui</a>; current recruitment information is on the <a href="../team.html#prospective-applicants">Team page</a>.</p>
+            <h2 id="collaborate">Contact</h2>
+            <p><a href="../publications.html?theme=efficient-ml#all-publications">All publications and preprints</a> · <a href="mailto:kangning.cui@cityu-dg.edu.cn">Email Kangning Cui</a> · <a href="../team.html#prospective-applicants">Join the group</a></p>
         </section>
     </main>
     <footer class="site-footer">

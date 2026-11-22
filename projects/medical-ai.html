@@ -56,21 +56,19 @@
 
     <main class="site-shell" id="main-content" tabindex="-1">
         <div class="content content-top project-header">
-            <a class="project-back" href="../publications.html#medical-ai">← Research / Medical AI</a>
+            <a class="project-back" href="../publications.html#medical-ai">Research / Medical AI</a>
             <div class="page-header">
                 <p class="project-eyebrow">Medical AI</p>
-                <h1>Learning from signals<br>and moving images.</h1>
-                <p class="page-intro">We develop models that make better use of time in medical data: adapting short-window ECG models to longer recordings, and learning cardiac motion from ultrasound without manual phase labels.</p>
-                <p class="project-byline">Kangning Cui and collaborators · Biomedical signals and image analysis</p>
+                <h1>ECG and ultrasound analysis</h1>
+                <p class="page-intro">We adapt ECG models to longer recordings and identify cardiac phases in ultrasound without manual frame labels.</p>
             </div>
         </div>
         <nav class="page-jumps" aria-label="Project sections"><a href="#ecg">Long-horizon ECG</a><a href="#cardiac-motion">Cardiac motion</a><a href="#related-work">Related work</a><a href="../publications.html?theme=medical-ai#all-publications">All publications</a></nav>
         <section class="content page-panel project-method" aria-labelledby="ecg">
-            <div class="project-method-heading"><div><p class="project-eyebrow">01 / NeurIPS’26, Poster</p><h2 id="ecg">Extend ECG models beyond ten seconds</h2></div></div>
+            <div class="project-method-heading"><div><p class="project-eyebrow">NeurIPS’26, Poster</p><h2 id="ecg">Extend ECG models beyond ten seconds</h2></div></div>
             <p class="project-author-role">Kangning Cui · Co-author</p>
-            <p class="project-key-result"><strong>Key result</strong> Experiments across ECG tasks and backbones improve on sliding-window and pooling baselines without retraining the backbone.</p>
-            <figure class="project-figure"><a href="../figures/publications/tang2026neurips.webp" data-figure-title="Long-horizon ECG: a frozen backbone with a lightweight extension" aria-label="Enlarge figure: Long-horizon ECG: a frozen backbone with a lightweight extension"><img src="../figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>From snapshots to longer recordings.</strong> The framework adds temporal modeling to a frozen 10-second ECG backbone, connecting information across the recording rather than simply pooling independent windows.</figcaption></figure>
-            <dl class="project-explanation"><div><dt>Problem</dt><dd>An ECG model trained on 10-second clips cannot directly combine information across a longer, variable-length recording.</dd></div><div><dt>Method</dt><dd>Keep the pretrained backbone frozen and add a lightweight module for long-sequence processing and temporal relationships.</dd></div></dl>
+            <p class="project-method-intro">Reuse a pretrained 10-second ECG model on longer, variable-length recordings. A small trainable module combines information across time while the original model stays frozen.</p>
+            <figure class="project-figure"><a href="../figures/publications/tang2026neurips.webp" data-figure-title="Long-horizon ECG: a frozen backbone with a lightweight extension" aria-label="Enlarge figure: Long-horizon ECG: a frozen backbone with a lightweight extension"><img src="../figures/publications/tang2026neurips.webp" alt="Overview of extending frozen 10-second ECG foundation models to longer recordings with a lightweight plug-in module" width="966" height="583" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure</span></a><figcaption>The extension outperformed sliding-window and pooling baselines across the ECG tasks and backbones evaluated in the paper.</figcaption></figure>
             <div class="project-resources" aria-label="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons resources"><a href="https://neurips.cc/virtual/2026/poster/150095" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://arxiv.org/abs/2605.16975" target="_blank" rel="noopener noreferrer">Preprint</a> <a href="https://arxiv.org/pdf/2605.16975" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-ecg-horizons-neurips" data-title="Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons" data-source="https://neurips.cc/virtual/2026/poster/150095" data-source-label="NeurIPS" data-note="Accepted-paper citation from the official NeurIPS 2026 record."><summary class="citation-inline" aria-label="View BibTeX citation: Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons">BibTeX</summary><pre><code>@inproceedings{tang2026extending,
   author = {Tang, Wei and
             Han, Jinpei and
@@ -94,11 +92,10 @@
             <details class="text-disclosure project-citation"><summary>Full citation and authors</summary><div class="project-citation-body"><p><strong>Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons</strong></p><p>Wei Tang, Jinpei Han, <span class="main-author">Kangning Cui</span>, Mattia Carletti, Fredrik K. Gustafsson, Shreyank N Gowda, Patitapaban Palo, Anshul Thakur, Lei Clifton, Jean-Michel Morel, Raymond H. Chan, David A. Clifton, and Xiao Gu</p><a href="../publications.html#paper-ecg-horizons-neurips">Full publication record</a></div></details>
         </section>
         <section class="content page-panel project-method" aria-labelledby="cardiac-motion">
-            <div class="project-method-heading"><div><p class="project-eyebrow">02 / MICCAI’25, Oral</p><h2 id="cardiac-motion">Find cardiac phases without manual labels</h2></div></div>
+            <div class="project-method-heading"><div><p class="project-eyebrow">MICCAI’25, Oral</p><h2 id="cardiac-motion">Find cardiac phases without manual labels</h2></div></div>
             <p class="project-author-role">Kangning Cui · Co-author</p>
-            <p class="project-key-result"><strong>Key result</strong> On EchoNet-Dynamic, mean absolute error is 3 frames for end-diastole and 2 for end-systole. The study also evaluates fetal echocardiography.</p>
-            <figure class="project-figure"><a href="../figures/publications/yang2025miccai.webp" data-figure-title="Cardiac phase detection through latent motion trajectories" aria-label="Enlarge figure: Cardiac phase detection through latent motion trajectories"><img src="../figures/publications/yang2025miccai.webp" alt="Cardiac motion profiling: an ultrasound reconstruction model separates static structure from motion and identifies end-diastole and end-systole along a latent trajectory" width="917" height="526" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure <span aria-hidden="true">↗</span></span></a><figcaption><strong>Read the heartbeat from motion.</strong> The model learns to reconstruct ultrasound frames while separating static structure from motion. The resulting trajectory identifies end-diastole and end-systole.</figcaption></figure>
-            <dl class="project-explanation"><div><dt>Problem</dt><dd>Cardiac phase detection usually needs manually marked frames or segmentation annotations.</dd></div><div><dt>Method</dt><dd>Learn motion trajectories through video reconstruction, then identify end-diastole and end-systole in that representation.</dd></div></dl>
+            <p class="project-method-intro">Identify end-diastolic and end-systolic frames in adult and fetal ultrasound videos without manual phase labels. The model learns cardiac motion by reconstructing video; implementation code is available.</p>
+            <figure class="project-figure"><a href="../figures/publications/yang2025miccai.webp" data-figure-title="Cardiac phase detection through latent motion trajectories" aria-label="Enlarge figure: Cardiac phase detection through latent motion trajectories"><img src="../figures/publications/yang2025miccai.webp" alt="Cardiac motion profiling: an ultrasound reconstruction model separates static structure from motion and identifies end-diastole and end-systole along a latent trajectory" width="917" height="526" loading="lazy" decoding="async"><span class="figure-enlarge">Enlarge figure</span></a><figcaption>On EchoNet-Dynamic, mean absolute error is 3 frames for end-diastole and 2 for end-systole.</figcaption></figure>
             <div class="project-resources" aria-label="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos resources"><a href="https://link.springer.com/chapter/10.1007/978-3-032-05185-1_31" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/YingyuYyy/CardiacPhase" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://arxiv.org/pdf/2507.05154" target="_blank" rel="noopener noreferrer">PDF (preprint)</a> <details class="citation-details" data-citation-id="paper-cardiac-phase" data-title="Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos" data-source="https://doi.org/10.1007/978-3-032-05185-1_31" data-source-label="Springer" data-note="Publisher citation: the MICCAI 2025 volume has a 2026 publication year."><summary class="citation-inline" aria-label="View BibTeX citation: Latent Motion Profiling for Annotation-free Cardiac Phase Detection in Adult and Fetal Echocardiography Videos">BibTeX</summary><pre><code>@inproceedings{10.1007/978-3-032-05185-1_31,
   author = {Yang, Yingyu and
             Yang, Qianye and
@@ -132,17 +129,16 @@
         </section>
         <section class="content page-panel" aria-labelledby="related-work">
             <div class="section-header"><h2 id="related-work">Related biomedical research</h2></div>
-            <p class="section-intro">Complementary work on image quality, tracking, signal analysis, and segmentation.</p>
-            <ul class="medical-related"><li><span>MICCAI&#x27;25</span><div><a href="../publications.html#paper-blind-ultrasound">Ultrasound restoration</a><p>Recovering high-resolution ultrasound video.</p></div></li>
-<li><span>FIMH&#x27;25</span><div><a href="../publications.html#paper-fetal-tracking">Fetal heart tracking</a><p>Tracking the fetal heart through ultrasound video.</p></div></li>
+            <ul class="medical-related"><li><span>MICCAI&#x27;25</span><div><a href="../publications.html#paper-blind-ultrasound">Ultrasound restoration</a><p>Restore resolution in ultrasound video.</p></div></li>
+<li><span>FIMH&#x27;25</span><div><a href="../publications.html#paper-fetal-tracking">Fetal heart tracking</a><p>Track fetal heart position across video frames.</p></div></li>
 <li><span>ISBI&#x27;25, Oral</span><div><a href="../publications.html#paper-bilateral-warping">ECG analysis</a><p>Bilateral signal warping for left ventricular hypertrophy diagnosis.</p></div></li>
 <li><span>CIBM&#x27;24</span><div><a href="../publications.html#paper-cell-segmentation">Cell microscopy</a><p>Detection and instance segmentation of unstained living cells.</p></div></li>
 <li><span>ISBI&#x27;24</span><div><a href="../publications.html#paper-hard-exudates">Retinal imaging</a><p>Hard exudate detection with supervised contrastive learning.</p></div></li></ul>
             <p class="project-data-note"><a href="../publications.html?theme=medical-ai#all-publications">Browse all Medical AI publications</a> · <a href="../publications.html#patents">Related patents</a></p>
         </section>
         <section class="content page-panel project-contact" aria-labelledby="collaborate">
-            <h2 id="collaborate">Research and collaboration</h2>
-            <p>For collaboration on biomedical signals, image analysis, or learning with limited annotations, <a href="mailto:kangning.cui@cityu-dg.edu.cn">contact Kangning Cui</a>. Current research assistant opportunities and PhD admissions status are on the <a href="../team.html#prospective-applicants">Team page</a>.</p>
+            <h2 id="collaborate">Contact</h2>
+            <p><a href="mailto:kangning.cui@cityu-dg.edu.cn">Email Kangning Cui</a> · <a href="../team.html#prospective-applicants">Join the group</a></p>
         </section>
     </main>
     <footer class="site-footer">
